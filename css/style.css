@@ -1,5 +1,6 @@
 /*nav*/
 .nav {
+    z-index: 1;
     position: relative;
 }
 
@@ -120,6 +121,10 @@
     margin-bottom: 35px;
 }
 
+.none-stick {
+    margin-bottom: 35px;
+}
+
 .nav__links-caption {
     font-size: 14px;
     font-weight: 400;
@@ -156,10 +161,11 @@
 .search-bar__container {
     position: absolute;
     display: flex;
+    background-color: var(--color_white);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05);
     align-items: center;
-    left: 270px;
-    width: 81%;
-    padding: 0 49px;
+    width: 100%;
+    padding: 0 49px 0 319px;
 }
 
 .search-bar__form {
@@ -171,7 +177,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 75px;
+    left: 345px;
     top: 25px;
     background-image: url("../img/search-icon.svg");
 }
@@ -179,9 +185,8 @@
 .search-bar__form-space {
     border: none;
     padding-left: 55px;
-    width: 304px;
+    width: 107.805%;
     min-height: 69px;
-    font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -191,18 +196,19 @@
 }
 
 .search-bar__btn-wrap {
-    width: 8.425%;
+    width: 90px;
     display: flex;
     min-height: 69px;
+    padding: 0 10px;
     align-items: center;
     justify-content: center;
     border-left: 1px solid var(--color_gray);
-    transform: translate(1px, 2px);
+    transform: translate(-3px, 2px);
 }
 
 .search-bar__btn-wrap:nth-child(3) {
     border-right: 1px solid var(--color_gray);
-    transform: translate(2px, 1px);
+    transform: translate(-2px, 1px);
 }
 
 .search-bar__btn {
@@ -216,4 +222,41 @@
 .search-bar__acc {
     width: 22px;
     height: 22px;
+}
+
+/*begin*/
+.begin {
+    padding-top: 95px;
+    padding-left: 295px;
+}
+
+.begin__container {
+    position: relative;
+    width: 97.817%;
+    min-height: 382px;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--color_white);
+}
+
+.begin__container::before {
+    content: url("../img/add-vacancies.svg");
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+.begin__title {
+    padding-top: 105px;
+    margin-bottom: 11px;
+    text-align: center;
+}
+
+.begin__descr {
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 24px;
 }
