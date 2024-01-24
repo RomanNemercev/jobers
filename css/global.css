@@ -79,6 +79,7 @@ img {
 .container {
     max-width: 1440px;
     padding: 95px 25px 0 295px;
+    margin: 0 auto;
 }
 
 .title {

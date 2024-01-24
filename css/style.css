@@ -258,6 +258,33 @@
 /*НОВАЯ СТРАНИЦА*/
 /*vacancies*/
 /*header*/
-.vacancies {
-    padding: 95px 0 0 295px;
+.vacancies__header {
+    display: flex;
+    justify-content: space-between;
 }
+
+.vacancies__values {
+    display: flex;
+}
+
+.vacancies__value {
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    background: var(--color_white);
+}
+
+.vacancies__value:first-of-type {
+    border-radius: 10px 0 0 10px;
+}
+
+.vacancies__value:last-of-type {
+    border-radius: 0 10px 10px 0;
+}
+
+.vacancies__value--active {
+    font-weight: 600;
+    color: var(--color_white);
+    background-color: var(--color_space);
+}
+
