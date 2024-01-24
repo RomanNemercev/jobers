@@ -225,14 +225,8 @@
 }
 
 /*begin*/
-.begin {
-    padding-top: 95px;
-    padding-left: 295px;
-}
-
 .begin__container {
     position: relative;
-    width: 97.817%;
     min-height: 382px;
     padding: 50px 25px;
     display: flex;
@@ -259,4 +253,11 @@
     max-width: 50%;
     text-align: center;
     margin-bottom: 24px;
+}
+
+/*НОВАЯ СТРАНИЦА*/
+/*vacancies*/
+/*header*/
+.vacancies {
+    padding: 95px 0 0 295px;
 }

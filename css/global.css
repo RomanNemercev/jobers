@@ -76,12 +76,10 @@ img {
     background: var(--color_dodger);
 }
 
-/*контейнер не исользуется так как отступы разные*/
-/*.container {*/
-/*    max-width: 1390px;*/
-/*    padding: 0 25px;*/
-/*    margin: 0 auto;*/
-/*}*/
+.container {
+    max-width: 1440px;
+    padding: 95px 25px 0 295px;
+}
 
 .title {
     color: var(--color_space);
