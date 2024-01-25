@@ -129,6 +129,7 @@
     font-size: 14px;
     font-weight: 400;
     display: inline-block;
+    list-style: none;
     margin-bottom: 20px;
     color: var(--color_semi-white);
 }
@@ -261,6 +262,8 @@
 .vacancies__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .vacancies__values {
@@ -280,6 +283,7 @@
 
 .vacancies__value:last-of-type {
     border-radius: 0 10px 10px 0;
+    padding-left: 21px;
 }
 
 .vacancies__value--active {
@@ -288,3 +292,220 @@
     background-color: var(--color_space);
 }
 
+.vacancies__filter-list {
+    width: 100%;
+    background-color: var(--color_white);
+    border-radius: 10px;
+    padding: 15px 0;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+/*filter-check*/
+.vacancies__input-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.vacancies__span {
+    user-select: none;
+    position: relative;
+    padding-left: 50px;
+    color: var(--color_space);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.vacancies__span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: var(--color_gray);
+    border-radius: 5px;
+}
+
+.vacancies__span::after {
+    content: url("../img/checked.svg");
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 1px;
+    bottom: -4px;
+    opacity: 0;
+}
+
+.vacancies__input:checked + .vacancies__span::after {
+    opacity: 1;
+}
+
+/*page's content*/
+.vacancies__list {
+    margin: 0;
+    padding: 0;
+}
+
+.vacancies__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 206px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.vacancies__list-item:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.item__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-bottom: 1px solid var(--color_bali);
+}
+
+.item__right {
+    display: flex;
+    align-items: flex-start;
+}
+
+.item__btn {
+    margin-right: 15px;
+}
+
+/*item__filter-check*/
+.item__name-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.item__name-span {
+    user-select: none;
+    position: relative;
+    padding-left: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.item__name-span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: var(--color_gray);
+    border-radius: 5px;
+}
+
+.item__name-span::after {
+    content: url("../img/checked.svg");
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 1px;
+    bottom: -4px;
+    opacity: 0;
+}
+
+.item__name-input:checked + .item__name-span::after {
+    opacity: 1;
+}
+
+.item__descr {
+    margin: 0;
+    padding-left: 50px;
+    padding-top: 13px;
+    color: var(--color_bali);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.item__price {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/*item__burger*/
+.item__burger {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+}
+
+.item__burger-dot {
+    position: absolute;
+    top: 42%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--color_bali);
+}
+
+.item__burger-dot:first-child {
+    left: 12px;
+}
+
+.item__burger-dot:nth-child(2) {
+    left: 20px;
+}
+
+.item__burger-dot:last-child {
+    left: 36px;
+}
+
+.item__bottom {
+    display: flex;
+    color: var(--color_space);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.item__status {
+    border-right: 1px solid var(--color_bali);
+    padding: 17.5px 25px;
+}
+
+.item__created {
+    border-right: 1px solid var(--color_bali);
+    padding: 17.5px 25px;
+}
+
+.item__save {
+    padding: 17.5px 25px;
+}
+
+.item__name-data {
+    margin-bottom: 10px;
+}
+
+.item__right-data {
+    font-size: 15px;
+    color: var(--color_bali);
+}

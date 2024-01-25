@@ -14,20 +14,23 @@
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container">
-        <a href="../start-page.html" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании" class="nav__logo-icon"></a>
+        <a href="../start-page.html" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании"
+                                                            class="nav__logo-icon"></a>
         <ul class="nav__links">
-            <span class="nav__links-caption">Рекрутинг</span>
+            <li class="nav__links-caption">Рекрутинг</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
-            <li class="nav__link list-reset"><a href="../partials/vacancies.html" class="nav__link-item link-vacancies">Вакансии</a></li>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html" class="nav__link-item link-vacancies">Вакансии</a>
+            </li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-candidates">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
-            <span class="nav__links-caption">Организация</span>
+            <li class="nav__links-caption">Организация</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-companies">Компании</a></li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
-            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a></li>
+            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+            </li>
         </ul>
         <ul class="nav__links">
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
@@ -42,7 +45,8 @@
             <input type="text" class="search-bar__form-space" placeholder="Поиск по вакансиям">
         </form>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" class="search-bar__note"></button>
+            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" class="search-bar__note">
+            </button>
         </div>
         <div class="search-bar__btn-wrap">
             <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" class="search-bar__acc"></button>
@@ -58,6 +62,55 @@
                 <button class="btn-reset vacancies__value">Архив</button>
             </div>
             <button class="btn-reset btn">Добавить вакансию</button>
+        </div>
+        <div class="vacancies__content">
+            <div class="vacancies__filter-list">
+                <label class="vacancies__label">
+                    <input type="checkbox" class="vacancies__input vacancies__input-hidden">
+                    <span class="vacancies__span">Неопубликованные вакансии</span>
+                </label>
+            </div>
+            <ul class="vacancies__list">
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Водитель категории C</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <button class="btn-reset btn-two item__btn">Заполнить для публикации</button>
+                            <nav class="item__burger-nav"></nav>
+                            <div class="item__burger">
+                                <div class="item__burger-dot"></div>
+                                <div class="item__burger-dot"></div>
+                                <div class="item__burger-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__status">
+                            <div class="item__name-data">Статус вакансии</div>
+                            <div class="item__right-data">Не заполнена</div>
+                        </div>
+                        <div class="item__created">
+                            <div class="item__name-data">Дата создания</div>
+                            <div class="item__right-data">Вчера в 10:02</div>
+                        </div>
+                        <div class="item__save">
+                            <div class="item__name-data">Сохранена</div>
+                            <div class="item__right-data">Сегодня в 19:13</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="vacancies__list-item list-reset item"></li>
+                <li class="vacancies__list-item list-reset item"></li>
+            </ul>
         </div>
     </div>
 </section>
