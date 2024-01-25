@@ -135,13 +135,13 @@
 }
 
 .nav__container {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     max-width: 270px;
     padding: 0 40px;
     background-color: var(--color_space);
-    height: 100vh;
+    height: 100%;
 }
 
 .nav__logo {
