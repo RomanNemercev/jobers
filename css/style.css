@@ -512,6 +512,10 @@
     transition: transform .3s ease;
 }
 
+.item__burger-item:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
+}
+
 .item__burger-list--active {
     box-shadow: 0 0 15px 0 #0000001A;
     transform: translate(9px, 6px);
