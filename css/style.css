@@ -172,11 +172,12 @@
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05);
     align-items: center;
     width: 100%;
-    padding: 0 49px 0 319px;
+    padding: 0 25px 0 258px;
 }
 
 .search-bar__form {
-    margin-right: auto;
+    padding-left: 37px;
+    width: 100%;
 }
 
 .search-bar__form::before {
@@ -184,38 +185,41 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 345px;
+    left: 307px;
     top: 25px;
     background-image: url("../img/search-icon.svg");
 }
 
 .search-bar__form-space {
     border: none;
-    padding-left: 55px;
-    width: 107.805%;
-    min-height: 69px;
-    font-size: 16px;
+    padding: 12px 0;
+    padding-left: 40px;
+    width: 96.5%;
+    background-color: var(--color_athens-gray);
+    border-radius: 10px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     color: var(--color_bali);
-    border-left: 1px solid var(--color_gray);
 }
 
 .search-bar__btn-wrap {
+    position: relative;
     width: 90px;
     display: flex;
-    min-height: 69px;
+    flex-shrink: 0;
+    min-height: 70px;
     padding: 0 10px;
     align-items: center;
     justify-content: center;
     border-left: 1px solid var(--color_gray);
-    transform: translate(-3px, 2px);
+    transform: translate(-4px, 2px);
 }
 
-.search-bar__btn-wrap:nth-child(3) {
+.search-bar__btn-wrap:nth-child(4) {
     border-right: 1px solid var(--color_gray);
-    transform: translate(-2px, 1px);
+    transform: translate(-1px, 1px);
 }
 
 .search-bar__btn {
@@ -231,7 +235,24 @@
     height: 22px;
 }
 
-/*begin*/
+.search-bar__btn-wrap:nth-child(2)::before {
+    content: '32';
+    position: absolute;
+    width: 28px;
+    height: 25px;
+    top: 33px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #F50A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 42%;
+}
+
+/*begin-pageTwo*/
 .begin__container {
     position: relative;
     min-height: 382px;
@@ -596,3 +617,16 @@
     display: block;
 }
 
+.add-values {
+    position: relative;
+    padding: 10px 21px 11px 55px;
+}
+
+.add-values::before {
+    content: url("../img/plus.svg");
+    position: absolute;
+    top: 11px;
+    left: 27px;
+    width: 12px;
+    height: 12px;
+}

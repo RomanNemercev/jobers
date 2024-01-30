@@ -99,9 +99,9 @@ menuLinksThird.forEach(function (el) {
 //archive block
 //archive-one
 let burgerArchiveOne = document.querySelector('.item__archive-one');
-let burgerListArchiveOne = document.querySelector('.list__archive-one');
-let itemTopArchiveOne = document.querySelector('.archive__top-one');
-let menuLinksArchiveOne = document.querySelectorAll('.archive__btn-one');
+let burgerListArchiveOne = document.querySelector('.item__list__archive-one');
+let itemTopArchiveOne = document.querySelector('.item__archive__top-one');
+let menuLinksArchiveOne = document.querySelectorAll('.item__archive__btn-one');
 
 burgerArchiveOne.addEventListener('click',
     function () {
@@ -119,9 +119,9 @@ menuLinksArchiveOne.forEach(function (el) {
 
 //archive-two
 let burgerArchiveTwo = document.querySelector('.item__archive-two');
-let burgerListArchiveTwo = document.querySelector('.list__archive-two');
-let itemTopArchiveTwo = document.querySelector('.archive__top-two');
-let menuLinksArchiveTwo = document.querySelectorAll('.archive__btn-two');
+let burgerListArchiveTwo = document.querySelector('.item__list__archive-two');
+let itemTopArchiveTwo = document.querySelector('.item__archive__top-two');
+let menuLinksArchiveTwo = document.querySelectorAll('.item__archive__btn-two');
 
 burgerArchiveTwo.addEventListener('click',
     function () {
