@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jobers - Начало работы</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container" id="noneScalable">
-        <a href="#" class="nav__logo"><img src="img/logo.png" alt="Логотип компании" class="nav__logo-icon"></a>
+        <a href="#" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании" class="nav__logo-icon"></a>
         <ul class="nav__links">
             <li class="nav__links-caption">Рекрутинг</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
-            <li class="nav__link list-reset"><a href="partials/vacancies.html" class="nav__link-item link-vacancies">Вакансии</a>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html" class="nav__link-item link-vacancies active-page">Вакансии</a>
             </li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-candidates">Кандидаты</a></li>
         </ul>
@@ -44,27 +44,22 @@
             <input type="text" class="search-bar__form-space" placeholder="Поиск">
         </form>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="img/notification.svg" alt="Уведомления"
+            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
                                                            class="search-bar__note"></button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="img/support.svg" alt="Поддержка" class="search-bar__support"></button>
+            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Поддержка"
+                                                           class="search-bar__support"></button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="img/profile.svg" alt="Личный кабинет" class="search-bar__acc"></button>
+            <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
+                                                           class="search-bar__acc"></button>
         </div>
     </div>
 </section>
 <!--основной контент страницы-->
-<section class="begin container">
-    <div class="begin__container">
-        <h1 class="begin__title title">Заполните вашу первую вакансию</h1>
-        <p class="begin__descr descr">Вакансия&nbsp;- это объявление, при помощи которого вы&nbsp;можете найти
-            необходимого сотрудника. В&nbsp;нем вы&nbsp;описываете требования к&nbsp;кандидату, указываете город, где
-            нужен сотрудник, и&nbsp;определяете профессиональные навыки, необходимые для работы.</p>
-        <a href="partials/add_vacancies.html" class="btn-reset btn">Добавить вакансию</a>
-    </div>
+<section class="add container">
 </section>
-<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

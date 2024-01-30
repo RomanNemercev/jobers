@@ -115,7 +115,18 @@
     border-radius: 5px;
     line-height: normal;
     opacity: 0.5;
+    transition: opacity, background-color .3s ease;
 }
+
+.active-page,
+.nav__link-item:focus,
+.nav__link-item:hover,
+.nav__link-item:active {
+    outline: none;
+    background-color: #FFFFFF1A;
+    opacity: 1;
+}
+
 
 .link-rates {
     background: linear-gradient(93.9deg, #9747FF 31.99%, #5898FF 94.36%);
