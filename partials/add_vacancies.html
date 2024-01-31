@@ -14,7 +14,8 @@
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container" id="noneScalable">
-        <a href="#" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании" class="nav__logo-icon"></a>
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
         <ul class="nav__links">
             <li class="nav__links-caption">Рекрутинг</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
@@ -25,7 +26,7 @@
         </ul>
         <ul class="nav__links">
             <li class="nav__links-caption">Организация</li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-companies">Компании</a></li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
@@ -84,20 +85,29 @@
                 <div class="main__descr">
                     <label class="main__descr-title">Описание <span
                             class="main__span-custom">*</span>
-                        <textarea name="main__textarea-content" class="main__descr-content" id="main__textarea-content"></textarea>
+                        <textarea name="main__textarea-content" class="main__descr-content"
+                                  id="main__textarea-content"></textarea>
                     </label>
                 </div>
             </div>
-            <div class="add__content-right"></div>
+            <div class="add__content-right">
+                <div class="add__right-container complete">
+                    <div class="complete__bar">
+                        <p class="complete__data">Заполнено: 13%</p>
+                        <p class="complete__data-last">Изменения сохранены: <span class="complete__data-time">сегодня в 15:09</span>
+                        </p>
+                    </div>
+                    <div class="complete__status">
+                        <div class="complete__step-one">Основная информация</div>
+                        <div class="complete__step-two">Условия и требования</div>
+                        <div class="complete__step-third">Контактная информация</div>
+                        <div class="complete__step-fourth">Выбор сайтов</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<script src="../js/libs-js/nicedit.js"></script>
-<script type="text/javascript">
-    bkLib.onDomLoaded(function () {
-        new nicEditor({buttonList: ['fontSize', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'html', 'image']}).panelInstance('main__textarea-content');
-    });
-</script>
 <script src="../js/script.js"></script>
 </body>
 </html>

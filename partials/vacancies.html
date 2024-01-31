@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jobers - Вакансии</title>
+    <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -14,17 +15,19 @@
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container" id="noneScalable">
-        <a href="../start-page.html" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании" class="nav__logo-icon"></a>
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
         <ul class="nav__links">
             <li class="nav__links-caption">Рекрутинг</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
-            <li class="nav__link list-reset"><a href="../partials/vacancies.html" class="nav__link-item link-vacancies active-page">Вакансии</a>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
             </li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-candidates">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
             <li class="nav__links-caption">Организация</li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-companies">Компании</a></li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
@@ -136,7 +139,7 @@
                     </div>
                 </li>
                 <li class="vacancies__list-item list-reset item">
-                    <div class="item__top top-two">
+                    <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
                                 <input type="checkbox" class="item__name-input item__name-hidden">
@@ -149,7 +152,7 @@
                         </div>
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Посмотреть перед публикацией</button>
-                            <nav class="item__burger-nav">
+                            <nav class="item__burger-nav item__nav-two">
                                 <ul class="item__burger-list list-two">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-two btn-reset">Редактировать</button>
@@ -201,7 +204,7 @@
                     </div>
                 </li>
                 <li class="vacancies__list-item list-reset item">
-                    <div class="item__top top-third">
+                    <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
                                 <input type="checkbox" class="item__name-input item__name-hidden">
@@ -213,7 +216,7 @@
                                         class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
                         </div>
                         <div class="item__right">
-                            <nav class="item__burger-nav">
+                            <nav class="item__burger-nav item__nav-third">
                                 <ul class="item__burger-list list-third">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-third btn-reset">Редактировать
@@ -272,6 +275,23 @@
                     <span class="vacancies__span">Активные вакансии</span>
                 </label>
             </div>
+            <div class="vacancies__filter" id="filterActive">
+                <div class="vacancies__filter-wrapper">
+                    <p class="vacancies__filter-sum">Выделено вакансий: <span class="vacancies__filter-span">3</span>
+                    </p>
+                    <button class="vacancies__filter-reset btn-reset">Отменить выделение</button>
+                    <div class="vacancies__select-box">
+                        <select name="select" class="vacancies__select-wrapper">
+                            <option value="">Выберите действие</option>
+                            <option value="Пригласить">Пригласить</option>
+                            <option value="Отклонить">Отклонить</option>
+                            <option value="Скачать резюме">Скачать резюме</option>
+                            <option value="Экспорт в Excel">Экспорт в Excel</option>
+                            <option value="Удалить">Удалить</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="vacancies__content" data-target="two">
             <div class="vacancies__filter-list">
@@ -282,7 +302,7 @@
             </div>
             <ul class="vacancies__list">
                 <li class="vacancies__list-item list-reset item">
-                    <div class="item__top item__archive__top-one">
+                    <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
                                 <input type="checkbox" class="item__name-input item__name-hidden">
@@ -295,28 +315,33 @@
                         </div>
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Опубликовать повторно</button>
-                            <nav class="item__burger-nav">
+                            <nav class="item__burger-nav item__nav__archive-one">
                                 <ul class="item__burger-list item__list__archive-one">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__archive__btn-one btn-reset">Редактировать
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Удалить</button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Дублировать</button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Настройка формы
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Удалить
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Страница вакансии
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Дублировать
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Настройка автоотбора
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Настройка
+                                            формы
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Страница
+                                            вакансии
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Настройка
+                                            автоотбора
                                         </button>
                                     </li>
                                 </ul>
@@ -362,7 +387,7 @@
                     </div>
                 </li>
                 <li class="vacancies__list-item list-reset item">
-                    <div class="item__top item__archive__top-two">
+                    <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
                                 <input type="checkbox" class="item__name-input item__name-hidden">
@@ -375,28 +400,33 @@
                         </div>
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Посмотреть перед публикацией</button>
-                            <nav class="item__burger-nav">
+                            <nav class="item__burger-nav item__nav__archive-two">
                                 <ul class="item__burger-list item__list__archive-two">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__archive__btn-two btn-reset">Редактировать
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Удалить</button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Дублировать</button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка формы
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Удалить
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Страница вакансии
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Дублировать
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка автоотбора
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка
+                                            формы
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Страница
+                                            вакансии
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка
+                                            автоотбора
                                         </button>
                                     </li>
                                 </ul>
@@ -442,9 +472,28 @@
                     </div>
                 </li>
             </ul>
+            <div class="vacancies__filter" id="filterArchive">
+                <div class="vacancies__filter-wrapper">
+                    <p class="vacancies__filter-sum">Выделено вакансий: <span class="vacancies__filter-span">3</span>
+                    </p>
+                    <button class="vacancies__filter-reset btn-reset">Отменить выделение</button>
+                    <!-- можно сделать кнопку ссылкой и отправлять пользователя на дефолт страницу !-->
+                    <div class="vacancies__select-box">
+                        <select name="select" class="vacancies__select-wrapper">
+                            <option value="">Выберите действие</option>
+                            <option value="Пригласить">Пригласить</option>
+                            <option value="Отклонить">Отклонить</option>
+                            <option value="Скачать резюме">Скачать резюме</option>
+                            <option value="Экспорт в Excel">Экспорт в Excel</option>
+                            <option value="Удалить">Удалить</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>
