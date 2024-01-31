@@ -63,7 +63,7 @@
 <section class="add container">
     <div class="add__container">
         <div class="add__header">
-            <h2 class="add__title">Создание вакансии</h2>
+            <h2 class="add__title title">Создание вакансии</h2>
             <div class="add__option">
                 <a href="#" class="add__option-upload">Загрузить вакансию с работного сайта</a><a href="#"
                                                                                                   class="add__option-ai">Генерация
@@ -74,7 +74,7 @@
             <div class="add__content-left main">
                 <p class="main__title">Основная информация</p>
                 <label for="choose-post" class="main__post">
-                    Название должности <span class="main__span-custom">*</span>
+                    Название должности <span class="main__span-custom mb15">*</span>
                     <input type="text" name="choose-post" id="choose-post" placeholder="Например, водитель категории C"
                            class="main__post-form">
                 </label>
@@ -84,9 +84,11 @@
                 </div>
                 <div class="main__descr">
                     <label class="main__descr-title">Описание <span
-                            class="main__span-custom">*</span>
+                            class="main__span-custom mb15">*</span>
                         <textarea name="main__textarea-content" class="main__descr-content"
                                   id="main__textarea-content"></textarea>
+                        <p class="main__descr-note">не&nbsp;более 8000&nbsp;символов, осталось символов: <span
+                                class="main__note-custom"> 8000</span></p>
                     </label>
                 </div>
             </div>
@@ -98,10 +100,10 @@
                         </p>
                     </div>
                     <div class="complete__status">
-                        <div class="complete__step-one">Основная информация</div>
-                        <div class="complete__step-two">Условия и требования</div>
-                        <div class="complete__step-third">Контактная информация</div>
-                        <div class="complete__step-fourth">Выбор сайтов</div>
+                        <div class="complete__step complete__step-one complete__ready">Основная информация</div>
+                        <div class="complete__step complete__step-two">Условия и требования</div>
+                        <div class="complete__step complete__step-third">Контактная информация</div>
+                        <div class="complete__step complete__step-fourth">Выбор сайтов</div>
                     </div>
                 </div>
             </div>
