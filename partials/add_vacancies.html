@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jobers - Начало работы</title>
+    <title>Jobers - Добавить вакансию</title>
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/styles-add-vacancies.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
@@ -108,8 +110,199 @@
                 </div>
             </div>
         </div>
+        <div class="add__info">
+            <p class="add__info-title">Дополнительная информация</p>
+            <div class="add__options">
+                <div class="add__options-type">
+                    <p class="add__options-title">Тип занятости</p>
+                    <div class="add__option-dropdown">
+                        <select name="select" class="add__select-wrapper">
+                            <option value="Пригласить" selected>Полная</option>
+                            <option value="Отклонить">Частичная</option>
+                            <option value="Скачать резюме">Временная</option>
+                            <option value="Экспорт в Excel">Стажировка</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="add__options-schedule">
+                    <p class="add__options-title">График работы</p>
+                    <div class="add__option-dropdown">
+                        <select name="select" class="add__select-wrapper">
+                            <option value="Пригласить" selected>Полный</option>
+                            <option value="Отклонить">Сменный</option>
+                            <option value="Скачать резюме">Свободный</option>
+                            <option value="Экспорт в Excel">Удаленная работа</option>
+                            <option value="Экспорт в Excel">Вахтовый метод</option>
+                            <option value="Экспорт в Excel">Неполный день</option>
+                            <option value="Экспорт в Excel">Любой</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="add__wage">
+                <p class="add__wage-title">Заработная плата в месяц, руб<span class="add__span-custom"> *</span></p>
+                <input type="text" class="add__wage-min" placeholder="от"><input type="text" class="add__wage-max"
+                                                                                 placeholder="до">
+            </div>
+            <div class="add__dues">
+                <div class="add__dues-on">
+                    <input type="radio" id="dues-on" name="dues" value="dues-on" checked/>
+                    <label for="dues-on">На руки</label>
+                </div>
+                <div class="add__dues-off">
+                    <input type="radio" id="dues-off" name="dues" value="dues-off"/>
+                    <label for="dues-off">До вычета налогов</label>
+                </div>
+            </div>
+            <div class="add__options">
+                <div class="add__options-trial">
+                    <p class="add__options-title">Опыт работы</p>
+                    <select name="select" class="add__select-wrapper">
+                        <option value="Пригласить">Выберите вариант</option>
+                        <option value="Отклонить">Не имеет значения</option>
+                        <option value="Скачать резюме">От 1 года</option>
+                        <option value="Экспорт в Excel">От 3х лет</option>
+                        <option value="Экспорт в Excel">От 5 лет</option>
+                    </select>
+                </div>
+                <div class="add__options-edu">
+                    <p class="add__options-title">Образование</p>
+                    <select name="select" class="add__select-wrapper">
+                        <option value="Пригласить">Выберите вариант</option>
+                        <option value="Отклонить">Высшее</option>
+                        <option value="Скачать резюме">Неполное высшее</option>
+                        <option value="Экспорт в Excel">Среднее специальное</option>
+                        <option value="Экспорт в Excel">Среднее</option>
+                        <option value="Экспорт в Excel">Неполное среднее</option>
+                    </select>
+                </div>
+            </div>
+            <label for="main-skills" class="add__keys">
+                Ключевые навыки
+                <input type="text" class="add__keys-input" id="main-skills" placeholder="Например: Маркетинг">
+            </label>
+            <ul class="add__accordion accordion-list">
+                <li class="list-reset add__accordion-list accordion" tabindex="0">
+                    <div class="add__accordion-control accordion__control" tabindex="-1">
+                        <p class="add__accordion-title"
+                           aria-label="Что бы просмотреть дополнительные свойства кандидата, нажмите эту клавишу">
+                            Показать список</p>
+                        <div class="add__icon">
+                            <span class="add__icon-tab"></span>
+                        </div>
+                    </div>
+                    <div class="add__accordion-content accordion__content">
+                        <div class="add__content-features">
+                            <label for="insurance" class="add__features-item">ДМС<input
+                                    type="checkbox"
+                                    class="add__features-input" id="insurance"></label>
+                            <label
+                                    for="connection" class="add__features-item">Мобильная связь<input type="checkbox"
+                                                                                                      class="add__features-input"
+                                                                                                      id="connection">
+                            </label>
+                            <label
+                                    for="fitness" class="add__features-item">Фитнес<input type="checkbox"
+                                                                                          class="add__features-input"
+                                                                                          id="fitness"></label>
+                            <label
+                                    for="food" class="add__features-item">Питание<input type="checkbox"
+                                                                                        class="add__features-input"
+                                                                                        id="food"></label>
+                            <label
+                                    for="workwear" class="add__features-item">Спецодежда<input type="checkbox"
+                                                                                               class="add__features-input"
+                                                                                               id="workwear"></label>
+                            <label
+                                    for="business-trips" class="add__features-item">Командировки<input type="checkbox"
+                                                                                                       class="add__features-input"
+                                                                                                       id="business-trips">
+                            </label>
+                            <label
+                                    for="company-car" class="add__features-item">Служебный автомобиль<input
+                                    type="checkbox"
+                                    class="add__features-input"
+                                    id="company-car"></label>
+                            <label
+                                    for="accommodation" class="add__features-item">Помощь с&nbsp;переездом,
+                                проживание<input
+                                        type="checkbox"
+                                        class="add__features-input" id="accommodation"></label>
+                            <label
+                                    for="not-official" class="add__features-item">Без оформления по&nbsp;ТК<input
+                                    type="checkbox"
+                                    class="add__features-input" id="not-official"></label>
+                        </div>
+                        <div class="add__content-car">
+                            <label for="A" class="add__car-item">A<input type="checkbox"
+                                                                         class="add__car-input"
+                                                                         id="A"></label>
+                            <label
+                                    for="B" class="add__car-item">B<input type="checkbox" class="add__car-input" id="B">
+                            </label>
+                            <label
+                                    for="C" class="add__car-item">C<input type="checkbox" class="add__car-input" id="C">
+                            </label>
+                            <label
+                                    for="D" class="add__car-item">D<input type="checkbox" class="add__car-input" id="D">
+                            </label>
+                            <label
+                                    for="E" class="add__car-item">E<input type="checkbox" class="add__car-input" id="E">
+                            </label>
+                            <label
+                                    for="M" class="add__car-item">M<input type="checkbox" class="add__car-input" id="M">
+                            </label>
+                            <label
+                                    for="BE" class="add__car-item">BE<input type="checkbox" class="add__car-input"
+                                                                            id="BE"></label>
+                            <label
+                                    for="TB" class="add__car-item">TB<input type="checkbox" class="add__car-input"
+                                                                            id="TB"></label>
+                            <label
+                                    for="DE" class="add__car-item">DE<input type="checkbox" class="add__car-input"
+                                                                          id="DE"></label>
+                            <label
+                                    for="CE" class="add__car-item">CE<input type="checkbox" class="add__car-input"
+                                                                          id="CE"></label>
+                        </div>
+                        <div class="add__wishes">
+                            <label for="personal-car" class="add__wishes-item">Личный
+                                автомобиль<input type="checkbox"
+                                                 class="add__wishes-input" id="personal-car"></label>
+                            <label
+                                    for="for-pensioners" class="add__wishes-item">Вакансия подходит для
+                                пенсионеров<input
+                                        type="checkbox"
+                                        class="add__wishes-input" id="for-pensioners"></label>
+                            <label for="inter-passport"
+                                   class="add__wishes-item">Требуется загранпаспорт<input
+                                    type="checkbox" class="add__wishes-input" id="inter-passport"></label>
+                            <label for="on-weekends"
+                                   class="add__wishes-item">Работа только по&nbsp;СБ и&nbsp;ВС<input
+                                    type="checkbox" class="add__wishes-input" id="on-weekends"></label>
+                            <label for="for-student"
+                                   class="add__wishes-item">Вакансия подходит для студентов<input
+                                    type="checkbox" class="add__wishes-input" id="for-student"></label>
+                            <label for="temp-registration"
+                                   class="add__wishes-item">Возможно временное оформление<input
+                                    type="checkbox" class="add__wishes-input" id="temp-registration"></label>
+                            <label for="after-noon"
+                                   class="add__wishes-item">Можно начинать работать после 16:00<input
+                                    type="checkbox" class="add__wishes-input" id="after-noon"></label>
+                            <label for="for-teen"
+                                   class="add__wishes-item">Вакансия подходит для соискателей от 14 лет<input
+                                    type="checkbox" class="add__wishes-input" id="for-teen"></label>
+                            <label for="half-day"
+                                   class="add__wishes-item">Можно работать сменами по&nbsp;4-6 часов в&nbsp;день<input
+                                    type="checkbox" class="add__wishes-input" id="half-day"></label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
-<script src="../js/script.js"></script>
+<script src="../js/libs-js/choices.min.js"></script>
+<script src="../js/script-add-vacancies.js"></script>
 </body>
 </html>

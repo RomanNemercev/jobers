@@ -1,0 +1,18 @@
+/*choices*/
+.choices__inner {
+    background-color: var(--color_athens-gray);
+}
+
+.choices__list--single > .choices__item {
+    color: var(--color_space);
+}
+
+.choices__list--dropdown {
+    border: none;
+    box-shadow: 0 0 15px 0 #00000026;
+    border-radius: 5px;
+}
+
+.choices__item {
+    color: var(--color_space);
+}
