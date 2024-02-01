@@ -1,6 +1,6 @@
 /*nav*/
 .nav {
-    z-index: 1;
+    z-index: 2;
     position: relative;
 }
 
@@ -127,7 +127,6 @@
     opacity: 1;
 }
 
-
 .link-rates {
     background: linear-gradient(93.9deg, #9747FF 31.99%, #5898FF 94.36%);
     opacity: 1;
@@ -173,7 +172,12 @@
 
 /*search-bar*/
 .search-bar {
-    position: relative;
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .search-bar__container {
@@ -203,16 +207,30 @@
 
 .search-bar__form-space {
     border: none;
+    outline: none;
     padding: 12px 0;
     padding-left: 40px;
+    padding-right: 20px;
     width: 96.5%;
+    color: var(--color_space);
     background-color: var(--color_athens-gray);
     border-radius: 10px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.search-bar__form-space::placeholder {
     color: var(--color_bali);
+}
+
+.search-bar__form-space:focus {
+    outline: 1px solid var(--color_dodger);
+}
+
+.search-bar__form-space:active {
+    outline: 1px solid var(--color_dodger);
 }
 
 .search-bar__btn-wrap {
@@ -351,7 +369,7 @@
     width: 100%;
     background-color: var(--color_white);
     border-radius: 10px;
-    padding: 16px 0;
+    padding: 15px 0;
     padding-left: 25px;
     margin-bottom: 15px;
 }
@@ -383,7 +401,7 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    top: -3px;
     width: 25px;
     height: 25px;
     background-color: var(--color_gray);
@@ -395,7 +413,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    top: 0;
+    top: -3px;
     left: 0;
     bottom: -4px;
     opacity: 0;
@@ -473,8 +491,8 @@
 .item__name-span::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
+    top: 1px;
+    left: 1px;
     width: 25px;
     height: 25px;
     background-color: var(--color_gray);
@@ -486,8 +504,8 @@
     position: absolute;
     width: 25px;
     height: 25px;
+    top: 1px;
     left: 1px;
-    bottom: -4px;
     opacity: 0;
 }
 
@@ -528,6 +546,11 @@
     height: 7px;
     border-radius: 50%;
     background-color: var(--color_bali);
+    transition: background-color .3s ease;
+}
+
+.item__burger-dot--active {
+    background-color: var(--color_dodger);
 }
 
 .item__burger-dot:first-child {
@@ -546,10 +569,14 @@
     position: absolute;
     overflow: hidden;
     width: 220px;
-    min-height: 265px;
+    min-height: 350px;
     top: 50px;
     right: 25px;
     left: 97px;
+}
+
+.item__nav__active-one {
+    left: -165px;
 }
 
 .item__nav-third {
@@ -577,7 +604,7 @@
     border-radius: 5px;
     background-color: var(--color_white);
     z-index: 1;
-    transform: translate(5%, -252px);
+    transform: translate(5%, -340px);
     transition: transform .3s ease;
 }
 
@@ -599,11 +626,18 @@
 }
 
 .item__burger-btn {
+    width: 100%;
+    text-align: left;
     padding: 11px 0 12px 15px;
     font-size: 15px;
     font-weight: 400;
     line-height: 18px;
     color: var(--color_bali);
+    transition: background-color .3s ease;
+}
+
+.item__burger-btn:hover {
+    background-color: var(--color_gray);
 }
 
 .item__bottom {
@@ -641,6 +675,10 @@
 .item__right-data {
     font-size: 15px;
     color: var(--color_bali);
+}
+
+.item__data-collapse {
+    color: red;
 }
 
 /*archive's content/right page*/
@@ -685,7 +723,7 @@
 .vacancies__filter {
     display: block;
     position: absolute;
-    bottom: -100px;
+    bottom: -10%;
     width: 1069px;
     padding: 16px 25px;
     border-radius: 10px;
@@ -805,16 +843,20 @@
 .vacancies__container {
     position: relative;
     overflow: hidden;
-    min-height: 932px;
+    min-height: 1500px;
 }
 
 .vacancies__filter--active {
-    bottom: 3%;
+    bottom: 5%;
     position: fixed;
 }
 
 /*new page*/
 /*add*/
+.add__container {
+    /*position: relative;*/
+}
+
 /*add-main*/
 .add__header {
     margin-bottom: 50px;
@@ -863,7 +905,7 @@
     margin-bottom: 25px;
 }
 
-.add__content-left {
+.add__content-container {
     width: 62.7%;
     background-color: var(--color_white);
     padding: 25px;
@@ -974,13 +1016,19 @@
 }
 
 /*add__content-right*/
-.add__content-right {
-    width: 35.1%;
+.add__content-progress {
+    position: sticky;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 71%;
 }
 
 .add__right-container {
+    position: absolute;
     background-color: var(--color_white);
     border-radius: 10px;
+    right: 1%;
 }
 
 .complete__bar {

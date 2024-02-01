@@ -39,51 +39,121 @@ tabsBtn.forEach(function (element) {
 // list-one
 let burger = document.querySelector('.item__burger');
 let burgerList = document.querySelector('.item__burger-list');
+let inWorkDotsOne = document.querySelectorAll('.dot-inwork-one');
 let menuLinks = document.querySelectorAll('.item__burger-btn');
 
 burger.addEventListener('click',
     function () {
         burgerList.classList.toggle('item__burger-list--active');
+        inWorkDotsOne.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
     })
 
 menuLinks.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerList.classList.remove('item__burger-list--active');
+            inWorkDotsOne.forEach(function (el) {
+                el.classList.remove('item__burger-dot--active')
+            })
         })
 })
 
 //list-two
 let burgerTwo = document.querySelector('.item-two');
 let burgerListTwo = document.querySelector('.list-two');
+let inWorkDotsTwo = document.querySelectorAll('.dot-inwork-two');
 let menuLinksTwo = document.querySelectorAll('.item__btn-two');
 
 burgerTwo.addEventListener('click',
     function () {
         burgerListTwo.classList.toggle('item__burger-list--active');
+        inWorkDotsTwo.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
     })
 
 menuLinksTwo.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerListTwo.classList.remove('item__burger-list--active');
+            inWorkDotsTwo.forEach(function (el) {
+                el.classList.remove('item__burger-dot--active')
+            })
         })
 })
 
 //list-third
 let burgerThird = document.querySelector('.item-third');
 let burgerListThird = document.querySelector('.list-third');
+let inWorkDotsThree = document.querySelectorAll('.dot-inwork-three');
 let menuLinksThird = document.querySelectorAll('.item__btn-third');
 
 burgerThird.addEventListener('click',
     function () {
         burgerListThird.classList.toggle('item__burger-list--active');
+        inWorkDotsThree.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
     })
 
 menuLinksThird.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerListThird.classList.remove('item__burger-list--active');
+            inWorkDotsThree.forEach(function (el) {
+                el.classList.remove('item__burger-dot--active')
+            })
+        })
+})
+
+// active block
+// active-one
+let burgerActiveOne = document.querySelector('.item__active-one');
+let burgerActiveListOne = document.querySelector('.item__list__active-one');
+let inActiveDotsOne = document.querySelectorAll('.dot-active-one');
+let menuActiveLinksOne = document.querySelectorAll('.item__active__btn-one');
+
+burgerActiveOne.addEventListener('click',
+    function () {
+        burgerActiveListOne.classList.toggle('item__burger-list--active');
+        inActiveDotsOne.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
+    })
+
+menuActiveLinksOne.forEach(function (el) {
+    el.addEventListener('click',
+        function () {
+            burgerActiveListOne.classList.remove('item__burger-list--active');
+            inActiveDotsOne.forEach(function (el) {
+                el.classList.remove('item__burger-dot--active')
+            })
+        })
+})
+
+// active-two
+let burgerActiveTwo = document.querySelector('.item__active-two');
+let burgerActiveListTwo = document.querySelector('.item__list__active-two');
+let inActiveDotsTwo = document.querySelectorAll('.dot-active-two');
+let menuActiveLinksTwo = document.querySelectorAll('.item__active__btn-two');
+
+burgerActiveTwo.addEventListener('click',
+    function () {
+        burgerActiveListTwo.classList.toggle('item__burger-list--active');
+        inActiveDotsTwo.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
+    })
+
+menuActiveLinksTwo.forEach(function (el) {
+    el.addEventListener('click',
+        function () {
+            burgerActiveListTwo.classList.remove('item__burger-list--active');
+            inActiveDotsTwo.forEach(function (el) {
+                el.classList.remove('item__burger-dot--active')
+            })
         })
 })
 
@@ -91,34 +161,48 @@ menuLinksThird.forEach(function (el) {
 //archive-one
 let burgerArchiveOne = document.querySelector('.item__archive-one');
 let burgerListArchiveOne = document.querySelector('.item__list__archive-one');
+let inArchiveDotsOne = document.querySelectorAll('.dot-archive-one');
 let menuLinksArchiveOne = document.querySelectorAll('.item__archive__btn-one');
 
 burgerArchiveOne.addEventListener('click',
     function () {
         burgerListArchiveOne.classList.toggle('item__burger-list--active');
+        inArchiveDotsOne.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
     })
 
 menuLinksArchiveOne.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerListArchiveOne.classList.remove('item__burger-list--active');
+            inArchiveDotsOne.forEach(function (el) {
+                el.classList.remove('item__burger-dot--active')
+            })
         })
 })
 
 //archive-two
 let burgerArchiveTwo = document.querySelector('.item__archive-two');
 let burgerListArchiveTwo = document.querySelector('.item__list__archive-two');
+let inArchiveDotsTwo = document.querySelectorAll('.dot-archive-two');
 let menuLinksArchiveTwo = document.querySelectorAll('.item__archive__btn-two');
 
 burgerArchiveTwo.addEventListener('click',
     function () {
         burgerListArchiveTwo.classList.toggle('item__burger-list--active');
+         inArchiveDotsTwo.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
     })
 
 menuLinksArchiveTwo.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerListArchiveTwo.classList.remove('item__burger-list--active');
+             inArchiveDotsTwo.forEach(function (el) {
+                el.classList.remove('item__burger-dot--active')
+            })
         })
 })
 
@@ -173,7 +257,7 @@ itemNameInput.forEach(function (el) {
 filterResetBtn.forEach(function (el) {
     el.addEventListener('click',
         function () {
-        vacanciesFilterActive.classList.remove('vacancies__filter--active');
-        vacanciesFilterArchive.classList.remove('vacancies__filter--active');
+            vacanciesFilterActive.classList.remove('vacancies__filter--active');
+            vacanciesFilterArchive.classList.remove('vacancies__filter--active');
         })
 })
