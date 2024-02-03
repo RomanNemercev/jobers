@@ -43,6 +43,7 @@
     --color_white: #ffffff;
     --color_semi-white: rgba(255, 255, 255, 0.5);
     --color_dodger: #5898FF; /*btns*/
+    --color_zircon: #EFF5FF;
 }
 
 html {

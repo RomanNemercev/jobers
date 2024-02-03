@@ -16,3 +16,14 @@
 .choices__item {
     color: var(--color_space);
 }
+
+.choices[data-type*=select-one]::after {
+    content: "";
+    position: absolute;
+    top: 16.88px;
+    right: 15.62px;
+    width: 13.75px;
+    height: 7.5px;
+    opacity: 1;
+    background-image: url("../img/add-option-dropdown-arrow.svg");
+}

@@ -261,3 +261,5 @@ filterResetBtn.forEach(function (el) {
             vacanciesFilterArchive.classList.remove('vacancies__filter--active');
         })
 })
+
+
