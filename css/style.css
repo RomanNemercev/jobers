@@ -937,7 +937,8 @@
     line-height: normal;
 }
 
-.main__span-custom {
+.main__span-custom,
+.add__span-custom {
     display: inline-block;
     color: var(--color_dodger);
     font-size: 15px;
@@ -1470,4 +1471,17 @@
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0);
+}
+
+.map__wrapper {
+    width: 100%;
+}
+
+/*[class*="ground-pane"] {*/
+/*    -webkit-filter: grayscale(100%);*/
+/*    filter: grayscale(100%);*/
+/*}*/
+
+.map__space {
+    min-height: 350px;
 }

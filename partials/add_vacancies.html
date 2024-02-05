@@ -316,11 +316,13 @@
                             <label
                                     for="for-pensioners" class="add__wishes-item"><input
                                     type="checkbox"
-                                    class="add__wishes-input add__input-hidden" id="for-pensioners"><span class="add__wishes-span">Вакансия подходит для
+                                    class="add__wishes-input add__input-hidden" id="for-pensioners"><span
+                                    class="add__wishes-span">Вакансия подходит для
                                 пенсионеров</span></label>
                             <label for="inter-passport"
                                    class="add__wishes-item"><input
-                                    type="checkbox" class="add__wishes-input add__input-hidden" id="inter-passport"><span
+                                    type="checkbox" class="add__wishes-input add__input-hidden"
+                                    id="inter-passport"><span
                                     class="add__wishes-span">Требуется загранпаспорт</span></label>
                             <label for="on-weekends"
                                    class="add__wishes-item"><input
@@ -332,7 +334,8 @@
                                     class="add__wishes-span">Вакансия подходит для студентов</span></label>
                             <label for="temp-registration"
                                    class="add__wishes-item"><input
-                                    type="checkbox" class="add__wishes-input add__input-hidden" id="temp-registration"><span
+                                    type="checkbox" class="add__wishes-input add__input-hidden"
+                                    id="temp-registration"><span
                                     class="add__wishes-span">Возможно временное оформление</span></label>
                             <label for="after-noon"
                                    class="add__wishes-item"><input
@@ -352,8 +355,79 @@
                 </li>
             </ul>
         </div>
+        <div class="add__contacts">
+            <p class="add__contacts-title">Контактная информация</p>
+            <label for="geo-data" class="add__contacts-geo">Где искать сотрудника</label>
+            <input type="text" class="add__contacts-geo__data" id="geo-data"
+                   placeholder="Например, Санкт-Петербург, Заречная 3">
+            <label for="geo-district" class="add__contacts-district">Регион</label>
+            <input type="text" class="add__contacts-district__data" id="geo-district" placeholder="-">
+            <label for="geo-city" class="add__contacts-city">Город <span class="add__span-custom">*</span></label>
+            <input type="text" class="add__contacts-city__data" id="geo-city" placeholder="Например, Санкт-Петербург">
+            <div class="add__extra">
+                <div class="add__extra-first">
+                    <label for="add-street" class="add__extra-street">Улица <span class="add__span-custom">*</span>
+                    </label>
+                    <input type="text" class="add__extra-street__data" id="add-street"
+                           placeholder="Например, Кировское шоссе"></div>
+                <div class="add__extra-second">
+                    <label for="add-house" class="add__extra-house">Дом</label>
+                    <input type="text" class="add__extra-house__data" id="add-house" placeholder="д 13">
+                </div>
+            </div>
+            <div class="map add__geo">
+                <div class="map__wrapper">
+                    <div class="map__space" id="map"></div>
+                </div>
+            </div>
+            <label for="add-station" class="add__station">Метро</label>
+            <input type="text" class="add__station__data" id="add-station" placeholder="Например, Адмиралтейская">
+            <label for="add-contact-number" class="add__call">Телефон для кандидатов <span
+                    class="add__span-custom">*</span></label>
+            <input type="text" class="add__call__data" id="add-contact-number" placeholder="+7">
+            <button class="btn-reset add__more-number">Указать еще один номер</button>
+            <label for="hide-number" class="add__number-filter"><input type="checkbox" class="add__number-check"
+                                                                       id="hide-number">Не&nbsp;показывать
+                номер телефона на&nbsp;сайтах
+            </label>
+            <div class="add__number-filter__descr"><p class="add__filter-descr__content">Если галочка активна, в&nbsp;вакансии
+                будет указан подменный неконтактный номер телефона: +7 (967) 555-02-06. Таким образом вы&nbsp;не&nbsp;будете
+                получать звонков от&nbsp;кандидатов по&nbsp;вакансии. Позвонив по&nbsp;подменному номеру, кандидат
+                услышит сообщение от&nbsp;автоответчика о&nbsp;необходимости отклика на&nbsp;вакансию через сайт.</p>
+            </div>
+            <label for="company-name" class="add__name-company">Название компании <span
+                    class="add__span-custom">*</span></label>
+            <input type="text" class="add__name-company__data" id="company-name"
+                   placeholder="Например, “Санкт-Петербурский портной”">
+            <div class="add__extra-third">
+                <div class="add__extra-name">
+                    <label for="name-hunter" class="add__extra-name__label">Имя для соискателя <span
+                            class="add__span-custom">*</span></label>
+                    <input type="text" class="add__exta-name__data" id="name-hunter" placeholder="Имя контактного лица">
+                </div>
+                <div class="add__extra-email">
+                    <label for="email-hunter" class="add__extra-email__label">Email для соискателя</label>
+                    <input type="text" class="add__extra-email__data" id="email-hunter" placeholder="Email">
+                </div>
+            </div>
+            <div class="add__logo-container">
+                <div class="add__logo-title"></div>
+                <div class="add__logo-content">
+                    <div class="add__custom-btn">
+                        <div class="preview">
+                            <!-- as default the img won't have a src here. But I added it so we can see what we're styling -->
+                            <img src="" alt="">
+                        </div>
+                        <input type="file" id="uploadBtn">
+                        <label for="uploadBtn">Upload File</label>
+                    </div>
+                    <div class="add__upload-descr"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
 <script src="../js/libs-js/accordion.js"></script>
 <script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/script-add-vacancies.js"></script>
