@@ -99,3 +99,52 @@
     max-height: 140px;
     z-index: 3;
 }
+
+/*checks rates*/
+.rates-list__hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    clip: rect(0 0 0 0);
+}
+
+.rates__list-title {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_space);
+    padding-left: 30px;
+}
+
+.rates__list-title::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/rates-ellipse-empty.svg");
+    background-repeat: no-repeat;
+}
+
+.rates__list-title::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/rates-ellipse-check.svg");
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.rates-list__check:checked + .rates__list-title::after {
+    opacity: 1;
+}
