@@ -27,3 +27,75 @@
     opacity: 1;
     background-image: url("../img/add-option-dropdown-arrow.svg");
 }
+
+.add__logo-container {
+    margin-bottom: 25px;
+}
+
+.add__logo-title {
+    margin-bottom: 15px;
+}
+
+/*custom btn*/
+.preview {
+    width: 90vw;
+    height: 400px;
+    max-width: 700px;
+    position: relative;
+
+    /* as default it'll not be displayed */
+    display: none;
+}
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* we don't want to see this file input type since we want to create a custom one */
+.add__input[type="file"] {
+    display: none;
+}
+
+.add__logo-content {
+    display: flex;
+    min-height: 140px;
+    position: relative;
+}
+
+.add__custom-btn__label {
+    width: 140px;
+    height: 140px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/add__logo-upload.png");
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+}
+
+/*.add__custom-btn__label:hover {*/
+/*    background-color: #FF2d2d;*/
+/*}*/
+
+/*.add__custom-btn__label:active {*/
+/*    transform: translateX(-50%) scale(.95);*/
+/*}*/
+
+.add__upload-descr {
+    width: 71%;
+    margin-left: auto;
+    font-size: 14px;
+    color: var(--color_bali);
+}
+
+.add__background {
+    position: absolute;
+    max-width: 140px;
+    max-height: 140px;
+    z-index: 3;
+}
