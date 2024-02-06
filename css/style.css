@@ -1145,12 +1145,12 @@
 /*}*/
 
 .add__options-type {
-    width: 29.72%;
+    width: 46.576%;
     margin-right: 15px;
 }
 
 .add__options-schedule {
-    width: 29.72%;
+    width: 46.576%;
 }
 
 .add__options-title {
@@ -1188,7 +1188,7 @@
 
 .add__wage-min {
     display: inline-block;
-    width: 30%;
+    width: 46.576%;
     margin-right: 15px;
     border: none;
     padding: 10px 15px;
@@ -1198,7 +1198,7 @@
 
 .add__wage-max {
     display: inline-block;
-    width: 30%;
+    width: 46.576%;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -1268,12 +1268,12 @@
 }
 
 .add__options-trial {
-    width: 29.767%;
+    width: 46.576%;
     margin-right: 15px;
 }
 
 .add__options-edu {
-    width: 29.767%;
+    width: 46.576%;
 }
 
 .add__keys {
@@ -1559,6 +1559,11 @@
     flex-direction: column;
 }
 
+.add__extra-second,
+.add__extra-email {
+    width: 46.576%;
+}
+
 .add__extra-first,
 .add__extra-name {
     width: 46.576%;
@@ -1678,6 +1683,7 @@
     padding: 25px;
     background-color: var(--color_white);
     border-radius: 10px;
+    margin-bottom: 25px;
 }
 
 .add__sites-title {
@@ -1726,4 +1732,81 @@
     font-size: 15px;
     font-weight: 400;
     color: var(--color_bali);
+}
+
+.rates__list-item,
+.invoice__item {
+    padding: 25px 10px;
+    border: 1px solid var(--color_gray);
+    border-radius: 10px;
+}
+
+.rates__list-item:not(:last-of-type),
+.invoice__item:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.rates__list-item:last-of-type {
+    margin-bottom: 35px;
+}
+
+.rates__descr,
+.invoice__descr,
+.rates__cost,
+.invoice__cost {
+    margin: 0;
+    padding: 0;
+}
+
+.rates__descr,
+.invoice__descr {
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_bali);
+    margin-bottom: 15px;
+}
+
+.invoice__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rates__cost,
+.invoice__cost {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color_dodger);
+    padding-left: 30px;
+}
+
+.rates {
+    display: none;
+}
+
+.rates--active {
+    display: flex;
+}
+
+.add__resume {
+    margin-bottom: 25px;
+}
+
+.add__btn-send {
+    margin-right: 25px;
+}
+
+.add__btn-archive {
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color_dodger);
+    background: transparent;
+    border: 1px solid var(--color_dodger);
 }

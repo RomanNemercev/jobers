@@ -46,6 +46,7 @@
     /* as default it'll not be displayed */
     display: none;
 }
+
 .preview img {
     width: 100%;
     height: 100%;
@@ -101,7 +102,14 @@
 }
 
 /*checks rates*/
-.rates-list__hidden {
+.rates__list,
+.invoice__list {
+    margin: 0;
+    padding: 0;
+}
+
+.rates__list-hidden,
+.invoice__list-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -111,7 +119,8 @@
     clip: rect(0 0 0 0);
 }
 
-.rates__list-title {
+.rates__list-title,
+.invoice__item-label {
     position: relative;
     display: inline-block;
     user-select: none;
@@ -120,9 +129,12 @@
     font-weight: 400;
     color: var(--color_space);
     padding-left: 30px;
+    margin-bottom: 15px;
+    z-index: 2;
 }
 
-.rates__list-title::before {
+.rates__list-title::before,
+.invoice__item-label::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -133,7 +145,8 @@
     background-repeat: no-repeat;
 }
 
-.rates__list-title::after {
+.rates__list-title::after,
+.invoice__item-label::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -145,6 +158,63 @@
     opacity: 0;
 }
 
-.rates-list__check:checked + .rates__list-title::after {
+.rates__list-check:checked + .rates__list-title::after {
     opacity: 1;
+}
+
+.invoice__item-check:checked + .invoice__item-label::after {
+    opacity: 1;
+}
+
+.rates__descr,
+.invoice__descr {
+    position: relative;
+}
+
+.rates__descr::before,
+.invoice__descr::before {
+    content: "";
+    position: absolute;
+    width: 103px;
+    height: 100px;
+    top: -58px;
+    left: -10px;
+    border: 1px solid red;
+    opacity: 0;
+}
+
+.rates__list-check:checked ~ .rates__descr::before {
+    opacity: 1;
+}
+
+.invoice__item-check:checked ~ .invoice__descr::before {
+    opacity: 1;
+}
+
+.first-before::before,
+.second-before::before,
+.third-before::before,
+.fourth-before::before,
+.fifth-before::before,
+.sixth-before::before,
+.seventh-before::before {
+    width: 103%;
+    height: 167px;
+    border: 1px solid var(--color_dodger);
+    border-radius: 10px;
+}
+
+.second-before::before {
+    height: 167px;
+}
+
+.third-before::before {
+    height: 182px;
+}
+
+.fourth-before::before,
+.fifth-before::before,
+.sixth-before::before,
+.seventh-before::before {
+    height: 150px;
 }

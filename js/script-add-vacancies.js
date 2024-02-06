@@ -31,7 +31,7 @@ function init() {
         // Порядок по умолчанию: «широта, долгота».
         // Чтобы не определять координаты центра карты вручную,
         // воспользуйтесь инструментом Определение координат.
-        center: [55.751590873860096,37.61924179541014],
+        center: [55.751590873860096, 37.61924179541014],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
         zoom: 12,
@@ -62,7 +62,7 @@ const img = document.querySelector('.add__background');
 const input = document.querySelector('.add__input');
 // const file_name = document.querySelector('.file_name');
 
-input.addEventListener('change', function() {
+input.addEventListener('change', function () {
     const file = this.files[0];
 
     if (file) {
@@ -78,3 +78,38 @@ input.addEventListener('change', function() {
         reader.readAsDataURL(file);
     }
 })
+
+//border-for-checkbox
+// document.addEventListener('DOMContentLoaded', () => {
+//
+//     let checkbox = document.querySelector('label[for="standart-middle"]');
+//
+//     checkbox.addEventListener('click', function()
+//     {
+//         let parent = this.parentNode;
+//
+//         ( !parent.classList.contains('selected') ) ?
+//             parent.classList.add('selected'):
+//             parent.classList.remove('selected');
+//     });
+//
+// });
+
+let ratesBtn = document.querySelectorAll('.add__sites-value');
+let ratesItem = document.querySelectorAll('.add__sites-content');
+
+ratesBtn.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        const path = e.currentTarget.dataset.path;
+
+        ratesBtn.forEach(function (btn) {
+            btn.classList.remove('add__sites-value--active')
+        });
+        e.currentTarget.classList.add('add__sites-value--active')
+
+        ratesItem.forEach(function (element) {
+            element.classList.remove('rates--active')
+        });
+        document.querySelector(`[data-target="${path}"]`).classList.add('rates--active');
+    })
+});
