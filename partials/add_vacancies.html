@@ -16,7 +16,7 @@
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container" id="noneScalable">
-        <a href="../index.html" class="nav__logo"><img src="../img/logo.png" alt="Логотип компании"
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
                                                        class="nav__logo-icon"></a>
         <ul class="nav__links">
             <li class="nav__links-caption">Рекрутинг</li>
@@ -45,7 +45,7 @@
 <section class="search-bar">
     <div class="search-bar__container">
         <form action="#" class="search-bar__form">
-            <input type="search" class="search-bar__form-space" placeholder="Поиск">
+            <input type="search" class="search-bar__form-space" placeholder="Поиск по кандидатам">
         </form>
         <div class="search-bar__btn-wrap">
             <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
@@ -141,8 +141,10 @@
             </div>
             <div class="add__wage">
                 <p class="add__wage-title">Заработная плата в месяц, руб <span class="add__span-custom">*</span></p>
-                <input type="text" class="add__wage-min" placeholder="от"><input type="text" class="add__wage-max"
-                                                                                 placeholder="до">
+                <div class="add__wage-values">
+                    <input type="text" class="add__wage-min" placeholder="от"><input type="text" class="add__wage-max"
+                                                                                     placeholder="до">
+                </div>
             </div>
             <div class="add__dues">
                 <div class="add__dues-on">
@@ -179,9 +181,7 @@
                     </select>
                 </div>
             </div>
-            <label for="main-skills" class="add__keys">
-                Ключевые навыки
-            </label>
+            <label for="main-skills" class="add__keys">Ключевые навыки</label>
             <input type="text" class="add__keys-input" id="main-skills" placeholder="Например: Маркетинг">
             <ul class="add__accordion accordion-list">
                 <li class="list-reset add__accordion-list accordion" tabindex="0">
@@ -436,7 +436,9 @@
             <h4 class="add__sites-title">Выбор сайтов для публикации</h4>
             <div class="add__sites-header">
                 <div class="add__sites-values">
-                    <button class="btn-reset add__sites-value add__sites-value--active" data-path="rates-path-one">С автообновлением</button>
+                    <button class="btn-reset add__sites-value add__sites-value--active" data-path="rates-path-one">С
+                        автообновлением
+                    </button>
                     <button class="btn-reset add__sites-value" data-path="rates-path-second">Стандартные тарифы</button>
                 </div>
                 <p class="add__sites-descr">Публикация с&nbsp;автоматическим обновлением вакансии на&nbsp;всех ведущих
@@ -451,7 +453,8 @@
                         <label
                                 for="rate-min" class="rates__list-title">Минимальный с автообновлением
                         </label>
-                        <p class="rates__descr first-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru (стандарт+
+                        <p class="rates__descr first-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru
+                            (стандарт+
                             обновление раз в&nbsp;3&nbsp;дня), Rabota.ru (Оптимальная вакансия, авто обновление раз
                             в&nbsp;3&nbsp;дня), Careerist.ru А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">7854 руб</p></li>
@@ -461,7 +464,8 @@
                         <label
                                 for="rate-middle" class="rates__list-title">Оптимальный с автообновлением
                         </label>
-                        <p class="rates__descr second-before">Публикация на&nbsp;62&nbsp;сайтах, включая: HH.ru (стандарт+
+                        <p class="rates__descr second-before">Публикация на&nbsp;62&nbsp;сайтах, включая: HH.ru
+                            (стандарт+
                             обновление раз в&nbsp;3&nbsp;дня), SuperJob.ru (Бизнес вакансия, авто обновление каждые
                             7&nbsp;дней), Rabota.ru (Оптимальная вакансия, авто обновление раз в&nbsp;3&nbsp;дня),
                             Юла.Работа, Careerist.ru. А&nbsp;также подборка резюме.</p>
@@ -472,7 +476,8 @@
                         <label
                                 for="rate-max" class="rates__list-title">Максимальный с автообновлением
                         </label>
-                        <p class="rates__descr third-before">Публикация на&nbsp;64&nbsp;сайтах, включая: HH.ru (стандарт+
+                        <p class="rates__descr third-before">Публикация на&nbsp;64&nbsp;сайтах, включая: HH.ru
+                            (стандарт+
                             обновление раз в&nbsp;3&nbsp;дня), SuperJob.ru (Бизнес вакансия, авто обновление каждые
                             7&nbsp;дней), Rabota.ru (Оптимальная вакансия, авто обновление раз в&nbsp;3&nbsp;дня),
                             Юла.Работа, Авито (Публикация с&nbsp;услугой &laquo;&bdquo;X5&ldquo;&raquo;), Вконтакте.
@@ -488,7 +493,8 @@
                         <label
                                 for="standart-min" class="rates__list-title">Минимальный
                         </label>
-                        <p class="rates__descr fourth-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru, Rabota.ru,
+                        <p class="rates__descr fourth-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru,
+                            Rabota.ru,
                             Careerist.ru. А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">3 973 руб.</p></li>
                     <li class="rates__list-item list-reset"><input type="radio"
@@ -498,7 +504,8 @@
                         <label
                                 for="standart-middle" class="rates__list-title">Оптимальный
                         </label>
-                        <p class="rates__descr fifth-before">Публикация на&nbsp;62&nbsp;сайтах, включая: HH.ru, SuperJob.ru,
+                        <p class="rates__descr fifth-before">Публикация на&nbsp;62&nbsp;сайтах, включая: HH.ru,
+                            SuperJob.ru,
                             Rabota.ru, Юла.Работа, Careerist.ru. А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">7 731 руб.</p></li>
                     <li class="rates__list-item list-reset"><input type="radio"
@@ -507,7 +514,8 @@
                         <label
                                 for="standart-max" class="rates__list-title">Максимальный
                         </label>
-                        <p class="rates__descr sixth-before">Публикация на&nbsp;64&nbsp;сайтах, включая: HH.ru, SuperJob.ru,
+                        <p class="rates__descr sixth-before">Публикация на&nbsp;64&nbsp;сайтах, включая: HH.ru,
+                            SuperJob.ru,
                             Rabota.ru, Юла.Работа, Авито, Вконтакте, Careerist.ru. А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">7854 руб</p></li>
                 </ul>
@@ -518,7 +526,8 @@
                     <li class="invoice__item list-reset"><input name="rates-invoice" id="choose-invoice" type="radio"
                                                                 class="invoice__item-check invoice__list-hidden">
                         <label for="choose-invoice" class="invoice__item-label">Индивидуальный</label>
-                        <p class="invoice__descr seventh-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru, Zarplata.ru,
+                        <p class="invoice__descr seventh-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru,
+                            Zarplata.ru,
                             Rabota.ru. А&nbsp;также подборка резюме.</p>
                         <p class="invoice__cost">4150 руб</p></li>
                 </ul>
