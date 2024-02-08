@@ -187,6 +187,7 @@
 }
 
 .search-bar__form {
+    position: relative;
     padding-left: 37px;
     width: 100%;
 }
@@ -196,8 +197,8 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 307px;
-    top: 25px;
+    left: 50px;
+    top: 10px;
     background-image: url("../img/search-icon.svg");
 }
 
@@ -1826,58 +1827,54 @@
     border: 1px solid var(--color_dodger);
 }
 
-/*data-list in search-bar*/
-fieldset {
-    border: 1px solid blue;
-    width: 360px;
-    border-radius: 5px;
-}
-
-legend, label {
-    color: blue;
-    font-size: 24px;
-    font-family: sans-serif;
-}
-
-input {
-    font-size: 18px;
-    padding: 5px;
-    height: 35px;
-    width: 350px;
-    border: 1px solid blue;
-    outline: none;
-    border-radius: 5px;
-    color: blue;
-    /*   border-bottom: none; */
-}
-
-datalist {
+/*search-box__dropdown*/
+.search-bar__dropdown {
     position: absolute;
-    background-color: white;
-    border: 1px solid blue;
-    border-radius: 0 0 5px 5px;
-    border-top: none;
-    font-family: sans-serif;
-    width: 350px;
-    padding: 5px;
-    max-height: 10rem;
-    overflow-y: auto
-
+    width: inherit;
+    top: 50px;
+    left: 0;
+    padding-left: 37px;
+    padding-right: 30px;
 }
 
-option {
-    background-color: white;
-    padding: 4px;
-    padding-left: 120px;
-    color: blue;
-    margin-bottom: 1px;
-    font-size: 18px;
-    cursor: pointer;
-    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230610/pngtree-picture-of-a-blue-bird-on-a-black-background-image_2937385.jpg');
-    background-size: 80px 40px;
+.search-bar__dropdown ul {
+    position: relative;
+    margin: 0;
+    list-style: none;
+    background: white;
+    box-shadow: 0 0 15px 0 #0000001a;
+    border-radius: 5px;
+    padding-top: 68px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.search-bar__dropdown ul::before {
+    position: absolute;
+    content: 'Результаты';
+    top: 25px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_bali);
+}
+
+.search-bar__dropdown ul li {
+    padding: 25px 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_space);
+    padding-left: 55px;
+    background-image: url("../img/vladimir-vlasov.png");
     background-repeat: no-repeat;
+    background-position: left center;
 }
 
-option:hover, .active {
-    background-color: lightblue;
+.search-bar__dropdown ul li:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.search-bar__dropdown ul li:hover {
+    background-color: var(--color_gray);
+    border-radius: 5px;
 }
