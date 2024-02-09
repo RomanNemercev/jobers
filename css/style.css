@@ -1040,6 +1040,7 @@
 
 .complete__bar {
     padding: 25px;
+    padding-left: 26px;
     background-color: var(--color_space);
     border-radius: 10px 10px 0 0;
 }
@@ -1296,14 +1297,14 @@
     display: block;
     width: 100%;
     border: none;
-    padding: 12px 15px;
+    padding: 10px 15px;
     padding-left: 41px;
     border-radius: 5px;
     background-color: var(--color_athens-gray);
     margin-bottom: 25px;
     background-image: url("../img/main-skills-icon.svg");
     background-repeat: no-repeat;
-    background-position: 10px 11px;
+    background-position: 15px 12px;
 }
 
 .add__keys-input::placeholder {
@@ -1311,16 +1312,24 @@
     font-weight: 400;
 }
 
+.add__accordion-head {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
 .add__accordion {
     margin: 0;
     padding: 0;
+    margin-bottom: 3px;
 }
 
 .accordion__control {
     border: 1px solid var(--color_dodger);
     border-radius: 5px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1425,6 +1434,7 @@
     padding-bottom: 10px;
     background-image: url("../img/add__icon-accordion.svg");
     background-repeat: no-repeat;
+    transform: translateX(-3px);
     transition: background-image .3s ease;
 }
 
@@ -1524,7 +1534,7 @@
     font-weight: 500;
     line-height: normal;
     margin-bottom: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 28px;
     border-bottom: 1px solid var(--color_gray);
 }
 
@@ -1537,9 +1547,25 @@
 .add__id-code {
     display: block;
     color: var(--color_space);
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     font-size: 15px;
     font-weight: 400;
+}
+
+.add__station {
+    margin-bottom: 12px;
+}
+
+.add__contacts-district {
+    margin-bottom: 12px;
+}
+
+.add__contacts-district__data {
+    padding: 12px 15px;
+}
+
+.add__id-code {
+    margin-bottom: 17px;
 }
 
 .add__contacts-geo__data,
@@ -1550,12 +1576,25 @@
 .add__name-company__data,
 .add__id-code__data {
     display: block;
+    font-size: 14px;
     width: 100%;
     border: none;
-    padding: 10px 15px;
+    padding: 11px 15px;
     border-radius: 5px;
     background-color: var(--color_athens-gray);
     margin-bottom: 25px;
+}
+
+.add__call__data {
+    margin-bottom: 15px;
+}
+
+.add__contacts-district__data {
+    margin-bottom: 15px;
+}
+
+.add__contacts-city {
+    margin-bottom: 12px;
 }
 
 .add__id-code__data {
@@ -1577,13 +1616,12 @@
 
 .add__extra-second,
 .add__extra-email {
-    width: 46.576%;
+    width: 48.862%;
 }
 
 .add__extra-first,
 .add__extra-name {
-    width: 46.576%;
-    margin-right: 15px;
+    width: 48.862%;
 }
 
 .add__extra-street,
@@ -1591,7 +1629,7 @@
 .add__extra-name__label,
 .add__extra-email__label {
     color: var(--color_space);
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     font-size: 15px;
     font-weight: 400;
 }
@@ -1601,8 +1639,10 @@
 .add__extra-name__data,
 .add__extra-email__data {
     border: none;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
     background-color: var(--color_athens-gray);
     margin-bottom: 25px;
 }
@@ -1616,7 +1656,7 @@
     color: var(--color_dodger);
     font-size: 15px;
     font-weight: 400;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .add__number-check__hidden {
@@ -1638,7 +1678,7 @@
 .add__number-span {
     user-select: none;
     position: relative;
-    padding-left: 50px;
+    padding-left: 32px;
     color: var(--color_space);
     cursor: pointer;
     font-size: 14px;
@@ -1650,7 +1690,7 @@
     position: absolute;
     width: 22px;
     height: 22px;
-    top: 0;
+    top: -3px;
     left: 0;
     background-image: url("../img/add-vacancies-square.svg");
 }
@@ -1673,6 +1713,7 @@
 .add__filter-descr__content {
     font-size: 14px;
     font-weight: 400;
+    line-height: 17px;
     color: var(--color_bali);
     padding: 10px 10px 10px 45px;
     margin: 0;
@@ -1681,7 +1722,7 @@
     border-radius: 5px;
     background-image: url("../img/add-filter-content-icon.svg");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: 9px 10px;
 }
 
 .add__extra-third {
@@ -1691,7 +1732,7 @@
 
 /*block choose rates*/
 .add__sites-header {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
 }
 
 .add__sites {
@@ -1709,8 +1750,8 @@
     font-size: 16px;
     font-weight: 500;
     line-height: normal;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
+    margin-bottom: 24px;
+    padding-bottom: 28px;
     border-bottom: 1px solid var(--color_gray);
 }
 
@@ -1720,14 +1761,14 @@
 
 .add__sites-value {
     padding: 16px 20px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     background: var(--color_white);
     margin-bottom: 15px;
 }
 
 .add__sites-value:first-of-type {
-    padding-right: 21px;
+    padding-right: 10px;
     border-radius: 10px 0 0 10px;
 }
 
@@ -1738,6 +1779,7 @@
 
 .add__sites-value--active {
     font-weight: 600;
+    font-size: 16px;
     color: var(--color_white);
     background-color: var(--color_space);
 }
@@ -1752,18 +1794,18 @@
 
 .rates__list-item,
 .invoice__item {
-    padding: 25px 10px;
+    padding: 22px 14px;
     border: 1px solid var(--color_gray);
     border-radius: 10px;
 }
 
 .rates__list-item:not(:last-of-type),
 .invoice__item:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .rates__list-item:last-of-type {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .rates__descr,
@@ -1811,7 +1853,7 @@
 }
 
 .add__btn-send {
-    margin-right: 25px;
+    margin-right: 19px;
 }
 
 .add__btn-archive {
@@ -1867,7 +1909,7 @@
     padding-left: 55px;
     background-image: url("../img/vladimir-vlasov.png");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: 5px center;
 }
 
 .search-bar__dropdown ul li:not(:last-of-type) {

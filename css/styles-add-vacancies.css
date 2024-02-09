@@ -37,6 +37,8 @@
 }
 
 .add__logo-title {
+    font-size: 15px;
+    font-weight: 400;
     margin-bottom: 15px;
 }
 
@@ -92,8 +94,9 @@
 /*}*/
 
 .add__upload-descr {
-    width: 71%;
+    width: 74.5%;
     margin-left: auto;
+    padding-top: 46px;
     font-size: 14px;
     color: var(--color_bali);
 }
@@ -133,7 +136,7 @@
     font-weight: 400;
     color: var(--color_space);
     padding-left: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     z-index: 2;
 }
 

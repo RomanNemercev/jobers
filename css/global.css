@@ -85,6 +85,8 @@ img {
 }
 
 .btn {
+    min-width: 146px;
+    min-height: 40px;
     outline: none;
     padding: 10px 20px;
     border-radius: 5px;
