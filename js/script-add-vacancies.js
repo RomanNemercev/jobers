@@ -82,18 +82,104 @@ input.addEventListener('change', function () {
 //border-for-checkbox
 // document.addEventListener('DOMContentLoaded', () => {
 //
-//     let checkbox = document.querySelector('label[for="standart-middle"]');
+//     let checkbox = document.querySelector('label[for="rate-middle"]');
+//
+//     checkbox.parentNode.classList.add('rates__selected');
 //
 //     checkbox.addEventListener('click', function()
 //     {
 //         let parent = this.parentNode;
 //
-//         ( !parent.classList.contains('selected') ) ?
-//             parent.classList.add('selected'):
-//             parent.classList.remove('selected');
+//         ( !parent.classList.contains('rates__selected') ) ?
+//             parent.classList.add('rates__selected'):
+//             parent.classList.remove('rates__selected');
 //     });
 //
 // });
+
+// let ratesCheckbox = document.querySelectorAll('.rates__list-title');
+// let ratesItemWrap = document.querySelectorAll('.rates__list-item');
+// ratesCheckbox.forEach(function (el) {
+//     el.addEventListener('click', function () {
+//         ratesItemWrap.forEach(function (element) {
+//             element.classList.add('rates__selected')
+//         })
+//     })
+// })
+
+// first step border rates
+let arrExceptMin = [document.querySelector('label[for="rate-middle"]'), document.querySelector('label[for="rate-max"]')];
+let arrExceptMinParents = [document.getElementById('parent-middle'), document.getElementById('parent-max')];
+let minRate = document.querySelector('label[for="rate-min"]');
+let minRateParent = minRate.parentNode;
+minRate.addEventListener('click', function () {
+    minRateParent.classList.add('rates__selected');
+    arrExceptMinParents.forEach(function (el) {
+        el.classList.remove('rates__selected')
+    })
+})
+
+arrExceptMin.forEach(function (el) {
+    el.addEventListener('click', function () {
+        minRateParent.classList.remove('rates__selected')
+    })
+})
+
+// second step border rates
+let middleRateParent = document.getElementById('parent-middle');
+let arrExceptMiddleParents = [document.getElementById('parent-min'), document.getElementById('parent-max')];
+document.querySelector('label[for="rate-middle"]').addEventListener('click', function (el) {
+    middleRateParent.classList.add('rates__selected')
+    arrExceptMiddleParents.forEach(function (el) {
+        el.classList.remove('rates__selected')
+    })
+})
+
+// third step border rates
+let maxRateParent = document.getElementById('parent-max');
+let arrExceptMaxParent = [document.getElementById('parent-min'), document.getElementById('parent-middle')];
+document.querySelector('label[for="rate-max"]').addEventListener('click', function () {
+    maxRateParent.classList.add('rates__selected')
+    arrExceptMaxParent.forEach(function (el) {
+        el.classList.remove('rates__selected')
+    })
+})
+
+// rates two page
+let standartRateMinParent = document.getElementById('standart-parent-min');
+let arrExceptStandartMinParents = [document.getElementById('standart-parent-middle'), document.getElementById('standart-parent-max')];
+document.querySelector('label[for="standart-min"]').addEventListener('click', function () {
+    standartRateMinParent.classList.add('rates__selected')
+    arrExceptStandartMinParents.forEach(function (el) {
+        el.classList.remove('rates__selected')
+    })
+})
+
+// rates two page second item
+let standartRateMiddleParent = document.getElementById('standart-parent-middle');
+let arrExceptStandartMiddleParents = [document.getElementById('standart-parent-min'), document.getElementById('standart-parent-max')];
+document.querySelector('label[for="standart-middle"]').addEventListener('click', function () {
+    standartRateMiddleParent.classList.add('rates__selected')
+    arrExceptStandartMiddleParents.forEach(function (el) {
+        el.classList.remove('rates__selected')
+    })
+})
+
+// rates two page third item
+let standartRateMaxParent = document.getElementById('standart-parent-max');
+let arrExceptStandartMaxParents = [document.getElementById('standart-parent-min'), document.getElementById('standart-parent-middle')];
+document.querySelector('label[for="standart-max"]').addEventListener('click', function () {
+    standartRateMaxParent.classList.add('rates__selected')
+    arrExceptStandartMaxParents.forEach(function (el) {
+        el.classList.remove('rates__selected')
+    })
+})
+
+// rates-invoice first-item
+let invoiceFirst = document.getElementById('invoice-first');
+document.querySelector('label[for="choose-invoice"]').addEventListener('click', function () {
+    invoiceFirst.classList.add('rates__selected')
+})
 
 let ratesBtn = document.querySelectorAll('.add__sites-value');
 let ratesItem = document.querySelectorAll('.add__sites-content');
@@ -113,3 +199,5 @@ ratesBtn.forEach(function (element) {
         document.querySelector(`[data-target="${path}"]`).classList.add('rates--active');
     })
 });
+
+//rates-list-over-area-click

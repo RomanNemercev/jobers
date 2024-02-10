@@ -448,7 +448,7 @@
             </div>
             <div class="add__sites-content rates rates--active" data-target="rates-path-one">
                 <ul class="rates__list">
-                    <li class="rates__list-item list-reset"><input type="radio" name="rates-auto-update"
+                    <li class="rates__list-item list-reset" id="parent-min"><input type="radio" name="rates-auto-update"
                                                                    class="rates__list-check rates__list-hidden"
                                                                    id="rate-min">
                         <label
@@ -459,7 +459,7 @@
                             обновление раз в&nbsp;3&nbsp;дня), Rabota.ru (Оптимальная вакансия, авто обновление раз
                             в&nbsp;3&nbsp;дня), Careerist.ru А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">7854 руб</p></li>
-                    <li class="rates__list-item list-reset"><input type="radio" name="rates-auto-update"
+                    <li class="rates__list-item list-reset rates__selected" id="parent-middle"><input type="radio" name="rates-auto-update"
                                                                    class="rates__list-check rates__list-hidden" checked
                                                                    id="rate-middle">
                         <label
@@ -471,7 +471,7 @@
                             7&nbsp;дней), Rabota.ru (Оптимальная вакансия, авто обновление раз в&nbsp;3&nbsp;дня),
                             Юла.Работа, Careerist.ru. А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">11 816 руб</p></li>
-                    <li class="rates__list-item list-reset"><input type="radio" name="rates-auto-update"
+                    <li class="rates__list-item list-reset" id="parent-max"><input type="radio" name="rates-auto-update"
                                                                    class="rates__list-check rates__list-hidden"
                                                                    id="rate-max">
                         <label
@@ -488,7 +488,7 @@
             </div>
             <div class="add__sites-content rates" data-target="rates-path-second">
                 <ul class="rates__list">
-                    <li class="rates__list-item list-reset"><input type="radio"
+                    <li class="rates__list-item list-reset" id="standart-parent-min"><input type="radio"
                                                                    class="rates__list-check rates__list-hidden"
                                                                    name="rates-standart" id="standart-min">
                         <label
@@ -498,7 +498,7 @@
                             Rabota.ru,
                             Careerist.ru. А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">3 973 руб.</p></li>
-                    <li class="rates__list-item list-reset"><input type="radio"
+                    <li class="rates__list-item list-reset rates__selected" id="standart-parent-middle"><input type="radio"
                                                                    class="rates__list-check rates__list-hidden"
                                                                    name="rates-standart" id="standart-middle"
                                                                    checked>
@@ -509,7 +509,7 @@
                             SuperJob.ru,
                             Rabota.ru, Юла.Работа, Careerist.ru. А&nbsp;также подборка резюме.</p>
                         <p class="rates__cost">7 731 руб.</p></li>
-                    <li class="rates__list-item list-reset"><input type="radio"
+                    <li class="rates__list-item list-reset" id="standart-parent-max"><input type="radio"
                                                                    class="rates__list-check rates__list-hidden"
                                                                    name="rates-standart" id="standart-max">
                         <label
@@ -524,7 +524,7 @@
             <div class="add__invoice invoice">
                 <h5 class="invoice__title">Лицевой счет</h5>
                 <ul class="invoice__list">
-                    <li class="invoice__item list-reset"><input name="rates-invoice" id="choose-invoice" type="radio"
+                    <li class="invoice__item list-reset" id="invoice-first"><input name="rates-invoice" id="choose-invoice" type="radio"
                                                                 class="invoice__item-check invoice__list-hidden">
                         <label for="choose-invoice" class="invoice__item-label">Индивидуальный</label>
                         <p class="invoice__descr seventh-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru,

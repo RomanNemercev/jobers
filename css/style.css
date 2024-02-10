@@ -1084,6 +1084,7 @@
 }
 
 .complete__step {
+    position: relative;
     padding-left: 33px;
 }
 
@@ -1139,22 +1140,20 @@
 
 .add__options {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 24px;
 }
 
-/*.add__options-type {*/
-/*    width: calc(100% / 2 - 15px);*/
-/*}*/
+.add__options .choices__inner {
+    border-radius: 5px;
+}
 
 .add__options-type {
-    max-width: 318.5px;
-    width: 100%;
-    margin-right: 15px;
+    width: 48.862%;
 }
 
 .add__options-schedule {
-    max-width: 318.5px;
-    width: 100%;
+    width: 48.862%;
 }
 
 .add__options-title {
@@ -1192,13 +1191,12 @@
 
 .add__wage-values {
     display: flex;
+    justify-content: space-between;
 }
 
 .add__wage-min {
     display: inline-block;
-    max-width: 318.5px;
-    width: 100%;
-    margin-right: 15px;
+    width: 48.862%;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -1207,8 +1205,7 @@
 
 .add__wage-max {
     display: inline-block;
-    max-width: 318.5px;
-    width: 100%;
+    width: 48.862%;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -1276,14 +1273,11 @@
 }
 
 .add__options-trial {
-    max-width: 318.5px;
-    width: 100%;
-    margin-right: 15px;
+    width: 48.862%;
 }
 
 .add__options-edu {
-    max-width: 318.5px;
-    width: 100%;
+    width: 48.862%;
 }
 
 .add__keys {
@@ -1385,7 +1379,7 @@
     background-repeat: no-repeat;
     top: -2px;
     left: 0;
-    background-image: url("../img/checked.svg");
+    background-image: url("../img/checked-small.svg");
     opacity: 0;
     transition: opacity .3s ease;
 }
@@ -1441,7 +1435,7 @@
 .accordion--active .add__icon-tab {
     background-image: url("../img/add__icon-accordion-open.svg");
     background-repeat: no-repeat;
-    transform: translate(6px, 0px);
+    transform: translate(4px, 0px);
     width: 16px;
     padding-bottom: 13px;
 }
@@ -1700,9 +1694,9 @@
     position: absolute;
     width: 22px;
     height: 22px;
-    top: 0;
+    top: -3px;
     left: 0;
-    background-image: url("../img/checked.svg");
+    background-image: url("../img/checked-small.svg");
     opacity: 0;
 }
 

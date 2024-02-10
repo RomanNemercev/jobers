@@ -173,55 +173,6 @@
     opacity: 1;
 }
 
-.rates__descr,
-.invoice__descr {
-    position: relative;
-}
-
-.rates__descr::before,
-.invoice__descr::before {
-    content: "";
-    position: absolute;
-    width: 103px;
-    height: 100px;
-    top: -58px;
-    left: -10px;
-    border: 1px solid red;
-    opacity: 0;
-}
-
-.rates__list-check:checked ~ .rates__descr::before {
-    opacity: 1;
-}
-
-.invoice__item-check:checked ~ .invoice__descr::before {
-    opacity: 1;
-}
-
-.first-before::before,
-.second-before::before,
-.third-before::before,
-.fourth-before::before,
-.fifth-before::before,
-.sixth-before::before,
-.seventh-before::before {
-    width: 103%;
-    height: 167px;
+.rates__selected {
     border: 1px solid var(--color_dodger);
-    border-radius: 10px;
-}
-
-.second-before::before {
-    height: 167px;
-}
-
-.third-before::before {
-    height: 182px;
-}
-
-.fourth-before::before,
-.fifth-before::before,
-.sixth-before::before,
-.seventh-before::before {
-    height: 150px;
 }
