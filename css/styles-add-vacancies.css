@@ -111,6 +111,7 @@
 /*checks rates*/
 .rates__list,
 .invoice__list {
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -129,14 +130,16 @@
 .rates__list-title,
 .invoice__item-label {
     position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 176px;
+    padding-left: 40px;
     display: inline-block;
     user-select: none;
     cursor: pointer;
     font-size: 15px;
     font-weight: 400;
     color: var(--color_space);
-    padding-left: 30px;
-    margin-bottom: 14px;
     z-index: 2;
 }
 
@@ -146,8 +149,8 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 0;
-    left: 0;
+    top: 22px;
+    left: 14px;
     background-image: url("../img/rates-ellipse-empty.svg");
     background-repeat: no-repeat;
 }
@@ -158,8 +161,8 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 0;
-    left: 0;
+    top: 22px;
+    left: 14px;
     background-image: url("../img/rates-ellipse-check.svg");
     background-repeat: no-repeat;
     opacity: 0;
@@ -175,4 +178,57 @@
 
 .rates__selected {
     border: 1px solid var(--color_dodger);
+}
+
+#parent-min > .rates__list-title {
+    padding-top: 22px;
+    padding-left: 44px;
+    padding-bottom: 118px;
+}
+
+#parent-min > .rates__descr {
+    top: 50px;
+    left: 44px;
+}
+
+#parent-min > .rates__cost {
+    top: 115px;
+    left: 44px;
+}
+
+#parent-middle > .rates__list-title {
+    padding-top: 22px;
+    padding-left: 44px;
+    padding-bottom: 135px;
+}
+
+#parent-middle > .rates__cost {
+    top: 132px;
+    left: 44px;
+}
+
+#parent-max > .rates__list-title {
+    padding-top: 23px;
+    padding-left: 44px;
+    padding-bottom: 136px;
+}
+
+#parent-max > .rates__descr {
+    left: 45px;
+}
+
+#parent-max > .rates__cost {
+    top: 133px;
+    left: 44px;
+}
+
+#invoice-first > .invoice__item-label {
+    padding-top: 24px;
+    padding-left: 44px;
+    padding-bottom: 102px;
+}
+
+#invoice-first > .invoice__cost {
+    top: 100px;
+    left: 44px;
 }
