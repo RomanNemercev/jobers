@@ -199,5 +199,3 @@ ratesBtn.forEach(function (element) {
         document.querySelector(`[data-target="${path}"]`).classList.add('rates--active');
     })
 });
-
-//rates-list-over-area-click

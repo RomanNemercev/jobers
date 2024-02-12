@@ -136,12 +136,11 @@
     font-weight: 400;
     color: var(--color_space);
     padding-left: 30px;
-    margin-bottom: 14px;
     z-index: 2;
 }
 
-.rates__list-title::before,
-.invoice__item-label::before {
+.rates__list-dot::before,
+.invoice__list-dot::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -152,8 +151,8 @@
     background-repeat: no-repeat;
 }
 
-.rates__list-title::after,
-.invoice__item-label::after {
+.rates__list-dot::after,
+.invoice__list-dot::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -165,11 +164,11 @@
     opacity: 0;
 }
 
-.rates__list-check:checked + .rates__list-title::after {
+.rates__list-check:checked ~ .rates__list-dot::after {
     opacity: 1;
 }
 
-.invoice__item-check:checked + .invoice__item-label::after {
+.invoice__item-check:checked + .invoice__list-dot::after {
     opacity: 1;
 }
 
