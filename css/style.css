@@ -1370,6 +1370,8 @@
     top: -2px;
     left: 0;
     background-image: url("../img/add-vacancies-square.svg");
+    opacity: 1;
+    transition: opacity .3s ease;
 }
 
 .add__features-span::after,
@@ -1395,6 +1397,12 @@
     opacity: 1;
 }
 
+.add__features-input:checked + .add__features-span::before,
+.add__car-input:checked + .add__car-span::before,
+.add__wishes-input:checked + .add__wishes-span::before {
+    opacity: 0;
+}
+
 .accordion--active .accordion__content {
     visibility: visible;
 }
@@ -1406,15 +1414,15 @@
 }
 
 .add__features-item:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .add__car-item:not(:last-of-type) {
-    margin-right: 10px;
+    margin-right: 6px;
 }
 
 .add__wishes-item:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-bottom: 13.6px;
 }
 
 .add__accordion-title {
@@ -1473,22 +1481,34 @@
     margin-bottom: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 42px;
 }
 
 .add__content-car__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color_space);
 }
 
 .add__content-car {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 }
 
 .add__wishes {
     display: flex;
     flex-direction: column;
     padding-bottom: 5px;
+}
+
+.add__wishes-title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .add__input-hidden {
@@ -1692,6 +1712,8 @@
     top: -3px;
     left: 0;
     background-image: url("../img/add-vacancies-square.svg");
+    opacity: 1;
+    transition: opacity .3s ease;
 }
 
 .add__number-span::after {
@@ -1703,10 +1725,15 @@
     left: 0;
     background-image: url("../img/checked-small.svg");
     opacity: 0;
+    transition: opacity .3s ease;
 }
 
 .add__number-check:checked + .add__number-span::after {
     opacity: 1;
+}
+
+.add__number-check:checked + .add__number-span::before {
+    opacity: 0;
 }
 
 .add__filter-descr__content {
