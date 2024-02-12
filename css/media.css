@@ -1,0 +1,164 @@
+@media (max-width: 1280px) {
+    /*new page*/
+    /*start-page*/
+    /*nav-bar*/
+    .nav__container {
+        max-width: 240px;
+        padding: 0 13.3px;
+    }
+
+    .nav__logo-icon {
+        width: 133px;
+        transform: translate(40px, 23px);
+    }
+
+    .nav__links {
+        min-width: 213.33px;
+    }
+
+    .nav__links-caption {
+        font-size: 12px;
+        font-weight: 400;
+        padding-left: 22px;
+        margin-bottom: 5px;
+    }
+
+    .nav__link:not(:last-of-type) {
+        margin-bottom: 4px;
+    }
+
+    .nav__links:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    .nav__link-item {
+        font-size: 14px;
+        padding: 13px 0 14px 53px;
+    }
+
+    .link-desktop::before {
+        content: url("../img/media/icon-desktop-1024.svg");
+        top: 11.5px;
+        left: 22px;
+    }
+
+    .link-vacancies::before {
+        content: url("../img/media/icon-vacancies-1024.svg");
+        top: 12px;
+        left: 22px;
+    }
+
+    .link-candidates::before {
+        content: url("../img/media/icon-canditates-1024.svg");
+        top: 13px;
+        left: 22px;
+    }
+
+    .link-messages::before {
+        content: url("../img/media/icon-messages-1024.svg");
+        top: 12px;
+        left: 22px;
+    }
+
+    .link-companies::before {
+        content: url("../img/media/icon-companies-1024.svg");
+        top: 12px;
+        left: 22px;
+    }
+
+    .link-documents::before {
+        content: url("../img/media/icon-documents-1024.svg");
+        top: 14px;
+        left: 22px;
+    }
+
+    .link-rates::before {
+        content: url("../img/media/icon-rates-1024.svg");
+        top: 14px;
+        left: 22px;
+    }
+
+    .link-support::before {
+        content: url("../img/media/icon-support-1024.svg");
+        top: 12px;
+        left: 22px;
+    }
+
+    .link-settings::before {
+        content: url("../img/media/icon-settings-1024.svg");
+        top: 13px;
+        left: 22px;
+    }
+
+    /*    search-bar*/
+    .search-bar__container {
+        padding: 0 21px 0 240px;
+    }
+
+    .search-bar__form {
+        padding-left: 22px;
+    }
+
+    .search-bar__form-space {
+        width: 95.1%;
+        padding: 10px 0;
+        padding-left: 36px;
+        border-radius: 5px;
+        font-size: 12.44px;
+    }
+
+    .search-bar__form::before {
+        background-image: url("../img/media/search-icon-1024.svg");
+        left: 35px;
+    }
+
+    .search-bar__btn {
+        width: 35.56px;
+        height: 35.56px;
+    }
+
+    .search-bar__btn-wrap {
+        min-height: 62.22px;
+        width: 81px;
+    }
+
+    .search-bar__btn-wrap:nth-child(2)::before {
+        width: 24.89px;
+        height: 22.22px;
+        top: 31.3px;
+        left: 9px;
+    }
+
+/*    main-content*/
+    .container {
+        padding: 85px 23px 0 262px;
+    }
+
+    .begin__container {
+        padding: 43px 25px;
+        min-height: 339px;
+    }
+
+    .begin__container::before {
+        content: url("../img/media/add-vacancies-1024.svg");
+    }
+
+    .begin__title {
+        font-size: 22.22px;
+        padding-top: 94px;
+        margin-bottom: 9px;
+    }
+
+    .begin__descr {
+        font-size: 13.33px;
+        line-height: normal;
+        max-width: 72%;
+        margin-bottom: 23px;
+    }
+
+    .btn {
+        font-size: 13.33px;
+        padding: 9px 18px;
+        min-height: 35px;
+    }
+}
