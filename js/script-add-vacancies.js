@@ -11,13 +11,27 @@ const multiSelect = () => {
 
 multiSelect();
 
-//accordion-add-vacancies
-new Accordion('.accordion-list', {
-    elementClass: 'accordion',
-    triggerClass: 'accordion__control',
-    panelClass: 'accordion__content',
-    activeClass: 'accordion--active'
-});
+//accordion-add-vacancies \\remove so it's single version
+// new Accordion('.accordion-list', {
+//     elementClass: 'accordion',
+//     triggerClass: 'accordion__control',
+//     panelClass: 'accordion__content',
+//     activeClass: 'accordion--active'
+// });
+
+const multiAccordion = () => {
+    const elements = document.querySelectorAll('.accordion-list');
+    elements.forEach(el => {
+        const acc = new Accordion(el, {
+            elementClass: 'accordion',
+            triggerClass: 'accordion__control',
+            panelClass: 'accordion__content',
+            activeClass: 'accordion--active'
+        })
+    });
+};
+
+multiAccordion();
 
 //map
 // Функция ymaps.ready() будет вызвана, когда
@@ -198,4 +212,34 @@ ratesBtn.forEach(function (element) {
         });
         document.querySelector(`[data-target="${path}"]`).classList.add('rates--active');
     })
+});
+
+//modal for skills
+document.getElementById("choose-skills").addEventListener("click", function () {
+    document.getElementById("choose-skills-modal").classList.add("main__skill-popup--open");
+    document.body.classList.toggle('stop-scroll');
+})
+
+// if we needed to close with btn
+// document.getElementById("modal-slide-2-close").addEventListener("click", function () {
+//     document.getElementById("modal-slide-2").classList.remove("gallery__modal--open");
+//     document.body.classList.remove('stop-scroll');
+// })
+//
+
+// if we need to close with Escape key
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById("choose-skills-modal").classList.remove("main__skill-popup--open");
+        document.body.classList.remove('stop-scroll');
+    }
+});
+
+document.querySelector("#choose-skills-modal .main__skill-wrapper").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("choose-skills-modal").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('main__skill-popup--open');
+    document.body.classList.remove('stop-scroll');
 });

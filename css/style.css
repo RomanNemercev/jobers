@@ -1821,14 +1821,13 @@
 
 .rates__list-item,
 .invoice__item {
-    padding: 23px 14px;
     border: 1px solid var(--color_gray);
     border-radius: 10px;
 }
 
 .rates__list-item:not(:last-of-type),
 .invoice__item:not(:last-of-type) {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .rates__list-item:last-of-type {

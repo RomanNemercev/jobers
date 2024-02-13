@@ -97,7 +97,52 @@
                 </label>
                 <div class="main__skill">
                     <p class="main__skill-title">Специализация <span class="main__span-custom">*</span></p>
-                    <a href="#" class="main__skill-choose">Указать специализацию</a>
+                    <button class="main__skill-choose btn-reset" id="choose-skills">Указать специализацию</button>
+                </div>
+                <div class="main__skill-popup" id="choose-skills-modal">
+                    <div class="main__skill-wrapper">
+                        <ul class="main__skills-accordion accordion-list">
+                            <li class="list-reset main__accordion-list accordion">
+                                <button class="main__accordion-control accordion__control" tabindex="0">Автомобильный
+                                    бизнес
+                                </button>
+                                <div class="main__accordion-content accordion__content">
+                                    <ul class="main__content-list">
+                                        <li class="main__content-item">
+                                            <label for="car-washer" class="main__content-wrap"><input type="radio"
+                                                                                                      name="car-business"
+                                                                                                      class="main__content-choose"
+                                                                                                      id="car-washer">Автомомйщик
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="auto-mechanic" class="main__content-wrap"><input type="radio"
+                                                                                                         name="car-business"
+                                                                                                         class="main__content-choose"
+                                                                                                         id="auto-mechanic">Автослесарь,
+                                                автомеханик
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="master-inspector" class="main__content-wrap"><input type="radio"
+                                                                                                            name="car-business"
+                                                                                                            class="main__content-choose"
+                                                                                                            id="master-inspector">Мастер-приемщик
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="sales-manager" class="main__content-wrap"><input type="radio"
+                                                                                                         name="car-business"
+                                                                                                         class="main__content-choose"
+                                                                                                         id="sales-manager">Менеджер
+                                                по&nbsp;продажам, менеджер по&nbsp;работе с&nbsp;клиентами
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="main__descr">
                     <label class="main__descr-title">Описание <span

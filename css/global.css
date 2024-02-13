@@ -135,3 +135,7 @@ img {
     font-weight: 400;
     line-height: 18px;
 }
+
+.stop-scroll {
+    overflow: hidden;
+}
