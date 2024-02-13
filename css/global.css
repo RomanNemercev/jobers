@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Regular'), local('Inter-Regular'),
+    url('../fonts/Inter-Regular.woff2') format('woff2'),
+    url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Medium'), local('Inter-Medium'),
+    url('../fonts/Inter-Medium.woff2') format('woff2'),
+    url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Semi Bold'), local('Inter-Semibold'),
+    url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+    url('../fonts/Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Bold'), local('Inter-Bold'),
+    url('../fonts/Inter-Bold.woff2') format('woff2'),
+    url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --color_space: #2F353D;
+    --color_background: #EDEFF5;
+    --color_bali: #9098B4;
+    --color_gray: #EDEFF5;
+    --color_athens-gray: #F4F6F8;
+    --color_white: #ffffff;
+    --color_semi-white: rgba(255, 255, 255, 0.5);
+    --color_dodger: #5898FF; /*btns*/
+    --color_zircon: #EFF5FF;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.body-page {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color_gray);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn {
+    min-width: 146px;
+    min-height: 40px;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color_white);
+    background: var(--color_dodger);
+}
+
+.btn-two {
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color_dodger);
+    background: transparent;
+    border: 1px solid var(--color_dodger);
+}
+
+.container {
+    /*max-width: 1440px;*/
+    padding: 95px 25px 0 295px;
+    width: 100%;
+    /*margin: 0 auto;*/
+}
+
+.title {
+    color: var(--color_space);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.descr {
+    margin: 0;
+    color: var(--color_bali);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.stop-scroll {
+    overflow: hidden;
+}

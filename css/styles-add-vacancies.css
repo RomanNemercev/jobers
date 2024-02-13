@@ -1,0 +1,221 @@
+/*choices*/
+.choices__inner {
+    background-color: var(--color_athens-gray);
+}
+
+.choices__list--single > .choices__item {
+    color: var(--color_space);
+}
+
+.choices__list--single {
+    padding: 6px 16px 4px 7px;
+}
+
+.choices__list--dropdown {
+    border: none;
+    box-shadow: 0 0 15px 0 #00000026;
+    border-radius: 5px;
+}
+
+.choices__item {
+    color: var(--color_space);
+}
+
+.choices[data-type*=select-one]::after {
+    content: "";
+    position: absolute;
+    top: 16.88px;
+    right: 18.62px;
+    width: 13.75px;
+    height: 7.5px;
+    opacity: 1;
+    background-image: url("../img/add-option-dropdown-arrow.svg");
+}
+
+.add__logo-container {
+    margin-bottom: 25px;
+}
+
+.add__logo-title {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/*custom btn*/
+.preview {
+    width: 90vw;
+    height: 400px;
+    max-width: 700px;
+    position: relative;
+
+    /* as default it'll not be displayed */
+    display: none;
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* we don't want to see this file input type since we want to create a custom one */
+.add__input[type="file"] {
+    display: none;
+}
+
+.add__logo-content {
+    display: flex;
+    min-height: 140px;
+    position: relative;
+}
+
+.add__custom-btn__label {
+    width: 140px;
+    height: 140px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/add__logo-upload.png");
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+}
+
+/*.add__custom-btn__label:hover {*/
+/*    background-color: #FF2d2d;*/
+/*}*/
+
+/*.add__custom-btn__label:active {*/
+/*    transform: translateX(-50%) scale(.95);*/
+/*}*/
+
+.add__upload-descr {
+    width: 74.5%;
+    margin-left: auto;
+    padding-top: 46px;
+    font-size: 14px;
+    color: var(--color_bali);
+}
+
+.add__background {
+    position: absolute;
+    max-width: 140px;
+    max-height: 140px;
+    z-index: 3;
+}
+
+/*checks rates*/
+.rates__list,
+.invoice__list {
+    margin: 0;
+    padding: 0;
+}
+
+.rates__list-hidden,
+.invoice__list-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    clip: rect(0 0 0 0);
+}
+
+.rates__list-title,
+.invoice__item-label {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_space);
+    padding: 22px 14px 23px 44px;
+    z-index: 2;
+}
+
+.rates__list-dot::before,
+.invoice__list-dot::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 22px;
+    left: 14px;
+    background-image: url("../img/rates-ellipse-empty.svg");
+    background-repeat: no-repeat;
+}
+
+.rates__list-dot::after,
+.invoice__list-dot::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 22px;
+    left: 14px;
+    background-image: url("../img/rates-ellipse-check.svg");
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.rates__list-check:checked ~ .rates__list-dot::after {
+    opacity: 1;
+}
+
+.rates__list-check:checked ~ .rates__list-dot::before {
+    opacity: 0;
+}
+
+.invoice__item-check:checked + .invoice__list-dot::after {
+    opacity: 1;
+}
+
+.invoice__item-check:checked + .invoice__list-dot::before {
+    opacity: 0;
+}
+
+.rates__selected {
+    border: 1px solid var(--color_dodger);
+}
+
+/*popup for skills*/
+.main__skill-popup {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s ease, opacity .3s ease;
+}
+
+.main__skill-wrapper {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    max-width: 640px;
+    background-color: var(--color_white);
+    transform: scale(0);
+    transition: transform .8s;
+}
+
+.main__skill-popup.main__skill-popup--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.main__skill-popup.main__skill-popup--open .main__skill-wrapper {
+    transform: scale(1);
+}

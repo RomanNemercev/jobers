@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobers - Добавить вакансию</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/libs-css/choices.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/styles-add-vacancies.css">
+</head>
+<body class="body-page">
+<!--блок бокового меню-->
+<section class="nav">
+    <div class="nav__container">
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Рекрутинг</li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
+            </li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-candidates">Кандидаты</a></li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Организация</li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-companies">Компании</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
+            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+            </li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings">Настройки</a></li>
+        </ul>
+    </div>
+</section>
+<!--блок поискового меню-->
+<section class="search-bar">
+    <div class="search-bar__container">
+        <form action="#" class="search-bar__form">
+            <input type="search" class="search-bar__form-space" placeholder="Поиск по кандидатам">
+        </form>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
+                                                           class="search-bar__note"></button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Поддержка"
+                                                           class="search-bar__support"></button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
+                                                           class="search-bar__acc"></button>
+        </div>
+    </div>
+</section>
+<!--основной контент страницы-->
+<section class="add container">
+    <div class="add__container">
+        <div class="add__header">
+            <h2 class="add__title title">Создание вакансии</h2>
+            <div class="add__option">
+                <a href="#" class="add__option-upload">Загрузить вакансию с работного сайта</a><a href="#"
+                                                                                                  class="add__option-ai">Генерация
+                описания ИИ</a>
+            </div>
+        </div>
+        <div class="add__content-progress">
+            <div class="add__right-container complete">
+                <div class="complete__bar">
+                    <p class="complete__data">Заполнено: 13%</p>
+                    <p class="complete__data-last">Изменения сохранены: <span class="complete__data-time">сегодня в 15:09</span>
+                    </p>
+                </div>
+                <div class="complete__status">
+                    <div class="complete__step complete__step-one complete__ready">Основная информация</div>
+                    <div class="complete__step complete__step-two">Условия и требования</div>
+                    <div class="complete__step complete__step-third">Контактная информация</div>
+                    <div class="complete__step complete__step-fourth">Выбор сайтов</div>
+                </div>
+            </div>
+        </div>
+        <div class="add__content">
+            <div class="add__content-container main">
+                <p class="main__title">Основная информация</p>
+                <label for="choose-post" class="main__post">
+                    Название должности <span class="main__span-custom mb15">*</span>
+                    <input type="text" name="choose-post" id="choose-post" placeholder="Например, водитель категории C"
+                           class="main__post-form">
+                </label>
+                <div class="main__skill">
+                    <p class="main__skill-title">Специализация <span class="main__span-custom">*</span></p>
+                    <button class="main__skill-choose btn-reset" id="choose-skills">Указать специализацию</button>
+                </div>
+                <div class="main__skill-popup" id="choose-skills-modal">
+                    <div class="main__skill-wrapper">
+                        <ul class="main__skills-accordion accordion-list">
+                            <li class="list-reset main__accordion-list accordion">
+                                <button class="main__accordion-control accordion__control" tabindex="0">Автомобильный
+                                    бизнес
+                                </button>
+                                <div class="main__accordion-content accordion__content">
+                                    <ul class="main__content-list">
+                                        <li class="main__content-item">
+                                            <label for="car-washer" class="main__content-wrap"><input type="radio"
+                                                                                                      name="car-business"
+                                                                                                      class="main__content-choose"
+                                                                                                      id="car-washer">Автомомйщик
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="auto-mechanic" class="main__content-wrap"><input type="radio"
+                                                                                                         name="car-business"
+                                                                                                         class="main__content-choose"
+                                                                                                         id="auto-mechanic">Автослесарь,
+                                                автомеханик
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="master-inspector" class="main__content-wrap"><input type="radio"
+                                                                                                            name="car-business"
+                                                                                                            class="main__content-choose"
+                                                                                                            id="master-inspector">Мастер-приемщик
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="sales-manager" class="main__content-wrap"><input type="radio"
+                                                                                                         name="car-business"
+                                                                                                         class="main__content-choose"
+                                                                                                         id="sales-manager">Менеджер
+                                                по&nbsp;продажам, менеджер по&nbsp;работе с&nbsp;клиентами
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main__descr">
+                    <label class="main__descr-title">Описание <span
+                            class="main__span-custom mb15">*</span>
+                        <textarea name="main__textarea-content" class="main__descr-content"
+                                  id="main__textarea-content"></textarea>
+                        <p class="main__descr-note">не&nbsp;более 8000&nbsp;символов, осталось символов: <span
+                                class="main__note-custom"> 8000</span></p>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="add__info">
+            <p class="add__info-title">Дополнительная информация</p>
+            <div class="add__options">
+                <div class="add__options-type">
+                    <p class="add__options-title">Тип занятости</p>
+                    <div class="add__option-dropdown">
+                        <select name="select" class="add__select-wrapper">
+                            <option value="Пригласить" selected>Полная</option>
+                            <option value="Отклонить">Частичная</option>
+                            <option value="Скачать резюме">Временная</option>
+                            <option value="Экспорт в Excel">Стажировка</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="add__options-schedule">
+                    <p class="add__options-title">График работы</p>
+                    <div class="add__option-dropdown">
+                        <select name="select" class="add__select-wrapper">
+                            <option value="Пригласить" selected>Полный</option>
+                            <option value="Отклонить">Сменный</option>
+                            <option value="Скачать резюме">Свободный</option>
+                            <option value="Экспорт в Excel">Удаленная работа</option>
+                            <option value="Экспорт в Excel">Вахтовый метод</option>
+                            <option value="Экспорт в Excel">Неполный день</option>
+                            <option value="Экспорт в Excel">Любой</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="add__wage">
+                <p class="add__wage-title">Заработная плата в месяц, руб <span class="add__span-custom">*</span></p>
+                <div class="add__wage-values">
+                    <input type="text" class="add__wage-min" placeholder="от"><input type="text" class="add__wage-max"
+                                                                                     placeholder="до">
+                </div>
+            </div>
+            <div class="add__dues">
+                <div class="add__dues-on">
+                    <input class="add__dues-input add__dues-input__hidden" type="radio" id="dues-on" name="dues"
+                           value="dues-on" checked/>
+                    <label for="dues-on" class="add__dues-label">На руки</label>
+                </div>
+                <div class="add__dues-off">
+                    <input class="add__dues-input add__dues-input__hidden" type="radio" id="dues-off" name="dues"
+                           value="dues-off"/>
+                    <label for="dues-off" class="add__dues-label">До вычета налогов</label>
+                </div>
+            </div>
+            <div class="add__options">
+                <div class="add__options-trial">
+                    <p class="add__options-title">Опыт работы</p>
+                    <select name="select" class="add__select-wrapper">
+                        <option value="Пригласить">Выберите вариант</option>
+                        <option value="Отклонить">Не имеет значения</option>
+                        <option value="Скачать резюме">От 1 года</option>
+                        <option value="Экспорт в Excel">От 3х лет</option>
+                        <option value="Экспорт в Excel">От 5 лет</option>
+                    </select>
+                </div>
+                <div class="add__options-edu">
+                    <p class="add__options-title">Образование</p>
+                    <select name="select" class="add__select-wrapper">
+                        <option value="Пригласить">Выберите вариант</option>
+                        <option value="Отклонить">Высшее</option>
+                        <option value="Скачать резюме">Неполное высшее</option>
+                        <option value="Экспорт в Excel">Среднее специальное</option>
+                        <option value="Экспорт в Excel">Среднее</option>
+                        <option value="Экспорт в Excel">Неполное среднее</option>
+                    </select>
+                </div>
+            </div>
+            <label for="main-skills" class="add__keys">Ключевые навыки</label>
+            <input type="text" class="add__keys-input" id="main-skills" placeholder="Например: Маркетинг">
+            <p class="add__accordion-head">Дополнительные условия</p>
+            <ul class="add__accordion accordion-list">
+                <li class="list-reset add__accordion-list accordion" tabindex="0">
+                    <div class="add__accordion-control accordion__control" tabindex="-1">
+                        <p class="add__accordion-title"
+                           aria-label="Что бы просмотреть дополнительные свойства кандидата, нажмите эту клавишу">
+                            Показать список</p>
+                        <p class="add__accordion-title__open"
+                           aria-label="Что бы скрыть дополнительные свойства кандидата, нажмите эту клавишу">Скрыть
+                            список</p>
+                        <div class="add__icon">
+                            <span class="add__icon-tab"></span>
+                        </div>
+                    </div>
+                    <div class="add__accordion-content accordion__content">
+                        <div class="add__content-features">
+                            <label for="insurance" class="add__features-item"><input
+                                    type="checkbox"
+                                    class="add__features-input add__input-hidden" id="insurance">
+                                <span class="add__features-span">ДМС</span></label>
+                            <label
+                                    for="business-trips" class="add__features-item"><input type="checkbox"
+                                                                                           class="add__features-input add__input-hidden"
+                                                                                           id="business-trips">
+                                <span class="add__features-span">Командировки</span>
+                            </label>
+                            <label
+                                    for="connection" class="add__features-item"><input type="checkbox"
+                                                                                       class="add__features-input add__input-hidden"
+                                                                                       id="connection">
+                                <span class="add__features-span">Мобильная связь</span>
+                            </label>
+                            <label
+                                    for="company-car" class="add__features-item"><input
+                                    type="checkbox"
+                                    class="add__features-input add__input-hidden"
+                                    id="company-car">
+                                <span class="add__features-span">Служебный автомобиль</span></label>
+                            <label
+                                    for="fitness" class="add__features-item"><input type="checkbox"
+                                                                                    class="add__features-input add__input-hidden"
+                                                                                    id="fitness">
+                                <span class="add__features-span">Фитнес</span></label>
+                            <label
+                                    for="accommodation" class="add__features-item"><input
+                                    type="checkbox"
+                                    class="add__features-input add__input-hidden" id="accommodation">
+                                <span class="add__features-span">Помощь с&nbsp;переездом,
+                                проживание</span>
+                            </label>
+                            <label
+                                    for="food" class="add__features-item"><input type="checkbox"
+                                                                                 class="add__features-input add__input-hidden"
+                                                                                 id="food">
+                                <span class="add__features-span">Питание</span></label>
+                            <label
+                                    for="not-official" class="add__features-item"><input
+                                    type="checkbox"
+                                    class="add__features-input add__input-hidden" id="not-official">
+                                <span class="add__features-span">Без оформления по&nbsp;ТК</span>
+                            </label>
+                            <label
+                                    for="workwear" class="add__features-item"><input type="checkbox"
+                                                                                     class="add__features-input add__input-hidden"
+                                                                                     id="workwear">
+                                <span class="add__features-span">Спецодежда</span>
+                            </label>
+                        </div>
+                        <div class="add__content-car">
+                            <p class="add__content-car__title">Водительские права</p>
+                            <label for="A" class="add__car-item"><input type="checkbox"
+                                                                        class="add__car-input add__input-hidden"
+                                                                        id="A"><span class="add__car-span">A</span>
+                            </label>
+                            <label
+                                    for="B" class="add__car-item"><input type="checkbox"
+                                                                         class="add__car-input add__input-hidden"
+                                                                         id="B"><span
+                                    class="add__car-span">B</span>
+                            </label>
+                            <label
+                                    for="C" class="add__car-item"><input type="checkbox"
+                                                                         class="add__car-input add__input-hidden"
+                                                                         id="C"><span
+                                    class="add__car-span">C</span>
+                            </label>
+                            <label
+                                    for="D" class="add__car-item"><input type="checkbox"
+                                                                         class="add__car-input add__input-hidden"
+                                                                         id="D"><span
+                                    class="add__car-span">D</span>
+                            </label>
+                            <label
+                                    for="E" class="add__car-item"><input type="checkbox"
+                                                                         class="add__car-input add__input-hidden"
+                                                                         id="E"><span
+                                    class="add__car-span">E</span>
+                            </label>
+                            <label
+                                    for="M" class="add__car-item"><input type="checkbox"
+                                                                         class="add__car-input add__input-hidden"
+                                                                         id="M"><span
+                                    class="add__car-span">M</span>
+                            </label>
+                            <label
+                                    for="BE" class="add__car-item"><input type="checkbox"
+                                                                          class="add__car-input add__input-hidden"
+                                                                          id="BE"><span class="add__car-span">BE</span>
+                            </label>
+                            <label
+                                    for="TB" class="add__car-item"><input type="checkbox"
+                                                                          class="add__car-input add__input-hidden"
+                                                                          id="TB"><span class="add__car-span">TB</span>
+                            </label>
+                            <label
+                                    for="DE" class="add__car-item"><input type="checkbox"
+                                                                          class="add__car-input add__input-hidden"
+                                                                          id="DE"><span class="add__car-span">DE</span>
+                            </label>
+                            <label
+                                    for="CE" class="add__car-item"><input type="checkbox"
+                                                                          class="add__car-input add__input-hidden"
+                                                                          id="CE"><span class="add__car-span">CE</span>
+                            </label>
+                        </div>
+                        <div class="add__wishes">
+                            <p class="add__wishes-title">Дополнительные пожелания</p>
+                            <label for="personal-car" class="add__wishes-item"><input type="checkbox"
+                                                                                      class="add__wishes-input add__input-hidden"
+                                                                                      id="personal-car"><span
+                                    class="add__wishes-span">Личный
+                                автомобиль</span></label>
+                            <label
+                                    for="for-pensioners" class="add__wishes-item"><input
+                                    type="checkbox"
+                                    class="add__wishes-input add__input-hidden" id="for-pensioners"><span
+                                    class="add__wishes-span">Вакансия подходит для
+                                пенсионеров</span></label>
+                            <label for="inter-passport"
+                                   class="add__wishes-item"><input
+                                    type="checkbox" class="add__wishes-input add__input-hidden"
+                                    id="inter-passport"><span
+                                    class="add__wishes-span">Требуется загранпаспорт</span></label>
+                            <label for="on-weekends"
+                                   class="add__wishes-item"><input
+                                    type="checkbox" class="add__wishes-input add__input-hidden" id="on-weekends"><span
+                                    class="add__wishes-span">Работа только по&nbsp;СБ и&nbsp;ВС</span></label>
+                            <label for="for-student"
+                                   class="add__wishes-item"><input
+                                    type="checkbox" class="add__wishes-input add__input-hidden" id="for-student"><span
+                                    class="add__wishes-span">Вакансия подходит для студентов</span></label>
+                            <label for="temp-registration"
+                                   class="add__wishes-item"><input
+                                    type="checkbox" class="add__wishes-input add__input-hidden"
+                                    id="temp-registration"><span
+                                    class="add__wishes-span">Возможно временное оформление</span></label>
+                            <label for="after-noon"
+                                   class="add__wishes-item"><input
+                                    type="checkbox" class="add__wishes-input add__input-hidden" id="after-noon"><span
+                                    class="add__wishes-span">Можно начинать работать после 16:00</span></label>
+                            <label for="for-teen"
+                                   class="add__wishes-item"><input
+                                    type="checkbox" class="add__wishes-input add__input-hidden" id="for-teen"><span
+                                    class="add__wishes-span">Вакансия подходит для соискателей от 14 лет</span></label>
+                            <label for="half-day"
+                                   class="add__wishes-item"><input
+                                    type="checkbox" class="add__wishes-input add__input-hidden" id="half-day"><span
+                                    class="add__wishes-span">Можно работать сменами по&nbsp;4-6 часов в&nbsp;день</span>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="add__contacts">
+            <p class="add__contacts-title">Контактная информация</p>
+            <label for="geo-data" class="add__contacts-geo">Где искать сотрудника</label>
+            <input type="text" class="add__contacts-geo__data" id="geo-data"
+                   placeholder="Например, Санкт-Петербург, Заречная 3">
+            <label for="geo-district" class="add__contacts-district">Регион</label>
+            <input type="text" class="add__contacts-district__data" id="geo-district" placeholder="-">
+            <label for="geo-city" class="add__contacts-city">Город <span class="add__span-custom">*</span></label>
+            <input type="text" class="add__contacts-city__data" id="geo-city" placeholder="Например, Санкт-Петербург">
+            <div class="add__extra">
+                <div class="add__extra-first">
+                    <label for="add-street" class="add__extra-street">Улица <span class="add__span-custom">*</span>
+                    </label>
+                    <input type="text" class="add__extra-street__data" id="add-street"
+                           placeholder="Например, Кировское шоссе"></div>
+                <div class="add__extra-second">
+                    <label for="add-house" class="add__extra-house">Дом</label>
+                    <input type="text" class="add__extra-house__data" id="add-house" placeholder="д 13">
+                </div>
+            </div>
+            <div class="map add__geo">
+                <div class="map__wrapper">
+                    <div class="map__space" id="map"></div>
+                </div>
+            </div>
+            <label for="add-station" class="add__station">Метро</label>
+            <input type="text" class="add__station__data" id="add-station" placeholder="Например, Адмиралтейская">
+            <label for="add-contact-number" class="add__call">Телефон для кандидатов <span
+                    class="add__span-custom">*</span></label>
+            <input type="text" class="add__call__data" id="add-contact-number" placeholder="+7">
+            <button class="btn-reset add__more-number">Указать еще один номер</button>
+            <label for="hide-number" class="add__number-filter"><input type="checkbox"
+                                                                       class="add__number-check add__number-check__hidden"
+                                                                       id="hide-number"><span class="add__number-span">Не&nbsp;показывать
+                номер телефона на&nbsp;сайтах</span>
+            </label>
+            <div class="add__number-filter__descr"><p class="add__filter-descr__content">Если галочка активна, в&nbsp;вакансии
+                будет указан подменный неконтактный номер телефона: +7 (967) 555-02-06. Таким образом вы&nbsp;не&nbsp;будете
+                получать звонков от&nbsp;кандидатов по&nbsp;вакансии. Позвонив по&nbsp;подменному номеру, кандидат
+                услышит сообщение от&nbsp;автоответчика о&nbsp;необходимости отклика на&nbsp;вакансию через сайт.</p>
+            </div>
+            <label for="company-name" class="add__name-company">Название компании <span
+                    class="add__span-custom">*</span></label>
+            <input type="text" class="add__name-company__data" id="company-name"
+                   placeholder="Например, “Санкт-Петербурский портной”">
+            <div class="add__extra-third">
+                <div class="add__extra-name">
+                    <label for="name-hunter" class="add__extra-name__label">Имя для соискателя <span
+                            class="add__span-custom">*</span></label>
+                    <input type="text" class="add__extra-name__data" id="name-hunter"
+                           placeholder="Имя контактного лица">
+                </div>
+                <div class="add__extra-email">
+                    <label for="email-hunter" class="add__extra-email__label">Email для соискателя</label>
+                    <input type="text" class="add__extra-email__data" id="email-hunter" placeholder="Email">
+                </div>
+            </div>
+            <div class="add__logo-container">
+                <div class="add__logo-title">Логотип</div>
+                <div class="add__logo-content">
+                    <div class="add__custom-btn">
+                        <div class="add__preview">
+                            <!-- as default the img won't have a src here. But I added it so we can see what we're styling -->
+                            <img src="" alt="" class="add__background">
+                        </div>
+                        <input type="file" id="uploadBtn" class="add__input">
+                        <label for="uploadBtn" class="add__custom-btn__label">Upload File</label>
+                    </div>
+                    <div class="add__upload-descr">Загрузите логотип вашей компании или переместите его в&nbsp;данную
+                        область, он&nbsp;будет отображен вместе с&nbsp;вакансией на&nbsp;некоторых сайтах
+                    </div>
+                </div>
+            </div>
+            <label for="id-vacancies" class="add__id-code">Код вакансии</label>
+            <input type="text" class="add__id-code__data" id="id-vacancies"
+                   placeholder="Укажите произвольный код вакансии для интеграции">
+        </div>
+        <div class="add__sites">
+            <h4 class="add__sites-title">Выбор сайтов для публикации</h4>
+            <div class="add__sites-header">
+                <div class="add__sites-values">
+                    <button class="btn-reset add__sites-value add__sites-value--active" data-path="rates-path-one">С
+                        автообновлением
+                    </button>
+                    <button class="btn-reset add__sites-value" data-path="rates-path-second">Стандартные тарифы</button>
+                </div>
+                <p class="add__sites-descr">Публикация с&nbsp;автоматическим обновлением вакансии на&nbsp;всех ведущих
+                    сайтах.
+                    Наиболее эффективный способ размещения</p>
+            </div>
+            <div class="add__sites-content rates rates--active" data-target="rates-path-one">
+                <ul class="rates__list">
+                    <li class="rates__list-item list-reset" id="parent-min">
+                        <label
+                                for="rate-min" class="rates__list-title">Минимальный с автообновлением<input
+                                type="radio" name="rates-auto-update"
+                                class="rates__list-check rates__list-hidden"
+                                id="rate-min">
+                            <span class="rates__list-dot"></span>
+                            <p class="rates__descr">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru
+                                (стандарт+
+                                обновление раз в&nbsp;3&nbsp;дня), Rabota.ru (Оптимальная вакансия, авто обновление раз
+                                в&nbsp;3&nbsp;дня), Careerist.ru А&nbsp;также подборка резюме.</p>
+                            <p class="rates__cost">7854 руб</p>
+                        </label>
+                    </li>
+                    <li class="rates__list-item list-reset rates__selected" id="parent-middle">
+                        <label
+                                for="rate-middle" class="rates__list-title">Оптимальный с автообновлением<input
+                                type="radio"
+                                name="rates-auto-update"
+                                class="rates__list-check rates__list-hidden"
+                                checked
+                                id="rate-middle">
+                            <span class="rates__list-dot"></span>
+                            <p class="rates__descr second-before">Публикация на&nbsp;62&nbsp;сайтах, включая: HH.ru
+                                (стандарт+
+                                обновление раз в&nbsp;3&nbsp;дня), SuperJob.ru (Бизнес вакансия, авто обновление каждые
+                                7&nbsp;дней), Rabota.ru (Оптимальная вакансия, авто обновление раз в&nbsp;3&nbsp;дня),
+                                Юла.Работа, Careerist.ru. А&nbsp;также подборка резюме.</p>
+                            <p class="rates__cost">11 816 руб</p>
+                        </label>
+                    </li>
+                    <li class="rates__list-item list-reset" id="parent-max">
+                        <label
+                                for="rate-max" class="rates__list-title">Максимальный с автообновлением<input
+                                type="radio" name="rates-auto-update"
+                                class="rates__list-check rates__list-hidden"
+                                id="rate-max">
+                            <span class="rates__list-dot"></span>
+                            <p class="rates__descr third-before">Публикация на&nbsp;64&nbsp;сайтах, включая: HH.ru
+                                (стандарт+
+                                обновление раз в&nbsp;3&nbsp;дня), SuperJob.ru (Бизнес вакансия, авто обновление каждые
+                                7&nbsp;дней), Rabota.ru (Оптимальная вакансия, авто обновление раз в&nbsp;3&nbsp;дня),
+                                Юла.Работа, Авито (Публикация с&nbsp;услугой &laquo;&bdquo;X5&ldquo;&raquo;), Вконтакте.
+                                А&nbsp;также подборка резюме.</p>
+                            <p class="rates__cost">21 941 руб</p>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="add__sites-content rates" data-target="rates-path-second">
+                <ul class="rates__list">
+                    <li class="rates__list-item list-reset" id="standart-parent-min">
+                        <label
+                                for="standart-min" class="rates__list-title">Минимальный<input type="radio"
+                                                                                               class="rates__list-check rates__list-hidden"
+                                                                                               name="rates-standart"
+                                                                                               id="standart-min">
+                            <span class="rates__list-dot"></span>
+                            <p class="rates__descr fourth-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru,
+                                Rabota.ru,
+                                Careerist.ru. А&nbsp;также подборка резюме.</p>
+                            <p class="rates__cost">3 973 руб.</p>
+                        </label>
+                    </li>
+                    <li class="rates__list-item list-reset rates__selected" id="standart-parent-middle">
+                        <label
+                                for="standart-middle" class="rates__list-title">Оптимальный<input
+                                type="radio"
+                                class="rates__list-check rates__list-hidden"
+                                name="rates-standart" id="standart-middle"
+                                checked>
+                            <span class="rates__list-dot"></span>
+                            <p class="rates__descr fifth-before">Публикация на&nbsp;62&nbsp;сайтах, включая: HH.ru,
+                                SuperJob.ru,
+                                Rabota.ru, Юла.Работа, Careerist.ru. А&nbsp;также подборка резюме.</p>
+                            <p class="rates__cost">7 731 руб.</p>
+                        </label>
+                    </li>
+                    <li class="rates__list-item list-reset" id="standart-parent-max">
+                        <label
+                                for="standart-max" class="rates__list-title">Максимальный<input type="radio"
+                                                                                                class="rates__list-check rates__list-hidden"
+                                                                                                name="rates-standart"
+                                                                                                id="standart-max">
+                            <span class="rates__list-dot"></span>
+                            <p class="rates__descr sixth-before">Публикация на&nbsp;64&nbsp;сайтах, включая: HH.ru,
+                                SuperJob.ru,
+                                Rabota.ru, Юла.Работа, Авито, Вконтакте, Careerist.ru. А&nbsp;также подборка резюме.</p>
+                            <p class="rates__cost">7854 руб</p>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="add__invoice invoice">
+                <h5 class="invoice__title">Лицевой счет</h5>
+                <ul class="invoice__list">
+                    <li class="invoice__item list-reset" id="invoice-first">
+                        <label for="choose-invoice" class="invoice__item-label">Индивидуальный<input
+                                name="rates-invoice"
+                                id="choose-invoice" type="radio"
+                                class="invoice__item-check invoice__list-hidden">
+                            <span class="invoice__list-dot"></span>
+                            <p class="invoice__descr seventh-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru,
+                                Zarplata.ru,
+                                Rabota.ru. А&nbsp;также подборка резюме.</p>
+                            <p class="invoice__cost">4 150 руб</p></label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="add__resume">
+            <button class="btn-reset btn btn add__btn-send">Опубликовать</button>
+            <button class="btn-reset add__btn-archive">Сохранить как черновик</button>
+        </div>
+    </div>
+</section>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
+<script src="../js/libs-js/accordion.js"></script>
+<script src="../js/libs-js/choices.min.js"></script>
+<script src="../js/script-add-vacancies.js"></script>
+</body>
+</html>

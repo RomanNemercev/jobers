@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobers - Вакансии</title>
+    <link rel="stylesheet" href="../css/libs-css/choices.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body class="body-page">
+<!--блок бокового меню-->
+<section class="nav">
+    <div class="nav__container">
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Рекрутинг</li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
+            </li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-candidates">Кандидаты</a></li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Организация</li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-companies">Компании</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
+            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+            </li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings">Настройки</a></li>
+        </ul>
+    </div>
+</section>
+<!--блок поискового меню-->
+<section class="search-bar">
+    <div class="search-bar__container">
+        <form action="#" class="search-bar__form">
+            <input type="search" class="search-bar__form-space" placeholder="Поиск">
+        </form>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
+                                                           alt="Уведомления" class="search-bar__note"></button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Уведомления"
+                                                           alt="Поддержка" class="search-bar__support"></button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
+                                                           alt="Личный кабинет" class="search-bar__acc"></button>
+        </div>
+    </div>
+</section>
+<!--основной контент страницы-->
+<section class="vacancies container">
+    <div class="vacancies__container">
+        <div class="vacancies__header">
+            <div class="vacancies__values">
+                <button class="btn-reset vacancies__value vacancies__value--active" data-path="one"
+                        aria-label="Активные вакансии">В работе
+                </button>
+                <button class="btn-reset vacancies__value" data-path="two" aria-label="Вакансии в архиве">Архив</button>
+            </div>
+            <a href="../partials/add_vacancies.html" class="btn-reset btn add-values">Добавить вакансию</a>
+        </div>
+        <div class="vacancies__content vacancies__content--active" data-target="one">
+            <div class="vacancies__filter-list">
+                <label class="vacancies__label">
+                    <input type="checkbox" class="vacancies__input vacancies__input-hidden">
+                    <span class="vacancies__span">Неопубликованные вакансии</span>
+                </label>
+            </div>
+            <ul class="vacancies__list">
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Водитель категории C</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <button class="btn-reset btn-two item__btn">Заполнить для публикации</button>
+                            <nav class="item__burger-nav">
+                                <ul class="item__burger-list">
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn btn-reset">Редактировать</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn btn-reset">Удалить</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn btn-reset">Дублировать</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn btn-reset">Настройка формы</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn btn-reset">Страница вакансии</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn btn-reset">Настройка автоотбора</button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="item__burger">
+                                <div class="item__burger-dot dot-inwork-one"></div>
+                                <div class="item__burger-dot dot-inwork-one"></div>
+                                <div class="item__burger-dot dot-inwork-one"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__status">
+                            <div class="item__name-data">Статус вакансии</div>
+                            <div class="item__right-data">Не заполнена</div>
+                        </div>
+                        <div class="item__created">
+                            <div class="item__name-data">Дата создания</div>
+                            <div class="item__right-data">Вчера в 10:02</div>
+                        </div>
+                        <div class="item__save">
+                            <div class="item__name-data">Сохранена</div>
+                            <div class="item__right-data">Сегодня в 19:13</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Водитель категории C</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <button class="btn-reset btn-two item__btn">Посмотреть перед публикацией</button>
+                            <nav class="item__burger-nav item__nav-two">
+                                <ul class="item__burger-list list-two">
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-two btn-reset">Редактировать</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-two btn-reset">Удалить</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-two btn-reset">Дублировать</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-two btn-reset">Настройка формы
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-two btn-reset">Страница вакансии
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-two btn-reset">Настройка автоотбора
+                                        </button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="item__burger item-two">
+                                <div class="item__burger-dot dot-inwork-two"></div>
+                                <div class="item__burger-dot dot-inwork-two"></div>
+                                <div class="item__burger-dot dot-inwork-two"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__status">
+                            <div class="item__name-data">Статус вакансии</div>
+                            <div class="item__right-data">Готова к публикации</div>
+                        </div>
+                        <div class="item__created">
+                            <div class="item__name-data">Дата создания</div>
+                            <div class="item__right-data">Вчера в 10:02</div>
+                        </div>
+                        <div class="item__save">
+                            <div class="item__name-data">Сохранена</div>
+                            <div class="item__right-data">Сегодня в 19:13</div>
+                        </div>
+                        <div class="item__rate">
+                            <div class="item__name-data">Тарифный план</div>
+                            <div class="item__right-data">Минимальный с автообновлением</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Водитель категории C</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <nav class="item__burger-nav item__nav-third">
+                                <ul class="item__burger-list list-third">
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-third btn-reset">Редактировать
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-third btn-reset">Удалить</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-third btn-reset">Дублировать</button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-third btn-reset">Настройка формы
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-third btn-reset">Страница вакансии
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__btn-third btn-reset">Настройка автоотбора
+                                        </button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="item__burger item-third">
+                                <div class="item__burger-dot dot-inwork-three"></div>
+                                <div class="item__burger-dot dot-inwork-three"></div>
+                                <div class="item__burger-dot dot-inwork-three"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__status">
+                            <div class="item__name-data">Статус вакансии</div>
+                            <div class="item__right-data">На модерации</div>
+                        </div>
+                        <div class="item__created">
+                            <div class="item__name-data">Дата создания</div>
+                            <div class="item__right-data">Вчера в 10:02</div>
+                        </div>
+                        <div class="item__save">
+                            <div class="item__name-data">Сохранена</div>
+                            <div class="item__right-data">Сегодня в 19:13</div>
+                        </div>
+                        <div class="item__rate">
+                            <div class="item__name-data">Тарифный план</div>
+                            <div class="item__right-data">Минимальный с автообновлением</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="vacancies__filter-list">
+                <label class="vacancies__label">
+                    <input type="checkbox" class="vacancies__input vacancies__input-hidden">
+                    <span class="vacancies__span">Активные вакансии</span>
+                </label>
+            </div>
+            <ul class="vacancies__list">
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Водитель категории C</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <nav class="item__burger-nav item__nav__active-one">
+                                <ul class="item__burger-list item__list__active-one">
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Разместить
+                                            повторно
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Отчет о
+                                            размещении
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Подборка
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Отклики
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Сайты
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Настройка
+                                            формы
+                                        </button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="item__burger item__active-one">
+                                <div class="item__burger-dot dot-active-one"></div>
+                                <div class="item__burger-dot dot-active-one"></div>
+                                <div class="item__burger-dot dot-active-one"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__responses">
+                            <div class="item__name-data">Отклики</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">112</a><span
+                                    class="item__new-data">+22</span></div>
+                        </div>
+                        <div class="item__choice">
+                            <div class="item__name-data">Подборка</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">22</a><span
+                                    class="item__new-data">+2</span></div>
+                        </div>
+                        <div class="item__views">
+                            <div class="item__name-data">Просмотры</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">2 223</a><span
+                                    class="item__new-data">+217</span></div>
+                        </div>
+                        <div class="item__sites">
+                            <div class="item__name-data">Сайты</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">64</a><span
+                                    class="item__new-data"></span></div>
+                        </div>
+                        <div class="item__ended">
+                            <div class="item__name-data">Осталось</div>
+                            <div class="item__right-data">
+                                10 дней
+                            </div>
+                        </div>
+                        <div class="item__rate">
+                            <div class="item__name-data">Тарифный план</div>
+                            <div class="item__right-data">Минимальный с автообновлением</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Водитель категории C</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <button class="btn-reset btn-two item__btn">Продлить срок вакансии</button>
+                            <nav class="item__burger-nav item__nav__archive-one">
+                                <ul class="item__burger-list item__list__active-two">
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Разместить
+                                            повторно
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Отчет о
+                                            размещении
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Подборка
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Отклики
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Сайты
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Настройка
+                                            формы
+                                        </button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="item__burger item__active-two">
+                                <div class="item__burger-dot dot-active-two"></div>
+                                <div class="item__burger-dot dot-active-two"></div>
+                                <div class="item__burger-dot dot-active-two"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__responses">
+                            <div class="item__name-data">Отклики</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">112</a><span
+                                    class="item__new-data">+22</span></div>
+                        </div>
+                        <div class="item__choice">
+                            <div class="item__name-data">Подборка</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">22</a><span
+                                    class="item__new-data">+2</span></div>
+                        </div>
+                        <div class="item__views">
+                            <div class="item__name-data">Просмотры</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">2 223</a><span
+                                    class="item__new-data">+217</span></div>
+                        </div>
+                        <div class="item__sites">
+                            <div class="item__name-data">Сайты</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">64</a><span
+                                    class="item__new-data"></span></div>
+                        </div>
+                        <div class="item__ended">
+                            <div class="item__name-data">Осталось</div>
+                            <div class="item__right-data item__data-collapse">1 день</div>
+                        </div>
+                        <div class="item__rate">
+                            <div class="item__name-data">Тарифный план</div>
+                            <div class="item__right-data">Минимальный с автообновлением</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="vacancies__filter" id="filterActive">
+                <div class="vacancies__filter-wrapper">
+                    <p class="vacancies__filter-sum">Выделено вакансий: <span class="vacancies__filter-span">3</span>
+                    </p>
+                    <button class="vacancies__filter-reset btn-reset">Отменить выделение</button>
+                    <div class="vacancies__select-box">
+                        <select name="select" class="vacancies__select-wrapper">
+                            <option value="">Выберите действие</option>
+                            <option value="Пригласить">Пригласить</option>
+                            <option value="Отклонить">Отклонить</option>
+                            <option value="Скачать резюме">Скачать резюме</option>
+                            <option value="Экспорт в Excel">Экспорт в Excel</option>
+                            <option value="Удалить">Удалить</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vacancies__content" data-target="two">
+            <div class="vacancies__filter-list">
+                <label class="vacancies__label">
+                    <input type="checkbox" class="vacancies__input vacancies__input-hidden">
+                    <span class="vacancies__span">Архивные вакансии</span>
+                </label>
+            </div>
+            <ul class="vacancies__list">
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Водитель категории C</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <button class="btn-reset btn-two item__btn">Опубликовать повторно</button>
+                            <nav class="item__burger-nav item__nav__archive-one">
+                                <ul class="item__burger-list item__list__archive-one">
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Разместить
+                                            повторно
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Отчет о
+                                            размещении
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Подборка
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Отклики
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Сайты
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-one btn-reset">Настройка
+                                            формы
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Страница
+                                            вакансии
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка
+                                            автоотбора
+                                        </button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="item__burger item__archive-one">
+                                <div class="item__burger-dot dot-archive-one"></div>
+                                <div class="item__burger-dot dot-archive-one"></div>
+                                <div class="item__burger-dot dot-archive-one"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__responses">
+                            <div class="item__name-data">Отклики</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">112</a><span
+                                    class="item__new-data">+22</span></div>
+                        </div>
+                        <div class="item__choice">
+                            <div class="item__name-data">Подборка</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">22</a><span
+                                    class="item__new-data">+2</span></div>
+                        </div>
+                        <div class="item__views">
+                            <div class="item__name-data">Просмотры</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">2 223</a><span
+                                    class="item__new-data">+217</span></div>
+                        </div>
+                        <div class="item__sites">
+                            <div class="item__name-data">Сайты</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">64</a><span
+                                    class="item__new-data"></span></div>
+                        </div>
+                        <div class="item__ended">
+                            <div class="item__name-data">Дата архивации</div>
+                            <div class="item__right-data">
+                                <time datetime="2023-12-12T15:16">12.12.2023 в 15:16</time>
+                            </div>
+                        </div>
+                        <div class="item__rate">
+                            <div class="item__name-data">Тарифный план</div>
+                            <div class="item__right-data">Минимальный с автообновлением</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="vacancies__list-item list-reset item">
+                    <div class="item__top">
+                        <div class="item__top-left">
+                            <label class="item__name">
+                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <span class="item__name-span">Менеджер отдела продаж</span>
+                            </label>
+                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
+                                <br>
+                                <span
+                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
+                        </div>
+                        <div class="item__right">
+                            <button class="btn-reset btn-two item__btn">Посмотреть перед публикацией</button>
+                            <nav class="item__burger-nav item__nav__archive-two">
+                                <ul class="item__burger-list item__list__archive-two">
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Разместить
+                                            повторно
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Отчет о
+                                            размещении
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Подборка
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Отклики
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Сайты
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка
+                                            формы
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Страница
+                                            вакансии
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка
+                                            автоотбора
+                                        </button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="item__burger item__archive-two">
+                                <div class="item__burger-dot dot-archive-two"></div>
+                                <div class="item__burger-dot dot-archive-two"></div>
+                                <div class="item__burger-dot dot-archive-two"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__bottom">
+                        <div class="item__responses">
+                            <div class="item__name-data">Отклики</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">112</a><span
+                                    class="item__new-data">+22</span></div>
+                        </div>
+                        <div class="item__choice">
+                            <div class="item__name-data">Подборка</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">22</a><span
+                                    class="item__new-data">+2</span></div>
+                        </div>
+                        <div class="item__views">
+                            <div class="item__name-data">Просмотры</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">2 223</a><span
+                                    class="item__new-data">+217</span></div>
+                        </div>
+                        <div class="item__sites">
+                            <div class="item__name-data">Сайты</div>
+                            <div class="item__right-data"><a href="#" class="item__temp-data">64</a><span
+                                    class="item__new-data"></span></div>
+                        </div>
+                        <div class="item__ended">
+                            <div class="item__name-data">Осталось</div>
+                            <div class="item__right-data">
+                                <time datetime="2023-12-12T15:16">12.12.2023 в 15:16</time>
+                            </div>
+                        </div>
+                        <div class="item__rate">
+                            <div class="item__name-data">Тарифный план</div>
+                            <div class="item__right-data">Минимальный с автообновлением</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="vacancies__filter" id="filterArchive">
+                <div class="vacancies__filter-wrapper">
+                    <p class="vacancies__filter-sum">Выделено вакансий: <span class="vacancies__filter-span">3</span>
+                    </p>
+                    <button class="vacancies__filter-reset btn-reset">Отменить выделение</button>
+                    <!-- можно сделать кнопку ссылкой и отправлять пользователя на дефолт страницу !-->
+                    <div class="vacancies__select-box">
+                        <select name="select" class="vacancies__select-wrapper">
+                            <option value="">Выберите действие</option>
+                            <option value="Пригласить">Пригласить</option>
+                            <option value="Отклонить">Отклонить</option>
+                            <option value="Скачать резюме">Скачать резюме</option>
+                            <option value="Экспорт в Excel">Экспорт в Excel</option>
+                            <option value="Удалить">Удалить</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../js/libs-js/choices.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
