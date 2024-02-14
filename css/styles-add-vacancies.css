@@ -206,7 +206,9 @@
     display: flex;
     z-index: 1;
     max-width: 640px;
+    width: 126%;
     background-color: var(--color_white);
+    border-radius: 5px;
     transform: scale(0);
     transition: transform .8s;
 }
@@ -218,4 +220,39 @@
 
 .main__skill-popup.main__skill-popup--open .main__skill-wrapper {
     transform: scale(1);
+}
+
+.main__content-list {
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+}
+
+.main__content-wrap {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.main__content-choose {
+    display: none;
+}
+
+.main__content-choose + .main__content-choose__custom-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/skills-ellipse-empty.svg");
+    background-repeat: no-repeat;
+}
+
+.main__content-choose:checked + .main__content-choose__custom-check {
+    background-image: url("../img/skills-ellipse-active.svg");
 }

@@ -105,13 +105,13 @@ let menuLinksThird = document.querySelectorAll('.item__btn-third');
 
 try {
     // код...
-burgerThird.addEventListener('click',
-    function () {
-        burgerListThird.classList.toggle('item__burger-list--active');
-        inWorkDotsThree.forEach(function (el) {
-            el.classList.toggle('item__burger-dot--active')
+    burgerThird.addEventListener('click',
+        function () {
+            burgerListThird.classList.toggle('item__burger-list--active');
+            inWorkDotsThree.forEach(function (el) {
+                el.classList.toggle('item__burger-dot--active')
+            })
         })
-    })
 
 } catch (err) {
     // обработка ошибки
@@ -137,13 +137,13 @@ let menuActiveLinksOne = document.querySelectorAll('.item__active__btn-one');
 
 
 try {
-burgerActiveOne.addEventListener('click',
-    function () {
-        burgerActiveListOne.classList.toggle('item__burger-list--active');
-        inActiveDotsOne.forEach(function (el) {
-            el.classList.toggle('item__burger-dot--active')
+    burgerActiveOne.addEventListener('click',
+        function () {
+            burgerActiveListOne.classList.toggle('item__burger-list--active');
+            inActiveDotsOne.forEach(function (el) {
+                el.classList.toggle('item__burger-dot--active')
+            })
         })
-    })
 } catch (err) {
     console.log('ошибка обработки четвертого дроплиста')
 }
@@ -165,13 +165,13 @@ let inActiveDotsTwo = document.querySelectorAll('.dot-active-two');
 let menuActiveLinksTwo = document.querySelectorAll('.item__active__btn-two');
 
 try {
-burgerActiveTwo.addEventListener('click',
-    function () {
-        burgerActiveListTwo.classList.toggle('item__burger-list--active');
-        inActiveDotsTwo.forEach(function (el) {
-            el.classList.toggle('item__burger-dot--active')
+    burgerActiveTwo.addEventListener('click',
+        function () {
+            burgerActiveListTwo.classList.toggle('item__burger-list--active');
+            inActiveDotsTwo.forEach(function (el) {
+                el.classList.toggle('item__burger-dot--active')
+            })
         })
-    })
 } catch (err) {
     console.log('ошибка обработки пятого дроплиста')
 }
@@ -194,13 +194,13 @@ let inArchiveDotsOne = document.querySelectorAll('.dot-archive-one');
 let menuLinksArchiveOne = document.querySelectorAll('.item__archive__btn-one');
 
 try {
-burgerArchiveOne.addEventListener('click',
-    function () {
-        burgerListArchiveOne.classList.toggle('item__burger-list--active');
-        inArchiveDotsOne.forEach(function (el) {
-            el.classList.toggle('item__burger-dot--active')
+    burgerArchiveOne.addEventListener('click',
+        function () {
+            burgerListArchiveOne.classList.toggle('item__burger-list--active');
+            inArchiveDotsOne.forEach(function (el) {
+                el.classList.toggle('item__burger-dot--active')
+            })
         })
-    })
 } catch (err) {
     console.log('ошибка обработки шестого дроплиста')
 }
@@ -222,13 +222,13 @@ let inArchiveDotsTwo = document.querySelectorAll('.dot-archive-two');
 let menuLinksArchiveTwo = document.querySelectorAll('.item__archive__btn-two');
 
 try {
-burgerArchiveTwo.addEventListener('click',
-    function () {
-        burgerListArchiveTwo.classList.toggle('item__burger-list--active');
-        inArchiveDotsTwo.forEach(function (el) {
-            el.classList.toggle('item__burger-dot--active')
+    burgerArchiveTwo.addEventListener('click',
+        function () {
+            burgerListArchiveTwo.classList.toggle('item__burger-list--active');
+            inArchiveDotsTwo.forEach(function (el) {
+                el.classList.toggle('item__burger-dot--active')
+            })
         })
-    })
 } catch (err) {
     console.log('ошибка обработки седьмого дроплиста')
 }
@@ -257,47 +257,93 @@ const multiSelect = () => {
 
 multiSelect();
 
+
+// popup filter
 let vacanciesFilterActive = document.getElementById("filterActive");
 let vacanciesFilterArchive = document.getElementById("filterArchive");
 let vacanciesInput = document.querySelectorAll('.vacancies__input');
 let itemNameInput = document.querySelectorAll('.item__name-input');
-let filterResetBtn = document.querySelectorAll('.vacancies__filter-reset');
+// delete after test right popup
+// let filterResetBtn = document.querySelectorAll('.vacancies__filter-reset');
 
-vacanciesInput.forEach(function (el) {
-    el.addEventListener('click',
-        function () {
-            vacanciesFilterActive.classList.toggle('vacancies__filter--active');
-        })
-})
+let enabledSettings = [];
 
-vacanciesInput.forEach(function (el) {
-    el.addEventListener('click',
-        function () {
-            vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
-        })
-})
+vacanciesInput.forEach(function (checkbox) {
 
-itemNameInput.forEach(function (el) {
-    el.addEventListener('click',
-        function () {
-            vacanciesFilterActive.classList.toggle('vacancies__filter--active');
-        })
-})
-
-itemNameInput.forEach(function (el) {
-    el.addEventListener('click',
-        function () {
-            vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
-        })
-})
-
-filterResetBtn.forEach(function (el) {
-    el.addEventListener('click',
-        function () {
+        enabledSettings = Array.from(vacanciesInput)
+            .filter(i => i.checked)
+            .map(i => i.value)
+        console.log(enabledSettings);
+        if (enabledSettings.length == 0) {
             vacanciesFilterActive.classList.remove('vacancies__filter--active');
-            vacanciesFilterArchive.classList.remove('vacancies__filter--active');
-        })
+        } else {
+            vacanciesFilterActive.classList.toggle('vacancies__filter--active');
+        }
+
 })
+
+
+
+// vacanciesInput.forEach(function (el) {
+//     el.addEventListener('change', (event) => {
+//         if (event.currentTarget.checked) {
+//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
+//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
+//         } else {
+//             vacanciesFilterActive.classList.remove('vacancies__filter--active');
+//             vacanciesFilterArchive.classList.remove('vacancies__filter--active');
+//         }
+//     })
+// })
+//
+// itemNameInput.forEach(function (el) {
+//     el.addEventListener('change', (event) => {
+//         if (event.currentTarget.checked) {
+//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
+//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
+//         } else {
+//             vacanciesFilterActive.classList.remove('vacancies__filter--active');
+//             vacanciesFilterArchive.classList.remove('vacancies__filter--active');
+//         }
+//     })
+// })
+
+// vacanciesInput.forEach(function (el) {
+//     el.addEventListener('click',
+//         function () {
+//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
+//         })
+// })
+//
+// vacanciesInput.forEach(function (el) {
+//     el.addEventListener('click',
+//         function () {
+//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
+//         })
+// })
+//
+// itemNameInput.forEach(function (el) {
+//     el.addEventListener('click',
+//         function () {
+//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
+//         })
+// })
+//
+// itemNameInput.forEach(function (el) {
+//     el.addEventListener('click',
+//         function () {
+//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
+//         })
+// })
+
+// delete after test right popup
+// filterResetBtn.forEach(function (el) {
+//     el.addEventListener('click',
+//         function () {
+//             vacanciesFilterActive.classList.remove('vacancies__filter--active');
+//             vacanciesFilterArchive.classList.remove('vacancies__filter--active');
+//         })
+// })
 
 //dropdown-search
 let availableKeywords = [
@@ -309,20 +355,24 @@ let availableKeywords = [
 const resultsBox = document.querySelector('.search-bar__dropdown');
 const inputBox = document.getElementById('input-box');
 
-inputBox.onkeyup = function () {
-    let result = [];
-    let input = inputBox.value;
-    if (input.length) {
-        result = availableKeywords.filter((keyword) => {
-            return keyword.toLowerCase().includes(input.toLowerCase());
-        });
-        console.log(result);
-    }
-    display(result);
+try {
+    inputBox.onkeyup = function () {
+        let result = [];
+        let input = inputBox.value;
+        if (input.length) {
+            result = availableKeywords.filter((keyword) => {
+                return keyword.toLowerCase().includes(input.toLowerCase());
+            });
+            console.log(result);
+        }
+        display(result);
 
-    if(!result.length){
-        resultsBox.innerHTML = '';
+        if (!result.length) {
+            resultsBox.innerHTML = '';
+        }
     }
+} catch (err) {
+    console.log('Не загрузился выпадающий поиск')
 }
 
 function display(result) {
@@ -333,7 +383,7 @@ function display(result) {
     resultsBox.innerHTML = '<ul>' + content.join('') + '</ul>';
 }
 
-function selectInput(list){
+function selectInput(list) {
     inputBox.value = list.innerHTML;
     resultsBox.innerHTML = '';
 }

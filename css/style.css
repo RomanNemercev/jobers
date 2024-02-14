@@ -158,12 +158,12 @@
 
 .nav__logo {
     display: inline-block;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .nav__logo-icon {
     width: 149px;
-    transform: translate(46px, 15px);
+    transform: translate(46px, 25px);
 }
 
 /*search-bar*/
@@ -343,15 +343,15 @@
 }
 
 .vacancies__value {
-    padding: 16px 20px;
-    font-size: 16px;
+    padding: 11.39px 20px;
+    font-size: 15px;
     font-weight: 400;
     background: var(--color_white);
 }
 
 .vacancies__value:first-of-type {
     padding-right: 21px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 5px 0 0 5px;
 }
 
 .vacancies__value:last-of-type {
@@ -478,17 +478,16 @@
     clip: rect(0 0 0 0);
 }
 
-.item__name-span {
+.item__check-icon {
     user-select: none;
     position: relative;
-    padding-left: 50px;
     font-size: 16px;
     font-weight: 500;
     line-height: normal;
     cursor: pointer;
 }
 
-.item__name-span::before {
+.item__check-icon::before {
     content: '';
     position: absolute;
     top: 1px;
@@ -499,7 +498,7 @@
     border-radius: 5px;
 }
 
-.item__name-span::after {
+.item__check-icon::after {
     content: url("../img/checked.svg");
     position: absolute;
     width: 25px;
@@ -509,8 +508,14 @@
     opacity: 0;
 }
 
-.item__name-input:checked + .item__name-span::after {
+.item__name-input:checked + .item__check-icon::after {
     opacity: 1;
+}
+
+.item__vacancies-name {
+    margin: 0;
+    padding-left: 50px;
+    font-weight: 500;
 }
 
 .item__descr {
@@ -1945,4 +1950,40 @@
 .search-bar__dropdown ul li:hover {
     background-color: var(--color_gray);
     border-radius: 5px;
+}
+
+.main__skills-accordion {
+    width: 100%;
+    margin: 20px;
+    padding: 0;
+}
+
+.main__accordion-control {
+    width: 100%;
+    justify-content: flex-start;
+    background-color: transparent;
+    border: none;
+}
+
+.main__accordion-arrow {
+    width: 13px;
+    height: 14px;
+    background-image: url("../img/skills-arrow-default.svg");
+    background-repeat: no-repeat;
+    transition: background-image .3s ease;
+}
+
+.main__accordion-title {
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    line-height: normal;
+}
+
+.accordion--active .main__accordion-control {
+    background-color: var(--color_zircon);
+}
+
+.accordion--active .main__accordion-arrow {
+    background-image: url("../img/skills-arrow-active.svg");
 }
