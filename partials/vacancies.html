@@ -75,7 +75,7 @@
         <div class="vacancies__content vacancies__content--active" data-target="one">
             <div class="vacancies__filter-list">
                 <label class="vacancies__label">
-                    <input type="checkbox" class="vacancies__input vacancies__input-hidden">
+                    <input type="checkbox" class="vacancies__input vacancies__input-hidden" id="filter-inactive">
                     <span class="vacancies__span">Неопубликованные вакансии</span>
                 </label>
             </div>
@@ -84,7 +84,8 @@
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <input type="checkbox" class="item__name-input item__name-hidden"
+                                       id="vacancies-value-first">
                                 <span class="item__check-icon"></span>
                             </label>
                             <p class="item__vacancies-name">
@@ -98,7 +99,7 @@
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Заполнить для публикации</button>
                             <nav class="item__burger-nav">
-                                <ul class="item__burger-list">
+                                <ul class="item__burger-list" id="instance">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn btn-reset">Редактировать</button>
                                     </li>
@@ -140,12 +141,27 @@
                             <div class="item__right-data">Сегодня в 19:13</div>
                         </div>
                     </div>
+                    <div class="vacancies__item-popup">
+                        <div class="vacancies__item-popup__wrapper delete">
+                            <div class="delete__container">
+                                <div class="delete__title">Удаление вакансии</div>
+                                <div class="delete__attent">Вы&nbsp;действительно хотите удалить вакансию Водитель
+                                    категории&nbsp;C?
+                                </div>
+                                <div class="delete__choose">
+                                    <button class="btn-reset delete__yes">Удалить</button>
+                                    <button class="btn-reset delete__no">Отмена</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="vacancies__list-item list-reset item">
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <input type="checkbox" class="item__name-input item__name-hidden"
+                                       id="vacancies-value-second">
                                 <span class="item__check-icon"></span>
                             </label>
                             <p class="item__vacancies-name">
@@ -213,7 +229,8 @@
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <input type="checkbox" class="item__name-input item__name-hidden"
+                                       id="vacancies-value-third">
                                 <span class="item__check-icon"></span>
                             </label>
                             <p class="item__vacancies-name">
@@ -280,7 +297,7 @@
             </ul>
             <div class="vacancies__filter-list">
                 <label class="vacancies__label">
-                    <input type="checkbox" class="vacancies__input vacancies__input-hidden">
+                    <input type="checkbox" class="vacancies__input vacancies__input-hidden" id="filter-active">
                     <span class="vacancies__span">Активные вакансии</span>
                 </label>
             </div>
@@ -289,7 +306,8 @@
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <input type="checkbox" class="item__name-input item__name-hidden"
+                                       id="vacancies-value-fourth">
                                 <span class="item__check-icon"></span>
                             </label>
                             <p class="item__vacancies-name">
@@ -376,7 +394,8 @@
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <input type="checkbox" class="item__name-input item__name-hidden"
+                                       id="vacancies-value-fifth">
                                 <span class="item__check-icon"></span>
                             </label>
                             <p class="item__vacancies-name">
@@ -459,11 +478,11 @@
                     </div>
                 </li>
             </ul>
-            <div class="vacancies__filter" id="filterActive">
+            <div class="vacancies__filter" id="popupFilterActive">
                 <div class="vacancies__filter-wrapper">
-                    <p class="vacancies__filter-sum">Выделено вакансий: <span class="vacancies__filter-span">3</span>
+                    <span class="vacancies__filter-check"></span>
+                    <p class="vacancies__filter-sum"><span class="vacancies__filter-span">10</span> вакансий
                     </p>
-                    <button class="vacancies__filter-reset btn-reset">Отменить выделение</button>
                     <div class="vacancies__select-box">
                         <select name="select" class="vacancies__select-wrapper">
                             <option value="">Выберите действие</option>
@@ -475,12 +494,27 @@
                         </select>
                     </div>
                 </div>
+                <div class="vacancies__filter-popup">
+                    <div class="vacancies__filter-popup__wrapper delete">
+                        <div class="delete__container">
+                            <div class="delete__title">Удаление вакансии</div>
+                            <div class="delete__attent">Выделенные вакансии <span class="delete__amount">(10)</span>
+                                будут удалены. Вы&nbsp;действительно
+                                хотите это сделать?
+                            </div>
+                            <div class="delete__choose">
+                                <button class="btn-reset delete__yes">Удалить</button>
+                                <button class="btn-reset delete__no">Отмена</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="vacancies__content" data-target="two">
             <div class="vacancies__filter-list">
                 <label class="vacancies__label">
-                    <input type="checkbox" class="vacancies__input vacancies__input-hidden">
+                    <input type="checkbox" class="vacancies__input vacancies__input-hidden" id="archive-filter">
                     <span class="vacancies__span">Архивные вакансии</span>
                 </label>
             </div>
@@ -489,7 +523,8 @@
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <input type="checkbox" class="item__name-input item__name-hidden"
+                                       id="vacancies-archive-first">
                                 <span class="item__check-icon"></span>
                             </label>
                             <p class="item__vacancies-name">
@@ -587,7 +622,8 @@
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden">
+                                <input type="checkbox" class="item__name-input item__name-hidden"
+                                       id="vacancies-archive-second">
                                 <span class="item__check-icon"></span>
                             </label>
                             <p class="item__vacancies-name">
@@ -682,12 +718,11 @@
                     </div>
                 </li>
             </ul>
-            <div class="vacancies__filter" id="filterArchive">
+            <div class="vacancies__filter" id="popupFilterArchive">
                 <div class="vacancies__filter-wrapper">
-                    <p class="vacancies__filter-sum">Выделено вакансий: <span class="vacancies__filter-span">3</span>
+                    <span class="vacancies__filter-check"></span>
+                    <p class="vacancies__filter-sum"><span class="vacancies__filter-span">10</span> вакансий
                     </p>
-                    <button class="vacancies__filter-reset btn-reset">Отменить выделение</button>
-                    <!-- можно сделать кнопку ссылкой и отправлять пользователя на дефолт страницу !-->
                     <div class="vacancies__select-box">
                         <select name="select" class="vacancies__select-wrapper">
                             <option value="">Выберите действие</option>

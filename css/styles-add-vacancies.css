@@ -12,6 +12,7 @@
 }
 
 .choices__list--dropdown {
+    top: 50px;
     border: none;
     box-shadow: 0 0 15px 0 #00000026;
     border-radius: 5px;
@@ -26,9 +27,10 @@
     position: absolute;
     top: 16.88px;
     right: 18.62px;
-    width: 13.75px;
-    height: 7.5px;
-    opacity: 1;
+    width: 18px;
+    height: 10px;
+    opacity: 0.5;
+    transform: rotate(180deg);
     background-image: url("../img/add-option-dropdown-arrow.svg");
 }
 
@@ -210,7 +212,7 @@
     background-color: var(--color_white);
     border-radius: 5px;
     transform: scale(0);
-    transition: transform .8s;
+    transition: transform .8s ease;
 }
 
 .main__skill-popup.main__skill-popup--open {

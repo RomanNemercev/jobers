@@ -44,6 +44,8 @@
     --color_semi-white: rgba(255, 255, 255, 0.5);
     --color_dodger: #5898FF; /*btns*/
     --color_zircon: #EFF5FF;
+    --color_pink: #FFEAEA;
+    --color_red: #F50A0A;
 }
 
 html {
@@ -109,6 +111,15 @@ img {
     color: var(--color_dodger);
     background: transparent;
     border: 1px solid var(--color_dodger);
+}
+
+.btn-delete {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--color_pink);
+    color: var(--color_red);
+    padding: 11px 20px;
+    border-radius: 5px;
 }
 
 .container {

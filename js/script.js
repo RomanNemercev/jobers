@@ -259,91 +259,92 @@ multiSelect();
 
 
 // popup filter
-let vacanciesFilterActive = document.getElementById("filterActive");
-let vacanciesFilterArchive = document.getElementById("filterArchive");
-let vacanciesInput = document.querySelectorAll('.vacancies__input');
-let itemNameInput = document.querySelectorAll('.item__name-input');
-// delete after test right popup
-// let filterResetBtn = document.querySelectorAll('.vacancies__filter-reset');
+let inActiveFilter = document.getElementById('filter-inactive');
+let ActiveFilter = document.getElementById('filter-active');
+let ArchiveFilter = document.getElementById('archive-filter');
 
-let enabledSettings = [];
+let popupFilterActive = document.getElementById('popupFilterActive');
+let popupFilterArchive = document.getElementById('popupFilterArchive')
 
-vacanciesInput.forEach(function (checkbox) {
+let activeValueFirst = document.getElementById('vacancies-value-first');
+let activeValueSecond = document.getElementById('vacancies-value-second');
+let activeValueThird = document.getElementById('vacancies-value-third');
+let activeValueFourth = document.getElementById('vacancies-value-fourth');
+let activeValueFifth = document.getElementById('vacancies-value-fifth');
+let arrActiveValues = [activeValueFirst, activeValueSecond, activeValueThird, activeValueFourth, activeValueFifth];
 
-        enabledSettings = Array.from(vacanciesInput)
-            .filter(i => i.checked)
-            .map(i => i.value)
-        console.log(enabledSettings);
-        if (enabledSettings.length == 0) {
-            vacanciesFilterActive.classList.remove('vacancies__filter--active');
+
+let archiveValueFirst = document.getElementById('vacancies-archive-first');
+let archiveValueSecond = document.getElementById('vacancies-archive-second');
+let arrArchiveValues = [archiveValueFirst, archiveValueSecond];
+
+
+try {
+    inActiveFilter.addEventListener('change', function (event) {
+        if (event.currentTarget.checked) {
+            popupFilterActive.classList.add('vacancies__filter--active');
         } else {
-            vacanciesFilterActive.classList.toggle('vacancies__filter--active');
+            popupFilterActive.classList.remove('vacancies__filter--active');
         }
+    })
+} catch {
+    console.log('Не сработал чекбокс на фильтр "Не актвивные вакансии"')
+}
 
-})
+try {
+    ActiveFilter.addEventListener('change', function (event) {
+        if (event.currentTarget.checked) {
+            popupFilterActive.classList.add('vacancies__filter--active');
+        } else {
+            popupFilterActive.classList.remove('vacancies__filter--active');
+        }
+    })
+} catch {
+    console.log('Не сработал чекбок на "Активные вакансии"')
+}
+
+try {
+    ArchiveFilter.addEventListener('change', function (event) {
+        if (event.currentTarget.checked) {
+            popupFilterArchive.classList.add('vacancies__filter--active');
+        } else {
+            popupFilterArchive.classList.remove('vacancies__filter--active');
+        }
+    })
+} catch {
+    console.log('Не сработал чекбокс на "Архивные вакансии"')
+}
 
 
+try {
+    arrActiveValues.forEach(function (el) {
+        el.addEventListener('change', function (checkbox) {
+            if (checkbox.currentTarget.checked) {
+                popupFilterActive.classList.add('vacancies__filter--active');
+            } else {
+                popupFilterActive.classList.remove('vacancies__filter--active');
+            }
+        })
+    })
+} catch {
+    console.log('Не сработал чекбокс на "Список вакансий"')
+}
 
-// vacanciesInput.forEach(function (el) {
-//     el.addEventListener('change', (event) => {
-//         if (event.currentTarget.checked) {
-//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
-//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
-//         } else {
-//             vacanciesFilterActive.classList.remove('vacancies__filter--active');
-//             vacanciesFilterArchive.classList.remove('vacancies__filter--active');
-//         }
-//     })
-// })
-//
-// itemNameInput.forEach(function (el) {
-//     el.addEventListener('change', (event) => {
-//         if (event.currentTarget.checked) {
-//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
-//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
-//         } else {
-//             vacanciesFilterActive.classList.remove('vacancies__filter--active');
-//             vacanciesFilterArchive.classList.remove('vacancies__filter--active');
-//         }
-//     })
-// })
 
-// vacanciesInput.forEach(function (el) {
-//     el.addEventListener('click',
-//         function () {
-//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
-//         })
-// })
-//
-// vacanciesInput.forEach(function (el) {
-//     el.addEventListener('click',
-//         function () {
-//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
-//         })
-// })
-//
-// itemNameInput.forEach(function (el) {
-//     el.addEventListener('click',
-//         function () {
-//             vacanciesFilterActive.classList.toggle('vacancies__filter--active');
-//         })
-// })
-//
-// itemNameInput.forEach(function (el) {
-//     el.addEventListener('click',
-//         function () {
-//             vacanciesFilterArchive.classList.toggle('vacancies__filter--active');
-//         })
-// })
+try {
+    arrArchiveValues.forEach(function (el) {
+        el.addEventListener('change', function (checkbox) {
+            if (checkbox.currentTarget.checked) {
+                popupFilterArchive.classList.add('vacancies__filter--active');
+            } else {
+                popupFilterArchive.classList.remove('vacancies__filter--active');
+            }
+        })
+    })
+} catch {
+    console.log('Не сработал чекбокс на "Список архивных вакансий"')
+}
 
-// delete after test right popup
-// filterResetBtn.forEach(function (el) {
-//     el.addEventListener('click',
-//         function () {
-//             vacanciesFilterActive.classList.remove('vacancies__filter--active');
-//             vacanciesFilterArchive.classList.remove('vacancies__filter--active');
-//         })
-// })
 
 //dropdown-search
 let availableKeywords = [
