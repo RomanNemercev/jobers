@@ -42,26 +42,19 @@ let burgerList = document.querySelector('.item__burger-list');
 let inWorkDotsOne = document.querySelectorAll('.dot-inwork-one');
 let menuLinks = document.querySelectorAll('.item__burger-btn');
 
-burger.addEventListener('mouseover', function () {
-    burgerList.classList.toggle('item__burger-list--active');
-    inWorkDotsOne.forEach(function (el) {
-        el.classList.toggle('item__burger-dot--active')
-    })
-})
-
-// try {
-//     // код...
-//     burger.addEventListener('click',
-//         function () {
-//             burgerList.classList.toggle('item__burger-list--active');
-//             inWorkDotsOne.forEach(function (el) {
-//                 el.classList.toggle('item__burger-dot--active')
-//             })
-//         })
-// } catch (err) {
-//     // обработка ошибки
-//     console.log('ошибка обработки первого дроплиста')
-// }
+try {
+    // код...
+    burger.addEventListener('click',
+        function () {
+            burgerList.classList.toggle('item__burger-list--active');
+            inWorkDotsOne.forEach(function (el) {
+                el.classList.toggle('item__burger-dot--active')
+            })
+        })
+} catch (err) {
+    // обработка ошибки
+    console.log('ошибка обработки первого дроплиста')
+}
 
 
 menuLinks.forEach(function (el) {
@@ -222,34 +215,6 @@ menuLinksArchiveOne.forEach(function (el) {
         })
 })
 
-//archive-two
-let burgerArchiveTwo = document.querySelector('.item__archive-two');
-let burgerListArchiveTwo = document.querySelector('.item__list__archive-two');
-let inArchiveDotsTwo = document.querySelectorAll('.dot-archive-two');
-let menuLinksArchiveTwo = document.querySelectorAll('.item__archive__btn-two');
-
-try {
-    burgerArchiveTwo.addEventListener('click',
-        function () {
-            burgerListArchiveTwo.classList.toggle('item__burger-list--active');
-            inArchiveDotsTwo.forEach(function (el) {
-                el.classList.toggle('item__burger-dot--active')
-            })
-        })
-} catch (err) {
-    console.log('ошибка обработки седьмого дроплиста')
-}
-
-menuLinksArchiveTwo.forEach(function (el) {
-    el.addEventListener('click',
-        function () {
-            burgerListArchiveTwo.classList.remove('item__burger-list--active');
-            inArchiveDotsTwo.forEach(function (el) {
-                el.classList.remove('item__burger-dot--active')
-            })
-        })
-})
-
 //filter-choice
 const multiSelect = () => {
     const elements = document.querySelectorAll('.vacancies__select-wrapper');
@@ -282,8 +247,7 @@ let arrActiveValues = [activeValueFirst, activeValueSecond, activeValueThird, ac
 
 
 let archiveValueFirst = document.getElementById('vacancies-archive-first');
-let archiveValueSecond = document.getElementById('vacancies-archive-second');
-let arrArchiveValues = [archiveValueFirst, archiveValueSecond];
+let arrArchiveValues = [archiveValueFirst];
 
 
 try {
@@ -321,7 +285,6 @@ try {
 } catch {
     console.log('Не сработал чекбокс на "Архивные вакансии"')
 }
-
 
 try {
     arrActiveValues.forEach(function (el) {
