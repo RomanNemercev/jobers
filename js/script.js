@@ -49,15 +49,6 @@ burger.addEventListener('mouseover', function () {
     })
 })
 
-menuLinks.forEach(function (el) {
-    el.addEventListener('mouseout', function () {
-        burgerList.classList.remove('item__burger-list--active');
-        inWorkDotsOne.forEach(function (el) {
-            el.classList.remove('item__burger-dot--active')
-        })
-    })
-})
-
 // try {
 //     // код...
 //     burger.addEventListener('click',
