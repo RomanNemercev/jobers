@@ -88,9 +88,9 @@
                                        id="vacancies-value-first">
                                 <span class="item__check-icon"></span>
                             </label>
-                            <p class="item__vacancies-name">
+                            <a href="#" class="item__vacancies-name">
                                 Водитель категории C
-                            </p>
+                            </a>
                             <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
                                 <br>
                                 <span
@@ -99,12 +99,12 @@
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Заполнить для публикации</button>
                             <nav class="item__burger-nav">
-                                <ul class="item__burger-list" id="instance">
+                                <ul class="item__burger-list">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn btn-reset">Редактировать</button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn btn-reset">Удалить</button>
+                                        <button class="item__burger-btn btn-reset choose-del">Удалить</button>
                                     </li>
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn btn-reset">Дублировать</button>
@@ -141,7 +141,7 @@
                             <div class="item__right-data">Сегодня в 19:13</div>
                         </div>
                     </div>
-                    <div class="vacancies__item-popup">
+                    <div class="vacancies__item-popup" id="choose-del-modal">
                         <div class="vacancies__item-popup__wrapper delete">
                             <div class="delete__container">
                                 <div class="delete__title">Удаление вакансии</div>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="delete__choose">
                                     <button class="btn-reset delete__yes">Удалить</button>
-                                    <button class="btn-reset delete__no">Отмена</button>
+                                    <button class="btn-reset delete__no" id="modal-close-window">Отмена</button>
                                 </div>
                             </div>
                         </div>
@@ -164,9 +164,9 @@
                                        id="vacancies-value-second">
                                 <span class="item__check-icon"></span>
                             </label>
-                            <p class="item__vacancies-name">
+                            <a href="#" class="item__vacancies-name">
                                 Водитель категории C
-                            </p>
+                            </a>
                             <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
                                 <br>
                                 <span
@@ -180,7 +180,8 @@
                                         <button class="item__burger-btn item__btn-two btn-reset">Редактировать</button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__btn-two btn-reset">Удалить</button>
+                                        <button class="item__burger-btn item__btn-two btn-reset choose-del">Удалить
+                                        </button>
                                     </li>
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-two btn-reset">Дублировать</button>
@@ -233,9 +234,9 @@
                                        id="vacancies-value-third">
                                 <span class="item__check-icon"></span>
                             </label>
-                            <p class="item__vacancies-name">
+                            <a href="#" class="item__vacancies-name">
                                 Водитель категории C
-                            </p>
+                            </a>
                             <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
                                 <br>
                                 <span
@@ -249,7 +250,8 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__btn-third btn-reset">Удалить</button>
+                                        <button class="item__burger-btn item__btn-third btn-reset choose-del">Удалить
+                                        </button>
                                     </li>
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-third btn-reset">Дублировать</button>
@@ -310,9 +312,9 @@
                                        id="vacancies-value-fourth">
                                 <span class="item__check-icon"></span>
                             </label>
-                            <p class="item__vacancies-name">
+                            <a href="#" class="item__vacancies-name">
                                 Водитель категории C
-                            </p>
+                            </a>
                             <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
                                 <br>
                                 <span
@@ -398,9 +400,9 @@
                                        id="vacancies-value-fifth">
                                 <span class="item__check-icon"></span>
                             </label>
-                            <p class="item__vacancies-name">
+                            <a href="#" class="item__vacancies-name">
                                 Водитель категории C
-                            </p>
+                            </a>
                             <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
                                 <br>
                                 <span
@@ -486,15 +488,12 @@
                     <div class="vacancies__select-box">
                         <select name="select" class="vacancies__select-wrapper">
                             <option value="">Выберите действие</option>
-                            <option value="Пригласить">Пригласить</option>
-                            <option value="Отклонить">Отклонить</option>
-                            <option value="Скачать резюме">Скачать резюме</option>
-                            <option value="Экспорт в Excel">Экспорт в Excel</option>
-                            <option value="Удалить">Удалить</option>
+                            <option value="Удалить" id="inst">Удалить</option>
+                            <option value="Переместить в архив">Переместить в архив</option>
                         </select>
                     </div>
                 </div>
-                <div class="vacancies__filter-popup">
+                <div class="vacancies__filter-popup" id="choose-del-modal-filter">
                     <div class="vacancies__filter-popup__wrapper delete">
                         <div class="delete__container">
                             <div class="delete__title">Удаление вакансии</div>
@@ -527,9 +526,9 @@
                                        id="vacancies-archive-first">
                                 <span class="item__check-icon"></span>
                             </label>
-                            <p class="item__vacancies-name">
+                            <a href="#" class="item__vacancies-name">
                                 Водитель категории C
-                            </p>
+                            </a>
                             <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
                                 <br>
                                 <span
@@ -618,105 +617,6 @@
                         </div>
                     </div>
                 </li>
-                <li class="vacancies__list-item list-reset item">
-                    <div class="item__top">
-                        <div class="item__top-left">
-                            <label class="item__name">
-                                <input type="checkbox" class="item__name-input item__name-hidden"
-                                       id="vacancies-archive-second">
-                                <span class="item__check-icon"></span>
-                            </label>
-                            <p class="item__vacancies-name">
-                                Менеджер отдела продаж
-                            </p>
-                            <p class="item__descr"><span class="item__price">от 35 000 до 45 000</span>
-                                <br>
-                                <span
-                                        class="item__geo">Москва, Новокаширское шоссе, д 13</span></p>
-                        </div>
-                        <div class="item__right">
-                            <button class="btn-reset btn-two item__btn">Посмотреть перед публикацией</button>
-                            <nav class="item__burger-nav item__nav__archive-two">
-                                <ul class="item__burger-list item__list__archive-two">
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Разместить
-                                            повторно
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Отчет о
-                                            размещении
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Подборка
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Отклики
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Сайты
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка
-                                            формы
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Страница
-                                            вакансии
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__archive__btn-two btn-reset">Настройка
-                                            автоотбора
-                                        </button>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="item__burger item__archive-two">
-                                <div class="item__burger-dot dot-archive-two"></div>
-                                <div class="item__burger-dot dot-archive-two"></div>
-                                <div class="item__burger-dot dot-archive-two"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item__bottom">
-                        <div class="item__responses">
-                            <div class="item__name-data">Отклики</div>
-                            <div class="item__right-data"><a href="#" class="item__temp-data">112</a><span
-                                    class="item__new-data">+22</span></div>
-                        </div>
-                        <div class="item__choice">
-                            <div class="item__name-data">Подборка</div>
-                            <div class="item__right-data"><a href="#" class="item__temp-data">22</a><span
-                                    class="item__new-data">+2</span></div>
-                        </div>
-                        <div class="item__views">
-                            <div class="item__name-data">Просмотры</div>
-                            <div class="item__right-data"><a href="#" class="item__temp-data">2 223</a><span
-                                    class="item__new-data">+217</span></div>
-                        </div>
-                        <div class="item__sites">
-                            <div class="item__name-data">Сайты</div>
-                            <div class="item__right-data"><a href="#" class="item__temp-data">64</a><span
-                                    class="item__new-data"></span></div>
-                        </div>
-                        <div class="item__ended">
-                            <div class="item__name-data">Осталось</div>
-                            <div class="item__right-data">
-                                <time datetime="2023-12-12T15:16">12.12.2023 в 15:16</time>
-                            </div>
-                        </div>
-                        <div class="item__rate">
-                            <div class="item__name-data">Тарифный план</div>
-                            <div class="item__right-data">Минимальный с автообновлением</div>
-                        </div>
-                    </div>
-                </li>
             </ul>
             <div class="vacancies__filter" id="popupFilterArchive">
                 <div class="vacancies__filter-wrapper">
@@ -726,11 +626,8 @@
                     <div class="vacancies__select-box">
                         <select name="select" class="vacancies__select-wrapper">
                             <option value="">Выберите действие</option>
-                            <option value="Пригласить">Пригласить</option>
-                            <option value="Отклонить">Отклонить</option>
-                            <option value="Скачать резюме">Скачать резюме</option>
-                            <option value="Экспорт в Excel">Экспорт в Excel</option>
-                            <option value="Удалить">Удалить</option>
+                            <option value="Пригласить">Удалить</option>
+                            <option value="Отклонить">Переместить в архив</option>
                         </select>
                     </div>
                 </div>
@@ -738,6 +635,7 @@
         </div>
     </div>
 </section>
+<!--<script src="../js/jquery-3.7.1.min.js"></script>-->
 <script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/script.js"></script>
 </body>

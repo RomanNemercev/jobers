@@ -42,19 +42,35 @@ let burgerList = document.querySelector('.item__burger-list');
 let inWorkDotsOne = document.querySelectorAll('.dot-inwork-one');
 let menuLinks = document.querySelectorAll('.item__burger-btn');
 
-try {
-    // код...
-    burger.addEventListener('click',
-        function () {
-            burgerList.classList.toggle('item__burger-list--active');
-            inWorkDotsOne.forEach(function (el) {
-                el.classList.toggle('item__burger-dot--active')
-            })
+burger.addEventListener('mouseover', function () {
+    burgerList.classList.toggle('item__burger-list--active');
+    inWorkDotsOne.forEach(function (el) {
+        el.classList.toggle('item__burger-dot--active')
+    })
+})
+
+menuLinks.forEach(function (el) {
+    el.addEventListener('mouseout', function () {
+        burgerList.classList.remove('item__burger-list--active');
+        inWorkDotsOne.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
         })
-} catch (err) {
-    // обработка ошибки
-    console.log('ошибка обработки первого дроплиста')
-}
+    })
+})
+
+// try {
+//     // код...
+//     burger.addEventListener('click',
+//         function () {
+//             burgerList.classList.toggle('item__burger-list--active');
+//             inWorkDotsOne.forEach(function (el) {
+//                 el.classList.toggle('item__burger-dot--active')
+//             })
+//         })
+// } catch (err) {
+//     // обработка ошибки
+//     console.log('ошибка обработки первого дроплиста')
+// }
 
 
 menuLinks.forEach(function (el) {
@@ -388,3 +404,36 @@ function selectInput(list) {
     inputBox.value = list.innerHTML;
     resultsBox.innerHTML = '';
 }
+
+//     modal for btn-del in dropdown
+let btnDelDrop = document.querySelectorAll('.choose-del');
+
+btnDelDrop.forEach(function (el) {
+    el.addEventListener('click', function () {
+        document.getElementById('choose-del-modal').classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
+    })
+})
+
+document.getElementById('modal-close-window').addEventListener('click', function () {
+    document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+})
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById("choose-del-modal").classList.remove("vacancies__item-popup--open");
+        document.body.classList.remove('stop-scroll');
+    }
+});
+
+document.querySelector("#choose-del-modal .vacancies__item-popup__wrapper").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("choose-del-modal").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+});
+
+

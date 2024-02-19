@@ -355,7 +355,7 @@
 }
 
 .vacancies__value:last-of-type {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 5px 5px 0;
     padding-left: 21px;
 }
 
@@ -456,6 +456,10 @@
     transition: min-height .3s ease;
 }
 
+.item__top-left {
+    overflow: hidden;
+}
+
 .item__right {
     position: relative;
     display: flex;
@@ -513,13 +517,14 @@
 }
 
 .item__vacancies-name {
+    width: 100%;
+    display: inline-block;
     margin: 0;
     padding-left: 50px;
     font-weight: 500;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    inline-size: 71%;
 }
 
 .item__descr {
@@ -906,6 +911,16 @@
     margin-top: 0;
     transform: rotate(360deg);
     opacity: 1;
+}
+
+.vacancies__select-box .is-open .choices__list--dropdown {
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.vacancies__select-box .choices__item:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
 }
 
 .vacancies__container {
