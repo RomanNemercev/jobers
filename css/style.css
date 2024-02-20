@@ -494,7 +494,7 @@
 .item__check-icon::before {
     content: '';
     position: absolute;
-    top: 1px;
+    top: -1px;
     left: 1px;
     width: 25px;
     height: 25px;
@@ -507,7 +507,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    top: 1px;
+    top: -1px;
     left: 1px;
     opacity: 0;
 }
@@ -530,7 +530,7 @@
 .item__descr {
     margin: 0;
     padding-left: 50px;
-    padding-top: 13px;
+    padding-top: 10px;
     color: var(--color_bali);
     font-size: 15px;
     font-style: normal;
@@ -678,6 +678,7 @@
     justify-content: center;
     overflow-y: auto;
     visibility: hidden;
+    background-color: rgba(0, 0, 0, .25);
     opacity: 0;
     transition: visibility .3s ease, opacity .3s ease;
 }
@@ -688,6 +689,7 @@
     display: flex;
     z-index: 1;
     max-width: 367px;
+    min-height: 200px;
     width: 100%;
     background-color: var(--color_white);
     border-radius: 5px;
@@ -706,12 +708,23 @@
 
 .delete__container {
     padding: 25px;
+    padding-top: 21px;
+    position: relative;
+}
+
+.delete__btn {
+    position: absolute;
+    background-image: url("../img/delete-x.svg");
+    width: 20px;
+    height: 20px;
+    top: 19px;
+    right: 25px;
 }
 
 .delete__title {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .delete__attent {
@@ -736,6 +749,8 @@
 }
 
 .delete__no {
+    font-size: 15px;
+    font-weight: 400;
     background-color: var(--color_zircon);
     padding: 11px 20px;
     color: var(--color_dodger);
@@ -817,7 +832,7 @@
     display: block;
     position: absolute;
     bottom: -10%;
-    width: 100%;
+    width: 78%;
     max-width: 1120px;
     padding: 16px 25px;
     border-radius: 10px;
@@ -838,8 +853,8 @@
     margin: 0;
     margin-right: auto;
     color: var(--color_white);
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     line-height: normal;
 }
 
@@ -856,6 +871,10 @@
     background-color: #393F47;
     border-radius: 10px;
     min-height: 40px;
+}
+
+.is-flipped.is-open .choices__inner {
+    border-radius: 10px;
 }
 
 .choices__item {
@@ -921,6 +940,11 @@
 
 .vacancies__select-box .choices__item:not(:last-of-type) {
     border-bottom: 1px solid var(--color_gray);
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
 }
 
 .vacancies__container {

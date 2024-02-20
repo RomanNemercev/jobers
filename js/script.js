@@ -1,4 +1,4 @@
-// // none-scalable for nav-bar
+// none-scalable for nav-bar
 // function forcedOriginalScale(noneScalable) {
 //
 //     var App = document.getElementById("noneScalable"); //получаем div по его id
@@ -216,18 +216,22 @@ menuLinksArchiveOne.forEach(function (el) {
 })
 
 //filter-choice
-const multiSelect = () => {
-    const elements = document.querySelectorAll('.vacancies__select-wrapper');
-    elements.forEach(el => {
-        const choices = new Choices(el, {
-            searchEnabled: false,
-            itemSelectText: '',
-            shouldSort: false,
-        })
-    });
-};
-
-multiSelect();
+try {
+    const multiSelect = () => {
+        const elements = document.querySelectorAll('.vacancies__select-wrapper');
+        elements.forEach(el => {
+            const choices = new Choices(el, {
+                searchEnabled: false,
+                itemSelectText: '',
+                shouldSort: false,
+            })
+        });
+    };
+    
+    multiSelect();
+} catch {
+    console.log("Не запустился выпадающий список")
+}
 
 
 // popup filter
@@ -249,13 +253,28 @@ let arrActiveValues = [activeValueFirst, activeValueSecond, activeValueThird, ac
 let archiveValueFirst = document.getElementById('vacancies-archive-first');
 let arrArchiveValues = [archiveValueFirst];
 
+arrActiveValues.forEach(function (el) {
+    el.addEventListener('change', function (event) {
+        if (event.currentTarget.checked) {
+        } else {
+            inActiveFilter.checked = false;
+            ActiveFilter.checked = false;
+        }
+    })
+})
 
 try {
     inActiveFilter.addEventListener('change', function (event) {
         if (event.currentTarget.checked) {
             popupFilterActive.classList.add('vacancies__filter--active');
+            activeValueFirst.checked = true;
+            activeValueSecond.checked = true;
+            activeValueThird.checked = true;
         } else {
             popupFilterActive.classList.remove('vacancies__filter--active');
+            activeValueFirst.checked = false;
+            activeValueSecond.checked = false;
+            activeValueThird.checked = false;
         }
     })
 } catch {
@@ -266,8 +285,12 @@ try {
     ActiveFilter.addEventListener('change', function (event) {
         if (event.currentTarget.checked) {
             popupFilterActive.classList.add('vacancies__filter--active');
+            activeValueFourth.checked = true;
+            activeValueFifth.checked = true;
         } else {
             popupFilterActive.classList.remove('vacancies__filter--active');
+            activeValueFourth.checked = false;
+            activeValueFifth.checked = false;
         }
     })
 } catch {
@@ -278,13 +301,23 @@ try {
     ArchiveFilter.addEventListener('change', function (event) {
         if (event.currentTarget.checked) {
             popupFilterArchive.classList.add('vacancies__filter--active');
+            archiveValueFirst.checked = true;
         } else {
             popupFilterArchive.classList.remove('vacancies__filter--active');
+            archiveValueFirst.checked = false;
         }
     })
 } catch {
     console.log('Не сработал чекбокс на "Архивные вакансии"')
 }
+
+//за отсутсвием массива значений(одного элемента), создаю ф-ию без forEach
+archiveValueFirst.addEventListener('change', function (event) {
+    if (event.currentTarget.checked) {
+    } else {
+        ArchiveFilter.checked = false;
+    }
+})
 
 try {
     arrActiveValues.forEach(function (el) {
@@ -319,8 +352,11 @@ try {
 //dropdown-search
 let availableKeywords = [
     'Владимир Власов',
-    'Владимир Власов',
-    'Владимир Власов',
+    'Андрей Власов',
+    'Максим Власов',
+    'Юрий Иваной',
+    'Константин Хабенский',
+    'Иван Грозный',
 ];
 
 const resultsBox = document.querySelector('.search-bar__dropdown');
@@ -370,6 +406,16 @@ btnDelDrop.forEach(function (el) {
 })
 
 document.getElementById('modal-close-window').addEventListener('click', function () {
+    document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+})
+
+document.getElementById('choose-del-btn').addEventListener('click', function () {
+    document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+})
+
+document.getElementById('modal-yes-window').addEventListener('click', function () {
     document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
     document.body.classList.remove('stop-scroll');
 })
