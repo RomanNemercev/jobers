@@ -122,6 +122,15 @@ img {
     border-radius: 5px;
 }
 
+.btn-cancel {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--color_zircon);
+    padding: 11px 20px;
+    color: var(--color_dodger);
+    border-radius: 5px;
+}
+
 .container {
     /*max-width: 1440px;*/
     padding: 95px 25px 0 295px;

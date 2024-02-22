@@ -227,7 +227,7 @@ try {
             })
         });
     };
-    
+
     multiSelect();
 } catch {
     console.log("Не запустился выпадающий список")
@@ -437,3 +437,27 @@ document.getElementById("choose-del-modal").addEventListener('click', event => {
 });
 
 
+// select with search
+try {
+    const searchSelect = () => {
+        const elements = document.querySelectorAll('.new__select-wrapper');
+        elements.forEach(el => {
+            const choices = new Choices(el, {
+                searchEnabled: true,
+                itemSelectText: '',
+                shouldSort: false,
+            })
+        });
+    };
+
+    searchSelect();
+} catch {
+    console.log("Не запустился выпадающий список")
+}
+
+// let citiesChoose = new Choices(
+//     document.getElementById('cities'),
+//     {
+//         allowHTML: true,
+//     }
+// );

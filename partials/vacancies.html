@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jobers - Вакансии</title>
-    <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
 </head>
@@ -124,6 +124,74 @@
                                 <div class="item__burger-dot dot-inwork-one"></div>
                                 <div class="item__burger-dot dot-inwork-one"></div>
                                 <div class="item__burger-dot dot-inwork-one"></div>
+                            </div>
+                            <div class="item__popup-auto">
+                                <div class="item__popup-wrapper auto">
+                                    <div class="auto__container">
+                                        <p class="auto__title">Ваши автоотборы</p>
+                                        <button class="btn-reset auto__close"></button>
+                                        <ul class="auto__list">
+                                            <li class="auto__item"><p class="auto__item-name">Только Москва</p>
+                                                <div class="auto__change">
+                                                    <button class="btn-reset auto__edit"></button>
+                                                    <button class="btn-reset auto__delete"></button>
+                                                </div>
+                                            </li>
+                                            <li class="auto__item"><p class="auto__item-name">Гражданство РФ, Москва, до&nbsp;35&nbsp;лет</p>
+                                                <div class="auto__change">
+                                                    <button class="btn-reset auto__edit"></button>
+                                                    <button class="btn-reset auto__delete"></button>
+                                                </div>
+                                            </li>
+                                            <li class="auto__item"><p class="auto__item-name">Зарплата до&nbsp;50&nbsp;тыс</p>
+                                                <div class="auto__change">
+                                                    <button class="btn-reset auto__edit"></button>
+                                                    <button class="btn-reset auto__delete"></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <button class="btn-reset auto__add-changes">Добавить новый</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__popup-edit">
+                                <div class="item__popup-wrapper edit">
+                                    <div class="edit__container">
+                                        <p class="edit__title">Параметры автоотбора</p>
+                                        <button class="btn-reset edit__close"></button>
+                                        <div class="edit__data-wrapper">
+                                            <div class="edit__data-name"><p class="edit__data-name__title">Название:</p>
+                                                <p class="edit__data-name__title">Город:</p>
+                                                <p class="edit__data-name__title">Возраст:</p>
+                                                <p class="edit__data-name__title">Пол:</p></div>
+                                            <div class="edit__data-desc"><p class="edit__data-desc__value">“Только
+                                                москва”</p>
+                                                <p class="edit__data-desc__value">Москва</p>
+                                                <p class="edit__data-desc__value">от 18 до 20 лет</p>
+                                                <p class="edit__data-desc__value">Мужской</p></div>
+                                        </div>
+                                        <button class="btn-reset edit__cancel btn-cancel">Редактировать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__popup-new">
+                                <div class="item__popup-wrapper new">
+                                    <div class="new__container">
+                                        <p class="new__title">Новый автоотбор</p>
+                                        <button class="btn-reset new__close"></button>
+                                        <p class="new__desc">Автоотбор автоматически перемещает кандидатов, которые
+                                            удовлетворяют правилу, на&nbsp;этап Приглашенные по&nbsp;умолчанию</p>
+                                        <p class="new__location-title">Локация</p>
+                                        <div class="new__select-box">
+                                            <select name="cities" class="new__select-wrapper" id="cities">
+                                                <option value="">Город</option>
+                                                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                                <option value="Москва">Москва</option>
+                                                <option value="Казань">Казань</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -487,7 +555,7 @@
                     <p class="vacancies__filter-sum"><span class="vacancies__filter-span">10</span> вакансий
                     </p>
                     <div class="vacancies__select-box">
-                        <select name="select" class="vacancies__select-wrapper">
+                        <select name="select" id="some" class="vacancies__select-wrapper">
                             <option value="">Выберите действие</option>
                             <option value="Удалить">Удалить</option>
                             <option value="Переместить в архив">Переместить в архив</option>
