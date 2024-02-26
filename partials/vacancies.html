@@ -190,6 +190,94 @@
                                                 <option value="Казань">Казань</option>
                                             </select>
                                         </div>
+                                        <p class="new__search-clone">Поиск дублей</p>
+                                        <label for="search-duplicates" class="new__search-label">
+                                            <input type="checkbox" class="new__search-input new__search-input__hidden"
+                                                   id="search-duplicates">
+                                            <span class="new__search-span">Включить</span>
+                                        </label>
+                                        <label for="day-amount" class="new__clone-quest">Сколько дней считать новых
+                                            кандидатов дублями?
+                                        </label>
+                                        <input type="text" class="new__clone-answ" placeholder="-" id="day-amount">
+                                        <p class="new__clone-desc">Если установлено значение в&nbsp;10&nbsp;дней и&nbsp;первый
+                                            кандидат получен 1&nbsp;числа, то&nbsp;все кандидаты с&nbsp;такими&nbsp;же
+                                            контактами, которые откликнутся с&nbsp;1&nbsp;по&nbsp;10&nbsp;число
+                                            включительно, будут автоматически считаться дублями</p>
+                                        <div class="new__options">
+                                            <p class="new__options-title">Параметры кандидата</p>
+                                            <div class="new__options-group">
+                                                <select name="choose-gender" id="gender" class="new__option-gender">
+                                                    <option value="">Пол</option>
+                                                    <option value="Мужской">Мужской</option>
+                                                    <option value="Женский">Женский</option>
+                                                </select>
+                                                <select name="choose-age" id="age" class="new__option-age">
+                                                    <option value="">Возраст</option>
+                                                    <option value="от">от</option>
+                                                    <option value="до">до</option>
+                                                    <option value="Скрыть без возраста">Скрыть без возраста</option>
+                                                </select>
+                                                <select name="choose-wage" id="wage" class="new__option-wage">
+                                                    <option value="">Заработная плата</option>
+                                                    <option value="от">от</option>
+                                                    <option value="до">до</option>
+                                                    <option value="Скрыть без зарплаты">Скрыть без зарплаты</option>
+                                                </select>
+                                                <select name="choose-skill" id="skill" class="new__option-skill">
+                                                    <option value="">Опыт работы</option>
+                                                    <option value="Без опыта">Без опыта</option>
+                                                    <option value="От 1 года">От 1 года</option>
+                                                    <option value="От 3 лет">От 3 лет</option>
+                                                </select>
+                                                <select name="choose-citizenship" id="nation"
+                                                        class="new__option-nation">
+                                                    <option value="">Гражданство</option>
+                                                    <option value="Не имеет значения">Не имеет значения</option>
+                                                    <option value="Россия">Россия</option>
+                                                    <option value="Страны СНГ">Страны СНГ</option>
+                                                    <option value="Остальные страны">Остальные страны</option>
+                                                </select>
+                                                <select name="choose-contacts" id="contacts"
+                                                        class="new__option-contacts">
+                                                    <option value="">Контакты</option>
+                                                    <option value="Указан номер телефона">Указан номер телефона</option>
+                                                </select>
+                                            </div>
+                                            <div class="new__global">
+                                                <p class="new__global-title">Применения правила</p>
+                                                <div class="new__options-wrapper">
+                                                    <label for="current-vacancy" class="new__current-label">
+                                                        <input type="radio" class="new__option-item"
+                                                               id="current-vacancy">К&nbsp;текущей вакансии
+                                                        <span class="new__option-dot"></span>
+                                                    </label>
+                                                    <label for="specific-vacancy" class="new__current-label">
+                                                        <input type="radio" class="new__option-item"
+                                                               id="specific-vacancy">К&nbsp;определенной вакансии
+                                                        <span class="new__option-dot"></span>
+                                                    </label>
+                                                    <label for="all-vacancies" class="new__current-label">
+                                                        <input type="radio" class="new__option-item" id="all-vacancies">Ко&nbsp;всем
+                                                        вакансиям
+                                                        <span class="new__option-dot"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <p class="new__transfer-title">Перенос на этап</p>
+                                            <select name="choose-level" id="choose-level" class="new__transfer-items">
+                                                <option value="">Перенос на этап</option>
+                                                <option value="Приглашенные">Приглашенные</option>
+                                            </select>
+                                            <p class="new__auto-title">Название автоотбора</p>
+                                            <label for="main-name" class="new__add-name">
+                                                <input type="text" class="new__add-name__input" id="main-name">
+                                            </label>
+                                        </div>
+                                        <div class="new__btns">
+                                            <button class="btn-reset new__btn-save">Сохранить</button>
+                                            <button class="btn-reset new__btn-cancel">Отмена</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

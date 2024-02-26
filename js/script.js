@@ -455,9 +455,63 @@ try {
     console.log("Не запустился выпадающий список")
 }
 
-// let citiesChoose = new Choices(
-//     document.getElementById('cities'),
-//     {
-//         allowHTML: true,
-//     }
-// );
+let genderChoose = new Choices(
+    document.getElementById('gender'),
+    {
+        allowHTML: true,
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+    }
+);
+
+let ageChoose = new Choices(
+    document.getElementById('age'),
+    {
+        allowHTML: true,
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+    }
+);
+
+let wageChoose = new Choices(
+    document.getElementById('wage'),
+    {
+        allowHTML: true,
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+    }
+);
+
+let skillChoose = new Choices(
+    document.getElementById('skill'),
+    {
+        itemSelectText: '',
+        allowHTML: true,
+        searchEnabled: false,
+        shouldSort: false,
+    }
+);
+
+let nationChoose = new Choices(
+    document.getElementById('nation'),
+    {
+        allowHTML: true,
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+        position: 'bottom',
+    }
+);
+
+let contactsChoose = new Choices(
+    document.getElementById('contacts'),
+    {
+        allowHTML: true,
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+    }
+);
