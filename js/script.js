@@ -515,3 +515,31 @@ let contactsChoose = new Choices(
         shouldSort: false,
     }
 );
+
+let levelChoose = new Choices(
+    document.getElementById('choose-level'),
+    {
+        allowHTML: true,
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+    }
+);
+
+
+// валидация main-name в автоотборе
+let mainNameInput = document.getElementById('main-name');
+mainNameInput.onblur = function() {
+    if (!mainNameInput.value.textContent) {
+        mainNameInput.classList.add('invalid');
+        error.innerHTML = 'Это поле обязательно для заполнения'
+    }
+};
+
+mainNameInput.onfocus = function() {
+    if (this.classList.contains('invalid')) {
+        // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+        this.classList.remove('invalid');
+        error.innerHTML = "";
+    }
+};

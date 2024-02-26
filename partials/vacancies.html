@@ -248,34 +248,45 @@
                                                 <p class="new__global-title">Применения правила</p>
                                                 <div class="new__options-wrapper">
                                                     <label for="current-vacancy" class="new__current-label">
-                                                        <input type="radio" class="new__option-item"
-                                                               id="current-vacancy">К&nbsp;текущей вакансии
-                                                        <span class="new__option-dot"></span>
+                                                        <input type="radio"
+                                                               class="new__option-item new__option-item__hidden"
+                                                               id="current-vacancy" name="global">
+                                                        <span class="new__option-dot">К&nbsp;текущей
+                                                        вакансии</span>
                                                     </label>
                                                     <label for="specific-vacancy" class="new__current-label">
-                                                        <input type="radio" class="new__option-item"
-                                                               id="specific-vacancy">К&nbsp;определенной вакансии
-                                                        <span class="new__option-dot"></span>
+                                                        <input type="radio"
+                                                               class="new__option-item new__option-item__hidden"
+                                                               id="specific-vacancy" name="global">
+                                                        <span class="new__option-dot">К&nbsp;определенной
+                                                        вакансии</span>
                                                     </label>
                                                     <label for="all-vacancies" class="new__current-label">
-                                                        <input type="radio" class="new__option-item" id="all-vacancies">Ко&nbsp;всем
-                                                        вакансиям
-                                                        <span class="new__option-dot"></span>
+                                                        <input type="radio"
+                                                               class="new__option-item new__option-item__hidden"
+                                                               id="all-vacancies" name="global">
+                                                        <span class="new__option-dot">Ко&nbsp;всем
+                                                        вакансиям</span>
                                                     </label>
                                                 </div>
                                             </div>
                                             <p class="new__transfer-title">Перенос на этап</p>
-                                            <select name="choose-level" id="choose-level" class="new__transfer-items">
-                                                <option value="">Перенос на этап</option>
-                                                <option value="Приглашенные">Приглашенные</option>
-                                            </select>
+                                            <div class="new__change-choice__wrapper">
+                                                <select name="choose-level" id="choose-level"
+                                                        class="new__transfer-items">
+                                                    <option value="">Перенос на этап</option>
+                                                    <option value="Приглашенные">Приглашенные</option>
+                                                </select>
+                                            </div>
                                             <p class="new__auto-title">Название автоотбора</p>
                                             <label for="main-name" class="new__add-name">
-                                                <input type="text" class="new__add-name__input" id="main-name">
+                                                <input type="text" class="new__add-name__input" id="main-name"
+                                                       placeholder="Введите название автоотбора">
+                                                <span class="error" id="error"></span>
                                             </label>
                                         </div>
                                         <div class="new__btns">
-                                            <button class="btn-reset new__btn-save">Сохранить</button>
+                                            <button class="btn-reset btn new__btn-save">Сохранить</button>
                                             <button class="btn-reset new__btn-cancel">Отмена</button>
                                         </div>
                                     </div>

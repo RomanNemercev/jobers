@@ -795,7 +795,14 @@
 }
 
 .new__container {
+    min-height: 1040px;
+    display: flex;
+    flex-direction: column;
     padding: 25px;
+}
+
+.new__options {
+    margin-bottom: auto;
 }
 
 .new__title {
@@ -1033,6 +1040,10 @@
     width: 27.66%;
 }
 
+.new__global {
+    margin-bottom: 20px;
+}
+
 .new__global-title {
     margin: 0;
     margin-bottom: 10px;
@@ -1048,6 +1059,61 @@
 
 .new__current-label:not(:last-of-type) {
     margin-bottom: 10px;
+}
+
+.new__option-item__hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.new__option-dot {
+    position: relative;
+    color: var(--color_space);
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 35px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.new__option-dot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/circle_w15-empty.svg");
+    background-repeat: no-repeat;
+}
+
+.new__option-dot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-image: url("../img/circle_w15-checked.svg");
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.new__transfer-title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.new__option-item:checked + .new__option-dot::after {
+    opacity: 1;
 }
 
 .item__nav__active-one {
@@ -1218,6 +1284,22 @@
     border-radius: 5px;
 }
 
+.new__btn-save {
+    min-height: 40px;
+    min-width: 125px;
+    margin-right: 25px;
+    font-weight: 500;
+}
+
+.new__btn-cancel {
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 101px;
+    min-height: 40px;
+    background-color: var(--color_gray);
+    border-radius: 5px;
+}
+
 .item__status {
     border-right: 1px solid var(--color_gray);
     padding: 17.5px 25px;
@@ -1330,7 +1412,6 @@
 .choices__inner {
     padding: 0;
     border: none;
-    background-color: #393F47;
     border-radius: 5px;
     min-height: 40px;
 }
@@ -1572,7 +1653,6 @@
     opacity: 1;
 }
 
-
 #choices--wage-item-choice-4::before {
     content: '';
     position: absolute;
@@ -1597,6 +1677,84 @@
 }
 
 .is-highlighted#choices--wage-item-choice-4::after {
+    opacity: 1;
+}
+
+#choices--choose-level-item-choice-2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_space);
+    padding-left: 41px;
+}
+
+#choices--choose-level-item-choice-2::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 10px;
+    background-image: url("../img/check_w20-empty.svg");
+    background-repeat: no-repeat;
+}
+
+#choices--choose-level-item-choice-2::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 10px;
+    background-image: url("../img/check_w20-checked.svg");
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.new__change-choice__wrapper {
+    margin-bottom: 20px;
+}
+
+.new__auto-title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.new__add-name__input {
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    border: none;
+    min-height: 40px;
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.new__add-name__input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.invalid {
+    outline: 1px solid red;
+    background-color: var(--color_athens-gray);
+}
+
+#error {
+    display: inline-block;
+    margin-top: 10px;
+    color: red;
+}
+
+.new__add-name__input::placeholder {
+    color: var(--color_bali);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.is-highlighted#choices--choose-level-item-choice-2::after {
     opacity: 1;
 }
 
@@ -1625,6 +1783,7 @@
 .choices__placeholder {
     padding-left: 0;
     color: var(--color_white);
+    opacity: 1;
 }
 
 .choices__item {
