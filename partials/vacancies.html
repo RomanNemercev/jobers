@@ -7,6 +7,9 @@
     <title>Jobers - Вакансии</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
@@ -116,7 +119,8 @@
                                         <button class="item__burger-btn btn-reset">Страница вакансии</button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn btn-reset">Настройка автоотбора</button>
+                                        <button class="item__burger-btn btn-reset auto-setting">Настройка автоотбора
+                                        </button>
                                     </li>
                                 </ul>
                             </nav>
@@ -125,11 +129,11 @@
                                 <div class="item__burger-dot dot-inwork-one"></div>
                                 <div class="item__burger-dot dot-inwork-one"></div>
                             </div>
-                            <div class="item__popup-auto">
+                            <div class="item__popup-auto" id="auto-popup-first">
                                 <div class="item__popup-wrapper auto">
                                     <div class="auto__container">
                                         <p class="auto__title">Ваши автоотборы</p>
-                                        <button class="btn-reset auto__close"></button>
+                                        <button class="btn-reset auto__close" id="popup-first-close"></button>
                                         <ul class="auto__list">
                                             <li class="auto__item"><p class="auto__item-name">Только Москва</p>
                                                 <div class="auto__change">
@@ -150,11 +154,12 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        <button class="btn-reset auto__add-changes">Добавить новый</button>
+                                        <button class="btn-reset auto__add-changes" id="add-new-auto">Добавить новый
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item__popup-edit">
+                            <div class="item__popup-edit" id="popup-edit-desc">
                                 <div class="item__popup-wrapper edit">
                                     <div class="edit__container">
                                         <p class="edit__title">Параметры автоотбора</p>
@@ -174,8 +179,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item__popup-new">
-                                <div class="item__popup-wrapper new">
+                            <div class="item__popup-new" id="popup-auto-create">
+                                <div class="item__popup-wrapper custom-scroll new" data-simplebar>
                                     <div class="new__container">
                                         <p class="new__title">Новый автоотбор</p>
                                         <button class="btn-reset new__close"></button>
@@ -245,7 +250,7 @@
                                                 </select>
                                             </div>
                                             <div class="new__global">
-                                                <p class="new__global-title">Применения правила</p>
+                                                <p class="new__global-title">Применение правила</p>
                                                 <div class="new__options-wrapper">
                                                     <label for="current-vacancy" class="new__current-label">
                                                         <input type="radio"
@@ -288,6 +293,20 @@
                                         <div class="new__btns">
                                             <button class="btn-reset btn new__btn-save">Сохранить</button>
                                             <button class="btn-reset new__btn-cancel">Отмена</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__popup-del" id="popup-del-quest">
+                                <div class="item__popup-wrapper quest">
+                                    <div class="quest__container">
+                                        <p class="quest__title">Удаление автоотбора</p>
+                                        <button class="btn-reset quest__btn-close"></button>
+                                        <p class="quest__desc">Вы действительно хотите удалить автоотбор <span
+                                                class="quest__desc-span">Только Москва</span> ?</p>
+                                        <div class="quest__btn-wrap">
+                                            <button class="quest__btn-cancel btn-reset btn-cancel">Отмена</button>
+                                            <button class="quest__btn-del btn-reset btn">Удалить</button>
                                         </div>
                                     </div>
                                 </div>
@@ -363,7 +382,8 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__btn-two btn-reset">Настройка автоотбора
+                                        <button class="item__burger-btn item__btn-two btn-reset auto-setting">Настройка
+                                            автоотбора
                                         </button>
                                     </li>
                                 </ul>
@@ -433,7 +453,8 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__btn-third btn-reset">Настройка автоотбора
+                                        <button class="item__burger-btn item__btn-third btn-reset auto-setting">
+                                            Настройка автоотбора
                                         </button>
                                     </li>
                                 </ul>
@@ -664,7 +685,8 @@
                 <div class="vacancies__filter-popup" id="choose-del-modal-filter">
                     <div class="vacancies__filter-popup__wrapper delete">
                         <div class="delete__container">
-                            <div class="delete__title">Удаление вакансии</div>
+                            <div class="delete__title">Удаление вакансий</div>
+                            <button class="btn-reset delete__btn"></button>
                             <div class="delete__attent">Выделенные вакансии <span class="delete__amount">(10)</span>
                                 будут удалены. Вы&nbsp;действительно
                                 хотите это сделать?
@@ -803,6 +825,7 @@
     </div>
 </section>
 <!--<script src="../js/jquery-3.7.1.min.js"></script>-->
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/script.js"></script>
 </body>

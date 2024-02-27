@@ -436,6 +436,16 @@ document.getElementById("choose-del-modal").addEventListener('click', event => {
     document.body.classList.remove('stop-scroll');
 });
 
+//     modal for btn-del in filter popup
+// ещё одна попытка привязать кнопку к id списка
+// let test = document.getElementById('choices--some-item-choice-2');
+// console.log(test)
+// let test2 = document.getElementById('choose-del-modal-filter')
+// console.log(test2)
+//
+// test.addEventListener('click', function () {
+//     test2.classList.toggle('vacancies__item-popup--open');
+// })
 
 // select with search
 try {
@@ -526,20 +536,151 @@ let levelChoose = new Choices(
     }
 );
 
-
 // валидация main-name в автоотборе
 let mainNameInput = document.getElementById('main-name');
-mainNameInput.onblur = function() {
+mainNameInput.onblur = function () {
     if (!mainNameInput.value.textContent) {
         mainNameInput.classList.add('invalid');
         error.innerHTML = 'Это поле обязательно для заполнения'
     }
 };
 
-mainNameInput.onfocus = function() {
+mainNameInput.onfocus = function () {
     if (this.classList.contains('invalid')) {
         // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
         this.classList.remove('invalid');
         error.innerHTML = "";
     }
 };
+
+//     modal for btn-auto-setting in dropdown
+let autoSetBtn = document.querySelectorAll('.auto-setting');
+
+autoSetBtn.forEach(function (el) {
+    el.addEventListener('click', function () {
+        document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
+    })
+})
+
+document.getElementById('popup-first-close').addEventListener('click', function () {
+    document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+})
+
+document.getElementById('add-new-auto').addEventListener('click', function () {
+    document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+    document.getElementById('popup-auto-create').classList.add('vacancies__item-popup--open');
+})
+
+document.querySelector('.new__close').addEventListener('click', function () {
+    document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
+    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+})
+
+document.querySelector('.new__btn-cancel').addEventListener('click', function () {
+    document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
+    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+})
+
+// здесь был
+
+document.querySelector("#auto-popup-first .item__popup-wrapper").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("auto-popup-first").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
+        document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+    }
+});
+
+document.querySelector("#popup-auto-create .item__popup-wrapper").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("popup-auto-create").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+});
+
+let popupEditBtn = document.querySelectorAll('.auto__edit');
+
+popupEditBtn.forEach(function (el) {
+    el.addEventListener('click', function () {
+        document.getElementById('popup-edit-desc').classList.add('vacancies__item-popup--open');
+        document.getElementById("auto-popup-first").classList.remove("vacancies__item-popup--open");
+        document.body.classList.toggle('stop-scroll');
+    })
+})
+
+document.querySelector('.edit__close').addEventListener('click', function () {
+    document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
+    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+})
+
+document.querySelector('.edit__cancel').addEventListener('click', function () {
+    document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
+    document.getElementById('popup-auto-create').classList.add('vacancies__item-popup--open');
+})
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
+        document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+    }
+});
+
+document.querySelector("#popup-edit-desc .item__popup-wrapper").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("popup-edit-desc").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+});
+
+document.querySelector('.auto__delete').addEventListener('click', function () {
+    document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+    document.getElementById('popup-del-quest').classList.add('vacancies__item-popup--open');
+    document.body.classList.toggle('stop-scroll');
+})
+
+document.querySelector('.quest__btn-close').addEventListener('click', function () {
+    document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
+    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+})
+
+document.querySelector('.quest__btn-cancel').addEventListener('click', function () {
+    document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
+    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+})
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
+        document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+    }
+});
+
+document.querySelector("#popup-del-quest .item__popup-wrapper").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("popup-del-quest").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    }
+});
