@@ -536,6 +536,32 @@ let levelChoose = new Choices(
     }
 );
 
+let specificChoose = new Choices(
+    document.getElementById('specific-vacancy-options'),
+    {
+        allowHTML: true,
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+    }
+);
+
+// созданиние списка для кнопка "определенные вакансии в блоке автоотбора"
+let radioSpecific = document.getElementById('specific-vacancy');
+let specificList = document.getElementById('specific-vacancy-wrapper');
+
+let arrGlobal = [document.getElementById('current-vacancy'), document.getElementById('all-vacancies')];
+
+radioSpecific.addEventListener('click', function () {
+    specificList.classList.add('specific--visible');
+})
+
+arrGlobal.forEach(function (el) {
+    el.addEventListener('click', function () {
+        specificList.classList.remove('specific--visible');
+    })
+})
+
 // валидация main-name в автоотборе
 let mainNameInput = document.getElementById('main-name');
 mainNameInput.onblur = function () {
