@@ -563,9 +563,10 @@ arrGlobal.forEach(function (el) {
 })
 
 // валидация main-name в автоотборе
+// первый способ работает только с определенными вложенными значениями тексt. В этом случае это @
 let mainNameInput = document.getElementById('main-name');
 mainNameInput.onblur = function () {
-    if (!mainNameInput.value.textContent) {
+    if (!mainNameInput.value.includes('@')) {
         mainNameInput.classList.add('invalid');
         error.innerHTML = 'Это поле обязательно для заполнения'
     }
@@ -578,6 +579,8 @@ mainNameInput.onfocus = function () {
         error.innerHTML = "";
     }
 };
+
+
 
 //     modal for btn-auto-setting in dropdown
 let autoSetBtn = document.querySelectorAll('.auto-setting');
