@@ -472,6 +472,9 @@ let genderChoose = new Choices(
         itemSelectText: '',
         searchEnabled: false,
         shouldSort: false,
+        removeItemButton: true,
+        placeholderValue: 'Пол ',
+        noChoicesText: '',
     }
 );
 
@@ -502,6 +505,9 @@ let skillChoose = new Choices(
         allowHTML: true,
         searchEnabled: false,
         shouldSort: false,
+        removeItemButton: true,
+        placeholderValue: 'Опыт работы',
+        noChoicesText: '',
     }
 );
 
@@ -513,6 +519,9 @@ let nationChoose = new Choices(
         searchEnabled: false,
         shouldSort: false,
         position: 'bottom',
+        removeItemButton: true,
+        placeholderValue: 'Гражданство',
+        noChoicesText: '',
     }
 );
 
@@ -573,40 +582,38 @@ radioSpecific.addEventListener('click', function () {
 
 // валидация main-name в автоотборе
 // первый способ работает только с определенными вложенными значениями тексt. В этом случае это @
-let mainNameInput = document.getElementById('main-name');
-mainNameInput.onblur = function () {
-    if (!mainNameInput.value.includes('@')) {
-        mainNameInput.classList.add('invalid');
-        error.innerHTML = 'Это поле обязательно для заполнения'
-    }
-};
-
-mainNameInput.onfocus = function () {
-    if (this.classList.contains('invalid')) {
-        // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-        this.classList.remove('invalid');
-        error.innerHTML = "";
-    }
-};
+// let mainNameInput = document.getElementById('main-name');
+// mainNameInput.onblur = function () {
+//     if (!mainNameInput.value.includes('@')) {
+//         mainNameInput.classList.add('invalid');
+//         error.innerHTML = 'Это поле обязательно для заполнения'
+//     }
+// };
+//
+// mainNameInput.onfocus = function () {
+//     if (this.classList.contains('invalid')) {
+//         // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+//         this.classList.remove('invalid');
+//         error.innerHTML = "";
+//     }
+// };
 
 // ещё один способ
-// function errorInputs() {
-//     var items = document.querySelectorAll('._createForm-field[required]');
-//     if (!items.length) return;
-//     items.forEach(function (item) {
-//         var parent = item.closest('._createForm-field-wrapper');
-//         item.addEventListener('focusout', function () {
-//             if (!this.value.length) parent.classList.add('error');
-//         });
-//         item.addEventListener('focusin', function () {
-//             if (parent.classList.contains('error')) parent.classList.remove('error');
-//         });
-//     });
-// }
-//
-// errorInputs();
+function errorInputs() {
+    var items = document.querySelectorAll('.new__add-name__input[required]');
+    if (!items.length) return;
+    items.forEach(function (item) {
+        var parent = item.closest('.new__add-name');
+        item.addEventListener('focusout', function () {
+            if (!this.value.length) parent.classList.add('error--visible');
+        });
+        item.addEventListener('focusin', function () {
+            if (parent.classList.contains('error--visible')) parent.classList.remove('error--visible');
+        });
+    });
+}
 
-
+errorInputs();
 
 //     modal for btn-auto-setting in dropdown
 let autoSetBtn = document.querySelectorAll('.auto-setting');

@@ -212,8 +212,7 @@
                                         <div class="new__options">
                                             <p class="new__options-title">Параметры кандидата</p>
                                             <div class="new__options-group">
-                                                <select name="choose-gender" id="gender" class="new__option-gender">
-                                                    <option value="">Пол</option>
+                                                <select name="choose-gender" id="gender" class="new__option-gender" multiple>
                                                     <option value="Мужской">Мужской</option>
                                                     <option value="Женский">Женский</option>
                                                 </select>
@@ -229,15 +228,13 @@
                                                     <option value="до">до</option>
                                                     <option value="Скрыть без зарплаты">Скрыть без зарплаты</option>
                                                 </select>
-                                                <select name="choose-skill" id="skill" class="new__option-skill">
-                                                    <option value="">Опыт работы</option>
+                                                <select name="choose-skill" id="skill" class="new__option-skill" multiple>
                                                     <option value="Без опыта">Без опыта</option>
                                                     <option value="От 1 года">От 1 года</option>
                                                     <option value="От 3 лет">От 3 лет</option>
                                                 </select>
                                                 <select name="choose-citizenship" id="nation"
-                                                        class="new__option-nation">
-                                                    <option value="">Гражданство</option>
+                                                        class="new__option-nation" multiple>
                                                     <option value="Не имеет значения">Не имеет значения</option>
                                                     <option value="Россия">Россия</option>
                                                     <option value="Страны СНГ">Страны СНГ</option>
@@ -307,8 +304,8 @@
                                             <p class="new__auto-title">Название автоотбора</p>
                                             <label for="main-name" class="new__add-name">
                                                 <input type="text" class="new__add-name__input" id="main-name"
-                                                       placeholder="Введите название автоотбора" minlength="1">
-                                                <span class="error" id="error"></span>
+                                                       placeholder="Введите название автоотбора" required>
+                                                <span class="error" id="error">Это поле обязательно для заполнения</span>
                                             </label>
                                         </div>
                                         <div class="new__btns">

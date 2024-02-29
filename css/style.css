@@ -1137,6 +1137,131 @@
     background-color: transparent;
 }
 
+/*здесь начата дополнительная к-ия стилей для множественных списков*/
+/*список пол*/
+.new__options-group > .choices:first-of-type > .choices__inner {
+    background-color: var(--color_athens-gray);
+    padding: 4.5px 15px;
+}
+
+.new__options-group > .choices:first-of-type > .choices__inner .choices__input {
+    background-color: inherit;
+    margin-bottom: 0;
+    height: 100%;
+    padding-top: 6px;
+    padding-left: 0;
+}
+
+.new__options-group > .choices:first-of-type {
+    position: relative;
+}
+
+.new__options-group > .choices:first-of-type::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    transition: transform .3s ease, background-image .3s ease;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+}
+
+/*список опыт*/
+.new__options-group > .choices:nth-child(4) > .choices__inner {
+    background-color: var(--color_athens-gray);
+    padding: 4.5px 15px;
+}
+
+.new__options-group > .choices:nth-child(4) > .choices__inner .choices__input {
+    background-color: inherit;
+    margin-bottom: 0;
+    height: 100%;
+    padding-top: 6px;
+    padding-left: 0;
+}
+
+.new__options-group > .choices:nth-child(4) {
+    position: relative;
+}
+
+.new__options-group > .choices:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    transition: transform .3s ease, background-image .3s ease;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+}
+
+.new__options > .new__options-group > .is-open.choices::before {
+    opacity: 1;
+    transform: rotate(180deg);
+    background-image: url("../img/arrow-up-blue.svg");
+}
+
+/*список гражданство*/
+.new__options-group > .choices:nth-child(5) > .choices__inner {
+    background-color: var(--color_athens-gray);
+    padding: 4.5px 15px;
+}
+
+.new__options-group > .choices:nth-child(5) > .choices__inner .choices__input {
+    background-color: inherit;
+    margin-bottom: 0;
+    height: 100%;
+    padding-top: 6px;
+    padding-left: 0;
+}
+
+.new__options-group > .choices:nth-child(5) {
+    position: relative;
+}
+
+.new__options-group > .choices:nth-child(5)::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    transition: transform .3s ease, background-image .3s ease;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+}
+
+.new__options > .new__options-group > .is-open.choices::before {
+    opacity: 1;
+    transform: rotate(180deg);
+    background-image: url("../img/arrow-up-blue.svg");
+}
+
+/*глобальные настройки для множественных списков блока new__options-group*/
+.new__options-group .choices__list--multiple .choices__item {
+    background-color: var(--color_dodger);
+    color: var(--color_white);
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.new__options-group .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+    border-left: none;
+    background-image: url(../img/delete-x__for-tabs.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/*здесь завершена дополнительная к-ия стилей для множественных списков*/
+
 .new__options-group > .choices:first-of-type {
     min-width: 19.577%;
 }
@@ -1271,7 +1396,7 @@
     top: 0;
     left: 0;
     height: 15px;
-    width: 15px;
+    width: 16px;
     background-image: url("../img/circle_w15-checked.svg");
     background-repeat: no-repeat;
     opacity: 0;
@@ -1283,6 +1408,10 @@
     font-size: 15px;
     font-weight: 500;
     color: var(--color_space);
+}
+
+.new__option-item:checked + .new__option-dot::before {
+    opacity: 0;
 }
 
 .new__option-item:checked + .new__option-dot::after {
@@ -1636,9 +1765,9 @@
     width: 130.43%;
 }
 
-.new__options-group > .choices:nth-child(4) #choices--skill-item-choice-2,
-#choices--skill-item-choice-3,
-#choices--skill-item-choice-4 {
+.new__options-group > .choices:nth-child(4) #choices--skill-item-choice-1,
+#choices--skill-item-choice-2,
+#choices--skill-item-choice-3 {
     position: relative;
     font-size: 14px;
     font-weight: 400;
@@ -1646,9 +1775,9 @@
     padding-left: 41px;
 }
 
-.new__options-group > .choices:nth-child(4) #choices--skill-item-choice-2::before,
-#choices--skill-item-choice-3::before,
-#choices--skill-item-choice-4::before {
+.new__options-group > .choices:nth-child(4) #choices--skill-item-choice-1::before,
+#choices--skill-item-choice-2::before,
+#choices--skill-item-choice-3::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -1659,9 +1788,9 @@
     background-repeat: no-repeat;
 }
 
-.new__options-group > .choices:nth-child(4) #choices--skill-item-choice-2::after,
-#choices--skill-item-choice-3::after,
-#choices--skill-item-choice-4::after {
+.new__options-group > .choices:nth-child(4) #choices--skill-item-choice-1::after,
+#choices--skill-item-choice-2::after,
+#choices--skill-item-choice-3::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -1673,16 +1802,16 @@
     background-repeat: no-repeat;
 }
 
-.new__options-group > .choices:nth-child(4) .is-highlighted#choices--skill-item-choice-2::after,
-.is-highlighted#choices--skill-item-choice-3::after,
-.is-highlighted#choices--skill-item-choice-4::after {
+.new__options-group > .choices:nth-child(4) .is-highlighted#choices--skill-item-choice-1::after,
+.is-highlighted#choices--skill-item-choice-2::after,
+.is-highlighted#choices--skill-item-choice-3::after {
     opacity: 1;
 }
 
-.new__options-group > .choices:nth-child(5) #choices--nation-item-choice-2,
+.new__options-group > .choices:nth-child(5) #choices--nation-item-choice-1,
+#choices--nation-item-choice-2,
 #choices--nation-item-choice-3,
-#choices--nation-item-choice-4,
-#choices--nation-item-choice-5 {
+#choices--nation-item-choice-4 {
     position: relative;
     font-size: 14px;
     font-weight: 400;
@@ -1690,10 +1819,10 @@
     padding-left: 41px;
 }
 
-.new__options-group > .choices:nth-child(5) #choices--nation-item-choice-2::before,
+.new__options-group > .choices:nth-child(5) #choices--nation-item-choice-1::before,
+#choices--nation-item-choice-2::before,
 #choices--nation-item-choice-3::before,
-#choices--nation-item-choice-4::before,
-#choices--nation-item-choice-5::before {
+#choices--nation-item-choice-4::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -1704,10 +1833,10 @@
     background-repeat: no-repeat;
 }
 
-.new__options-group > .choices:nth-child(5) #choices--nation-item-choice-2::after,
+.new__options-group > .choices:nth-child(5) #choices--nation-item-choice-1::after,
+#choices--nation-item-choice-2::after,
 #choices--nation-item-choice-3::after,
-#choices--nation-item-choice-4::after,
-#choices--nation-item-choice-5::after {
+#choices--nation-item-choice-4::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -1719,10 +1848,10 @@
     background-repeat: no-repeat;
 }
 
-.new__options-group > .choices:nth-child(5) .is-highlighted#choices--nation-item-choice-2::after,
+.new__options-group > .choices:nth-child(5) .is-highlighted#choices--nation-item-choice-1::after,
+.is-highlighted#choices--nation-item-choice-2::after,
 .is-highlighted#choices--nation-item-choice-3::after,
-.is-highlighted#choices--nation-item-choice-4::after,
-.is-highlighted#choices--nation-item-choice-5::after {
+.is-highlighted#choices--nation-item-choice-4::after {
     opacity: 1;
 }
 
@@ -1774,17 +1903,16 @@
 
 .new__options-group > .choices:nth-child(6) > .choices__list.choices__list--dropdown {
     width: 169.238%;
-    right: 0;
 }
 
-#choices--gender-item-choice-2,
-#choices--gender-item-choice-3 {
+#choices--gender-item-choice-1,
+#choices--gender-item-choice-2 {
     position: relative;
     padding-left: 41px;
 }
 
-#choices--gender-item-choice-2::before,
-#choices--gender-item-choice-3::before {
+#choices--gender-item-choice-1::before,
+#choices--gender-item-choice-2::before {
     content: '';
     position: absolute;
     top: 10px;
@@ -1795,8 +1923,8 @@
     background-repeat: no-repeat;
 }
 
-#choices--gender-item-choice-2::after,
-#choices--gender-item-choice-3::after {
+#choices--gender-item-choice-1::after,
+#choices--gender-item-choice-2::after {
     content: '';
     position: absolute;
     top: 20px;
@@ -1808,8 +1936,8 @@
     background-repeat: no-repeat;
 }
 
-.is-highlighted#choices--gender-item-choice-2::after,
-.is-highlighted#choices--gender-item-choice-3::after {
+.is-highlighted#choices--gender-item-choice-1::after,
+.is-highlighted#choices--gender-item-choice-2::after {
     opacity: 1;
 }
 
@@ -1951,13 +2079,16 @@
     background-color: var(--color_zircon);
 }
 
-.invalid {
-    outline: 1px solid red;
-    background-color: var(--color_athens-gray);
+.error--visible > .error {
+    display: inline-block;
 }
 
-#error {
-    display: inline-block;
+.error--visible > .new__add-name__input {
+    outline: 1px solid var(--color_red);
+}
+
+.error {
+    display: none;
     margin-top: 10px;
     color: red;
     font-size: 14px;
@@ -2060,9 +2191,10 @@
     z-index: 4;
 }
 
-.choices__list--dropdown .is-selected {
-    display: none;
-}
+/*функция которая позволяет скрыть выбранный элемент*/
+/*.choices__list--dropdown .is-selected {*/
+/*    display: none;*/
+/*}*/
 
 .is-active .choices__placeholder {
     display: none;
