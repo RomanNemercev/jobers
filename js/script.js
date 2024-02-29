@@ -543,12 +543,16 @@ let specificChoose = new Choices(
         itemSelectText: '',
         searchEnabled: false,
         shouldSort: false,
+        removeItemButton: true,
+        placeholderValue: 'Выберите вакансию',
+        noChoicesText: 'Вакансии закончились',
     }
 );
 
 // созданиние списка для кнопка "определенные вакансии в блоке автоотбора"
 let radioSpecific = document.getElementById('specific-vacancy');
 let specificList = document.getElementById('specific-vacancy-wrapper');
+let radioSpecificParent = radioSpecific.parentNode;
 
 let arrGlobal = [document.getElementById('current-vacancy'), document.getElementById('all-vacancies')];
 
@@ -559,7 +563,12 @@ radioSpecific.addEventListener('click', function () {
 arrGlobal.forEach(function (el) {
     el.addEventListener('click', function () {
         specificList.classList.remove('specific--visible');
+        radioSpecificParent.classList.remove('specific--style');
     })
+})
+
+radioSpecific.addEventListener('click', function () {
+    radioSpecificParent.classList.add('specific--style');
 })
 
 // валидация main-name в автоотборе
@@ -579,6 +588,23 @@ mainNameInput.onfocus = function () {
         error.innerHTML = "";
     }
 };
+
+// ещё один способ
+// function errorInputs() {
+//     var items = document.querySelectorAll('._createForm-field[required]');
+//     if (!items.length) return;
+//     items.forEach(function (item) {
+//         var parent = item.closest('._createForm-field-wrapper');
+//         item.addEventListener('focusout', function () {
+//             if (!this.value.length) parent.classList.add('error');
+//         });
+//         item.addEventListener('focusin', function () {
+//             if (parent.classList.contains('error')) parent.classList.remove('error');
+//         });
+//     });
+// }
+//
+// errorInputs();
 
 
 

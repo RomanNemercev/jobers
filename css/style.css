@@ -1181,9 +1181,9 @@
 
 .new__options-specific {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    width: 50%;
+    top: 63px;
+    left: 0;
+    width: 100%;
 }
 
 .specific--hidden {
@@ -1194,8 +1194,39 @@
     visibility: visible;
 }
 
+.specific__wrapper .choices__inner {
+    background-color: var(--color_athens-gray);
+    padding: 7px 15px;
+}
+
+.specific__wrapper .choices__input {
+    background-color: inherit;
+    margin-bottom: 0;
+}
+
+.specific__wrapper .choices__list--multiple .choices__item {
+    background-color: var(--color_dodger);
+    color: var(--color_white);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4.96px 10px;
+    border-radius: 5px;
+}
+
+.specific__wrapper .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+    border-left: none;
+    background-image: url("../img/delete-x__for-tabs.svg");
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
 .new__current-label {
     width: 50%;
+}
+
+.new__global > .new__options-wrapper > .specific--style {
+    margin-bottom: 65px;
 }
 
 .new__current-label:not(:last-of-type) {
