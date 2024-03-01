@@ -1199,12 +1199,6 @@
     background-repeat: no-repeat;
 }
 
-.new__options > .new__options-group > .is-open.choices::before {
-    opacity: 1;
-    transform: rotate(180deg);
-    background-image: url("../img/arrow-up-blue.svg");
-}
-
 /*список гражданство*/
 .new__options-group > .choices:nth-child(5) > .choices__inner {
     background-color: var(--color_athens-gray);
@@ -1239,7 +1233,7 @@
 .new__options > .new__options-group > .is-open.choices::before {
     opacity: 1;
     transform: rotate(180deg);
-    background-image: url("../img/arrow-up-blue.svg");
+    background-image: url("../img/arrow-active.svg");
 }
 
 /*глобальные настройки для множественных списков блока new__options-group*/
@@ -1384,6 +1378,13 @@
     opacity: 0;
     background-image: url(../img/check_w20-checked.svg);
     background-repeat: no-repeat;
+}
+
+.is-highlighted#choices--specific-vacancy-options-item-choice-1::after,
+.is-highlighted#choices--specific-vacancy-options-item-choice-2::after,
+.is-highlighted#choices--specific-vacancy-options-item-choice-3::after,
+.is-highlighted#choices--specific-vacancy-options-item-choice-4::after {
+    opacity: 1;
 }
 
 .new__current-label {
@@ -1751,7 +1752,7 @@
 /*filter-vacancies*/
 .vacancies__filter {
     display: block;
-    position: absolute;
+    position: fixed;
     bottom: -10%;
     width: 78%;
     max-width: 1120px;
@@ -2228,6 +2229,10 @@
     color: var(--color_space);
 }
 
+.vacancies__select-box .choices__item--choice.choices__item--selectable {
+    color: var(--color_bali);
+}
+
 .choices__list--dropdown .choices__item--choice:not(:last-of-type) {
     border-bottom: 1px solid var(--color_gray);
 }
@@ -2351,6 +2356,7 @@
 
 .vacancies__filter-check {
     display: inline-block;
+    cursor: pointer;
     width: 25px;
     height: 25px;
     margin-right: 11px;

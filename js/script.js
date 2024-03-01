@@ -253,6 +253,25 @@ let arrActiveValues = [activeValueFirst, activeValueSecond, activeValueThird, ac
 let archiveValueFirst = document.getElementById('vacancies-archive-first');
 let arrArchiveValues = [archiveValueFirst];
 
+let filterActiveUnActive = document.getElementById('hide-elements');
+let filterArchiveUnActive = document.getElementById('hide-filter-archive');
+filterActiveUnActive.addEventListener('click', function () {
+    arrActiveValues.forEach(function (el) {
+        el.checked = false;
+        inActiveFilter.checked = false;
+        ActiveFilter.checked = false;
+        popupFilterActive.classList.remove('vacancies__filter--active');
+    })
+})
+
+filterArchiveUnActive.addEventListener('click', function () {
+    arrArchiveValues.forEach(function (el) {
+        el.checked = false;
+        ArchiveFilter.checked = false;
+        popupFilterArchive.classList.remove('vacancies__filter--active');
+    })
+})
+
 arrActiveValues.forEach(function (el) {
     el.addEventListener('change', function (event) {
         if (event.currentTarget.checked) {
