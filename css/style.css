@@ -212,7 +212,7 @@
     width: 96.5%;
     color: var(--color_space);
     background-color: var(--color_athens-gray);
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -3455,7 +3455,7 @@
 }
 
 .search-bar__dropdown ul li:hover {
-    background-color: var(--color_gray);
+    background-color: var(--color_zircon);
     border-radius: 5px;
 }
 
