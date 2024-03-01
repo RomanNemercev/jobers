@@ -47,19 +47,20 @@
 <section class="search-bar">
     <div class="search-bar__container">
         <form action="#" class="search-bar__form">
-            <input type="search" class="search-bar__form-space" placeholder="Поиск по кандидатам">
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
+            <div class="search-bar__dropdown"></div>
         </form>
         <div class="search-bar__btn-wrap">
             <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
-                                                           alt="Уведомления" class="search-bar__note"></button>
+                                                           class="search-bar__note"></button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Уведомления"
-                                                           alt="Поддержка" class="search-bar__support"></button>
+            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Поддержка"
+                                                           class="search-bar__support"></button>
         </div>
         <div class="search-bar__btn-wrap">
             <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
-                                                           alt="Личный кабинет" class="search-bar__acc"></button>
+                                                           class="search-bar__acc"></button>
         </div>
     </div>
 </section>
@@ -212,7 +213,8 @@
                                         <div class="new__options">
                                             <p class="new__options-title">Параметры кандидата</p>
                                             <div class="new__options-group">
-                                                <select name="choose-gender" id="gender" class="new__option-gender" multiple>
+                                                <select name="choose-gender" id="gender" class="new__option-gender"
+                                                        multiple>
                                                     <option value="Мужской">Мужской</option>
                                                     <option value="Женский">Женский</option>
                                                 </select>
@@ -228,7 +230,8 @@
                                                     <option value="до">до</option>
                                                     <option value="Скрыть без зарплаты">Скрыть без зарплаты</option>
                                                 </select>
-                                                <select name="choose-skill" id="skill" class="new__option-skill" multiple>
+                                                <select name="choose-skill" id="skill" class="new__option-skill"
+                                                        multiple>
                                                     <option value="Без опыта">Без опыта</option>
                                                     <option value="От 1 года">От 1 года</option>
                                                     <option value="От 3 лет">От 3 лет</option>
@@ -305,7 +308,8 @@
                                             <label for="main-name" class="new__add-name">
                                                 <input type="text" class="new__add-name__input" id="main-name"
                                                        placeholder="Введите название автоотбора" required>
-                                                <span class="error" id="error">Это поле обязательно для заполнения</span>
+                                                <span class="error"
+                                                      id="error">Это поле обязательно для заполнения</span>
                                             </label>
                                         </div>
                                         <div class="new__btns">
@@ -531,8 +535,15 @@
                             <nav class="item__burger-nav item__nav__active-one">
                                 <ul class="item__burger-list item__list__active-one">
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">Разместить
-                                            повторно
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Редактировать
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Дублировать
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">В архив
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
@@ -541,20 +552,17 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">Подборка
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Настройка формы
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">Отклики
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Страница
+                                            вакансии
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">Сайты
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">Настройка
-                                            формы
+                                        <button class="item__burger-btn item__active__btn-one btn-reset">Настройки
+                                            автоотбора
                                         </button>
                                     </li>
                                 </ul>
@@ -620,8 +628,15 @@
                             <nav class="item__burger-nav item__nav__archive-one">
                                 <ul class="item__burger-list item__list__active-two">
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">Разместить
-                                            повторно
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Редактировать
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Дублировать
+                                        </button>
+                                    </li>
+                                    <li class="item__burger-item">
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">В архив
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
@@ -630,20 +645,17 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">Подборка
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Настройка формы
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">Отклики
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Страница
+                                            вакансии
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">Сайты
-                                        </button>
-                                    </li>
-                                    <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">Настройка
-                                            формы
+                                        <button class="item__burger-btn item__active__btn-two btn-reset">Настройки
+                                            автоотбора
                                         </button>
                                     </li>
                                 </ul>
