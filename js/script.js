@@ -765,3 +765,22 @@ window.addEventListener('keydown', (e) => {
         document.body.classList.remove('stop-scroll');
     }
 });
+
+//clone's window in popup autoset
+let checkClones = document.getElementById('search-duplicates');
+let clonesInter = document.querySelector('.new__clones__item-hide');
+
+checkClones.addEventListener('change', (event) => {
+    if (event.currentTarget.checked) {
+        clonesInter.classList.add('new__clones--visible');
+    } else {
+        clonesInter.classList.remove('new__clones--visible');
+    }
+})
+
+//tooltip
+tippy('#myButton', {
+    content: "Если установлено значение в 10 дней и первый кандидат получен 1 числа, то все кандидаты с такими же контактами, которые откликнутся с 1 по 10 число включительно, будут автоматически считаться дублями",
+    theme: 'jobers',
+    maxWidth: 332,
+});
