@@ -53,15 +53,17 @@ html {
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 .body-page {
     font-family: 'Inter', sans-serif;
     background-color: var(--color_gray);
-}
-
-*,
-::before,
-::after {
-    box-sizing: inherit;
 }
 
 a {

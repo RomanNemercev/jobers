@@ -174,7 +174,11 @@
     .is-highlighted#choices--nation-item-choice-3::after,
     .is-highlighted#choices--nation-item-choice-4::after,
     .is-highlighted#choices--contacts-item-choice-2::after,
-    .is-highlighted#choices--choose-level-item-choice-2::after {
+    .is-highlighted#choices--choose-level-item-choice-2::after,
+    #choices--specific-vacancy-options-item-choice-1::after,
+    #choices--specific-vacancy-options-item-choice-2::after,
+    #choices--specific-vacancy-options-item-choice-3::after,
+    #choices--specific-vacancy-options-item-choice-4::after {
         top: 10px;
     }
 }
