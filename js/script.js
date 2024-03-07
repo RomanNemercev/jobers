@@ -475,6 +475,12 @@ try {
                 searchEnabled: true,
                 itemSelectText: '',
                 shouldSort: false,
+                maxItemCount: 1,
+                placeholderValue: 'Город ',
+                removeItemButton: true,
+                maxItemText: (maxItemCount) => {
+                    return ``;
+                },
             })
         });
     };
@@ -557,10 +563,16 @@ let contactsChoose = new Choices(
 let levelChoose = new Choices(
     document.getElementById('choose-level'),
     {
-        allowHTML: true,
+        searchEnabled: true,
         itemSelectText: '',
-        searchEnabled: false,
         shouldSort: false,
+        maxItemCount: 1,
+        placeholderValue: 'Перенос на этап ',
+        removeItemButton: true,
+        maxItemText: (maxItemCount) => {
+            return ``;
+        },
+        noChoicesText: '',
     }
 );
 
@@ -784,3 +796,19 @@ tippy('#myButton', {
     theme: 'jobers',
     maxWidth: 332,
 });
+
+// добавил дату в строку названия автоотбора
+let date = new Date();
+let day = date.getDate();
+let monthIndex = date.getMonth();
+let year = date.getFullYear();
+
+let months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+let monthName = months[monthIndex];
+
+let formattedDate = day + " " + monthName + " " + year + " " + "года";
+
+// var now = new Date(); //утрачен так как старый метод
+var ura = 'Автоотбор от ';
+// now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); //утрачен так как старый метод
+document.getElementById('main-name').value = ura + formattedDate;

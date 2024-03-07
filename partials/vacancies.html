@@ -131,10 +131,10 @@
                                 <div class="item__burger-dot dot-inwork-one"></div>
                             </div>
                             <div class="item__popup-auto" id="auto-popup-first">
+                                <button class="btn-reset auto__close" id="popup-first-close"></button>
                                 <div class="item__popup-wrapper auto">
                                     <div class="auto__container">
                                         <p class="auto__title">Ваши автоотборы</p>
-                                        <button class="btn-reset auto__close" id="popup-first-close"></button>
                                         <ul class="auto__list">
                                             <li class="auto__item"><p class="auto__item-name">Только Москва</p>
                                                 <div class="auto__change">
@@ -161,10 +161,10 @@
                                 </div>
                             </div>
                             <div class="item__popup-edit" id="popup-edit-desc">
+                                <button class="btn-reset edit__close"></button>
                                 <div class="item__popup-wrapper edit">
                                     <div class="edit__container">
                                         <p class="edit__title">Параметры автоотбора</p>
-                                        <button class="btn-reset edit__close"></button>
                                         <div class="edit__data-wrapper">
                                             <div class="edit__data-name"><p class="edit__data-name__title">Название:</p>
                                                 <p class="edit__data-name__title">Город:</p>
@@ -181,16 +181,15 @@
                                 </div>
                             </div>
                             <div class="item__popup-new" id="popup-auto-create">
+                                <button class="btn-reset new__close"></button>
                                 <div class="item__popup-wrapper custom-scroll new" data-simplebar>
                                     <div class="new__container">
                                         <p class="new__title">Новый автоотбор</p>
-                                        <button class="btn-reset new__close"></button>
                                         <p class="new__desc">Автоотбор автоматически перемещает кандидатов, которые
                                             удовлетворяют правилу, на&nbsp;этап Приглашенные по&nbsp;умолчанию</p>
                                         <p class="new__location-title">Локация</p>
                                         <div class="new__select-box">
-                                            <select name="cities" class="new__select-wrapper" id="cities">
-                                                <option value="">Город</option>
+                                            <select name="cities" class="new__select-wrapper" id="cities" multiple>
                                                 <option value="Санкт-Петербург">Санкт-Петербург</option>
                                                 <option value="Москва">Москва</option>
                                                 <option value="Казань">Казань</option>
@@ -205,7 +204,8 @@
                                                 <span class="new__search-span">Включить</span>
                                             </label>
                                             <div class="new__clones__item-hide">
-                                                <label for="day-amount" class="new__clone-quest tooltip">Сколько дней считать
+                                                <label for="day-amount" class="new__clone-quest tooltip">Сколько дней
+                                                    считать
                                                     новых
                                                     кандидатов дублями?
                                                     <div class="tooltip__space" style="max-width: 532px;">
@@ -218,7 +218,7 @@
                                                         </button>
                                                     </div>
                                                 </label>
-                                                <input type="text" class="new__clone-answ" placeholder="-"
+                                                <input type="number" class="new__clone-answ" placeholder="-"
                                                        id="day-amount">
                                             </div>
                                         </div>
@@ -311,8 +311,7 @@
                                             <p class="new__transfer-title">Перенос на этап</p>
                                             <div class="new__change-choice__wrapper">
                                                 <select name="choose-level" id="choose-level"
-                                                        class="new__transfer-items">
-                                                    <option value="">Перенос на этап</option>
+                                                        class="new__transfer-items" multiple>
                                                     <option value="Приглашенные">Приглашенные</option>
                                                 </select>
                                             </div>
