@@ -63,6 +63,10 @@ html {
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
 .body-page {
     font-family: 'Inter', sans-serif;
     background-color: var(--color_gray);
@@ -128,6 +132,13 @@ img {
 }
 
 .f14w400 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color_space);
+}
+
+.f14w500 {
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
