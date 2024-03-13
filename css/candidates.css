@@ -20,10 +20,13 @@ p, span {
     background-color: var(--color_white);
     height: 40px;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: revert;
+    justify-content: end;
 }
 
 /*галочка для сортировки*/
-.vacancies__filter-list {
+.can__filter-list {
     width: 100%;
     background-color: var(--color_white);
     border-radius: 10px;
@@ -32,7 +35,7 @@ p, span {
     margin-bottom: 20px;
 }
 
-.vacancies__input-hidden {
+.can__input-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -43,7 +46,7 @@ p, span {
     clip: rect(0 0 0 0);
 }
 
-.vacancies__span {
+.can__span {
     user-select: none;
     position: relative;
     padding-left: 50px;
@@ -54,7 +57,7 @@ p, span {
     line-height: normal;
 }
 
-.vacancies__span::before {
+.can__span::before {
     content: '';
     position: absolute;
     left: 0;
@@ -65,7 +68,7 @@ p, span {
     border-radius: 5px;
 }
 
-.vacancies__span::after {
+.can__span::after {
     content: url("../img/checked.svg");
     position: absolute;
     width: 25px;
@@ -76,7 +79,7 @@ p, span {
     opacity: 0;
 }
 
-.vacancies__input:checked + .vacancies__span::after {
+.can__input:checked + .can__span::after {
     opacity: 1;
 }
 
@@ -177,7 +180,7 @@ p, span {
     list-style: none;
 }
 
-.item__name-hidden {
+.user__name-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -188,7 +191,7 @@ p, span {
     clip: rect(0 0 0 0);
 }
 
-.item__check-icon {
+.user__check-icon {
     user-select: none;
     position: relative;
     font-size: 16px;
@@ -197,7 +200,7 @@ p, span {
     cursor: pointer;
 }
 
-.item__check-icon::before {
+.user__check-icon::before {
     content: '';
     position: absolute;
     top: 0;
@@ -208,7 +211,7 @@ p, span {
     border-radius: 5px;
 }
 
-.item__check-icon::after {
+.user__check-icon::after {
     content: url("../img/checked.svg");
     position: absolute;
     width: 25px;
@@ -218,7 +221,7 @@ p, span {
     opacity: 0;
 }
 
-.item__name-input:checked + .item__check-icon::after {
+.user__name-input:checked + .user__check-icon::after {
     opacity: 1;
 }
 
@@ -311,4 +314,35 @@ p, span {
     background-image: url("../img/user__hh-icon.svg");
     background-position: right center;
     padding-right: 36px;
+}
+
+.user__burger {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+}
+
+.user__burger-dot {
+    position: absolute;
+    top: 42%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--color_bali);
+    transition: background-color .3s ease;
+}
+
+.user__burger-dot:first-child {
+    left: 12px;
+}
+
+.user__burger-dot:nth-child(2) {
+    left: 22px;
+}
+
+.user__burger-dot:last-child {
+    left: 32px;
 }

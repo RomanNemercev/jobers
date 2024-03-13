@@ -475,12 +475,7 @@ try {
                 searchEnabled: true,
                 itemSelectText: '',
                 shouldSort: false,
-                maxItemCount: 1,
-                placeholderValue: 'Город ',
                 removeItemButton: true,
-                maxItemText: (maxItemCount) => {
-                    return ``;
-                },
             })
         });
     };
@@ -563,15 +558,10 @@ let contactsChoose = new Choices(
 let levelChoose = new Choices(
     document.getElementById('choose-level'),
     {
-        searchEnabled: true,
+        searchEnabled: false,
         itemSelectText: '',
         shouldSort: false,
-        maxItemCount: 1,
-        placeholderValue: 'Перенос на этап ',
         removeItemButton: true,
-        maxItemText: (maxItemCount) => {
-            return ``;
-        },
         noChoicesText: '',
     }
 );
