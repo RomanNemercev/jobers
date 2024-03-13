@@ -1,0 +1,29 @@
+.cannul__container {
+    position: relative;
+    min-height: 382px;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--color_white);
+}
+
+.cannul__container::before {
+    content: url("../img/candidates-null-icon.svg");
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+.cannul__title {
+    padding-top: 105px;
+    margin-bottom: 11px;
+    text-align: center;
+}
+
+.cannul__desc {
+    max-width: 28.879%;
+    text-align: center;
+    margin-bottom: 24px;
+}

@@ -127,22 +127,32 @@ img {
     border-radius: 5px;
 }
 
+.f14w400 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color_space);
+}
+
 .f15f400 {
     font-size: 15px;
     font-weight: 400;
     line-height: normal;
+    color: var(--color_space);
 }
 
 .f16f500 {
     font-size: 16px;
     font-weight: 500;
     line-height: normal;
+    color: var(--color_space);
 }
 
-.f14w400 {
-    font-size: 14px;
-    font-weight: 400;
+.f25f600 {
+    font-size: 25px;
+    font-weight: 600;
     line-height: normal;
+    color: var(--color_space);
 }
 
 .bg-fix {
