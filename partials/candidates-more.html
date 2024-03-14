@@ -67,6 +67,26 @@
 <!--основной контент страницы-->
 <section class="more container">
     <div class="more__scroll-choose">
+        <div class="scroll-x">
+            <div class="scroll-x__wrapper" id="scroll-wrapper">
+                <button class="btn-reset btn-scroll scroll-x__btn btn-scroll--active">Все&nbsp;кандидаты&nbsp;<span
+                        class="btn-data">(128)</span></button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Подумать&nbsp;<span class="btn-data">(1)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Телефонное&nbsp;интервью&nbsp;<span class="btn-data">(23)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Подходящие&nbsp;<span class="btn-data">(13)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Отклоненные&nbsp;<span class="btn-data">(0)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Удаленные&nbsp;<span class="btn-data">(0)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Интересно&nbsp;<span class="btn-data">(2)</span>
+                </button>
+            </div>
+            <button class="btn-reset btn-settings"></button>
+            <button class="btn-reset btn-right" id="btn-right"></button>
+        </div>
     </div>
     <div class="more__content">
         <div class="more__cans-scroll">
@@ -284,6 +304,7 @@
     </div>
 </section>
 <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="../js/candidates-more.js"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>
