@@ -166,13 +166,41 @@ img {
     color: var(--color_space);
 }
 
+.c-bali {
+    color: var(--color_bali);
+}
+
 .bg-fix {
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
+}
+
+.mb5 {
+    margin-bottom: 5px;
 }
 
 .mb10 {
     margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb25 {
+    margin-bottom: 25px;
+}
+
+.mb35 {
+    margin-bottom: 35px;
+}
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: block;
 }
 
 .btn-cancel {
