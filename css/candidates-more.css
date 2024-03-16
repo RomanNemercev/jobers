@@ -2,20 +2,41 @@ p, span {
     color: var(--color_space);
 }
 
+.nav__logo-icon {
+    width: 106px;
+    transform: translate(26px, 15px);
+}
+
+.nav__logo {
+    margin-bottom: 60px;
+}
+
 .nav__back {
     color: var(--color_white);
-    padding: 16.5px 64px 16.5px 33px;
+    padding: 18px 25px 18px 58px;
     background-image: url("../img/arrow-back.svg");
-    background-position: left center;
+    background-position: 25px center;
     background-size: auto;
-    margin-bottom: 25px;
+    margin-bottom: 9px;
     display: inline-block;
 }
 
 .nav__wrapper {
     display: flex;
     flex-direction: column;
-    height: 85vh;
+    height: 88vh;
+}
+
+.nav__link-item {
+    padding: 12px 0 12px 60px;
+}
+
+.link-support::before {
+    top: 13px;
+}
+
+.link-settings::before {
+    top: 12px;
 }
 
 .nav__cans {
@@ -26,15 +47,16 @@ p, span {
     list-style: none;
 }
 
-.nav__can-item,
 .nav__can-title {
-    padding: 15px 10px 15px 25px;
+    padding: 14px 10px 0 25px;
     display: inline-block;
 }
 
 .nav__can-item {
     border-radius: 5px;
     width: 100%;
+    display: inline-block;
+    padding: 15px 10px 15px 25px;
 }
 
 .nav__can-title {
@@ -42,7 +64,7 @@ p, span {
 }
 
 .nav__can:not(:last-child) {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .nav__can:first-of-type {
@@ -53,6 +75,7 @@ p, span {
 
 .nav__can-name {
     color: var(--color_white);
+    margin-bottom: 5px;
 }
 
 .nav__can-capt {
@@ -131,6 +154,24 @@ p, span {
     border-bottom: 1px solid var(--color_gray);
 }
 
+.more__item:first-of-type {
+    padding-top: 14px;
+}
+
+.vacancies__value {
+    background-color: var(--color_athens-gray);
+}
+
+.vacancies__value--active {
+    font-weight: 600;
+    color: var(--color_white);
+    background-color: var(--color_space);
+}
+
+.vacancies__value:last-of-type {
+    padding-left: 19px;
+}
+
 .more__item::before {
     content: '';
     position: absolute;
@@ -178,13 +219,13 @@ p, span {
 
 /*right content page*/
 .more__header-right {
-    width: 289px;
     height: 40px;
     display: flex;
 }
 
 .more__btn-invite {
     margin-right: 15px;
+    min-width: 127px;
 }
 
 .more__droplist {
@@ -239,9 +280,21 @@ p, span {
 
 .more__tag {
     margin-right: 15px;
-    font-size: 15px;
     font-weight: 400;
     color: var(--color_dodger);
+}
+
+.more__user-name {
+    margin-bottom: 9px;
+}
+
+.more__tags {
+    margin-bottom: 23px;
+}
+
+.more__wage-title {
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 .more__tags__add {
@@ -255,6 +308,8 @@ p, span {
 .more__quick-info {
     display: flex;
     padding: 25px 25px 0 25px;
+    align-items: start;
+    margin-bottom: 28px;
 }
 
 .more__user-pic {
@@ -267,7 +322,6 @@ p, span {
     width: 10px;
     height: 10px;
     background-size: auto;
-    margin-left: 10px;
     background-position: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -278,20 +332,32 @@ p, span {
 }
 
 .more__user-desc {
-    max-width: 309px;
+    max-width: 316px;
     justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.more__user-desc:nth-last-child(2) {
+    margin-bottom: 19px;
+}
+
+.more__mail-title,
+.more__city-title,
+.more__phone-title {
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 .more__user-mail {
-    width: 50%;
+    width: 48%;
 }
 
 .more__response-source {
-    background-image: url("../img/user__hh-icon.svg");
+    background-image: url("../img/more__user-hh.svg");
     background-position: left center;
     padding-left: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .more__full-info {
@@ -311,6 +377,10 @@ p, span {
 
 .more__skills-tag:last-child {
     margin-bottom: 0;
+}
+
+.more__full-item {
+    margin-bottom: 24px;
 }
 
 .more__full-item:last-child {
@@ -350,18 +420,20 @@ p, span {
     color: var(--color_bali);
 }
 
-.btn-scroll--active {
-    background-color: var(--color_zircon);
-    color: var(--color_dodger);
-}
-
 .btn-scroll--active .btn-data {
     color: var(--color_dodger);
 }
 
 .scroll-x__btn {
-    margin-left: 5px;
+    margin-left: 4px;
     user-select: none;
+    padding: 11.5px 16px;
+}
+
+.btn-scroll--active {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+    padding: 11.5px 10px;
 }
 
 .scroll-x__btn:first-child {

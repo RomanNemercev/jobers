@@ -16,7 +16,7 @@ p, span {
     width: 100%;
     background-color: var(--color_white);
     height: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 15.5px;
     display: flex;
     flex-direction: revert;
     justify-content: end;
@@ -27,9 +27,9 @@ p, span {
     width: 100%;
     background-color: var(--color_white);
     border-radius: 10px;
-    padding: 15px 0;
+    padding: 17px 0;
     padding-left: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .can__input-hidden {
@@ -90,7 +90,7 @@ p, span {
 }
 
 .can__user-item:not(:last-of-type) {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 }
 
 .user__top {
@@ -178,8 +178,8 @@ p, span {
 .user__check-icon::before {
     content: '';
     position: absolute;
-    top: -12px;
-    left: 0;
+    top: -13px;
+    left: -1px;
     width: 25px;
     height: 25px;
     background-color: var(--color_gray);
@@ -191,8 +191,8 @@ p, span {
     position: absolute;
     width: 25px;
     height: 25px;
-    top: -12px;
-    left: 0;
+    top: -13px;
+    left: -1px;
     opacity: 0;
 }
 
@@ -202,10 +202,12 @@ p, span {
 
 .user__bottom {
     padding: 25px;
+    padding-left: 24px;
 }
 
 .user__in {
     padding: 9px 15px;
+    min-height: 35px;
 }
 
 .user__metadata {
@@ -213,16 +215,16 @@ p, span {
 }
 
 .user__web {
-    padding: 9px 15px 9px 42px;
+    padding: 7px 15px 7px 42px;
     border: 1px solid var(--color_gray);
     border-radius: 5px;
     background-image: url("../img/user__hh-icon.svg");
-    background-position: 15px center;
+    background-position: 13px center;
 }
 
 .user__add-tags {
     background-image: url("../img/plus__add-tags.svg");
-    padding-right: 20px;
+    padding-right: 16px;
     background-position: right center;
 }
 
@@ -237,11 +239,12 @@ p, span {
 }
 
 .user__phone {
-    margin-right: 45px;
+    margin-right: 38.26px;
 }
 
 .user__wh {
     padding-left: 22px;
+    margin-right: 12px;
     color: var(--color_wh);
     background-image: url("../img/user_wh.svg");
     background-position: left center;
@@ -278,6 +281,26 @@ p, span {
     margin-bottom: 10px;
 }
 
+.can__add-values {
+    position: relative;
+    padding: 10px 15px 11px 45px;
+    color: var(--color_white);
+}
+
+.can__add-values::before {
+    content: url("../img/plus.svg");
+    position: absolute;
+    top: 11px;
+    left: 19px;
+    width: 12px;
+    height: 12px;
+}
+
+.user__btn-mind {
+    padding: 10.5px 15px;
+    color: var(--color_red);
+}
+
 /*scroll-x*/
 /*styled horizontal scroll bar*/
 .scroll-x {
@@ -297,7 +320,7 @@ p, span {
 
 .btn-scroll {
     outline: none;
-    padding: 11.5px 15px;
+    padding: 11.5px 16px;
     font-size: 14px;
     font-style: normal;
     line-height: normal;
@@ -313,6 +336,7 @@ p, span {
 .btn-scroll--active {
     background-color: var(--color_zircon);
     color: var(--color_dodger);
+    padding: 11.5px 10px;
 }
 
 .btn-scroll--active .btn-data {
@@ -320,7 +344,7 @@ p, span {
 }
 
 .scroll-x__btn {
-    margin-left: 5px;
+    margin-left: 4px;
     user-select: none;
 }
 
