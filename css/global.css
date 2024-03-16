@@ -49,6 +49,8 @@
     --color_bright: #393F47;
     --color_succes: #E4FDE4;
     --color_btn-succes: #04B600;
+    --color_wh: #28d146;
+    --color_tg: #229ed9;
 }
 
 html {
@@ -93,6 +95,7 @@ img {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    user-select: none;
 }
 
 .btn {
@@ -107,6 +110,7 @@ img {
     line-height: normal;
     color: var(--color_white);
     background: var(--color_dodger);
+    user-select: none;
 }
 
 .btn-two {
@@ -120,6 +124,7 @@ img {
     color: var(--color_dodger);
     background: transparent;
     border: 1px solid var(--color_dodger);
+    user-select: none;
 }
 
 .btn-delete {
@@ -129,6 +134,7 @@ img {
     color: var(--color_red);
     padding: 11px 20px;
     border-radius: 5px;
+    user-select: none;
 }
 
 .f14w400 {
@@ -140,26 +146,40 @@ img {
 
 .f14w500 {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     color: var(--color_space);
 }
 
-.f15f400 {
+.f15w400 {
     font-size: 15px;
     font-weight: 400;
     line-height: normal;
     color: var(--color_space);
 }
 
-.f16f500 {
+.f16w500 {
     font-size: 16px;
     font-weight: 500;
     line-height: normal;
     color: var(--color_space);
 }
 
-.f25f600 {
+.f18w500 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--color_space);
+}
+
+.f20w600 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--color_space);
+}
+
+.f25w600 {
     font-size: 25px;
     font-weight: 600;
     line-height: normal;
@@ -187,12 +207,24 @@ img {
     margin-bottom: 15px;
 }
 
+.mb20 {
+    margin-bottom: 20px;
+}
+
 .mb25 {
     margin-bottom: 25px;
 }
 
 .mb35 {
     margin-bottom: 35px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mr25 {
+    margin-right: 25px;
 }
 
 .flex {
@@ -210,6 +242,7 @@ img {
     padding: 11px 20px;
     color: var(--color_dodger);
     border-radius: 5px;
+    user-select: none;
 }
 
 .btn-succes {
@@ -218,6 +251,7 @@ img {
     min-height: 40px;
     border-radius: 5px;
     color: var(--color_btn-succes);
+    user-select: none;
 }
 
 .container {

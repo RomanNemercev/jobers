@@ -64,7 +64,28 @@
 </section>
 <!--main content's page-->
 <section class="can container">
-    <div class="can__scroll-choose"></div>
+    <div class="can__scroll-choose">
+        <div class="scroll-x">
+            <div class="scroll-x__wrapper" id="scroll-wrapper">
+                <button class="btn-reset btn-scroll scroll-x__btn btn-scroll--active">Все&nbsp;кандидаты&nbsp;<span
+                        class="btn-data">(128)</span></button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Подумать&nbsp;<span class="btn-data">(1)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Телефонное&nbsp;интервью&nbsp;<span class="btn-data">(23)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Подходящие&nbsp;<span class="btn-data">(13)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Отклоненные&nbsp;<span class="btn-data">(0)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Удаленные&nbsp;<span class="btn-data">(0)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Интересно&nbsp;<span class="btn-data">(2)</span>
+                </button>
+            </div>
+            <button class="btn-reset btn-settings"></button>
+            <button class="btn-reset btn-right" id="btn-right"></button>
+        </div>
+    </div>
     <div class="can__section-bar">
         <a href="../partials/add_vacancies.html" class="btn-reset btn add-values">Добавить кандидата</a>
     </div>
@@ -76,274 +97,273 @@
     </div>
     <ul class="can__users">
         <li class="can__user-item user">
-            <div class="user__top">
+            <div class="user__top flex">
                 <label class="user__name">
                     <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-value-first">
+                           id="vacancies-archive-first">
                     <span class="user__check-icon"></span>
                 </label>
-                <div class="user__title-box">
-                    <div class="user__title-left">
-                        <a href="../partials/candidates-more.html" class="user__title">Ведущий инженер-энергетик</a>
-                        <div class="user__opt"><p class="user__opt-desc"><span class="user__age">38 лет</span>, <span
-                                class="user__city">Новосибирск</span>, <span class="user__nation">Гражданин РФ</span>,
-                            <span
-                                    class="user__skill">Опыт&nbsp;&mdash; 9&nbsp;лет 1&nbsp;месяц</span>, <span
-                                    class="user__price">90000 руб</span>
-                        </p>
-                        </div>
-                    </div>
-                    <div class="user__right-bar">
-                        <button class="btn-reset btn-succes user__btn-invite">Пригласить</button>
-                        <div class="user__droplist"></div>
-                        <div class="user__burger">
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                        </div>
-                    </div>
+                <div class="user__vacancy-wrapper">
+                    <a href="../partials/candidates-more.html" class="user__vacancy f16w500">Ведущий
+                        инженер-энергетик</a>
                 </div>
-                <div class="user__main">
-                    <div class="user__main-left">
-                        <img src="../img/user-pic.png" alt="Андреев Антон Владимирович - Ведущий инженер энергетик"
-                             class="user__pic">
-                        <ul class="user__info">
-                            <li class="user__tags"><span class="user__tag">#новый&nbsp;отклик</span>
-                                <button class="btn-reset user__tags__add f15f400">добавит тег</button>
-                            </li>
-                            <li class="user__name"><p class="user__name f16f500">Андреев&nbsp;Антон&nbsp;Владимирович</p>
-                            </li>
-                            <li class="user__contacts">
-                                <a href="tel:+79992222333" class="user__phone-number f14w400">8-999-222-23-33</a><a
-                                    href="#"
-                                    class="user__link-tg bg-fix"></a><a
-                                    href="#" class="user__link-wh bg-fix"></a>
-                            </li>
-                            <li class="user__mail"><a href="mailto:pochta@mail.ru"
-                                                      class="user__mail__link f14w400 bg-fix">pochta@mail.ru</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="user__main-right">
-                        <p class="user__last-place f16f500 mb10">Последнее место работы</p>
-                        <p class="user__last-desc f14w400">Муниципальное учреждение &laquo;Комитет имущественных
-                            отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)
-                            01&nbsp;апреля 2020&nbsp;&mdash; 01&nbsp;июля 2020</p>
+                <div class="user__status-bar flex">
+                    <p class="user__status f14w400 mr25">Не&nbsp;просмотрено</p>
+                    <button class="btn-reset btn-succes mr15">Пригласить</button>
+                    <button class="btn-reset btn-delete mr15">Отказать</button>
+                    <div class="user__dropdown mr15">Этап</div>
+                    <div class="user__burger item__active-two">
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
                     </div>
                 </div>
             </div>
             <div class="user__bottom">
-                <div class="user__resume f14w400"><p class="user__resume-desc"><span class="user__resume-time">2023-07-11</span>
-                    в <span class="user__resume-hours">16:00</span> прикреплен файл: <span class="user__resume-file">Антонов Олег Георгиевич.pdf</span>
-                </p></div>
-                <div class="user__conc"><p class="user__conc-desc bg-fix"><span
-                        class="user__conc-time">11.07.2023</span>
-                    подходящее резюме</p></div>
-            </div>
-        </li>
-        <li class="can__user-item user">
-            <div class="user__top">
-                <label class="user__name">
-                    <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-value-first">
-                    <span class="user__check-icon"></span>
-                </label>
-                <div class="user__title-box">
-                    <div class="user__title-left">
-                        <a href="#" class="user__title">Ведущий инженер-энергетик</a>
-                        <div class="user__opt"><p class="user__opt-desc"><span class="user__age">38 лет</span>, <span
-                                class="user__city">Новосибирск</span>, <span class="user__nation">Гражданин РФ</span>,
-                            <span
-                                    class="user__skill">Опыт&nbsp;&mdash; 9&nbsp;лет 1&nbsp;месяц</span>, <span
-                                    class="user__price">90000 руб</span>
-                        </p>
+                <div class="user__metadata flex mb35">
+                    <span class="user__in btn-succes mr15 f14w500">Входящий отклик</span>
+                    <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
+                    <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
+                </div>
+                <div class="user__quick-info flex mb35">
+                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
+                    <div class="user__quick-content flex">
+                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                        <div class="user__contacts__data mb15">
+                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="#" class="user__wh bg-fix mr15">WhatsApp</a>
+                            <a href="#" class="user__tg bg-fix">Telegram</a>
                         </div>
-                    </div>
-                    <div class="user__right-bar">
-                        <button class="btn-reset btn-succes user__btn-invite">Пригласить</button>
-                        <div class="user__droplist"></div>
-                        <div class="user__burger">
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                        </div>
+                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
                 </div>
-                <div class="user__main">
-                    <div class="user__main-left">
-                        <img src="../img/user-pic.png" alt="Андреев Антон Владимирович - Ведущий инженер энергетик"
-                             class="user__pic">
-                        <ul class="user__info">
-                            <li class="user__tags"><span class="user__tag">#новый&nbsp;отклик</span>
-                                <button class="btn-reset user__tags__add f15f400">добавит тег</button>
-                            </li>
-                            <li class="user__name"><p class="user__name f16f500">Андреев&nbsp;Антон&nbsp;Владимирович</p>
-                            </li>
-                            <li class="user__contacts">
-                                <a href="tel:+79992222333" class="user__phone-number f14w400">8-999-222-23-33</a><a
-                                    href="#"
-                                    class="user__link-tg bg-fix"></a><a
-                                    href="#" class="user__link-wh bg-fix"></a>
-                            </li>
-                            <li class="user__mail"><a href="mailto:pochta@mail.ru"
-                                                      class="user__mail__link f14w400 bg-fix">pochta@mail.ru</a>
-                            </li>
-                        </ul>
+                <div class="user__more">
+                    <div class="user__more-head">
+                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                        <p class="user__more-head__title f14w400 c-bali">Город</p>
+                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                     </div>
-                    <div class="user__main-right">
-                        <p class="user__last-place f16f500 mb10">Последнее место работы</p>
-                        <p class="user__last-desc f14w400">Муниципальное учреждение &laquo;Комитет имущественных
-                            отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)
-                            01&nbsp;апреля 2020&nbsp;&mdash; 01&nbsp;июля 2020</p>
+                    <div class="user__more-data">
+                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                        <p class="user__more-data__content f14w400">Высшее</p>
+                        <p class="user__more-data__content f14w400">Россия</p>
+                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                        <p class="user__more-data__content f14w400">Новосибирск</p>
+                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
+                            Ленск&raquo;)</p>
+                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                            Английский&nbsp;A1</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="can__user-item user">  <div class="user__top flex">
+                <label class="user__name">
+                    <input type="checkbox" class="user__name-input user__name-hidden"
+                           id="vacancies-archive-first">
+                    <span class="user__check-icon"></span>
+                </label>
+                <div class="user__vacancy-wrapper">
+                    <a href="../partials/candidates-more.html" class="user__vacancy f16w500">Ведущий
+                        инженер-энергетик</a>
+                </div>
+                <div class="user__status-bar flex">
+                    <p class="user__status f14w400 mr25">Не&nbsp;просмотрено</p>
+                    <button class="btn-reset btn-succes mr15">Пригласить</button>
+                    <button class="btn-reset btn-delete mr15">Отказать</button>
+                    <div class="user__dropdown mr15">Этап</div>
+                    <div class="user__burger item__active-two">
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
                     </div>
                 </div>
             </div>
             <div class="user__bottom">
-                <div class="user__resume f14w400"><p class="user__resume-desc"><span class="user__resume-time">2023-07-11</span>
-                    в <span class="user__resume-hours">16:00</span> прикреплен файл: <span class="user__resume-file">Антонов Олег Георгиевич.pdf</span>
-                </p></div>
-                <div class="user__conc"><p class="user__conc-desc bg-fix"><span
-                        class="user__conc-time">11.07.2023</span>
-                    подходящее резюме</p></div>
-            </div>
-        </li>
-        <li class="can__user-item user">
-            <div class="user__top">
-                <label class="user__name">
-                    <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-value-first">
-                    <span class="user__check-icon"></span>
-                </label>
-                <div class="user__title-box">
-                    <div class="user__title-left">
-                        <a href="#" class="user__title">Ведущий инженер-энергетик</a>
-                        <div class="user__opt"><p class="user__opt-desc"><span class="user__age">38 лет</span>, <span
-                                class="user__city">Новосибирск</span>, <span class="user__nation">Гражданин РФ</span>,
-                            <span
-                                    class="user__skill">Опыт&nbsp;&mdash; 9&nbsp;лет 1&nbsp;месяц</span>, <span
-                                    class="user__price">90000 руб</span>
-                        </p>
+                <div class="user__metadata flex mb35">
+                    <span class="user__in btn-succes mr15 f14w500">Входящий отклик</span>
+                    <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
+                    <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
+                </div>
+                <div class="user__quick-info flex mb35">
+                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
+                    <div class="user__quick-content flex">
+                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                        <div class="user__contacts__data mb15">
+                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="#" class="user__wh bg-fix mr15">WhatsApp</a>
+                            <a href="#" class="user__tg bg-fix">Telegram</a>
                         </div>
-                    </div>
-                    <div class="user__right-bar">
-                        <button class="btn-reset btn-succes user__btn-invite">Пригласить</button>
-                        <div class="user__droplist"></div>
-                        <div class="user__burger">
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                        </div>
+                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
                 </div>
-                <div class="user__main">
-                    <div class="user__main-left">
-                        <img src="../img/user-pic.png" alt="Андреев Антон Владимирович - Ведущий инженер энергетик"
-                             class="user__pic">
-                        <ul class="user__info">
-                            <li class="user__tags"><span class="user__tag">#новый&nbsp;отклик</span>
-                                <button class="btn-reset user__tags__add f15f400">добавит тег</button>
-                            </li>
-                            <li class="user__name"><p class="user__name f16f500">Андреев&nbsp;Антон&nbsp;Владимирович</p>
-                            </li>
-                            <li class="user__contacts">
-                                <a href="tel:+79992222333" class="user__phone-number f14w400">8-999-222-23-33</a><a
-                                    href="#"
-                                    class="user__link-tg bg-fix"></a><a
-                                    href="#" class="user__link-wh bg-fix"></a>
-                            </li>
-                            <li class="user__mail"><a href="mailto:pochta@mail.ru"
-                                                      class="user__mail__link f14w400 bg-fix">pochta@mail.ru</a>
-                            </li>
-                        </ul>
+                <div class="user__more">
+                    <div class="user__more-head">
+                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                        <p class="user__more-head__title f14w400 c-bali">Город</p>
+                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                     </div>
-                    <div class="user__main-right">
-                        <p class="user__last-place f16f500 mb10">Последнее место работы</p>
-                        <p class="user__last-desc f14w400">Муниципальное учреждение &laquo;Комитет имущественных
-                            отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)
-                            01&nbsp;апреля 2020&nbsp;&mdash; 01&nbsp;июля 2020</p>
+                    <div class="user__more-data">
+                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                        <p class="user__more-data__content f14w400">Высшее</p>
+                        <p class="user__more-data__content f14w400">Россия</p>
+                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                        <p class="user__more-data__content f14w400">Новосибирск</p>
+                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
+                            Ленск&raquo;)</p>
+                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                            Английский&nbsp;A1</p>
+                    </div>
+                </div>
+            </div></li>
+        <li class="can__user-item user">  <div class="user__top flex">
+                <label class="user__name">
+                    <input type="checkbox" class="user__name-input user__name-hidden"
+                           id="vacancies-archive-first">
+                    <span class="user__check-icon"></span>
+                </label>
+                <div class="user__vacancy-wrapper">
+                    <a href="../partials/candidates-more.html" class="user__vacancy f16w500">Ведущий
+                        инженер-энергетик</a>
+                </div>
+                <div class="user__status-bar flex">
+                    <p class="user__status f14w400 mr25">Не&nbsp;просмотрено</p>
+                    <button class="btn-reset btn-succes mr15">Пригласить</button>
+                    <button class="btn-reset btn-delete mr15">Отказать</button>
+                    <div class="user__dropdown mr15">Этап</div>
+                    <div class="user__burger item__active-two">
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
                     </div>
                 </div>
             </div>
             <div class="user__bottom">
-                <div class="user__resume f14w400"><p class="user__resume-desc"><span class="user__resume-time">2023-07-11</span>
-                    в <span class="user__resume-hours">16:00</span> прикреплен файл: <span class="user__resume-file">Антонов Олег Георгиевич.pdf</span>
-                </p></div>
-                <div class="user__conc"><p class="user__conc-desc bg-fix"><span
-                        class="user__conc-time">11.07.2023</span>
-                    подходящее резюме</p></div>
-            </div>
-        </li>
-        <li class="can__user-item user">
-            <div class="user__top">
-                <label class="user__name">
-                    <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-value-first">
-                    <span class="user__check-icon"></span>
-                </label>
-                <div class="user__title-box">
-                    <div class="user__title-left">
-                        <a href="#" class="user__title">Ведущий инженер-энергетик</a>
-                        <div class="user__opt"><p class="user__opt-desc"><span class="user__age">38 лет</span>, <span
-                                class="user__city">Новосибирск</span>, <span class="user__nation">Гражданин РФ</span>,
-                            <span
-                                    class="user__skill">Опыт&nbsp;&mdash; 9&nbsp;лет 1&nbsp;месяц</span>, <span
-                                    class="user__price">90000 руб</span>
-                        </p>
+                <div class="user__metadata flex mb35">
+                    <span class="user__in btn-succes mr15 f14w500">Входящий отклик</span>
+                    <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
+                    <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
+                </div>
+                <div class="user__quick-info flex mb35">
+                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
+                    <div class="user__quick-content flex">
+                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                        <div class="user__contacts__data mb15">
+                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="#" class="user__wh bg-fix mr15">WhatsApp</a>
+                            <a href="#" class="user__tg bg-fix">Telegram</a>
                         </div>
-                    </div>
-                    <div class="user__right-bar">
-                        <button class="btn-reset btn-succes user__btn-invite">Пригласить</button>
-                        <div class="user__droplist"></div>
-                        <div class="user__burger">
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                            <div class="user__burger-dot dot-inwork-one"></div>
-                        </div>
+                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
                 </div>
-                <div class="user__main">
-                    <div class="user__main-left">
-                        <img src="../img/user-pic.png" alt="Андреев Антон Владимирович - Ведущий инженер энергетик"
-                             class="user__pic">
-                        <ul class="user__info">
-                            <li class="user__tags"><span class="user__tag">#новый&nbsp;отклик</span>
-                                <button class="btn-reset user__tags__add f15f400">добавит тег</button>
-                            </li>
-                            <li class="user__name"><p class="user__name f16f500">Андреев&nbsp;Антон&nbsp;Владимирович</p>
-                            </li>
-                            <li class="user__contacts">
-                                <a href="tel:+79992222333" class="user__phone-number f14w400">8-999-222-23-33</a><a
-                                    href="#"
-                                    class="user__link-tg bg-fix"></a><a
-                                    href="#" class="user__link-wh bg-fix"></a>
-                            </li>
-                            <li class="user__mail"><a href="mailto:pochta@mail.ru"
-                                                      class="user__mail__link f14w400 bg-fix">pochta@mail.ru</a>
-                            </li>
-                        </ul>
+                <div class="user__more">
+                    <div class="user__more-head">
+                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                        <p class="user__more-head__title f14w400 c-bali">Город</p>
+                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                     </div>
-                    <div class="user__main-right">
-                        <p class="user__last-place f16f500 mb10">Последнее место работы</p>
-                        <p class="user__last-desc f14w400">Муниципальное учреждение &laquo;Комитет имущественных
-                            отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)
-                            01&nbsp;апреля 2020&nbsp;&mdash; 01&nbsp;июля 2020</p>
+                    <div class="user__more-data">
+                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                        <p class="user__more-data__content f14w400">Высшее</p>
+                        <p class="user__more-data__content f14w400">Россия</p>
+                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                        <p class="user__more-data__content f14w400">Новосибирск</p>
+                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
+                            Ленск&raquo;)</p>
+                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                            Английский&nbsp;A1</p>
+                    </div>
+                </div>
+            </div></li>
+        <li class="can__user-item user">  <div class="user__top flex">
+                <label class="user__name">
+                    <input type="checkbox" class="user__name-input user__name-hidden"
+                           id="vacancies-archive-first">
+                    <span class="user__check-icon"></span>
+                </label>
+                <div class="user__vacancy-wrapper">
+                    <a href="../partials/candidates-more.html" class="user__vacancy f16w500">Ведущий
+                        инженер-энергетик</a>
+                </div>
+                <div class="user__status-bar flex">
+                    <p class="user__status f14w400 mr25">Не&nbsp;просмотрено</p>
+                    <button class="btn-reset btn-succes mr15">Пригласить</button>
+                    <button class="btn-reset btn-delete mr15">Отказать</button>
+                    <div class="user__dropdown mr15">Этап</div>
+                    <div class="user__burger item__active-two">
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
+                        <div class="user__burger-dot dot-active-two"></div>
                     </div>
                 </div>
             </div>
             <div class="user__bottom">
-                <div class="user__resume f14w400"><p class="user__resume-desc"><span class="user__resume-time">2023-07-11</span>
-                    в <span class="user__resume-hours">16:00</span> прикреплен файл: <span class="user__resume-file">Антонов Олег Георгиевич.pdf</span>
-                </p></div>
-                <div class="user__conc"><p class="user__conc-desc bg-fix"><span
-                        class="user__conc-time">11.07.2023</span>
-                    подходящее резюме</p></div>
-            </div>
-        </li>
+                <div class="user__metadata flex mb35">
+                    <span class="user__in btn-succes mr15 f14w500">Входящий отклик</span>
+                    <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
+                    <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
+                </div>
+                <div class="user__quick-info flex mb35">
+                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
+                    <div class="user__quick-content flex">
+                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                        <div class="user__contacts__data mb15">
+                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="#" class="user__wh bg-fix mr15">WhatsApp</a>
+                            <a href="#" class="user__tg bg-fix">Telegram</a>
+                        </div>
+                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                    </div>
+                </div>
+                <div class="user__more">
+                    <div class="user__more-head">
+                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                        <p class="user__more-head__title f14w400 c-bali">Город</p>
+                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
+                    </div>
+                    <div class="user__more-data">
+                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                        <p class="user__more-data__content f14w400">Высшее</p>
+                        <p class="user__more-data__content f14w400">Россия</p>
+                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                        <p class="user__more-data__content f14w400">Новосибирск</p>
+                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
+                            Ленск&raquo;)</p>
+                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                            Английский&nbsp;A1</p>
+                    </div>
+                </div>
+            </div></li>
     </ul>
 </section>
+<script src="../js/candidates.js"></script>
 </body>
 </html>

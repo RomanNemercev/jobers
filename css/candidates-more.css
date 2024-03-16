@@ -1,3 +1,7 @@
+p, span {
+    color: var(--color_space);
+}
+
 .nav__back {
     color: var(--color_white);
     padding: 16.5px 64px 16.5px 33px;
@@ -342,13 +346,22 @@
     background: var(--color_athens-gray);
 }
 
+.btn-data {
+    color: var(--color_bali);
+}
+
 .btn-scroll--active {
     background-color: var(--color_zircon);
     color: var(--color_dodger);
 }
 
+.btn-scroll--active .btn-data {
+    color: var(--color_dodger);
+}
+
 .scroll-x__btn {
     margin-left: 5px;
+    user-select: none;
 }
 
 .scroll-x__btn:first-child {
