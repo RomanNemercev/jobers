@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jobers - Вакансии</title>
+    <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/media.css">
@@ -91,7 +92,7 @@
     </div>
     <div class="can__filter-list">
         <label class="can__label">
-            <input type="checkbox" class="can__input can__input-hidden" id="filter-cans">
+            <input type="checkbox" class="can__input can__input-hidden" id="filter-choose-all">
             <span class="can__span">Кандидатов: 128</span>
         </label>
     </div>
@@ -100,7 +101,7 @@
             <div class="user__top flex">
                 <label class="user__name">
                     <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-archive-first">
+                           id="cans-first">
                     <span class="user__check-icon"></span>
                 </label>
                 <div class="user__vacancy-wrapper">
@@ -168,7 +169,7 @@
             <div class="user__top flex">
                 <label class="user__name">
                     <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-archive-first">
+                           id="cans-second">
                     <span class="user__check-icon"></span>
                 </label>
                 <div class="user__vacancy-wrapper">
@@ -236,7 +237,7 @@
             <div class="user__top flex">
                 <label class="user__name">
                     <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-archive-first">
+                           id="cans-third">
                     <span class="user__check-icon"></span>
                 </label>
                 <div class="user__vacancy-wrapper">
@@ -304,7 +305,7 @@
             <div class="user__top flex">
                 <label class="user__name">
                     <input type="checkbox" class="user__name-input user__name-hidden"
-                           id="vacancies-archive-first">
+                           id="cans-fourth">
                     <span class="user__check-icon"></span>
                 </label>
                 <div class="user__vacancy-wrapper">
@@ -369,7 +370,41 @@
             </div>
         </li>
     </ul>
+    <div class="cans__filter" id="popupFilterCans">
+        <div class="cans__filter-wrapper">
+            <span class="cans__filter-check" id="hide-filter-cans"></span>
+            <p class="cans__filter-sum"><span class="cans__filter-span">10</span> кандидатов
+            </p>
+            <div class="cans__select-box">
+                <select name="select" class="cans__select-wrapper" id="axe">
+                    <option value="">Выберите действие</option>
+                    <option value="Отклонить">Отклонить</option>
+                    <option value="Пригласить">Пригласить</option>
+                    <option value="Скачать резюме">Скачать резюме</option>
+                    <option value="Экспорт в Excel">Экспорт в Excel</option>
+                    <option value="Удалить">Удалить</option>
+                </select>
+            </div>
+        </div>
+        <div class="cans__filter-popup" id="cans-del-modal-filter">
+            <div class="vacancies__filter-popup__wrapper delete">
+                <div class="delete__container">
+                    <div class="delete__title">Удаление вакансий</div>
+                    <button class="btn-reset delete__btn"></button>
+                    <div class="delete__attent">Выделенные вакансии <span class="delete__amount">(10)</span>
+                        будут удалены. Вы&nbsp;действительно
+                        хотите это сделать?
+                    </div>
+                    <div class="delete__choose">
+                        <button class="btn-reset delete__yes">Удалить</button>
+                        <button class="btn-reset delete__no">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+<script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/candidates.js"></script>
 </body>
 </html>
