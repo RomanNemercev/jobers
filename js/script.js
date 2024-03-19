@@ -666,8 +666,6 @@ document.querySelector('.new__btn-cancel').addEventListener('click', function ()
     document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
 })
 
-// здесь был
-
 document.querySelector("#auto-popup-first .item__popup-wrapper").addEventListener('click', event => {
     event._isClickWithInModal = true;
 });
@@ -729,10 +727,12 @@ document.getElementById("popup-edit-desc").addEventListener('click', event => {
     document.body.classList.remove('stop-scroll');
 });
 
-document.querySelector('.auto__delete').addEventListener('click', function () {
-    document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
-    document.getElementById('popup-del-quest').classList.add('vacancies__item-popup--open');
-    document.body.classList.toggle('stop-scroll');
+document.querySelectorAll('.auto__delete').forEach(function (el) {
+    el.addEventListener('click', function () {
+        document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+        document.getElementById('popup-del-quest').classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
+    })
 })
 
 document.querySelector('.quest__btn-close').addEventListener('click', function () {
