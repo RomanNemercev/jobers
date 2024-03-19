@@ -369,3 +369,15 @@ let monthName = months[monthIndex];
 let formattedDate = day + " " + monthName + " " + year + " " + "года";
 var ura = 'Автоотбор от ';
 document.getElementById('main-name').value = ura + formattedDate;
+
+//вызов выпадающего списка в окне добавления нового кандидата
+let vacancyChoose = new Choices(
+    document.getElementById('choose-vacancy'),
+    {
+        searchEnabled: false,
+        itemSelectText: '',
+        shouldSort: false,
+        removeItemButton: true,
+        noChoicesText: '',
+    }
+);

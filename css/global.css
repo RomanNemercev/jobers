@@ -158,6 +158,13 @@ img {
     color: var(--color_space);
 }
 
+.f15w500 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--color_space);
+}
+
 .f16w500 {
     font-size: 16px;
     font-weight: 500;

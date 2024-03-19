@@ -62,10 +62,104 @@ p, span {
 .cans__filter-popup.vacancies__item-popup--open .vacancies__filter-popup__wrapper {
     transform: scale(1);
 }
+/*window's new cans*/
+.new-can {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: visible;
+    background-color: rgba(42, 49, 55, .75);
+    opacity: 1;
+    transition: visibility .3s ease, opacity .3s ease;
+}
 
-/*разработка окна автоотбора*/
+.new-can__popup-wrapper {
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    max-width: 1074px;
+    width: 100%;
+    min-height: 240px;
+    background-color: var(--color_white);
+    transform: scale(1);
+    transition: transform .3s ease;
+}
 
+.new-can__btn-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 30px;
+    right: 30px;
+    background-image: url(../img/delete-x.svg);
+    background-repeat: no-repeat;
+}
 
+.new-can__container {
+    position: relative;
+    padding: 25px;
+    flex-direction: column;
+    min-height: inherit;
+}
+
+.new-can__main-content {
+    width: 1024px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 0.3256fr 1fr;
+    grid-column-gap: 2%;
+}
+
+.new__btns {
+    padding-bottom: 0;
+}
+
+.new-can__form-first input {
+    width: 100%;
+}
+
+.new-can__add-title {
+    margin-bottom: 40px;
+}
+
+.new-can__btn-import {
+    margin-bottom: 40px;
+}
+
+.new-can__can-img {
+    margin-bottom: 40px;
+}
+
+.new-can__form-last {
+    flex-direction: column;
+}
+
+.new-can__form-input {
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    border: none;
+    min-height: 40px;
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.new-can__form-input::placeholder {
+    color: var(--color_bali);
+}
+
+.new-can__form-input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
 
 /*галочка для сортировки*/
 .can__filter-list {
