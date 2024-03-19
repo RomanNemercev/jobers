@@ -26,7 +26,8 @@
             <li class="nav__link list-reset"><a href="../partials/vacancies.html"
                                                 class="nav__link-item link-vacancies active-page">Вакансии</a>
             </li>
-            <li class="nav__link list-reset"><a href="../partials/candidates.html" class="nav__link-item link-candidates">Кандидаты</a></li>
+            <li class="nav__link list-reset"><a href="../partials/candidates.html"
+                                                class="nav__link-item link-candidates">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
             <li class="nav__links-caption">Организация</li>
@@ -363,6 +364,7 @@
                         </div>
                     </div>
                     <div class="vacancies__item-popup" id="choose-del-modal">
+                        <button class="btn-reset delete__btn"></button>
                         <div class="vacancies__item-popup__wrapper delete">
                             <div class="delete__container">
                                 <button class="btn-reset delete__btn" id="choose-del-btn"></button>
@@ -725,22 +727,6 @@
                         </select>
                     </div>
                 </div>
-                <div class="vacancies__filter-popup" id="choose-del-modal-filter">
-                    <div class="vacancies__filter-popup__wrapper delete">
-                        <div class="delete__container">
-                            <div class="delete__title">Удаление вакансий</div>
-                            <button class="btn-reset delete__btn"></button>
-                            <div class="delete__attent">Выделенные вакансии <span class="delete__amount">(10)</span>
-                                будут удалены. Вы&nbsp;действительно
-                                хотите это сделать?
-                            </div>
-                            <div class="delete__choose">
-                                <button class="btn-reset delete__yes">Удалить</button>
-                                <button class="btn-reset delete__no">Отмена</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="vacancies__content" data-target="two">
@@ -861,6 +847,23 @@
                             <option value="">Выберите действие</option>
                             <option value="Удалить">Удалить</option>
                         </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vacancies__filter-popup" id="choose-del-modal-filter">
+            <button class="btn-reset delete__btn"></button>
+            <div class="vacancies__filter-popup__wrapper delete">
+                <div class="delete__container">
+                    <div class="delete__title">Удаление вакансий</div>
+                    <button class="btn-reset delete__btn"></button>
+                    <div class="delete__attent">Выделенные вакансии <span class="delete__amount">(10)</span>
+                        будут удалены. Вы&nbsp;действительно
+                        хотите это сделать?
+                    </div>
+                    <div class="delete__choose">
+                        <button class="btn-reset delete__yes">Удалить</button>
+                        <button class="btn-reset delete__no">Отмена</button>
                     </div>
                 </div>
             </div>
