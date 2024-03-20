@@ -62,6 +62,7 @@ p, span {
 .cans__filter-popup.vacancies__item-popup--open .vacancies__filter-popup__wrapper {
     transform: scale(1);
 }
+
 /*window's new cans*/
 .new-can {
     left: 0;
@@ -94,12 +95,13 @@ p, span {
 
 .new-can__btn-close {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 30px;
-    right: 30px;
+    width: 22px;
+    height: 22px;
+    top: 24px;
+    right: 24px;
     background-image: url(../img/delete-x.svg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .new-can__container {
@@ -110,12 +112,18 @@ p, span {
 }
 
 .new-can__main-content {
-    width: 1024px;
-    margin-bottom: 40px;
-    display: grid;
-    grid-template-columns: 0.3256fr 1fr;
-    grid-column-gap: 2%;
+    margin-bottom: 40.7px;
+    display: flex;
+    justify-content: space-between;
+    width: 71.049vw;
+    max-height: 682px;
 }
+
+.new-can__vacancy > .new__change-choice__wrapper {
+    margin-bottom: 15px;
+}
+
+
 
 .new__btns {
     padding-bottom: 0;
@@ -130,18 +138,23 @@ p, span {
 }
 
 .new-can__btn-import {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
+    color: var(--color_dodger);
 }
 
 .new-can__can-img {
-    margin-bottom: 40px;
+    margin-bottom: 37px;
+    padding-top: 33px;
 }
 
 .new-can__form-last {
     flex-direction: column;
 }
 
-.new-can__form-input {
+.new-can__form-input,
+.new-can__data-input,
+.new-can__source-input,
+.new-can__resume-content {
     font-size: 14px;
     font-weight: 400;
     width: 100%;
@@ -152,13 +165,42 @@ p, span {
     padding-left: 15px;
 }
 
-.new-can__form-input::placeholder {
+.new-can__form-input::placeholder,
+.new-can__data-input::placeholder,
+.new-can__source-input::placeholder,
+.new-can__resume-content::placeholder {
     color: var(--color_bali);
 }
 
-.new-can__form-input:focus {
+.new-can__form-input:focus,
+.new-can__data-input:focus,
+.new-can__source-input:focus,
+.new-can__resume-content:focus {
     outline: 1px solid var(--color_dodger);
     background-color: var(--color_zircon);
+}
+
+.new-can__form-mg:first-of-type > .new-can__form-input {
+    margin-bottom: 14px;
+}
+
+.new-can__form-mg:nth-child(2) > .new-can__form-input {
+    margin-bottom: 14px;
+}
+
+.new-can__form-wage > .new-can__form-input {
+    margin-bottom: 14px;
+}
+
+.new-can__personal {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 37px;
+}
+
+.new-can__content-right {
+    width: 73.308%;
 }
 
 /*галочка для сортировки*/
@@ -217,6 +259,12 @@ p, span {
 
 .can__input:checked + .can__span::after {
     opacity: 1;
+}
+
+.new-can__resume-content {
+    resize: none;
+    padding: 15px;
+    min-height: 272px;
 }
 
 /*карточки кандидатов*/

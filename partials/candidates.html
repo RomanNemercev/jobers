@@ -635,7 +635,7 @@
             <div class="new-can__container">
                 <button class="btn-reset new-can__btn-close"></button>
                 <h4 class="new-can__add-title f20w600">Добавление кандидата</h4>
-                <button class="btn-reset btn-two new-can__btn-import">Загрузить из&nbsp;файла</button>
+                <button class="btn-reset btn-two new-can__btn-import f14w400">Загрузить из&nbsp;файла</button>
                 <div class="new-can__main-content">
                     <div class="new-can__content-left">
                         <img src="../img/new-can__add-img.png" alt="Фотография нового кандидата"
@@ -643,15 +643,15 @@
                         <form action="#" method="post" class="new-can__form-first">
                             <div class="new-can__form-mg">
                                 <p class="new-can__mg-title f15w500 mb15">Telegram</p>
-                                <input type="text" class="new-can__form-input mb15" placeholder="@ivan">
+                                <input type="text" class="new-can__form-input" placeholder="@ivan">
                             </div>
                             <div class="new-can__form-mg">
                                 <p class="new-can__mg-title f15w500 mb15">Скайп</p>
-                                <input type="text" class="new-can__form-input mb15" placeholder="@ivan210">
+                                <input type="text" class="new-can__form-input" placeholder="@ivan210">
                             </div>
                             <div class="new-can__form-wage">
                                 <p class="new-can__wage-title f15w500 mb15">Зарплатные ожидания</p>
-                                <input type="text" class="new-can__form-input mb15" placeholder="от 0 до 0 руб">
+                                <input type="text" class="new-can__form-input" placeholder="от 0 до 0 руб">
                             </div>
                             <div class="new-can__form-last flex">
                                 <p class="new-can__last-title f15w500 mb15">Последнее место работы</p>
@@ -670,6 +670,28 @@
                                     <option value="Приглашенные">Приглашенные</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="new-can__personal">
+                            <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Фамилия</p>
+                                <input type="text" class="new-can__data-input" placeholder="Иванов"></div>
+                            <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Имя</p>
+                                <input type="text" class="new-can__data-input" placeholder="Иван"></div>
+                            <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Отчество</p>
+                                <input type="text" class="new-can__data-input" placeholder="Иванович"></div>
+                            <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Дата рождения</p>
+                                <input type="text" class="new-can__data-input" placeholder="дд.мм.гг"></div>
+                            <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Телефон</p>
+                                <input type="number" class="new-can__data-input" placeholder="+7"></div>
+                            <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Электронная почта</p>
+                                <input type="email" class="new-can__data-input" placeholder="ivan@mail.ru"></div>
+                        </div>
+                        <div class="new-can__source mb15">
+                            <p class="new-can__source-title f15w500 mb15">Источник</p>
+                            <input type="text" class="new-can__source-input" placeholder="-">
+                        </div>
+                        <div class="new-can__resume">
+                            <p class="new-can__resume-title mb15 f15w500">Резюме</p>
+                            <textarea name="resume-info" id="resume-content" cols="30" rows="15" class="new-can__resume-content" placeholder="-"></textarea>
                         </div>
                     </div>
                 </div>
