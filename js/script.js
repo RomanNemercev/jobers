@@ -485,100 +485,6 @@ try {
     console.log("Не запустился выпадающий список")
 }
 
-let genderChoose = new Choices(
-    document.getElementById('gender'),
-    {
-        allowHTML: true,
-        itemSelectText: '',
-        searchEnabled: false,
-        shouldSort: false,
-        removeItemButton: true,
-        placeholderValue: 'Пол ',
-        noChoicesText: '',
-    }
-);
-
-let ageChoose = new Choices(
-    document.getElementById('age'),
-    {
-        allowHTML: true,
-        itemSelectText: '',
-        searchEnabled: false,
-        shouldSort: false,
-    }
-);
-
-let wageChoose = new Choices(
-    document.getElementById('wage'),
-    {
-        allowHTML: true,
-        itemSelectText: '',
-        searchEnabled: false,
-        shouldSort: false,
-    }
-);
-
-let skillChoose = new Choices(
-    document.getElementById('skill'),
-    {
-        itemSelectText: '',
-        allowHTML: true,
-        searchEnabled: false,
-        shouldSort: false,
-        removeItemButton: true,
-        placeholderValue: 'Опыт работы',
-        noChoicesText: '',
-    }
-);
-
-let nationChoose = new Choices(
-    document.getElementById('nation'),
-    {
-        allowHTML: true,
-        itemSelectText: '',
-        searchEnabled: false,
-        shouldSort: false,
-        position: 'bottom',
-        removeItemButton: true,
-        placeholderValue: 'Гражданство',
-        noChoicesText: '',
-    }
-);
-
-let contactsChoose = new Choices(
-    document.getElementById('contacts'),
-    {
-        allowHTML: true,
-        itemSelectText: '',
-        searchEnabled: false,
-        shouldSort: false,
-    }
-);
-
-let levelChoose = new Choices(
-    document.getElementById('choose-level'),
-    {
-        searchEnabled: false,
-        itemSelectText: '',
-        shouldSort: false,
-        removeItemButton: true,
-        noChoicesText: '',
-    }
-);
-
-let specificChoose = new Choices(
-    document.getElementById('specific-vacancy-options'),
-    {
-        allowHTML: true,
-        itemSelectText: '',
-        searchEnabled: false,
-        shouldSort: false,
-        removeItemButton: true,
-        placeholderValue: 'Выберите вакансию',
-        noChoicesText: 'Вакансии закончились',
-    }
-);
-
 // созданиние списка для кнопка "определенные вакансии в блоке автоотбора"
 let radioSpecific = document.getElementById('specific-vacancy');
 let specificList = document.getElementById('specific-vacancy-wrapper');
@@ -802,3 +708,13 @@ let formattedDate = day + " " + monthName + " " + year + " " + "года";
 var ura = 'Автоотбор от ';
 // now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); //утрачен так как старый метод
 document.getElementById('main-name').value = ura + formattedDate;
+
+//работа с новыми выпадающими списками
+let newDropListItem = document.querySelectorAll('.new__droplist-item');
+let newDropList = document.getElementById('new-droplist');
+
+newDropListItem.forEach(function (el) {
+    el.addEventListener('click', function () {
+        newDropList.classList.remove('droplist_active');
+    })
+})

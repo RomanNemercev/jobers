@@ -11,8 +11,10 @@
             rel="stylesheet"
             href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="../css/libs-css/choices.min.css">
+    <link rel="stylesheet" href="../css/libs-css/select.css">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media-queries/vacancies-media.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
@@ -47,21 +49,45 @@
 <!--блок поискового меню-->
 <section class="search-bar">
     <div class="search-bar__container">
+        <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
+                                                              class="nav__logo-icon"></a>
         <form action="#" class="search-bar__form">
             <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
             <div class="search-bar__dropdown"></div>
         </form>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
-                                                           class="search-bar__note"></button>
+            <button class="search-bar__btn btn-reset">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
+                    <img src="../img/notification.svg" alt="Уведомления"
+                         class="search-bar__note">
+                </picture>
+            </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Поддержка"
-                                                           class="search-bar__support"></button>
+            <button class="search-bar__btn btn-reset">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
+                    <img src="../img/support.svg" alt="Поддержка"
+                         class="search-bar__support">
+                </picture>
+            </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
-                                                           class="search-bar__acc"></button>
+            <button class="search-bar__btn btn-reset">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
+                    <img src="../img/profile.svg" alt="Личный кабинет"
+                         class="search-bar__acc">
+                </picture>
+                </button>
+        </div>
+        <div class="search-bar__burger toogle">
+            <div class="toogle_bar">
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+            </div>
         </div>
     </div>
 </section>
@@ -85,7 +111,7 @@
                 </label>
             </div>
             <ul class="vacancies__list">
-                <li class="vacancies__list-item list-reset item">
+                <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
@@ -227,41 +253,178 @@
                                         <div class="new__options">
                                             <p class="new__options-title">Параметры кандидата</p>
                                             <div class="new__options-group">
-                                                <select name="choose-gender" id="gender" class="new__option-gender"
-                                                        multiple>
-                                                    <option value="Мужской">Мужской</option>
-                                                    <option value="Женский">Женский</option>
-                                                </select>
-                                                <select name="choose-age" id="age" class="new__option-age">
-                                                    <option value="">Возраст</option>
-                                                    <option value="от">от</option>
-                                                    <option value="до">до</option>
-                                                    <option value="Скрыть без возраста">Скрыть без возраста</option>
-                                                </select>
-                                                <select name="choose-wage" id="wage" class="new__option-wage">
-                                                    <option value="">Заработная плата</option>
-                                                    <option value="от">от</option>
-                                                    <option value="до">до</option>
-                                                    <option value="Скрыть без зарплаты">Скрыть без зарплаты</option>
-                                                </select>
-                                                <select name="choose-skill" id="skill" class="new__option-skill"
-                                                        multiple>
-                                                    <option value="Без опыта">Без опыта</option>
-                                                    <option value="От 1 года">От 1 года</option>
-                                                    <option value="От 3 лет">От 3 лет</option>
-                                                </select>
-                                                <select name="choose-citizenship" id="nation"
-                                                        class="new__option-nation" multiple>
-                                                    <option value="Не имеет значения">Не имеет значения</option>
-                                                    <option value="Россия">Россия</option>
-                                                    <option value="Страны СНГ">Страны СНГ</option>
-                                                    <option value="Остальные страны">Остальные страны</option>
-                                                </select>
-                                                <select name="choose-contacts" id="contacts"
-                                                        class="new__option-contacts">
-                                                    <option value="">Контакты</option>
-                                                    <option value="Указан номер телефона">Указан номер телефона</option>
-                                                </select>
+                                                <div class="droplist droplist__check">
+                                                    <form class="form__list" action="">
+                                                        <div class="droplist__selected item droplist__result item"><span
+                                                                class="droplist__result_text">Пол</span>
+                                                            <svg class="droplist__icon droplist__icon_arrow" width="14"
+                                                                 height="9" viewBox="0 0 14 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                      fill="#9098B4"/>
+                                                            </svg>
+                                                        </div>
+
+                                                        <ul class="droplist__items">
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-1" class="check" type="checkbox"
+                                                                    value="Мужской">
+                                                                <label for="variant-1">Мужской</label>
+                                                            </li>
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-2" class="check" type="checkbox"
+                                                                    value="Женский">
+                                                                <label for="variant-2">Женский</label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="droplist droplist__fields">
+                                                    <form class="form__list" action="">
+                                                        <div class="droplist__selected item droplist__result item"><span
+                                                                class="droplist__result_text">Возраст</span> <span
+                                                                class="droplist__icon droplist__icon_cross"></span>
+                                                            <svg class="droplist__icon droplist__icon_arrow" width="14"
+                                                                 height="9" viewBox="0 0 14 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                      fill="#9098B4"/>
+                                                            </svg>
+                                                        </div>
+
+                                                        <ul class="droplist__items">
+                                                            <li class="droplist__item droplist__item_nohover"><input
+                                                                    class="droplist__field droplist__field_from"
+                                                                    type="text" placeholder="от" value=""></li>
+                                                            <li class="droplist__item droplist__item_nohover"><input
+                                                                    class="droplist__field droplist__field_to"
+                                                                    type="text" placeholder="до" value=""></li>
+                                                            <li class="droplist__item droplist__item_hide"><input
+                                                                    id="hide" class="check" type="checkbox"
+                                                                    value="Скрыть без зарплаты">
+                                                                <label for="hide">Скрыть без возраста</label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+
+                                                </div>
+                                                <div class="droplist droplist__fields">
+                                                    <form class="form__list" action="">
+                                                        <div class="droplist__selected item droplist__result item"><span
+                                                                class="droplist__result_text">Заработная плата</span>
+                                                            <span class="droplist__icon droplist__icon_cross"></span>
+                                                            <svg class="droplist__icon droplist__icon_arrow" width="14"
+                                                                 height="9" viewBox="0 0 14 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                      fill="#9098B4"/>
+                                                            </svg>
+                                                        </div>
+
+                                                        <ul class="droplist__items">
+                                                            <li class="droplist__item droplist__item_nohover"><input
+                                                                    class="droplist__field droplist__field_from"
+                                                                    type="text" placeholder="от" value=""></li>
+                                                            <li class="droplist__item droplist__item_nohover"><input
+                                                                    class="droplist__field droplist__field_to"
+                                                                    type="text" placeholder="до" value=""></li>
+                                                            <li class="droplist__item droplist__item_hide"><input
+                                                                    id="hide" class="check" type="checkbox"
+                                                                    value="Скрыть без зарплаты">
+                                                                <label for="hide">Скрыть без зарплаты</label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+
+                                                </div>
+                                                <div class="droplist droplist__check">
+                                                    <form class="form__list" action="">
+                                                        <div class="droplist__selected item droplist__result item"><span
+                                                                class="droplist__result_text">Опыт работы</span>
+                                                            <svg class="droplist__icon droplist__icon_arrow" width="14"
+                                                                 height="9" viewBox="0 0 14 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                      fill="#9098B4"/>
+                                                            </svg>
+                                                        </div>
+
+                                                        <ul class="droplist__items">
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-12" class="check" type="checkbox"
+                                                                    value="Без опыта">
+                                                                <label for="variant-12">Без опыта</label>
+                                                            </li>
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-2" class="check" type="checkbox"
+                                                                    value="От 1 года">
+                                                                <label for="variant-2">От 1 года</label>
+                                                            </li>
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-3" class="check" type="checkbox"
+                                                                    value="От 3х лет">
+                                                                <label for="variant-3">От 3х лет</label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="droplist droplist__check">
+                                                    <form class="form__list" action="">
+                                                        <div class="droplist__selected item droplist__result item"><span
+                                                                class="droplist__result_text">Гражданство</span>
+                                                            <svg class="droplist__icon droplist__icon_arrow" width="14"
+                                                                 height="9" viewBox="0 0 14 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                      fill="#9098B4"/>
+                                                            </svg>
+                                                        </div>
+
+                                                        <ul class="droplist__items">
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-1" class="check" type="checkbox"
+                                                                    value="Не имеет значения">
+                                                                <label for="variant-1">Не&nbsp;имеет значения</label>
+                                                            </li>
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-2" class="check" type="checkbox"
+                                                                    value="Россия">
+                                                                <label for="variant-2">Россия</label>
+                                                            </li>
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-3" class="check" type="checkbox"
+                                                                    value="Страны СНГ">
+                                                                <label for="variant-3">Страны СНГ</label>
+                                                            </li>
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-4" class="check" type="checkbox"
+                                                                    value="Остальные страны">
+                                                                <label for="variant-4">Остальные страны</label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="droplist droplist__check">
+                                                    <form class="form__list" action="">
+                                                        <div class="droplist__selected item droplist__result item"><span
+                                                                class="droplist__result_text">Контакты</span>
+                                                            <svg class="droplist__icon droplist__icon_arrow" width="14"
+                                                                 height="9" viewBox="0 0 14 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                      fill="#9098B4"/>
+                                                            </svg>
+                                                        </div>
+
+                                                        <ul class="droplist__items">
+                                                            <li class="droplist__item droplist__item_active"><input
+                                                                    id="variant-4" class="check" type="checkbox"
+                                                                    value="Вариант 4">
+                                                                <label for="variant-4">Указан номер телефона</label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
                                             </div>
                                             <div class="new__global">
                                                 <p class="new__global-title">Применение правила</p>
@@ -290,33 +453,73 @@
                                                     <div class="new__options-specific specific specific--hidden"
                                                          id="specific-vacancy-wrapper">
                                                         <div class="specific__wrapper">
-                                                            <select name="choose-options-specific"
-                                                                    id="specific-vacancy-options"
-                                                                    class="specific__select" multiple>
-                                                                <option value="Менеджер по продажам ID 2134">
-                                                                    Менеджер по продажам ID 2134
-                                                                </option>
-                                                                <option value="Проектный менеджер ID 2384">
-                                                                    Проектный менеджер ID 2384
-                                                                </option>
-                                                                <option value="Бизнесс асистент ID 2135">
-                                                                    Бизнесс асистент ID 2135
-                                                                </option>
-                                                                <option value="Стоматолог ID 3490">
-                                                                    Стоматолог ID 3490
-                                                                </option>
-                                                            </select>
+                                                            <div class="droplist droplist__check">
+                                                                <form class="form__list" action="">
+                                                                    <div class="droplist__selected item droplist__result item">
+                                                                        <span class="droplist__result_text">Выберите вакансию</span>
+                                                                        <svg class="droplist__icon droplist__icon_arrow"
+                                                                             width="14" height="9" viewBox="0 0 14 9"
+                                                                             fill="none"
+                                                                             xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                                  fill="#9098B4"/>
+                                                                        </svg>
+                                                                    </div>
+
+                                                                    <ul class="droplist__items">
+                                                                        <li class="droplist__item droplist__item_active">
+                                                                            <input id="variant-1" class="check"
+                                                                                   type="checkbox"
+                                                                                   value="Менеджер по продажам ID 2134">
+                                                                            <label for="variant-1">Менеджер по&nbsp;продажам
+                                                                                ID&nbsp;2134
+                                                                            </label>
+                                                                        </li>
+                                                                        <li class="droplist__item droplist__item_active">
+                                                                            <input id="variant-2" class="check"
+                                                                                   type="checkbox"
+                                                                                   value="Проектный менеджер ID 2384">
+                                                                            <label for="variant-2">Проектный менеджер ID&nbsp;2384</label>
+                                                                        </li>
+                                                                        <li class="droplist__item droplist__item_active">
+                                                                            <input id="variant-3" class="check"
+                                                                                   type="checkbox"
+                                                                                   value="Бизнесс ассистент ID 2135">
+                                                                            <label for="variant-3">Бизнесс ассистент ID&nbsp;2135</label>
+                                                                        </li>
+                                                                        <li class="droplist__item droplist__item_active">
+                                                                            <input id="variant-4" class="check"
+                                                                                   type="checkbox"
+                                                                                   value="Стоматолог ID 3490">
+                                                                            <label for="variant-4">Стоматолог ID&nbsp;3490</label>
+                                                                        </li>
+                                                                    </ul>
+                                                                </form>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <p class="new__transfer-title">Перенос на этап</p>
                                             <div class="new__change-choice__wrapper">
-                                                <select name="choose-level" id="choose-level"
-                                                        class="new__transfer-items">
-                                                    <option value="">Перенос на этап</option>
-                                                    <option value="Приглашенные">Приглашенные</option>
-                                                </select>
+                                                <div class="droplist droplist__select" id="new-droplist">
+                                                    <form class="form__list" action="">
+                                                        <div class="droplist__selected item droplist__result item"><span
+                                                                class="droplist__result_text">Перенос на&nbsp;этап</span>
+                                                            <span class="droplist__icon droplist__icon_cross"></span>
+                                                            <svg class="droplist__icon droplist__icon_arrow" width="14"
+                                                                 height="9" viewBox="0 0 14 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                                      fill="#9098B4"/>
+                                                            </svg>
+                                                        </div>
+                                                        <ul class="droplist__items">
+                                                            <li class="droplist__item new__droplist-item">Приглашенные
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
                                             </div>
                                             <p class="new__auto-title">Название автоотбора</p>
                                             <label for="main-name" class="new__add-name">
@@ -380,7 +583,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="vacancies__list-item list-reset item">
+                <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
@@ -451,7 +654,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="vacancies__list-item list-reset item">
+                <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
@@ -530,7 +733,7 @@
                 </label>
             </div>
             <ul class="vacancies__list">
-                <li class="vacancies__list-item list-reset item">
+                <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
@@ -622,7 +825,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="vacancies__list-item list-reset item">
+                <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
@@ -737,7 +940,7 @@
                 </label>
             </div>
             <ul class="vacancies__list">
-                <li class="vacancies__list-item list-reset item">
+                <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
                         <div class="item__top-left">
                             <label class="item__name">
@@ -874,6 +1077,8 @@
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="../js/libs-js/choices.min.js"></script>
+<script src="../js/jquery_3.3.1.min.js"></script>
+<script src="../js/libs-js/select.js"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>

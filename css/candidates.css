@@ -75,9 +75,9 @@ p, span {
     align-items: center;
     justify-content: center;
     overflow-y: auto;
-    visibility: visible;
+    visibility: hidden;
     background-color: rgba(42, 49, 55, .75);
-    opacity: 1;
+    opacity: 0;
     transition: visibility .3s ease, opacity .3s ease;
 }
 
@@ -89,7 +89,7 @@ p, span {
     width: 100%;
     min-height: 240px;
     background-color: var(--color_white);
-    transform: scale(1);
+    transform: scale(0);
     transition: transform .3s ease;
 }
 
@@ -114,9 +114,13 @@ p, span {
 .new-can__main-content {
     margin-bottom: 40.7px;
     display: flex;
-    justify-content: space-between;
     width: 71.049vw;
+    max-width: 100%;
     max-height: 682px;
+}
+
+.new-can__content-left {
+    margin-right: 25px;
 }
 
 .new-can__vacancy > .new__change-choice__wrapper {
