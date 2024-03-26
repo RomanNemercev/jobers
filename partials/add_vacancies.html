@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/styles-add-vacancies.css">
 </head>
@@ -24,7 +24,7 @@
             <li class="nav__link list-reset"><a href="../partials/vacancies.html"
                                                 class="nav__link-item link-vacancies active-page">Вакансии</a>
             </li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-candidates">Кандидаты</a></li>
+            <li class="nav__link list-reset"><a href="../partials/candidates.html" class="nav__link-item link-candidates">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
             <li class="nav__links-caption">Организация</li>
@@ -45,7 +45,8 @@
 <section class="search-bar">
     <div class="search-bar__container">
         <form action="#" class="search-bar__form">
-            <input type="search" class="search-bar__form-space" placeholder="Поиск по кандидатам">
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
+            <div class="search-bar__dropdown"></div>
         </form>
         <div class="search-bar__btn-wrap">
             <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
@@ -103,8 +104,9 @@
                     <div class="main__skill-wrapper">
                         <ul class="main__skills-accordion accordion-list">
                             <li class="list-reset main__accordion-list accordion">
-                                <button class="main__accordion-control accordion__control" tabindex="0">Автомобильный
-                                    бизнес
+                                <button class="main__accordion-control accordion__control" tabindex="0"><span
+                                        class="main__accordion-arrow"></span><span class="main__accordion-title">Автомобильный
+                                    бизнес</span>
                                 </button>
                                 <div class="main__accordion-content accordion__content">
                                     <ul class="main__content-list">
@@ -112,14 +114,16 @@
                                             <label for="car-washer" class="main__content-wrap"><input type="radio"
                                                                                                       name="car-business"
                                                                                                       class="main__content-choose"
-                                                                                                      id="car-washer">Автомомйщик
+                                                                                                      id="car-washer"><span
+                                                    class="main__content-choose__custom-check"></span>Автомомйщик
                                             </label>
                                         </li>
                                         <li class="main__content-item">
                                             <label for="auto-mechanic" class="main__content-wrap"><input type="radio"
                                                                                                          name="car-business"
                                                                                                          class="main__content-choose"
-                                                                                                         id="auto-mechanic">Автослесарь,
+                                                                                                         id="auto-mechanic"><span
+                                                    class="main__content-choose__custom-check"></span>Автослесарь,
                                                 автомеханик
                                             </label>
                                         </li>
@@ -127,14 +131,59 @@
                                             <label for="master-inspector" class="main__content-wrap"><input type="radio"
                                                                                                             name="car-business"
                                                                                                             class="main__content-choose"
-                                                                                                            id="master-inspector">Мастер-приемщик
+                                                                                                            id="master-inspector"><span
+                                                    class="main__content-choose__custom-check"></span>Мастер-приемщик
                                             </label>
                                         </li>
                                         <li class="main__content-item">
                                             <label for="sales-manager" class="main__content-wrap"><input type="radio"
                                                                                                          name="car-business"
                                                                                                          class="main__content-choose"
-                                                                                                         id="sales-manager">Менеджер
+                                                                                                         id="sales-manager"><span
+                                                    class="main__content-choose__custom-check"></span>Менеджер
+                                                по&nbsp;продажам, менеджер по&nbsp;работе с&nbsp;клиентами
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-reset main__accordion-list accordion">
+                                <button class="main__accordion-control accordion__control" tabindex="0"><span
+                                        class="main__accordion-arrow"></span><span class="main__accordion-title">Административный персонал</span>
+                                </button>
+                                <div class="main__accordion-content accordion__content">
+                                    <ul class="main__content-list">
+                                        <li class="main__content-item">
+                                            <label for="administrator" class="main__content-wrap"><input type="radio"
+                                                                                                         name="administrative-staff"
+                                                                                                         class="main__content-choose"
+                                                                                                         id="administrator"><span
+                                                    class="main__content-choose__custom-check"></span>Администратор
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="Clerk-archivist" class="main__content-wrap"><input type="radio"
+                                                                                                           name="administrative-staff"
+                                                                                                           class="main__content-choose"
+                                                                                                           id="Clerk-archivist"><span
+                                                    class="main__content-choose__custom-check"></span>Делопроизводитель,
+                                                архивариус
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="courier" class="main__content-wrap"><input type="radio"
+                                                                                                   name="administrative-staff"
+                                                                                                   class="main__content-choose"
+                                                                                                   id="courier"><span
+                                                    class="main__content-choose__custom-check"></span>Курьер
+                                            </label>
+                                        </li>
+                                        <li class="main__content-item">
+                                            <label for="sales-manager" class="main__content-wrap"><input type="radio"
+                                                                                                         name="administrative-staff"
+                                                                                                         class="main__content-choose"
+                                                                                                         id="sales-manager"><span
+                                                    class="main__content-choose__custom-check"></span>Менеджер
                                                 по&nbsp;продажам, менеджер по&nbsp;работе с&nbsp;клиентами
                                             </label>
                                         </li>
@@ -162,7 +211,8 @@
                     <p class="add__options-title">Тип занятости</p>
                     <div class="add__option-dropdown">
                         <select name="select" class="add__select-wrapper">
-                            <option value="Пригласить" selected>Полная</option>
+                            <option value="">Тип занятости</option>
+                            <option value="Пригласить">Полная</option>
                             <option value="Отклонить">Частичная</option>
                             <option value="Скачать резюме">Временная</option>
                             <option value="Экспорт в Excel">Стажировка</option>
@@ -173,13 +223,14 @@
                     <p class="add__options-title">График работы</p>
                     <div class="add__option-dropdown">
                         <select name="select" class="add__select-wrapper">
-                            <option value="Пригласить" selected>Полный</option>
-                            <option value="Отклонить">Сменный</option>
-                            <option value="Скачать резюме">Свободный</option>
-                            <option value="Экспорт в Excel">Удаленная работа</option>
-                            <option value="Экспорт в Excel">Вахтовый метод</option>
-                            <option value="Экспорт в Excel">Неполный день</option>
-                            <option value="Экспорт в Excel">Любой</option>
+                            <option value="">График работы</option>
+                            <option value="Пригласить">Полный</option>
+                            <option value="Сменный">Сменный</option>
+                            <option value="Свободный">Свободный</option>
+                            <option value="Удаленная работа">Удаленная работа</option>
+                            <option value="Вахтовый метод">Вахтовый метод</option>
+                            <option value="Неполный день">Неполный день</option>
+                            <option value="Любой">Любой</option>
                         </select>
                     </div>
                 </div>
@@ -207,22 +258,24 @@
                 <div class="add__options-trial">
                     <p class="add__options-title">Опыт работы</p>
                     <select name="select" class="add__select-wrapper">
-                        <option value="Пригласить">Выберите вариант</option>
-                        <option value="Отклонить">Не имеет значения</option>
-                        <option value="Скачать резюме">От 1 года</option>
-                        <option value="Экспорт в Excel">От 3х лет</option>
-                        <option value="Экспорт в Excel">От 5 лет</option>
+                        <option value="">Опыт работы</option>
+                        <option value="Выберите вариант">Выберите вариант</option>
+                        <option value="Не имеет значения">Не имеет значения</option>
+                        <option value="От 1 года">От 1 года</option>
+                        <option value="От 3х лет">От 3х лет</option>
+                        <option value="От 5 лет">От 5 лет</option>
                     </select>
                 </div>
                 <div class="add__options-edu">
                     <p class="add__options-title">Образование</p>
                     <select name="select" class="add__select-wrapper">
-                        <option value="Пригласить">Выберите вариант</option>
-                        <option value="Отклонить">Высшее</option>
-                        <option value="Скачать резюме">Неполное высшее</option>
-                        <option value="Экспорт в Excel">Среднее специальное</option>
-                        <option value="Экспорт в Excel">Среднее</option>
-                        <option value="Экспорт в Excel">Неполное среднее</option>
+                        <option value="">Образование</option>
+                        <option value="Выберите вариант">Выберите вариант</option>
+                        <option value="Высшее">Высшее</option>
+                        <option value="Неполное высшее">Неполное высшее</option>
+                        <option value="Среднее специальное">Среднее специальное</option>
+                        <option value="Среднее">Среднее</option>
+                        <option value="Неполное среднее">Неполное среднее</option>
                     </select>
                 </div>
             </div>
@@ -614,5 +667,6 @@
 <script src="../js/libs-js/accordion.js"></script>
 <script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/script-add-vacancies.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

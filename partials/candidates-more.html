@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobers - Кандидаты</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/candidates-more.css">
+</head>
+<body class="body-page">
+<!--блок бокового меню-->
+<section class="nav">
+    <div class="nav__container">
+        <a href="#" class="nav__logo"><img src="../img/logo-clip.svg" alt="Логотип компании" class="nav__logo-icon"></a>
+        <div class="nav__wrapper">
+            <a href="../partials/candidates.html" class="nav__back f14w400 bg-fix">Вернуться назад</a>
+            <ul class="nav__cans">
+                <li class="nav__can"><p class="nav__can-title f14w400">Вакансии</p></li>
+                <li class="nav__can"><a href="#" class="nav__can-item"><p class="nav__can-name f14w500">Менеджер по&nbsp;продажам</p>
+                    <span class="nav__can-capt f14w500">35&nbsp;кандидатов</span></a>
+                </li>
+                <li class="nav__can"><a href="#" class="nav__can-item"><p class="nav__can-name f14w500">Водитель
+                    категории&nbsp;C</p><span class="nav__can-capt f14w500">2&nbsp;кандидата</span></a>
+                </li>
+                <li class="nav__can"><a href="#" class="nav__can-item"><p class="nav__can-name f14w500">Менеджер по&nbsp;туризму</p>
+                    <span class="nav__can-capt f14w500">95&nbsp;кандидатов</span></a>
+                </li>
+                <li class="nav__can"><a href="#" class="nav__can-item"><p class="nav__can-name f14w500">Повар</p><span
+                        class="nav__can-capt f14w500">38&nbsp;кандидатов</span></a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+                <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings">Настройки</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--блок поискового меню-->
+<section class="search-bar">
+    <div class="search-bar__container">
+        <form action="#" class="search-bar__form">
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
+            <div class="search-bar__dropdown"></div>
+        </form>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
+                                                           class="search-bar__note"></button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Поддержка"
+                                                           class="search-bar__support"></button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
+                                                           class="search-bar__acc"></button>
+        </div>
+    </div>
+</section>
+<!--основной контент страницы-->
+<section class="more container">
+    <div class="more__scroll-choose">
+        <div class="scroll-x">
+            <div class="scroll-x__wrapper" id="scroll-wrapper">
+                <button class="btn-reset btn-scroll scroll-x__btn btn-scroll--active">Все&nbsp;кандидаты&nbsp;<span
+                        class="btn-data">(128)</span></button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Подумать&nbsp;<span class="btn-data">(1)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Телефонное&nbsp;интервью&nbsp;<span class="btn-data">(23)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Подходящие&nbsp;<span class="btn-data">(13)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Отклоненные&nbsp;<span class="btn-data">(0)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Удаленные&nbsp;<span class="btn-data">(0)</span>
+                </button>
+                <button class="btn-reset btn-scroll scroll-x__btn">Интересно&nbsp;<span class="btn-data">(2)</span>
+                </button>
+            </div>
+            <button class="btn-reset btn-settings"></button>
+            <button class="btn-reset btn-right" id="btn-right"></button>
+        </div>
+    </div>
+    <div class="more__content">
+        <div class="more__cans-scroll">
+            <form action="#" class="more-search__form">
+                <input type="text" class="more-search__form-space" placeholder="Поиск">
+            </form>
+            <ul class="more__items-list" data-simplebar>
+                <li class="more__item">
+                    <a href="#" class="more__user-link">
+                        <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                             class="more__user-link__img">
+                        <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                            <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                    class="more__quick-major f14w400">Инженер-технолог</span></div>
+                    </a>
+                </li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+                <li class="more__item"><a href="#" class="more__user-link">
+                    <img src="../img/more-user-img.png" alt="Фотография кандидата Степановой Марии"
+                         class="more__user-link__img">
+                    <div class="more__quick-desc"><p class="more__quick-title f15w400">Степанова Мария</p>
+                        <span class="more__quick-age f14w400">38&nbsp;лет</span><span
+                                class="more__quick-major f14w400">Инженер-технолог</span></div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="more__cans-info">
+            <div class="more__cans-header">
+                <div class="more__tabs vacancies__values">
+                    <button class="btn-reset vacancies__value vacancies__value--active" data-path="one"
+                            aria-label="Активные вакансии">Резюме
+                    </button>
+                    <button class="btn-reset vacancies__value" data-path="two" aria-label="Вакансии в архиве">История
+                    </button>
+                </div>
+                <div class="more__header-right">
+                    <button class="btn-reset btn-succes more__btn-invite f15w400">Пригласить</button>
+                    <div class="more__droplist"></div>
+                    <div class="more__burger">
+                        <div class="more__burger-dot dot-inwork-one"></div>
+                        <div class="more__burger-dot dot-inwork-one"></div>
+                        <div class="more__burger-dot dot-inwork-one"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="more__main-content" data-simplebar>
+                <div class="more__quick-info">
+                    <img src="../img/candidates-more-icon-large.svg"
+                         alt="Фотогорафия кандидата на вакансию Степановой Марии Алексеевны" class="more__user-pic">
+                    <div class="more__quick-desc">
+                        <h3 class="more__user-name f25w600">Степанова Мария Алексеевна</h3>
+                        <div class="more__tags">
+                            <span class="more__tag f14w400">#новый&nbsp;отклик</span>
+                            <button class="btn-reset more__tags__add f15w400">добавит тег</button>
+                        </div>
+                        <div class="more__user-desc flex">
+                            <div class="more__user-wage">
+                                <span class="more__wage-title c-bali f14w400">Зарплата</span>
+                                <p class="more__wage-value f15w400">150&nbsp;000 руб</p>
+                            </div>
+                            <div class="more__user-mail"><span class="more__mail-title c-bali f14w400">Почта</span><a
+                                    href="mailto:pochta@mail.ru"
+                                    class="more__mail__link f15w400 block">pochta@mail.ru</a></div>
+                        </div>
+                        <div class="more__user-desc flex">
+                            <div class="more__user-city">
+                                <span class="more__city-title c-bali f14w400">Город</span>
+                                <p class="more__city-value f15w400">Нижний-Новгород</p>
+                            </div>
+                            <div class="more__user-phone">
+                                <span class="more__phone-title f14w400 c-bali">Телефон:</span>
+                                <div class="more__phone-wrapper">
+                                    <a href="tel:+79992222333" class="more__phone-number f15w400">8-999-222-23-33</a>
+                                    <button class="btn-reset more__phone-chat bg-fix"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more__response-source f14w400 c-bali bg-fix">Отклик на&nbsp;вакансию &quot;Менеджер
+                            по&nbsp;продажам
+                        </div>
+                    </div>
+                </div>
+                <div class="more__full-info">
+                    <ul class="more__full-list">
+                        <li class="more__full-item">
+                            <p class="more__full-title mb5 f16w500">Последнее место работы</p>
+                            <p class="more__full-desc f14w400 c-bali">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений
+                                муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
+                                Ленск&raquo;)<span class="more__full-data block f14w400 c-bali">01&nbsp;апреля 2020&nbsp;&mdash; 01&nbsp;июля 2020</span>
+                            </p>
+                        </li>
+                        <li class="more__full-item">
+                            <p class="more__full-title mb5 f16w500">Тип занятости</p>
+                            <p class="more__full-desc f14w400 c-bali">Полная</p>
+                        </li>
+                        <li class="more__full-item">
+                            <p class="more__full-title mb5 f16w500">Образование</p>
+                            <div class="more__full-desc">
+                                <div class="more__ed"><span class="more__ed-year f14w400 c-bali block mb15">2002</span>
+                                    <div class="more__ed-info"><p class="more__ed-univ mb5 f14w400">Московский
+                                        автомобильно-дорожный
+                                        государственный технический университет, Москва</p>
+                                        <span class="more__ed-fac f14w400 c-bali mb5 block">Инженер по&nbsp;специализации(электроэнергетика и&nbsp;электротехника)</span>
+                                    </div>
+                                </div>
+                                <div class="more__ed"><span class="more__ed-year f14w400 c-bali block mb15">1996</span>
+                                    <div class="more__ed-info"><p class="more__ed-univ mb5 f14w400">Иаановское
+                                        Пожарно-техническое училище</p>
+                                        <span class="more__ed-fac f14w400 c-bali mb5 block">Техник противопожарной защиты</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="more__full-item">
+                            <p class="more__full-title mb5 f16w500">Знание языков</p>
+                            <p class="more__full-desc f14w400 c-bali">Русский&nbsp;&mdash; Родной</p>
+                        </li>
+                        <li class="more__full-item">
+                            <p class="more__full-title mb5 f16w500">Последнее место работы</p>
+                            <p class="more__full-desc f14w400 c-bali">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений
+                                муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
+                                Ленск&raquo;)<span class="more__full-data block f14w400 c-bali">01&nbsp;апреля 2020&nbsp;&mdash; 01&nbsp;июля 2020</span>
+                            </p>
+                        </li>
+                        <li class="more__full-item">
+                            <p class="more__full-title mb5 f16w500">Образование</p>
+                            <div class="more__full-desc">
+                                <div class="more__ed"><span class="more__ed-year f14w400 c-bali block mb15">2002</span>
+                                    <div class="more__ed-info"><p class="more__ed-univ mb5 f14w400">Московский
+                                        автомобильно-дорожный
+                                        государственный технический университет, Москва</p>
+                                        <span class="more__ed-fac f14w400 c-bali mb5 block">Инженер по&nbsp;специализации(электроэнергетика и&nbsp;электротехника)</span>
+                                    </div>
+                                </div>
+                                <div class="more__ed"><span class="more__ed-year f14w400 c-bali block mb15">1996</span>
+                                    <div class="more__ed-info"><p class="more__ed-univ mb5 f14w400">Иаановское
+                                        Пожарно-техническое училище</p>
+                                        <span class="more__ed-fac f14w400 c-bali mb5 block">Техник противопожарной защиты</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="more__full-item">
+                            <p class="more__full-title mb5 f16w500 mb10">Навыки</p>
+                            <div class="more__skills-wrapper">
+                                <div class="more__skills-tag mb5"><span class="more__skills-item f14w400 c-bali">Инженерные системы</span>
+                                </div>
+                                <div class="more__skills-tag mb5"><span class="more__skills-item f14w400 c-bali">Производство строительно-монтажных работ</span>
+                                </div>
+                                <div class="more__skills-tag mb5"><span class="more__skills-item f14w400 c-bali">Охрана труда и&nbsp;техника безопасности</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="../js/candidates-more.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

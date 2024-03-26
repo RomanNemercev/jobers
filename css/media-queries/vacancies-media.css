@@ -1,0 +1,185 @@
+@media (max-width: 768px) {
+    /*searchbar*/
+    .search-bar__container {
+        background-color: var(--color_space);
+        padding: 0 13px;
+    }
+
+    .search-bar__form {
+        display: none;
+    }
+
+    .search-bar__btn-wrap {
+        border-left: none;
+    }
+
+    .search-bar__btn-wrap:nth-child(4) {
+        border-right: none;
+    }
+
+    .nav__logo-icon {
+        width: 110.35px;
+        transform: translate(0, 0);
+    }
+
+    .search-bar__logo {
+        margin-right: auto;
+    }
+
+    .search-bar__btn {
+        background-color: transparent;
+    }
+
+    /*search-bar burger-menu*/
+    .search-bar__burger {
+        flex-shrink: 0;
+        padding: 18px 8.5px;
+    }
+
+    .toogle_bar {
+        top: 3px;
+        left: 0;
+        position: relative;
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+    }
+
+    .toogle__line {
+        position: absolute;
+        width: 100%;
+        height: 1.8px;
+        background-color: var(--color_white);
+    }
+
+    .toogle__line:nth-child(2) {
+        top: 10px;
+    }
+
+    .toogle__line:last-child {
+        top: 20px;
+    }
+
+    /*    sidebar*/
+    .nav__logo {
+        display: none;
+    }
+
+    .nav__container {
+        max-width: 100%;
+        width: 100%;
+        transform: translate(-100%, 62.22px);
+        background-color: var(--color_white);
+    }
+
+    .nav__links-caption {
+        color: var(--color_semi-space);
+    }
+
+    .nav__link-item {
+        color: var(--color_space);
+        opacity: 1;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .nav__links {
+        max-width: 240px;
+    }
+
+    .link-desktop::before {
+        content: url("../../img/media/icon-desktop-768.svg");
+    }
+
+    .link-vacancies::before {
+        content: url("../../img/media/icon-vacancies-768.svg");
+    }
+
+    .link-candidates::before {
+        content: url("../../img/media/icon-candidates-768.svg");
+    }
+
+    .link-messages::before {
+        content: url("../../img/media/icon-messages-768.svg");
+    }
+
+    .link-companies::before {
+        content: url("../../img/media/icon-companies-768.svg");
+    }
+
+    .link-documents::before {
+        content: url("../../img/media/icon-documents-768.svg");
+    }
+
+    .link-rates::before {
+        content: url("../../img/media/icon-rates-768.svg");
+    }
+
+    .link-support::before {
+        content: url("../../img/media/icon-support-768.svg");
+    }
+
+    .link-settings::before {
+        content: url("../../img/media/icon-settings-768.svg");
+    }
+/*main-content*/
+    .container {
+        padding: 77px 13px 0 13px;
+    }
+
+    .vacancies__header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 17px;
+    }
+
+    .add-values {
+        width: 100%;
+        text-align: center;
+    }
+
+    .add-values::before {
+        left: 38%;
+    }
+
+    .vacancies__values {
+        margin-bottom: 17px;
+    }
+
+    .vacancies__span {
+        padding-left: 35px;
+    }
+
+    .vacancies__filter-list {
+        margin-bottom: 7px;
+    }
+
+    .item__top {
+        flex-direction: column-reverse;
+    }
+
+    .item__check-icon::before {
+        top: -45px;
+    }
+
+    .item__check-icon::after {
+        top: -45px;
+    }
+
+    .item__right {
+        align-items: end;
+        flex-direction: column;
+    }
+
+    .item__btn {
+        display: none;
+    }
+
+    .item__bottom {
+        flex-direction: column;
+    }
+
+    .item__top-left {
+        overflow: visible;
+    }
+}
