@@ -80,7 +80,7 @@
                     <img src="../img/profile.svg" alt="Личный кабинет"
                          class="search-bar__acc">
                 </picture>
-                </button>
+            </button>
         </div>
         <div class="search-bar__burger toogle">
             <div class="toogle_bar">
@@ -129,7 +129,9 @@
                         </div>
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Заполнить для публикации</button>
-                            <nav class="item__burger-nav">
+                            <nav class="item__burger-nav" id="nav-active-768">
+                                <p class="item__title-768 f20w500">Водитель категории&nbsp;C</p>
+                                <button class="btn-reset item__btn-close" id="btn-droplist-close768"></button>
                                 <ul class="item__burger-list">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn btn-reset">Редактировать</button>
@@ -566,6 +568,7 @@
                             <div class="item__right-data">Сегодня в 19:13</div>
                         </div>
                     </div>
+                    <button class="btn-reset btn-two item__btn-768">Заполнить для публикации</button>
                     <div class="vacancies__item-popup" id="choose-del-modal">
                         <button class="btn-reset delete__btn"></button>
                         <div class="vacancies__item-popup__wrapper delete">
@@ -582,6 +585,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="vacancies__droplist-back"></div>
                 </li>
                 <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
@@ -602,6 +606,8 @@
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Посмотреть перед публикацией</button>
                             <nav class="item__burger-nav item__nav-two">
+                                <p class="item__title-768 f20w500">Водитель категории&nbsp;C</p>
+                                <button class="btn-reset item__btn-close" id="btn-droplist-close768-second"></button>
                                 <ul class="item__burger-list list-two">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-two btn-reset">Редактировать</button>
@@ -653,6 +659,7 @@
                             <div class="item__right-data">Минимальный с автообновлением</div>
                         </div>
                     </div>
+                    <button class="btn-reset btn-two item__btn-768">Посмотреть перед публикацией</button>
                 </li>
                 <li class="vacancies__list-item list-reset items">
                     <div class="item__top">
@@ -672,6 +679,8 @@
                         </div>
                         <div class="item__right">
                             <nav class="item__burger-nav item__nav-third">
+                                <p class="item__title-768 f20w500">Водитель категории&nbsp;C</p>
+                                <button class="btn-reset item__btn-close" id="btn-droplist-close768-third"></button>
                                 <ul class="item__burger-list list-third">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-third btn-reset">Редактировать
@@ -751,6 +760,8 @@
                         </div>
                         <div class="item__right">
                             <nav class="item__burger-nav item__nav__active-one">
+                                <p class="item__title-768 f20w500">Водитель категории&nbsp;C</p>
+                                <button class="btn-reset item__btn-close" id="active-droplist-close768-first"></button>
                                 <ul class="item__burger-list item__list__active-one">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__active__btn-one btn-reset">Редактировать
@@ -843,7 +854,9 @@
                         </div>
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Продлить срок вакансии</button>
-                            <nav class="item__burger-nav item__nav__archive-one">
+                            <nav class="item__burger-nav item__nav__archive-one" id="vacancies-active-two">
+                                <p class="item__title-768 f20w500">Водитель категории&nbsp;C</p>
+                                <button class="btn-reset item__btn-close" id="active-droplist-close768-second"></button>
                                 <ul class="item__burger-list item__list__active-two">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__active__btn-two btn-reset">Редактировать
@@ -922,6 +935,8 @@
                     <span class="vacancies__filter-check" id="hide-elements"></span>
                     <p class="vacancies__filter-sum"><span class="vacancies__filter-span">10</span> вакансий
                     </p>
+                    <button class="btn-reset vacancies__btn-768 f14w400" id="vacancies-popup-more">Выбрать действие
+                    </button>
                     <div class="vacancies__select-box">
                         <select name="select" id="some" class="vacancies__select-wrapper">
                             <option value="">Выберите действие</option>
@@ -931,6 +946,20 @@
                     </div>
                 </div>
             </div>
+            <div class="vacancies__popup-768" id="vacancies-popup-options">
+                <p class="vacancies__popup-title f20w500">Выбрано вакансий: <span
+                        class="vacancies__popup-span">10</span></p>
+                <button class="btn-reset vacancies__popup-btn bg-fix" id="popup-btn-close-first"></button>
+                <ul class="vacancies__popup-list">
+                    <li class="vacancies__popup-item">
+                        <button class="btn-reset vacancies__btn-item f15w400">Удалить</button>
+                    </li>
+                    <li class="vacancies__popup-item">
+                        <button class="btn-reset vacancies__btn-item f15w400">В архив</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="vacancies__options-back"></div>
         </div>
         <div class="vacancies__content" data-target="two">
             <div class="vacancies__filter-list">
@@ -958,7 +987,9 @@
                         </div>
                         <div class="item__right">
                             <button class="btn-reset btn-two item__btn">Опубликовать повторно</button>
-                            <nav class="item__burger-nav item__nav__archive-one">
+                            <nav class="item__burger-nav item__nav__archive-one" id="vacancies-archive-one">
+                                <p class="item__title-768 f20w500">Водитель категории&nbsp;C</p>
+                                <button class="btn-reset item__btn-close" id="archive-droplist-close768-first"></button>
                                 <ul class="item__burger-list item__list__archive-one">
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__archive__btn-one btn-reset">Разместить
@@ -1038,6 +1069,7 @@
                             <div class="item__right-data">Минимальный с автообновлением</div>
                         </div>
                     </div>
+                    <button class="btn-reset btn-two item__btn-768">Опубликовать повторно</button>
                 </li>
             </ul>
             <div class="vacancies__filter" id="popupFilterArchive">
@@ -1053,6 +1085,7 @@
                     </div>
                 </div>
             </div>
+            <div class="vacancies__archive-back"></div>
         </div>
         <div class="vacancies__filter-popup" id="choose-del-modal-filter">
             <button class="btn-reset delete__btn"></button>

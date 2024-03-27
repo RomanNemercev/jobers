@@ -41,16 +41,31 @@ let burger = document.querySelector('.item__burger');
 let burgerList = document.querySelector('.item__burger-list');
 let inWorkDotsOne = document.querySelectorAll('.dot-inwork-one');
 let menuLinks = document.querySelectorAll('.item__burger-btn');
+let burgerNav = document.getElementById('nav-active-768');
+let btnClose = document.getElementById('btn-droplist-close768');
 
 try {
     // код...
     burger.addEventListener('click',
         function () {
             burgerList.classList.toggle('item__burger-list--active');
+            burgerNav.classList.toggle('item__burger-nav--active');
+            document.querySelector('.vacancies__droplist-back').classList.add('vacancies__droplist-back--active');
+            document.body.classList.toggle('scroll-toggle');
             inWorkDotsOne.forEach(function (el) {
                 el.classList.toggle('item__burger-dot--active')
             })
         })
+
+    btnClose.addEventListener('click', function () {
+        burgerList.classList.remove('item__burger-list--active');
+        burgerNav.classList.remove('item__burger-nav--active');
+        inWorkDotsOne.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+        document.body.classList.toggle('scroll-toggle');
+        dropListBack.classList.remove('vacancies__droplist-back--active');
+    })
 } catch (err) {
     // обработка ошибки
     console.log('ошибка обработки первого дроплиста')
@@ -61,6 +76,9 @@ menuLinks.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerList.classList.remove('item__burger-list--active');
+            burgerNav.classList.remove('item__burger-nav--active');
+            document.body.classList.remove('scroll-toggle');
+            dropListBack.classList.remove('vacancies__droplist-back--active');
             inWorkDotsOne.forEach(function (el) {
                 el.classList.remove('item__burger-dot--active')
             })
@@ -72,16 +90,31 @@ let burgerTwo = document.querySelector('.item-two');
 let burgerListTwo = document.querySelector('.list-two');
 let inWorkDotsTwo = document.querySelectorAll('.dot-inwork-two');
 let menuLinksTwo = document.querySelectorAll('.item__btn-two');
+let burgerNavSecond = document.querySelector('.item__nav-two');
+let btnCloseSecond = document.getElementById('btn-droplist-close768-second');
 
 try {
     // код...
     burgerTwo.addEventListener('click',
         function () {
             burgerListTwo.classList.toggle('item__burger-list--active');
+            burgerNavSecond.classList.toggle('item__burger-nav--active');
+            dropListBack.classList.add('vacancies__droplist-back--active');
+            document.body.classList.toggle('scroll-toggle');
             inWorkDotsTwo.forEach(function (el) {
                 el.classList.toggle('item__burger-dot--active')
             })
         })
+
+    btnCloseSecond.addEventListener('click', function () {
+        burgerListTwo.classList.remove('item__burger-list--active');
+        burgerNavSecond.classList.remove('item__burger-nav--active');
+        inWorkDotsTwo.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+        document.body.classList.toggle('scroll-toggle');
+        dropListBack.classList.remove('vacancies__droplist-back--active');
+    })
 } catch (err) {
     // обработка ошибки
     console.log('ошибка обработки второго дроплиста')
@@ -91,6 +124,9 @@ menuLinksTwo.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerListTwo.classList.remove('item__burger-list--active');
+            burgerNavSecond.classList.remove('item__burger-nav--active');
+            document.body.classList.remove('scroll-toggle');
+            dropListBack.classList.remove('vacancies__droplist-back--active');
             inWorkDotsTwo.forEach(function (el) {
                 el.classList.remove('item__burger-dot--active')
             })
@@ -102,17 +138,30 @@ let burgerThird = document.querySelector('.item-third');
 let burgerListThird = document.querySelector('.list-third');
 let inWorkDotsThree = document.querySelectorAll('.dot-inwork-three');
 let menuLinksThird = document.querySelectorAll('.item__btn-third');
+let burgerNavThird = document.querySelector('.item__nav-third');
+let btnCloseThird = document.getElementById('btn-droplist-close768-third');
 
 try {
     // код...
     burgerThird.addEventListener('click',
         function () {
             burgerListThird.classList.toggle('item__burger-list--active');
+            burgerNavThird.classList.toggle('item__burger-nav--active');
+            dropListBack.classList.add('vacancies__droplist-back--active');
+            document.body.classList.toggle('scroll-toggle');
             inWorkDotsThree.forEach(function (el) {
                 el.classList.toggle('item__burger-dot--active')
             })
         })
-
+    btnCloseThird.addEventListener('click', function () {
+        burgerListThird.classList.remove('item__burger-list--active');
+        burgerNavThird.classList.remove('item__burger-nav--active');
+        inWorkDotsThree.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
+        document.body.classList.toggle('scroll-toggle');
+        dropListBack.classList.remove('vacancies__droplist-back--active');
+    })
 } catch (err) {
     // обработка ошибки
     console.log('ошибка обработки третьего дроплиста')
@@ -122,6 +171,9 @@ menuLinksThird.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerListThird.classList.remove('item__burger-list--active');
+            burgerNavThird.classList.remove('item__burger-nav--active');
+            document.body.classList.remove('scroll-toggle');
+            dropListBack.classList.remove('vacancies__droplist-back--active');
             inWorkDotsThree.forEach(function (el) {
                 el.classList.remove('item__burger-dot--active')
             })
@@ -134,16 +186,29 @@ let burgerActiveOne = document.querySelector('.item__active-one');
 let burgerActiveListOne = document.querySelector('.item__list__active-one');
 let inActiveDotsOne = document.querySelectorAll('.dot-active-one');
 let menuActiveLinksOne = document.querySelectorAll('.item__active__btn-one');
-
+let burgerActiveFirst = document.querySelector('.item__nav__active-one');
+let activeCloseFirst = document.getElementById('active-droplist-close768-first');
 
 try {
     burgerActiveOne.addEventListener('click',
         function () {
             burgerActiveListOne.classList.toggle('item__burger-list--active');
+            burgerActiveFirst.classList.toggle('item__burger-nav--active');
+            dropListBack.classList.add('vacancies__droplist-back--active');
+            document.body.classList.toggle('scroll-toggle');
             inActiveDotsOne.forEach(function (el) {
                 el.classList.toggle('item__burger-dot--active')
             })
         })
+    activeCloseFirst.addEventListener('click', function () {
+        burgerActiveListOne.classList.remove('item__burger-list--active');
+        burgerActiveFirst.classList.remove('item__burger-nav--active');
+        inActiveDotsOne.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
+        document.body.classList.toggle('scroll-toggle');
+        dropListBack.classList.remove('vacancies__droplist-back--active');
+    })
 } catch (err) {
     console.log('ошибка обработки четвертого дроплиста')
 }
@@ -152,6 +217,9 @@ menuActiveLinksOne.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerActiveListOne.classList.remove('item__burger-list--active');
+            burgerActiveFirst.classList.remove('item__burger-nav--active');
+            document.body.classList.remove('scroll-toggle');
+            dropListBack.classList.remove('vacancies__droplist-back--active');
             inActiveDotsOne.forEach(function (el) {
                 el.classList.remove('item__burger-dot--active')
             })
@@ -163,15 +231,29 @@ let burgerActiveTwo = document.querySelector('.item__active-two');
 let burgerActiveListTwo = document.querySelector('.item__list__active-two');
 let inActiveDotsTwo = document.querySelectorAll('.dot-active-two');
 let menuActiveLinksTwo = document.querySelectorAll('.item__active__btn-two');
+let burgerActiveSecond = document.getElementById('vacancies-active-two')
+let activeCloseSecond = document.getElementById('active-droplist-close768-second');
 
 try {
     burgerActiveTwo.addEventListener('click',
         function () {
             burgerActiveListTwo.classList.toggle('item__burger-list--active');
+            burgerActiveSecond.classList.toggle('item__burger-nav--active');
+            dropListBack.classList.add('vacancies__droplist-back--active');
+            document.body.classList.toggle('scroll-toggle');
             inActiveDotsTwo.forEach(function (el) {
                 el.classList.toggle('item__burger-dot--active')
             })
         })
+    activeCloseSecond.addEventListener('click', function () {
+        burgerActiveListTwo.classList.remove('item__burger-list--active');
+        burgerActiveSecond.classList.remove('item__burger-nav--active');
+        inActiveDotsTwo.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
+        document.body.classList.toggle('scroll-toggle');
+        dropListBack.classList.remove('vacancies__droplist-back--active');
+    })
 } catch (err) {
     console.log('ошибка обработки пятого дроплиста')
 }
@@ -180,6 +262,9 @@ menuActiveLinksTwo.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerActiveListTwo.classList.remove('item__burger-list--active');
+            burgerActiveSecond.classList.remove('item__burger-nav--active');
+            document.body.classList.remove('scroll-toggle');
+            dropListBack.classList.remove('vacancies__droplist-back--active');
             inActiveDotsTwo.forEach(function (el) {
                 el.classList.remove('item__burger-dot--active')
             })
@@ -192,15 +277,29 @@ let burgerArchiveOne = document.querySelector('.item__archive-one');
 let burgerListArchiveOne = document.querySelector('.item__list__archive-one');
 let inArchiveDotsOne = document.querySelectorAll('.dot-archive-one');
 let menuLinksArchiveOne = document.querySelectorAll('.item__archive__btn-one');
+let burgerArchiveFirst = document.getElementById('vacancies-archive-one')
+let archiveCloseFirst = document.getElementById('archive-droplist-close768-first');
 
 try {
     burgerArchiveOne.addEventListener('click',
         function () {
             burgerListArchiveOne.classList.toggle('item__burger-list--active');
+            burgerArchiveFirst.classList.toggle('item__burger-nav--active');
+            dropListArchiveBack.classList.add('vacancies__archive-back--active');
+            document.body.classList.toggle('scroll-toggle');
             inArchiveDotsOne.forEach(function (el) {
                 el.classList.toggle('item__burger-dot--active')
             })
         })
+    archiveCloseFirst.addEventListener('click', function () {
+        burgerListArchiveOne.classList.remove('item__burger-list--active');
+        burgerArchiveFirst.classList.remove('item__burger-nav--active');
+        inArchiveDotsOne.forEach(function (el) {
+            el.classList.toggle('item__burger-dot--active')
+        })
+        document.body.classList.toggle('scroll-toggle');
+        dropListArchiveBack.classList.remove('vacancies__droplist-back--active');
+    })
 } catch (err) {
     console.log('ошибка обработки шестого дроплиста')
 }
@@ -209,6 +308,9 @@ menuLinksArchiveOne.forEach(function (el) {
     el.addEventListener('click',
         function () {
             burgerListArchiveOne.classList.remove('item__burger-list--active');
+            burgerArchiveFirst.classList.remove('item__burger-nav--active');
+            document.body.classList.remove('scroll-toggle');
+            dropListArchiveBack.classList.remove('vacancies__droplist-back--active');
             inArchiveDotsOne.forEach(function (el) {
                 el.classList.remove('item__burger-dot--active')
             })
@@ -278,6 +380,7 @@ arrActiveValues.forEach(function (el) {
         } else {
             inActiveFilter.checked = false;
             ActiveFilter.checked = false;
+            morePopupSpace.classList.remove('vacancies__popup-768--active');
         }
     })
 })
@@ -294,6 +397,7 @@ try {
             activeValueFirst.checked = false;
             activeValueSecond.checked = false;
             activeValueThird.checked = false;
+            morePopupSpace.classList.remove('vacancies__popup-768--active');
         }
     })
 } catch {
@@ -310,6 +414,7 @@ try {
             popupFilterActive.classList.remove('vacancies__filter--active');
             activeValueFourth.checked = false;
             activeValueFifth.checked = false;
+            morePopupSpace.classList.remove('vacancies__popup-768--active');
         }
     })
 } catch {
@@ -351,7 +456,6 @@ try {
 } catch {
     console.log('Не сработал чекбокс на "Список вакансий"')
 }
-
 
 try {
     arrArchiveValues.forEach(function (el) {
@@ -420,6 +524,7 @@ let btnDelDrop = document.querySelectorAll('.choose-del');
 btnDelDrop.forEach(function (el) {
     el.addEventListener('click', function () {
         document.getElementById('choose-del-modal').classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
         document.body.classList.toggle('stop-scroll');
     })
 })
@@ -716,5 +821,73 @@ let newDropList = document.getElementById('new-droplist');
 newDropListItem.forEach(function (el) {
     el.addEventListener('click', function () {
         newDropList.classList.remove('droplist_active');
+    })
+})
+
+//move sidebar
+let burgerTab = document.querySelector('.search-bar__burger');
+let sideBar = document.querySelector('.nav__container');
+
+burgerTab.addEventListener('click', function () {
+    burgerTab.classList.toggle('search-bar__burger--active');
+    sideBar.classList.toggle('nav__container--active');
+    document.body.classList.toggle('stop-scroll');
+})
+
+//more pupup options till 768px
+let morePopupBtn = document.getElementById('vacancies-popup-more');
+let morePopupSpace = document.getElementById('vacancies-popup-options');
+let popupBtnCloseFirst = document.getElementById('popup-btn-close-first');
+let optionsBack = document.querySelector('.vacancies__options-back');
+
+morePopupBtn.addEventListener('click', function () {
+    morePopupSpace.classList.add('vacancies__popup-768--active');
+    optionsBack.classList.add('vacancies__options-back--active');
+})
+
+optionsBack.addEventListener('click', function () {
+    morePopupSpace.classList.remove('vacancies__popup-768--active');
+    optionsBack.classList.remove('vacancies__options-back--active');
+})
+popupBtnCloseFirst.addEventListener('click', function () {
+    morePopupSpace.classList.remove('vacancies__popup-768--active');
+    optionsBack.classList.remove('vacancies__options-back--active');
+})
+
+//closing droplist in 768
+let dropListBack = document.querySelector('.vacancies__droplist-back');
+let dropListArchiveBack = document.querySelector('.vacancies__archive-back');
+
+dropListBack.addEventListener('click', function () {
+    burgerNav.classList.remove('item__burger-nav--active');
+    burgerNavSecond.classList.remove('item__burger-nav--active');
+    burgerNavThird.classList.remove('item__burger-nav--active');
+    burgerActiveFirst.classList.remove('item__burger-nav--active');
+    burgerActiveSecond.classList.remove('item__burger-nav--active');
+    dropListBack.classList.remove('vacancies__droplist-back--active');
+    document.body.classList.toggle('scroll-toggle');
+    inWorkDotsOne.forEach(function (el) {
+        el.classList.remove('item__burger-dot--active')
+    })
+    inWorkDotsTwo.forEach(function (el) {
+        el.classList.remove('item__burger-dot--active')
+    })
+    inWorkDotsThree.forEach(function (el) {
+        el.classList.remove('item__burger-dot--active')
+    })
+    inActiveDotsOne.forEach(function (el) {
+        el.classList.remove('item__burger-dot--active')
+    })
+    inActiveDotsTwo.forEach(function (el) {
+        el.classList.remove('item__burger-dot--active')
+    })
+})
+
+dropListArchiveBack.addEventListener('click', function () {
+    burgerArchiveFirst.classList.remove('item__burger-nav--active');
+    dropListArchiveBack.classList.remove('vacancies__archive-back--active');
+    document.body.classList.toggle('scroll-toggle');
+    inArchiveDotsOne.forEach(function (el) {
+        el.classList.remove('item__burger-dot--active')
     })
 })
