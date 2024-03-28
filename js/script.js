@@ -525,7 +525,6 @@ btnDelDrop.forEach(function (el) {
     el.addEventListener('click', function () {
         document.getElementById('choose-del-modal').classList.add('vacancies__item-popup--open');
         document.body.classList.toggle('stop-scroll');
-        document.body.classList.toggle('stop-scroll');
     })
 })
 
@@ -890,4 +889,39 @@ dropListArchiveBack.addEventListener('click', function () {
     inArchiveDotsOne.forEach(function (el) {
         el.classList.remove('item__burger-dot--active')
     })
+})
+
+//добавление окна добавить в архив
+let btnSendArchive = document.querySelectorAll('.send-archive');
+
+btnSendArchive.forEach(function (el) {
+    el.addEventListener('click', function () {
+        document.querySelector('.vacancies__archive-popup').classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
+    })
+})
+
+document.querySelector("#to-archive .vacancies__send-archive").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("to-archive").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
+    }
+});
+
+document.getElementById('to-archive-btn').addEventListener('click', function () {
+    document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+})
+
+document.querySelector('.archive__no').addEventListener('click', function () {
+    document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
 })

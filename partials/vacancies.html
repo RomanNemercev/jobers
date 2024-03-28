@@ -772,7 +772,8 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">В архив
+                                        <button class="item__burger-btn item__active__btn-one btn-reset send-archive">В
+                                            архив
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
@@ -790,7 +791,8 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">Настройки
+                                        <button class="item__burger-btn item__active__btn-one btn-reset auto-setting">
+                                            Настройки
                                             автоотбора
                                         </button>
                                     </li>
@@ -867,7 +869,8 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">В архив
+                                        <button class="item__burger-btn item__active__btn-two btn-reset send-archive">В
+                                            архив
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
@@ -885,7 +888,8 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">Настройки
+                                        <button class="item__burger-btn item__active__btn-two btn-reset auto-setting">
+                                            Настройки
                                             автоотбора
                                         </button>
                                     </li>
@@ -1092,7 +1096,6 @@
             <div class="vacancies__filter-popup__wrapper delete">
                 <div class="delete__container">
                     <div class="delete__title">Удаление вакансий</div>
-                    <button class="btn-reset delete__btn"></button>
                     <div class="delete__attent">Выделенные вакансии <span class="delete__amount">(10)</span>
                         будут удалены. Вы&nbsp;действительно
                         хотите это сделать?
@@ -1100,6 +1103,38 @@
                     <div class="delete__choose">
                         <button class="btn-reset delete__yes">Удалить</button>
                         <button class="btn-reset delete__no">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vacancies__archive-popup" id="to-archive">
+            <button class="btn-reset delete__btn" id="to-archive-btn"></button>
+            <div class="vacancies__send-archive archive">
+                <div class="archive__container">
+                    <div class="archive__title">Архивация вакансии</div>
+                    <div class="archive__attent">Любую архивную вакансию можно разместить повторно. Повторное размещение
+                        приравнивается к&nbsp;новой публикации.
+                    </div>
+                    <div class="archive__choose">
+                        <button class="btn-reset archive__yes btn">Отправить в архив</button>
+                        <button class="btn-reset archive__no btn-cancel">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vacancies__multiarchive-popup" id="to-multiarchive">
+            <button class="btn-reset delete__btn" id="to-multiarchive-btn"></button>
+            <div class="vacancies__send-multiarchive archive">
+                <div class="multiarchive__container">
+                    <div class="multiarchive__title">Архивация вакансий <span class="multiarchive__amount">(10)</span>
+                    </div>
+                    <div class="multiarchive__attent">Любую архивную вакансию можно разместить повторно. Повторное
+                        размещение
+                        приравнивается к&nbsp;новой публикации.
+                    </div>
+                    <div class="multiarchive__choose">
+                        <button class="btn-reset multiarchive__yes btn">Отправить в архив</button>
+                        <button class="btn-reset multiarchive__no btn-cancel">Отмена</button>
                     </div>
                 </div>
             </div>
