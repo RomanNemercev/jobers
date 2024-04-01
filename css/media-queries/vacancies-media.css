@@ -265,30 +265,25 @@
     }
 
     .item__burger-nav {
-        height: 100%;
+        display: block;
         position: fixed;
-        width: 100vw;
-        background-color: var(--color_space);
-        border-radius: 25px 25px 0 0;
-        left: 0;
+        width: 100%;
         z-index: 3;
-        top: 58%;
-        transform: translateY(100%);
-        transition: transform .3s ease;
-    }
-
-    .item__nav__active-one {
-        top: 53%;
-    }
-
-    #vacancies-active-two {
-        top: 53%;
+        padding: 25px 13px;
+        padding-bottom: 13px;
+        border-radius: 25px 25px 0 0;
+        background-color: var(--color_space);
+        left: 0;
+        min-height: 0;
+        top: auto;
+        right: auto;
+        bottom: -415px;
+        transition: bottom .3s ease;
     }
 
     .item__burger-list {
-        width: calc(100% - 25px);
-        margin: 0 auto;
-        transform: translate(0%, 6px);
+        width: 100%;
+        transform: translate(0);
         background-color: var(--color_space);
     }
 
@@ -302,16 +297,17 @@
 
     .item__burger-btn {
         color: var(--color_white);
+        padding: 11px 0 11px 15px;
     }
 
     .item__burger-nav--active {
-        transform: translateY(0%);
+        bottom: 0;
     }
 
     .item__title-768 {
         display: block;
         color: var(--color_white);
-        padding: 25px 13px;
+        margin-bottom: 25px;
     }
 
     .item__btn-close {
@@ -327,7 +323,12 @@
 
     .vacancies__filter {
         z-index: 1;
-        width: 100%;
+        width: calc(100% - 26px);
+        padding: 17px 13px;
+    }
+
+    .vacancies__filter-check {
+        margin-right: 2px;
     }
 
     .vacancies__filter--active {
@@ -346,11 +347,13 @@
     .vacancies__popup-768 {
         display: block;
         position: fixed;
-        bottom: -30%;
-        background-color: var(--color_space);
+        bottom: -200px;
         width: 100%;
         z-index: 3;
+        padding: 25px 13px;
+        padding-bottom: 13px;
         border-radius: 25px 25px 0 0;
+        background-color: var(--color_space);
         transition: bottom .3s ease;
     }
 
@@ -360,7 +363,7 @@
 
     .vacancies__popup-title {
         color: var(--color_white);
-        padding: 25px 13px;
+        margin-bottom: 25px;
     }
 
     .vacancies__btn-item {
@@ -372,16 +375,13 @@
         position: absolute;
         width: 25px;
         height: 25px;
-        right: 25px;
+        right: 26px;
         top: 25px;
         background-image: url("../../img/x-25.svg");
     }
 
     .vacancies__popup-list {
-        width: calc(100% - 26px);
-        margin: 0 auto;
         background-color: var(--color_space);
-        padding-bottom: 13px;
     }
 
     .vacancies__popup-item {
@@ -428,11 +428,6 @@
     .vacancies__archive-back--active {
         visibility: visible;
         opacity: 1;
-    }
-
-    .item__nav__archive-one {
-        height: 100%;
-        top: 48%;
     }
 
     .item__burger {
@@ -504,6 +499,10 @@
         margin-bottom: 13px;
     }
 
+    .item__responses, .item__choice, .item__views, .item__sites, .item__ended {
+        border-right: none
+    }
+
     .vacancies__list-item:last-of-type {
         margin-bottom: 18px;
     }
@@ -530,5 +529,41 @@
 
     .item__ended {
         padding: 0;
+    }
+
+    .vacancies__item-popup__wrapper {
+        max-width: 349px;
+    }
+
+    .vacancies__filter-popup__wrapper {
+        max-width: 349px;
+    }
+    
+    .delete__container {
+        padding-top: 26px;
+    }
+
+    .vacancies__filter-popup .delete__container {
+        padding-top: 26px;
+    }
+
+    .vacancies__filter-popup .delete__title {
+        margin-bottom: 9px;
+    }
+
+    .vacancies__send-archive {
+        max-width: 349px;
+    }
+
+    .archive__attent {
+        margin-bottom: 44px;
+    }
+
+    .vacancies__send-multiarchive {
+        max-width: 349px;
+    }
+
+    .multiarchive__container {
+        padding-top: 27px;
     }
 }

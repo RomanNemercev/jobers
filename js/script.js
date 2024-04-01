@@ -357,33 +357,48 @@ let arrArchiveValues = [archiveValueFirst];
 
 let filterActiveUnActive = document.getElementById('hide-elements');
 let filterArchiveUnActive = document.getElementById('hide-filter-archive');
-filterActiveUnActive.addEventListener('click', function () {
-    arrActiveValues.forEach(function (el) {
-        el.checked = false;
-        inActiveFilter.checked = false;
-        ActiveFilter.checked = false;
-        popupFilterActive.classList.remove('vacancies__filter--active');
-    })
-})
 
-filterArchiveUnActive.addEventListener('click', function () {
-    arrArchiveValues.forEach(function (el) {
-        el.checked = false;
-        ArchiveFilter.checked = false;
-        popupFilterArchive.classList.remove('vacancies__filter--active');
-    })
-})
-
-arrActiveValues.forEach(function (el) {
-    el.addEventListener('change', function (event) {
-        if (event.currentTarget.checked) {
-        } else {
+try {
+    filterActiveUnActive.addEventListener('click', function () {
+        arrActiveValues.forEach(function (el) {
+            el.checked = false;
             inActiveFilter.checked = false;
             ActiveFilter.checked = false;
-            morePopupSpace.classList.remove('vacancies__popup-768--active');
-        }
+            popupFilterActive.classList.remove('vacancies__filter--active');
+        })
     })
-})
+} catch {
+    console.log("Не найден чекбок для снятия активных фильтров попапа(тот что снизу появляется)")
+}
+
+try {
+    filterArchiveUnActive.addEventListener('click', function () {
+        arrArchiveValues.forEach(function (el) {
+            el.checked = false;
+            ArchiveFilter.checked = false;
+            popupFilterArchive.classList.remove('vacancies__filter--active');
+        })
+    })
+} catch {
+    console.log("Не найден чекбок для снятия архивных фильтров попапа(тот что снизу появляется)")
+}
+
+
+try {
+    arrActiveValues.forEach(function (el) {
+        el.addEventListener('change', function (event) {
+            if (event.currentTarget.checked) {
+            } else {
+                inActiveFilter.checked = false;
+                ActiveFilter.checked = false;
+                morePopupSpace.classList.remove('vacancies__popup-768--active');
+            }
+        })
+    })
+} catch {
+    console.log("Страница Вакансии. Не отработан блок вывода значений активных вакансий.")
+}
+
 
 try {
     inActiveFilter.addEventListener('change', function (event) {
@@ -436,12 +451,17 @@ try {
 }
 
 //за отсутсвием массива значений(одного элемента), создаю ф-ию без forEach
-archiveValueFirst.addEventListener('change', function (event) {
-    if (event.currentTarget.checked) {
-    } else {
-        ArchiveFilter.checked = false;
-    }
-})
+
+try {
+    archiveValueFirst.addEventListener('change', function (event) {
+        if (event.currentTarget.checked) {
+        } else {
+            ArchiveFilter.checked = false;
+        }
+    })
+} catch {
+    console.log("Страница Вакансии. Не отработан блок вывода значений списка архивных вакансий.")
+}
 
 try {
     arrActiveValues.forEach(function (el) {
@@ -528,36 +548,40 @@ btnDelDrop.forEach(function (el) {
     })
 })
 
-document.getElementById('modal-close-window').addEventListener('click', function () {
-    document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-})
-
-document.getElementById('choose-del-btn').addEventListener('click', function () {
-    document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-})
-
-document.getElementById('modal-yes-window').addEventListener('click', function () {
-    document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-})
-
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        document.getElementById("choose-del-modal").classList.remove("vacancies__item-popup--open");
+try {
+    document.getElementById('modal-close-window').addEventListener('click', function () {
+        document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
         document.body.classList.remove('stop-scroll');
-    }
-});
+    })
 
-document.querySelector("#choose-del-modal .vacancies__item-popup__wrapper").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("choose-del-modal").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-});
+    document.getElementById('choose-del-btn').addEventListener('click', function () {
+        document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+
+    document.getElementById('modal-yes-window').addEventListener('click', function () {
+        document.getElementById('choose-del-modal').classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById("choose-del-modal").classList.remove("vacancies__item-popup--open");
+            document.body.classList.remove('stop-scroll');
+        }
+    });
+
+    document.querySelector("#choose-del-modal .vacancies__item-popup__wrapper").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("choose-del-modal").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    });
+} catch {
+    console.log("Не найден блок доп.элементов для отработки события удаления окна предупреждения.")
+}
 
 //     modal for btn-del in filter popup
 // ещё одна попытка привязать кнопку к id списка
@@ -590,26 +614,46 @@ try {
 }
 
 // созданиние списка для кнопка "определенные вакансии в блоке автоотбора"
-let radioSpecific = document.getElementById('specific-vacancy');
-let specificList = document.getElementById('specific-vacancy-wrapper');
-let radioSpecificParent = radioSpecific.parentNode;
+try {
+    let radioSpecific = document.getElementById('specific-vacancy'); //дубликат связан с добавление кнопки
+//автоотбора в страницу кандидатов
+    let specificList = document.getElementById('specific-vacancy-wrapper');
+    let radioSpecificParent = radioSpecific.parentNode;
+
+} catch {
+    console.log("Не удалось найти блок определенных вакансий на странице вакансии в окне авоотбора.")
+}
 
 let arrGlobal = [document.getElementById('current-vacancy'), document.getElementById('all-vacancies')];
 
-radioSpecific.addEventListener('click', function () {
-    specificList.classList.add('specific--visible');
-})
 
-arrGlobal.forEach(function (el) {
-    el.addEventListener('click', function () {
-        specificList.classList.remove('specific--visible');
-        radioSpecificParent.classList.remove('specific--style');
+try {
+    radioSpecific.addEventListener('click', function () {
+        specificList.classList.add('specific--visible');
     })
-})
+} catch {
+    console.log("Не удалось найти кнопку отображения определенных вакансий в окне автоотбора, на странице вакансий.")
+}
 
-radioSpecific.addEventListener('click', function () {
-    radioSpecificParent.classList.add('specific--style');
-})
+try {
+    arrGlobal.forEach(function (el) {
+        el.addEventListener('click', function () {
+            specificList.classList.remove('specific--visible');
+            radioSpecificParent.classList.remove('specific--style');
+        })
+    })
+} catch {
+    console.log("Не удалось определить элементы стилей для окна определенных вакансий в автоотборе.")
+}
+
+
+try {
+    radioSpecific.addEventListener('click', function () {
+        radioSpecificParent.classList.add('specific--style');
+    })
+} catch {
+    console.log("Не найден элемент стиля определенных вакансий. Страница Вакансии.")
+}
 
 // валидация main-name в автоотборе
 // первый способ работает только с определенными вложенными значениями тексt. В этом случае это @
@@ -656,50 +700,54 @@ autoSetBtn.forEach(function (el) {
     })
 })
 
-document.getElementById('popup-first-close').addEventListener('click', function () {
-    document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-})
+try {
+    document.getElementById('popup-first-close').addEventListener('click', function () {
+        document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
 
-document.getElementById('add-new-auto').addEventListener('click', function () {
-    document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
-    document.getElementById('popup-auto-create').classList.add('vacancies__item-popup--open');
-})
+    document.getElementById('add-new-auto').addEventListener('click', function () {
+        document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+        document.getElementById('popup-auto-create').classList.add('vacancies__item-popup--open');
+    })
 
-document.querySelector('.new__close').addEventListener('click', function () {
-    document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
-    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-})
-
-document.querySelector('.new__btn-cancel').addEventListener('click', function () {
-    document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
-    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-})
-
-document.querySelector("#auto-popup-first .item__popup-wrapper").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("auto-popup-first").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-});
-
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
+    document.querySelector('.new__close').addEventListener('click', function () {
         document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
         document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-    }
-});
+    })
 
-document.querySelector("#popup-auto-create .item__popup-wrapper").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("popup-auto-create").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-});
+    document.querySelector('.new__btn-cancel').addEventListener('click', function () {
+        document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
+        document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+    })
+
+    document.querySelector("#auto-popup-first .item__popup-wrapper").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("auto-popup-first").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById('popup-auto-create').classList.remove('vacancies__item-popup--open');
+            document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+        }
+    });
+
+    document.querySelector("#popup-auto-create .item__popup-wrapper").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("popup-auto-create").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    });
+} catch {
+    console.log("Не найден блок элементов для окна добавления нового автоотбора.")
+}
 
 let popupEditBtn = document.querySelectorAll('.auto__edit');
 
@@ -711,91 +759,106 @@ popupEditBtn.forEach(function (el) {
     })
 })
 
-document.querySelector('.edit__close').addEventListener('click', function () {
-    document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
-    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-})
-
-document.querySelector('.edit__cancel').addEventListener('click', function () {
-    document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
-    document.getElementById('popup-auto-create').classList.add('vacancies__item-popup--open');
-})
-
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
+try {
+    document.querySelector('.edit__close').addEventListener('click', function () {
         document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
         document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-    }
-});
-
-document.querySelector("#popup-edit-desc .item__popup-wrapper").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("popup-edit-desc").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-});
-
-document.querySelectorAll('.auto__delete').forEach(function (el) {
-    el.addEventListener('click', function () {
-        document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
-        document.getElementById('popup-del-quest').classList.add('vacancies__item-popup--open');
-        document.body.classList.toggle('stop-scroll');
     })
-})
 
-document.querySelector('.quest__btn-close').addEventListener('click', function () {
-    document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
-    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-})
+    document.querySelector('.edit__cancel').addEventListener('click', function () {
+        document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
+        document.getElementById('popup-auto-create').classList.add('vacancies__item-popup--open');
+    })
 
-document.querySelector('.quest__btn-cancel').addEventListener('click', function () {
-    document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
-    document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-})
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById('popup-edit-desc').classList.remove('vacancies__item-popup--open');
+            document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+        }
+    });
 
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
+    document.querySelector("#popup-edit-desc .item__popup-wrapper").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("popup-edit-desc").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    });
+
+    document.querySelectorAll('.auto__delete').forEach(function (el) {
+        el.addEventListener('click', function () {
+            document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+            document.getElementById('popup-del-quest').classList.add('vacancies__item-popup--open');
+            document.body.classList.toggle('stop-scroll');
+        })
+    })
+
+    document.querySelector('.quest__btn-close').addEventListener('click', function () {
         document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
         document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
-    }
-});
+    })
 
-document.querySelector("#popup-del-quest .item__popup-wrapper").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("popup-del-quest").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-});
+    document.querySelector('.quest__btn-cancel').addEventListener('click', function () {
+        document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
+        document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+    })
 
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById('popup-del-quest').classList.remove('vacancies__item-popup--open');
+            document.getElementById('auto-popup-first').classList.add('vacancies__item-popup--open');
+        }
+    });
+
+    document.querySelector("#popup-del-quest .item__popup-wrapper").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("popup-del-quest").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
         document.body.classList.remove('stop-scroll');
-    }
-});
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById('auto-popup-first').classList.remove('vacancies__item-popup--open');
+            document.body.classList.remove('stop-scroll');
+        }
+    });
+} catch {
+    console.log("Не найдены элементы дополнительных ф-ий окна автоотбора в виде удалить или редактировать.")
+}
+
 
 //clone's window in popup autoset
 let checkClones = document.getElementById('search-duplicates');
 let clonesInter = document.querySelector('.new__clones__item-hide');
 
-checkClones.addEventListener('change', (event) => {
-    if (event.currentTarget.checked) {
-        clonesInter.classList.add('new__clones--visible');
-    } else {
-        clonesInter.classList.remove('new__clones--visible');
-    }
-})
+
+try {
+    checkClones.addEventListener('change', (event) => {
+        if (event.currentTarget.checked) {
+            clonesInter.classList.add('new__clones--visible');
+        } else {
+            clonesInter.classList.remove('new__clones--visible');
+        }
+    })
+} catch {
+    console.log("Не найден блок отображения дубликатов или нет, в окне автоотбора.")
+}
 
 //tooltip
-tippy('#myButton', {
-    content: "Если установлено значение в 10 дней и первый кандидат получен 1 числа, то все кандидаты с такими же контактами, которые откликнутся с 1 по 10 число включительно, будут автоматически считаться дублями",
-    theme: 'jobers',
-    maxWidth: 332,
-});
+try {
+    tippy('#myButton', {
+        content: "Если установлено значение в 10 дней и первый кандидат получен 1 числа, то все кандидаты с такими же контактами, которые откликнутся с 1 по 10 число включительно, будут автоматически считаться дублями",
+        theme: 'jobers',
+        maxWidth: 332,
+    });
+} catch {
+    console.log("Не найден блок типпи, в роли отображения тултипа в отображении дубликатов или нет(?).")
+}
+
 
 // добавил дату в строку названия автоотбора
 let date = new Date();
@@ -810,8 +873,14 @@ let formattedDate = day + " " + monthName + " " + year + " " + "года";
 
 // var now = new Date(); //утрачен так как старый метод
 var ura = 'Автоотбор от ';
+
+try {
 // now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); //утрачен так как старый метод
-document.getElementById('main-name').value = ura + formattedDate;
+    document.getElementById('main-name').value = ura + formattedDate;
+} catch {
+    console.log("Не найден блок отображения дефолтного названия в заключетельной строке нового автоотбора, страницы" +
+        "вакансий.")
+}
 
 //работа с новыми выпадающими списками
 let newDropListItem = document.querySelectorAll('.new__droplist-item');
@@ -839,57 +908,97 @@ let morePopupSpace = document.getElementById('vacancies-popup-options');
 let popupBtnCloseFirst = document.getElementById('popup-btn-close-first');
 let optionsBack = document.querySelector('.vacancies__options-back');
 
-morePopupBtn.addEventListener('click', function () {
-    morePopupSpace.classList.add('vacancies__popup-768--active');
-    optionsBack.classList.add('vacancies__options-back--active');
-})
+try {
+    morePopupBtn.addEventListener('click', function () {
+        morePopupSpace.classList.add('vacancies__popup-768--active');
+        optionsBack.classList.add('vacancies__options-back--active');
+    })
 
-optionsBack.addEventListener('click', function () {
-    morePopupSpace.classList.remove('vacancies__popup-768--active');
-    optionsBack.classList.remove('vacancies__options-back--active');
-})
-popupBtnCloseFirst.addEventListener('click', function () {
-    morePopupSpace.classList.remove('vacancies__popup-768--active');
-    optionsBack.classList.remove('vacancies__options-back--active');
-})
+    optionsBack.addEventListener('click', function () {
+        morePopupSpace.classList.remove('vacancies__popup-768--active');
+        optionsBack.classList.remove('vacancies__options-back--active');
+    })
+    popupBtnCloseFirst.addEventListener('click', function () {
+        morePopupSpace.classList.remove('vacancies__popup-768--active');
+        optionsBack.classList.remove('vacancies__options-back--active');
+    })
+} catch {
+    console.log("Не найден элемент открытия дополнительныъ ф-ий выделенных вакансий, на странице вакансий.")
+}
 
-//closing droplist in 768
+// archive popup-more
+// code bottom from "closing droplist till 768"
 let dropListBack = document.querySelector('.vacancies__droplist-back');
 let dropListArchiveBack = document.querySelector('.vacancies__archive-back');
 
-dropListBack.addEventListener('click', function () {
-    burgerNav.classList.remove('item__burger-nav--active');
-    burgerNavSecond.classList.remove('item__burger-nav--active');
-    burgerNavThird.classList.remove('item__burger-nav--active');
-    burgerActiveFirst.classList.remove('item__burger-nav--active');
-    burgerActiveSecond.classList.remove('item__burger-nav--active');
-    dropListBack.classList.remove('vacancies__droplist-back--active');
-    document.body.classList.toggle('scroll-toggle');
-    inWorkDotsOne.forEach(function (el) {
-        el.classList.remove('item__burger-dot--active')
-    })
-    inWorkDotsTwo.forEach(function (el) {
-        el.classList.remove('item__burger-dot--active')
-    })
-    inWorkDotsThree.forEach(function (el) {
-        el.classList.remove('item__burger-dot--active')
-    })
-    inActiveDotsOne.forEach(function (el) {
-        el.classList.remove('item__burger-dot--active')
-    })
-    inActiveDotsTwo.forEach(function (el) {
-        el.classList.remove('item__burger-dot--active')
-    })
-})
 
-dropListArchiveBack.addEventListener('click', function () {
-    burgerArchiveFirst.classList.remove('item__burger-nav--active');
-    dropListArchiveBack.classList.remove('vacancies__archive-back--active');
-    document.body.classList.toggle('scroll-toggle');
-    inArchiveDotsOne.forEach(function (el) {
-        el.classList.remove('item__burger-dot--active')
+let archivePopupBtn = document.getElementById('vacancies-archive-more');
+let archivePopupSpace = document.getElementById('archive-popup-options');
+let archiveBtnCloseFirst = document.getElementById('popup-archive-close-first');
+
+
+try {
+    archivePopupBtn.addEventListener('click', function () {
+        archivePopupSpace.classList.add('vacancies__popup-768--active');
+        dropListArchiveBack.classList.add('vacancies__options-back--active');
     })
-})
+
+    dropListArchiveBack.addEventListener('click', function () {
+        archivePopupSpace.classList.remove('vacancies__popup-768--active');
+        dropListArchiveBack.classList.remove('vacancies__options-back--active');
+    })
+    archiveBtnCloseFirst.addEventListener('click', function () {
+        archivePopupSpace.classList.remove('vacancies__popup-768--active');
+        dropListArchiveBack.classList.remove('vacancies__options-back--active');
+    })
+} catch {
+    console.log("Не найден блок функций отображения дополнительных свойств дроплиста в мобильной версии.")
+}
+
+//closing droplist in 768
+
+try {
+    dropListBack.addEventListener('click', function () {
+        burgerNav.classList.remove('item__burger-nav--active');
+        burgerNavSecond.classList.remove('item__burger-nav--active');
+        burgerNavThird.classList.remove('item__burger-nav--active');
+        burgerActiveFirst.classList.remove('item__burger-nav--active');
+        burgerActiveSecond.classList.remove('item__burger-nav--active');
+        dropListBack.classList.remove('vacancies__droplist-back--active');
+        document.body.classList.toggle('scroll-toggle');
+        inWorkDotsOne.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+        inWorkDotsTwo.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+        inWorkDotsThree.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+        inActiveDotsOne.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+        inActiveDotsTwo.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+    })
+} catch {
+    console.log("Не найден блок стилей для отображения попап блоков в мобильной версии, на странице Вакансии.")
+}
+
+
+try {
+    dropListArchiveBack.addEventListener('click', function () {
+        burgerArchiveFirst.classList.remove('item__burger-nav--active');
+        dropListArchiveBack.classList.remove('vacancies__archive-back--active');
+        document.body.classList.toggle('scroll-toggle');
+        inArchiveDotsOne.forEach(function (el) {
+            el.classList.remove('item__burger-dot--active')
+        })
+    })
+} catch {
+    console.log("Не найден блок стилей для фона попапа на странице вакансий.")
+}
 
 //добавление окна добавить в архив
 let btnSendArchive = document.querySelectorAll('.send-archive');
@@ -901,27 +1010,32 @@ btnSendArchive.forEach(function (el) {
     })
 })
 
-document.querySelector("#to-archive .vacancies__send-archive").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("to-archive").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-});
+try {
+    document.querySelector("#to-archive .vacancies__send-archive").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("to-archive").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    });
 
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
+        }
+    });
+
+    document.getElementById('to-archive-btn').addEventListener('click', function () {
         document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
-    }
-});
+        document.body.classList.remove('stop-scroll');
+    })
 
-document.getElementById('to-archive-btn').addEventListener('click', function () {
-    document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-})
+    document.querySelector('.archive__no').addEventListener('click', function () {
+        document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+} catch {
+    console.log("Не найден блок стилей для окна добавления в архив, на странице вакансий.")
+}
 
-document.querySelector('.archive__no').addEventListener('click', function () {
-    document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
-    document.body.classList.remove('stop-scroll');
-})
