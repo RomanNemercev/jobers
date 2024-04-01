@@ -974,6 +974,7 @@
 .new__select-box .is-open .choices__list--dropdown {
     overflow: visible;
 }
+
 /*отсюда до сюда был удален стиль выпадающего списка new__change-choice__wrapper*/
 
 .is-open .choices__inner {
@@ -1811,6 +1812,24 @@
 }
 
 .item__popup-del.vacancies__item-popup--open .item__popup-wrapper {
+    transform: scale(1);
+}
+
+.vacancies__filter-popup.vacancies__item-popup--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.vacancies__filter-popup.vacancies__item-popup--open .vacancies__filter-popup__wrapper {
+    transform: scale(1);
+}
+
+.vacancies__multiarchive-popup.vacancies__item-popup--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.vacancies__multiarchive-popup.vacancies__item-popup--open .vacancies__send-multiarchive {
     transform: scale(1);
 }
 

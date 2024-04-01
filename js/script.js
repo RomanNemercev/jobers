@@ -1039,3 +1039,97 @@ try {
     console.log("Не найден блок стилей для окна добавления в архив, на странице вакансий.")
 }
 
+
+// кнопка удаления нескольких вакансий для попапа в 768 активных вакансий и архива
+let multiDeleteActiveVacancies = document.getElementById('multi-delete-vacancies');
+let multiDelArchiveVacancies = document.getElementById('multi-delete-vacancies-archive');
+let multiDelModalSpace = document.getElementById('choose-del-modal-filter');
+
+try {
+    multiDeleteActiveVacancies.addEventListener('click', function () {
+        multiDelModalSpace.classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
+    })
+
+    // archive btn
+    multiDelArchiveVacancies.addEventListener('click', function () {
+        multiDelModalSpace.classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
+    })
+
+    document.querySelector("#choose-del-modal-filter .vacancies__filter-popup__wrapper").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("choose-del-modal-filter").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById('choose-del-modal-filter').classList.remove('vacancies__item-popup--open');
+        }
+    });
+
+    // скрыта в счет того что в мобильной версии нет закрывающего крестика
+    // document.getElementById('to-archive-btn').addEventListener('click', function () {
+    //     document.getElementById('to-archive').classList.remove('vacancies__item-popup--open');
+    //     document.body.classList.remove('stop-scroll');
+    // })
+
+    document.getElementById('multidelete-yes-btn').addEventListener('click', function () {
+        multiDelModalSpace.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+
+    document.getElementById('multidelete-no-btn').addEventListener('click', function () {
+        multiDelModalSpace.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+} catch {
+    console.log("Не сработал попап удаления нескольких вакансий. Элемент не найден. Страница Вакансии.")
+}
+
+//кнопка отправки в архив на попапе страницы вакансий
+let multiArchiveBtn = document.getElementById('multi-archive-vacancies');
+let multiArchiveSpace = document.getElementById('to-multiarchive');
+
+try {
+    multiArchiveBtn.addEventListener('click', function () {
+        multiArchiveSpace.classList.add('vacancies__item-popup--open');
+        document.body.classList.toggle('stop-scroll');
+    })
+
+    document.querySelector("#to-multiarchive .vacancies__send-multiarchive").addEventListener('click', event => {
+        event._isClickWithInModal = true;
+    });
+    document.getElementById("to-multiarchive").addEventListener('click', event => {
+        if (event._isClickWithInModal) return;
+        event.currentTarget.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.getElementById('to-multiarchive').classList.remove('vacancies__item-popup--open');
+        }
+    });
+
+    document.getElementById('to-multiarchive-btn').addEventListener('click', function () {
+        document.getElementById('to-multiarchive').classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+
+    document.getElementById('multiarchive-yes').addEventListener('click', function () {
+        multiDelModalSpace.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+
+    document.getElementById('multiarchive-no').addEventListener('click', function () {
+        multiDelModalSpace.classList.remove('vacancies__item-popup--open');
+        document.body.classList.remove('stop-scroll');
+    })
+} catch {
+    console.log("Ошибка запроса элементов окна множественной архивации.")
+}

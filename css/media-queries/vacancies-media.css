@@ -369,6 +369,8 @@
     .vacancies__btn-item {
         color: var(--color_white);
         padding: 11px 15px;
+        width: 100%;
+        text-align: left;
     }
 
     .vacancies__popup-btn {
@@ -398,6 +400,10 @@
 
     .vacancies__popup-item:last-of-type {
         border-radius: 0 0 5px 5px;
+    }
+
+    #archive-popup-options .vacancies__popup-item {
+        border-radius: 5px;
     }
 
     .scroll-toggle {
@@ -565,5 +571,14 @@
 
     .multiarchive__container {
         padding-top: 27px;
+    }
+
+/*    крестики автоотбора и попапов*/
+    .delete__btn,
+    .auto__close,
+    .edit__close,
+    .quest__btn-close,
+    .new__close {
+        display: none;
     }
 }
