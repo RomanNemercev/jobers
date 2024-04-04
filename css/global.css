@@ -195,6 +195,13 @@ img {
     color: var(--color_space);
 }
 
+.f20w700 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--color_space);
+}
+
 .f25w600 {
     font-size: 25px;
     font-weight: 600;
@@ -275,10 +282,8 @@ img {
 }
 
 .container {
-    /*max-width: 1440px;*/
     padding: 95px 25px 0 295px;
     width: 100%;
-    /*margin: 0 auto;*/
 }
 
 .title {

@@ -11,9 +11,9 @@
     <link
             rel="stylesheet"
             href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
-    <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/candidates.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
@@ -124,10 +124,26 @@
                     <button class="btn-reset btn-succes mr15 f15w400">Пригласить</button>
                     <button class="btn-reset btn-delete mr15 user__btn-mind f15w400">Отказать</button>
                     <div class="user__dropdown mr15">Этап</div>
-                    <div class="user__burger item__active-two">
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <!--            <div class="button-text">...</div>-->
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Открыть файл резюме</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Экспорт в&nbsp;Excel</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item" id="del-popup1">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,10 +208,26 @@
                     <button class="btn-reset btn-succes mr15 f15w400">Пригласить</button>
                     <button class="btn-reset btn-delete mr15 user__btn-mind f15w400">Отказать</button>
                     <div class="user__dropdown mr15">Этап</div>
-                    <div class="user__burger item__active-two">
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <!--            <div class="button-text">...</div>-->
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Открыть файл резюме</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Экспорт в&nbsp;Excel</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,10 +292,26 @@
                     <button class="btn-reset btn-succes mr15 f15w400">Пригласить</button>
                     <button class="btn-reset btn-delete mr15 user__btn-mind f15w400">Отказать</button>
                     <div class="user__dropdown mr15">Этап</div>
-                    <div class="user__burger item__active-two">
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <!--            <div class="button-text">...</div>-->
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Открыть файл резюме</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Экспорт в&nbsp;Excel</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -328,10 +376,26 @@
                     <button class="btn-reset btn-succes mr15 f15w400">Пригласить</button>
                     <button class="btn-reset btn-delete mr15 user__btn-mind f15w400">Отказать</button>
                     <div class="user__dropdown mr15">Этап</div>
-                    <div class="user__burger item__active-two">
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
-                        <div class="user__burger-dot dot-active-two"></div>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <!--            <div class="button-text">...</div>-->
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Открыть файл резюме</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Экспорт в&nbsp;Excel</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -691,7 +755,8 @@
                         </div>
                         <div class="new-can__resume">
                             <p class="new-can__resume-title mb15 f15w500">Резюме</p>
-                            <textarea name="resume-info" id="resume-content" cols="30" rows="15" class="new-can__resume-content" placeholder="-"></textarea>
+                            <textarea name="resume-info" id="resume-content" cols="30" rows="15"
+                                      class="new-can__resume-content" placeholder="-"></textarea>
                         </div>
                     </div>
                 </div>
@@ -699,6 +764,18 @@
                     <button class="btn-reset btn new__btn-save">Сохранить</button>
                     <button class="btn-reset new__btn-cancel">Отмена</button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="item__popup-auto" id="del-popup">
+        <button class="btn-reset auto__close" id="del-popup-close"></button>
+        <div class="item__popup-wrapper del">
+            <p class="f20w700 delete__title">Удаление кандидата</p>
+            <p class="delete__attent">Кандидат будет удален. Все удаленные кандидаты находятся в&nbsp;папке &laquo;Удаленные&raquo;,
+                откуда их&nbsp;можно будет восстановить</p>
+            <div class="delete__choose">
+                <button class="btn-reset delete__yes" id="del-yes">Удалить</button>
+                <button class="btn-reset delete__no" id="del-no">Отмена</button>
             </div>
         </div>
     </div>

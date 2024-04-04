@@ -4,17 +4,22 @@ p, span {
 
 .can {
     padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 2800px;
 }
 
 /*скролл после шапки*/
 .can__scroll-choose {
+    max-width: 1120px;
+    width: 100%;
     margin-bottom: 50px;
 }
 
 /*блок из дроплистов у основного контента*/
 .can__section-bar {
     width: 100%;
-    height: 40px;
     margin-bottom: 15.5px;
     display: flex;
     flex-direction: row;
@@ -24,6 +29,10 @@ p, span {
 .can__section-param {
     width: 69.197%;
     display: flex;
+}
+
+.can__users {
+    width: 100%;
 }
 
 .can__list {
@@ -81,6 +90,19 @@ p, span {
     transition: visibility .3s ease, opacity .3s ease;
 }
 
+.item__popup-wrapper {
+    padding: 25px;
+}
+
+.del {
+    min-height: auto;
+    max-width: 451px;
+}
+
+.delete__attent {
+    line-height: 18px;
+}
+
 .new-can__popup-wrapper {
     position: relative;
     z-index: 1;
@@ -128,9 +150,8 @@ p, span {
 }
 
 
-
 .new__btns {
-    padding-bottom: 0;
+    padding-bottom: 25px;
 }
 
 .new-can__form-first input {
@@ -290,6 +311,116 @@ p, span {
     border-bottom: 1px solid var(--color_gray);
 }
 
+/*dropdown list*/
+.dropdown__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 50%;
+}
+
+/*dropdown settings*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    position: relative;
+    background-color: var(--color_athens-gray);
+    border: none;
+    cursor: pointer;
+    padding: 12.5px 10.79px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition effect */
+    white-space: nowrap;
+}
+
+.dropdown-toggle.active,
+.dropdown:hover .dropdown-toggle {
+    background-color: var(--color_zircon);
+}
+
+.dropdown-toggle.active,
+.dropdown:hover .button-icon {
+    background-color: var(--color_dodger);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Добавляем тень *!*/
+    z-index: 1;
+    right: 0;
+    opacity: 0;
+    margin-top: -15px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-menu ul {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+}
+
+.dropdown-menu ul::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 30px);
+    z-index: -1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+.dropdown-menu ul li button {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--color_bali);
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu ul li:not(:last-of-type) button {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.dropdown-menu ul li:first-of-type button {
+    border-radius: 5px 5px 0 0;
+}
+
+.dropdown-menu ul li:last-of-type button {
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-menu ul li button:hover {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+}
+
+.button-icon {
+    /* Your icon styles here */
+    width: 7px;
+    height: 7px;
+    background-color: var(--color_bali);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.button-icon.active {
+    background-color: var(--color_dodger);
+}
+/*dropdown list settings end*/
+
 .user__status-bar {
     margin-left: auto;
     align-items: center;
@@ -297,6 +428,9 @@ p, span {
 
 .user__vacancy-wrapper {
     padding-left: 40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .user__status {
@@ -309,41 +443,6 @@ p, span {
     color: var(--color_bali);
     border-radius: 5px;
     background-color: var(--color_athens-gray);
-}
-
-.user__burger {
-    position: relative;
-    cursor: pointer;
-    width: 50px;
-    height: 40px;
-    background-color: var(--color_athens-gray);
-    border-radius: 5px;
-}
-
-.user__burger-dot {
-    position: absolute;
-    top: 42%;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: var(--color_bali);
-    transition: background-color .3s ease;
-}
-
-.user__burger-dot--active {
-    background-color: var(--color_dodger);
-}
-
-.user__burger-dot:first-child {
-    left: 12px;
-}
-
-.user__burger-dot:nth-child(2) {
-    left: 22px;
-}
-
-.user__burger-dot:last-child {
-    left: 32px;
 }
 
 .user__name-hidden {

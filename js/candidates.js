@@ -381,3 +381,101 @@ let vacancyChoose = new Choices(
         noChoicesText: '',
     }
 );
+
+//script for dropdown
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(function (dropdown) {
+        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+        dropdown.addEventListener('mouseleave', function (e) {
+            if (!dropdown.contains(e.relatedTarget)) {
+                closeDropdown();
+            }
+        });
+
+        dropdown.addEventListener('mouseenter', function () {
+            openDropdown();
+        });
+
+        dropdownMenu.addEventListener('mouseenter', function () {
+            clearTimeout(dropdownMenu.timer);
+        });
+
+        dropdownMenu.addEventListener('mouseleave', function () {
+            dropdownMenu.timer = setTimeout(function () {
+                closeDropdown();
+            }, 200);
+        });
+
+        function openDropdown() {
+            dropdownMenu.style.display = 'block';
+            dropdown.setAttribute('data-state', 'open');
+        }
+
+        function closeDropdown() {
+            dropdownMenu.style.display = 'none';
+            dropdown.setAttribute('data-state', 'closed');
+        }
+    });
+});
+
+//script for popup
+// Функция для открытия всплывающего окна
+function openPopup(popupId) {
+    document.getElementById(popupId).classList.add('vacancies__item-popup--open');
+    document.body.classList.add('stop-scroll');
+}
+
+// Функция для закрытия всплывающего окна
+function closePopup(popupId) {
+    document.getElementById(popupId).classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+}
+
+// Функция для добавления обработчика события открытия всплывающего окна
+function addPopupOpenHandler(buttonSelector, popupId) {
+    document.querySelectorAll(buttonSelector).forEach(function (button) {
+        button.addEventListener('click', function () {
+            openPopup(popupId);
+        });
+    });
+}
+
+// Функция для добавления обработчика события закрытия всплывающего окна
+function addPopupCloseHandler(closeButtonId, popupId) {
+    document.getElementById(closeButtonId).addEventListener('click', function () {
+        closePopup(popupId);
+    });
+}
+
+// Функция для добавления обработчика события закрытия всплывающего окна при клике на фон
+function addPopupCloseOnBackgroundClickHandler(popupId) {
+    document.getElementById(popupId).addEventListener('click', function (event) {
+        if (!event.target.closest(".item__popup-wrapper")) {
+            closePopup(popupId);
+        }
+    });
+}
+
+// Функция для добавления обработчика события закрытия всплывающего окна при нажатии клавиши Esc
+function addPopupCloseOnEscKeyHandler(popupId) {
+    window.addEventListener('keydown', function (e) {
+        if (e.key === "Escape") {
+            closePopup(popupId);
+        }
+    });
+}
+
+// Открытие окна удаления вакансии
+addPopupOpenHandler('#del-popup1', 'del-popup');
+addPopupCloseHandler('del-popup-close', 'del-popup');
+addPopupCloseOnBackgroundClickHandler('del-popup');
+addPopupCloseOnEscKeyHandler('del-popup');
+
+//close del-popup-close after click on del-no button
+document.getElementById('del-no').addEventListener('click', function () {
+    document.getElementById('del-popup').classList.remove('vacancies__item-popup--open');
+})

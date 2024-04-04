@@ -298,7 +298,7 @@ try {
             el.classList.toggle('item__burger-dot--active')
         })
         document.body.classList.toggle('scroll-toggle');
-        dropListArchiveBack.classList.remove('vacancies__droplist-back--active');
+        dropListArchiveBack.classList.remove('vacancies__archive-back--active');
     })
 } catch (err) {
     console.log('ошибка обработки шестого дроплиста')
@@ -310,7 +310,7 @@ menuLinksArchiveOne.forEach(function (el) {
             burgerListArchiveOne.classList.remove('item__burger-list--active');
             burgerArchiveFirst.classList.remove('item__burger-nav--active');
             document.body.classList.remove('scroll-toggle');
-            dropListArchiveBack.classList.remove('vacancies__droplist-back--active');
+            dropListArchiveBack.classList.remove('vacancies__archive-back--active');
             inArchiveDotsOne.forEach(function (el) {
                 el.classList.remove('item__burger-dot--active')
             })
@@ -613,16 +613,14 @@ try {
     console.log("Не запустился выпадающий список")
 }
 
-// созданиние списка для кнопка "определенные вакансии в блоке автоотбора"
+let radioSpecific = document.getElementById('specific-vacancy');
+let specificList = document.getElementById('specific-vacancy-wrapper');
+// let radioSpecificParent = radioSpecific.parentNode;
 try {
-    let radioSpecific = document.getElementById('specific-vacancy'); //дубликат связан с добавление кнопки
-//автоотбора в страницу кандидатов
-    let specificList = document.getElementById('specific-vacancy-wrapper');
-    let radioSpecificParent = radioSpecific.parentNode;
-
 } catch {
-    console.log("Не удалось найти блок определенных вакансий на странице вакансии в окне авоотбора.")
+    console.log("Ошибка связанная с поиском родителя кнопки особенные вакансии.")
 }
+
 
 let arrGlobal = [document.getElementById('current-vacancy'), document.getElementById('all-vacancies')];
 
@@ -639,7 +637,7 @@ try {
     arrGlobal.forEach(function (el) {
         el.addEventListener('click', function () {
             specificList.classList.remove('specific--visible');
-            radioSpecificParent.classList.remove('specific--style');
+            document.getElementById('specific-vacancy').parentNode.classList.remove('specific--style');
         })
     })
 } catch {
@@ -649,7 +647,7 @@ try {
 
 try {
     radioSpecific.addEventListener('click', function () {
-        radioSpecificParent.classList.add('specific--style');
+        document.getElementById('specific-vacancy').parentNode.classList.add('specific--style');
     })
 } catch {
     console.log("Не найден элемент стиля определенных вакансий. Страница Вакансии.")
@@ -965,6 +963,7 @@ try {
         burgerActiveFirst.classList.remove('item__burger-nav--active');
         burgerActiveSecond.classList.remove('item__burger-nav--active');
         dropListBack.classList.remove('vacancies__droplist-back--active');
+        dropListBack.classList.remove('vacancies__archive-back--active');
         document.body.classList.toggle('scroll-toggle');
         inWorkDotsOne.forEach(function (el) {
             el.classList.remove('item__burger-dot--active')
@@ -1121,13 +1120,15 @@ try {
         document.body.classList.remove('stop-scroll');
     })
 
-    document.getElementById('multiarchive-yes').addEventListener('click', function () {
-        multiDelModalSpace.classList.remove('vacancies__item-popup--open');
+    document.querySelector('.multiarchive__yes').addEventListener('click', function () {
+        multiArchiveSpace.classList.remove('vacancies__item-popup--open');
+        morePopupSpace.classList.remove('vacancies__popup-768--active');
+        optionsBack.classList.remove('vacancies__options-back--active');
         document.body.classList.remove('stop-scroll');
     })
 
-    document.getElementById('multiarchive-no').addEventListener('click', function () {
-        multiDelModalSpace.classList.remove('vacancies__item-popup--open');
+    document.querySelector('.multiarchive__no').addEventListener('click', function () {
+        multiArchiveSpace.classList.remove('vacancies__item-popup--open');
         document.body.classList.remove('stop-scroll');
     })
 } catch {
