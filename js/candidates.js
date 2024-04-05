@@ -39,7 +39,10 @@ try {
 }
 
 let checkAllCans = document.getElementById("filter-choose-all");
-let arrAllCans = [document.getElementById("cans-first"), document.getElementById("cans-second"), document.getElementById("cans-third"), document.getElementById("cans-fourth")];
+let arrAllCans = [document.getElementById("cans-first"), document.getElementById("cans-second"),
+    document.getElementById("cans-third"), document.getElementById("cans-fourth"),
+    document.getElementById("cans-fifth"), document.getElementById("cans-sixth"),
+    document.getElementById("cans-seventh"), document.getElementById('cans-eighth')];
 
 try {
     checkAllCans.addEventListener('change', function (event) {

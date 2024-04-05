@@ -53,6 +53,8 @@
     --color_tg: #229ed9;
     --color_semi-space: rgba(47, 53, 61, 0.5);
     --color_semi-black: rgba(255, 255, 255, 0.25);
+    --color_blaze-orange: #ff6b00;
+    --color_seranade: #fff0e5
 }
 
 html {

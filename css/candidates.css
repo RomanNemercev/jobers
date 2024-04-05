@@ -293,12 +293,23 @@ p, span {
 }
 
 /*карточки кандидатов*/
+.green-respond {
+    border: 1px solid var(--color_btn-succes);
+}
+
+.orange-respond {
+    border: 1px solid var(--color_blaze-orange);
+}
+
+.dodger-respond {
+    border: 1px solid var(--color_dodger);
+}
+
 .can__user-item {
     list-style: none;
     width: 100%;
     background-color: var(--color_white);
     border-radius: 15px;
-    border: 1px solid #04b600;
 }
 
 .can__user-item:not(:last-of-type) {
@@ -419,6 +430,7 @@ p, span {
 .button-icon.active {
     background-color: var(--color_dodger);
 }
+
 /*dropdown list settings end*/
 
 .user__status-bar {
@@ -438,7 +450,6 @@ p, span {
 }
 
 .user__dropdown {
-    width: 93px;
     padding: 11px 20px;
     color: var(--color_bali);
     border-radius: 5px;
@@ -509,6 +520,14 @@ p, span {
     border: 1px solid var(--color_gray);
     border-radius: 5px;
     background-image: url("../img/user__hh-icon.svg");
+    background-position: 13px center;
+}
+
+.user__view {
+    padding: 7px 15px 7px 42px;
+    border: 1px solid var(--color_gray);
+    border-radius: 5px;
+    background-image: url("../img/candidates_eye.png");
     background-position: 13px center;
 }
 
@@ -589,6 +608,40 @@ p, span {
 .user__btn-mind {
     padding: 10.5px 15px;
     color: var(--color_red);
+}
+
+.user__in-workweb {
+    position: relative;
+    background-color: var(--color_seranade);
+    color: var(--color_blaze-orange);
+    padding: 9px 15px 9px 45px;
+    border-radius: 5px;
+}
+
+.user__status-orange {
+    color: var(--color_blaze-orange);
+}
+
+.user__status-dodger {
+    color: var(--color_dodger);
+}
+
+.user__in-jobers {
+    padding: 9px 15px;
+    min-height: 35px;
+    color: var(--color_dodger);
+    background-color: var(--color_zircon);
+    border-radius: 5px;
+}
+
+.user__in-workweb::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/orange-gift.svg");
+    left: 15px;
+    top: 6px;
 }
 
 /*scroll-x*/
