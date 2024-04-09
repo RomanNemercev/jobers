@@ -880,97 +880,99 @@
                     <div class="new__options">
                         <p class="new__options-title">Параметры кандидата</p>
                         <div class="new__options-group">
-                            <div class="droplist droplist__check">
+                            <div class="droplist droplist__check" data-default-value="Пол">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
                                             class="droplist__result_text">Пол</span>
-                                        <svg class="droplist__icon droplist__icon_arrow" width="14"
-                                             height="9" viewBox="0 0 14 9" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
                                                   fill="#9098B4"/>
                                         </svg>
                                     </div>
 
                                     <ul class="droplist__items">
-                                        <li class="droplist__item droplist__item_active"><input
-                                                id="variant-1" class="check" type="checkbox"
-                                                value="Мужской">
-                                            <label for="variant-1">Мужской</label>
-                                        </li>
-                                        <li class="droplist__item droplist__item_active"><input
-                                                id="variant-2" class="check" type="checkbox"
-                                                value="Женский">
-                                            <label for="variant-2">Женский</label>
-                                        </li>
+                                        <li class="droplist__item droplist__item_active"><input id="variant-1"
+                                                                                                class="check"
+                                                                                                type="checkbox"
+                                                                                                value="Мужской"><label
+                                                for="variant-1">Мужской</label></li>
+                                        <li class="droplist__item droplist__item_active"><input id="variant-2"
+                                                                                                class="check"
+                                                                                                type="checkbox"
+                                                                                                value="Женский"><label
+                                                for="variant-2">Женский</label></li>
                                     </ul>
                                 </form>
                             </div>
-                            <div class="droplist droplist__fields">
+                            <div class="droplist droplist__fields" data-default-value="Возраст">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
                                             class="droplist__result_text">Возраст</span> <span
                                             class="droplist__icon droplist__icon_cross"></span>
-                                        <svg class="droplist__icon droplist__icon_arrow" width="14"
-                                             height="9" viewBox="0 0 14 9" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
                                                   fill="#9098B4"/>
                                         </svg>
                                     </div>
 
                                     <ul class="droplist__items">
-                                        <li class="droplist__item droplist__item_nohover"><input
-                                                class="droplist__field droplist__field_from"
-                                                type="text" placeholder="от" value=""></li>
-                                        <li class="droplist__item droplist__item_nohover"><input
-                                                class="droplist__field droplist__field_to"
-                                                type="text" placeholder="до" value=""></li>
-                                        <li class="droplist__item droplist__item_hide"><input
-                                                id="hide" class="check" type="checkbox"
-                                                value="Скрыть без зарплаты">
-                                            <label for="hide">Скрыть без возраста</label>
-                                        </li>
+                                        <li class="droplist__item droplist__item_nohover"><input id="age-from01"
+                                                                                                 class="droplist__field droplist__field_from"
+                                                                                                 type="text"
+                                                                                                 placeholder="от"
+                                                                                                 value=""></li>
+                                        <li class="droplist__item droplist__item_nohover"><input id="age-to01"
+                                                                                                 class="droplist__field droplist__field_to"
+                                                                                                 type="text"
+                                                                                                 placeholder="до"
+                                                                                                 value=""></li>
+                                        <li class="droplist__item droplist__item_hide"><input id="age-hide-01" class="check"
+                                                                                              type="checkbox"
+                                                                                              value="Скрыть без зарплаты"><label
+                                                for="age-hide-01">Скрыть без зарплаты</label></li>
                                     </ul>
                                 </form>
 
                             </div>
-                            <div class="droplist droplist__fields">
+                            <div class="droplist droplist__fields" data-default-value="Заработная плата">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
-                                            class="droplist__result_text">Заработная плата</span>
-                                        <span class="droplist__icon droplist__icon_cross"></span>
-                                        <svg class="droplist__icon droplist__icon_arrow" width="14"
-                                             height="9" viewBox="0 0 14 9" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                            class="droplist__result_text">Заработная плата</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
                                                   fill="#9098B4"/>
                                         </svg>
                                     </div>
 
                                     <ul class="droplist__items">
-                                        <li class="droplist__item droplist__item_nohover"><input
-                                                class="droplist__field droplist__field_from"
-                                                type="text" placeholder="от" value=""></li>
-                                        <li class="droplist__item droplist__item_nohover"><input
-                                                class="droplist__field droplist__field_to"
-                                                type="text" placeholder="до" value=""></li>
-                                        <li class="droplist__item droplist__item_hide"><input
-                                                id="hide" class="check" type="checkbox"
-                                                value="Скрыть без зарплаты">
-                                            <label for="hide">Скрыть без зарплаты</label>
-                                        </li>
+                                        <li class="droplist__item droplist__item_nohover"><input id="wage-from01"
+                                                                                                 class="droplist__field droplist__field_from"
+                                                                                                 type="text"
+                                                                                                 placeholder="от"
+                                                                                                 value=""></li>
+                                        <li class="droplist__item droplist__item_nohover"><input id="wage-to01"
+                                                                                                 class="droplist__field droplist__field_to"
+                                                                                                 type="text"
+                                                                                                 placeholder="до"
+                                                                                                 value=""></li>
+                                        <li class="droplist__item droplist__item_hide"><input id="hide-01" class="check"
+                                                                                              type="checkbox"
+                                                                                              value="Скрыть без зарплаты"><label
+                                                for="hide-01">Скрыть без зарплаты</label></li>
                                     </ul>
                                 </form>
 
                             </div>
-                            <div class="droplist droplist__check">
+                            <div class="droplist droplist__check" data-default-value="Опыт работы">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
                                             class="droplist__result_text">Опыт работы</span>
-                                        <svg class="droplist__icon droplist__icon_arrow" width="14"
-                                             height="9" viewBox="0 0 14 9" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
                                                   fill="#9098B4"/>
                                         </svg>
@@ -978,80 +980,82 @@
 
                                     <ul class="droplist__items">
                                         <li class="droplist__item droplist__item_active"><input
-                                                id="variant-12" class="check" type="checkbox"
-                                                value="Без опыта">
-                                            <label for="variant-12">Без опыта</label>
-                                        </li>
+                                                id="experience-variant-1"
+                                                class="check"
+                                                type="checkbox"
+                                                value="Без опыта"><label
+                                                for="experience-variant-1">Без опыта</label></li>
                                         <li class="droplist__item droplist__item_active"><input
-                                                id="variant-2" class="check" type="checkbox"
-                                                value="От 1 года">
-                                            <label for="variant-2">От 1 года</label>
-                                        </li>
+                                                id="experience-variant-2"
+                                                class="check"
+                                                type="checkbox"
+                                                value="От 1 года"><label
+                                                for="experience-variant-2">От 1 года</label></li>
                                         <li class="droplist__item droplist__item_active"><input
-                                                id="variant-3" class="check" type="checkbox"
-                                                value="От 3х лет">
-                                            <label for="variant-3">От 3х лет</label>
-                                        </li>
+                                                id="experience-variant-3"
+                                                class="check"
+                                                type="checkbox"
+                                                value="От 3х лет"><label
+                                                for="experience-variant-3">От 3х лет</label></li>
                                     </ul>
                                 </form>
                             </div>
-                            <div class="droplist droplist__check">
+                            <div class="droplist droplist__check" data-default-value="Гражданство">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
                                             class="droplist__result_text">Гражданство</span>
-                                        <svg class="droplist__icon droplist__icon_arrow" width="14"
-                                             height="9" viewBox="0 0 14 9" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
                                                   fill="#9098B4"/>
                                         </svg>
                                     </div>
 
                                     <ul class="droplist__items">
-                                        <li class="droplist__item droplist__item_active"><input
-                                                id="variant-1" class="check" type="checkbox"
-                                                value="Не имеет значения">
-                                            <label for="variant-1">Не&nbsp;имеет значения</label>
-                                        </li>
-                                        <li class="droplist__item droplist__item_active"><input
-                                                id="variant-2" class="check" type="checkbox"
-                                                value="Россия">
-                                            <label for="variant-2">Россия</label>
-                                        </li>
-                                        <li class="droplist__item droplist__item_active"><input
-                                                id="variant-3" class="check" type="checkbox"
-                                                value="Страны СНГ">
-                                            <label for="variant-3">Страны СНГ</label>
-                                        </li>
-                                        <li class="droplist__item droplist__item_active"><input
-                                                id="variant-4" class="check" type="checkbox"
-                                                value="Остальные страны">
-                                            <label for="variant-4">Остальные страны</label>
-                                        </li>
+                                        <li class="droplist__item droplist__item_active"><input id="citizen-1"
+                                                                                                class="check"
+                                                                                                type="checkbox"
+                                                                                                value="Не имеет значения"><label
+                                                for="citizen-1">Не имеет значения</label></li>
+                                        <li class="droplist__item droplist__item_active"><input id="citizen-2"
+                                                                                                class="check"
+                                                                                                type="checkbox"
+                                                                                                value="Россия"><label
+                                                for="citizen-2">Россия</label></li>
+                                        <li class="droplist__item droplist__item_active"><input id="citizen-3"
+                                                                                                class="check"
+                                                                                                type="checkbox"
+                                                                                                value="Страны СНГ"><label
+                                                for="citizen-3">Страны СНГ</label></li>
+                                        <li class="droplist__item droplist__item_active"><input id="citizen-4"
+                                                                                                class="check"
+                                                                                                type="checkbox"
+                                                                                                value="Остальные страны"><label
+                                                for="citizen-4">Остальные страны</label></li>
                                     </ul>
                                 </form>
                             </div>
-                            <div class="droplist droplist__check">
+                            <div class="droplist droplist__check" data-default-value="Контакты">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
                                             class="droplist__result_text">Контакты</span>
-                                        <svg class="droplist__icon droplist__icon_arrow" width="14"
-                                             height="9" viewBox="0 0 14 9" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
                                                   fill="#9098B4"/>
                                         </svg>
                                     </div>
 
                                     <ul class="droplist__items">
-                                        <li class="droplist__item droplist__item_active"><input
-                                                id="variant-4" class="check" type="checkbox"
-                                                value="Вариант 4">
-                                            <label for="variant-4">Указан номер телефона</label>
-                                        </li>
+                                        <li class="droplist__item droplist__item_active"><input id="contacts-1"
+                                                                                                class="check"
+                                                                                                type="checkbox"
+                                                                                                value="Указан номер телефона"><label
+                                                for="contacts-1">Указан номер телефона</label></li>
                                     </ul>
                                 </form>
                             </div>
+
                         </div>
                         <div class="new__global">
                             <p class="new__global-title">Применение правила</p>
@@ -1080,7 +1084,7 @@
                                 <div class="new__options-specific specific specific--hidden"
                                      id="specific-vacancy-wrapper">
                                     <div class="specific__wrapper">
-                                        <div class="droplist droplist__check">
+                                        <div class="droplist droplist__check" data-default-value="Выберите вакансию">
                                             <form class="form__list" action="">
                                                 <div class="droplist__selected item droplist__result item">
                                                     <span class="droplist__result_text">Выберите вакансию</span>
@@ -1095,30 +1099,32 @@
 
                                                 <ul class="droplist__items">
                                                     <li class="droplist__item droplist__item_active">
-                                                        <input id="variant-1" class="check"
+                                                        <input id="unique-vacancy-1" class="check"
                                                                type="checkbox"
                                                                value="Менеджер по продажам ID 2134">
-                                                        <label for="variant-1">Менеджер по&nbsp;продажам
+                                                        <label for="unique-vacancy-1">Менеджер по&nbsp;продажам
                                                             ID&nbsp;2134
                                                         </label>
                                                     </li>
                                                     <li class="droplist__item droplist__item_active">
-                                                        <input id="variant-2" class="check"
+                                                        <input id="unique-vacancy-2" class="check"
                                                                type="checkbox"
                                                                value="Проектный менеджер ID 2384">
-                                                        <label for="variant-2">Проектный менеджер ID&nbsp;2384</label>
+                                                        <label for="unique-vacancy-2">Проектный менеджер
+                                                            ID&nbsp;2384</label>
                                                     </li>
                                                     <li class="droplist__item droplist__item_active">
-                                                        <input id="variant-3" class="check"
+                                                        <input id="unique-vacancy-3" class="check"
                                                                type="checkbox"
                                                                value="Бизнесс ассистент ID 2135">
-                                                        <label for="variant-3">Бизнесс ассистент ID&nbsp;2135</label>
+                                                        <label for="unique-vacancy-3">Бизнесс ассистент
+                                                            ID&nbsp;2135</label>
                                                     </li>
                                                     <li class="droplist__item droplist__item_active">
-                                                        <input id="variant-4" class="check"
+                                                        <input id="unique-vacancy-4" class="check"
                                                                type="checkbox"
                                                                value="Стоматолог ID 3490">
-                                                        <label for="variant-4">Стоматолог ID&nbsp;3490</label>
+                                                        <label for="unique-vacancy-4">Стоматолог ID&nbsp;3490</label>
                                                     </li>
                                                 </ul>
                                             </form>
@@ -1129,21 +1135,15 @@
                         </div>
                         <p class="new__transfer-title">Перенос на этап</p>
                         <div class="new__change-choice__wrapper">
-                            <div class="droplist droplist__select" id="new-droplist">
+                            <div class="droplist droplist__select" data-default-value="Перенос на этап">
                                 <form class="form__list" action="">
-                                    <div class="droplist__selected item droplist__result item"><span
-                                            class="droplist__result_text">Перенос на&nbsp;этап</span>
-                                        <span class="droplist__icon droplist__icon_cross"></span>
-                                        <svg class="droplist__icon droplist__icon_arrow" width="14"
-                                             height="9" viewBox="0 0 14 9" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
-                                                  fill="#9098B4"/>
+                                    <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Перенос на этап</span> <span class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
                                         </svg>
                                     </div>
                                     <ul class="droplist__items">
-                                        <li class="droplist__item new__droplist-item">Приглашенные
-                                        </li>
+                                        <li class="droplist__item">Приглашенные</li>
                                     </ul>
                                 </form>
                             </div>

@@ -12,6 +12,7 @@
             rel="stylesheet"
             href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/libs-css/select.css">
     <link rel="stylesheet" href="../css/candidates.css">
     <link rel="stylesheet" href="../css/media.css">
 </head>
@@ -92,8 +93,46 @@
     </div>
     <div class="can__section-bar">
         <div class="can__section-param">
-            <div class="can__list"></div>
-            <div class="can__list"></div>
+            <div class="can__list">
+                <div class="droplist droplist__select" data-default-text="Все вакансии">
+                    <form class="form__list" action="">
+                        <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Все вакансии</span>
+                            <span class="droplist__icon droplist__icon_cross"></span>
+                            <svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                      fill="#9098B4"/>
+                            </svg>
+                        </div>
+                        <ul class="droplist__items">
+                            <li class="droplist__item">Менеджер по&nbsp;продажам&nbsp;ID (2232)</li>
+                            <li class="droplist__item">Плотник&nbsp;ID (252)</li>
+                            <li class="droplist__item">Пекарь&nbsp;ID (322)</li>
+                            <li class="droplist__item">Автослесарь&nbsp;ID (3429)</li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <div class="can__list">
+                <div class="droplist droplist__select" data-default-text="Сортировать">
+                    <form class="form__list" action="">
+                        <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Сортировать</span>
+                            <span class="droplist__icon droplist__icon_cross"></span>
+                            <svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                      fill="#9098B4"/>
+                            </svg>
+                        </div>
+                        <ul class="droplist__items">
+                            <li class="droplist__item">Сначало недавно созданные</li>
+                            <li class="droplist__item">Сначало давно созданные</li>
+                            <li class="droplist__item">По фамилии от А до Я</li>
+                            <li class="droplist__item">По фамилии от Я до А</li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
             <div class="can__list"></div>
             <div class="can__list">
                 <button class="btn-reset can__btn-auto f15w400 c-bali">Автоотбор</button>
@@ -1091,7 +1130,7 @@
             </div>
         </div>
     </div>
-    <div class="item__popup-auto" id="del-popup">
+    <div class="item__popup-del-cans" id="del-popup">
         <button class="btn-reset auto__close" id="del-popup-close"></button>
         <div class="item__popup-wrapper del">
             <p class="f20w700 delete__title">Удаление кандидата</p>
@@ -1103,11 +1142,31 @@
             </div>
         </div>
     </div>
+    <div class="item__popup-preview" id="popup2">
+        <button class="btn-reset auto__close" id="popup2-close"></button>
+        <div class="item__popup-wrapper preview">
+            <p class="preview__title f20w600 mb40">Предпросмотр файла</p>
+            <div class="preview__content mb40" data-simplebar>
+                <div class="preview__content-wrap">
+                    <img src="../img/preview-print.png" alt="Предосмотр печати кандидата">
+                </div>
+            </div>
+            <div class="preview__btns-block">
+                <div class="preview__btns-left">
+                    <button class="btn btn-reset preview__download mr25">Скачать</button>
+                    <button class="btn-reset preview__print">Печать</button>
+                </div>
+                <button class="btn-reset preview__btns-right">Отмена</button>
+            </div>
+        </div>
+    </div>
 </section>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="../js/libs-js/choices.min.js"></script>
+<script src="../js/jquery_3.3.1.min.js"></script>
+<script src="../js/libs-js/select.js"></script>
 <script src="../js/candidates.js"></script>
 </body>
 </html>

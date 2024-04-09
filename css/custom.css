@@ -1233,7 +1233,7 @@
 
 .new__options-group > .droplist:nth-child(2) {
     min-width: 121px;
-    max-width: 42.98%;
+    /*max-width: 42.98%;*/
     margin-right: 10px;
     margin-bottom: 10px;
 }
@@ -1251,6 +1251,7 @@
     min-width: 189px;
     max-width: 205px;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .new__options-group > .droplist:nth-child(4) {
@@ -1262,6 +1263,7 @@
 .new__options-group > .droplist:nth-child(5) {
     min-width: 157px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .new__options-group > .droplist:last-of-type {
@@ -1486,6 +1488,7 @@
 
 .specific--visible {
     visibility: visible;
+    z-index: 2;
 }
 
 .specific__wrapper .choices__inner {
