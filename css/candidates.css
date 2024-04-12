@@ -192,6 +192,14 @@ p, span {
     padding-top: 33px;
 }
 
+.new-can__vacancy-title {
+    margin-bottom: 15px;
+}
+
+.new-can__content-left {
+    margin-right: 25px;
+}
+
 .new-can__form-last {
     flex-direction: column;
 }
