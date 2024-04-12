@@ -28,7 +28,7 @@
             <li class="nav__link list-reset"><a href="../partials/vacancies.html"
                                                 class="nav__link-item link-vacancies">Вакансии</a>
             </li>
-            <li class="nav__link list-reset"><a href="#"
+            <li class="nav__link list-reset"><a href="candidates-null.html"
                                                 class="nav__link-item link-candidates active-page">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
@@ -138,7 +138,7 @@
                 <button class="btn-reset can__btn-auto f15w400 c-bali">Автоотбор</button>
             </div>
         </div>
-        <a href="../partials/add_vacancies.html" class="btn-reset btn can__add-values f15w400">Добавить кандидата</a>
+        <button class="btn-reset btn can__add-values f15w400" id="add-can">Добавить кандидата</button>
     </div>
     <div class="can__filter-list">
         <label class="can__label">
@@ -192,41 +192,45 @@
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -274,41 +278,45 @@
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -357,41 +365,45 @@
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -439,41 +451,45 @@
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -522,41 +538,45 @@
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -604,41 +624,45 @@
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -686,41 +710,45 @@
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -768,41 +796,45 @@
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <button class="btn-reset user__add-tags bg-fix f14w400 c-bali">добавить тег</button>
                 </div>
-                <div class="user__quick-info flex mb35">
-                    <img src="../img/user-main-img.png" alt="Фото кандидата" class="mr25 user__main-img">
-                    <div class="user__quick-content flex">
-                        <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
-                        <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
-                        <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
-                        <div class="user__contacts__data mb15">
-                            <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
-                            <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
-                            <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                <div class="user__content-wrapper flex">
+                    <div class="user__content-left">
+                        <img src="../img/user-main-img.png" alt="Фото кандидата" class="user__main-img">
+                        <div class="user__more-head">
+                            <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Образование</p>
+                            <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
+                            <p class="user__more-head__title f14w400 c-bali">Возраст</p>
+                            <p class="user__more-head__title f14w400 c-bali">Город</p>
+                            <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
                         </div>
-                        <a href="mailto:pochta12347273a@mail.ru" class="user__mail f14w500">pochta12347273a@mail.ru</a>
                     </div>
-                </div>
-                <div class="user__more">
-                    <div class="user__more-head">
-                        <p class="user__more-head__title f14w400 c-bali">Опыт работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Образование</p>
-                        <p class="user__more-head__title f14w400 c-bali">Гражданство</p>
-                        <p class="user__more-head__title f14w400 c-bali">Возраст</p>
-                        <p class="user__more-head__title f14w400 c-bali">Город</p>
-                        <p class="user__more-head__title f14w400 c-bali">Последнее место работы</p>
-                        <p class="user__more-head__title f14w400 c-bali">Знание языков</p>
-                    </div>
-                    <div class="user__more-data">
-                        <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
-                        <p class="user__more-data__content f14w400">Высшее</p>
-                        <p class="user__more-data__content f14w400">Россия</p>
-                        <p class="user__more-data__content f14w400">38&nbsp;лет</p>
-                        <p class="user__more-data__content f14w400">Новосибирск</p>
-                        <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
-                            имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
-                            Ленск&raquo;)</p>
-                        <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
-                            Английский&nbsp;A1</p>
+                    <div class="user__content-right">
+                        <div class="user__quick-content flex">
+                            <h3 class="user__name f20w600 mb10">Андреев Антон Владимирович</h3>
+                            <span class="user__price f18w500 mb20">70&nbsp;000&nbsp;р.</span>
+                            <span class="user__contacts f14w400 mb15 c-bali">Контакты</span>
+                            <div class="user__contacts__data mb15">
+                                <a href="tel:+79992222333" class="user__phone f14w500">+7-(999)-(222)-23-33</a>
+                                <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                            <a href="mailto:pochta12347273a@mail.ru"
+                               class="user__mail f14w500">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__more-data">
+                            <p class="user__more-data__content f14w400">5&nbsp;лет 3&nbsp;месяца</p>
+                            <p class="user__more-data__content f14w400">Высшее</p>
+                            <p class="user__more-data__content f14w400">Россия</p>
+                            <p class="user__more-data__content f14w400">38&nbsp;лет</p>
+                            <p class="user__more-data__content f14w400">Новосибирск</p>
+                            <p class="user__more-data__content f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО
+                                МО&nbsp;&laquo;Город
+                                Ленск&raquo;)</p>
+                            <p class="user__more-data__content f14w400">Родной язык&nbsp;&mdash; Русский,
+                                Английский&nbsp;A1</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1057,10 +1089,10 @@
             </div>
         </div>
     </div>
-    <div class="can__item-popup new-can">
-        <div class="new-can__popup-wrapper">
-            <div class="new-can__container">
-                <button class="btn-reset new-can__btn-close"></button>
+    <div class="can__item-popup new-can" id="add-can-field">
+            <button class="btn-reset new-can__btn-close" id="add-can-close"></button>
+        <div class="new-can__popup-wrapper item__popup-wrapper">
+            <div class="new-can__container" data-simplebar>
                 <h4 class="new-can__add-title f20w600">Добавление кандидата</h4>
                 <button class="btn-reset btn-two new-can__btn-import f14w400">Загрузить из&nbsp;файла</button>
                 <div class="new-can__main-content">
@@ -1089,7 +1121,7 @@
                     </div>
                     <div class="new-can__content-right">
                         <div class="new-can__vacancy">
-                            <p class="new-can__vacancy-title f15w500 mb15">Вакансия</p>
+                            <p class="new-can__vacancy-title f15w500">Вакансия</p>
                             <div class="new__change-choice__wrapper mb15">
                                 <select name="choose-level" id="choose-vacancy"
                                         class="new__transfer-items">
@@ -1124,8 +1156,8 @@
                     </div>
                 </div>
                 <div class="new__btns">
-                    <button class="btn-reset btn new__btn-save">Сохранить</button>
-                    <button class="btn-reset new__btn-cancel">Отмена</button>
+                    <button class="btn-reset btn new__btn-save" id="add-btn-save">Сохранить</button>
+                    <button class="btn-reset new__btn-cancel" id="add-btn-cancel">Отмена</button>
                 </div>
             </div>
         </div>

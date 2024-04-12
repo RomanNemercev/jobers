@@ -482,3 +482,18 @@ addPopupCloseOnEscKeyHandler('del-popup');
 document.getElementById('del-no').addEventListener('click', function () {
     document.getElementById('del-popup').classList.remove('vacancies__item-popup--open');
 })
+
+//call add can pop up
+addPopupOpenHandler('#add-can', 'add-can-field');
+addPopupCloseHandler('add-can-close', 'add-can-field');
+addPopupCloseOnBackgroundClickHandler('add-can-field');
+addPopupCloseOnEscKeyHandler('add-can-field');
+
+//close pop up after click on add-no \ yes button
+document.getElementById('add-btn-save').addEventListener('click', function () {
+    document.getElementById('add-can-field').classList.remove('vacancies__item-popup--open');
+})
+
+document.getElementById('add-btn-cancel').addEventListener('click', function () {
+    document.getElementById('add-can-field').classList.remove('vacancies__item-popup--open');
+})

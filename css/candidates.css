@@ -134,29 +134,32 @@ p, span {
 
 .new-can__btn-close {
     position: absolute;
-    width: 22px;
-    height: 22px;
-    top: 24px;
-    right: 24px;
-    background-image: url(../img/delete-x.svg);
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    right: 30px;
+    background-image: url(../img/close-modal-x.svg);
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .new-can__container {
+    height: 85vh;
+    min-width: 1074px;
     position: relative;
     padding: 25px;
     flex-direction: column;
     min-height: inherit;
+    max-height: 956px;
 }
 
 .new-can__main-content {
     margin-bottom: 40.7px;
     display: flex;
-    width: 71.049vw;
     max-width: 100%;
     max-height: 682px;
 }
+
+.
 
 .new-can__content-left {
     margin-right: 25px;
@@ -335,7 +338,7 @@ p, span {
 
 .user__top {
     align-items: center;
-    padding: 15px 25px;
+    padding: 13px 24px;
     border-bottom: 1px solid var(--color_gray);
 }
 
@@ -358,7 +361,7 @@ p, span {
     background-color: var(--color_athens-gray);
     border: none;
     cursor: pointer;
-    padding: 12.5px 10.79px;
+    padding: 12px 10px;
     border-radius: 5px;
     transition: background-color 0.3s; /* Smooth transition effect */
     white-space: nowrap;
@@ -452,7 +455,7 @@ p, span {
 
 .user__status-bar {
     margin-left: auto;
-    align-items: center;
+    align-items: baseline;
 }
 
 .user__vacancy-wrapper {
@@ -471,6 +474,7 @@ p, span {
     color: var(--color_bali);
     border-radius: 5px;
     background-color: var(--color_athens-gray);
+    min-width: 94px;
 }
 
 .user__name-hidden {
@@ -496,8 +500,8 @@ p, span {
 .user__check-icon::before {
     content: '';
     position: absolute;
-    top: -13px;
-    left: -1px;
+    top: -11px;
+    left: 0;
     width: 25px;
     height: 25px;
     background-color: var(--color_gray);
@@ -509,8 +513,8 @@ p, span {
     position: absolute;
     width: 25px;
     height: 25px;
-    top: -13px;
-    left: -1px;
+    top: -11px;
+    left: 0;
     opacity: 0;
 }
 
@@ -520,6 +524,7 @@ p, span {
 
 .user__bottom {
     padding: 25px;
+    padding-top: 27px;
     padding-left: 24px;
 }
 
@@ -556,6 +561,7 @@ p, span {
 
 .user__quick-content {
     flex-direction: column;
+    margin-bottom: 48px;
 }
 
 .user__contacts {
@@ -583,16 +589,20 @@ p, span {
     background-position: left center;
 }
 
-.user__more {
-    display: grid;
-    column-gap: 25px;
-    grid-template-columns: 0.19475fr 1fr;
-    height: 179px;
+.user__more-head {
+    overflow: hidden;
 }
 
-.user__more-head,
-.user__more-data {
+.user__content-left {
+    margin-right: 19px;
+}
+
+.user__content-right {
     overflow: hidden;
+}
+
+.user__main-img {
+    margin-bottom: 32px;
 }
 
 .user__more-head__title,
@@ -936,6 +946,15 @@ p, span {
     transform: scale(1);
 }
 
+.can__item-popup.vacancies__item-popup--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.can__item-popup.vacancies__item-popup--open .new-can__popup-wrapper {
+    transform: scale(1);
+}
+
 .preview {
     padding: 25px;
     width: 681px;
@@ -952,6 +971,7 @@ p, span {
 }
 
 .preview__download {
+    font-weight: 500;
     min-width: auto;
     position: relative;
     padding-left: 48px;
