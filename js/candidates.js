@@ -419,10 +419,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function openDropdown() {
             dropdownMenu.style.display = 'block';
+            dropdownMenu.classList.add('dropdown--active');
             dropdown.setAttribute('data-state', 'open');
         }
 
         function closeDropdown() {
+            dropdownMenu.classList.remove('dropdown--active');
             dropdownMenu.style.display = 'none';
             dropdown.setAttribute('data-state', 'closed');
         }

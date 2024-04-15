@@ -846,7 +846,7 @@
     height: 50px;
     top: 30px;
     right: 30px;
-    background-image: url(../img/close-modal-x.svg);
+    background-image: url("../img/close-modal-x.svg");
     background-repeat: no-repeat;
 }
 
@@ -995,7 +995,7 @@
     height: 18px;
     opacity: 0.5;
     transition: transform .3s ease;
-    background-image: url(../img/arrow-down.svg);
+    background-image: url("../img/arrow-down.svg");
 }
 
 .new__select-box .choices__list--dropdown {
@@ -1026,7 +1026,7 @@
 .new__select-box .choices__list--multiple > .choices__item--selectable > .choices__button {
     opacity: 1;
     border: none;
-    background-image: url(../img/delete-x.svg);
+    background-image: url("../img/delete-x.svg");
     width: 16px;
     height: 16px;
     padding: 0;
@@ -1052,7 +1052,7 @@
 .new__select-box .choices__list--multiple .choices__item.is-highlighted > .choices__button {
     opacity: 1;
     border: none;
-    background-image: url(../img/delete-x.svg);
+    background-image: url("../img/delete-x.svg");
     width: 16px;
     height: 16px;
     padding: 0;
@@ -1278,7 +1278,7 @@
     top: 14px;
     border-radius: 0;
     border: none;
-    background-image: url(../img/delete-x.svg);
+    background-image: url("../img/delete-x.svg");
     width: 16px;
     height: 16px;
     background-size: cover;
@@ -1420,7 +1420,7 @@
 
 .new__options-group .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
     border-left: none;
-    background-image: url(../img/delete-x__for-tabs.svg);
+    background-image: url("../img/delete-x__for-tabs.svg");
     background-size: 16px;
     width: 16px;
     height: 16px;
@@ -1541,7 +1541,7 @@
     left: 10px;
     width: 20px;
     height: 20px;
-    background-image: url(../img/check_w20-empty.svg);
+    background-image: url("../img/check_w20-empty.svg");
     background-repeat: no-repeat;
 }
 
@@ -1556,7 +1556,7 @@
     width: 20px;
     height: 20px;
     opacity: 0;
-    background-image: url(../img/check_w20-checked.svg);
+    background-image: url("../img/check_w20-checked.svg");
     background-repeat: no-repeat;
 }
 
@@ -1848,7 +1848,7 @@
     height: 50px;
     top: 30px;
     right: 30px;
-    background-image: url(../img/close-modal-x.svg);
+    background-image: url("../img/close-modal-x.svg");
     background-repeat: no-repeat;
 }
 
