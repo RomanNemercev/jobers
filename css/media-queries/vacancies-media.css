@@ -341,6 +341,7 @@
     }
 
     .vacancies__btn-768 {
+        display: inline-block;
         color: var(--color_dodger);
     }
 

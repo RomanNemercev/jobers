@@ -76,6 +76,19 @@ try {
     console.log('Не сработал чекбокс на "Список вакансий"')
 }
 
+try {
+    document.getElementById('hide-filter-cans').addEventListener('click', function () {
+        document.getElementById('popupFilterCans').classList.remove('cans__filter--active');
+        arrAllCans.forEach(function (el) {
+            el.checked = false;
+        })
+        checkAllCans.checked = false;
+    })
+} catch {
+    console.log('Не сработал кнопка "Скрыть фильтр"')
+}
+
+
 //modal auto-setting in auto-choose
 let autoSetBtn = document.querySelector('.can__btn-auto');
 
@@ -396,6 +409,9 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdowns.forEach(function (dropdown) {
         const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        const dropdownClose = dropdown.querySelector('.item__btn-close');
+        const dropdownBack = dropdown.querySelector('.candidates__droplist-back');
+        const dropdownDot = dropdown.querySelectorAll('.button-icon');
 
         dropdown.addEventListener('mouseleave', function (e) {
             if (!dropdown.contains(e.relatedTarget)) {
@@ -417,14 +433,47 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 200);
         });
 
+        dropdownClose.addEventListener('click', function () {
+            closeDropdown();
+
+            // Удаляем обработчики событий
+            dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
+            dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
+        });
+
+        dropdownBack.addEventListener('click', function () {
+            closeDropdown();
+            dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
+            dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
+        });
+
+// Объявляем функции-обработчики событий
+        function handleMouseEnter() {
+            openDropdown();
+            clearTimeout(dropdownMenu.timer);
+        }
+
+        function handleMouseLeave(e) {
+            if (!dropdown.contains(e.relatedTarget)) {
+                closeDropdown();
+            }
+
+            dropdownMenu.timer = setTimeout(function () {
+                closeDropdown();
+            }, 200);
+        }
+
+
         function openDropdown() {
             dropdownMenu.style.display = 'block';
             dropdownMenu.classList.add('dropdown--active');
+            dropdownBack.classList.add('candidates__droplist-back--active');
             dropdown.setAttribute('data-state', 'open');
         }
 
         function closeDropdown() {
             dropdownMenu.classList.remove('dropdown--active');
+            dropdownBack.classList.remove('candidates__droplist-back--active');
             dropdownMenu.style.display = 'none';
             dropdown.setAttribute('data-state', 'closed');
         }
@@ -503,3 +552,149 @@ document.getElementById('add-btn-save').addEventListener('click', function () {
 document.getElementById('add-btn-cancel').addEventListener('click', function () {
     document.getElementById('add-can-field').classList.remove('vacancies__item-popup--open');
 })
+
+//move sidebar
+let burgerTab = document.querySelector('.search-bar__burger');
+let sideBar = document.querySelector('.nav__container');
+
+burgerTab.addEventListener('click', function () {
+    burgerTab.classList.toggle('search-bar__burger--active');
+    sideBar.classList.toggle('nav__container--active');
+    document.body.classList.toggle('stop-scroll');
+})
+
+
+//dropdown-search for desktop
+function handleInput(inputBox, availableKeywords, resultsBox) {
+    return function () {
+        let result = [];
+        let input = inputBox.value;
+        if (input.length) {
+            result = availableKeywords.filter((keyword) => {
+                return keyword.toLowerCase().includes(input.toLowerCase());
+            });
+        }
+        displayResults(result, resultsBox);
+        if (!result.length) {
+            resultsBox.innerHTML = '';
+        }
+    };
+}
+
+// Отображение результатов
+function displayResults(result, resultsBox) {
+    const content = result.map((list) => {
+        return '<li onclick=selectInput(this)>' + list + '</li>';
+    });
+    resultsBox.innerHTML = '<ul>' + content.join('') + '</ul>';
+}
+
+// Выбор варианта из выпадающего списка
+function selectInput(list) {
+    inputBox.value = list.innerHTML;
+    resultsBox.innerHTML = '';
+}
+
+// Основная логика
+document.addEventListener('DOMContentLoaded', function () {
+    const availableKeywords = [
+        'Владимир Власов',
+        'Андрей Власов',
+        'Максим Власов',
+        'Юрий Иванов',
+        'Константин Хабенский',
+        'Иван Грозный',
+    ];
+    const inputBox = document.getElementById('input-box');
+    const resultsBox = document.querySelector('.search-bar__dropdown');
+
+    // Функция для отображения последних элементов массива
+    function displayLastKeywords(count) {
+        const lastKeywords = availableKeywords.slice(-count);
+        displayResults(lastKeywords, resultsBox);
+    }
+
+    // Обработчик события клика на поле ввода
+    inputBox.addEventListener('click', function () {
+        if (inputBox.value === '') {
+            displayLastKeywords(3); // Отображаем последние три элемента массива
+        }
+    });
+
+    // Обработчик события клика на документе
+    document.addEventListener('click', function (event) {
+        // Проверяем, был ли клик выполнен вне поля ввода поиска
+        if (!inputBox.contains(event.target)) {
+            // Сбрасываем результаты поиска
+            resultsBox.innerHTML = '';
+        }
+    });
+
+    try {
+        inputBox.addEventListener('keyup', handleInput(inputBox, availableKeywords, resultsBox));
+    } catch (err) {
+        console.log('Не загрузился выпадающий поиск');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const availableKeywords = [
+        'Владимир Власов',
+        'Андрей Власов',
+        'Максим Власов',
+        'Юрий Иванов',
+        'Константин Хабенский',
+        'Иван Грозный',
+    ];
+    const inputBox = document.getElementById('input-box-candidates');
+    const resultsBox = document.querySelector('.search-bar__dropdown-second');
+
+    // Функция для отображения последних элементов массива
+    function displayLastKeywords(count) {
+        const lastKeywords = availableKeywords.slice(-count);
+        displayResults(lastKeywords, resultsBox);
+    }
+
+    // Обработчик события клика на поле ввода
+    inputBox.addEventListener('click', function () {
+        if (inputBox.value === '') {
+            displayLastKeywords(3); // Отображаем последние три элемента массива
+        }
+    });
+
+    // Обработчик события клика на документе
+    document.addEventListener('click', function (event) {
+        // Проверяем, был ли клик выполнен вне поля ввода поиска
+        if (!inputBox.contains(event.target)) {
+            // Сбрасываем результаты поиска
+            resultsBox.innerHTML = '';
+        }
+    });
+
+    try {
+        inputBox.addEventListener('keyup', handleInput(inputBox, availableKeywords, resultsBox));
+    } catch (err) {
+        console.log('Не загрузился выпадающий поиск');
+    }
+});
+
+//code for popup 768
+const morePopupBtn = document.getElementById('vacancies-popup-more');
+const morePopupSpace = document.getElementById('vacancies-popup-options');
+const popupBtnCloseFirst = document.getElementById('popup-btn-close-first');
+const optionsBack = document.querySelector('.vacancies__options-back');
+
+const togglePopup = () => {
+    morePopupSpace.classList.toggle('vacancies__popup-768--active');
+    optionsBack.classList.toggle('vacancies__options-back--active');
+};
+
+try {
+    morePopupBtn.addEventListener('click', togglePopup);
+    optionsBack.addEventListener('click', togglePopup);
+    popupBtnCloseFirst.addEventListener('click', togglePopup);
+} catch (error) {
+    console.log("Не найден элемент открытия дополнительных функций выделенных вакансий на странице вакансий.");
+}
+
+//unchecked all items after click

@@ -120,8 +120,8 @@
     </div>
     <div class="can__section-bar">
         <form action="#" class="search-bar__mobile">
-            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="default">
-            <div class="search-bar__dropdown"></div>
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box-candidates">
+            <div class="search-bar__dropdown search-bar__dropdown-second"></div>
         </form>
         <div class="can__section-param">
             <div class="can__list">
@@ -201,6 +201,7 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-greencard">
                             <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768"></button>
@@ -343,7 +344,10 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-greencard-active">
+                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768-greenactive"></button>
                             <ul>
                                 <li>
                                     <button class="btn-reset dropdown-item">Открыть файл резюме</button>
@@ -483,7 +487,10 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-orangecard">
+                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768-orange"></button>
                             <ul>
                                 <li>
                                     <button class="btn-reset dropdown-item">Открыть файл резюме</button>
@@ -622,7 +629,10 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-orangecard-active">
+                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768-orangeactive"></button>
                             <ul>
                                 <li>
                                     <button class="btn-reset dropdown-item">Открыть файл резюме</button>
@@ -762,7 +772,10 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-dodgercard">
+                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768-dodger"></button>
                             <ul>
                                 <li>
                                     <button class="btn-reset dropdown-item">Открыть файл резюме</button>
@@ -901,7 +914,10 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-dodgercard-active">
+                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768-dodgeractive"></button>
                             <ul>
                                 <li>
                                     <button class="btn-reset dropdown-item">Открыть файл резюме</button>
@@ -1040,7 +1056,10 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-manually">
+                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768-manually"></button>
                             <ul>
                                 <li>
                                     <button class="btn-reset dropdown-item">Открыть файл резюме</button>
@@ -1178,7 +1197,11 @@
                             <div class="button-icon"></div>
                             <!--            <div class="button-text">...</div>-->
                         </button>
+                        <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-manually-active">
+                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <button class="btn-reset item__btn-close"
+                                    id="btn-dropdown-close768-manuallyactive"></button>
                             <ul>
                                 <li>
                                     <button class="btn-reset dropdown-item">Открыть файл резюме</button>
@@ -1302,6 +1325,8 @@
             <span class="cans__filter-check" id="hide-filter-cans"></span>
             <p class="cans__filter-sum"><span class="cans__filter-span">10</span> кандидатов
             </p>
+            <button class="btn-reset vacancies__btn-768 f14w400" id="vacancies-popup-more">Выбрать действие
+            </button>
             <div class="cans__select-box">
                 <select name="select" class="cans__select-wrapper" id="axe">
                     <option value="">Выберите действие</option>
@@ -1314,6 +1339,24 @@
             </div>
         </div>
     </div>
+    <div class="vacancies__popup-768" id="vacancies-popup-options">
+        <div class="vacancies__popup-768__wrapper">
+            <p class="vacancies__popup-title f20w500">Выбрано вакансий: <span
+                    class="vacancies__popup-span">10</span></p>
+            <button class="btn-reset vacancies__popup-btn bg-fix" id="popup-btn-close-first"></button>
+            <ul class="vacancies__popup-list">
+                <li class="vacancies__popup-item">
+                    <button class="btn-reset vacancies__btn-item f15w400" id="multi-delete-vacancies">Удалить
+                    </button>
+                </li>
+                <li class="vacancies__popup-item">
+                    <button class="btn-reset vacancies__btn-item f15w400" id="multi-archive-vacancies">В архив
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="vacancies__options-back"></div>
     <div class="cans__filter-popup" id="cans-del-modal-filter">
         <button class="btn-reset delete__btn"></button>
         <div class="vacancies__filter-popup__wrapper delete">
@@ -1650,8 +1693,12 @@
         </div>
     </div>
 </section>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<!--optimized-->
+<!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>-->
+<script src="../js/libs-js/popper.min.js"></script>
+<!--optimized-->
+<!--<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>-->
+<script src="../js/libs-js/tippy-bundle.umd.js"></script>
 <!--not load simplebar-->
 <!--<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>-->
 <script src="../js/libs-js/simplebar.min.js"></script>

@@ -4,13 +4,13 @@
 .user__status-mobile,
 .user__content-mobile,
 .user__info-mobile,
-.dropdown__title-768 {
+.dropdown__title-768,
+.vacancies__btn-768 {
     display: none;
 }
 /*end mobile hidde*/
 
 .can {
-    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -382,13 +382,11 @@
     white-space: nowrap;
 }
 
-.dropdown-toggle.active,
-.dropdown:hover .dropdown-toggle {
+.dropdown-toggle:hover{
     background-color: var(--color_zircon);
 }
 
-.dropdown-toggle.active,
-.dropdown:hover .button-icon {
+.dropdown-toggle:hover .button-icon {
     background-color: var(--color_dodger);
 }
 
@@ -843,6 +841,11 @@
 
 .cans__select-box .choices__item--choice.choices__item--selectable {
     color: var(--color_bali);
+}
+
+.cans__select-box .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
 }
 
 .cans__select-box .choices[data-type*=select-one]::after {

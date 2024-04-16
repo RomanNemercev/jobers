@@ -3606,6 +3606,10 @@
     display: none;
 }
 
+.vacancies__btn-768 {
+    display: none;
+}
+
 /*continue laoyout vacancies page*/
 .vacancies__send-archive {
     border-radius: 5px;

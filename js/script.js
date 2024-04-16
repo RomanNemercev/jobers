@@ -493,50 +493,77 @@ try {
 
 
 //dropdown-search
-let availableKeywords = [
-    'Владимир Власов',
-    'Андрей Власов',
-    'Максим Власов',
-    'Юрий Иванов',
-    'Константин Хабенский',
-    'Иван Грозный',
-];
-
-const resultsBox = document.querySelector('.search-bar__dropdown');
-const inputBox = document.getElementById('input-box');
-
-try {
-    inputBox.onkeyup = function () {
+function handleInput(inputBox, availableKeywords, resultsBox) {
+    return function() {
         let result = [];
         let input = inputBox.value;
         if (input.length) {
             result = availableKeywords.filter((keyword) => {
                 return keyword.toLowerCase().includes(input.toLowerCase());
             });
-            console.log(result);
         }
-        display(result);
-
+        displayResults(result, resultsBox);
         if (!result.length) {
             resultsBox.innerHTML = '';
         }
-    }
-} catch (err) {
-    console.log('Не загрузился выпадающий поиск')
+    };
 }
 
-function display(result) {
+// Отображение результатов
+function displayResults(result, resultsBox) {
     const content = result.map((list) => {
         return '<li onclick=selectInput(this)>' + list + '</li>';
     });
-
     resultsBox.innerHTML = '<ul>' + content.join('') + '</ul>';
 }
 
+// Выбор варианта из выпадающего списка
 function selectInput(list) {
     inputBox.value = list.innerHTML;
     resultsBox.innerHTML = '';
 }
+
+// Основная логика
+document.addEventListener('DOMContentLoaded', function() {
+    const availableKeywords = [
+        'Владимир Власов',
+        'Андрей Власов',
+        'Максим Власов',
+        'Юрий Иванов',
+        'Константин Хабенский',
+        'Иван Грозный',
+    ];
+    const inputBox = document.getElementById('input-box');
+    const resultsBox = document.querySelector('.search-bar__dropdown');
+
+    // Функция для отображения последних элементов массива
+    function displayLastKeywords(count) {
+        const lastKeywords = availableKeywords.slice(-count);
+        displayResults(lastKeywords, resultsBox);
+    }
+
+    // Обработчик события клика на поле ввода
+    inputBox.addEventListener('click', function() {
+        if (inputBox.value === '') {
+            displayLastKeywords(3); // Отображаем последние три элемента массива
+        }
+    });
+
+    // Обработчик события клика на документе
+    document.addEventListener('click', function(event) {
+        // Проверяем, был ли клик выполнен вне поля ввода поиска
+        if (!inputBox.contains(event.target)) {
+            // Сбрасываем результаты поиска
+            resultsBox.innerHTML = '';
+        }
+    });
+
+    try {
+        inputBox.addEventListener('keyup', handleInput(inputBox, availableKeywords, resultsBox));
+    } catch (err) {
+        console.log('Не загрузился выпадающий поиск');
+    }
+});
 
 //     modal for btn-del in dropdown
 let btnDelDrop = document.querySelectorAll('.choose-del');
