@@ -5,7 +5,11 @@
 .user__content-mobile,
 .user__info-mobile,
 .dropdown__title-768,
-.vacancies__btn-768 {
+.vacancies__btn-768,
+.delete__no-auto__768,
+.delete__no-edit__768,
+.new-can__close-back768,
+.new-can__main-content__768 {
     display: none;
 }
 /*end mobile hidde*/
@@ -145,13 +149,14 @@
     height: 50px;
     top: 30px;
     right: 30px;
-    background-image: url(../img/close-modal-x.svg);
+    background-image: url("../img/close-modal-x.svg");
     background-repeat: no-repeat;
 }
 
 .new-can__container {
     height: 85vh;
-    min-width: 1074px;
+    max-width: 100%;
+    width: 74.584vw;
     position: relative;
     padding: 25px;
     flex-direction: column;
@@ -949,9 +954,9 @@
     align-items: center;
     justify-content: center;
     overflow-y: auto;
-    visibility: hidden;
+    visibility: visible;
     background-color: rgba(42, 49, 55, .75);
-    opacity: 0;
+    opacity: 1;
     transition: visibility .3s ease, opacity .3s ease;
 }
 

@@ -449,4 +449,382 @@
     .vacancies__popup-768--active {
         bottom: 0;
     }
+
+    /*    pop's settings*/
+    .delete__no-auto__768 {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+    }
+
+    .auto__container,
+    .quest__container,
+    .del {
+        padding: 13px;
+    }
+
+    .quest__container {
+        min-width: 323px;
+        min-height: inherit;
+    }
+
+    .item__popup-del > .item__popup-wrapper {
+        min-height: 162px;
+    }
+
+    .auto__list,
+    .quest__desc {
+        width: 323px;
+    }
+
+    .auto__title {
+        margin-bottom: 13px;
+    }
+
+    .auto__item:not(:last-of-type) {
+        margin-bottom: 7px;
+    }
+
+    .auto__add-changes {
+        margin-bottom: 25px;
+    }
+
+    .auto__list {
+        margin-bottom: 13px;
+    }
+
+    .auto__change {
+        flex-shrink: 0;
+    }
+
+    .auto__item-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .item__popup-wrapper {
+        min-height: 226px;
+    }
+
+    /*    edit popup*/
+    .edit__container {
+        padding: 13px;
+    }
+
+    .delete__no-edit__768 {
+        display: inline-block;
+    }
+
+    .edit__btns-wrapper {
+        display: flex;
+    }
+
+    .edit__data-wrapper {
+        width: 323px;
+    }
+
+    .edit__title,
+    .quest__title {
+        margin-bottom: 13px;
+    }
+
+    .edit__cancel {
+        background-color: var(--color_dodger);
+        color: var(--color_white);
+        margin-right: 25px;
+    }
+
+    .auto__close,
+    .edit__close,
+    .quest__btn-close {
+        display: none;
+    }
+
+    .quest__btn-wrap {
+        flex-direction: row-reverse;
+    }
+
+    .quest__btn-del {
+        color: var(--color_red);
+        background-color: var(--color_pink);
+    }
+
+    .quest__desc,
+    .delete__attent {
+        margin-bottom: 25px;
+    }
+
+    .del {
+        max-width: 349px;
+        min-height: 179px;
+    }
+
+    .new-can__popup-wrapper {
+        max-width: 100vw;
+    }
+
+    .new-can__close-back768 {
+        position: fixed;
+        display: block;
+        z-index: 1;
+        width: 100%;
+        height: 40px;
+        background-color: var(--color_zircon);
+        top: 0;
+        left: 0;
+    }
+
+    .new-can__container {
+        width: 100vw;
+        height: 100vh;
+        padding: 53px 13px 79px 13px;
+    }
+
+    .new-can__btn-close {
+        z-index: 2;
+        background-image: url("../../img/cross_35x35.svg");
+        width: 35px;
+        height: 35px;
+        top: 0;
+        right: 10.5px;
+    }
+
+    .new-can__add-title {
+        margin-bottom: 17px;
+    }
+
+    .new-can__btn-import {
+        width: 100%;
+    }
+
+    .new-can__main-content {
+        display: none;
+    }
+
+    /*main-content add's candidates in 768*/
+    .add__post-form {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 12px 15px;
+        border-radius: 5px;
+        background-color: var(--color_athens-gray);
+        margin-bottom: 13px;
+    }
+
+    .add__post-form::placeholder {
+        font-size: 14px;
+    }
+
+    .add__post-form:focus {
+        outline: 1px solid var(--color_dodger);
+        background-color: var(--color_zircon);
+    }
+
+    .new-can__main-content__768 {
+        display: block;
+    }
+
+    .add__img {
+        margin-bottom: 13px;
+    }
+
+    .add__title-second {
+        margin-bottom: 7px;
+    }
+
+    .new__btns {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        padding: 13px;
+    }
+
+    .new-can__main-content__768 .droplist {
+        width: 100%;
+        margin-bottom: 13px;
+    }
+
+    .new-can__main-content__768 .droplist__result_text {
+        max-width: 90%;
+    }
+
+    .add__last-name__label {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .add__first-name__label {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .add__third-name__label {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .add__mail__label {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .add__phone__label {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .add__tg__label,
+    .add__skype__label,
+    .add__birth__label,
+    .add__last-place__label,
+    .add__source__label {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .add__wage__wrapper .droplist__selected {
+        width: 100%;
+    }
+
+    .add__wage__wrapper .droplist__fields .droplist__selected .droplist__icon_arrow {
+        margin-left: auto;
+    }
+
+    .add__wage__wrapper .droplist__fields.droplist_active .droplist__result {
+        width: 100%;
+    }
+
+    .add__wage-title__cans {
+        margin-bottom: 7px;
+    }
+
+    .new-can__resume-content {
+        min-height: 290px;
+    }
+
+    .new__btn-save {
+        margin-right: 15px;
+    }
+
+    .new__btn-save,
+    .new__btn-cancel {
+        min-width: 167px;
+    }
+
+    .droplist__items {
+        width: 100%;
+    }
+
+    /*    auto choose sets*/
+    .new {
+        max-width: 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .new__close {
+        z-index: 2;
+        background-image: url("../../img/cross_35x35.svg");
+        width: 35px;
+        height: 35px;
+        top: 0;
+        right: 10.5px;
+    }
+
+    .new__container {
+        padding: 53px 13px 79px 13px;
+        overflow-y: scroll;
+    }
+
+    .new__title {
+        margin-bottom: 13px;
+    }
+
+    .new__desc {
+        margin-bottom: 17px;
+    }
+
+    .new__location-title {
+        margin-bottom: 7px;
+    }
+
+    .new__search-label,
+    .new__current-label {
+        width: 100%;
+    }
+
+    .new__clone-answ {
+        margin-bottom: 17px;
+    }
+
+    .new__options-group,
+    .new__global {
+        margin-bottom: 17px;
+    }
+
+    .new__add-name {
+        margin-bottom: 0;
+    }
+
+    .preview {
+        max-width: 100%;
+        width: 100vw;
+        height: 100vh;
+        padding: 53px 13px 54px 13px;
+    }
+
+    .auto__close-768 {
+        display: block;
+        z-index: 2;
+        background-image: url("../../img/cross_35x35.svg");
+        width: 35px;
+        height: 35px;
+        top: 0;
+        right: 10.5px;
+    }
+
+    .preview__title {
+        margin-bottom: 17px;
+    }
+
+    .preview__btns-left {
+        display: flex;
+    }
+
+    .preview__download {
+        margin-right: 17px;
+        padding-left: 25.85px;
+    }
+
+    .preview__download::before {
+        display: none;
+    }
+
+    .preview__btns-block {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 13px;
+    }
+
+    .preview__print {
+        padding: 10px 11.32px;
+        padding-left: 39px;
+    }
+
+    .preview__print::before {
+        left: 11.33px;
+    }
 }

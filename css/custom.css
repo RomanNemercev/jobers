@@ -620,7 +620,7 @@
     width: 100%;
     min-height: 240px;
     background-color: var(--color_white);
-    transform: scale(0);
+    transform: scale(1);
     transition: transform .3s ease;
 }
 
@@ -2576,6 +2576,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.main__post-form:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
 }
 
 .main__skill-title {

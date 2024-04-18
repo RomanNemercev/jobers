@@ -1,18 +1,38 @@
+body {
+    background-color: #ddd;
+}
+.container {
+    width: 100%;
+    max-width: 849px;
+    padding: 80px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
 .droplist {
+    min-width: 332px;
+    width: auto;
+    max-width: 100%;
     display: inline-block;
     height: auto;
+    border: 1px dashed #9747FF;
+    padding: 20px 19px;
     box-sizing: border-box;
     border-radius: 5px;
     font-size: 14px;
     line-height: 16.94px;
     font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
     position: relative;
 }
-
 .droplist__fields {
-    /*padding: 25px 20px;*/
+    padding: 25px 20px;
 }
-
 .droplist__fields .droplist__selected {
     display: inline-flex;
     min-width: 182px;
@@ -20,23 +40,18 @@
     align-items: center;
     justify-content: flex-start;
 }
-/* .droplist__fields .droplist__selected .droplist__icon_arrow {
+.droplist__fields .droplist__selected .droplist__icon_arrow {
     position: static;
     margin-left: 12px;
-} */
+}
 .droplist__items {
-    position: absolute;
-    z-index: 5;
     display: none;
     padding: 0;
     margin: 10px 0 0 0;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    background-color: var(--color_white);
-    width: max-content;
 }
 .droplist__item {
-    white-space: nowrap;
     list-style: none;
     padding: 10px 15px 10px 15px;
     box-sizing: border-box;
@@ -55,8 +70,6 @@
 }
 .droplist_active .droplist__items {
     display: block;
-    border-radius: 5px;
-    overflow: hidden;
 }
 .droplist__item:hover {
     color: #5898FF;
@@ -69,7 +82,7 @@
 .droplist__icon {
     position: absolute;
     right: 16px;
-    top: 16px;
+    top: 14px;
     cursor: pointer;
 }
 .droplist__icon_arrow {
@@ -82,7 +95,7 @@
     width: 16px;
     height: 16px;
     top: 12px;
-    background: url('../../img/cross.svg') center center no-repeat;
+    background: url('../img/cross.svg') center center no-repeat;
     display: none;
 }
 .item {
@@ -137,12 +150,11 @@
     fill: #2F353D;
 }
 .droplist__result_text {
-    /*max-width: 240px;*/
+    max-width: 240px;
     display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin-right: 25px;
 }
 .check + label {
     display: flex;
@@ -174,12 +186,12 @@
 }
 .check:checked+label::before {
     border-color: #5898FF;
-    background: url('../../img/check.svg') center center no-repeat;
+    background: url('../img/check.svg') center center no-repeat;
     background-color: #5898FF;
 }
 .check:hover+label::before {
     border-color: #5898FF;
-    background: url('../../img/check.svg') center center no-repeat;
+    background: url('../img/check.svg') center center no-repeat;
     background-color: #5898FF;
 }
 .droplist__fields .droplist__items {
@@ -219,7 +231,7 @@
 .droplist__field:focus {
     background-color: #EFF5FF;
     outline: 1px solid #5898FF;
-
+    
 }
 .droplist__fields .droplist__item label {
     padding: 0;
@@ -244,17 +256,15 @@
 .droplist__toggle .droplist__icon_toggle {
     transform: rotate(180deg);
 }
-.droplist__select_citys {
-    margin-bottom: 18px;
-}
-.droplist__select_transfer {
-    width: 100%;
-    margin-bottom: 18px;
-}
 
 @media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
     .droplist {
-        /*margin: 0 auto 10px auto;*/
+        margin: 0 auto 10px auto;
     }
 }
 @media screen and (max-width: 340px) {
