@@ -620,7 +620,7 @@
     width: 100%;
     min-height: 240px;
     background-color: var(--color_white);
-    transform: scale(1);
+    transform: scale(0);
     transition: transform .3s ease;
 }
 

@@ -309,6 +309,83 @@ let vacancyChoose = new Choices(
 );
 
 //script for dropdown
+// document.addEventListener("DOMContentLoaded", function () {
+//     const dropdowns = document.querySelectorAll('.dropdown');
+//
+//     dropdowns.forEach(function (dropdown) {
+//         const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+//         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+//         const dropdownClose = dropdown.querySelector('.item__btn-close');
+//         const dropdownBack = dropdown.querySelector('.candidates__droplist-back');
+//         const dropdownDot = dropdown.querySelectorAll('.button-icon');
+//
+//         dropdown.addEventListener('mouseleave', function (e) {
+//             if (!dropdown.contains(e.relatedTarget)) {
+//                 closeDropdown();
+//             }
+//         });
+//
+//         dropdown.addEventListener('mouseenter', function () {
+//             openDropdown();
+//         });
+//
+//         dropdownMenu.addEventListener('mouseenter', function () {
+//             clearTimeout(dropdownMenu.timer);
+//         });
+//
+//         dropdownMenu.addEventListener('mouseleave', function () {
+//             dropdownMenu.timer = setTimeout(function () {
+//                 closeDropdown();
+//             }, 200);
+//         });
+//
+//         dropdownClose.addEventListener('click', function () {
+//             closeDropdown();
+//
+//             // Удаляем обработчики событий
+//             dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
+//             dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
+//         });
+//
+//         dropdownBack.addEventListener('click', function () {
+//             closeDropdown();
+//             dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
+//             dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
+//         });
+//
+// // Объявляем функции-обработчики событий
+//         function handleMouseEnter() {
+//             openDropdown();
+//             clearTimeout(dropdownMenu.timer);
+//         }
+//
+//         function handleMouseLeave(e) {
+//             if (!dropdown.contains(e.relatedTarget)) {
+//                 closeDropdown();
+//             }
+//
+//             dropdownMenu.timer = setTimeout(function () {
+//                 closeDropdown();
+//             }, 200);
+//         }
+//
+//
+//         function openDropdown() {
+//             dropdownMenu.style.display = 'block';
+//             dropdownMenu.classList.add('dropdown--active');
+//             dropdownBack.classList.add('candidates__droplist-back--active');
+//             dropdown.setAttribute('data-state', 'open');
+//         }
+//
+//         function closeDropdown() {
+//             dropdownMenu.classList.remove('dropdown--active');
+//             dropdownBack.classList.remove('candidates__droplist-back--active');
+//             dropdownMenu.style.display = 'none';
+//             dropdown.setAttribute('data-state', 'closed');
+//         }
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
     const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -317,58 +394,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
         const dropdownClose = dropdown.querySelector('.item__btn-close');
         const dropdownBack = dropdown.querySelector('.candidates__droplist-back');
-        const dropdownDot = dropdown.querySelectorAll('.button-icon');
 
-        dropdown.addEventListener('mouseleave', function (e) {
-            if (!dropdown.contains(e.relatedTarget)) {
+        dropdownToggle.addEventListener('click', function () {
+            if (dropdownMenu.classList.contains('dropdown--active')) {
                 closeDropdown();
+            } else {
+                openDropdown();
             }
-        });
-
-        dropdown.addEventListener('mouseenter', function () {
-            openDropdown();
-        });
-
-        dropdownMenu.addEventListener('mouseenter', function () {
-            clearTimeout(dropdownMenu.timer);
-        });
-
-        dropdownMenu.addEventListener('mouseleave', function () {
-            dropdownMenu.timer = setTimeout(function () {
-                closeDropdown();
-            }, 200);
         });
 
         dropdownClose.addEventListener('click', function () {
             closeDropdown();
-
-            // Удаляем обработчики событий
-            dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
-            dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
         });
 
         dropdownBack.addEventListener('click', function () {
             closeDropdown();
-            dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
-            dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
         });
-
-// Объявляем функции-обработчики событий
-        function handleMouseEnter() {
-            openDropdown();
-            clearTimeout(dropdownMenu.timer);
-        }
-
-        function handleMouseLeave(e) {
-            if (!dropdown.contains(e.relatedTarget)) {
-                closeDropdown();
-            }
-
-            dropdownMenu.timer = setTimeout(function () {
-                closeDropdown();
-            }, 200);
-        }
-
 
         function openDropdown() {
             dropdownMenu.style.display = 'block';
@@ -385,6 +426,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 //script for popup
 // Функция для открытия всплывающего окна

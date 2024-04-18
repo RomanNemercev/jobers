@@ -827,4 +827,18 @@
     .preview__print::before {
         left: 11.33px;
     }
+
+    .btn-settings {
+        right: 0;
+        border-right: none;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .btn-right {
+        display: none;
+    }
+
+    .scroll-x__wrapper {
+        width: calc(100% - 45px);
+    }
 }
