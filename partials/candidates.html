@@ -115,6 +115,7 @@
                 </button>
             </div>
             <button class="btn-reset btn-settings"></button>
+            <button class="btn-reset btn-left" id="btn-left"></button>
             <button class="btn-reset btn-right" id="btn-right"></button>
         </div>
     </div>
@@ -125,9 +126,10 @@
         </form>
         <div class="can__section-param">
             <div class="can__list">
-                <div class="droplist droplist__select" data-default-text="Все вакансии">
+                <div class="droplist droplist__select">
                     <form class="form__list" action="">
-                        <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Все вакансии</span>
+                        <div class="droplist__selected item droplist__result item"><span class="droplist__result_text"
+                                                                                         data-start="Все вакансии">Все вакансии</span>
                             <span class="droplist__icon droplist__icon_cross"></span>
                             <svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9"
                                  fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,9 +147,10 @@
                 </div>
             </div>
             <div class="can__list">
-                <div class="droplist droplist__select" data-default-text="Сортировать">
+                <div class="droplist droplist__select">
                     <form class="form__list" action="">
-                        <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Сортировать</span>
+                        <div class="droplist__selected item droplist__result item"><span class="droplist__result_text"
+                                                                                         data-start="Сортировать">Сортировать</span>
                             <span class="droplist__icon droplist__icon_cross"></span>
                             <svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9"
                                  fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,8 +195,30 @@
                 <div class="user__status-bar flex">
                     <p class="user__status f14w400 mr25">Не&nbsp;просмотрено</p>
                     <button class="btn-reset btn-succes mr15 f15w400 user__invite">Пригласить</button>
-                    <button class="btn-reset btn-delete mr15 user__btn-mind f15w400">Отказать</button>
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <button class="btn-reset btn-delete user__btn-mind f15w400">Отказать</button>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -203,7 +228,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-greencard">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768"></button>
                             <ul>
                                 <li>
@@ -229,7 +254,10 @@
                 <div class="user__metadata flex mb35">
                     <span class="user__in btn-succes mr15 f14w500">Входящий отклик</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-1">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -277,7 +305,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-1-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -301,23 +334,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                         <button class="btn-reset btn-succes mr15 f15w400 user__invite-mobile">Пригласить</button>
                         <button class="btn-reset btn-delete mr15 user__btn-mind__mobile f15w400">Отказать</button>
                     </div>
@@ -336,7 +391,29 @@
                         инженер-энергетик</a>
                 </div>
                 <div class="user__status-bar flex">
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -346,7 +423,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-greencard-active">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768-greenactive"></button>
                             <ul>
                                 <li>
@@ -372,7 +449,10 @@
                     <span class="user__in btn-succes mr15 f14w500">Входящий отклик</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-2">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -420,7 +500,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-2-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -444,23 +529,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -479,7 +586,29 @@
                 <div class="user__status-bar flex">
                     <p class="user__status-orange f14w400 mr25">Не&nbsp;просмотрено</p>
                     <button class="btn-reset btn-succes mr15 f15w400 user__invite">Пригласить</button>
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -489,7 +618,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-orangecard">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768-orange"></button>
                             <ul>
                                 <li>
@@ -515,7 +644,10 @@
                 <div class="user__metadata flex mb35">
                     <span class="user__in-workweb f14w500 mr15 f14w500 bg-fix">Предложение работного сайта</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-3">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -563,7 +695,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-3-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -587,23 +724,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                         <button class="btn-reset btn-succes mr15 f15w400 user__invite-mobile">Пригласить</button>
                     </div>
                 </div>
@@ -621,7 +780,29 @@
                         инженер-энергетик</a>
                 </div>
                 <div class="user__status-bar flex">
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -631,7 +812,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-orangecard-active">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768-orangeactive"></button>
                             <ul>
                                 <li>
@@ -657,7 +838,10 @@
                     <span class="user__in-workweb f14w500 mr15 f14w500 bg-fix">Предложение работного сайта</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-4">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -705,7 +889,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-4-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -729,23 +918,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -764,7 +975,29 @@
                 <div class="user__status-bar flex">
                     <p class="user__status-dodger f14w400 mr25">Не&nbsp;просмотрено</p>
                     <button class="btn-reset btn-succes mr15 f15w400 user__invite">Пригласить</button>
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -774,7 +1007,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-dodgercard">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768-dodger"></button>
                             <ul>
                                 <li>
@@ -800,7 +1033,10 @@
                 <div class="user__metadata flex mb35">
                     <span class="user__in-jobers mr15 f14w500">Ручная подборка Jobers</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-5">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -848,7 +1084,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-5-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -872,23 +1113,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                         <button class="btn-reset btn-succes mr15 f15w400 user__invite-mobile">Пригласить</button>
                     </div>
                 </div>
@@ -906,7 +1169,29 @@
                         инженер-энергетик</a>
                 </div>
                 <div class="user__status-bar flex">
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -916,7 +1201,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-dodgercard-active">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768-dodgeractive"></button>
                             <ul>
                                 <li>
@@ -942,7 +1227,10 @@
                     <span class="user__in-jobers mr15 f14w500">Ручная подборка Jobers</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-6">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -990,7 +1278,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-6-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -1014,23 +1307,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1048,7 +1363,29 @@
                 </div>
                 <div class="user__status-bar flex">
                     <button class="btn-reset btn-succes mr15 f15w400 user__invite">Пригласить</button>
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -1058,7 +1395,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-manually">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768-manually"></button>
                             <ul>
                                 <li>
@@ -1083,7 +1420,10 @@
                 <div class="user__metadata flex mb35">
                     <span class="user__in-jobers btn-succes mr15 f14w500">Кандидат загружен вручную</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-7">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -1131,7 +1471,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-7-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -1155,23 +1500,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                         <button class="btn-reset btn-succes mr15 f15w400 user__invite-mobile">Пригласить</button>
                     </div>
                 </div>
@@ -1189,7 +1556,29 @@
                         инженер-энергетик</a>
                 </div>
                 <div class="user__status-bar flex">
-                    <div class="user__dropdown mr15 user__level">Этап</div>
+                    <div class="user__dropdown mr15 user__level">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"/>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="dropdown">
                         <button class="dropdown-toggle">
                             <div class="button-icon"></div>
@@ -1199,7 +1588,7 @@
                         </button>
                         <div class="candidates__droplist-back"></div>
                         <div class="dropdown-menu" id="dropdown-manually-active">
-                            <p class="dropdown__title-768 f20w500">Водитель категории&nbsp;C</p>
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
                             <button class="btn-reset item__btn-close"
                                     id="btn-dropdown-close768-manuallyactive"></button>
                             <ul>
@@ -1226,7 +1615,10 @@
                     <span class="user__in-jobers btn-succes mr15 f14w500">Кандидат загружен вручную</span>
                     <span class="user__web f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
                     <span class="user__view f14w400 bg-fix c-bali mr15"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
-                    <button class="btn-reset user__add-tags bg-fix f15w400 c-bali">добавить тег</button>
+                    <div class="user__add-tags__wrapper tag-input" id="tag-input-8">
+                        <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег</button>
+                        <div class="tags-container"></div>
+                    </div>
                 </div>
                 <div class="user__content-wrapper flex">
                     <div class="user__content-left">
@@ -1274,7 +1666,12 @@
                         <img src="../img/user-main-img-768.png" alt="Фото кандидата" class="user__main-img">
                         <h3 class="user__name-mobile f16w500">Андреев Антон Владимирович</h3>
                         <span class="user__price-mobile f15w400 mb20">70&nbsp;000&nbsp;р.</span>
-                        <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali">добавить тег</button>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-8-mobile">
+                            <button class="btn-reset user__add-tags-mobile bg-fix f15w400 c-bali add-tag-btn">добавить
+                                тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
                     </div>
                     <div class="user__descr">
                         <div class="user__skill">
@@ -1298,23 +1695,45 @@
                             <p class="user__more-data__content f14w400">Муниципальное учреждение «Комитет
                                 имущественных отношений муниципального образования «Город Ленск» (МУ&nbsp;КИО
                                 МО&nbsp;«Город
-                                Ленск»)</p>
+                                Ленск»)<span class="user__last-place__data">01 апреля 2020 — 01 июля 2020</span></p>
                         </div>
                     </div>
                     <div class="user__contacts-mobile">
                         <div class="user__mail">
                             <p class="user__mail-title f14w400 c-bali">Почта</p>
-                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w500">pochta12347273a@mail.ru</a>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-mobile f14w400">pochta12347273a@mail.ru</a>
                         </div>
                         <div class="user__phone-mobile">
                             <p class="user__phone-title f14w400 c-bali">Телефон</p>
-                            <a href="tel:+79992222333" class="user__phone-numbers f14w500">+7-(999)-(222)-23-33</a>
+                            <a href="tel:+79992222333" class="user__phone-numbers f14w400">+7-(999)-(222)-23-33</a>
                             <a href="#" class="user__wh f14w400 bg-fix">WhatsApp</a>
                             <a href="#" class="user__tg f14w400 bg-fix">Telegram</a>
                         </div>
                     </div>
                     <div class="user__active-bar">
-                        <div class="user__dropdown user__level-mobile">Этап</div>
+                        <div class="user__dropdown user__level-mobile">
+                            <div class="droplist droplist__select">
+                                <form class="form__list" action="">
+                                    <div class="droplist__selected item droplist__result item"><span
+                                            class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                            class="droplist__icon droplist__icon_cross"></span>
+                                        <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                             viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                  fill="#9098B4"/>
+                                        </svg>
+                                    </div>
+                                    <ul class="droplist__items">
+                                        <li class="droplist__item">Подумать</li>
+                                        <li class="droplist__item">Телефонное интервью</li>
+                                        <li class="droplist__item">Подходящие</li>
+                                        <li class="droplist__item">Отклоненные</li>
+                                        <li class="droplist__item">Удаленные</li>
+                                        <li class="droplist__item btn-delete">Отклонить</li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2078,6 +2497,7 @@
 <script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/jquery_3.3.1.min.js"></script>
 <script src="../js/libs-js/select.js"></script>
+<script src="../js/libs-js/add-tag.js"></script>
 <script src="../js/candidates.js"></script>
 </body>
 </html>

@@ -29,6 +29,7 @@
     }
 
     .can__section-bar {
+        margin-bottom: 17px;
         flex-direction: column;
         padding: 13px;
         background-color: var(--color_white);
@@ -36,10 +37,38 @@
         min-height: 254px; /*temp*/
     }
 
+    .can__span {
+        padding-left: 51px;
+    }
+
+    .can__add-values::before {
+        left: calc((100% / 2) - 87px);
+    }
+
     .can__section-param {
         flex-wrap: wrap;
         width: 100%;
         margin-bottom: 7px;
+    }
+
+    .can__filter-list {
+        padding: 15px 0;
+        border-radius: 5px;
+        margin-bottom: 7px;
+    }
+
+    .can__user-item {
+        border-radius: 5px;
+    }
+
+    .can__span::before {
+        left: 13px;
+        top: -2px;
+    }
+
+    .can__span::after {
+        left: 13px;
+        top: -2px;
     }
 
     .can__scroll-choose {
@@ -60,18 +89,26 @@
 
     .dropdown-toggle {
         background-color: transparent;
+        width: 40px;
+        padding: 9px 5px;
     }
 
     .user__metadata {
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: 17px;
+        padding-bottom: 16px;
         border-bottom: 1px solid var(--color_gray);
         margin-bottom: 17px;
     }
 
     .user__in {
         margin-bottom: 7px;
+        padding: 9px 13.15px;
+    }
+
+    .user__web {
+        padding: 8px 12.82px 8px 39px;
+        background-position: 12px center;
     }
 
     .user__top {
@@ -98,8 +135,18 @@
         bottom: 0;
     }
 
+    .user__check-icon::before {
+        top: -22px;
+        left: -1px;
+    }
+
+    .user__check-icon::after {
+        top: -22px;
+        left: -1px;
+    }
+
     .user__status-bar {
-        margin-bottom: 7px;
+        margin-bottom: 19px;
     }
 
     .user__vacancy-mobile,
@@ -113,8 +160,7 @@
     }
 
     .user__bottom {
-        padding: 13px;
-        padding-top: 17px;
+        padding: 17px 13px 12px 12px;
     }
 
     .user__content-wrapper {
@@ -126,16 +172,16 @@
     }
 
     .user__main-info {
-        padding-bottom: 17px;
+        padding-bottom: 15px;
         border-bottom: 1px solid var(--color_gray);
     }
 
     .user__main-img {
-        margin-bottom: 13px;
+        margin-bottom: 8px;
     }
 
     .user__name-mobile {
-        margin-bottom: 7px;
+        margin-bottom: 6px;
         color: var(--color_space);
     }
 
@@ -157,9 +203,13 @@
     .user__city,
     .user__last-place,
     .user__mail {
-        padding-top: 13px;
+        padding-top: 12px;
         padding-bottom: 13px;
         border-bottom: 1px solid var(--color_gray);
+    }
+
+    .user__last-place__data {
+        display: block;
     }
 
     .user__skill-title,
@@ -173,7 +223,7 @@
     }
 
     .user__contacts-mobile {
-        margin-bottom: 25px;
+        margin-bottom: 24px;
     }
 
     .user__more-data__content {
@@ -181,12 +231,16 @@
     }
 
     .user__phone-mobile {
-        padding-top: 13px;
+        padding-top: 12px;
     }
 
     .user__phone-numbers {
         display: block;
-        margin-bottom: 7px;
+        margin-bottom: 6px;
+    }
+
+    .user__wh {
+        margin-right: 9px;
     }
 
     .user__invite-mobile {
@@ -208,6 +262,7 @@
     .user__btn-mind__mobile {
         color: var(--color_red);
         margin-top: 7px;
+        max-height: 40px;
     }
 
     .user__view {
@@ -233,6 +288,10 @@
         display: block;
         color: var(--color_white);
         padding-left: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(100% - 76px);
     }
 
     .item__btn-close {
@@ -250,7 +309,7 @@
         display: block !important;
         position: fixed;
         z-index: 2;
-        bottom: -204px;
+        bottom: -211px;
         width: 100%;
         background-color: var(--color_space);
         border-radius: 25px 25px 0 0;
@@ -259,7 +318,7 @@
     }
 
     .dropdown-menu ul {
-        padding: 25px 13px 13px 13px;
+        padding: 26px 13px 13px 13px;
     }
 
     .dropdown-menu li {
@@ -279,10 +338,15 @@
         color: var(--color_white);
         font-size: 15px;
         font-weight: 400;
+        padding: 10.89px 14.5px;
     }
 
     .dropdown-menu ul li:not(:last-of-type) button {
         border-bottom: 1px solid var(--color_space);
+    }
+
+    .dropdown-menu ul li:first-of-type button {
+        padding: 12.5px 14.5px;
     }
 
     #dropdown-greencard.dropdown--active {
@@ -718,10 +782,9 @@
         min-width: 167px;
     }
 
-    .droplist__items {
-        width: 100%;
-    }
-
+    /*.droplist__items {*/
+    /*    width: 100%;*/
+    /*}*/
     /*    auto choose sets*/
     .new {
         max-width: 100%;
@@ -786,12 +849,16 @@
         background-image: url("../../img/cross_35x35.svg");
         width: 35px;
         height: 35px;
-        top: 0;
-        right: 10.5px;
+        top: 2px;
+        right: 13px;
     }
 
     .preview__title {
-        margin-bottom: 17px;
+        margin-bottom: 19px;
+    }
+
+    .preview__content {
+        height: 519px;
     }
 
     .preview__btns-left {
@@ -799,12 +866,17 @@
     }
 
     .preview__download {
-        margin-right: 17px;
-        padding-left: 25.85px;
+        margin-right: 13px;
+        padding-left: 22px;
+        font-size: 16px;
     }
 
     .preview__download::before {
         display: none;
+    }
+
+    .preview__btns-right {
+        padding: 10px 24px;
     }
 
     .preview__btns-block {
@@ -828,17 +900,47 @@
         left: 11.33px;
     }
 
-    .btn-settings {
-        right: 0;
-        border-right: none;
-        border-radius: 0 5px 5px 0;
+    .scroll-x {
+        border-radius: 5px;
+        padding: 3px;
     }
 
-    .btn-right {
+    .btn-settings {
+        border-right: none;
+        border-radius: 0 5px 5px 0;
+        background-image: url("../../img/scroll-settings-375.svg");
+        background-repeat: no-repeat;
+        height: 46px;
+        border-left: none;
+        right: 3px;
+        box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-right,
+    .btn-left {
         display: none;
     }
 
     .scroll-x__wrapper {
         width: calc(100% - 45px);
+    }
+
+    /*    user-level droplist sets*/
+    .user__level-mobile .droplist {
+        width: 100%;
+    }
+
+    .user__level-mobile .btn-delete {
+        background-color: var(--color_pink);
+        color: var(--color_red);
+    }
+
+    /*    end sets*/
+    .can__list .droplist__selected {
+        background-color: var(--color_athens-gray);
+    }
+
+    .can__btn-auto {
+        background-color: var(--color_athens-gray);
     }
 }

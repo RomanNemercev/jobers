@@ -46,6 +46,7 @@
     cursor: pointer;
     height: 40px;
     display: flex;
+    user-select: none;
 }
 .droplist__item:first-child {
     border-radius: 5px 5px 0 0;
@@ -143,6 +144,7 @@
     white-space: nowrap;
     overflow: hidden;
     margin-right: 25px;
+    user-select: none;
 }
 .check + label {
     display: flex;

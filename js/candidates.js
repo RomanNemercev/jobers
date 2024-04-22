@@ -1,4 +1,10 @@
 // script for scroll-x
+let btnLeft = document.getElementById('btn-left');
+btnLeft.onclick = function () {
+    let container = document.getElementById('scroll-wrapper');
+    sideScroll(container, 'left', 25, 100, 10);
+};
+
 let btnRight = document.getElementById('btn-right');
 btnRight.onclick = function () {
     let container = document.getElementById('scroll-wrapper');
@@ -644,3 +650,21 @@ try {
 } catch (error) {
     console.log("Не найден элемент открытия дополнительных функций выделенных вакансий на странице вакансий.");
 }
+
+//start add-tag script
+initializeTagInput('tag-input-1');
+initializeTagInput('tag-input-2');
+initializeTagInput('tag-input-3');
+initializeTagInput('tag-input-4');
+initializeTagInput('tag-input-5');
+initializeTagInput('tag-input-6');
+initializeTagInput('tag-input-7');
+initializeTagInput('tag-input-8');
+initializeTagInput('tag-input-1-mobile');
+initializeTagInput('tag-input-2-mobile');
+initializeTagInput('tag-input-3-mobile');
+initializeTagInput('tag-input-4-mobile');
+initializeTagInput('tag-input-5-mobile');
+initializeTagInput('tag-input-6-mobile');
+initializeTagInput('tag-input-7-mobile');
+initializeTagInput('tag-input-8-mobile');
