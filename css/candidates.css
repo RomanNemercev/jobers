@@ -848,7 +848,7 @@
 .cans__filter {
     display: block;
     position: fixed;
-    bottom: -10%;
+    bottom: -75px;
     width: 78%;
     max-width: 1120px;
     padding: 16px 25px;

@@ -1,3 +1,10 @@
+/*mobile hidde*/
+.new-can__close-back768,
+.delete__no-edit__768,
+.delete__no-auto__768 {
+    display: none;
+}
+
 /*nav*/
 .nav {
     z-index: 2;

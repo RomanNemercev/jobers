@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+    .search-bar {
+        z-index: 3;
+    }
+
     .can {
         padding-bottom: 50px;
     }
@@ -657,7 +661,7 @@
     .new-can__container {
         width: 100vw;
         height: 100vh;
-        padding: 54px 13px 79px 13px;
+        padding: 54px 13px 120px 13px;
     }
 
     .new-can__btn-close {
@@ -724,6 +728,7 @@
         display: flex;
         justify-content: center;
         padding: 8px;
+        padding-bottom: 64px;
     }
 
     .new-can__main-content__768 .droplist {
@@ -831,7 +836,7 @@
     }
 
     .new__container {
-        padding: 54px 10px 79px 16px;
+        padding: 54px 10px 120px 16px;
         overflow-y: scroll;
     }
 

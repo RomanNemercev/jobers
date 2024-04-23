@@ -578,8 +578,215 @@
     .delete__btn,
     .auto__close,
     .edit__close,
-    .quest__btn-close,
-    .new__close {
+    .quest__btn-close {
         display: none;
+    }
+
+/*    popups sets*/
+    .item__popup-wrapper {
+        min-height: 226px;
+    }
+
+    .auto__container, .quest__container, .del {
+        padding: 13px;
+    }
+
+    .auto__title {
+        margin-bottom: 13px;
+    }
+
+    .auto__list, .quest__desc {
+        width: 323px;
+    }
+
+    .auto__list {
+        margin-bottom: 13px;
+    }
+
+    .auto__add-changes {
+        margin-bottom: 25px;
+    }
+
+    .delete__no-auto__768 {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+    }
+
+    .auto__item:not(:last-of-type) {
+        margin-bottom: 6px;
+    }
+
+    .auto__item-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .auto__change {
+        flex-shrink: 0;
+    }
+
+    .edit__container {
+        padding: 13px;
+    }
+
+    .edit__title, .quest__title {
+        margin-bottom: 13px;
+    }
+
+    .edit__data-wrapper {
+        width: 323px;
+    }
+
+    .edit__btns-wrapper {
+        display: flex;
+    }
+
+    .edit__cancel {
+        background-color: var(--color_dodger);
+        color: var(--color_white);
+        margin-right: 25px;
+        font-size: 15px;
+        font-weight: 500;
+        max-width: none;
+    }
+
+    .delete__no-edit__768 {
+        display: inline-block;
+    }
+
+    .item__popup-del > .item__popup-wrapper {
+        min-height: 162px;
+    }
+
+    .quest__container {
+        min-width: 323px;
+        min-height: inherit;
+    }
+
+    .quest__desc {
+        margin-bottom: 26px;
+    }
+
+    .quest__btn-wrap {
+        flex-direction: row-reverse;
+    }
+
+    .quest__btn-cancel {
+        font-size: 15px;
+    }
+
+    .quest__btn-del {
+        color: var(--color_red);
+        background-color: var(--color_pink);
+        font-size: 15px;
+    }
+
+    .new {
+        max-width: 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .new__close {
+        z-index: 2;
+        background-image: url("../../img/cross_35x35.svg");
+        width: 35px;
+        height: 35px;
+        top: 0;
+        right: 10.5px;
+    }
+
+    .new__container {
+        padding: 54px 10px 120px 16px;
+        overflow-y: scroll;
+    }
+
+    .new-can__close-back768 {
+        position: fixed;
+        display: block;
+        z-index: 1;
+        width: 100%;
+        height: 40px;
+        background-color: var(--color_zircon);
+        top: 0;
+        left: 0;
+    }
+
+    .new__title {
+        margin-bottom: 13px;
+    }
+
+    .new__desc {
+        margin-bottom: 17px;
+    }
+
+    .new__location-title {
+        margin-bottom: 8px;
+    }
+
+    .new__container .droplist__select_citys {
+        margin-bottom: 16px;
+    }
+
+    .new__search-clone {
+        margin-bottom: 8px;
+    }
+
+    .new__search-label, .new__current-label {
+        width: 100%;
+    }
+
+    .new__clone-quest {
+        margin-bottom: 11px;
+    }
+
+    .new__clone-answ {
+        margin-bottom: 16px;
+    }
+
+    .new__options-title {
+        margin-bottom: 7px;
+    }
+
+    .new__options-group, .new__global {
+        margin-bottom: 17px;
+    }
+
+    .new__transfer-title {
+        margin-bottom: 12px;
+    }
+
+    .droplist__select_transfer {
+        margin-bottom: 16px;
+    }
+
+    .new__add-name {
+        margin-bottom: 0;
+    }
+
+    .new__btns {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        padding-bottom: 64px;
+    }
+
+    .new__btn-save {
+        min-width: 167px;
+        margin-right: 15px;
+    }
+
+    .new__btn-cancel {
+        font-size: 15px;
+        font-weight: 400;
+        min-width: 167px;
     }
 }
