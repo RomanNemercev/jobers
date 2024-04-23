@@ -546,7 +546,7 @@
     }
 
     .auto__item:not(:last-of-type) {
-        margin-bottom: 7px;
+        margin-bottom: 6px;
     }
 
     .auto__add-changes {
@@ -597,6 +597,9 @@
         background-color: var(--color_dodger);
         color: var(--color_white);
         margin-right: 25px;
+        font-size: 15px;
+        font-weight: 500;
+        max-width: none;
     }
 
     .auto__close,
@@ -612,16 +615,28 @@
     .quest__btn-del {
         color: var(--color_red);
         background-color: var(--color_pink);
+        font-size: 15px;
     }
 
-    .quest__desc,
+    .quest__btn-cancel {
+        font-size: 15px;
+    }
+
     .delete__attent {
         margin-bottom: 25px;
+    }
+
+    .quest__desc {
+        margin-bottom: 26px;
     }
 
     .del {
         max-width: 349px;
         min-height: 179px;
+    }
+
+    .delete__attent {
+        width: 101%;
     }
 
     .new-can__popup-wrapper {
@@ -642,7 +657,7 @@
     .new-can__container {
         width: 100vw;
         height: 100vh;
-        padding: 53px 13px 79px 13px;
+        padding: 54px 13px 79px 13px;
     }
 
     .new-can__btn-close {
@@ -650,8 +665,8 @@
         background-image: url("../../img/cross_35x35.svg");
         width: 35px;
         height: 35px;
-        top: 0;
-        right: 10.5px;
+        top: 2px;
+        right: 13px;
     }
 
     .new-can__add-title {
@@ -660,6 +675,7 @@
 
     .new-can__btn-import {
         width: 100%;
+        margin-bottom: 18px;
     }
 
     .new-can__main-content {
@@ -674,7 +690,7 @@
         padding: 12px 15px;
         border-radius: 5px;
         background-color: var(--color_athens-gray);
-        margin-bottom: 13px;
+        margin-bottom: 9.5px;
     }
 
     .add__post-form::placeholder {
@@ -691,7 +707,7 @@
     }
 
     .add__img {
-        margin-bottom: 13px;
+        margin-bottom: 9px;
     }
 
     .add__title-second {
@@ -707,12 +723,12 @@
         background-color: #fff;
         display: flex;
         justify-content: center;
-        padding: 13px;
+        padding: 8px;
     }
 
     .new-can__main-content__768 .droplist {
         width: 100%;
-        margin-bottom: 13px;
+        margin-bottom: 12px;
     }
 
     .new-can__main-content__768 .droplist__result_text {
@@ -736,21 +752,29 @@
 
     .add__mail__label {
         display: block;
-        margin-bottom: 7px;
+        margin-bottom: 15px;
     }
 
     .add__phone__label {
         display: block;
-        margin-bottom: 7px;
+        margin-bottom: 15px;
     }
 
     .add__tg__label,
     .add__skype__label,
-    .add__birth__label,
     .add__last-place__label,
     .add__source__label {
         display: block;
         margin-bottom: 7px;
+    }
+
+    .add__birth__label {
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .add__last-place__wrapper {
+        margin-bottom: 13px;
     }
 
     .add__wage__wrapper .droplist__selected {
@@ -777,8 +801,13 @@
         margin-right: 15px;
     }
 
-    .new__btn-save,
+    .new__btn-save {
+        min-width: 167px;
+    }
+
     .new__btn-cancel {
+        font-size: 15px;
+        font-weight: 400;
         min-width: 167px;
     }
 
@@ -802,7 +831,7 @@
     }
 
     .new__container {
-        padding: 53px 13px 79px 13px;
+        padding: 54px 10px 79px 16px;
         overflow-y: scroll;
     }
 
@@ -815,7 +844,23 @@
     }
 
     .new__location-title {
-        margin-bottom: 7px;
+        margin-bottom: 8px;
+    }
+
+    .new__container .droplist__icon {
+        right: 18px;
+    }
+
+    .new__container .droplist__select_citys {
+        margin-bottom: 16px;
+    }
+
+    .new__search-clone {
+        margin-bottom: 8px;
+    }
+
+    .new__clone-quest {
+        margin-bottom: 11px;
     }
 
     .new__search-label,
@@ -824,7 +869,19 @@
     }
 
     .new__clone-answ {
-        margin-bottom: 17px;
+        margin-bottom: 16px;
+    }
+
+    .new__options-title {
+        margin-bottom: 7px;
+    }
+
+    .new__transfer-title {
+        margin-bottom: 12px;
+    }
+
+    .droplist__select_transfer {
+        margin-bottom: 16px;
     }
 
     .new__options-group,
