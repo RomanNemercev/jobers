@@ -699,8 +699,12 @@
     }
 
     .new__container {
-        padding: 54px 10px 120px 16px;
+        padding: 54px 13px 13px 13px;
         overflow-y: scroll;
+    }
+
+    .new__options {
+        margin-bottom: 40px;
     }
 
     .new-can__close-back768 {
@@ -767,16 +771,11 @@
     }
 
     .new__btns {
-        position: fixed;
-        bottom: 0;
         width: 100%;
-        left: 0;
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
         background-color: #fff;
         display: flex;
         justify-content: center;
-        padding: 8px;
-        padding-bottom: 64px;
+        padding-bottom: 0;
     }
 
     .new__btn-save {

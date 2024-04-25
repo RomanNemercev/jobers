@@ -1119,6 +1119,7 @@
 .tag-input input {
     color: var(--color_dodger);
     border: none;
+    font-size: 15px;
 }
 
 .tag-input input:focus-visible {
@@ -1128,7 +1129,10 @@
 .tag {
     color: var(--color_dodger);
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 4px;
 }
 
 .delete-btn {
@@ -1141,4 +1145,8 @@
     cursor: pointer;
     width: 15px;
     height: 20px;
+    margin-left: 4.7px;
+    margin-bottom: 1px;
+    margin-right: 10px;
+    transform: translateY(-1px);
 }

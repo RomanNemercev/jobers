@@ -661,7 +661,11 @@
     .new-can__container {
         width: 100vw;
         height: 100vh;
-        padding: 54px 13px 120px 13px;
+        padding: 54px 13px 13px 13px;
+    }
+
+    .new-can__resume {
+        margin-bottom: 40px;
     }
 
     .new-can__btn-close {
@@ -719,16 +723,11 @@
     }
 
     .new__btns {
-        position: fixed;
-        bottom: 0;
         width: 100%;
-        left: 0;
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
         background-color: #fff;
         display: flex;
         justify-content: center;
-        padding: 8px;
-        padding-bottom: 64px;
+        padding-bottom: 0;
     }
 
     .new-can__main-content__768 .droplist {
@@ -826,6 +825,10 @@
         height: 100vh;
     }
 
+    .new__options {
+        margin-bottom: 40px;
+    }
+
     .new__close {
         z-index: 2;
         background-image: url("../../img/cross_35x35.svg");
@@ -836,7 +839,7 @@
     }
 
     .new__container {
-        padding: 54px 10px 120px 16px;
+        padding: 54px 13px 13px 13px;
         overflow-y: scroll;
     }
 
