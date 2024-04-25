@@ -19,21 +19,25 @@
 let tabsBtn = document.querySelectorAll('.vacancies__value');
 let tabsItem = document.querySelectorAll('.vacancies__content');
 
-tabsBtn.forEach(function (element) {
-    element.addEventListener('click', function (e) {
-        const path = e.currentTarget.dataset.path;
+try {
+    tabsBtn.forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            const path = e.currentTarget.dataset.path;
 
-        tabsBtn.forEach(function (btn) {
-            btn.classList.remove('vacancies__value--active')
-        });
-        e.currentTarget.classList.add('vacancies__value--active')
+            tabsBtn.forEach(function (btn) {
+                btn.classList.remove('vacancies__value--active')
+            });
+            e.currentTarget.classList.add('vacancies__value--active')
 
-        tabsItem.forEach(function (element) {
-            element.classList.remove('vacancies__content--active')
-        });
-        document.querySelector(`[data-target="${path}"]`).classList.add('vacancies__content--active');
-    })
-});
+            tabsItem.forEach(function (element) {
+                element.classList.remove('vacancies__content--active')
+            });
+            document.querySelector(`[data-target="${path}"]`).classList.add('vacancies__content--active');
+        })
+    });
+} catch (error) {
+    console.log("Не удалось вызвать табы.")
+}
 
 //drop-down in vacancies-item
 // list-one
@@ -494,7 +498,7 @@ try {
 
 //dropdown-search
 function handleInput(inputBox, availableKeywords, resultsBox) {
-    return function() {
+    return function () {
         let result = [];
         let input = inputBox.value;
         if (input.length) {
@@ -524,7 +528,7 @@ function selectInput(list) {
 }
 
 // Основная логика
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const availableKeywords = [
         'Владимир Власов',
         'Андрей Власов',
@@ -543,14 +547,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Обработчик события клика на поле ввода
-    inputBox.addEventListener('click', function() {
+    inputBox.addEventListener('click', function () {
         if (inputBox.value === '') {
             displayLastKeywords(3); // Отображаем последние три элемента массива
         }
     });
 
     // Обработчик события клика на документе
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         // Проверяем, был ли клик выполнен вне поля ввода поиска
         if (!inputBox.contains(event.target)) {
             // Сбрасываем результаты поиска
@@ -921,11 +925,15 @@ newDropListItem.forEach(function (el) {
 let burgerTab = document.querySelector('.search-bar__burger');
 let sideBar = document.querySelector('.nav__container');
 
-burgerTab.addEventListener('click', function () {
-    burgerTab.classList.toggle('search-bar__burger--active');
-    sideBar.classList.toggle('nav__container--active');
-    document.body.classList.toggle('stop-scroll');
-})
+try {
+    burgerTab.addEventListener('click', function () {
+        burgerTab.classList.toggle('search-bar__burger--active');
+        sideBar.classList.toggle('nav__container--active');
+        document.body.classList.toggle('stop-scroll');
+    })
+} catch (error) {
+    console.log("Не удалось вызвать бургер меню")
+}
 
 //more pupup options till 768px
 let morePopupBtn = document.getElementById('vacancies-popup-more');
