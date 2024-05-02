@@ -1,4 +1,4 @@
-p, span {
+p {
     color: var(--color_space);
 }
 
@@ -114,7 +114,7 @@ p, span {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: calc(100vh - 195px);
+    height: calc(100vh - 185px);
 }
 
 .more__cans-info {
@@ -235,11 +235,36 @@ p, span {
 }
 
 .more__droplist {
-    width: 93px;
-    height: 40px;
-    background-color: var(--color_athens-gray);
-    border-radius: 5px;
     margin-right: 15px;
+}
+
+.more__droplist .droplist_active .droplist__selected {
+    color: var(--color_dodger);
+}
+
+.more__droplist .droplist_active .droplist__icon_arrow path {
+    fill: var(--color_dodger);
+}
+
+.more__droplist .droplist__items {
+    right: 0;
+}
+
+.more__droplist .droplist__item {
+    color: var(--color_bali);
+}
+
+.more__droplist .droplist__item:hover {
+    color: var(--color_dodger);
+}
+
+.more__droplist .btn-delete {
+    background-color: var(--color_pink);
+    color: var(--color_red);
+}
+
+.more__droplist .btn-delete:hover {
+    color: var(--color_red);
 }
 
 .more__burger {
@@ -527,6 +552,8 @@ p, span {
 .admin__main-data {
     color: var(--color_bali);
     margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .admin__source {
@@ -578,6 +605,7 @@ p, span {
     color: var(--color_bali);
     margin-bottom: 25px;
     padding-top: 10px;
+    font-size: 15px;
 }
 
 .comments__main-info {
@@ -626,7 +654,7 @@ p, span {
 }
 
 .comments__content-wrapper {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .comments__btn-answer {
@@ -635,14 +663,14 @@ p, span {
 
 /*read-more sets*/
 .collapsedTextContainer {
-    max-height: 60px; /* настройте на желаемую высоту*/
+    max-height: 49px; /* настройте на желаемую высоту*/
     width: 603px;
     overflow: hidden;
     position: relative;
     font-size: 14px;
     font-weight: 400;
     color: var(--color_bali);
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     transition: max-height 0.5s ease;
 }
 
@@ -732,7 +760,7 @@ p, span {
 
 .chat__source {
     color: var(--color_space);
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .chat__source-title {
@@ -795,7 +823,7 @@ p, span {
 
 .more__enter-textarea {
     width: 100%;
-    min-height: 82px;
+    min-height: 96px;
     border: none;
     resize: none;
     margin-bottom: 10px;
@@ -823,6 +851,7 @@ p, span {
     z-index: 1;
     top: 100%;
     left: 0;
+    min-width: 131px;
     width: 100%;
     background-color: #fff;
     border-radius: 0 0 4px 4px;
@@ -843,6 +872,18 @@ p, span {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    color: var(--color_bali);
+    font-size: 15px;
+    height: 40px;
+}
+
+.dropdown ul li:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.dropdown ul li:hover {
+    background-color: var(--color_athens-gray);
+    color: var(--color_dodger);
 }
 
 .arrow {
@@ -902,10 +943,10 @@ p, span {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    min-width: 195px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: -90px;
+    top: -97px;
     border-radius: 5px;
 }
 
@@ -915,6 +956,7 @@ p, span {
     background-color: transparent;
     border: none;
     width: 100%;
+    height: 40px;
     text-align: left;
     padding: 11px 15px;
     color: var(--color_bali);

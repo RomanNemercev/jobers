@@ -53,9 +53,9 @@ window.onload = function () {
 
         function expandText() {
             if (textContainer.style.maxHeight === '100%') {
-                textContainer.style.maxHeight = '60px';
+                textContainer.style.maxHeight = '49px';
                 textContainer.classList.remove('expanded');
-                button.innerText = 'Развернуть';
+                button.innerText = 'Показать полностью';
             } else {
                 textContainer.style.maxHeight = '100%';
                 textContainer.classList.add('expanded');
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // pl for textarea in chat crm
 function updateTextareaIndent() {
     var overlayWidth = document.getElementById("chat-select").offsetWidth;
-    var totalIndent = overlayWidth + 30; // Добавляем 30px к ширине overlay
+    var totalIndent = overlayWidth + 37; // Добавляем 30px к ширине overlay
     document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
 }
 

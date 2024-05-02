@@ -661,6 +661,7 @@
     .new-can__container {
         width: 100vw;
         height: 100vh;
+        max-height: none;
         padding: 54px 13px 13px 13px;
     }
 
@@ -725,8 +726,6 @@
     .new__btns {
         width: 100%;
         background-color: #fff;
-        display: flex;
-        justify-content: center;
         padding-bottom: 0;
     }
 

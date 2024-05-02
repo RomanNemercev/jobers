@@ -13,6 +13,7 @@
     <!--            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">-->
     <link rel="stylesheet" href="../css/libs-css/simplebar.css">
     <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/libs-css/select.css">
     <link rel="stylesheet" href="../css/candidates-more.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/media-queries/more-cans-media.css">
@@ -183,7 +184,29 @@
                 </div>
                 <div class="more__header-right">
                     <button class="btn-reset btn-succes more__btn-invite f15w400">Пригласить</button>
-                    <div class="more__droplist"></div>
+                    <div class="more__droplist">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"></path>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
                     <div class="more__burger">
                         <div class="more__burger-dot dot-inwork-one"></div>
                         <div class="more__burger-dot dot-inwork-one"></div>
@@ -314,7 +337,7 @@
                             </div>
                             <div class="admin__main-info">
                                 <div class="admin__main-data">
-                                    <time datetime="2024-01-24T15:05">24 января 2024 года в 15:05</time>
+                                    <time datetime="2024-01-24T15:05">24.01.2024 в 15:05</time>
                                 </div>
                                 <p class="admin__source f16w500">Отклик на&nbsp;вакансию: <span
                                         class="admin__vacancy-name">Менеджер по продажам</span>
@@ -323,20 +346,21 @@
                         </div>
                         <div class="more__data-message file">
                             <div class="file__main-info">
-                                <div class="file__main-data">
-                                    <time datetime="2024-01-24T15:05">24 января 2024 года в 15:05</time>
+                                <div class="file__main-data f14w400">
+                                    <time datetime="2024-01-24T15:05">24.01.2024 в 15:05</time>
                                 </div>
                                 <p class="file__source f16w500">Прикреплен файл</p>
-                                <a href="#" download="" class="file__download">Степанова Мария Алексеевна.pdf</a>
+                                <a href="#" download="" class="file__download f15w400">Степанова Мария
+                                    Алексеевна.pdf</a>
                             </div>
                         </div>
                         <div class="more__data-message connect">
                             <div class="connect__main-info">
-                                <div class="connect__main-data">
-                                    <time datetime="2024-01-24T15:05">24 января 2024 года в 15:05</time>
+                                <div class="connect__main-data f14w400">
+                                    <time datetime="2024-01-24T15:05">24.01.2024 в 15:05</time>
                                 </div>
                                 <p class="connect__source f16w500">Письмо от&nbsp;кандидата</p>
-                                <p class="connect__content">Здравствуйте!
+                                <p class="connect__content">Здравствуйте!<br>
                                     Очень заинтересовала ваша вакансия, есть большой опыт в&nbsp;презентации и&nbsp;продажах
                                     продукта и&nbsp;в&nbsp;it-сфере. Буду рад подъехать на&nbsp;собеседование!</p>
                             </div>
@@ -394,7 +418,7 @@
                                         <p class="out__message__info-name f15w400">Анатолий Горилов</p>
                                         <div class="read-more__container">
                                             <div class="collapsedTextContainer" id="textContainer">
-                                                Уважаемый(ая) [Имя соискателя],
+                                                Уважаемый(ая) [Имя соискателя],<br>
                                                 Мы&nbsp;рады пригласить Вас на&nbsp;собеседование для обсуждения
                                                 возможности присоединиться к&nbsp;нашей
                                                 команде&nbsp;в [Название компании]. Ваше резюме привлекло наше внимание,
@@ -501,7 +525,7 @@
                                 <button class="more-dropbtn"></button>
                                 <div class="more-dropdown-content">
                                     <button class="more-dropdown__btn" id="insertTemplateBtn">Вставить шаблон</button>
-                                    <button class="more-dropdown__btn" id="attachFileBtn">Прикрепить файл</button>
+                                    <button class="more-dropdown__btn" id="attachFileBtn">Закрепить файл</button>
                                 </div>
                             </div>
                             <button class="btn-reset btn more__btn-send f15w400">Отправить</button>
@@ -515,6 +539,8 @@
 <!--not load simplebar-->
 <!--<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>-->
 <script src="../js/libs-js/simplebar.min.js"></script>
+<script src="../js/jquery_3.3.1.min.js"></script>
+<script src="../js/libs-js/select.js"></script>
 <script src="../js/candidates-more.js"></script>
 <script src="../js/script.js"></script>
 </body>
