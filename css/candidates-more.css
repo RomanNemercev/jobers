@@ -496,7 +496,7 @@ p, span {
 
 /*make page two with history*/
 .more__data-container {
-    padding: 25px;
+    padding: 15px 25px 25px 25px;
 }
 
 .more__messages {
@@ -513,6 +513,9 @@ p, span {
     text-align: center;
     color: var(--color_bali);
     margin-bottom: 25px;
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .admin__main-info {
@@ -528,4 +531,417 @@ p, span {
 
 .admin__source {
     color: var(--color_space);
+}
+
+.file__main-info {
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.file__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.file__source {
+    margin-bottom: 5px;
+}
+
+.file__download {
+    color: var(--color_dodger);
+}
+
+.connect {
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.connect__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.connect__source {
+    margin-bottom: 5px;
+}
+
+.connect__content {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_bali);
+}
+
+.comments__get-data {
+    text-align: center;
+    color: var(--color_bali);
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+.comments__main-info {
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.comments__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.comments__title {
+    margin-bottom: 25px;
+}
+
+.comments__message {
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--color_athens-gray);
+}
+
+.comments__time {
+    margin-left: auto;
+    color: var(--color_bali);
+}
+
+.comments__message-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.comments__user-name {
+    margin-bottom: 5px;
+}
+
+.comments__user-content {
+    color: var(--color_bali);
+}
+
+.comments__message:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.comments__content-wrapper {
+    margin-bottom: 15px;
+}
+
+.comments__btn-answer {
+    color: var(--color_dodger);
+}
+
+/*read-more sets*/
+.collapsedTextContainer {
+    max-height: 60px; /* настройте на желаемую высоту*/
+    width: 603px;
+    overflow: hidden;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_bali);
+    margin-bottom: 15px;
+    transition: max-height 0.5s ease;
+}
+
+.fadeOverlay {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, #f4f6f8);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.collapsedTextContainer.expanded {
+    max-height: 100%;
+}
+
+.collapsedTextContainer.expanded .fadeOverlay {
+    opacity: 0;
+}
+
+.read-more__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_dodger);
+}
+
+/*end read-more sets*/
+
+.out-message__main-info {
+    position: relative;
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+    padding-bottom: 53px;
+}
+
+.out-message__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.out-message__title {
+    margin-bottom: 25px;
+}
+
+.out-message__content-wrapper {
+    display: flex;
+    padding: 15px;
+    background-color: var(--color_athens-gray);
+    border-radius: 10px;
+}
+
+.out__message__info-name {
+    margin-bottom: 5px;
+}
+
+.out-message__user-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.chat__main-info {
+    position: relative;
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.chat__source-icon {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 20px;
+}
+
+.chat__source-link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/hh_20x20.svg");
+}
+
+.chat__source {
+    color: var(--color_space);
+    margin-bottom: 25px;
+}
+
+.chat__source-title {
+    margin-right: 10px;
+}
+
+.chat__main-data {
+    margin-bottom: 10px;
+    color: var(--color_bali);
+}
+
+.chat__message {
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--color_athens-gray);
+}
+
+.chat__message:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.chat__message-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.chat__user-name {
+    margin-bottom: 5px;
+}
+
+.chat__time {
+    margin-left: auto;
+    color: var(--color_bali);
+}
+
+.chat__message-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.chat__wrapper {
+    margin-bottom: 15px;
+}
+
+.chat__btn-answer {
+    color: var(--color_dodger);
+}
+
+.more__enter {
+    width: 100%;
+    padding: 25px;
+}
+
+.more__enter-container {
+    position: relative;
+}
+
+.more__enter-textarea {
+    width: 100%;
+    min-height: 82px;
+    border: none;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+/*custom select sets*/
+.custom-select-wrapper {
+    position: relative;
+    width: auto; /* Задайте ширину по вашему усмотрению */
+}
+
+.custom-select {
+    position: relative;
+    cursor: pointer;
+}
+
+.selected-option {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_dodger);
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    display: none;
+    transform: translateY(14px);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 11px 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/chat-arrow.svg");
+    transition: transform 0.3s ease;
+}
+
+.custom-select.open .arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/*end custom select sets*/
+.more__enter-textarea::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_bali);
+    opacity: 0.6;
+}
+
+.more__enter-textarea:focus {
+    outline: none;
+}
+
+.custom-select__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*add styles for dropdown btn in chat*/
+/* Стили для выпадающего списка */
+.more-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.more-dropbtn {
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/plus-chat.svg");
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.more-dropbtn:focus-visible {
+    outline: none;
+}
+
+.more-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    top: -90px;
+    border-radius: 5px;
+}
+
+.more-dropdown-content button {
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 11px 15px;
+    color: var(--color_bali);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.more-dropdown-content button:hover {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+}
+
+.more-show {
+    display: block;
+}
+
+.more-dropdown__btn:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.more__btns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.more__btn-send {
+    min-width: 119px;
+    color: var(--color_white);
 }
