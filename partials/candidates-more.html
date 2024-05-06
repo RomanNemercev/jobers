@@ -207,14 +207,33 @@
                             </form>
                         </div>
                     </div>
-                    <div class="more__burger">
-                        <div class="more__burger-dot dot-inwork-one"></div>
-                        <div class="more__burger-dot dot-inwork-one"></div>
-                        <div class="more__burger-dot dot-inwork-one"></div>
+                    <div class="dropdown-dots">
+                        <button class="dropdown-toggle">
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <!--            <div class="button-text">...</div>-->
+                        </button>
+                        <div class="candidates__droplist-back"></div>
+                        <div class="dropdown-menu">
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768"></button>
+                            <ul>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Открыть файл резюме</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Экспорт в&nbsp;Excel</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item" id="del-popup1">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="more__main-content vacancies__content" data-target="one"
+            <div class="more__main-content vacancies__content vacancies__content--active" data-target="one"
                  data-simplebar>
                 <div class="more__quick-info">
                     <img src="../img/candidates-more-icon-large.svg"
@@ -328,7 +347,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="more__history-content vacancies__content vacancies__content--active" data-target="two">
+            <div class="more__history-content vacancies__content" data-target="two">
                 <div class="more__messages" id="messageContainer">
                     <div class="more__data-container">
                         <div class="more__data-message admin">
@@ -535,13 +554,25 @@
             </div>
         </div>
     </div>
+    <div class="item__popup-del-cans" id="del-popup">
+        <button class="btn-reset auto__close" id="del-popup-close"></button>
+        <div class="item__popup-wrapper del">
+            <p class="f20w700 delete__title">Удаление кандидата</p>
+            <p class="delete__attent">Кандидат будет удален. Все удаленные кандидаты находятся в&nbsp;папке «Удаленные»,
+                откуда их&nbsp;можно будет восстановить</p>
+            <div class="delete__choose">
+                <button class="btn-reset delete__yes" id="del-yes">Удалить</button>
+                <button class="btn-reset delete__no" id="del-no">Отмена</button>
+            </div>
+        </div>
+    </div>
 </section>
 <!--not load simplebar-->
 <!--<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>-->
 <script src="../js/libs-js/simplebar.min.js"></script>
 <script src="../js/jquery_3.3.1.min.js"></script>
 <script src="../js/libs-js/select.js"></script>
-<script src="../js/candidates-more.js"></script>
 <script src="../js/script.js"></script>
+<script src="../js/candidates-more.js"></script>
 </body>
 </html>

@@ -42,7 +42,7 @@ window.onload = function () {
         if (!textContainer || !button || !fadeOverlay) return;  // check if necessary children exist
 
         const toggleVisible = () => {
-            if (textContainer.scrollHeight <= 60) {
+            if (textContainer.scrollHeight <= 49) {
                 button.style.display = 'none';
                 fadeOverlay.style.background = 'transparent';
             } else {
@@ -205,3 +205,102 @@ function scrollToInputComments() {
     dropdown.style.display = "none";
 }
 
+// open dropdown in right top
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll('.dropdown-dots');
+
+    dropdowns.forEach(function (dropdown) {
+        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        const dropdownClose = dropdown.querySelector('.item__btn-close');
+        const dropdownBack = dropdown.querySelector('.candidates__droplist-back');
+
+        dropdownToggle.addEventListener('click', function () {
+            if (dropdownMenu.classList.contains('dropdown--active')) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        });
+
+        dropdownClose.addEventListener('click', function () {
+            closeDropdown();
+        });
+
+        dropdownBack.addEventListener('click', function () {
+            closeDropdown();
+        });
+
+        function openDropdown() {
+            dropdownMenu.style.display = 'block';
+            dropdownMenu.classList.add('dropdown--active');
+            dropdownBack.classList.add('candidates__droplist-back--active');
+            dropdown.setAttribute('data-state', 'open');
+        }
+
+        function closeDropdown() {
+            dropdownMenu.classList.remove('dropdown--active');
+            dropdownBack.classList.remove('candidates__droplist-back--active');
+            dropdownMenu.style.display = 'none';
+            dropdown.setAttribute('data-state', 'closed');
+        }
+    });
+});
+
+//script for popup
+// Функция для открытия всплывающего окна
+function openPopup(popupId) {
+    document.getElementById(popupId).classList.add('vacancies__item-popup--open');
+    document.body.classList.add('stop-scroll');
+}
+
+// Функция для закрытия всплывающего окна
+function closePopup(popupId) {
+    document.getElementById(popupId).classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+}
+
+// Функция для добавления обработчика события открытия всплывающего окна
+function addPopupOpenHandler(buttonSelector, popupId) {
+    document.querySelectorAll(buttonSelector).forEach(function (button) {
+        button.addEventListener('click', function () {
+            openPopup(popupId);
+        });
+    });
+}
+
+// Функция для добавления обработчика события закрытия всплывающего окна
+function addPopupCloseHandler(closeButtonId, popupId) {
+    document.getElementById(closeButtonId).addEventListener('click', function () {
+        closePopup(popupId);
+    });
+}
+
+// Функция для добавления обработчика события закрытия всплывающего окна при клике на фон
+function addPopupCloseOnBackgroundClickHandler(popupId) {
+    document.getElementById(popupId).addEventListener('click', function (event) {
+        if (!event.target.closest(".item__popup-wrapper")) {
+            closePopup(popupId);
+        }
+    });
+}
+
+// Функция для добавления обработчика события закрытия всплывающего окна при нажатии клавиши Esc
+function addPopupCloseOnEscKeyHandler(popupId) {
+    window.addEventListener('keydown', function (e) {
+        if (e.key === "Escape") {
+            closePopup(popupId);
+        }
+    });
+}
+
+// Открытие окна удаления вакансии
+addPopupOpenHandler('#del-popup1', 'del-popup');
+addPopupCloseHandler('del-popup-close', 'del-popup');
+addPopupCloseOnBackgroundClickHandler('del-popup');
+addPopupCloseOnEscKeyHandler('del-popup');
+
+//close del-popup-close after click on del-no button
+document.getElementById('del-no').addEventListener('click', function () {
+    document.getElementById('del-popup').classList.remove('vacancies__item-popup--open');
+})
