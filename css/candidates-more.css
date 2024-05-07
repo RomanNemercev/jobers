@@ -1,6 +1,10 @@
 /*hide mobile els*/
 .dropdown__title-768,
-.item__btn-close {
+.item__btn-close,
+.search-bar__768px,
+.more__quick-info__768,
+.more__full-info__768,
+.more__skip-768 {
     display: none;
 }
 /*end hide mobile*/
@@ -380,6 +384,8 @@ p {
 
 .more__tags {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .more__user-desc {
@@ -1198,4 +1204,62 @@ p {
 
 .item__popup-del-cans.vacancies__item-popup--open .item__popup-wrapper {
     transform: scale(1);
+}
+
+/*add tags sets*/
+.tag-input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-input input {
+    color: var(--color_dodger);
+    border: none;
+    font-size: 15px;
+}
+
+.tag-input input:focus-visible {
+    outline: none;
+}
+
+.tag {
+    color: var(--color_dodger);
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    background-image: url("../img/tag-cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    width: 15px;
+    height: 20px;
+    margin-left: 4.7px;
+    margin-bottom: 1px;
+    margin-right: 10px;
+    transform: translateY(-1px);
+}
+
+/*custom*/
+.user__add-tags {
+    background-image: url("../img/plus__add-tags.svg");
+    padding-right: 20px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+/*end tags styles*/
+
+.more__user-wage {
+    margin-bottom: 6px;
+    display: block;
 }

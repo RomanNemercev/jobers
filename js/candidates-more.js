@@ -1,4 +1,10 @@
 // script for scroll-x
+let btnLeft = document.getElementById('btn-left');
+btnLeft.onclick = function () {
+    let container = document.getElementById('scroll-wrapper');
+    sideScroll(container, 'left', 25, 100, 10);
+};
+
 let btnRight = document.getElementById('btn-right');
 btnRight.onclick = function () {
     let container = document.getElementById('scroll-wrapper');
@@ -304,3 +310,7 @@ addPopupCloseOnEscKeyHandler('del-popup');
 document.getElementById('del-no').addEventListener('click', function () {
     document.getElementById('del-popup').classList.remove('vacancies__item-popup--open');
 })
+
+//init tags js
+initializeTagInput('tag-input-0');
+initializeTagInput('tag-input-1');

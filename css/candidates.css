@@ -1133,6 +1133,9 @@
     font-size: 15px;
     font-weight: 400;
     padding-top: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .delete-btn {
@@ -1150,3 +1153,4 @@
     margin-right: 10px;
     transform: translateY(-1px);
 }
+/*end tags styles*/
