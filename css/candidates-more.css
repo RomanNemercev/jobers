@@ -933,6 +933,9 @@ p {
     font-weight: 400;
     color: var(--color_bali);
     opacity: 0.6;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .more__enter-textarea:focus {

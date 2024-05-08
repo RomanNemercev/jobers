@@ -29,11 +29,11 @@ function sideScroll(element, direction, speed, distance, step) {
 //auto scroll on history page
 new SimpleBar(document.getElementById('messageContainer'));
 // Прокрутка до последнего сообщения
-document.addEventListener("DOMContentLoaded", function () {
-    var simpleBarInstance = new SimpleBar(document.getElementById('messageContainer'));
-    var scrollElement = simpleBarInstance.getScrollElement();
-    scrollElement.scrollTop = scrollElement.scrollHeight;
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     var simpleBarInstance = new SimpleBar(document.getElementById('messageContainer'));
+//     var scrollElement = simpleBarInstance.getScrollElement();
+//     scrollElement.scrollTop = scrollElement.scrollHeight;
+// });
 
 //read-more
 window.onload = function () {
@@ -314,3 +314,28 @@ document.getElementById('del-no').addEventListener('click', function () {
 //init tags js
 initializeTagInput('tag-input-0');
 initializeTagInput('tag-input-1');
+
+//styles for tabs click on 768
+var mediaQuery = window.matchMedia('(max-width: 768px)');
+
+if (mediaQuery.matches) {
+
+    document.getElementById('history').addEventListener('click', function () {
+        document.querySelector('.search-bar__container').style.display = 'none';
+        document.querySelector('.more').style.paddingTop = '0';
+        document.querySelector('.more__cans-header').style.padding = '7px 12px';
+        document.querySelector('.more__cans-header').classList.add('hide-after');
+        document.querySelector('.more__header-right').style.display = 'none';
+        document.querySelector('.more__content').style.height = '100vh';
+    })
+
+    document.getElementById('resume').addEventListener('click', function () {
+        document.querySelector('.search-bar__container').style.display = 'flex';
+        document.querySelector('.more').style.paddingTop = '53px';
+        document.querySelector('.more__cans-header').style.padding = '15px 12px';
+        document.querySelector('.more__cans-header').classList.remove('hide-after');
+        document.querySelector('.more__header-right').style.display = 'flex';
+        document.querySelector('.more__content').style.height = 'calc(100vh - 120px)';
+    })
+    console.log('Экран до 768px');
+}
