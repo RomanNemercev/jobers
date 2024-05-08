@@ -8,14 +8,16 @@
     /*    hidde desktop v*/
     .more__quick-info,
     .more__full-info,
-    .more__header-right .more__droplist {
+    .more__header-right .more__droplist,
+    .more__search__form {
         display: none;
     }
 
     /*    visible mobile content*/
     .more__quick-info__768,
     .more__full-info__768,
-    .more__skip-768 {
+    .more__skip-768,
+    .more__cans-count {
         display: block;
     }
 
@@ -25,11 +27,48 @@
     }
 
     .search-bar__768px {
-        display: block;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .search-bar__back {
+        color: var(--color_white);
+        padding-left: 23px;
+        background-image: url("../../img/arrow-back.svg");
+    }
+
+    .search-bar__navs {
+        margin-left: auto;
+        display: flex;
     }
 
     .search-bar__container {
         height: 54px;
+    }
+
+    .search-bar__btns-wrap {
+        max-height: 40px;
+        margin-right: 15px;
+    }
+
+    .search-bar__btn-prev {
+        width: 42px;
+        height: 40px;
+        background-image: url("../../img/media/cans-swipe-prev.svg");
+        margin-right: 1px;
+    }
+
+    .search-bar__btn-next {
+        width: 42px;
+        height: 40px;
+        background-image: url("../../img/media/cans-swipe-next.svg");
+    }
+
+    .search-bar__cans {
+        width: 68px;
+        height: 40px;
+        background-image: url("../../img/media/cans-show-list.svg");
     }
 
     .more {

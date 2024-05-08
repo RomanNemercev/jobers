@@ -4,7 +4,8 @@
 .search-bar__768px,
 .more__quick-info__768,
 .more__full-info__768,
-.more__skip-768 {
+.more__skip-768,
+.more__cans-count {
     display: none;
 }
 /*end hide mobile*/
