@@ -18,12 +18,12 @@ button {
     stroke: white;
 }
 
-.main {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
+/*.main {*/
+/*    display: flex;*/
+/*    height: 100vh;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
 
 .pop-up__container {
     position: relative;
@@ -46,18 +46,23 @@ button {
 }
 
 .pop-up {
-    display: none;
+    /*display: none;*/
     width: 100%;
     height: 100%;
     position: fixed;
     left: 0;
     top: 0;
     background-color: rgba(42, 49, 55, 0.75);
-    z-index: 2;
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .3s ease, opacity .3s ease;
 }
 
 .pop-up.active {
-    display: block;
+    /*display: block;*/
+    opacity: 1;
+    visibility: visible;
 }
 
 .pop-up__title {
@@ -130,12 +135,14 @@ button {
     -ms-overflow-style: none;
 }
 
-.dropdown {
+.dropdown-list {
     position: relative;
     display: inline-block;
+    flex-direction: column;
+    display: flex;
 }
 
-.dropdown:hover {
+.dropdown-list:hover {
     background-color: #eff5ff;
     cursor: pointer;
 }
@@ -185,7 +192,7 @@ button {
 }
 
 .dropdown-content__label span::before {
-    content: url('./img/2.svg');
+    content: url('../../img/2.svg');
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -204,7 +211,7 @@ button {
 }
 
 .dropdown-content__label input[type='radio']:checked + span::before {
-    content: url('./img/1.svg');
+    content: url('../../img/1.svg');
 }
 
 .pop-up_close {
@@ -219,9 +226,9 @@ button {
     stroke: black;
 }
 
-.pop-up_close-mobile {
-    display: none;
-}
+/*.pop-up_close-mobile {*/
+/*    display: none;*/
+/*}*/
 
 .button-block {
     margin-top: 40px;
@@ -249,23 +256,18 @@ button {
     color: #2f353d;
 }
 
-@media (max-width: 840px) {
-    .pop-up_close {
-        display: none;
-        position: absolute;
-        right: 20px;
-        top: 18px;
-    }
+/*@media (max-width: 840px) {*/
+/*    .pop-up_close {*/
+/*        position: absolute;*/
+/*        right: 20px;*/
+/*        top: 18px;*/
+/*    }*/
 
-    .pop-up_close-mobile {
-        display: block;
-    }
-
-    .icon-close-mobile {
-        width: 36px;
-        height: 36px;
-    }
-}
+/*    .icon-close-mobile {*/
+/*        width: 36px;*/
+/*        height: 36px;*/
+/*    }*/
+/*}*/
 
 @media (max-width: 767px) {
     .pop-up__tablet {

@@ -214,32 +214,36 @@ ratesBtn.forEach(function (element) {
     })
 });
 
-//modal for skills
-document.getElementById("choose-skills").addEventListener("click", function () {
-    document.getElementById("choose-skills-modal").classList.add("main__skill-popup--open");
-    document.body.classList.toggle('stop-scroll');
+//search-drop some sets
+let btnSearchDrop = document.getElementById('open_pop_up');
+let searchDropNo = document.getElementById('search-btn-no');
+let popupSearch = document.getElementById('pop_up');
+let searchPopupClose = document.getElementById('pop_up_close');
+
+btnSearchDrop.addEventListener('click', function () {
+    document.body.classList.add('stop-scroll');
 })
 
-// if we needed to close with btn
-// document.getElementById("modal-slide-2-close").addEventListener("click", function () {
-//     document.getElementById("modal-slide-2").classList.remove("gallery__modal--open");
-//     document.body.classList.remove('stop-scroll');
-// })
-//
+searchDropNo.addEventListener('click', function () {
+    popupSearch.classList.remove('active');
+    document.body.classList.remove('stop-scroll');
+})
 
-// if we need to close with Escape key
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        document.getElementById("choose-skills-modal").classList.remove("main__skill-popup--open");
-        document.body.classList.remove('stop-scroll');
-    }
-});
+searchPopupClose.addEventListener('click', function () {
+    document.body.classList.remove('stop-scroll');
+})
 
-document.querySelector("#choose-skills-modal .main__skill-wrapper").addEventListener('click', event => {
+document.querySelector("#pop_up .pop-up__body").addEventListener('click', event => {
     event._isClickWithInModal = true;
 });
-document.getElementById("choose-skills-modal").addEventListener('click', event => {
+document.getElementById("pop_up").addEventListener('click', event => {
     if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('main__skill-popup--open');
+    event.currentTarget.classList.remove('active');
     document.body.classList.remove('stop-scroll');
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById('pop_up').classList.remove('active');
+    }
 });

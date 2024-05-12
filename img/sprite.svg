@@ -1,0 +1,25 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" baseProfile="full" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ev="http://www.w3.org/2001/xml-events">
+    <symbol id="open" viewBox="0 0 12 7" fill="none">
+        <path d="M1.625 1.375L6 5.4375L10.375 1.375" stroke="#5898FF" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </symbol>
+
+
+
+
+
+    <symbol id="close" viewBox="0 0 7 12" fill="none">
+        <path d="M1.25 10.0625L5.625 6L1.25 1.9375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+
+    <symbol id="close-modal" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1_1753)">
+            <path d="M39.0625 10.9375L10.9375 39.0625" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M39.0625 39.0625L10.9375 10.9375" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </g>
+    </symbol>
+</svg>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const buttons = document.querySelectorAll('.dropdown')
+  const buttons = document.querySelectorAll('.dropdown-list')
   const contents = document.querySelectorAll('.dropdown-content')
   const searchInput = document.getElementById('searchInput')
   const line = document.querySelectorAll('.dropdown__line')

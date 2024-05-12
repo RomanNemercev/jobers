@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/custom.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/libs-css/search-drop.css">
     <link rel="stylesheet" href="../css/styles-add-vacancies.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
@@ -100,100 +101,7 @@
                 </label>
                 <div class="main__skill">
                     <p class="main__skill-title">Специализация <span class="main__span-custom">*</span></p>
-                    <button class="main__skill-choose btn-reset" id="choose-skills">Указать специализацию</button>
-                </div>
-                <div class="main__skill-popup" id="choose-skills-modal">
-                    <div class="main__skill-wrapper">
-                        <ul class="main__skills-accordion accordion-list">
-                            <li class="list-reset main__accordion-list accordion">
-                                <button class="main__accordion-control accordion__control" tabindex="0"><span
-                                        class="main__accordion-arrow"></span><span class="main__accordion-title">Автомобильный
-                                    бизнес</span>
-                                </button>
-                                <div class="main__accordion-content accordion__content">
-                                    <ul class="main__content-list">
-                                        <li class="main__content-item">
-                                            <label for="car-washer" class="main__content-wrap"><input type="radio"
-                                                                                                      name="car-business"
-                                                                                                      class="main__content-choose"
-                                                                                                      id="car-washer"><span
-                                                    class="main__content-choose__custom-check"></span>Автомомйщик
-                                            </label>
-                                        </li>
-                                        <li class="main__content-item">
-                                            <label for="auto-mechanic" class="main__content-wrap"><input type="radio"
-                                                                                                         name="car-business"
-                                                                                                         class="main__content-choose"
-                                                                                                         id="auto-mechanic"><span
-                                                    class="main__content-choose__custom-check"></span>Автослесарь,
-                                                автомеханик
-                                            </label>
-                                        </li>
-                                        <li class="main__content-item">
-                                            <label for="master-inspector" class="main__content-wrap"><input type="radio"
-                                                                                                            name="car-business"
-                                                                                                            class="main__content-choose"
-                                                                                                            id="master-inspector"><span
-                                                    class="main__content-choose__custom-check"></span>Мастер-приемщик
-                                            </label>
-                                        </li>
-                                        <li class="main__content-item">
-                                            <label for="sales-manager" class="main__content-wrap"><input type="radio"
-                                                                                                         name="car-business"
-                                                                                                         class="main__content-choose"
-                                                                                                         id="sales-manager"><span
-                                                    class="main__content-choose__custom-check"></span>Менеджер
-                                                по&nbsp;продажам, менеджер по&nbsp;работе с&nbsp;клиентами
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="list-reset main__accordion-list accordion">
-                                <button class="main__accordion-control accordion__control" tabindex="0"><span
-                                        class="main__accordion-arrow"></span><span class="main__accordion-title">Административный персонал</span>
-                                </button>
-                                <div class="main__accordion-content accordion__content">
-                                    <ul class="main__content-list">
-                                        <li class="main__content-item">
-                                            <label for="administrator" class="main__content-wrap"><input type="radio"
-                                                                                                         name="administrative-staff"
-                                                                                                         class="main__content-choose"
-                                                                                                         id="administrator"><span
-                                                    class="main__content-choose__custom-check"></span>Администратор
-                                            </label>
-                                        </li>
-                                        <li class="main__content-item">
-                                            <label for="Clerk-archivist" class="main__content-wrap"><input type="radio"
-                                                                                                           name="administrative-staff"
-                                                                                                           class="main__content-choose"
-                                                                                                           id="Clerk-archivist"><span
-                                                    class="main__content-choose__custom-check"></span>Делопроизводитель,
-                                                архивариус
-                                            </label>
-                                        </li>
-                                        <li class="main__content-item">
-                                            <label for="courier" class="main__content-wrap"><input type="radio"
-                                                                                                   name="administrative-staff"
-                                                                                                   class="main__content-choose"
-                                                                                                   id="courier"><span
-                                                    class="main__content-choose__custom-check"></span>Курьер
-                                            </label>
-                                        </li>
-                                        <li class="main__content-item">
-                                            <label for="sales-manager" class="main__content-wrap"><input type="radio"
-                                                                                                         name="administrative-staff"
-                                                                                                         class="main__content-choose"
-                                                                                                         id="sales-manager"><span
-                                                    class="main__content-choose__custom-check"></span>Менеджер
-                                                по&nbsp;продажам, менеджер по&nbsp;работе с&nbsp;клиентами
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    <button class="main__skill-choose btn-reset" id="open_pop_up">Указать специализацию</button>
                 </div>
                 <div class="main__descr">
                     <label class="main__descr-title">Описание <span
@@ -669,19 +577,19 @@
     <div class="pop-up__container">
         <div class="pop-up_close" id="pop_up_close">
             <svg class="icon-close">
-                <use xlink:href="./img/sprite.svg#close-modal"></use>
+                <use xlink:href="../img/sprite.svg#close-modal"></use>
             </svg>
         </div>
 
         <div class="pop-up__body" id="pop_up_body">
-            <div
-                    class="pop-up_close-mobile pop-up_close"
-                    id="pop_up_close-mobile"
-            >
-                <svg class="icon-close-mobile">
-                    <use href="./img/sprite.svg#close-modal"></use>
-                </svg>
-            </div>
+<!--            <div-->
+<!--                    class="pop-up_close-mobile pop-up_close"-->
+<!--                    id="pop_up_close-mobile"-->
+<!--            >-->
+<!--                <svg class="icon-close-mobile">-->
+<!--                    <use href="../img/sprite.svg#close-modal"></use>-->
+<!--                </svg>-->
+<!--            </div>-->
             <p class="pop-up__title">Специализации</p>
             <input
                     class="pop-up__input text"
@@ -691,10 +599,10 @@
             />
 
             <div class="pop-up__tablet">
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Автомобильный бизнес</p>
                     </div>
@@ -742,10 +650,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Административный персонал</p>
                     </div>
@@ -800,10 +708,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Безопасность</p>
                     </div>
@@ -841,10 +749,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Высший и средний менеджмент</p>
                     </div>
@@ -915,10 +823,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Добыча сырья</p>
                     </div>
@@ -966,10 +874,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Домашний, обслуживающий персонал</p>
                     </div>
@@ -1021,10 +929,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Закупки</p>
                     </div>
@@ -1040,10 +948,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Информационные технологии</p>
                     </div>
@@ -1172,10 +1080,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Искусство, развлечения, массмедиа</p>
                     </div>
@@ -1234,10 +1142,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text"><span></span>Маркетинг, реклама, PR</p>
                     </div>
@@ -1318,10 +1226,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Медицина, фармацевтика</p>
                     </div>
@@ -1390,10 +1298,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text"><span></span>Наука, образование</p>
                     </div>
@@ -1442,10 +1350,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text"><span></span>Продажи, обслуживание клиентов</p>
                     </div>
@@ -1535,10 +1443,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Производство, сервисное обслуживание</p>
                     </div>
@@ -1685,10 +1593,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Рабочий персонал</p>
                     </div>
@@ -1794,10 +1702,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Розничная торговля</p>
                     </div>
@@ -1849,10 +1757,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Сельское хозяйство</p>
                     </div>
@@ -1897,10 +1805,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">
                             Спортивные клубы, фитнес, салоны красоты
@@ -1954,10 +1862,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Стратегия, инвестиции, консалтинг</p>
                     </div>
@@ -1995,10 +1903,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Страхование</p>
                     </div>
@@ -2024,10 +1932,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Строительство, недвижимость</p>
                     </div>
@@ -2143,10 +2051,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Транспорт, логистика, перевозки</p>
                     </div>
@@ -2216,10 +2124,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Туризм, гостиницы, рестораны</p>
                     </div>
@@ -2265,10 +2173,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Управление персоналом, тренинги</p>
                     </div>
@@ -2308,10 +2216,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Финансы, бухгалтерия</p>
                     </div>
@@ -2390,10 +2298,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Юристы</p>
                     </div>
@@ -2423,10 +2331,10 @@
                     </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown-list">
                     <div class="dropdown__line">
                         <svg class="icon">
-                            <use xlink:href="./img/sprite.svg#close"></use>
+                            <use xlink:href="../img/sprite.svg#close"></use>
                         </svg>
                         <p class="dropbtn text">Другое</p>
                     </div>
@@ -2442,7 +2350,7 @@
                 <button class="button-block__text button-block__text_save">
                     Сохранить
                 </button>
-                <button class="button-block__text button-block__text_cancell">
+                <button class="button-block__text button-block__text_cancell" id="search-btn-no">
                     Отмена
                 </button>
             </div>
