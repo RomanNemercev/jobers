@@ -70,7 +70,15 @@ window.onload = function () {
             toggleVisible();
         }
 
-        button.addEventListener('click', expandText);
+        // Add click event listener with try-catch block
+        // Ошибка происхордит
+        button.addEventListener('click', () => {
+            try {
+                expandText();
+            } catch (error) {
+                console.log("Произошла ожидаемая ошибка по не нахождению текста в кнопке read-more.");
+            }
+        });
         toggleVisible();
     });
 };
@@ -339,3 +347,26 @@ if (mediaQuery.matches) {
     })
     console.log('Экран до 768px');
 }
+
+//create tabs for cans list
+
+let listCansBtn = document.querySelector('.search-bar__cans');
+let mainContentUser = document.querySelector('.more__cans-info');
+let moreCansScroll = document.querySelector('.more__cans-scroll');
+listCansBtn.addEventListener('click', function () {
+    if (listCansBtn.style.opacity === '1') {
+        listCansBtn.style.opacity = '0.5';
+    } else {
+        listCansBtn.style.opacity = '1';
+    }
+
+    if (mainContentUser.style.cssText === 'opacity: 1; visibility: visible; position: relative;') {
+        mainContentUser.style.cssText = 'opacity: 0; visibility: hidden; position: absolute;';
+    } else {
+        mainContentUser.style.cssText = 'opacity: 1; visibility: visible; position: relative;';
+    }
+
+    moreCansScroll.classList.toggle('more__cans-scroll--active__768');
+    document.querySelector('.vacancies__content--active').classList.toggle('vacancies__content--active__correct-height');
+    document.querySelector('.more__items-list').classList.toggle('more__items-list__correct-height');
+})

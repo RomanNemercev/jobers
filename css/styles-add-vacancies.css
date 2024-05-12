@@ -258,3 +258,8 @@
 .main__content-choose:checked + .main__content-choose__custom-check {
     background-image: url("../img/skills-ellipse-active.svg");
 }
+
+/*error sets*/
+.main__post.error--visible {
+    margin-bottom: 55px;
+}

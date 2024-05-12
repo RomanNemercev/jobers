@@ -69,6 +69,7 @@
         width: 68px;
         height: 40px;
         background-image: url("../../img/media/cans-show-list.svg");
+        transition: opacity .3s ease;
     }
 
     .more {
@@ -88,12 +89,15 @@
     .more__cans-scroll {
         width: 0;
         height: 0;
-        overflow: hidden;
+        opacity: 0;
+        transition: opacity .1s ease;
+        background-color: transparent;
     }
 
     .more__cans-info {
         width: 100%;
         border-radius: 0;
+        transition: opacity .3s ease, visibility .3s ease;
     }
 
     .more__cans-header {
@@ -454,5 +458,50 @@
 
     .more__enter-textarea {
         margin-bottom: 5px;
+    }
+
+    .collapsedTextContainer {
+        width: auto;
+    }
+
+    .more-search__form {
+        display: none;
+    }
+
+    /*    custom styles for js*/
+    .more__cans-scroll--active__768 {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        padding: 19px 13px;
+    }
+
+    .vacancies__content--active__correct-height {
+        height: 80vh;
+    }
+
+    .more__items-list__correct-height {
+        height: calc(100vh - 109px);
+    }
+
+/* end custom styles for js*/
+
+    .more__cans-count {
+        margin-bottom: 13px;
+    }
+
+    .more__item {
+        background-color: var(--color_white);
+        border-radius: 5px;
+        padding: 13px 20px 12px 13px;
+        margin-bottom: 7px;
+    }
+
+    .more__item:first-of-type {
+        padding-top: 13px;
+    }
+
+    .more__item::before {
+        border-radius: 0 5px 5px 0;
     }
 }

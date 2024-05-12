@@ -703,21 +703,21 @@ try {
 // };
 
 // ещё один способ
-function errorInputs() {
-    var items = document.querySelectorAll('.new__add-name__input[required]');
-    if (!items.length) return;
-    items.forEach(function (item) {
-        var parent = item.closest('.new__add-name');
-        item.addEventListener('focusout', function () {
-            if (!this.value.length) parent.classList.add('error--visible');
-        });
-        item.addEventListener('focusin', function () {
-            if (parent.classList.contains('error--visible')) parent.classList.remove('error--visible');
+function handleInputValidation() {
+    var inputs = document.querySelectorAll('.new__add-name__input[required]');
+    inputs.forEach(function(input) {
+        var parent = input.closest('.new__add-name');
+        input.addEventListener('blur', function() {
+            if (!this.value.trim()) {
+                parent.classList.add('error--visible');
+            } else {
+                parent.classList.remove('error--visible');
+            }
         });
     });
 }
 
-errorInputs();
+handleInputValidation();
 
 //     modal for btn-auto-setting in dropdown
 let autoSetBtn = document.querySelectorAll('.auto-setting');

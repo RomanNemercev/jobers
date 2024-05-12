@@ -2550,6 +2550,10 @@
 }
 
 .main__post {
+    margin-bottom: 0;
+}
+
+.main__post-name {
     color: var(--color_space);
     font-size: 15px;
     font-style: normal;
@@ -2623,6 +2627,7 @@
     display: block;
     width: 100%;
     min-height: 355px;
+    resize: none;
     margin-bottom: 15px;
 }
 
