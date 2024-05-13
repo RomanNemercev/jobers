@@ -190,3 +190,34 @@
 .main__post.error--visible {
     margin-bottom: 55px;
 }
+
+/*droplist sets*/
+.droplist {
+    max-width: 100%;
+    width: 100%;
+}
+
+.droplist__items {
+    width: 100%;
+}
+
+/*any sets*/
+.add__wage-label__min {
+    width: 48.862%;
+    margin-bottom: 0;
+}
+
+.add__wage-label__max {
+    width: 48.862%;
+    margin-bottom: 0;
+}
+
+.add__wage-label__min.error--visible,
+.add__wage-label__max.error--visible{
+    margin-bottom: 25px;
+}
+
+.add__keys-input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}

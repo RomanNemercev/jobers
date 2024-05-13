@@ -2824,7 +2824,6 @@
 
 .add__wage-min {
     display: inline-block;
-    width: 48.862%;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -2833,11 +2832,16 @@
 
 .add__wage-max {
     display: inline-block;
-    width: 48.862%;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: var(--color_athens-gray);
+}
+
+.add__wage-min:focus,
+.add__wage-max:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
 }
 
 .add__dues {

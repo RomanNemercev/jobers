@@ -116,4 +116,5 @@ $(document).ready(function () {
             drop.removeClass('droplist_active');
         }
     });
+
 });

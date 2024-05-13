@@ -1,24 +1,3 @@
-const multiSelect = () => {
-    const elements = document.querySelectorAll('.add__select-wrapper');
-    elements.forEach(el => {
-        const choices = new Choices(el, {
-            searchEnabled: false,
-            itemSelectText: '',
-            shouldSort: false,
-        })
-    });
-};
-
-multiSelect();
-
-//accordion-add-vacancies \\remove so it's single version
-// new Accordion('.accordion-list', {
-//     elementClass: 'accordion',
-//     triggerClass: 'accordion__control',
-//     panelClass: 'accordion__content',
-//     activeClass: 'accordion--active'
-// });
-
 const multiAccordion = () => {
     const elements = document.querySelectorAll('.accordion-list');
     elements.forEach(el => {
@@ -92,34 +71,6 @@ input.addEventListener('change', function () {
         reader.readAsDataURL(file);
     }
 })
-
-//border-for-checkbox
-// document.addEventListener('DOMContentLoaded', () => {
-//
-//     let checkbox = document.querySelector('label[for="rate-middle"]');
-//
-//     checkbox.parentNode.classList.add('rates__selected');
-//
-//     checkbox.addEventListener('click', function()
-//     {
-//         let parent = this.parentNode;
-//
-//         ( !parent.classList.contains('rates__selected') ) ?
-//             parent.classList.add('rates__selected'):
-//             parent.classList.remove('rates__selected');
-//     });
-//
-// });
-
-// let ratesCheckbox = document.querySelectorAll('.rates__list-title');
-// let ratesItemWrap = document.querySelectorAll('.rates__list-item');
-// ratesCheckbox.forEach(function (el) {
-//     el.addEventListener('click', function () {
-//         ratesItemWrap.forEach(function (element) {
-//             element.classList.add('rates__selected')
-//         })
-//     })
-// })
 
 // first step border rates
 let arrExceptMin = [document.querySelector('label[for="rate-middle"]'), document.querySelector('label[for="rate-max"]')];

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/libs-css/select.css">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/libs-css/search-drop.css">
     <link rel="stylesheet" href="../css/styles-add-vacancies.css">
@@ -119,37 +120,65 @@
             <div class="add__options">
                 <div class="add__options-type">
                     <p class="add__options-title">Тип занятости</p>
-                    <div class="add__option-dropdown">
-                        <select name="select" class="add__select-wrapper">
-                            <option value="">Тип занятости</option>
-                            <option value="Пригласить">Полная</option>
-                            <option value="Отклонить">Частичная</option>
-                            <option value="Скачать резюме">Временная</option>
-                            <option value="Экспорт в Excel">Стажировка</option>
-                        </select>
+                    <div class="droplist droplist__select">
+                        <form class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Тип занятости">Тип занятости</span> <span
+                                    class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"/>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Полная</li>
+                                <li class="droplist__item">Частичная</li>
+                                <li class="droplist__item">Временная</li>
+                                <li class="droplist__item">Стажировка</li>
+                            </ul>
+                        </form>
                     </div>
                 </div>
                 <div class="add__options-schedule">
                     <p class="add__options-title">График работы</p>
-                    <div class="add__option-dropdown">
-                        <select name="select" class="add__select-wrapper">
-                            <option value="">График работы</option>
-                            <option value="Пригласить">Полный</option>
-                            <option value="Сменный">Сменный</option>
-                            <option value="Свободный">Свободный</option>
-                            <option value="Удаленная работа">Удаленная работа</option>
-                            <option value="Вахтовый метод">Вахтовый метод</option>
-                            <option value="Неполный день">Неполный день</option>
-                            <option value="Любой">Любой</option>
-                        </select>
+                    <div class="droplist droplist__select">
+                        <form class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="График работы">График работы</span> <span
+                                    class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"/>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Полный</li>
+                                <li class="droplist__item">Частичная</li>
+                                <li class="droplist__item">Свободный</li>
+                                <li class="droplist__item">Удаленная работа</li>
+                                <li class="droplist__item">Вахтовый метод</li>
+                                <li class="droplist__item">Неполный день</li>
+                                <li class="droplist__item">Любой</li>
+                            </ul>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="add__wage">
                 <p class="add__wage-title">Заработная плата в месяц, руб <span class="add__span-custom">*</span></p>
                 <div class="add__wage-values">
-                    <input type="text" class="add__wage-min" placeholder="от"><input type="text" class="add__wage-max"
-                                                                                     placeholder="до">
+                    <label for="min-wage" class="new__add-name add__wage-label__min">
+                        <input type="text" class="add__wage-min new__add-name__input" placeholder="от" name="min-wage"
+                               id="min-wage" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                    <label for="max-wage" class="new__add-name add__wage-label__max">
+                        <input type="text" class="add__wage-max new__add-name__input" placeholder="до" name="max-wage"
+                               id="max-wage" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
                 </div>
             </div>
             <div class="add__dues">
@@ -167,26 +196,49 @@
             <div class="add__options">
                 <div class="add__options-trial">
                     <p class="add__options-title">Опыт работы</p>
-                    <select name="select" class="add__select-wrapper">
-                        <option value="">Опыт работы</option>
-                        <option value="Выберите вариант">Выберите вариант</option>
-                        <option value="Не имеет значения">Не имеет значения</option>
-                        <option value="От 1 года">От 1 года</option>
-                        <option value="От 3х лет">От 3х лет</option>
-                        <option value="От 5 лет">От 5 лет</option>
-                    </select>
+                    <div class="droplist droplist__select">
+                        <form class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Опыт работы">Опыт работы</span> <span
+                                    class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"/>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Не имеет значения</li>
+                                <li class="droplist__item">От 1 года</li>
+                                <li class="droplist__item">От 3х лет</li>
+                                <li class="droplist__item">От 5 лет</li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
                 <div class="add__options-edu">
                     <p class="add__options-title">Образование</p>
-                    <select name="select" class="add__select-wrapper">
-                        <option value="">Образование</option>
-                        <option value="Выберите вариант">Выберите вариант</option>
-                        <option value="Высшее">Высшее</option>
-                        <option value="Неполное высшее">Неполное высшее</option>
-                        <option value="Среднее специальное">Среднее специальное</option>
-                        <option value="Среднее">Среднее</option>
-                        <option value="Неполное среднее">Неполное среднее</option>
-                    </select>
+                    <div class="droplist droplist__select">
+                        <form class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Образование">Образование</span> <span
+                                    class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"/>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Не имеет значения</li>
+                                <li class="droplist__item">Высшее</li>
+                                <li class="droplist__item">Неполное высшее</li>
+                                <li class="droplist__item">Среднее специальное</li>
+                                <li class="droplist__item">Среднее</li>
+                                <li class="droplist__item">Неполное среднее</li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
             </div>
             <label for="main-skills" class="add__keys">Ключевые навыки</label>
@@ -582,14 +634,14 @@
         </div>
 
         <div class="pop-up__body" id="pop_up_body">
-<!--            <div-->
-<!--                    class="pop-up_close-mobile pop-up_close"-->
-<!--                    id="pop_up_close-mobile"-->
-<!--            >-->
-<!--                <svg class="icon-close-mobile">-->
-<!--                    <use href="../img/sprite.svg#close-modal"></use>-->
-<!--                </svg>-->
-<!--            </div>-->
+            <!--            <div-->
+            <!--                    class="pop-up_close-mobile pop-up_close"-->
+            <!--                    id="pop_up_close-mobile"-->
+            <!--            >-->
+            <!--                <svg class="icon-close-mobile">-->
+            <!--                    <use href="../img/sprite.svg#close-modal"></use>-->
+            <!--                </svg>-->
+            <!--            </div>-->
             <p class="pop-up__title">Специализации</p>
             <input
                     class="pop-up__input text"
@@ -611,10 +663,6 @@
                     <div class="dropdown-content">
 
 
-
-
-
-
                         <label class="dropdown-content__label">
                             <input
                                     type="radio"
@@ -623,13 +671,6 @@
                             />
                             <span></span>Автомойщик
                         </label>
-
-
-
-
-
-
-
 
 
                         <label class="dropdown-content__label"
@@ -644,7 +685,7 @@
                         /> <span></span>Мастер-приемщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /> <span></span>Менеджер по
+                        ><input type="radio" name="item" value="item3"/> <span></span>Менеджер по
                             продажам, менеджер по работе с клиентами</label
                         >
                     </div>
@@ -673,7 +714,7 @@
                         /><span></span>Делопроизводитель, архивариус</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Курьер</label
+                        ><input type="radio" name="item" value="item3"/><span></span>Курьер</label
                         >
 
                         <label class="dropdown-content__label"
@@ -684,7 +725,7 @@
                         /><span></span>Менеджер/руководитель АХО</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Оператор ПК,
+                        ><input type="radio" name="item" value="item2"/><span></span>Оператор ПК,
                             оператор базы данных</label
                         >
                         <label class="dropdown-content__label"
@@ -702,7 +743,7 @@
                         /><span></span>Переводчик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Секретарь,
+                        ><input type="radio" name="item" value="item2"/><span></span>Секретарь,
                             помощник руководителя, ассистент</label
                         >
                     </div>
@@ -739,11 +780,11 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item1"/><span></span>Специалист по
                             информационной безопасности</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Специалист
+                        ><input type="radio" name="item" value="item3"/><span></span>Специалист
                             службы безопасности</label
                         >
                     </div>
@@ -758,66 +799,66 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Генеральный
+                        ><input type="radio" name="item" value="item1"/><span></span>Генеральный
                             директор, исполнительный директор (CEO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Директор по
+                        ><input type="radio" name="item" value="item2"/><span></span>Директор по
                             информационным технологиям (CIO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Директор по
+                        ><input type="radio" name="item" value="item3"/><span></span>Директор по
                             маркетингу и PR (CMO)</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Директор по
+                        ><input type="radio" name="item" value="item1"/><span></span>Директор по
                             персоналу (HRD)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Директор
+                        ><input type="radio" name="item" value="item2"/><span></span>Директор
                             юридического департамента (CLO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Коммерческий
+                        ><input type="radio" name="item" value="item3"/><span></span>Коммерческий
                             директор (CCO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Начальник
+                        ><input type="radio" name="item" value="item1"/><span></span>Начальник
                             производства</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Операционный
+                        ><input type="radio" name="item" value="item2"/><span></span>Операционный
                             директор (COO)</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item1"/><span></span>Руководитель
                             отдела аналитики</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item2"/><span></span>Руководитель
                             отдела логистики</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item3"/><span></span>Руководитель
                             отдела маркетинга и рекламы</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item1"/><span></span>Руководитель
                             отдела персонала</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item2"/><span></span>Руководитель
                             филиала</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Технический
+                        ><input type="radio" name="item" value="item3"/><span></span>Технический
                             директор (CTO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Финансовый
+                        ><input type="radio" name="item" value="item1"/><span></span>Финансовый
                             директор (CFO)</label
                         >
                     </div>
@@ -839,7 +880,7 @@
                         /><span></span>Геодезист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Геолог</label
+                        ><input type="radio" name="item" value="item2"/><span></span>Геолог</label
                         >
                         <label class="dropdown-content__label"
                         ><input
@@ -857,11 +898,11 @@
                         /><span></span>Машинист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Научный
+                        ><input type="radio" name="item" value="item2"/><span></span>Научный
                             специалист, исследователь</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Начальник
+                        ><input type="radio" name="item" value="item3"/><span></span>Начальник
                             смены, мастер участка</label
                         >
                         <label class="dropdown-content__label"
@@ -897,7 +938,7 @@
                         /><span></span>Водитель</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Воспитатель,
+                        ><input type="radio" name="item" value="item3"/><span></span>Воспитатель,
                             няня</label
                         >
 
@@ -909,10 +950,10 @@
                         /><span></span>Дворник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Курьер</label
+                        ><input type="radio" name="item" value="item2"/><span></span>Курьер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Официант,
+                        ><input type="radio" name="item" value="item3"/><span></span>Официант,
                             бармен, бариста</label
                         >
                         <label class="dropdown-content__label"
@@ -923,7 +964,7 @@
                         /><span></span>Охранник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Уборщица,
+                        ><input type="radio" name="item" value="item2"/><span></span>Уборщица,
                             уборщик</label
                         >
                     </div>
@@ -938,11 +979,11 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item1"/><span></span>Менеджер по
                             закупкам</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item2"/><span></span>Специалист по
                             тендерам</label
                         >
                     </div>
@@ -957,7 +998,7 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>BI-аналитик,
+                        ><input type="radio" name="item" value="item1"/><span></span>BI-аналитик,
                             аналитик данных</label
                         >
                         <label class="dropdown-content__label"
@@ -976,7 +1017,7 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Арт-директор,
+                        ><input type="radio" name="item" value="item1"/><span></span>Арт-директор,
                             креативный директор</label
                         >
                         <label class="dropdown-content__label"
@@ -1001,16 +1042,16 @@
                         /><span></span>Дата-сайентист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Дизайнер,
+                        ><input type="radio" name="item" value="item2"/><span></span>Дизайнер,
                             художник</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Директор по
+                        ><input type="radio" name="item" value="item1"/><span></span>Директор по
                             информационным технологиям (CIO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Менеджер
+                        ><input type="radio" name="item" value="item2"/><span></span>Менеджер
                             продукта</label
                         >
                         <label class="dropdown-content__label"
@@ -1022,48 +1063,48 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Программист,
+                        ><input type="radio" name="item" value="item1"/><span></span>Программист,
                             разработчик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Продуктовый
+                        ><input type="radio" name="item" value="item2"/><span></span>Продуктовый
                             аналитик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item3"/><span></span>Руководитель
                             группы разработки</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item1"/><span></span>Руководитель
                             отдела аналитики</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item2"/><span></span>Руководитель
                             проектов</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Сетевой
+                        ><input type="radio" name="item" value="item1"/><span></span>Сетевой
                             инженер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Системный
+                        ><input type="radio" name="item" value="item2"/><span></span>Системный
                             администратор</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Системный
+                        ><input type="radio" name="item" value="item3"/><span></span>Системный
                             аналитик</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Системный
+                        ><input type="radio" name="item" value="item1"/><span></span>Системный
                             инженер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item2"/><span></span>Специалист по
                             информационной безопасности</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Специалист
+                        ><input type="radio" name="item" value="item3"/><span></span>Специалист
                             технической поддержки</label
                         >
                         <label class="dropdown-content__label"
@@ -1074,7 +1115,7 @@
                         /><span></span>Тестировщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Технический
+                        ><input type="radio" name="item" value="item2"/><span></span>Технический
                             директор (CTO)</label
                         >
                     </div>
@@ -1089,11 +1130,11 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Арт-директор,
+                        ><input type="radio" name="item" value="item1"/><span></span>Арт-директор,
                             креативный директор</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Артист,
+                        ><input type="radio" name="item" value="item2"/><span></span>Артист,
                             актер, аниматор</label
                         >
                         <label class="dropdown-content__label"
@@ -1112,15 +1153,15 @@
                         /><span></span>Гейм-дизайнер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Дизайнер,
+                        ><input type="radio" name="item" value="item2"/><span></span>Дизайнер,
                             художник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Журналист,
+                        ><input type="radio" name="item" value="item3"/><span></span>Журналист,
                             корреспондент</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Журналист,
+                        ><input type="radio" name="item" value="item1"/><span></span>Журналист,
                             корреспондент</label
                         >
                         <label class="dropdown-content__label"
@@ -1132,11 +1173,11 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Режиссер,
+                        ><input type="radio" name="item" value="item1"/><span></span>Режиссер,
                             сценарист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Фотограф,
+                        ><input type="radio" name="item" value="item2"/><span></span>Фотограф,
                             ретушер</label
                         >
                     </div>
@@ -1165,7 +1206,7 @@
                         /><span></span>PR-менеджер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>SMM-менеджер,
+                        ><input type="radio" name="item" value="item3"/><span></span>SMM-менеджер,
                             контент-менеджер</label
                         >
 
@@ -1177,19 +1218,19 @@
                         /><span></span>Аналитик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Арт-директор,
+                        ><input type="radio" name="item" value="item2"/><span></span>Арт-директор,
                             креативный директор</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Дизайнер,
+                        ><input type="radio" name="item" value="item3"/><span></span>Дизайнер,
                             художник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Директор по
+                        ><input type="radio" name="item" value="item1"/><span></span>Директор по
                             маркетингу и PR (CMO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Копирайтер,
+                        ><input type="radio" name="item" value="item2"/><span></span>Копирайтер,
                             редактор, корректор</label
                         >
                         <label class="dropdown-content__label"
@@ -1200,16 +1241,16 @@
                         /><span></span>Маркетолог-аналитик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Менеджер по
                             маркетингу, интернет-маркетолог</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item3"/><span></span>Менеджер по
                             продажам, менеджер по работе с клиентами</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item1"/><span></span>Менеджер по
                             работе с партнерами</label
                         >
                         <label class="dropdown-content__label"
@@ -1220,7 +1261,7 @@
                         /><span></span>Промоутер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item3"/><span></span>Руководитель
                             отдела маркетинга и рекламы</label
                         >
                     </div>
@@ -1249,19 +1290,19 @@
                         /><span></span>Ассистент врача</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Ветеринарный
+                        ><input type="radio" name="item" value="item3"/><span></span>Ветеринарный
                             врач</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Врач</label
+                        ><input type="radio" name="item" value="item1"/><span></span>Врач</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Главный врач,
+                        ><input type="radio" name="item" value="item2"/><span></span>Главный врач,
                             заведующий отделением</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Заведующий
+                        ><input type="radio" name="item" value="item3"/><span></span>Заведующий
                             аптекой</label
                         >
                         <label class="dropdown-content__label"
@@ -1272,19 +1313,19 @@
                         /><span></span>Лаборант</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Медицинская
+                        ><input type="radio" name="item" value="item2"/><span></span>Медицинская
                             сестра, медицинский брат</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Медицинский
+                        ><input type="radio" name="item" value="item1"/><span></span>Медицинский
                             представитель</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Научный
+                        ><input type="radio" name="item" value="item2"/><span></span>Научный
                             специалист, исследователь</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Научный
+                        ><input type="radio" name="item" value="item3"/><span></span>Научный
                             специалист, исследователь</label
                         >
 
@@ -1314,7 +1355,7 @@
                         /><span></span>Бизнес-тренер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Воспитатель,
+                        ><input type="radio" name="item" value="item2"/><span></span>Воспитатель,
                             няня</label
                         >
                         <label class="dropdown-content__label"
@@ -1333,7 +1374,7 @@
                         /><span></span>Методист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Научный
+                        ><input type="radio" name="item" value="item2"/><span></span>Научный
                             специалист, исследователь</label
                         >
                         <label class="dropdown-content__label"
@@ -1344,7 +1385,7 @@
                         /><span></span>Психолог</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Учитель,
+                        ><input type="radio" name="item" value="item1"/><span></span>Учитель,
                             преподаватель, педагог</label
                         >
                     </div>
@@ -1359,7 +1400,7 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Агент по
+                        ><input type="radio" name="item" value="item1"/><span></span>Агент по
                             недвижимости</label
                         >
                         <label class="dropdown-content__label"
@@ -1370,7 +1411,7 @@
                         /><span></span>Аналитик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Брокер</label
+                        ><input type="radio" name="item" value="item3"/><span></span>Брокер</label
                         >
 
                         <label class="dropdown-content__label"
@@ -1381,27 +1422,27 @@
                         /><span></span>Кассир-операционист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Коммерческий
+                        ><input type="radio" name="item" value="item2"/><span></span>Коммерческий
                             директор (CCO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Координатор
+                        ><input type="radio" name="item" value="item3"/><span></span>Координатор
                             отдела продаж</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Кредитный
+                        ><input type="radio" name="item" value="item1"/><span></span>Кредитный
                             специалист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Менеджер по
                             продажам, менеджер по работе с клиентами</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item1"/><span></span>Менеджер по
                             работе с партнерами</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Оператор
+                        ><input type="radio" name="item" value="item2"/><span></span>Оператор
                             call-центра, специалист контактного центра</label
                         >
                         <label class="dropdown-content__label"
@@ -1413,31 +1454,31 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item1"/><span></span>Руководитель
                             отдела клиентского обслуживания</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item2"/><span></span>Руководитель
                             отдела продаж</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item3"/><span></span>Руководитель
                             филиала</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item1"/><span></span>Специалист по
                             сертификации</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Специалист
+                        ><input type="radio" name="item" value="item2"/><span></span>Специалист
                             технической поддержки</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Страховой
+                        ><input type="radio" name="item" value="item1"/><span></span>Страховой
                             агент</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Торговый
+                        ><input type="radio" name="item" value="item2"/><span></span>Торговый
                             представитель</label
                         >
                     </div>
@@ -1452,20 +1493,20 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Инженер
+                        ><input type="radio" name="item" value="item1"/><span></span>Инженер
                             ПНР</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Инженер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Инженер по
                             качеству</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Инженер по
+                        ><input type="radio" name="item" value="item3"/><span></span>Инженер по
                             охране труда и технике безопасности, инженер-эколог</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Инженер по
+                        ><input type="radio" name="item" value="item1"/><span></span>Инженер по
                             эксплуатации</label
                         >
                         <label class="dropdown-content__label"
@@ -1490,7 +1531,7 @@
                         /><span></span>Инженер-энергетик, инженер-электрик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Контролёр
+                        ><input type="radio" name="item" value="item2"/><span></span>Контролёр
                             ОТК</label
                         >
 
@@ -1502,7 +1543,7 @@
                         /><span></span>Лаборант</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Мастер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Мастер по
                             ремонту оборудования, техники</label
                         >
                         <label class="dropdown-content__label"
@@ -1528,24 +1569,24 @@
                         /><span></span>Механик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Научный
+                        ><input type="radio" name="item" value="item3"/><span></span>Научный
                             специалист, исследователь</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Начальник
+                        ><input type="radio" name="item" value="item1"/><span></span>Начальник
                             производства</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Начальник
+                        ><input type="radio" name="item" value="item2"/><span></span>Начальник
                             смены, мастер участка</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Оператор
+                        ><input type="radio" name="item" value="item1"/><span></span>Оператор
                             производственной линии</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Оператор
+                        ><input type="radio" name="item" value="item2"/><span></span>Оператор
                             станков с ЧПУ</label
                         >
                         <label class="dropdown-content__label"
@@ -1557,15 +1598,15 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Сервисный
+                        ><input type="radio" name="item" value="item1"/><span></span>Сервисный
                             инженер, инженер-механик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Слесарь,
+                        ><input type="radio" name="item" value="item2"/><span></span>Слесарь,
                             сантехник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item3"/><span></span>Специалист по
                             сертификации</label
                         >
                         <label class="dropdown-content__label"
@@ -1576,11 +1617,11 @@
                         /><span></span>Технолог</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Токарь,
+                        ><input type="radio" name="item" value="item2"/><span></span>Токарь,
                             фрезеровщик, шлифовщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Швея,
+                        ><input type="radio" name="item" value="item1"/><span></span>Швея,
                             портной, закройщик</label
                         >
                         <label class="dropdown-content__label"
@@ -1602,7 +1643,7 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Автослесарь,
+                        ><input type="radio" name="item" value="item1"/><span></span>Автослесарь,
                             автомеханик</label
                         >
                         <label class="dropdown-content__label"
@@ -1628,7 +1669,7 @@
                         /><span></span>Кладовщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Маляр,
+                        ><input type="radio" name="item" value="item2"/><span></span>Маляр,
                             штукатур</label
                         >
                         <label class="dropdown-content__label"
@@ -1654,11 +1695,11 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Оператор
+                        ><input type="radio" name="item" value="item1"/><span></span>Оператор
                             производственной линии</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Оператор
+                        ><input type="radio" name="item" value="item2"/><span></span>Оператор
                             станков с ЧПУ</label
                         >
                         <label class="dropdown-content__label"
@@ -1677,19 +1718,19 @@
                         /><span></span>Сварщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Сервисный
+                        ><input type="radio" name="item" value="item2"/><span></span>Сервисный
                             инженер, инженер-механик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Слесарь,
+                        ><input type="radio" name="item" value="item3"/><span></span>Слесарь,
                             сантехник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Токарь,
+                        ><input type="radio" name="item" value="item1"/><span></span>Токарь,
                             фрезеровщик, шлифовщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Упаковщик,
+                        ><input type="radio" name="item" value="item2"/><span></span>Упаковщик,
                             комплектовщик</label
                         >
                         <label class="dropdown-content__label"
@@ -1711,11 +1752,11 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Администратор
+                        ><input type="radio" name="item" value="item1"/><span></span>Администратор
                             магазина, администратор торгового зала</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Директор
+                        ><input type="radio" name="item" value="item2"/><span></span>Директор
                             магазина, директор сети магазинов</label
                         >
                         <label class="dropdown-content__label"
@@ -1773,7 +1814,7 @@
                         /><span></span>Агроном</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Ветеринарный
+                        ><input type="radio" name="item" value="item2"/><span></span>Ветеринарный
                             врач</label
                         >
                         <label class="dropdown-content__label"
@@ -1792,7 +1833,7 @@
                         /><span></span>Машинист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Сервисный
+                        ><input type="radio" name="item" value="item2"/><span></span>Сервисный
                             инженер, инженер-механик</label
                         >
                         <label class="dropdown-content__label"
@@ -1838,11 +1879,11 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Мастер
+                        ><input type="radio" name="item" value="item1"/><span></span>Мастер
                             ногтевого сервиса</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Менеджер по
                             продажам, менеджер по работе с клиентами</label
                         >
                         <label class="dropdown-content__label"
@@ -1893,11 +1934,11 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item1"/><span></span>Руководитель
                             проектов</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Финансовый
+                        ><input type="radio" name="item" value="item2"/><span></span>Финансовый
                             аналитик, инвестиционный аналитик</label
                         >
                     </div>
@@ -1926,7 +1967,7 @@
                         /><span></span>Оценщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Страховой
+                        ><input type="radio" name="item" value="item3"/><span></span>Страховой
                             агент</label
                         >
                     </div>
@@ -1941,7 +1982,7 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Агент по
+                        ><input type="radio" name="item" value="item1"/><span></span>Агент по
                             недвижимости</label
                         >
                         <label class="dropdown-content__label"
@@ -1952,7 +1993,7 @@
                         /><span></span>Архитектор</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Брокер</label
+                        ><input type="radio" name="item" value="item3"/><span></span>Брокер</label
                         >
 
                         <label class="dropdown-content__label"
@@ -1963,24 +2004,24 @@
                         /><span></span>Геодезист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Главный
+                        ><input type="radio" name="item" value="item2"/><span></span>Главный
                             инженер проекта</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Дизайнер,
+                        ><input type="radio" name="item" value="item3"/><span></span>Дизайнер,
                             художник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Инженер ПТО,
+                        ><input type="radio" name="item" value="item1"/><span></span>Инженер ПТО,
                             инженер-сметчик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Инженер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Инженер по
                             охране труда и технике безопасности, инженер-эколог</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Инженер по
+                        ><input type="radio" name="item" value="item1"/><span></span>Инженер по
                             эксплуатации</label
                         >
                         <label class="dropdown-content__label"
@@ -1991,7 +2032,7 @@
                         /><span></span>Инженер-конструктор, инженер-проектировщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Маляр,
+                        ><input type="radio" name="item" value="item3"/><span></span>Маляр,
                             штукатур</label
                         >
 
@@ -2010,7 +2051,7 @@
                         /><span></span>Монтажник</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Прораб,
+                        ><input type="radio" name="item" value="item3"/><span></span>Прораб,
                             мастер СМР</label
                         >
                         <label class="dropdown-content__label"
@@ -2021,12 +2062,12 @@
                         /><span></span>Разнорабочий</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item2"/><span></span>Руководитель
                             проектов</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item1"/><span></span>Руководитель
                             строительного проекта</label
                         >
                         <label class="dropdown-content__label"
@@ -2037,7 +2078,7 @@
                         /><span></span>Сварщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Слесарь,
+                        ><input type="radio" name="item" value="item3"/><span></span>Слесарь,
                             сантехник</label
                         >
 
@@ -2096,7 +2137,7 @@
                         /><span></span>Кладовщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Курьер</label
+                        ><input type="radio" name="item" value="item3"/><span></span>Курьер</label
                         >
                         <label class="dropdown-content__label"
                         ><input
@@ -2106,19 +2147,19 @@
                         /><span></span>Машинист</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Менеджер по
                             логистике, менеджер по ВЭД</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Начальник
+                        ><input type="radio" name="item" value="item1"/><span></span>Начальник
                             склада</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item2"/><span></span>Руководитель
                             отдела логистики</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Упаковщик,
+                        ><input type="radio" name="item" value="item3"/><span></span>Упаковщик,
                             комплектовщик</label
                         >
                     </div>
@@ -2140,11 +2181,11 @@
                         /><span></span>Администратор</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item2"/><span></span>Менеджер по
                             туризму</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Менеджер
+                        ><input type="radio" name="item" value="item3"/><span></span>Менеджер
                             ресторана</label
                         >
 
@@ -2156,19 +2197,19 @@
                         /><span></span>Менеджер/руководитель АХО</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Официант,
+                        ><input type="radio" name="item" value="item2"/><span></span>Официант,
                             бармен, бариста</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Повар,
+                        ><input type="radio" name="item" value="item3"/><span></span>Повар,
                             пекарь, кондитер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Уборщица,
+                        ><input type="radio" name="item" value="item1"/><span></span>Уборщица,
                             уборщик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Хостес</label
+                        ><input type="radio" name="item" value="item2"/><span></span>Хостес</label
                         >
                     </div>
                 </div>
@@ -2189,28 +2230,28 @@
                         /><span></span>Бизнес-тренер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Директор по
+                        ><input type="radio" name="item" value="item2"/><span></span>Директор по
                             персоналу (HRD)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item3"/><span></span>Менеджер по
                             компенсациям и льготам</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Менеджер по
+                        ><input type="radio" name="item" value="item1"/><span></span>Менеджер по
                             персоналу</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Руководитель
+                        ><input type="radio" name="item" value="item2"/><span></span>Руководитель
                             отдела персонала</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item3"/><span></span>Специалист по
                             кадрам</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item1"/><span></span>Специалист по
                             подбору персонала</label
                         >
                     </div>
@@ -2232,7 +2273,7 @@
                         /><span></span>Аудитор</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Брокер</label
+                        ><input type="radio" name="item" value="item2"/><span></span>Брокер</label
                         >
                         <label class="dropdown-content__label"
                         ><input
@@ -2257,7 +2298,7 @@
                         /><span></span>Комплаенс-менеджер</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Кредитный
+                        ><input type="radio" name="item" value="item3"/><span></span>Кредитный
                             специалист</label
                         >
                         <label class="dropdown-content__label"
@@ -2268,24 +2309,24 @@
                         /><span></span>Методолог</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Специалист по
+                        ><input type="radio" name="item" value="item2"/><span></span>Специалист по
                             взысканию задолженности</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Финансовый
+                        ><input type="radio" name="item" value="item1"/><span></span>Финансовый
                             аналитик, инвестиционный аналитик</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item2" /><span></span>Финансовый
+                        ><input type="radio" name="item" value="item2"/><span></span>Финансовый
                             директор (CFO)</label
                         >
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item3" /><span></span>Финансовый
+                        ><input type="radio" name="item" value="item3"/><span></span>Финансовый
                             контролер</label
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Финансовый
+                        ><input type="radio" name="item" value="item1"/><span></span>Финансовый
                             менеджер</label
                         >
                         <label class="dropdown-content__label"
@@ -2307,7 +2348,7 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Директор
+                        ><input type="radio" name="item" value="item1"/><span></span>Директор
                             юридического департамента (CLO)</label
                         >
                         <label class="dropdown-content__label"
@@ -2326,7 +2367,7 @@
                         >
 
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Юрист</label
+                        ><input type="radio" name="item" value="item1"/><span></span>Юрист</label
                         >
                     </div>
                 </div>
@@ -2340,7 +2381,7 @@
                     </div>
                     <div class="dropdown-content">
                         <label class="dropdown-content__label"
-                        ><input type="radio" name="item" value="item1" /><span></span>Другое</label
+                        ><input type="radio" name="item" value="item1"/><span></span>Другое</label
                         >
                     </div>
                 </div>
@@ -2367,6 +2408,7 @@
 <script src="../js/libs-js/search-dropdown/scroll2.js"></script>
 <script src="../js/libs-js/search-dropdown/close.js"></script>
 <!--connect for search-drop end-->
+<script src="../js/libs-js/select.js"></script>
 <script src="../js/script-add-vacancies.js"></script>
 <script src="../js/script.js"></script>
 </body>

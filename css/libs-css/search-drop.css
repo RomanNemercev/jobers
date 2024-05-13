@@ -137,7 +137,7 @@ button {
 
 .dropdown-list {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
     flex-direction: column;
     display: flex;
 }
