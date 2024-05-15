@@ -335,6 +335,7 @@ if (mediaQuery.matches) {
         document.querySelector('.more__cans-header').classList.add('hide-after');
         document.querySelector('.more__header-right').style.display = 'none';
         document.querySelector('.more__content').style.height = '100vh';
+        document.querySelector('.more__enter').style.display = 'block';
     })
 
     document.getElementById('resume').addEventListener('click', function () {
@@ -344,6 +345,7 @@ if (mediaQuery.matches) {
         document.querySelector('.more__cans-header').classList.remove('hide-after');
         document.querySelector('.more__header-right').style.display = 'flex';
         document.querySelector('.more__content').style.height = 'calc(100vh - 120px)';
+        document.querySelector('.more__enter').style.display = 'none';
     })
     console.log('Экран до 768px');
 }

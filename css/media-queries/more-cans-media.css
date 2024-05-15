@@ -165,10 +165,16 @@
 
     .more__quick-info__768 {
         padding: 18px 13px;
+        width: 100%;
+        height: calc(100vh - 189px);
     }
 
     .more__title-data {
         padding-bottom: 17px;
+    }
+
+    .more__main-content.vacancies__content--active {
+        height: calc(100% - 5px);
     }
 
     .more__title {
@@ -194,23 +200,29 @@
     }
 
     .more__source-status {
-        padding: 9px 14px;
+        padding: 9px 13px;
         min-height: 35px;
+        max-width: 149px;
+        width: 100%;
         display: inline-block;
     }
 
     .more__source-company {
-        padding: 7px 15px 7px 40px;
+        display: inline-block;
+        padding: 7px 11px 7px 40px;
         border: 1px solid var(--color_gray);
         border-radius: 5px;
         background-image: url("../../img/user__hh-icon.svg");
         background-position: 13px center;
         user-select: none;
+        width: 100%;
+        max-width: 181px;
     }
 
     .more__temp-data {
         padding-top: 17px;
         padding-bottom: 17px;
+        white-space: nowrap;
     }
 
     .more__user-pic {
@@ -337,7 +349,7 @@
     }
 
     .dropdown-toggle {
-        padding: 9.82px 13px;
+        padding: 9.82px 10px;
     }
 
     .button-icon:first-child,
@@ -356,6 +368,10 @@
 
     .more__enter {
         padding: 13px;
+        position: fixed;
+        bottom: 0;
+        display: none;
+        background-color: var(--color_white);
     }
 
     .more__data-container {

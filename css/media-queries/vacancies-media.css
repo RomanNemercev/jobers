@@ -687,6 +687,7 @@
         max-width: 100%;
         width: 100vw;
         height: 100vh;
+        top: 0;
     }
 
     .new__close {
@@ -710,7 +711,7 @@
     .new-can__close-back768 {
         position: fixed;
         display: block;
-        z-index: 1;
+        z-index: 2;
         width: 100%;
         height: 40px;
         background-color: var(--color_zircon);
