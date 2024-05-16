@@ -84,6 +84,7 @@
     /*    main-content*/
     .more__content {
         height: calc(100vh - 120px);
+        overflow: hidden;
     }
 
     .more__cans-scroll {
@@ -166,7 +167,6 @@
     .more__quick-info__768 {
         padding: 18px 13px;
         width: 100%;
-        height: calc(100vh - 189px);
     }
 
     .more__title-data {
@@ -174,7 +174,8 @@
     }
 
     .more__main-content.vacancies__content--active {
-        height: calc(100% - 5px);
+        padding-bottom: 50px;
+        overflow-y: visible;
     }
 
     .more__title {
