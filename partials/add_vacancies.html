@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/libs-css/select.css">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/libs-css/search-drop.css">
+    <link rel="stylesheet" href="../css/libs-css/search-tag.css">
     <link rel="stylesheet" href="../css/styles-add-vacancies.css">
     <link rel="stylesheet" href="../css/media.css">
 </head>
@@ -241,8 +242,14 @@
                     </div>
                 </div>
             </div>
-            <label for="main-skills" class="add__keys">Ключевые навыки</label>
-            <input type="text" class="add__keys-input" id="main-skills" placeholder="Например: Маркетинг">
+            <p class="add__keys">Ключевые навыки</p>
+            <div class="create-tag add__tags">
+                <div class="tag-input-container">
+                    <div class="selected-tags"></div>
+                    <input type="text" id="tag-input" placeholder="Например: Маркетинг" class="input-space">
+                    <div class="tag-options"></div>
+                </div>
+            </div>
             <p class="add__accordion-head">Дополнительные условия</p>
             <ul class="add__accordion accordion-list">
                 <li class="list-reset add__accordion-list accordion" tabindex="0">
@@ -2409,6 +2416,7 @@
 <script src="../js/libs-js/search-dropdown/close.js"></script>
 <!--connect for search-drop end-->
 <script src="../js/libs-js/select.js"></script>
+<script src="../js/libs-js/search-tags.js"></script>
 <script src="../js/script-add-vacancies.js"></script>
 <script src="../js/script.js"></script>
 </body>
