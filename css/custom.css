@@ -3246,8 +3246,18 @@
     margin-bottom: 15px;
 }
 
+.add__contacts-district__data:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
 .add__contacts-city {
     margin-bottom: 12px;
+}
+
+.add__contacts-city__data:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
 }
 
 .add__id-code__data {
@@ -3279,7 +3289,7 @@
 
 .add__extra-street,
 .add__extra-house,
-.add__extra-name__label,
+.add__extra-name__title,
 .add__extra-email__label {
     color: var(--color_space);
     margin-bottom: 14px;

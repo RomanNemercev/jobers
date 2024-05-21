@@ -96,7 +96,7 @@
 /*}*/
 
 .add__upload-descr {
-    width: 74.5%;
+    width: calc(100% - 165px);
     margin-left: auto;
     padding-top: 46px;
     font-size: 14px;
@@ -226,4 +226,106 @@
 .add__tags {
     margin-bottom: 25px;
     width: 100%;
+}
+
+/*search city sets*/
+.search-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#suggestions-pane {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    background: var(--color_white);
+    width: 100%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    display: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.suggestion {
+    font-size: 14px;
+    color: var(--color_space);
+    user-select: none;
+    cursor: pointer;
+}
+
+.suggestion:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.search-box__input {
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 5px;
+    color: var(--color_space);
+    background-color: var(--color_athens-gray);
+}
+
+.search-box__input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.search-box__input::placeholder {
+    color: var(--color_bali);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/*end sets*/
+.add__extra-street__data {
+    width: 100%;
+}
+
+.add__extra-street__data:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.add__extra-wage {
+    margin-bottom: 0;
+}
+
+.add__extra-wage.error--visible {
+    margin-bottom: 25px;
+}
+
+.add__extra-house__data:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+/*sets reused input*/
+.add__station-values {
+    margin-bottom: 25px;
+}
+
+/*end sets reused*/
+.add__label {
+    margin-bottom: 0;
+}
+
+.add__label.error--visible {
+    margin-bottom: 35px;
+}
+
+.add__name-company.error--visible {
+    margin-bottom: 35px;
+}
+
+.add__extra-name__label {
+    margin-bottom: 0;
+}
+
+.add__extra-name__label.error--visible {
+    margin-bottom: 27px;
 }

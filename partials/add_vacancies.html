@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/libs-css/search-drop.css">
     <link rel="stylesheet" href="../css/libs-css/search-tag.css">
+    <link rel="stylesheet" href="../css/libs-css/search-sug-s.css">
     <link rel="stylesheet" href="../css/styles-add-vacancies.css">
     <link rel="stylesheet" href="../css/media.css">
 </head>
@@ -98,8 +99,8 @@
                 <p class="main__post-name">Название должности <span class="main__span-custom mb15">*</span></p>
                 <label for="choose-post" class="main__post new__add-name">
                     <input type="text" name="choose-post" id="choose-post" placeholder="Например, водитель категории C"
-                           class="main__post-form new__add-name__input" required="">
-                    <span class="error" id="error">Это поле обязательно для заполнения</span>
+                           class="main__post-form new__add-name__input" required>
+                    <span class="error">Это поле обязательно для заполнения</span>
                 </label>
                 <div class="main__skill">
                     <p class="main__skill-title">Специализация <span class="main__span-custom">*</span></p>
@@ -426,19 +427,25 @@
         </div>
         <div class="add__contacts">
             <p class="add__contacts-title">Контактная информация</p>
-            <label for="geo-data" class="add__contacts-geo">Где искать сотрудника</label>
-            <input type="text" class="add__contacts-geo__data" id="geo-data"
-                   placeholder="Например, Санкт-Петербург, Заречная 3">
+            <label class="add__contacts-geo">Где искать сотрудника</label>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Например, Санкт-Петербург, Заречная 3"
+                       class="search-box__input"/>
+                <div id="suggestions-pane"></div>
+            </div>
             <label for="geo-district" class="add__contacts-district">Регион</label>
             <input type="text" class="add__contacts-district__data" id="geo-district" placeholder="-">
             <label for="geo-city" class="add__contacts-city">Город <span class="add__span-custom">*</span></label>
             <input type="text" class="add__contacts-city__data" id="geo-city" placeholder="Например, Санкт-Петербург">
             <div class="add__extra">
                 <div class="add__extra-first">
-                    <label for="add-street" class="add__extra-street">Улица <span class="add__span-custom">*</span>
+                    <p class="add__extra-street">Улица <span class="add__span-custom">*</span></p>
+                    <label for="add-street" class="new__add-name add__extra-wage">
+                        <input type="text" class="add__extra-street__data new__add-name__input" id="add-street"
+                               placeholder="Например, Кировское шоссе" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
                     </label>
-                    <input type="text" class="add__extra-street__data" id="add-street"
-                           placeholder="Например, Кировское шоссе"></div>
+                </div>
                 <div class="add__extra-second">
                     <label for="add-house" class="add__extra-house">Дом</label>
                     <input type="text" class="add__extra-house__data" id="add-house" placeholder="д 13">
@@ -449,12 +456,23 @@
                     <div class="map__space" id="map"></div>
                 </div>
             </div>
-            <label for="add-station" class="add__station">Метро</label>
-            <input type="text" class="add__station__data" id="add-station" placeholder="Например, Адмиралтейская">
-            <label for="add-contact-number" class="add__call">Телефон для кандидатов <span
-                    class="add__span-custom">*</span></label>
-            <input type="text" class="add__call__data" id="add-contact-number" placeholder="+7">
-            <button class="btn-reset add__more-number">Указать еще один номер</button>
+            <p class="add__station">Метро</p>
+            <div class="add__station-values">
+                <!-- Поле ввода и контейнер для предложений станций метро-->
+                <input id="search-metro" type="text" placeholder="Введите название станции"
+                       class="search-reused__input">
+                <div id="suggestions-pane-metro" style="display: none;" class="search-reused__suggestion"></div>
+            </div>
+            <div class="add__call-container">
+                <p class="add__call">Телефон для кандидатов <span class="add__span-custom">*</span></p>
+                <label for="add-contact-number" class="add__label new__add-name">
+                    <input type="tel" class="add__call__data new__add-name__input" id="add-contact-number"
+                           placeholder="+7"
+                           required>
+                    <span class="error">Это поле обязательно для заполнения</span>
+                </label>
+                <button class="btn-reset add__more-number" id="add-more-number-btn">Указать еще один номер</button>
+            </div>
             <label for="hide-number" class="add__number-filter"><input type="checkbox"
                                                                        class="add__number-check add__number-check__hidden"
                                                                        id="hide-number"><span class="add__number-span">Не&nbsp;показывать
@@ -465,20 +483,24 @@
                 получать звонков от&nbsp;кандидатов по&nbsp;вакансии. Позвонив по&nbsp;подменному номеру, кандидат
                 услышит сообщение от&nbsp;автоответчика о&nbsp;необходимости отклика на&nbsp;вакансию через сайт.</p>
             </div>
-            <label for="company-name" class="add__name-company">Название компании <span
-                    class="add__span-custom">*</span></label>
-            <input type="text" class="add__name-company__data" id="company-name"
-                   placeholder="Например, “Санкт-Петербурский портной”">
+            <p class="add__name-company">Название компании <span class="add__span-custom">*</span></p>
+            <label for="company-name" class="add__name-company new__add-name">
+                <input type="text" class="add__name-company__data new__add-name__input" id="company-name"
+                       placeholder="Например, “Санкт-Петербурский портной”" required>
+                <span class="error">Это поле обязательно для заполнения</span>
+            </label>
             <div class="add__extra-third">
                 <div class="add__extra-name">
-                    <label for="name-hunter" class="add__extra-name__label">Имя для соискателя <span
-                            class="add__span-custom">*</span></label>
-                    <input type="text" class="add__extra-name__data" id="name-hunter"
-                           placeholder="Имя контактного лица">
+                    <p class="add__extra-name__title">Имя для соискателя <span class="add__span-custom">*</span></p>
+                    <label for="name-hunter" class="add__extra-name__label new__add-name">
+                        <input type="text" class="add__extra-name__data new__add-name__input" id="name-hunter"
+                               placeholder="Имя контактного лица" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
                 </div>
                 <div class="add__extra-email">
                     <label for="email-hunter" class="add__extra-email__label">Email для соискателя</label>
-                    <input type="text" class="add__extra-email__data" id="email-hunter" placeholder="Email">
+                    <input type="email" class="add__extra-email__data" id="email-hunter" placeholder="Email">
                 </div>
             </div>
             <div class="add__logo-container">
@@ -571,7 +593,7 @@
                         <label
                                 for="standart-min" class="rates__list-title">Минимальный<input type="radio"
                                                                                                class="rates__list-check rates__list-hidden"
-                                                                                               name="rates-standart"
+                                                                                               name="rates-auto-update"
                                                                                                id="standart-min">
                             <span class="rates__list-dot"></span>
                             <p class="rates__descr fourth-before">Публикация на&nbsp;60&nbsp;сайтах, включая: HH.ru,
@@ -580,13 +602,12 @@
                             <p class="rates__cost">3 973 руб.</p>
                         </label>
                     </li>
-                    <li class="rates__list-item list-reset rates__selected" id="standart-parent-middle">
+                    <li class="rates__list-item list-reset" id="standart-parent-middle">
                         <label
                                 for="standart-middle" class="rates__list-title">Оптимальный<input
                                 type="radio"
                                 class="rates__list-check rates__list-hidden"
-                                name="rates-standart" id="standart-middle"
-                                checked>
+                                name="rates-auto-update" id="standart-middle">
                             <span class="rates__list-dot"></span>
                             <p class="rates__descr fifth-before">Публикация на&nbsp;62&nbsp;сайтах, включая: HH.ru,
                                 SuperJob.ru,
@@ -598,7 +619,7 @@
                         <label
                                 for="standart-max" class="rates__list-title">Максимальный<input type="radio"
                                                                                                 class="rates__list-check rates__list-hidden"
-                                                                                                name="rates-standart"
+                                                                                                name="rates-auto-update"
                                                                                                 id="standart-max">
                             <span class="rates__list-dot"></span>
                             <p class="rates__descr sixth-before">Публикация на&nbsp;64&nbsp;сайтах, включая: HH.ru,
@@ -2417,6 +2438,7 @@
 <!--connect for search-drop end-->
 <script src="../js/libs-js/select.js"></script>
 <script src="../js/libs-js/search-tags.js"></script>
+<script src="../js/libs-js/search-sug-s.js"></script>
 <script src="../js/script-add-vacancies.js"></script>
 <script src="../js/script.js"></script>
 </body>
