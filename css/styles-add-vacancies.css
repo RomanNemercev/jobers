@@ -138,7 +138,7 @@
     font-weight: 400;
     color: var(--color_space);
     padding: 22px 14px 23px 44px;
-    z-index: 2;
+    /*z-index: 2;*/
 }
 
 .rates__list-dot::before,
