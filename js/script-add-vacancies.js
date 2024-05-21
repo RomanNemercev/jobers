@@ -75,7 +75,9 @@ input.addEventListener('change', function () {
 // обновленный блок тарифов
 // Общая функция для обработки кликов
 function handleRateClick(selectedElement, allElements) {
+    // Добавляем класс к выбранному элементу
     selectedElement.classList.add('rates__selected');
+    // Удаляем класс у всех остальных элементов
     allElements.forEach(el => {
         if (el !== selectedElement) {
             el.classList.remove('rates__selected');
@@ -85,65 +87,29 @@ function handleRateClick(selectedElement, allElements) {
 
 // Функция для установки обработчиков событий
 function setupRateClickHandlers(mainSelector, allSelectors) {
-    // Получаем основной элемент, к которому привязываем обработчик события
     const mainElement = document.querySelector(mainSelector);
-
-    // Получаем все элементы, которые должны терять класс 'rates__selected'
     const allElements = allSelectors.map(selector => document.querySelector(selector).parentNode);
 
-    // Устанавливаем обработчик события на основной элемент
     mainElement.addEventListener('click', () => handleRateClick(mainElement.parentNode, allElements));
 }
 
-// Установка обработчиков для первой страницы тарифов
-setupRateClickHandlers('label[for="rate-min"]', [
+// Все селекторы элементов для всех тарифов
+const allRateSelectors = [
+    'label[for="rate-min"]',
     'label[for="rate-middle"]',
     'label[for="rate-max"]',
     'label[for="standart-min"]',
     'label[for="standart-middle"]',
     'label[for="standart-max"]'
-]);
+];
 
-setupRateClickHandlers('label[for="rate-middle"]', [
-    'label[for="rate-min"]',
-    'label[for="rate-max"]',
-    'label[for="standart-min"]',
-    'label[for="standart-middle"]',
-    'label[for="standart-max"]'
-]);
-
-setupRateClickHandlers('label[for="rate-max"]', [
-    'label[for="rate-min"]',
-    'label[for="rate-middle"]',
-    'label[for="standart-min"]',
-    'label[for="standart-middle"]',
-    'label[for="standart-max"]'
-]);
-
-// Установка обработчиков для второй страницы тарифов
-setupRateClickHandlers('label[for="standart-min"]', [
-    'label[for="standart-middle"]',
-    'label[for="standart-max"]',
-    'label[for="rate-min"]',
-    'label[for="rate-middle"]',
-    'label[for="rate-max"]'
-]);
-
-setupRateClickHandlers('label[for="standart-middle"]', [
-    'label[for="standart-min"]',
-    'label[for="standart-max"]',
-    'label[for="rate-min"]',
-    'label[for="rate-middle"]',
-    'label[for="rate-max"]'
-]);
-
-setupRateClickHandlers('label[for="standart-max"]', [
-    'label[for="standart-min"]',
-    'label[for="standart-middle"]',
-    'label[for="rate-min"]',
-    'label[for="rate-middle"]',
-    'label[for="rate-max"]'
-]);
+// Настройка обработчиков для всех тарифов
+setupRateClickHandlers('label[for="rate-min"]', allRateSelectors);
+setupRateClickHandlers('label[for="rate-middle"]', allRateSelectors);
+setupRateClickHandlers('label[for="rate-max"]', allRateSelectors);
+setupRateClickHandlers('label[for="standart-min"]', allRateSelectors);
+setupRateClickHandlers('label[for="standart-middle"]', allRateSelectors);
+setupRateClickHandlers('label[for="standart-max"]', allRateSelectors);
 
 // Обработчик для инвойса
 document.querySelector('label[for="choose-invoice"]').addEventListener('click', () => {
@@ -162,7 +128,6 @@ document.querySelectorAll('.add__sites-value').forEach(element => {
         document.querySelector(`[data-target="${path}"]`).classList.add('rates--active');
     });
 });
-
 
 
 //search-drop some sets
