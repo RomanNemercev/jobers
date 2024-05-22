@@ -93,6 +93,28 @@
                 </div>
             </div>
         </div>
+        <div class="add__import">
+            <button class="btn-reset add__import-close" id="close-import"></button>
+            <div class="add__import-title">
+                <p class="add__title-item f16w500">Быстрое заполнение&nbsp;c:</p>
+                <img src="../img/hh-rect-20x20.svg" alt="Компания ХедХантер" class="add__import-link hh">
+                <img src="../img/З-20х20.svg" alt="Компания Зарплата.ру" class="add__import-link z">
+                <img src="../img/s-20x20.svg" alt="Компания СуперДжоб" class="add__import-link s">
+                <img src="../img/r-20x20.svg" alt="Компания Работа.ру" class="add__import-link r">
+            </div>
+            <p class="add__import-descr f15w400">
+                Если у&nbsp;вас есть вакансия на&nbsp;одном из&nbsp;этих сайтов, вы&nbsp;можете легко импортировать
+                текст, добавив ссылку в&nbsp;поле ниже и&nbsp;нажав кнопку &laquo;Импортировать&raquo;.
+            </p>
+            <div class="add__import-form">
+                <label class="add__import-label new__add-name">
+                    <input type="text" class="add__import-input new__add-name__input"
+                           placeholder="Cсылка на вашу вакансию" required>
+                    <span class="error">Это поле обязательно для заполнения</span>
+                </label>
+                <button class="add__import-btn btn btn-reset">Импортировать</button>
+            </div>
+        </div>
         <div class="add__content">
             <div class="add__content-container main">
                 <p class="main__title">Основная информация</p>
@@ -435,8 +457,12 @@
             </div>
             <label for="geo-district" class="add__contacts-district">Регион</label>
             <input type="text" class="add__contacts-district__data" id="geo-district" placeholder="-">
-            <label for="geo-city" class="add__contacts-city">Город <span class="add__span-custom">*</span></label>
-            <input type="text" class="add__contacts-city__data" id="geo-city" placeholder="Например, Санкт-Петербург">
+            <p class="add__contacts-city">Город <span class="add__span-custom">*</span></p>
+            <label for="geo-city" class="add__contacts-label new__add-name">
+                <input type="text" class="add__contacts-city__data new__add-name__input" id="geo-city"
+                       placeholder="Например, Санкт-Петербург" required>
+                <span class="error">Это поле обязательно для заполнения</span>
+            </label>
             <div class="add__extra">
                 <div class="add__extra-first">
                     <p class="add__extra-street">Улица <span class="add__span-custom">*</span></p>
@@ -648,7 +674,7 @@
             </div>
         </div>
         <div class="add__resume">
-            <button class="btn-reset btn btn add__btn-send">Опубликовать</button>
+            <button class="btn-reset btn add__btn-send">Опубликовать</button>
             <button class="btn-reset add__btn-archive">Сохранить как черновик</button>
         </div>
     </div>

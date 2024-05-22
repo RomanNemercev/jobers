@@ -148,6 +148,7 @@ button {
 }
 .dropbtn {
     cursor: pointer;
+    user-select: none;
 }
 
 .dropdown__line {
@@ -173,10 +174,12 @@ button {
 
 .dropdown-content label {
     display: flex;
+    color: var(--color_space);
 }
 
 .dropdown-content__label{
     cursor: pointer;
+    user-select: none;
 }
 .dropdown-content__label input[type='radio'] {
     position: absolute;
@@ -249,11 +252,13 @@ button {
 .button-block__text_save {
     background-color: #5898ff;
     color: #ffffff;
+    user-select: none;
 }
 
 .button-block__text_cancell {
     background-color: #edeff5;
     color: #2f353d;
+    user-select: none;
 }
 
 /*@media (max-width: 840px) {*/

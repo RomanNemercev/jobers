@@ -329,3 +329,68 @@
 .add__extra-name__label.error--visible {
     margin-bottom: 27px;
 }
+
+.add__import {
+    width: calc(100% - 418.13px);
+    background-color: var(--color_white);
+    padding: 25px;
+    margin-right: 25px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.add__import-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/delete-x.svg");
+    background-repeat: no-repeat;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.add__import-title {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.add__title-item {
+    margin-right: 10px;
+}
+
+.add__import-link:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.add__import-descr {
+    margin-bottom: 25px;
+}
+
+.add__import-label {
+    margin-bottom: 0;
+}
+
+.add__import-label.error--visible {
+    margin-bottom: 29px;
+}
+
+.add__import-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add__import-btn {
+    height: fit-content;
+}
+
+.search-bar__form {
+    visibility: hidden;
+}
+
+.close__import {
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform .5s ease-in-out;
+}

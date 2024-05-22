@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'flex';
         line[index].classList.add('active');
-        icons[index].setAttribute('xlink:href', './img/sprite.svg#open');
+        icons[index].setAttribute('xlink:href', '../img/sprite.svg#open');
         icons[index].parentNode.classList.add('active');
       } else {
         content.style.display = 'none';
         line[index].classList.remove('active');
-        icons[index].setAttribute('xlink:href', './img/sprite.svg#close');
+        icons[index].setAttribute('xlink:href', '../img/sprite.svg#close');
         icons[index].parentNode.classList.remove('active');
       }
     })
