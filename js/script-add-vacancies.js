@@ -309,3 +309,81 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// close import
+document.getElementById('close-import').addEventListener('click', function () {
+    // document.querySelector('.add__import').classList.add('close__import');
+    document.querySelector('.add__import').style.display = 'none';
+})
+
+//update progress-bar
+document.addEventListener('DOMContentLoaded', function () {
+    const blocks = document.querySelectorAll('.block');
+    const completionPercentage = document.querySelector('.complete__data');
+    const steps = document.querySelectorAll('.complete__step');
+
+    function updateProgress() {
+        let totalInputs = 0;
+        let filledCount = 0;
+
+        blocks.forEach(block => {
+            const inputs = block.querySelectorAll('.track-input, .track-radio');
+            totalInputs += inputs.length;
+            let blockFilled = true;
+
+            // Отдельно проверяем радио-кнопки
+            const radioGroups = new Set();
+            inputs.forEach(input => {
+                if (input.type === 'radio' && input.name !== 'rates-auto-update') {
+                    radioGroups.add(input.name);
+                }
+            });
+
+            // Проверяем, если хотя бы одна радио-кнопка в группе выбрана
+            radioGroups.forEach(group => {
+                const groupInputs = block.querySelectorAll(`input[name="${group}"]`);
+                const isChecked = Array.from(groupInputs).some(input => input.checked);
+                if (isChecked) {
+                    filledCount++;
+                } else {
+                    blockFilled = false;
+                }
+            });
+
+            // Проверяем другие инпуты
+            inputs.forEach(input => {
+                if (input.type !== 'radio' && input.value.trim() !== '') {
+                    filledCount++;
+                } else if (input.type !== 'radio' && input.value.trim() === '') {
+                    blockFilled = false;
+                }
+            });
+
+            // Найти соответствующий шаг и обновить его класс
+            const step = document.querySelector(`.complete__step[data-block-id="${block.id}"]`);
+            if (blockFilled) {
+                step.classList.add('complete__ready');
+            } else {
+                step.classList.remove('complete__ready');
+            }
+        });
+
+        const percentage = totalInputs === 0 ? 0 : Math.round((filledCount / totalInputs) * 100);
+        completionPercentage.textContent = `Заполнено: ${percentage}%`;
+    }
+
+    // Добавить обработчики событий к инпутам
+    blocks.forEach(block => {
+        const inputs = block.querySelectorAll('.track-input, .track-radio');
+        inputs.forEach(input => {
+            input.addEventListener('input', updateProgress);
+            input.addEventListener('change', updateProgress);
+        });
+    });
+
+    // Обновить прогресс при загрузке страницы
+    updateProgress();
+});
+
+
+

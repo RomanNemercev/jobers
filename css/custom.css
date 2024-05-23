@@ -2928,6 +2928,7 @@
     margin-bottom: 16px;
     font-size: 15px;
     font-weight: 400;
+    color: var(--color_space);
 }
 
 .add__keys-input {
@@ -2954,6 +2955,7 @@
     margin-bottom: 18px;
     font-size: 15px;
     font-weight: 400;
+    color: var(--color_space);
 }
 
 .add__accordion {
@@ -3457,6 +3459,7 @@
     font-weight: 400;
     background: var(--color_gray);
     margin-bottom: 15px;
+    color: var(--color_space);
 }
 
 .add__sites-value:first-of-type {
@@ -3528,6 +3531,7 @@
     margin-bottom: 15px;
     font-size: 14px;
     font-weight: 500;
+    color: var(--color_space);
 }
 
 .rates__cost,
