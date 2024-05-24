@@ -2514,6 +2514,11 @@
     margin-right: 25px;
     position: relative;
     padding-left: 25px;
+    color: var(--color_dodger);
+}
+
+.add__option-upload:focus-visible {
+    outline: none;
 }
 
 .add__option-upload::before {

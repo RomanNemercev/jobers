@@ -74,9 +74,10 @@
     <div class="add__header">
         <h2 class="add__title title">Создание вакансии</h2>
         <div class="add__option">
-            <a href="#" class="add__option-upload">Загрузить вакансию с работного сайта</a><a href="#"
-                                                                                              class="add__option-ai">Генерация
-            описания ИИ</a>
+            <button class="btn-reset add__option-upload" id="import-btn">Загрузить вакансию с работного сайта</button>
+            <a href="#"
+               class="add__option-ai">Генерация
+                описания ИИ</a>
         </div>
     </div>
     <div class="add__container">
@@ -2434,6 +2435,32 @@
         </div>
     </div>
 </section>
+<div id="popup-import" class="item__popup-auto">
+    <button class="btn-reset auto__close" id="import-popup-close"></button>
+    <div class="item__popup-wrapper import">
+        <div class="import__container">
+            <div class="import__title">
+                <p class="import__title-item f20w700">Быстрое заполнение&nbsp;c:</p>
+                <img src="../img/hh-rect-20x20.svg" alt="Компания ХедХантер" class="import__link hh">
+                <img src="../img/З-20х20.svg" alt="Компания Зарплата.ру" class="import__link z">
+                <img src="../img/s-20x20.svg" alt="Компания СуперДжоб" class="import__link s">
+                <img src="../img/r-20x20.svg" alt="Компания Работа.ру" class="import__link r">
+            </div>
+            <p class="import__descr f15w400">
+                Если у&nbsp;вас есть вакансия на&nbsp;одном из&nbsp;этих сайтов, вы&nbsp;можете легко импортировать
+                текст, добавив ссылку в&nbsp;поле ниже и&nbsp;нажав кнопку &laquo;Импортировать&raquo;.
+            </p>
+            <div class="import__form">
+                <label class="import__label new__add-name">
+                    <input type="text" class="import__input new__add-name__input"
+                           placeholder="Cсылка на вашу вакансию" required>
+                    <span class="error">Это поле обязательно для заполнения</span>
+                </label>
+                <button class="import__btn btn btn-reset">Импортировать</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
 <!-- connect first for search-drop -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -2447,6 +2474,7 @@
 <script src="../js/libs-js/select.js"></script>
 <script src="../js/libs-js/search-tags.js"></script>
 <script src="../js/libs-js/search-sug-s.js"></script>
+<script src="../js/libs-js/custom-popup.js"></script>
 <script src="../js/script-add-vacancies.js"></script>
 <script src="../js/script.js"></script>
 </body>

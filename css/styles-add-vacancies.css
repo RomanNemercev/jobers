@@ -214,7 +214,7 @@
 }
 
 .add__wage-label__min.error--visible,
-.add__wage-label__max.error--visible{
+.add__wage-label__max.error--visible {
     margin-bottom: 29px;
 }
 
@@ -331,14 +331,16 @@
     margin-bottom: 30px;
 }
 
-.add__import {
-    width: calc(100% - 418.13px);
+.import__container {
     background-color: var(--color_white);
     padding: 25px;
-    margin-right: 25px;
     border-radius: 10px;
-    margin-bottom: 25px;
     position: relative;
+}
+
+.import {
+    max-width: 435px;
+    min-height: 236px;
 }
 
 .add__import-close {
@@ -352,39 +354,38 @@
     cursor: pointer;
 }
 
-.add__import-title {
+.import__title {
     display: flex;
-    margin-bottom: 17px;
+    margin-bottom: 8px;
 }
 
-.add__title-item {
+.import__title-item {
     margin-right: 10px;
 }
 
-.add__import-link:not(:last-of-type) {
+.import__link:not(:last-of-type) {
     margin-right: 5px;
 }
 
-.add__import-descr {
-    margin-bottom: 25px;
-    width: 95%;
+.import__descr {
+    margin-bottom: 37px;
 }
 
-.add__import-label {
+.import__label {
     margin-bottom: 0;
     width: calc(100% - 173px);
 }
 
-.add__import-label.error--visible {
+.import__label.error--visible {
     margin-bottom: 29px;
 }
 
-.add__import-form {
+.import__form {
     display: flex;
     justify-content: space-between;
 }
 
-.add__import-btn {
+.import__btn {
     height: fit-content;
 }
 

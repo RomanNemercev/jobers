@@ -379,5 +379,8 @@ document.addEventListener('DOMContentLoaded', function () {
     updateProgress();
 });
 
-
-
+//script for popup
+addPopupOpenHandler('#import-btn', 'popup-import');
+addPopupCloseHandler('import-popup-close', 'popup-import');
+addPopupCloseOnBackgroundClickHandler('popup-import');
+addPopupCloseOnEscKeyHandler('popup-import');
