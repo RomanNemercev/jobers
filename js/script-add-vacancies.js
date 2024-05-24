@@ -310,12 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// close import
-document.getElementById('close-import').addEventListener('click', function () {
-    // document.querySelector('.add__import').classList.add('close__import');
-    document.querySelector('.add__import').style.display = 'none';
-})
-
 //update progress-bar
 document.addEventListener('DOMContentLoaded', function () {
     const blocks = document.querySelectorAll('.block');
