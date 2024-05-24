@@ -189,7 +189,7 @@
 
 /*error sets*/
 .main__post.error--visible {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
 }
 
 /*droplist sets*/
@@ -215,7 +215,7 @@
 
 .add__wage-label__min.error--visible,
 .add__wage-label__max.error--visible{
-    margin-bottom: 25px;
+    margin-bottom: 29px;
 }
 
 .add__keys-input:focus {
@@ -225,7 +225,7 @@
 
 
 .add__tags {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
     width: 100%;
 }
 
@@ -307,7 +307,7 @@
 
 /*sets reused input*/
 .add__station-values {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 }
 
 /*end sets reused*/
@@ -320,7 +320,7 @@
 }
 
 .add__name-company.error--visible {
-    margin-bottom: 35px;
+    margin-bottom: 53px;
 }
 
 .add__extra-name__label {
@@ -328,7 +328,7 @@
 }
 
 .add__extra-name__label.error--visible {
-    margin-bottom: 27px;
+    margin-bottom: 30px;
 }
 
 .add__import {
@@ -336,7 +336,7 @@
     background-color: var(--color_white);
     padding: 25px;
     margin-right: 25px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 25px;
     position: relative;
 }
@@ -354,7 +354,7 @@
 
 .add__import-title {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 .add__title-item {
@@ -367,6 +367,7 @@
 
 .add__import-descr {
     margin-bottom: 25px;
+    width: 95%;
 }
 
 .add__import-label {

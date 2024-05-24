@@ -165,12 +165,12 @@
 
 .nav__logo {
     display: inline-block;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .nav__logo-icon {
     width: 149px;
-    transform: translate(46px, 25px);
+    transform: translate(45px, 15px);
 }
 
 /*search-bar*/
@@ -2536,7 +2536,7 @@
 .add__content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 
 .add__content-container {
@@ -2639,7 +2639,7 @@
     width: 100%;
     min-height: 355px;
     resize: none;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .main__descr-note {
@@ -2761,7 +2761,7 @@
     padding-top: 24px;
     padding-bottom: 20px;
     background-color: var(--color_white);
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 25px;
 }
 
@@ -2952,7 +2952,7 @@
 
 .add__accordion-head {
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     font-size: 15px;
     font-weight: 400;
     color: var(--color_space);
@@ -2967,7 +2967,7 @@
 .accordion__control {
     border: 1px solid var(--color_dodger);
     border-radius: 5px;
-    padding-top: 10px;
+    padding-top: 13px;
     padding-bottom: 10px;
     display: flex;
     align-items: center;
@@ -3121,7 +3121,7 @@
     margin-bottom: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 42px;
+    grid-column-gap: 10px;
 }
 
 .add__content-car__title {
@@ -3180,9 +3180,10 @@
 .add__contacts {
     width: calc(100% - 418.13px);
     padding: 25px;
+    padding-top: 24px;
     background-color: var(--color_white);
-    border-radius: 10px;
-    margin-bottom: 25px;
+    border-radius: 15px;
+    margin-bottom: 26px;
 }
 
 .add__contacts-title {
@@ -3211,8 +3212,12 @@
     font-weight: 400;
 }
 
+.add__call {
+    margin-bottom: 15px;
+}
+
 .add__station {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
 }
 
 .add__contacts-district {
@@ -3224,7 +3229,7 @@
 }
 
 .add__id-code {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
 }
 
 .add__contacts-geo__data,
@@ -3258,7 +3263,7 @@
 }
 
 .add__contacts-city {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .add__contacts-label {
@@ -3276,6 +3281,7 @@
 
 .add__id-code__data {
     margin-bottom: 0;
+    padding: 11.96px 15px;
 }
 
 .add__id-code__data:focus {
@@ -3314,6 +3320,10 @@
     margin-bottom: 14px;
     font-size: 15px;
     font-weight: 400;
+}
+
+.add__extra-house {
+    margin-bottom: 15px;
 }
 
 .add__extra-street__data,
@@ -3359,7 +3369,7 @@
 
 .add__number-filter {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 
 .add__number-span {
@@ -3411,7 +3421,7 @@
     color: var(--color_bali);
     padding: 10px 10px 10px 45px;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
     border: 1px solid var(--color_dodger);
     border-radius: 5px;
     background-image: url("../img/add-filter-content-icon.svg");
@@ -3432,8 +3442,9 @@
 .add__sites {
     width: calc(100% - 418.13px);
     padding: 25px;
+    padding-top: 23px;
     background-color: var(--color_white);
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 25px;
 }
 
@@ -3454,7 +3465,7 @@
 }
 
 .add__sites-value {
-    padding: 16px 20px;
+    padding: 16.38px 20px;
     font-size: 15px;
     font-weight: 400;
     background: var(--color_gray);
@@ -3484,7 +3495,7 @@
     margin: 0;
     font-size: 15px;
     font-weight: 400;
-    line-height: normal;
+    line-height: 18px;
     color: var(--color_bali);
 }
 
@@ -3528,7 +3539,7 @@
 
 .invoice__title {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     font-size: 14px;
     font-weight: 500;
     color: var(--color_space);
