@@ -1,0 +1,456 @@
+@media (max-width: 768px) {
+/*    default   */
+    .add__content-progress,
+    .add__option-upload,
+    .auto__close {
+        display: none;
+    }
+
+    .add__sites,
+    .add__contacts,
+    .add__content-container,
+    .add__info {
+        width: 100%;
+    }
+
+    .add__content-container {
+        margin-right: 0;
+    }
+
+/*    move import*/
+    .item__popup-auto {
+        visibility: visible;
+        opacity: 1;
+        position: inherit;
+    }
+
+/*    add header*/
+    .add__title {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .add__option-ai::before {
+        top: 1px;
+    }
+
+    .import {
+        transform: scale(1);
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .item__popup-auto {
+        height: auto;
+        background-color: transparent;
+        margin-bottom: 18px;
+    }
+
+    .import__title-item {
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 12px;
+    }
+
+    .add__header {
+        margin-bottom: 19px;
+    }
+
+    .import__container {
+        padding: 12px;
+    }
+
+    .import__descr {
+        font-size: 14px;
+        margin-bottom: 17px;
+    }
+
+    .import__form {
+        flex-direction: column;
+    }
+
+    .import__label {
+        width: auto;
+        margin-bottom: 7px;
+    }
+
+/*    add content*/
+    .add__content-container {
+        border-radius: 5px;
+        padding: 13px;
+    }
+
+    .main__title {
+        padding-bottom: 19px;
+        margin-bottom: 15px;
+    }
+
+    .main__span-custom {
+        margin-bottom: 7px;
+    }
+
+    .main__post-form {
+        margin-bottom: 16px;
+    }
+
+    .main__skill-title {
+        margin-bottom: -1px;
+    }
+
+    .main__skill-choose {
+        margin-bottom: 16px;
+    }
+
+    .main__descr-chr {
+        display: none;
+    }
+
+    .main__descr-note {
+        display: block;
+    }
+
+    .main__descr-cap {
+        text-transform: capitalize;
+    }
+
+    .main__descr-content {
+        margin-bottom: 7px;
+    }
+
+    .add__content {
+        margin-bottom: 17px;
+    }
+
+/*    add info*/
+    .add__info {
+        padding: 13px;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        margin-bottom: 17px;
+    }
+
+    .add__info-title {
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+    }
+
+    .add__options-title {
+        margin-bottom: 7px;
+    }
+
+    .add__options {
+        flex-direction: column;
+        margin-bottom: 17px;
+    }
+
+    .add__options-type {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .droplist__icon {
+        right: 17px;
+    }
+
+    .add__options-schedule {
+        width: 100%;
+    }
+
+    .add__wage-title {
+        margin-bottom: 6px;
+    }
+
+    .add__wage-values {
+        flex-direction: column;
+    }
+
+    .add__wage-label__min {
+        width: 100%;
+        margin-bottom: 7px;
+    }
+
+    .add__wage-label__max {
+        width: 100%;
+    }
+
+    .add__wage {
+        margin-bottom: 18px;
+    }
+
+    .add__dues-label {
+        margin-bottom: 17px;
+    }
+
+    .add__options-trial {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .add__options-edu {
+        width: 100%;
+    }
+
+    .input-space {
+        padding: 10.8px 41px;
+    }
+
+    .add__keys {
+        margin-bottom: 8px;
+    }
+
+    .create-tag {
+        margin-bottom: 17px;
+    }
+
+    .add__accordion-control {
+        padding: 9.8px 0;
+    }
+
+    .add__accordion-head {
+        margin-bottom: 7px;
+    }
+
+    .add__icon-tab {
+        transform: translate(-2px, 2px);
+    }
+
+/*    add contacts*/
+    .add__contacts {
+        padding: 13px;
+        border-radius: 5px;
+        margin-bottom: 17px;
+    }
+
+    .add__contacts-title {
+        padding-bottom: 19px;
+        margin-bottom: 16px;
+    }
+
+    .search-box__input,
+    .add__contacts-district__data,
+    .add__extra-street__data,
+    .add__extra-house__data {
+        padding: 11.96px 15px;
+    }
+
+    .add__contacts-geo {
+        margin-bottom: 8px;
+    }
+
+    .search-box {
+        margin-bottom: 17px;
+    }
+
+    .add__contacts-district {
+        margin-bottom: 8px;
+    }
+
+    .add__contacts-district__data {
+        margin-bottom: 16px;
+    }
+
+    .add__contacts-city {
+        margin-bottom: 7px;
+    }
+
+    .add__contacts-city__data {
+        margin-bottom: 16px;
+    }
+
+    .add__extra-street {
+        margin-bottom: 15px;
+    }
+
+    .add__extra {
+        flex-direction: column;
+    }
+
+    .add__extra-first {
+        width: 100%;
+    }
+
+    .add__extra-street__data {
+        margin-bottom: 17px;
+    }
+
+    .add__extra-house {
+        margin-bottom: 8px;
+    }
+
+    .add__extra-house__data {
+        margin-bottom: 17px;
+    }
+
+    .add__extra-second {
+        width: 100%;
+    }
+
+    .map {
+        margin-bottom: 17px;
+    }
+
+    .add__station {
+        margin-bottom: 7px;
+    }
+
+    .add__station-values {
+        margin-bottom: 16px;
+    }
+
+    .add__call {
+        margin-bottom: 7px;
+    }
+
+    .add__call__data {
+        margin-bottom: 7px;
+    }
+
+    .add__more-number {
+        margin-bottom: 20px;
+    }
+
+    .add__number-filter {
+        margin-bottom: 19px;
+    }
+
+    .add__filter-descr__content {
+        padding-top: 12px;
+        padding-left: 47px;
+        padding-bottom: 12px;
+        background-position: 12px 12px;
+        margin-bottom: 16px;
+    }
+
+    .add__name-company {
+        margin-bottom: 7px;
+    }
+
+    .add__name-company__data {
+        margin-bottom: 16px;
+    }
+
+    .add__extra-third {
+        flex-direction: column;
+    }
+
+    .add__extra-name {
+        width: 100%;
+    }
+
+    .add__extra-name__title {
+        margin-bottom: 7px;
+    }
+
+    .add__extra-name__data {
+        margin-bottom: 17px;
+    }
+
+    .add__extra-email__label {
+        margin-bottom: 7px;
+    }
+
+    .add__extra-email {
+        width: 100%;
+    }
+
+    .add__extra-email__data {
+        margin-bottom: 17px;
+    }
+
+    .add__logo-title {
+        margin-bottom: 8px;
+    }
+
+    .add__upload-descr {
+        padding-top: 12px;
+        width: calc(100% - 157px);
+        line-height: 121%;
+    }
+
+    .add__logo-container {
+        margin-bottom: 17px;
+    }
+
+    .add__id-code {
+        margin-bottom: 8px;
+    }
+
+/*    add sites*/
+    .add__sites {
+        border-radius: 5px;
+        padding: 13px;
+        padding-top: 12px;
+        margin-bottom: 17px;
+    }
+
+    .add__sites-title {
+        padding-bottom: 20px;
+        margin-bottom: 16px;
+    }
+
+    .add__sites-values {
+        flex-direction: column;
+    }
+
+    .add__sites-value {
+        margin-bottom: 17px;
+    }
+
+    .add__sites-value--active {
+        background-color: var(--color_dodger);
+    }
+
+    .add__sites-value:first-of-type {
+        border-radius: 10px;
+        margin-bottom: 7px;
+    }
+
+    .add__sites-value:last-of-type {
+        border-radius: 10px;
+    }
+
+    .add__sites-header {
+        margin-bottom: 50px;
+    }
+
+    .rates__list-title,
+    .invoice__item-label {
+        padding: 12px 12px 12px 42px;
+    }
+
+    .rates__list-dot::before, .invoice__list-dot::before {
+        top: 12px;
+        left: 12px;
+    }
+
+    .rates__list-dot::after, .invoice__list-dot::after {
+        top: 12px;
+        left: 12px;
+    }
+
+    .rates__descr {
+        padding-top: 12px;
+        margin-bottom: 17px;
+    }
+
+    .rates__list-item:not(:last-of-type), .invoice__item:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    .rates__list-item:last-of-type {
+        margin-bottom: 16px;
+    }
+
+    .add__btn-archive {
+        padding: 9.5px 20px;
+        width: 100%;
+    }
+
+    .add__btn-send {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 7px;
+    }
+}

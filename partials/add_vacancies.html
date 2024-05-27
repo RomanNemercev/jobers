@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css/libs-css/search-sug-s.css">
     <link rel="stylesheet" href="../css/styles-add-vacancies.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media-queries/add-vacancies-media.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
@@ -26,10 +27,10 @@
             <li class="nav__links-caption">Рекрутинг</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
             <li class="nav__link list-reset"><a href="../partials/vacancies.html"
-                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
+                                                class="nav__link-item link-vacancies">Вакансии</a>
             </li>
-            <li class="nav__link list-reset"><a href="../partials/candidates.html"
-                                                class="nav__link-item link-candidates">Кандидаты</a></li>
+            <li class="nav__link list-reset"><a href="candidates-null.html"
+                                                class="nav__link-item link-candidates active-page">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
             <li class="nav__links-caption">Организация</li>
@@ -56,16 +57,38 @@
             <div class="search-bar__dropdown"></div>
         </form>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/notification.svg" alt="Уведомления"
-                                                           class="search-bar__note"></button>
+            <button class="search-bar__btn btn-reset">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
+                    <img src="../img/notification.svg" alt="Уведомления"
+                         class="search-bar__note">
+                </picture>
+            </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/support.svg" alt="Поддержка"
-                                                           class="search-bar__support"></button>
+            <button class="search-bar__btn btn-reset">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
+                    <img src="../img/support.svg" alt="Поддержка"
+                         class="search-bar__support">
+                </picture>
+            </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
-                                                           class="search-bar__acc"></button>
+            <button class="search-bar__btn btn-reset">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
+                    <img src="../img/profile.svg" alt="Личный кабинет"
+                         class="search-bar__acc">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__burger toogle">
+            <div class="toogle_bar">
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+            </div>
         </div>
     </div>
 </section>
@@ -78,6 +101,32 @@
             <a href="#"
                class="add__option-ai">Генерация
                 описания ИИ</a>
+        </div>
+    </div>
+    <div id="popup-import" class="item__popup-auto">
+        <button class="btn-reset auto__close" id="import-popup-close"></button>
+        <div class="item__popup-wrapper import">
+            <div class="import__container">
+                <div class="import__title">
+                    <p class="import__title-item f20w700">Быстрое заполнение&nbsp;c:</p>
+                    <img src="../img/hh-rect-20x20.svg" alt="Компания ХедХантер" class="import__link hh">
+                    <img src="../img/З-20х20.svg" alt="Компания Зарплата.ру" class="import__link z">
+                    <img src="../img/s-20x20.svg" alt="Компания СуперДжоб" class="import__link s">
+                    <img src="../img/r-20x20.svg" alt="Компания Работа.ру" class="import__link r">
+                </div>
+                <p class="import__descr f15w400">
+                    Если у&nbsp;вас есть вакансия на&nbsp;одном из&nbsp;этих сайтов, вы&nbsp;можете легко импортировать
+                    текст, добавив ссылку в&nbsp;поле ниже и&nbsp;нажав кнопку &laquo;Импортировать&raquo;.
+                </p>
+                <div class="import__form">
+                    <label class="import__label new__add-name">
+                        <input type="text" class="import__input new__add-name__input"
+                               placeholder="Cсылка на вашу вакансию" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                    <button class="import__btn btn btn-reset">Импортировать</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="add__container">
@@ -116,7 +165,7 @@
                                 class="main__span-custom mb15">*</span>
                             <textarea name="main__textarea-content" class="main__descr-content track-input"
                                       id="main__textarea-content"></textarea>
-                            <p class="main__descr-note">не&nbsp;более 8000&nbsp;символов, осталось символов: <span
+                            <p class="main__descr-note"><span class="main__descr-note"><span class="main__descr-cap">не</span>&nbsp;более 8000&nbsp;символов<span class="main__descr-chr">,</span> </span><span class="main__descr-cap"> осталось</span> символов: <span
                                     class="main__note-custom"> 8000</span></p>
                         </label>
                     </div>
@@ -534,7 +583,7 @@
                     <div class="add__logo-content">
                         <div class="add__custom-btn">
                             <div class="add__preview">
-                                <!-- as default the img won't have a src here. But I added it so we can see what we're styling -->
+                                <!-- as default the img won't have a src here. But I added it because we can see what we're styling -->
                                 <img src="" alt="" class="add__background">
                             </div>
                             <input type="file" id="uploadBtn" class="add__input">
@@ -2435,32 +2484,6 @@
         </div>
     </div>
 </section>
-<div id="popup-import" class="item__popup-auto">
-    <button class="btn-reset auto__close" id="import-popup-close"></button>
-    <div class="item__popup-wrapper import">
-        <div class="import__container">
-            <div class="import__title">
-                <p class="import__title-item f20w700">Быстрое заполнение&nbsp;c:</p>
-                <img src="../img/hh-rect-20x20.svg" alt="Компания ХедХантер" class="import__link hh">
-                <img src="../img/З-20х20.svg" alt="Компания Зарплата.ру" class="import__link z">
-                <img src="../img/s-20x20.svg" alt="Компания СуперДжоб" class="import__link s">
-                <img src="../img/r-20x20.svg" alt="Компания Работа.ру" class="import__link r">
-            </div>
-            <p class="import__descr f15w400">
-                Если у&nbsp;вас есть вакансия на&nbsp;одном из&nbsp;этих сайтов, вы&nbsp;можете легко импортировать
-                текст, добавив ссылку в&nbsp;поле ниже и&nbsp;нажав кнопку &laquo;Импортировать&raquo;.
-            </p>
-            <div class="import__form">
-                <label class="import__label new__add-name">
-                    <input type="text" class="import__input new__add-name__input"
-                           placeholder="Cсылка на вашу вакансию" required>
-                    <span class="error">Это поле обязательно для заполнения</span>
-                </label>
-                <button class="import__btn btn btn-reset">Импортировать</button>
-            </div>
-        </div>
-    </div>
-</div>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
 <!-- connect first for search-drop -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
