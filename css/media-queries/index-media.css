@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    .begin__container {
+        padding: 10px 25px;
+        padding-bottom: 17px;
+        min-height: auto;
+    }
+
+    .begin__container::before {
+        width: 74px;
+        height: 74px;
+    }
+
+    .begin__title {
+        font-size: 20px;
+        padding-top: 84px;
+        width: 85%;
+        margin-bottom: 13px;
+    }
+
+    .begin__descr {
+        font-size: 14px;
+        font-weight: 400;
+        max-width: none;
+        margin-bottom: 17px;
+    }
+
+    .begin__btn {
+        max-width: 299px;
+        width: 100%;
+        text-align: center;
+    }
+}

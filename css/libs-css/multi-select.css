@@ -1,0 +1,637 @@
+body {
+    background-color: #ddd;
+}
+.default__button_active {
+    background-color: #EFF5FF;
+    color: #5898FF;
+}
+.button__c {
+    padding: 11px 20px;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Inter';
+}
+.buttons__filter_block {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.loop {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+}
+.droplist {
+    /* min-width: 332px; */
+    width: auto;
+    max-width: 100%;
+    display: inline-flex;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16.94px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+    position: relative;
+}
+.droplist:last-of-type {
+    margin-right: 0;
+}
+.drop__in__drop {
+    border-radius: 5px;
+}
+.droplist__dropindrop {
+    margin-bottom: 0;
+    max-width: 519px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.droplist__fields {
+    padding: 25px 20px;
+    width: auto;
+    min-width: 0;
+}
+.droplist__fields:last-of-type {
+    margin-right: 0;
+}
+.droplist__fields .droplist__selected {
+    display: inline-flex;
+    min-width:0;
+    max-width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.droplist__fields .droplist__selected_drop {
+    display: inline-flex;
+    min-width: 182px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.droplist__selected .droplist__icon_arrow {
+    position: static;
+    margin-left: 12px;
+}
+.droplist__fields .droplist__selected .droplist__icon_arrow {
+    position: static;
+    margin-left: 12px;
+}
+.droplist__fields .droplist__selected_drop .droplist__icon_arrow {
+    position: static;
+    margin-left: 12px;
+}
+.droplist__items {
+    display: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    position: absolute;
+    background-color: #fff;
+    z-index: 20;
+    min-width: max-content;
+    max-width: 429px;
+}
+.droplist__item {
+    list-style: none;
+    padding: 10px 15px 10px 15px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    border-bottom: 1px solid #EDEFF5;
+    color: #2F353D;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+}
+.droplist__items_search {
+    width: 429px;
+    padding: 0 15px;
+}
+.droplist__items_search .droplist__item {
+    position: relative;
+}
+.droplist__items_search .droplist__item input {
+    padding-left: 41px;
+}
+.droplist__items_search .droplist__item input::placeholder {
+    color: #9098B4;
+}
+.droplist__items_search .droplist__item input:focus::placeholder {
+    color: transparent;
+}
+.requests {
+    max-width: 340px;
+}
+
+.droplist__items > ul {
+    padding: 0;
+    margin: 0;
+}
+.droplist__items .info__block {
+    padding: 20px 15px;
+    box-sizing: border-box;
+    max-width: 268px;
+}
+.droplist__items .info {
+    margin-bottom: 15px;
+}
+.droplist__items .info:last-of-type {
+    margin-bottom: 0;
+}
+.droplist__items .info p {
+    font-size: 14px;
+    line-height: 16.94px;
+    margin-top: 0;
+}
+.info__title {
+    color: #2F353D;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.info__text {
+    color: #9098B4;
+    margin: 0;
+}
+.droplist__item:first-child {
+    border-radius: 5px 5px 0 0;
+}
+.droplist__item:last-child {
+    border-radius: 0 0 5px 5px;
+}
+.droplist_active .droplist__items {
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.droplist__item:hover {
+    color: #5898FF;
+    background-color: #EFF5FF;
+}
+.droplist__item_hide:hover {
+    background-color: #fff;
+}
+.droplist__select .droplist__item_active {
+    color: #5898FF;
+    background-color: #EFF5FF;
+}
+.droplist__icon {
+    cursor: pointer;
+    margin-left: 17.5px;
+}
+.droplist__icon_arrow {
+    transform: rotate(0deg);
+}
+.droplist__icon_arrow path {
+    fill: #9098B4;
+}
+.droplist__icon_cross {
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    background: url('../img/cross.svg') center center no-repeat;
+    display: none;
+}
+.item {
+    padding: 11.5px 15px 11.5px 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #9098B4;
+    position: relative;
+    height: 40px;
+}
+.item p {
+    margin: 0;
+}
+.droplist__selected {
+    cursor: pointer;
+    background-color: #F4F6F8;
+    display: inline-flex;
+    align-items: center;
+}
+.droplist__selected_drop {
+    cursor: pointer;
+    /*background-color: #F4F6F8;*/
+    display: inline-flex;
+    align-items: center;
+    padding: 11.5px 16px 11.5px 16px;
+    width: 125px;
+}
+.droplist_active .droplist__selected {
+    color: #2F353D;
+}
+.droplist_active .droplist__selected_drop {
+    color: #2F353D;
+}
+.droplist_active .droplist__result_active {
+    background-color: #EFF5FF;
+    color: #5898FF;
+}
+.droplist_active_outer .droplist__selected {
+    color: #2F353D;
+}
+.droplist_active_outer .droplist__selected_drop {
+    color: #2F353D;
+}
+.droplist_active_outer .droplist__result_active {
+    background-color: #fff;
+    color: #5898FF;
+    width: auto;
+}
+
+.droplist__result_active {
+    background-color: #EFF5FF;
+    color: #5898FF;
+}
+.droplist__result_active .droplist__icon_arrow {
+    display: none;
+}
+.droplist_active .droplist__result {
+    display: inline-flex;
+}
+.droplist__fields.droplist_active .droplist__result {
+    width: auto;
+    display: inline-flex;
+    max-width: 100%;
+    min-width: 0;
+}
+.droplist_active_outer .droplist__result {
+    display: inline-flex;
+}
+.droplist__fields.droplist_active_outer .droplist__result {
+    width: auto;
+    display: inline-flex;
+    min-width: 182px;
+    max-width: 100%;
+}
+.droplist__result_active .droplist__icon_cross {
+    display: block;
+}
+.droplist_active .droplist__icon_arrow {
+    transform: rotate(180deg);
+}
+.droplist_active .droplist__icon_arrow path {
+    fill: #2F353D;
+}
+.droplist_active_outer .droplist__icon_arrow {
+    transform: rotate(180deg);
+}
+.droplist_active_outer .droplist__icon_arrow path {
+    fill: #2F353D;
+}
+.droplist__result_text {
+    max-width: 240px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.check + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: #fff;
+}
+.check {
+    display: none;
+}
+.check + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: #EDEFF5;
+}
+.check:checked+label {
+    color: #5898FF;
+    background-color: #EFF5FF;
+}
+.check:checked+label::before {
+    border-color: #5898FF;
+    background: url('../img/check.svg') center center no-repeat;
+    background-color: #5898FF;
+}
+.check:hover+label::before {
+    border-color: #5898FF;
+    background: url('../img/check.svg') center center no-repeat;
+    background-color: #5898FF;
+}
+.droplist__fields .droplist__items {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 15;
+    background-color: #fff;
+    min-width: 261px;
+    max-width: 100%;
+}
+.droplist__check .droplist__item {
+    padding: 0;
+}
+.droplist__check .droplist__item label {
+    padding: 11.5px 15px 11.5px 15px;
+}
+.droplist__fields .droplist__item {
+    padding: 0;
+    border-color: transparent;
+    margin-bottom: 15px;
+}
+.droplist__fields .droplist__item:last-child {
+    margin-bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.droplist__items_search .droplist__item {
+    width: 100% !important;
+}
+.droplist__items_search .info__text {
+    margin-bottom: 15px;
+}
+.droplist__field {
+    display: block;
+    padding: 11.5px 15px 11.5px 15px;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    background-color: #F4F6F8;
+    height: 40px;
+    border-radius: 5px;
+}
+.droplist__field_search {
+    width: 100%;
+}
+.droplist__field:focus {
+    background-color: #EFF5FF;
+    outline: 1px solid #5898FF;
+    
+}
+.droplist__fields .droplist__item label {
+    padding: 0;
+    box-sizing: border-box;
+}
+.droplist__result_max .droplist__icon_arrow {
+    display: block;
+}
+.droplist__result_max .droplist__icon_arrow path {
+    fill: #5898FF;
+}
+.droplist__item_nohover:hover {
+    background-color: transparent;
+}
+.droplist__toggle {
+    height: auto;
+}
+.droplist__toggle .droplist__result_text {
+    text-wrap: wrap;
+    height: auto;
+}
+.droplist__toggle .droplist__icon_toggle {
+    transform: rotate(180deg);
+}
+.drop__container {
+    position: absolute;
+    display: none;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 479px;
+}
+.droplists__block > .droplist {
+    padding: 0;
+    border: none;
+}
+.droplists__block {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.take__values_block {
+    margin-bottom: 15px;
+    display: flex;
+}
+.reques {
+    display: inline-flex;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #5898FF;
+    color: #fff;
+    margin: 6.4px 0;
+    margin-right: 15px;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.reques > span {
+    max-width: calc(160px - 50px);
+    width: max-content;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.reques svg {
+    margin-left: auto;
+    cursor: pointer;
+    width: 16px;
+    height: 17px;
+}
+.droplist__icon_arrow_fill {
+    display: none;
+}
+.droplist__result_search {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #EFF5FF;
+}
+.droplist__result_search .droplist__icon_arrow {
+    display: none;
+}
+.droplist__result_search .droplist__icon_arrow_fill {
+    display: block;
+}
+.droplist__icon_arrow_fill path {
+    fill: #5898FF;
+}
+.droplist_active .droplist__icon_arrow_fill path {
+    fill: #5898FF;
+}
+.droplist__inner_search .droplist__items_search {
+    min-width: 429px;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .droplist {
+        margin: 0 0 5px 0;
+        width: 100%;
+    }
+    .drop__in__drop {
+        padding: 5px;
+        width: 100%;
+    }
+    .droplist__dropindrop {
+        width: 100%;
+    }
+    .form__list_outer {
+        width: 100%;
+    }
+    .droplist__selected_drop {
+        width: 100%;
+    }
+    .droplist__icon_arrow {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .drop__container {
+        padding: 10px;
+    }
+    .droplist__selected {
+        width: 100%;
+        display: flex;
+        max-width: 100%;
+    }
+    .droplist__fields .droplist__selected {
+        width: 100%;
+        display: flex;
+        max-width: 100%;
+    }
+    .form__list {
+        width: 100%;
+    }
+    .droplist__selected .droplist__icon_arrow {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .droplist__fields .droplist__selected .droplist__icon_arrow {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .droplist__fields.droplist_active .droplist__result {
+        width: 100%;
+        max-width: 100%;
+    }
+    .droplist__result_active .droplist__icon_cross {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .droplist__inner_search .droplist__items_search {
+        min-width: 0;
+        width: 100%;
+    }
+    .droplist_active_outer .droplist__result_active {
+        width: 100%;
+    }
+    .droplist__result_text {
+        max-width: 88%;
+    }
+    .requests {
+        max-width: calc(100% - 20px);
+        padding: 10px 0 0 0;
+        box-sizing: border-box;
+    }
+    .reques {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    .reques > span {
+        max-width: calc(200px - 50px);
+        width: max-content;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .droplist {
+        margin: 0 5px 5px 0;
+        width: 100%;
+    }
+    .drop__in__drop {
+        padding: 5px;
+        width: 100%;
+    }
+    .droplist__dropindrop {
+        width: 100%;
+    }
+    .form__list_outer {
+        width: 100%;
+    }
+    .droplist__selected_drop {
+        width: 100%;
+    }
+    .droplist__icon_arrow {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .drop__container {
+        padding: 10px;
+    }
+    .droplist__selected {
+        width: 100%;
+        display: flex;
+        max-width: 100%;
+    }
+    .droplist__fields .droplist__selected {
+        width: 100%;
+        display: flex;
+        max-width: 100%;
+    }
+    .form__list {
+        width: 100%;
+    }
+    .droplist__selected .droplist__icon_arrow {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .droplist__fields .droplist__selected .droplist__icon_arrow {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .droplist__fields.droplist_active .droplist__result {
+        width: 100%;
+        max-width: 100%;
+    }
+    .droplist__result_active .droplist__icon_cross {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}

@@ -1,7 +1,4 @@
 .droplist {
-    min-width: 332px;
-    width: auto;
-    max-width: 100%;
     display: inline-block;
     height: auto;
     box-sizing: border-box;
@@ -23,21 +20,23 @@
     align-items: center;
     justify-content: flex-start;
 }
-
-.droplist__fields .droplist__selected .droplist__icon_arrow {
+/* .droplist__fields .droplist__selected .droplist__icon_arrow {
     position: static;
-    margin-left: auto;
-}
-
+    margin-left: 12px;
+} */
 .droplist__items {
+    position: absolute;
+    z-index: 5;
     display: none;
     padding: 0;
     margin: 10px 0 0 0;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    background-color: var(--color_white);
+    width: max-content;
 }
-
 .droplist__item {
+    white-space: nowrap;
     list-style: none;
     padding: 10px 15px 10px 15px;
     box-sizing: border-box;
@@ -47,45 +46,39 @@
     cursor: pointer;
     height: 40px;
     display: flex;
+    user-select: none;
 }
-
 .droplist__item:first-child {
     border-radius: 5px 5px 0 0;
 }
-
 .droplist__item:last-child {
     border-radius: 0 0 5px 5px;
 }
-
 .droplist_active .droplist__items {
     display: block;
+    border-radius: 5px;
+    overflow: hidden;
 }
-
 .droplist__item:hover {
     color: #5898FF;
     background-color: #EFF5FF;
 }
-
 .droplist__select .droplist__item_active {
     color: #5898FF;
     background-color: #EFF5FF;
 }
-
 .droplist__icon {
     position: absolute;
     right: 16px;
-    top: 14px;
+    top: 16px;
     cursor: pointer;
 }
-
 .droplist__icon_arrow {
     transform: rotate(0deg);
 }
-
 .droplist__icon_arrow path {
     fill: #9098B4;
 }
-
 .droplist__icon_cross {
     width: 16px;
     height: 16px;
@@ -93,7 +86,6 @@
     background: url('../../img/cross.svg') center center no-repeat;
     display: none;
 }
-
 .item {
     padding: 11.5px 15px 11.5px 15px;
     border-radius: 5px;
@@ -103,66 +95,57 @@
     position: relative;
     height: 40px;
 }
-
+.item p {
+    margin: 0;
+}
 .droplist__selected {
     cursor: pointer;
     background-color: #F4F6F8;
 }
-
 .droplist_active .droplist__selected {
     color: #2F353D;
 }
-
 .droplist_active .droplist__result_active {
     background-color: #EFF5FF;
     color: #5898FF;
 }
-
 .droplist__result_active {
     background-color: #EFF5FF;
     color: #5898FF;
 }
-
 .droplist__result_active .droplist__icon_arrow {
     display: none;
 }
-
 .droplist_active .droplist__result {
     display: block;
 }
-
 .droplist__fields.droplist_active .droplist__result {
     width: auto;
     display: inline-flex;
     min-width: 182px;
     max-width: 100%;
 }
-
 .droplist__fields .droplist__result_active .droplist__result_text {
     padding-right: 20px;
 }
-
 .droplist__result_active .droplist__icon_cross {
     display: block;
 }
-
 .droplist_active .droplist__icon_arrow {
     transform: rotate(180deg);
 }
-
 .droplist_active .droplist__icon_arrow path {
     fill: #2F353D;
 }
-
 .droplist__result_text {
-    max-width: 240px;
-    margin-right: 15px;
+    /*max-width: 240px;*/
     display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin-right: 25px;
+    user-select: none;
 }
-
 .check + label {
     display: flex;
     align-items: center;
@@ -170,11 +153,9 @@
     cursor: pointer;
     width: 100%;
 }
-
 .check {
     display: none;
 }
-
 .check + label::before {
     content: '';
     display: inline-block;
@@ -189,54 +170,44 @@
     background-position: center center;
     background-size: 50% 50%;
 }
-
-.check:checked + label {
+.check:checked+label {
     color: #5898FF;
     background-color: #EFF5FF;
 }
-
-.check:checked + label::before {
+.check:checked+label::before {
     border-color: #5898FF;
     background: url('../../img/check.svg') center center no-repeat;
     background-color: #5898FF;
 }
-
-.check:hover + label::before {
+.check:hover+label::before {
     border-color: #5898FF;
     background: url('../../img/check.svg') center center no-repeat;
     background-color: #5898FF;
 }
-
 .droplist__fields .droplist__items {
     padding-top: 15px;
     padding-bottom: 15px;
     box-sizing: border-box;
 }
-
 .droplist__check .droplist__item {
     padding: 0;
 }
-
 .droplist__check .droplist__item label {
     padding: 11.5px 15px 11.5px 15px;
 }
-
 .droplist__fields {
     min-width: 301px;
 }
-
 .droplist__fields .droplist__item {
     padding: 0;
     border-color: transparent;
     margin-bottom: 15px;
 }
-
 .droplist__fields .droplist__item:last-child {
     margin-bottom: 0;
     width: calc(100% - 30px);
     margin: 0 auto;
 }
-
 .droplist__field {
     display: block;
     padding: 11.5px 15px 11.5px 15px;
@@ -247,39 +218,61 @@
     height: 40px;
     border-radius: 5px;
 }
-
 .droplist__field:focus {
     background-color: #EFF5FF;
     outline: 1px solid #5898FF;
 
 }
-
 .droplist__fields .droplist__item label {
     padding: 0;
     box-sizing: border-box;
 }
-
 .droplist__result_max .droplist__icon_arrow {
     display: block;
 }
-
 .droplist__result_max .droplist__icon_arrow path {
     fill: #5898FF;
 }
-
 .droplist__item_nohover:hover {
     background-color: transparent;
 }
-
 .droplist__toggle {
     height: auto;
 }
-
 .droplist__toggle .droplist__result_text {
     text-wrap: wrap;
     height: auto;
 }
-
 .droplist__toggle .droplist__icon_toggle {
     transform: rotate(180deg);
+}
+.droplist__select_citys {
+    margin-bottom: 18px;
+}
+.droplist__select_transfer {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+@media screen and (max-width: 480px) {
+    .droplist {
+        /*margin: 0 auto 10px auto;*/
+    }
+}
+@media screen and (max-width: 340px) {
+    .droplist {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+        display: block;
+    }
+    .item p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: calc(100% - 50px);
+    }
+    .droplist__result_text {
+        max-width: 195px;
+    }
 }

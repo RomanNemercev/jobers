@@ -7,18 +7,22 @@
     <title>Jobers - Кандидаты</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
-    <link
-            rel="stylesheet"
-            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <!--    not load simplebar-->
+    <!--    <link-->
+    <!--            rel="stylesheet"-->
+    <!--            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">-->
+    <link rel="stylesheet" href="../css/libs-css/simplebar.css">
     <link rel="stylesheet" href="../css/custom.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/libs-css/select.css">
     <link rel="stylesheet" href="../css/candidates-more.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media-queries/more-cans-media.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container">
-        <a href="#" class="nav__logo"><img src="../img/logo-clip.svg" alt="Логотип компании" class="nav__logo-icon"></a>
+        <a href="#" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании" class="nav__logo-icon"></a>
         <div class="nav__wrapper">
             <a href="../partials/candidates.html" class="nav__back f14w400 bg-fix">Вернуться назад</a>
             <ul class="nav__cans">
@@ -62,6 +66,16 @@
             <button class="search-bar__btn btn-reset"><img src="../img/profile.svg" alt="Личный кабинет"
                                                            class="search-bar__acc"></button>
         </div>
+        <div class="search-bar__768px">
+            <a href="../partials/candidates.html" class="search-bar__back f14w500 bg-fix">Назад</a>
+            <div class="search-bar__navs">
+                <div class="search-bar__btns-wrap">
+                    <button class="btn-reset search-bar__btn-prev"></button>
+                    <button class="btn-reset search-bar__btn-next"></button>
+                </div>
+                <div class="search-bar__cans" style="opacity: 1;"></div>
+            </div>
+        </div>
     </div>
 </section>
 <!--основной контент страницы-->
@@ -85,11 +99,13 @@
                 </button>
             </div>
             <button class="btn-reset btn-settings"></button>
+            <button class="btn-reset btn-left" id="btn-left"></button>
             <button class="btn-reset btn-right" id="btn-right"></button>
         </div>
     </div>
     <div class="more__content">
         <div class="more__cans-scroll">
+            <p class="more__cans-count f20w700">Кандидатов в&nbsp;фильтре: <span class="more__cans-number">18</span></p>
             <form action="#" class="more-search__form">
                 <input type="text" class="more-search__form-space" placeholder="Поиск">
             </form>
@@ -168,26 +184,71 @@
                 </a></li>
             </ul>
         </div>
-        <div class="more__cans-info">
+        <div class="more__cans-info" style="opacity: 1; visibility: visible; position: relative;">
             <div class="more__cans-header">
                 <div class="more__tabs vacancies__values">
                     <button class="btn-reset vacancies__value vacancies__value--active" data-path="one"
-                            aria-label="Активные вакансии">Резюме
+                            aria-label="Активные вакансии" id="resume">Резюме
                     </button>
-                    <button class="btn-reset vacancies__value" data-path="two" aria-label="Вакансии в архиве">История
+                    <button class="btn-reset vacancies__value" data-path="two" aria-label="Вакансии в архиве"
+                            id="history">История
                     </button>
                 </div>
                 <div class="more__header-right">
                     <button class="btn-reset btn-succes more__btn-invite f15w400">Пригласить</button>
-                    <div class="more__droplist"></div>
-                    <div class="more__burger">
-                        <div class="more__burger-dot dot-inwork-one"></div>
-                        <div class="more__burger-dot dot-inwork-one"></div>
-                        <div class="more__burger-dot dot-inwork-one"></div>
+                    <div class="more__droplist">
+                        <div class="droplist droplist__select">
+                            <form class="form__list" action="">
+                                <div class="droplist__selected item droplist__result item"><span
+                                        class="droplist__result_text" data-start="Этап">Этап</span> <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                    <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                         viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                              fill="#9098B4"></path>
+                                    </svg>
+                                </div>
+                                <ul class="droplist__items">
+                                    <li class="droplist__item">Подумать</li>
+                                    <li class="droplist__item">Телефонное интервью</li>
+                                    <li class="droplist__item">Подходящие</li>
+                                    <li class="droplist__item">Отклоненные</li>
+                                    <li class="droplist__item">Удаленные</li>
+                                    <li class="droplist__item btn-delete">Отклонить</li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="more__skip-768">
+                        <button class="btn-reset btn-delete more__skip-btn">Отказать</button>
+                    </div>
+                    <div class="dropdown-dots">
+                        <button class="dropdown-toggle">
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <div class="button-icon"></div>
+                            <!--            <div class="button-text">...</div>-->
+                        </button>
+                        <div class="candidates__droplist-back"></div>
+                        <div class="dropdown-menu">
+                            <p class="dropdown__title-768 f20w500">Андреев Антон Владимирович</p>
+                            <button class="btn-reset item__btn-close" id="btn-dropdown-close768"></button>
+                            <ul>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Открыть файл резюме</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item">Экспорт в&nbsp;Excel</button>
+                                </li>
+                                <li>
+                                    <button class="btn-reset dropdown-item" id="del-popup1">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="more__main-content" data-simplebar>
+            <div class="more__main-content vacancies__content vacancies__content--active" data-target="one" data-simplebar>
                 <div class="more__quick-info">
                     <img src="../img/candidates-more-icon-large.svg"
                          alt="Фотогорафия кандидата на вакансию Степановой Марии Алексеевны" class="more__user-pic">
@@ -195,7 +256,12 @@
                         <h3 class="more__user-name f25w600">Степанова Мария Алексеевна</h3>
                         <div class="more__tags">
                             <span class="more__tag f14w400">#новый&nbsp;отклик</span>
-                            <button class="btn-reset more__tags__add f15w400">добавит тег</button>
+                            <div class="user__add-tags__wrapper tag-input" id="tag-input-0">
+                                <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить
+                                    тег
+                                </button>
+                                <div class="tags-container"></div>
+                            </div>
                         </div>
                         <div class="more__user-desc flex">
                             <div class="more__user-wage">
@@ -299,12 +365,301 @@
                         </li>
                     </ul>
                 </div>
+                <div class="more__quick-info__768">
+                    <div class="more__title-data border-bottom"><p class="more__title f16w500">Менеджер по продажам</p>
+                        <span class="more__status f14w400">Не просмотрено</span></div>
+                    <div class="more__temp-data border-bottom">
+                        <span class="more__source-status btn-succes f14w500">Входящий отклик</span>
+                        <span class="more__source-company f14w400 bg-fix c-bali"><time datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span>
+                    </div>
+                    <div class="more__main-info__768 border-bottom">
+                        <img src="../img/media/canditates-more-icon-768.png" alt="Фотография кандидата"
+                             class="more__user-pic">
+                        <p class="more__user-name f16w500">Андреев Антон Владимирович</p>
+                        <span class="more__user-wage f15w400">70 000 р.</span>
+                        <div class="user__add-tags__wrapper tag-input" id="tag-input-1">
+                            <button class="btn-reset user__add-tags bg-fix f15w400 c-bali add-tag-btn">добавить тег
+                            </button>
+                            <div class="tags-container"></div>
+                        </div>
+                    </div>
+                    <div class="more__option-info user">
+                        <div class="user__ed border-bottom">
+                            <p class="user__ed-title f14w400 c-bali">Образование</p>
+                            <p class="user__ed-result f14w400">Высшее</p>
+                        </div>
+                        <div class="user__skill border-bottom">
+                            <p class="user__skill-title f14w400 c-bali">Опыт работы</p>
+                            <p class="user__skill-data f14w400">5 лет 3 месяца</p>
+                        </div>
+                        <div class="user__citizen border-bottom">
+                            <p class="user__citizen-title f14w400 c-bali">Гражданство</p>
+                            <p class="user__citizen-data f14w400">Россия</p>
+                        </div>
+                        <div class="user__age border-bottom">
+                            <p class="user__age-title f14w400 c-bali">Возраст</p>
+                            <p class="user__age-data f14w400">38 лет</p>
+                        </div>
+                        <div class="user__city border-bottom">
+                            <p class="user__city-title f14w400 c-bali">Город</p>
+                            <p class="user__city-data f14w400">Новосибирск</p>
+                        </div>
+                        <div class="user__last-place border-bottom">
+                            <p class="user__last-place__title f14w400 c-bali">Последнее место работы</p>
+                            <p class="user__last-place__data f14w400">Муниципальное учреждение &laquo;Комитет
+                                имущественных
+                                отношений муниципального образования &laquo;Город Ленск&raquo; (МУ&nbsp;КИО МО&nbsp;&laquo;Город
+                                Ленск&raquo;)<span class="user__last-place__time">01&nbsp;апреля 2020&nbsp;&mdash; 01&nbsp;июля 2020</span>
+                            </p>
+                        </div>
+                        <div class="user__languages border-bottom">
+                            <p class="user__languages-title f14w400 c-bali">Знание языков</p>
+                            <p class="f14w400"><span class="user__native-language">Родной язык - Русский</span>, <span
+                                    class="user__improve-language">Английский A1</span></p>
+                        </div>
+                        <div class="user__mail border-bottom">
+                            <p class="user__mail-title f14w400 c-bali">Почта</p>
+                            <a href="mailto:pochta12347273a@mail.ru" class="user__mail-data f14w400">pochta12347273a@mail.ru</a>
+                        </div>
+                        <div class="user__phone">
+                            <p class="user__phone-title f14w400 c-bali">Телефон</p>
+                            <a href="tel:+79992222333" class="user__phone-data f14w400">+7-(999)-(222)-23-33</a>
+                            <div class="user__phone-social">
+                                <a href="#" class="user__phone-social__wh f14w400 bg-fix">WhatsApp</a>
+                                <a href="#" class="user__phone-social__tg f14w400 bg-fix">Telegram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more__full-info__768"></div>
+            </div>
+            <div class="more__history-content vacancies__content" data-target="two">
+                <div class="more__messages" id="messageContainer">
+                    <div class="more__data-container">
+                        <div class="more__data-message admin">
+                            <div class="admin__get-data">
+                                <time datetime="2024-01-24">24.01.2024</time>
+                            </div>
+                            <div class="admin__main-info">
+                                <div class="admin__main-data">
+                                    <time datetime="2024-01-24T15:05">24.01.2024 в 15:05</time>
+                                </div>
+                                <p class="admin__source f16w500">Отклик на&nbsp;вакансию: <span
+                                        class="admin__vacancy-name">Менеджер по продажам</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="more__data-message file">
+                            <div class="file__main-info">
+                                <div class="file__main-data f14w400">
+                                    <time datetime="2024-01-24T15:05">24.01.2024 в 15:05</time>
+                                </div>
+                                <p class="file__source f16w500">Прикреплен файл</p>
+                                <a href="#" download="" class="file__download f15w400">Степанова Мария
+                                    Алексеевна.pdf</a>
+                            </div>
+                        </div>
+                        <div class="more__data-message connect">
+                            <div class="connect__main-info">
+                                <div class="connect__main-data f14w400">
+                                    <time datetime="2024-01-24T15:05">24.01.2024 в 15:05</time>
+                                </div>
+                                <p class="connect__source f16w500">Письмо от&nbsp;кандидата</p>
+                                <p class="connect__content">Здравствуйте!<br>
+                                    Очень заинтересовала ваша вакансия, есть большой опыт в&nbsp;презентации и&nbsp;продажах
+                                    продукта и&nbsp;в&nbsp;it-сфере. Буду рад подъехать на&nbsp;собеседование!</p>
+                            </div>
+                        </div>
+                        <div class="more__data-message comments">
+                            <div class="comments__get-data">
+                                <time datetime="2024-01-25">25.01.2024</time>
+                            </div>
+                            <div class="comments__main-info">
+                                <div class="comments__main-data f14w400">
+                                    <time datetime="2024-01-25T10:22">Сегодня в 10:22</time>
+                                </div>
+                                <div class="comments__title f16w500">Комментарий</div>
+                                <div class="comments__content-wrapper">
+                                    <div class="comments__message">
+                                        <img src="../img/history-user-pic_0.png" alt="Фотография Ксения Алексеева"
+                                             class="comments__message-icon">
+                                        <div class="comments__message-data">
+                                            <p class="comments__user-name f15w400">Ксения Алексеева</p>
+                                            <p class="comments__user-content f14w400">Может быть позовем на&nbsp;собес
+                                                эту
+                                                муадмазел?</p>
+                                        </div>
+                                        <div class="comments__time f14w400">
+                                            <time datetime="14:52">14:52</time>
+                                        </div>
+                                    </div>
+                                    <div class="comments__message">
+                                        <img src="../img/history-user-pic_1.png" alt="Фотография Анатолий Горилов"
+                                             class="comments__message-icon">
+                                        <div class="comments__message-data">
+                                            <p class="comments__user-name f15w400">Анатолий Горилов</p>
+                                            <p class="comments__user-content f14w400">А давай!</p>
+                                        </div>
+                                        <div class="comments__time f14w400">
+                                            <time datetime="14:55">14:55</time>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-reset comments__btn-answer f15w400"
+                                        onclick="scrollToInputComments()">Ответить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="more__data-message out-message">
+                            <div class="out-message__main-info">
+                                <div class="out-message__main-data f14w400">
+                                    <time datetime="2024-01-25T15:02">Сегодня в 15:02</time>
+                                </div>
+                                <p class="out-message__title f15w400">Исходящее письмо</p>
+                                <div class="out-message__content-wrapper">
+                                    <img src="../img/history-user-pic_1.png" alt="Фотография Анатолий Горилов"
+                                         class="out-message__user-icon">
+                                    <div class="out-message__info">
+                                        <p class="out__message__info-name f15w400">Анатолий Горилов</p>
+                                        <div class="read-more__container">
+                                            <div class="collapsedTextContainer" id="textContainer">
+                                                Уважаемый(ая) [Имя соискателя],<br>
+                                                Мы&nbsp;рады пригласить Вас на&nbsp;собеседование для обсуждения
+                                                возможности присоединиться к&nbsp;нашей
+                                                команде&nbsp;в [Название компании]. Ваше резюме привлекло наше внимание,
+                                                и&nbsp;мы&nbsp;хотели&nbsp;бы
+                                                обсудить дополнительные детали вашего опыта и&nbsp;навыков.
+                                                Дата и&nbsp;время собеседования: [Дата], [Время]
+                                                Место: [Адрес компании]
+                                                Пожалуйста, подтвердите свое присутствие на&nbsp;собеседовании, ответив
+                                                на&nbsp;это письмо или позвонив по&nbsp;номеру
+                                                [контактный номер]. Если предложенное время не&nbsp;подходит, дайте нам
+                                                знать, чтобы мы&nbsp;могли
+                                                попробовать найти удобное для вас время.
+                                                Мы&nbsp;ждем встречи с&nbsp;вами и&nbsp;надеемся на&nbsp;продуктивное
+                                                обсуждение.
+                                                С&nbsp;уважением, [Имя отправителя] [Должность отправителя] [Контактная
+                                                информация]
+                                                <div id="fadeOverlay" class="fadeOverlay"></div>
+                                            </div>
+                                            <button id="expandButton" onclick="expandText()"
+                                                    class="btn-reset read-more__btn">Показать полностью
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more__data-message chat">
+                            <div class="chat__main-info">
+                                <div class="chat__main-data f14w400">
+                                    <time datetime="2024-01-25T15:02">Сегодня в 15:02</time>
+                                </div>
+                                <p class="chat__source f16w500">Чат на&nbsp;работном сайте</p>
+                                <div class="chat__source-icon"><p class="chat__source-title f15w400 c-bali">
+                                    Источник:</p>
+                                    <a href="https://hh.ru/" class="chat__source-link bg-fix"></a></div>
+                                <div class="chat__wrapper">
+                                    <div class="chat__message">
+                                        <img src="../img/history-user-pic_2.png"
+                                             alt="Фотография Степанова Мария Алексеевна" class="chat__message-icon">
+                                        <div class="chat__message-data">
+                                            <p class="chat__user-name f15w400">Степанова Мария Алексеевна</p>
+                                            <p class="chat__user-content c-bali f14w400">Здравствуйте! Пытаюсь набрать
+                                                на&nbsp;домофоне код вашего офиса, не&nbsp;выходит(</p>
+                                        </div>
+                                        <div class="chat__time f14w400">
+                                            <time datetime="15:02">15:02</time>
+                                        </div>
+                                    </div>
+                                    <div class="chat__message">
+                                        <img src="../img/history-user-pic_1.png"
+                                             alt="Фотография Анатолий Горилов" class="chat__message-icon">
+                                        <div class="chat__message-data">
+                                            <p class="chat__user-name f15w400">Анатолий Горилов</p>
+                                            <p class="chat__user-content c-bali f14w400">Доброго дня, попробуйте
+                                                набирать через решетку, получится так: #2822322</p>
+                                        </div>
+                                        <div class="chat__time f14w400">
+                                            <time datetime="15:05">15:05</time>
+                                        </div>
+                                    </div>
+                                    <div class="chat__message">
+                                        <img src="../img/history-user-pic_2.png"
+                                             alt="Фотография Степанова Мария Алексеевна" class="comments__message-icon">
+                                        <div class="chat__message-data">
+                                            <p class="chat__user-name f15w400">Степанова Мария Алексеевна</p>
+                                            <p class="chat__user-content c-bali f14w400">Получилось, сейчас
+                                                поднимусь!</p>
+                                        </div>
+                                        <div class="chat__time f14w400">
+                                            <time datetime="15:10">15:10</time>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-reset chat__btn-answer f15w400" onclick="scrollToInput()">Ответить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more__enter">
+                    <div class="more__enter-container">
+                        <textarea class="more__enter-textarea" placeholder="Введите ваше сообщение"
+                                  id="chat-textarea"></textarea>
+                        <div class="custom-select__container" id="chat-select">
+                            <div class="custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="selected-option">Письмо на почту</div>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li data-value="Письмо на почту" title="Письмо на почту">Письмо на почту
+                                            </li>
+                                            <li data-value="Чат на работном сайте" title="Чат на работном сайте">Чат на
+                                                работном сайте
+                                            </li>
+                                            <li data-value="Комментарий" title="Комментарий">Комментарий</li>
+                                        </ul>
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more__btns-wrapper">
+                            <div class="more-dropdown">
+                                <button class="more-dropbtn"></button>
+                                <div class="more-dropdown-content">
+                                    <button class="more-dropdown__btn" id="insertTemplateBtn">Вставить шаблон</button>
+                                    <button class="more-dropdown__btn" id="attachFileBtn">Закрепить файл</button>
+                                </div>
+                            </div>
+                            <button class="btn-reset btn more__btn-send f15w400">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item__popup-del-cans" id="del-popup">
+        <button class="btn-reset auto__close" id="del-popup-close"></button>
+        <div class="item__popup-wrapper del">
+            <p class="f20w700 delete__title">Удаление кандидата</p>
+            <p class="delete__attent">Кандидат будет удален. Все удаленные кандидаты находятся в&nbsp;папке «Удаленные»,
+                откуда их&nbsp;можно будет восстановить</p>
+            <div class="delete__choose">
+                <button class="btn-reset delete__yes" id="del-yes">Удалить</button>
+                <button class="btn-reset delete__no" id="del-no">Отмена</button>
             </div>
         </div>
     </div>
 </section>
-<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-<script src="../js/candidates-more.js"></script>
+<!--not load simplebar-->
+<!--<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>-->
+<script src="../js/libs-js/simplebar.min.js"></script>
+<script src="../js/jquery_3.3.1.min.js"></script>
+<script src="../js/libs-js/select.js"></script>
+<script src="../js/libs-js/add-tag.js"></script>
 <script src="../js/script.js"></script>
+<script src="../js/candidates-more.js"></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+/*add tags from search*/
+.close-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../img/x-for-tags.svg");
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input-space {
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    border: none;
+    width: 100%;
+    padding: 11.5px 41px;
+    border-radius: 5px;
+    background-image: url("../../img/search-icon-for-tags.svg");
+    background-color: var(--color_athens-gray);
+}
+
+.input-space::placeholder {
+    color: var(--color_bali);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+.input-space:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.create-tag {
+    width: 47.247%;
+}
+
+.tag-options {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-options-header {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_bali);
+    width: 100%;
+}
+
+.tag-option {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_space);
+    padding: 5px 34px 5px 10px;
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+    background-image: url("../../img/plus-search-drop.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.selected-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.selected-tag {
+    padding: 4px 10px;
+    background-color: var(--color_dodger);
+    border-radius: 5px;
+    color: var(--color_white);
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}

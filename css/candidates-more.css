@@ -1,5 +1,24 @@
-p, span {
+/*hide mobile els*/
+.dropdown__title-768,
+.item__btn-close,
+.search-bar__768px,
+.more__quick-info__768,
+.more__full-info__768,
+.more__skip-768,
+.more__cans-count {
+    display: none;
+}
+/*end hide mobile*/
+
+p {
     color: var(--color_space);
+}
+
+.more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 95px 25px 0 295px;
 }
 
 .nav__logo-icon {
@@ -92,15 +111,13 @@ p, span {
 }
 
 .more__scroll-choose {
-    /*width: 100%;*/
-    /*background-color: var(--color_white);*/
-    /*height: 50px;*/
+    max-width: 1120px;
+    width: 100%;
     margin-bottom: 25px;
 }
 
 .more__cans-scroll {
     width: 337px; /* 30.09% */
-    height: 80.958vh;
     background-color: var(--color_white);
     border-radius: 10px;
 }
@@ -108,11 +125,12 @@ p, span {
 .more__content {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: calc(100vh - 185px);
 }
 
 .more__cans-info {
     width: calc(100% - 352px);
-    height: 80.958vh;
     background-color: var(--color_white);
     border-radius: 10px;
 }
@@ -128,7 +146,7 @@ p, span {
     border: none;
     outline: none;
     padding: 11.5px 0 11.5px 15px;
-    width: 96.5%;
+    width: 100%;
     color: var(--color_space);
     background-color: var(--color_athens-gray);
     border-radius: 5px;
@@ -229,11 +247,36 @@ p, span {
 }
 
 .more__droplist {
-    width: 93px;
-    height: 40px;
-    background-color: var(--color_athens-gray);
-    border-radius: 5px;
     margin-right: 15px;
+}
+
+.more__droplist .droplist_active .droplist__selected {
+    color: var(--color_dodger);
+}
+
+.more__droplist .droplist_active .droplist__icon_arrow path {
+    fill: var(--color_dodger);
+}
+
+.more__droplist .droplist__items {
+    right: 0;
+}
+
+.more__droplist .droplist__item {
+    color: var(--color_bali);
+}
+
+.more__droplist .droplist__item:hover {
+    color: var(--color_dodger);
+}
+
+.more__droplist .btn-delete {
+    background-color: var(--color_pink);
+    color: var(--color_red);
+}
+
+.more__droplist .btn-delete:hover {
+    color: var(--color_red);
 }
 
 .more__burger {
@@ -276,6 +319,19 @@ p, span {
 
 .more__main-content {
     height: calc(100% - 71px);
+}
+
+.vacancies__content {
+    display: flex;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.vacancies__content--active {
+    width: auto;
+    height: calc(100% - 71px);
+    overflow: visible;
 }
 
 .more__tag {
@@ -329,6 +385,8 @@ p, span {
 
 .more__tags {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .more__user-desc {
@@ -402,7 +460,7 @@ p, span {
 .scroll-x__wrapper {
     overflow-x: auto;
     display: flex;
-    width: 91.5%;
+    width: calc(100% - 147px);
 }
 
 .btn-scroll {
@@ -455,9 +513,23 @@ p, span {
     flex-shrink: 0;
     border-left: 1px solid var(--color_gray);
     border-right: 1px solid var(--color_gray);
-    right: 50px;
+    right: 100px;
     position: absolute;
     top: 0;
+}
+
+.btn-left {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color_white);
+    background-image: url("../img/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    border-right: 1px solid var(--color_gray);
 }
 
 .btn-right {
@@ -472,4 +544,726 @@ p, span {
     right: 0;
     top: 0;
     border-radius: 0 10px 10px 0;
+}
+
+/*make page two with history*/
+.more__data-container {
+    padding: 15px 25px 25px 25px;
+}
+
+.more__messages {
+    height: calc(100vh - 457px);
+    background-color: var(--color_athens-gray);
+    width: 100%;
+}
+
+.more__data-message:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.admin__get-data {
+    text-align: center;
+    color: var(--color_bali);
+    margin-bottom: 25px;
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.admin__main-info {
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.admin__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.admin__source {
+    color: var(--color_space);
+}
+
+.file__main-info {
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.file__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.file__source {
+    margin-bottom: 5px;
+}
+
+.file__download {
+    color: var(--color_dodger);
+}
+
+.connect {
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.connect__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.connect__source {
+    margin-bottom: 5px;
+}
+
+.connect__content {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_bali);
+}
+
+.comments__get-data {
+    text-align: center;
+    color: var(--color_bali);
+    margin-bottom: 25px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.comments__main-info {
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.comments__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.comments__title {
+    margin-bottom: 25px;
+}
+
+.comments__message {
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--color_athens-gray);
+}
+
+.comments__time {
+    margin-left: auto;
+    color: var(--color_bali);
+}
+
+.comments__message-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.comments__user-name {
+    margin-bottom: 5px;
+}
+
+.comments__user-content {
+    color: var(--color_bali);
+}
+
+.comments__message:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.comments__content-wrapper {
+    margin-bottom: 12px;
+}
+
+.comments__btn-answer {
+    color: var(--color_dodger);
+}
+
+/*read-more sets*/
+.collapsedTextContainer {
+    max-height: 49px; /* настройте на желаемую высоту*/
+    width: 603px;
+    overflow: hidden;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_bali);
+    margin-bottom: 5px;
+    transition: max-height 0.5s ease;
+}
+
+.fadeOverlay {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, #f4f6f8);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.collapsedTextContainer.expanded {
+    max-height: 100%;
+}
+
+.collapsedTextContainer.expanded .fadeOverlay {
+    opacity: 0;
+}
+
+.read-more__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_dodger);
+}
+
+/*end read-more sets*/
+
+.out-message__main-info {
+    position: relative;
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+    padding-bottom: 53px;
+}
+
+.out-message__main-data {
+    color: var(--color_bali);
+    margin-bottom: 10px;
+}
+
+.out-message__title {
+    margin-bottom: 25px;
+}
+
+.out-message__content-wrapper {
+    display: flex;
+    padding: 15px;
+    background-color: var(--color_athens-gray);
+    border-radius: 10px;
+}
+
+.out__message__info-name {
+    margin-bottom: 5px;
+}
+
+.out-message__user-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.chat__main-info {
+    position: relative;
+    padding: 20px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+}
+
+.chat__source-icon {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 20px;
+}
+
+.chat__source-link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/hh_20x20.svg");
+}
+
+.chat__source {
+    color: var(--color_space);
+    margin-bottom: 22px;
+}
+
+.chat__source-title {
+    margin-right: 10px;
+}
+
+.chat__main-data {
+    margin-bottom: 10px;
+    color: var(--color_bali);
+}
+
+.chat__message {
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--color_athens-gray);
+}
+
+.chat__message:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.chat__message-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.chat__user-name {
+    margin-bottom: 5px;
+}
+
+.chat__time {
+    margin-left: auto;
+    color: var(--color_bali);
+}
+
+.chat__message-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.chat__wrapper {
+    margin-bottom: 15px;
+}
+
+.chat__btn-answer {
+    color: var(--color_dodger);
+}
+
+.more__enter {
+    width: 100%;
+    padding: 25px;
+}
+
+.more__enter-container {
+    position: relative;
+}
+
+.more__enter-textarea {
+    width: 100%;
+    min-height: 96px;
+    border: none;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+/*custom select sets*/
+.custom-select-wrapper {
+    position: relative;
+    width: auto; /* Задайте ширину по вашему усмотрению */
+}
+
+.custom-select {
+    position: relative;
+    cursor: pointer;
+}
+
+.selected-option {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_dodger);
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    min-width: 131px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    display: none;
+    transform: translateY(14px);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 11px 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: var(--color_bali);
+    font-size: 15px;
+    height: 40px;
+}
+
+.dropdown ul li:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.dropdown ul li:hover {
+    background-color: var(--color_athens-gray);
+    color: var(--color_dodger);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/chat-arrow.svg");
+    transition: transform 0.3s ease;
+}
+
+.custom-select.open .arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/*end custom select sets*/
+.more__enter-textarea::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_bali);
+    opacity: 0.6;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.more__enter-textarea:focus {
+    outline: none;
+}
+
+.custom-select__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*add styles for dropdown btn in chat*/
+/* Стили для выпадающего списка */
+.more-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.more-dropbtn {
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/plus-chat.svg");
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.more-dropbtn:focus-visible {
+    outline: none;
+}
+
+.more-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 195px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: -97px;
+    border-radius: 5px;
+}
+
+.more-dropdown-content button {
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    padding: 11px 15px;
+    color: var(--color_bali);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.more-dropdown-content button:hover {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+}
+
+.more-show {
+    display: block;
+}
+
+.more-dropdown__btn:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.more__btns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.more__btn-send {
+    min-width: 119px;
+    color: var(--color_white);
+}
+
+/*dropdown settings*/
+.dropdown-dots {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    position: relative;
+    background-color: var(--color_athens-gray);
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    padding: 10.82px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition effect */
+    white-space: nowrap;
+    user-select: none;
+    max-height: 40px;
+    width: 50px;
+}
+
+.dropdown-toggle:hover{
+    background-color: var(--color_zircon);
+}
+
+.dropdown-toggle:hover .button-icon {
+    background-color: var(--color_dodger);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Добавляем тень *!*/
+    z-index: 1;
+    right: 0;
+    /*opacity: 0;*/
+    margin-top: -15px;
+}
+
+/*.dropdown:hover .dropdown-menu {*/
+/*    display: block;*/
+/*    opacity: 1;*/
+/*}*/
+
+.dropdown-menu ul {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+}
+
+.dropdown-menu ul::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 30px);
+    z-index: -1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+.dropdown-menu ul li button {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--color_bali);
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu ul li:not(:last-of-type) button {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.dropdown-menu ul li:first-of-type button {
+    border-radius: 5px 5px 0 0;
+}
+
+.dropdown-menu ul li:last-of-type button {
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-menu ul li button:hover {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+}
+
+.button-icon {
+    /* Your icon styles here */
+    width: 7px;
+    height: 7px;
+    background-color: var(--color_bali);
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.button-icon:first-child {
+    margin-left: 1px;
+}
+
+.button-icon:last-child {
+    margin-left: -2px;
+}
+
+.button-icon.active {
+    background-color: var(--color_dodger);
+}
+
+/*popup's sets*/
+.item__popup-del-cans {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: rgba(42, 49, 55, .75);
+    opacity: 0;
+    transition: visibility .3s ease, opacity .3s ease;
+}
+
+.auto__close {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    right: 30px;
+    background-image: url("../img/close-modal-x.svg");
+    background-repeat: no-repeat;
+}
+
+.del {
+    padding: 25px;
+    min-height: auto;
+    max-width: 451px;
+}
+
+.delete__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.delete__attent {
+    width: 95%;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 18px;
+}
+
+.delete__choose {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete__yes {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--color_pink);
+    color: var(--color_red);
+    padding: 11px 20px;
+    border-radius: 5px;
+}
+
+.delete__no {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--color_zircon);
+    padding: 11px 20px;
+    color: var(--color_dodger);
+    border-radius: 5px;
+}
+
+.item__popup-del-cans.vacancies__item-popup--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.item__popup-del-cans.vacancies__item-popup--open .item__popup-wrapper {
+    transform: scale(1);
+}
+
+/*add tags sets*/
+.tag-input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-input input {
+    color: var(--color_dodger);
+    border: none;
+    font-size: 15px;
+}
+
+.tag-input input:focus-visible {
+    outline: none;
+}
+
+.tag {
+    color: var(--color_dodger);
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    background-image: url("../img/tag-cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    width: 15px;
+    height: 20px;
+    margin-left: 4.7px;
+    margin-bottom: 1px;
+    margin-right: 10px;
+    transform: translateY(-1px);
+}
+
+/*custom*/
+.user__add-tags {
+    background-image: url("../img/plus__add-tags.svg");
+    padding-right: 20px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+/*end tags styles*/
+
+.more__user-wage {
+    margin-bottom: 6px;
+    display: block;
 }

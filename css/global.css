@@ -52,6 +52,9 @@
     --color_wh: #28d146;
     --color_tg: #229ed9;
     --color_semi-space: rgba(47, 53, 61, 0.5);
+    --color_semi-black: rgba(255, 255, 255, 0.25);
+    --color_blaze-orange: #ff6b00;
+    --color_seranade: #fff0e5
 }
 
 html {
@@ -180,9 +183,23 @@ img {
     color: var(--color_space);
 }
 
+.f20w500 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--color_space);
+}
+
 .f20w600 {
     font-size: 20px;
     font-weight: 600;
+    line-height: normal;
+    color: var(--color_space);
+}
+
+.f20w700 {
+    font-size: 20px;
+    font-weight: 700;
     line-height: normal;
     color: var(--color_space);
 }
@@ -267,10 +284,8 @@ img {
 }
 
 .container {
-    /*max-width: 1440px;*/
-    padding: 95px 25px 0 295px;
+    padding: 95px 25px 50px 295px;
     width: 100%;
-    /*margin: 0 auto;*/
 }
 
 .title {

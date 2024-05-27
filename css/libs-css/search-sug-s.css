@@ -1,0 +1,31 @@
+/*search reused*/
+.search-reused {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.search-reused__input {
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    padding: 11.96px 15px;
+    border-radius: 5px;
+    color: var(--color_space);
+    background-color: var(--color_athens-gray);
+}
+
+.search-reused__input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.search-reused__suggestion {
+    background: var(--color_white);
+    width: 100%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}

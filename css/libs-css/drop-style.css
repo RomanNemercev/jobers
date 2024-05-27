@@ -1,0 +1,286 @@
+body {
+    background-color: #ddd;
+}
+.container {
+    width: 100%;
+    max-width: 849px;
+    padding: 80px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.droplist {
+    min-width: 332px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    height: auto;
+    border: 1px dashed #9747FF;
+    padding: 20px 19px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16.94px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+    position: relative;
+}
+.droplist__fields {
+    padding: 25px 20px;
+}
+.droplist__fields .droplist__selected {
+    display: inline-flex;
+    min-width: 182px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.droplist__fields .droplist__selected .droplist__icon_arrow {
+    position: static;
+    margin-left: 12px;
+}
+.droplist__items {
+    display: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+}
+.droplist__item {
+    list-style: none;
+    padding: 10px 15px 10px 15px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    border-bottom: 1px solid #EDEFF5;
+    color: #2F353D;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+}
+.droplist__item:first-child {
+    border-radius: 5px 5px 0 0;
+}
+.droplist__item:last-child {
+    border-radius: 0 0 5px 5px;
+}
+.droplist_active .droplist__items {
+    display: block;
+}
+.droplist__item:hover {
+    color: #5898FF;
+    background-color: #EFF5FF;
+}
+.droplist__select .droplist__item_active {
+    color: #5898FF;
+    background-color: #EFF5FF;
+}
+.droplist__icon {
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    cursor: pointer;
+}
+.droplist__icon_arrow {
+    transform: rotate(0deg);
+}
+.droplist__icon_arrow path {
+    fill: #9098B4;
+}
+.droplist__icon_cross {
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    background: url('../img/cross.svg') center center no-repeat;
+    display: none;
+}
+.item {
+    padding: 11.5px 15px 11.5px 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #9098B4;
+    position: relative;
+    height: 40px;
+}
+.item p {
+    margin: 0;
+}
+.droplist__selected {
+    cursor: pointer;
+    background-color: #F4F6F8;
+}
+.droplist_active .droplist__selected {
+    color: #2F353D;
+}
+.droplist_active .droplist__result_active {
+    background-color: #EFF5FF;
+    color: #5898FF;
+}
+.droplist__result_active {
+    background-color: #EFF5FF;
+    color: #5898FF;
+}
+.droplist__result_active .droplist__icon_arrow {
+    display: none;
+}
+.droplist_active .droplist__result {
+    display: block;
+}
+.droplist__fields.droplist_active .droplist__result {
+    width: auto;
+    display: inline-flex;
+    min-width: 182px;
+    max-width: 100%;
+}
+.droplist__fields .droplist__result_active .droplist__result_text {
+    padding-right: 20px;
+}
+.droplist__result_active .droplist__icon_cross {
+    display: block;
+}
+.droplist_active .droplist__icon_arrow {
+    transform: rotate(180deg);
+}
+.droplist_active .droplist__icon_arrow path {
+    fill: #2F353D;
+}
+.droplist__result_text {
+    max-width: 240px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.check + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+}
+.check {
+    display: none;
+}
+.check + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.check:checked+label {
+    color: #5898FF;
+    background-color: #EFF5FF;
+}
+.check:checked+label::before {
+    border-color: #5898FF;
+    background: url('../img/check.svg') center center no-repeat;
+    background-color: #5898FF;
+}
+.check:hover+label::before {
+    border-color: #5898FF;
+    background: url('../img/check.svg') center center no-repeat;
+    background-color: #5898FF;
+}
+.droplist__fields .droplist__items {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.droplist__check .droplist__item {
+    padding: 0;
+}
+.droplist__check .droplist__item label {
+    padding: 11.5px 15px 11.5px 15px;
+}
+.droplist__fields {
+    min-width: 301px;
+}
+.droplist__fields .droplist__item {
+    padding: 0;
+    border-color: transparent;
+    margin-bottom: 15px;
+}
+.droplist__fields .droplist__item:last-child {
+    margin-bottom: 0;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.droplist__field {
+    display: block;
+    padding: 11.5px 15px 11.5px 15px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    border: none;
+    background-color: #F4F6F8;
+    height: 40px;
+    border-radius: 5px;
+}
+.droplist__field:focus {
+    background-color: #EFF5FF;
+    outline: 1px solid #5898FF;
+    
+}
+.droplist__fields .droplist__item label {
+    padding: 0;
+    box-sizing: border-box;
+}
+.droplist__result_max .droplist__icon_arrow {
+    display: block;
+}
+.droplist__result_max .droplist__icon_arrow path {
+    fill: #5898FF;
+}
+.droplist__item_nohover:hover {
+    background-color: transparent;
+}
+.droplist__toggle {
+    height: auto;
+}
+.droplist__toggle .droplist__result_text {
+    text-wrap: wrap;
+    height: auto;
+}
+.droplist__toggle .droplist__icon_toggle {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .droplist {
+        margin: 0 auto 10px auto;
+    }
+}
+@media screen and (max-width: 340px) {
+    .droplist {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+        display: block;
+    }
+    .item p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: calc(100% - 50px);
+    }
+    .droplist__result_text {
+        max-width: 195px;
+    }
+}

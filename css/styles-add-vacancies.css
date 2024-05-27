@@ -42,6 +42,7 @@
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 15px;
+    color: var(--color_space);
 }
 
 /*custom btn*/
@@ -96,7 +97,7 @@
 /*}*/
 
 .add__upload-descr {
-    width: 74.5%;
+    width: calc(100% - 165px);
     margin-left: auto;
     padding-top: 46px;
     font-size: 14px;
@@ -138,7 +139,7 @@
     font-weight: 400;
     color: var(--color_space);
     padding: 22px 14px 23px 44px;
-    z-index: 2;
+    /*z-index: 2;*/
 }
 
 .rates__list-dot::before,
@@ -186,75 +187,214 @@
     border: 1px solid var(--color_dodger);
 }
 
-/*popup for skills*/
-.main__skill-popup {
-    left: 0;
-    top: 0;
-    position: fixed;
+/*error sets*/
+.main__post.error--visible {
+    margin-bottom: 52px;
+}
+
+/*droplist sets*/
+.droplist {
+    max-width: 100%;
     width: 100%;
-    height: 100vh;
-    z-index: 10;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    overflow-y: auto;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility .3s ease, opacity .3s ease;
 }
 
-.main__skill-wrapper {
+.droplist__items {
+    width: 100%;
+}
+
+/*any sets*/
+.add__wage-label__min {
+    width: 48.862%;
+    margin-bottom: 0;
+}
+
+.add__wage-label__max {
+    width: 48.862%;
+    margin-bottom: 0;
+}
+
+.add__wage-label__min.error--visible,
+.add__wage-label__max.error--visible {
+    margin-bottom: 29px;
+}
+
+.add__keys-input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+
+.add__tags {
+    margin-bottom: 23px;
+    width: 100%;
+}
+
+/*search city sets*/
+.search-box {
     position: relative;
-    display: flex;
+    margin-bottom: 25px;
+}
+
+#suggestions-pane {
+    position: absolute;
     z-index: 1;
-    max-width: 640px;
-    width: 126%;
-    background-color: var(--color_white);
+    top: 100%;
+    left: 0;
+    background: var(--color_white);
+    width: 100%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    display: none;
+    margin-top: 10px;
     border-radius: 5px;
-    transform: scale(0);
-    transition: transform .8s ease;
 }
 
-.main__skill-popup.main__skill-popup--open {
-    visibility: visible;
-    opacity: 1;
-}
-
-.main__skill-popup.main__skill-popup--open .main__skill-wrapper {
-    transform: scale(1);
-}
-
-.main__content-list {
-    list-style: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 35px;
-}
-
-.main__content-wrap {
-    display: block;
-    position: relative;
-    cursor: pointer;
+.suggestion {
+    font-size: 14px;
+    color: var(--color_space);
     user-select: none;
-    padding-left: 25px;
+    cursor: pointer;
+}
+
+.suggestion:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.search-box__input {
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 5px;
+    color: var(--color_space);
+    background-color: var(--color_athens-gray);
+}
+
+.search-box__input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.search-box__input::placeholder {
+    color: var(--color_bali);
     font-size: 14px;
     font-weight: 400;
 }
 
-.main__content-choose {
-    display: none;
+/*end sets*/
+.add__extra-street__data {
+    width: 100%;
 }
 
-.main__content-choose + .main__content-choose__custom-check {
+.add__extra-street__data:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.add__extra-wage {
+    margin-bottom: 0;
+}
+
+.add__extra-wage.error--visible {
+    margin-bottom: 25px;
+}
+
+.add__extra-house__data:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+/*sets reused input*/
+.add__station-values {
+    margin-bottom: 23px;
+}
+
+/*end sets reused*/
+.add__label {
+    margin-bottom: 0;
+}
+
+.add__label.error--visible {
+    margin-bottom: 35px;
+}
+
+.add__name-company.error--visible {
+    margin-bottom: 53px;
+}
+
+.add__extra-name__label {
+    margin-bottom: 0;
+}
+
+.add__extra-name__label.error--visible {
+    margin-bottom: 30px;
+}
+
+.import__container {
+    background-color: var(--color_white);
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.import {
+    max-width: 435px;
+    min-height: 236px;
+}
+
+.add__import-close {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    background-image: url("../img/skills-ellipse-empty.svg");
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/delete-x.svg");
     background-repeat: no-repeat;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
 }
 
-.main__content-choose:checked + .main__content-choose__custom-check {
-    background-image: url("../img/skills-ellipse-active.svg");
+.import__title {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.import__title-item {
+    margin-right: 10px;
+}
+
+.import__link:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.import__descr {
+    margin-bottom: 37px;
+}
+
+.import__label {
+    margin-bottom: 0;
+    width: calc(100% - 173px);
+}
+
+.import__label.error--visible {
+    margin-bottom: 29px;
+}
+
+.import__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.import__btn {
+    height: fit-content;
+}
+
+.search-bar__form {
+    visibility: hidden;
+}
+
+.close__import {
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform .5s ease-in-out;
 }
