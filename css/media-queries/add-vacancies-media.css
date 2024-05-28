@@ -31,6 +31,14 @@
         margin-bottom: 16px;
     }
 
+    .main__post.error--visible {
+        margin-bottom: 46px;
+    }
+
+    .import__label.error--visible {
+        margin-bottom: 35px;
+    }
+
     .add__option-ai::before {
         top: 1px;
     }
@@ -205,7 +213,7 @@
     }
 
     .add__accordion-control {
-        padding: 9.8px 0;
+        padding: 10.82px 0;
     }
 
     .add__accordion-head {
@@ -257,6 +265,30 @@
 
     .add__contacts-city__data {
         margin-bottom: 16px;
+    }
+
+    #suggestions-pane {
+        margin-top: 11px;
+    }
+
+    .suggestion:not(:last-of-type) {
+        margin-bottom: 11px;
+    }
+
+    .add__contacts-label.error--visible {
+        margin-bottom: 45px;
+    }
+
+    .add__extra-wage.error--visible {
+        margin-bottom: 29px;
+    }
+
+    .add__name-company.error--visible {
+        margin-bottom: 45px;
+    }
+
+    .add__id-code__data {
+        padding-right: 115px;
     }
 
     .add__extra-street {
@@ -452,5 +484,82 @@
         width: 100%;
         margin-right: 0;
         margin-bottom: 7px;
+    }
+
+/*    popup skill choose sets*/
+    .pop-up__container {
+        padding: 0;
+    }
+
+    .pop-up__body {
+        padding: 13px;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .pop-up_close {
+        display: none;
+    }
+
+    .pop-up__title {
+        margin-bottom: 17px;
+    }
+
+    .button-block {
+        margin-top: 39px;
+        gap: 15px;
+    }
+
+    .add__wage-label__min.error--visible, .add__wage-label__max.error--visible {
+        margin-bottom: 37px;
+    }
+
+    .add__wage-label__max.error--visible {
+        margin-bottom: 28px;
+    }
+
+    .tag-options-header {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .tag-options {
+        gap: 11px;
+    }
+
+    .add__keys {
+        margin-bottom: 9px;
+    }
+
+    .add__features-span {
+        display: block;
+    }
+
+    .add__content-features {
+        padding-top: 28px;
+        grid-row-gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add__features-item:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+
+    .add__content-car {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 10px;
+    }
+
+    .add__content-car__title {
+        grid-column: 1 / -1;
+        margin-bottom: 7px;
+    }
+
+    .add__wishes-span {
+        display: block;
     }
 }

@@ -165,7 +165,10 @@
                                 class="main__span-custom mb15">*</span>
                             <textarea name="main__textarea-content" class="main__descr-content track-input"
                                       id="main__textarea-content"></textarea>
-                            <p class="main__descr-note"><span class="main__descr-note"><span class="main__descr-cap">не</span>&nbsp;более 8000&nbsp;символов<span class="main__descr-chr">,</span> </span><span class="main__descr-cap"> осталось</span> символов: <span
+                            <p class="main__descr-note"><span class="main__descr-note"><span
+                                    class="main__descr-cap">не</span>&nbsp;более 8000&nbsp;символов<span
+                                    class="main__descr-chr">,</span> </span><span
+                                    class="main__descr-cap"> осталось</span> символов: <span
                                     class="main__note-custom"> 8000</span></p>
                         </label>
                     </div>
@@ -2484,6 +2487,33 @@
         </div>
     </div>
 </section>
+<div id="popup-ai" class="item__popup-auto vacancies__item-popup--open">
+    <button class="btn-reset auto__close" id="ai-popup-close"></button>
+    <div class="item__popup-wrapper ai">
+        <div class="ai__container">
+            <p class="ai__title f20w700">Генерация текста</p>
+            <p class="ai__descr">Используйте исскуственный интеллект чтобы написать текст к&nbsp;вашей вакансии. Введите
+                название должности и&nbsp;выберите специализацию, искусственный интеллект сформирует текст за&nbsp;вас,
+                далее вы&nbsp;сможете использовать его в&nbsp;качестве описания вашей вакансии или внести собственные
+                правки. Количество генераций ограничено.</p>
+            <p class="main__post-name">Название должности <span class="main__span-custom mb15">*</span></p>
+            <label for="ai-choose-post" class="main__post new__add-name">
+                <input type="text" name="choose-post" id="ai-choose-post" placeholder="Например, водитель категории C" class="main__post-form new__add-name__input track-input" required="">
+                <span class="error">Это поле обязательно для заполнения</span>
+            </label>
+            <p class="add__contacts-city">Город <span class="add__span-custom">*</span></p>
+            <label for="ai-geo-city" class="add__contacts-label new__add-name">
+                <input type="text" class="add__contacts-city__data new__add-name__input track-input" id="ai-geo-city" placeholder="Например, Санкт-Петербург" required="">
+                <span class="error">Это поле обязательно для заполнения</span>
+            </label>
+            <div class="ai__btns-wrapper">
+                <button class="btn-reset btn f15w500 ai__btn-get">Сгенерировать</button>
+                <p class="ai__amount f14w400">Осталось генераций: <span class="ai__amount-item">1</span></p>
+                <button class="btn-reset new__btn-cancel f15w500 ai__btn-no">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
 <!-- connect first for search-drop -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -398,3 +398,51 @@
     transform: scaleY(0);
     transition: transform .5s ease-in-out;
 }
+
+.ai__btn-get {
+    color: var(--color_white);
+    margin-right: 15px;
+}
+
+.ai__amount {
+    color: var(--color_bali);
+}
+
+.ai__btns-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.ai__btn-no {
+    margin-left: auto;
+    min-width: 98px;
+}
+
+.ai {
+    max-width: 652px;
+    min-height: 450px;
+}
+
+.ai__container {
+    padding: 25px;
+}
+
+.ai__title {
+    margin-bottom: 9px;
+}
+
+.ai__descr {
+    margin-bottom: 37px;
+}
+
+.ai__container .main__span-custom {
+    margin-bottom: 11px;
+}
+
+.ai__container .main__post-form {
+    margin-bottom: 19px;
+}
+
+.ai__container .add__contacts-city__data {
+    margin-bottom: 40px;
+}

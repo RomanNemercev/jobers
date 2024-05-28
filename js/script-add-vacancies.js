@@ -384,3 +384,11 @@ addPopupOpenHandler('#import-btn', 'popup-import');
 addPopupCloseHandler('import-popup-close', 'popup-import');
 addPopupCloseOnBackgroundClickHandler('popup-import');
 addPopupCloseOnEscKeyHandler('popup-import');
+
+// script for ai
+document.querySelector('.ai__btn-get').addEventListener('click', function() {
+    let counter = document.querySelector('.ai__amount-item');
+    if(counter.innerText > 0) {
+        counter.innerText = counter.innerText - 1;
+    }
+});
