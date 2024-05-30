@@ -446,3 +446,64 @@
 .ai__container .add__contacts-city__data {
     margin-bottom: 40px;
 }
+
+/*screen loader css*/
+.dots-wrapper {
+    height: 39px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; /* Transition for smooth appearance */
+    background-color: navy;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color_white);
+}
+
+.dots-top, .dots-bottom {
+    display: flex;
+}
+
+.dots-top {
+    width: 65px;
+    justify-content: space-between;
+    margin-right: 25px;
+    animation: dot-top .5s alternate ease-out infinite;
+}
+
+.dots-bottom {
+    width: 65px;
+    margin-left: 29px;
+    justify-content: space-between;
+    animation: dot-bottom .5s alternate ease-out infinite;
+}
+
+@keyframes dot-top {
+    from {
+        transform: translateY(29px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes dot-bottom  {
+    from {
+        transform: translateY(-29px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

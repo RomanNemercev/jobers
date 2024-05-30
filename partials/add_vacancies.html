@@ -98,9 +98,7 @@
         <h2 class="add__title title">Создание вакансии</h2>
         <div class="add__option">
             <button class="btn-reset add__option-upload" id="import-btn">Загрузить вакансию с работного сайта</button>
-            <a href="#"
-               class="add__option-ai">Генерация
-                описания ИИ</a>
+            <button class="add__option-ai btn-reset" id="ai-gen-get">Генерация описания ИИ</button>
         </div>
     </div>
     <div id="popup-import" class="item__popup-auto">
@@ -2487,7 +2485,7 @@
         </div>
     </div>
 </section>
-<div id="popup-ai" class="item__popup-auto vacancies__item-popup--open">
+<div id="popup-ai" class="item__popup-auto">
     <button class="btn-reset auto__close" id="ai-popup-close"></button>
     <div class="item__popup-wrapper ai">
         <div class="ai__container">
@@ -2498,12 +2496,14 @@
                 правки. Количество генераций ограничено.</p>
             <p class="main__post-name">Название должности <span class="main__span-custom mb15">*</span></p>
             <label for="ai-choose-post" class="main__post new__add-name">
-                <input type="text" name="choose-post" id="ai-choose-post" placeholder="Например, водитель категории C" class="main__post-form new__add-name__input track-input" required="">
+                <input type="text" name="choose-post" id="ai-choose-post" placeholder="Например, водитель категории C"
+                       class="main__post-form new__add-name__input track-input" required="">
                 <span class="error">Это поле обязательно для заполнения</span>
             </label>
             <p class="add__contacts-city">Город <span class="add__span-custom">*</span></p>
             <label for="ai-geo-city" class="add__contacts-label new__add-name">
-                <input type="text" class="add__contacts-city__data new__add-name__input track-input" id="ai-geo-city" placeholder="Например, Санкт-Петербург" required="">
+                <input type="text" class="add__contacts-city__data new__add-name__input track-input" id="ai-geo-city"
+                       placeholder="Например, Санкт-Петербург" required="">
                 <span class="error">Это поле обязательно для заполнения</span>
             </label>
             <div class="ai__btns-wrapper">
@@ -2511,6 +2511,17 @@
                 <p class="ai__amount f14w400">Осталось генераций: <span class="ai__amount-item">1</span></p>
                 <button class="btn-reset new__btn-cancel f15w500 ai__btn-no">Отмена</button>
             </div>
+        </div>
+    </div>
+    <!--    screen loader-->
+    <div class="dots-wrapper">
+        <div class="dots-top">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="dots-bottom">
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
     </div>
 </div>

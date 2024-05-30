@@ -18,10 +18,13 @@
     }
 
 /*    move import*/
-    .item__popup-auto {
+    #popup-import {
         visibility: visible;
         opacity: 1;
         position: inherit;
+        height: auto;
+        background-color: transparent;
+        margin-bottom: 18px;
     }
 
 /*    add header*/
@@ -47,12 +50,6 @@
         transform: scale(1);
         max-width: 100%;
         min-height: auto;
-    }
-
-    .item__popup-auto {
-        height: auto;
-        background-color: transparent;
-        margin-bottom: 18px;
     }
 
     .import__title-item {
@@ -561,5 +558,51 @@
 
     .add__wishes-span {
         display: block;
+    }
+
+    .ai {
+        height: 100vh;
+    }
+
+    .ai__container {
+        padding: 13px;
+    }
+
+    .ai__descr {
+        line-height: 18px;
+        margin-bottom: 17px;
+    }
+
+    .ai__container .main__span-custom {
+        margin-bottom: 7px;
+    }
+
+    .ai__container .main__post-form {
+        margin-bottom: 12px;
+    }
+
+    .ai__btns-wrapper {
+        position: relative;
+    }
+
+    .ai__amount {
+        position: absolute;
+        top: -34px;
+    }
+
+    .ai__container .add__contacts-city__data {
+        margin-bottom: 47px;
+    }
+
+    .ai__btn-no {
+        margin-left: 0;
+    }
+
+    .ai__container .main__post.error--visible {
+        margin-bottom: 41px;
+    }
+
+    .ai__container .add__contacts-label.error--visible {
+        margin-bottom: 76px;
     }
 }

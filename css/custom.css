@@ -2530,12 +2530,17 @@
 .add__option-ai {
     position: relative;
     padding-left: 25px;
+    color: var(--color_dodger);
 }
 
 .add__option-ai::before {
     content: url("../img/add__option-ai.svg");
     position: absolute;
     left: 0;
+}
+
+.add__option-ai:focus-visible {
+    outline: none;
 }
 
 .add__content {

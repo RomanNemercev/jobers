@@ -385,6 +385,16 @@ addPopupCloseHandler('import-popup-close', 'popup-import');
 addPopupCloseOnBackgroundClickHandler('popup-import');
 addPopupCloseOnEscKeyHandler('popup-import');
 
+// script for popup ai
+addPopupOpenHandler('#ai-gen-get', 'popup-ai');
+addPopupCloseHandler('ai-popup-close', 'popup-ai');
+addPopupCloseOnBackgroundClickHandler('popup-ai');
+addPopupCloseOnEscKeyHandler('popup-ai');
+document.querySelector('.ai__btn-no').addEventListener('click', function() {
+    document.getElementById('popup-ai').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+})
+
 // script for ai
 document.querySelector('.ai__btn-get').addEventListener('click', function() {
     let counter = document.querySelector('.ai__amount-item');
