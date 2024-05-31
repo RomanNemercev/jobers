@@ -165,12 +165,12 @@
 
 .nav__logo {
     display: inline-block;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .nav__logo-icon {
     width: 149px;
-    transform: translate(45px, 15px);
+    transform: translate(45px, 25px);
 }
 
 /*search-bar*/

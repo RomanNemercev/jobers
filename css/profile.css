@@ -1,0 +1,53 @@
+
+/*header tabs*/
+.profile__tab {
+    padding: 11.39px 20.7px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_space);
+    background: var(--color_white);
+}
+
+.profile__tab:first-of-type {
+    border-radius: 5px 0 0 5px;
+}
+
+.profile__tab:last-of-type {
+    border-radius: 0 5px 5px 0;
+}
+
+.profile__tabs-wrapper {
+    font-size: 0;
+    margin-bottom: 50px;
+}
+
+.profile__tab--active {
+    font-weight: 600;
+    color: var(--color_white);
+    background-color: var(--color_space);
+}
+
+/*main box*/
+.main__info {
+    padding: 25px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+    padding-top: 21px;
+}
+
+.main__info-title {
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_bali);
+}
+
+.main__info-title::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 50px);
+    height: 1px;
+    background-color: var(--color_gray);
+    bottom: -21px;
+    left: -25px;
+}

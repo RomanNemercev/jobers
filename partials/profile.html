@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jobers - Кандидаты</title>
+    <title>Jobers - Профиль</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
+    <!--    not load simplebar-->
+    <!--    <link-->
+    <!--            rel="stylesheet"-->
+    <!--            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">-->
+<!--    <link rel="stylesheet" href="../css/libs-css/simplebar.css">-->
+<!--    <link rel="stylesheet" href="../css/libs-css/choices.min.css">-->
+<!--    <link rel="stylesheet" href="../css/libs-css/select.css">-->
     <link rel="stylesheet" href="../css/custom.css">
-    <link rel="stylesheet" href="../css/candidates-null.css">
+    <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../css/media.css">
 </head>
 <body class="body-page">
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container">
-        <a href="#" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании" class="nav__logo-icon"></a>
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
         <ul class="nav__links">
             <li class="nav__links-caption">Рекрутинг</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
-            <li class="nav__link list-reset"><a href="../partials/vacancies.html" class="nav__link-item link-vacancies">Вакансии</a>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies">Вакансии</a>
             </li>
-            <li class="nav__link list-reset"><a href="candidates.html"
-                                                class="nav__link-item link-candidates active-page">Кандидаты</a></li>
+            <li class="nav__link list-reset"><a href="../partials/candidates.html"
+                                                class="nav__link-item link-candidates">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
             <li class="nav__links-caption">Организация</li>
@@ -35,7 +44,7 @@
         </ul>
         <ul class="nav__links">
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
-            <li class="nav__link list-reset"><a href="profile.html" class="nav__link-item link-settings">Настройки</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings active-page">Настройки</a></li>
         </ul>
     </div>
 </section>
@@ -84,14 +93,53 @@
         </div>
     </div>
 </section>
-<!--основной контент страницы-->
-<section class="cannull container">
-    <div class="cannull__container">
-        <h1 class="cannull__title f25w600">Кандидатов пока нет</h1>
-        <p class="cannull__desc f15w400">Новые отклики поступят в этот раздел, заполните вашу первую вакансию.</p>
-        <a href="vacancies.html" class="btn-reset btn">Добавить вакансию</a>
+<div class="profile container">
+    <div class="profile__tabs-wrapper">
+        <button class="btn-reset profile__tab profile__tab--active">Профиль</button>
+        <button class="btn-reset profile__tab">Уведомления</button>
+        <button class="btn-reset profile__tab">Менеджеры</button>
+        <button class="btn-reset profile__tab">Лицевой счет</button>
+        <button class="btn-reset profile__tab">Интеграции</button>
+        <button class="btn-reset profile__tab">Шаблоны писем</button>
     </div>
-</section>
-<script src="../js/script.js"></script>
+    <div class="profile__main">
+        <div class="profile__main-main main">
+            <div class="main__info">
+                <p class="main__info-title">Ваш профиль</p>
+                <div class="main__info-content">
+                    <img src="../img/profile-img.png" alt="Фотография кандидата" class="main__info-img">
+                    <div class="main__info-descr">
+                        <p class="main__info-name f20w600">Иванов Иван Иванович</p>
+                        <p class="main__info-position f15w400 c-bali">Руководитель отдела</p>
+                        <div class="main__info-contacts">
+                            <div class="main__user-phone">
+                                <span class="main__phone-title f15w400">Телефон:</span>
+                                <a href="tel:+79509990222" class="main__phone-value"></a>
+                            </div>
+                            <div class="main__user-mail">
+                                <span class="main__mail-title">Email:</span>
+                                <a href="mailto:pochta@mail.ru" class="main__mail-value"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--optimized-->
+<!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>-->
+<!--<script src="../js/libs-js/popper.min.js"></script>-->
+<!--optimized-->
+<!--<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>-->
+<!--<script src="../js/libs-js/tippy-bundle.umd.js"></script>-->
+<!--not load simplebar-->
+<!--<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>-->
+<!--<script src="../js/libs-js/simplebar.min.js"></script>-->
+<!--<script src="../js/libs-js/choices.min.js"></script>-->
+<!--<script src="../js/jquery_3.3.1.min.js"></script>-->
+<!--<script src="../js/libs-js/select.js"></script>-->
+<!--<script src="../js/script.js"></script>-->
 </body>
 </html>
