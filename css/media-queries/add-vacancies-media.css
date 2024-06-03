@@ -492,6 +492,7 @@
         padding: 13px;
         height: 100vh;
         border-radius: 0;
+        width: 100%;
     }
 
     .pop-up_close {
@@ -562,6 +563,7 @@
 
     .ai {
         height: 100vh;
+        max-width: 100%;
     }
 
     .ai__container {

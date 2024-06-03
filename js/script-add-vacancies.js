@@ -390,15 +390,27 @@ addPopupOpenHandler('#ai-gen-get', 'popup-ai');
 addPopupCloseHandler('ai-popup-close', 'popup-ai');
 addPopupCloseOnBackgroundClickHandler('popup-ai');
 addPopupCloseOnEscKeyHandler('popup-ai');
-document.querySelector('.ai__btn-no').addEventListener('click', function() {
+document.querySelector('.ai__btn-no').addEventListener('click', function () {
     document.getElementById('popup-ai').classList.remove('vacancies__item-popup--open');
     document.body.classList.remove('stop-scroll');
 })
 
 // script for ai
-document.querySelector('.ai__btn-get').addEventListener('click', function() {
+document.querySelector('.ai__btn-get').addEventListener('click', function () {
     let counter = document.querySelector('.ai__amount-item');
-    if(counter.innerText > 0) {
+    if (counter.innerText > 0) {
         counter.innerText = counter.innerText - 1;
     }
 });
+
+document.querySelector('.ai__btn-get').addEventListener('click', function () {
+    document.querySelector('.ai').style.transform = 'scale(0)';
+    document.querySelector('.dots-wrapper').classList.add('dots-wrapper--active');
+})
+
+document.getElementById('popup-ai').addEventListener('click', function (event) {
+    if (!event.target.closest('.ai')) {
+        document.querySelector('.ai').style.transform = 'inherit';
+        document.querySelector('.dots-wrapper').classList.remove('dots-wrapper--active');
+    }
+})

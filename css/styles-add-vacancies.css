@@ -458,7 +458,6 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear; /* Transition for smooth appearance */
-    background-color: navy;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -507,3 +506,18 @@
         transform: translateY(0);
     }
 }
+
+.dots-wrapper--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*.ai {*/
+/*    transform: scale(1);*/
+/*    opacity: 0;*/
+/*    transition: opacity .3s ease-out;*/
+/*}*/
+
+/*.item__popup-auto.vacancies__item-popup--open .ai {*/
+/*    opacity: 1;*/
+/*}*/

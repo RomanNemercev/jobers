@@ -11,9 +11,9 @@
     <!--    <link-->
     <!--            rel="stylesheet"-->
     <!--            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">-->
-<!--    <link rel="stylesheet" href="../css/libs-css/simplebar.css">-->
-<!--    <link rel="stylesheet" href="../css/libs-css/choices.min.css">-->
-<!--    <link rel="stylesheet" href="../css/libs-css/select.css">-->
+    <!--    <link rel="stylesheet" href="../css/libs-css/simplebar.css">-->
+    <!--    <link rel="stylesheet" href="../css/libs-css/choices.min.css">-->
+    <!--    <link rel="stylesheet" href="../css/libs-css/select.css">-->
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../css/media.css">
@@ -44,7 +44,8 @@
         </ul>
         <ul class="nav__links">
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings active-page">Настройки</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings active-page">Настройки</a>
+            </li>
         </ul>
     </div>
 </section>
@@ -109,20 +110,54 @@
                 <div class="main__info-content">
                     <img src="../img/profile-img.png" alt="Фотография кандидата" class="main__info-img">
                     <div class="main__info-descr">
-                        <p class="main__info-name f20w600">Иванов Иван Иванович</p>
-                        <p class="main__info-position f15w400 c-bali">Руководитель отдела</p>
+                        <p class="main__info-name f20w600">Иванов Андрей Иванович</p>
+                        <p class="main__info-position f15w400 c-bali">Администратор</p>
                         <div class="main__info-contacts">
                             <div class="main__user-phone">
                                 <span class="main__phone-title f15w400">Телефон:</span>
-                                <a href="tel:+79509990222" class="main__phone-value"></a>
+                                <a href="tel:+79509990222" class="main__phone-value c-bali">8-950-999-02-22</a>
                             </div>
                             <div class="main__user-mail">
-                                <span class="main__mail-title">Email:</span>
-                                <a href="mailto:pochta@mail.ru" class="main__mail-value"></a>
+                                <span class="main__mail-title f15w400">Email:</span>
+                                <a href="mailto:pochta@mail.ru" class="main__mail-value c-bali">pochta@mail.ru</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <button class="btn-reset btn-cancel main__btn-change">Изменить</button>
+            </div>
+            <div class="main__pass">
+                <p class="main__pass-title">Изменение пароля</p>
+                <div class="main__pass-content">
+                    <p class="main__current-title f15w400">Текущий пароль <span class="add__span-custom">*</span></p>
+                    <label for="current-pass" class="main__current-label new__add-name">
+                        <input type="password" class="main__current-input new__add-name__input" id="current-pass"
+                               placeholder="************" required="">
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                    <div class="main__pass-wrapper">
+                        <div class="main__pass-new">
+                            <p class="main__new-title f15w400">Новый пароль <span class="add__span-custom">*</span></p>
+                            <label for="new-pass" class="main__current-label new__add-name">
+                                <input type="password" class="main__new-input new__add-name__input" id="new-pass"
+                                       placeholder="************" required="">
+                                <span class="error">Это поле обязательно для заполнения</span>
+                            </label>
+                        </div>
+                        <div class="main__pass-repeat">
+                            <p class="main__repeat-title f15w400">Новый пароль <span class="add__span-custom">*</span>
+                            </p>
+                            <label for="repeat-pass" class="main__current-label new__add-name">
+                                <input type="password" class="main__current-input new__add-name__input" id="repeat-pass"
+                                       placeholder="************" required="">
+                                <span class="error">Это поле обязательно для заполнения</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <p class="main__pass-descr f15w400 c-bali">Пароль должен состоять минимум из&nbsp;8&nbsp;символов, содержать
+                    минимум одну строчную, одну прописную букву и&nbsp;одну цифру</p>
+                <button class="btn-reset btn-disable main__btn-save">Сохранить</button>
             </div>
         </div>
     </div>
@@ -140,6 +175,6 @@
 <!--<script src="../js/libs-js/choices.min.js"></script>-->
 <!--<script src="../js/jquery_3.3.1.min.js"></script>-->
 <!--<script src="../js/libs-js/select.js"></script>-->
-<!--<script src="../js/script.js"></script>-->
+<script src="../js/script.js"></script>
 </body>
 </html>

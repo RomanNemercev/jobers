@@ -274,6 +274,16 @@ img {
     user-select: none;
 }
 
+.btn-disable {
+    background-color: var(--color_athens-gray);
+    color: var(--color_bali);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    user-select: none;
+}
+
 .btn-succes {
     min-width: 116px;
     background-color: var(--color_succes);
