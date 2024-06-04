@@ -1,30 +1,14 @@
 /*header tabs*/
-.profile__tab {
-    padding: 11.39px 20.7px;
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--color_space);
-    background: var(--color_white);
-}
-
-.profile__tab:first-of-type {
-    border-radius: 5px 0 0 5px;
-}
-
-.profile__tab:last-of-type {
-    border-radius: 0 5px 5px 0;
-}
-
 .profile__tabs-wrapper {
-    font-size: 0;
+    font-size: 5px;
     margin-bottom: 49px;
 }
 
-.profile__tab--active {
-    font-weight: 600;
-    color: var(--color_white);
-    background-color: var(--color_space);
-}
+/*.profile__tab--active {*/
+/*    font-weight: 600;*/
+/*    color: var(--color_white);*/
+/*    background-color: var(--color_space);*/
+/*}*/
 
 /*main box*/
 .main__info {
@@ -124,17 +108,191 @@
     font-weight: 400;
 }
 
-.main__current-input {
+.main__current-input,
+.change__last-name__input,
+.change__first-name__input,
+.change__third-name__input,
+.change__number__input,
+.change__mail__input {
     display: block;
     font-size: 14px;
     width: 100%;
     border: none;
-    padding: 11px 15px;
+    padding: 11.96px 15px;
     border-radius: 5px;
     background-color: var(--color_athens-gray);
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+}
+
+.change__last-name__input:focus,
+.change__first-name__input:focus,
+.change__third-name__input:focus,
+.change__number__input:focus,
+.change__mail__input:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
 }
 
 .main__pass-wrapper {
     display: flex;
+    gap: 15px;
+}
+
+.main__current-title {
+    margin-bottom: 15px;
+}
+
+.main__pass-new,
+.main__pass-repeat {
+    flex: 1;
+}
+
+.main__new-title {
+    margin-bottom: 14px;
+}
+
+.main__repeat-title {
+    margin-bottom: 14px;
+}
+
+.main__pass-descr {
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+/*popup*/
+.change__container {
+    position: relative;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+}
+
+.change__background {
+    position: absolute;
+    max-width: 150px;
+    max-height: 150px;
+    z-index: 3;
+    border-radius: 5px;
+    left: calc(50% - 75px);
+}
+
+.change__input[type="file"] {
+    display: none;
+}
+
+.change__custom-btn__label {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: calc(50% - 75px);
+    background-image: url("../img/profile-change-avatar.png");
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.change__input-wrapper {
+    position: relative;
+    height: 183px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.change {
+    min-height: 815px;
+    min-width: 451px;
+}
+
+.change__descr {
+    margin-bottom: 39px;
+}
+
+.change__input-btn {
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_dodger);
+}
+
+.change__input-btn:focus-visible {
+    outline: none;
+}
+
+.change__first-label.error--visible {
+    margin-bottom: 54px;
+}
+
+.change__title {
+    margin-bottom: 10px;
+}
+
+.change__last-name {
+    margin-bottom: 9px;
+}
+
+.change__last-name__input {
+    margin-bottom: 16px;
+}
+
+.change__first-name__input {
+    margin-bottom: 15px;
+}
+
+.change__first-name {
+    margin-bottom: 10px;
+}
+
+.change__third-name {
+    margin-bottom: 10px;
+}
+
+.change__third-name__input {
+    margin-bottom: 15px;
+}
+
+.change__number-title {
+    margin-bottom: 10px;
+}
+
+.change__btns-wrapper {
+    display: flex;
+}
+
+.change__number__input {
+    margin-bottom: 15px;
+}
+
+.change__mail-title {
+    margin-bottom: 10px;
+}
+
+.change__mail__input {
+    margin-bottom: 40px;
+}
+
+.change__btn-save {
+    min-width: 120px;
+    margin-right: 15px;
+}
+
+.save__container {
+    position: relative;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+}
+
+.save {
+    min-width: 367px;
+    min-height: 102px;
+}
+
+.save__title {
+    margin-bottom: 9px;
 }

@@ -1998,7 +1998,7 @@
 .vacancies__content--active {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 .add-values {

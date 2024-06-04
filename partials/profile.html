@@ -96,15 +96,16 @@
 </section>
 <div class="profile container">
     <div class="profile__tabs-wrapper">
-        <button class="btn-reset profile__tab profile__tab--active">Профиль</button>
-        <button class="btn-reset profile__tab">Уведомления</button>
-        <button class="btn-reset profile__tab">Менеджеры</button>
-        <button class="btn-reset profile__tab">Лицевой счет</button>
-        <button class="btn-reset profile__tab">Интеграции</button>
-        <button class="btn-reset profile__tab">Шаблоны писем</button>
+        <button class="btn-reset profile__tab vacancies__value vacancies__value--active" data-path="main">Профиль
+        </button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="nots">Уведомления</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="mans">Менеджеры</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="bank">Лицевой счет</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="colab">Интеграции</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="temps">Шаблоны писем</button>
     </div>
     <div class="profile__main">
-        <div class="profile__main-main main">
+        <div class="profile__main-main main vacancies__content vacancies__content--active" data-target="main">
             <div class="main__info">
                 <p class="main__info-title">Ваш профиль</p>
                 <div class="main__info-content">
@@ -124,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn-reset btn-cancel main__btn-change">Изменить</button>
+                <button class="btn-reset btn-cancel main__btn-change" id="change-open">Изменить</button>
             </div>
             <div class="main__pass">
                 <p class="main__pass-title">Изменение пароля</p>
@@ -145,7 +146,8 @@
                             </label>
                         </div>
                         <div class="main__pass-repeat">
-                            <p class="main__repeat-title f15w400">Новый пароль <span class="add__span-custom">*</span>
+                            <p class="main__repeat-title f15w400">Повторите пароль <span
+                                    class="add__span-custom">*</span>
                             </p>
                             <label for="repeat-pass" class="main__current-label new__add-name">
                                 <input type="password" class="main__current-input new__add-name__input" id="repeat-pass"
@@ -155,10 +157,70 @@
                         </div>
                     </div>
                 </div>
-                <p class="main__pass-descr f15w400 c-bali">Пароль должен состоять минимум из&nbsp;8&nbsp;символов, содержать
+                <p class="main__pass-descr f15w400 c-bali">Пароль должен состоять минимум из&nbsp;8&nbsp;символов,
+                    содержать
                     минимум одну строчную, одну прописную букву и&nbsp;одну цифру</p>
-                <button class="btn-reset btn-disable main__btn-save">Сохранить</button>
+                <button class="btn-reset btn-disable main__btn-save" id="final-save">Сохранить</button>
             </div>
+        </div>
+        <div class="profile__main-nots nots vacancies__content" data-target="nots"></div>
+        <div class="profile__main-mans mans vacancies__content" data-target="mans"></div>
+        <div class="profile__main-bank bank vacancies__content" data-target="bank"></div>
+        <div class="profile__main-colab colab vacancies__content" data-target="colab"></div>
+        <div class="profile__main-temps temps vacancies__content" data-target="temps"></div>
+    </div>
+</div>
+
+<div class="item__popup-auto" id="edit-popup">
+    <button class="btn-reset auto__close" id="popup-edit-close"></button>
+    <div class="item__popup-wrapper change">
+        <div class="change__container">
+            <p class="change__title f20w700">Редактирование профиля</p>
+            <p class="change__descr f15w400">Это ваш профиль</p>
+            <div class="change__input-wrapper">
+                <div class="change__preview">
+                    <!-- as default the img won't have a src here. But I added it because we can see what we're styling -->
+                    <img src="" alt="" class="change__background">
+                </div>
+                <input type="file" id="file-upload" class="change__input">
+                <label for="file-upload" class="change__custom-btn__label">Upload File</label>
+                <button id="upload-btn" class="change__input-btn btn-reset">Загрузить</button>
+            </div>
+            <p class="change__last-name f14w400">Фамилия</p>
+            <label for="last-name" class="change__last-label">
+                <input type="text" class="change__last-name__input" id="last-name"
+                       placeholder="Иванов">
+            </label>
+            <p class="change__first-name f14w400">Имя</p>
+            <label for="first-name" class="change__first-label">
+                <input type="text" class="change__first-name__input" id="first-name"
+                       placeholder="Иван">
+            </label>
+            <p class="change__third-name f14w400">Отчество</p>
+            <label for="third-name">
+                <input type="text" class="change__third-name__input" id="third-name" placeholder="Иванович">
+            </label>
+            <p class="change__number-title f14w400">Телефон</p>
+            <label for="change-number">
+                <input type="tel" class="change__number__input phone-input" id="change-number" placeholder="+7">
+            </label>
+            <p class="change__mail-title f14w400">Электронная почта</p>
+            <label for="change-mail">
+                <input type="email" class="change__mail__input" id="change-mail" placeholder="ivan@mail.ru">
+            </label>
+            <div class="change__btns-wrapper">
+                <button class="btn-reset btn change__btn-save" id="save-changes">Сохранить</button>
+                <button class="btn-reset btn-cancel change__btn-cancel">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="item__popup-auto" id="save-popup">
+    <button class="btn-reset auto__close" id="popup-save-close"></button>
+    <div class="item__popup-wrapper save">
+        <div class="save__container">
+            <p class="save__title f20w700">Изменение пароля</p>
+            <p class="save__descr f15w400">Ваш пароль успешно изменен!</p>
         </div>
     </div>
 </div>
@@ -175,6 +237,8 @@
 <!--<script src="../js/libs-js/choices.min.js"></script>-->
 <!--<script src="../js/jquery_3.3.1.min.js"></script>-->
 <!--<script src="../js/libs-js/select.js"></script>-->
+<script src="../js/libs-js/custom-popup.js"></script>
+<script src="../js/profile-scripts.js"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>
