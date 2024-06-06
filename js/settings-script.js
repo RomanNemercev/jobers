@@ -119,4 +119,3 @@ addPopupOpenHandler('#final-save', 'save-popup');
 addPopupCloseHandler('popup-save-close', 'save-popup');
 addPopupCloseOnBackgroundClickHandler('save-popup');
 addPopupCloseOnEscKeyHandler('save-popup');
-
