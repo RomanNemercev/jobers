@@ -351,4 +351,8 @@
     .container {
         padding: 77px 13px 0 13px;
     }
+
+    .profile {
+        padding: 77px 13px 50px 13px;
+    }
 }

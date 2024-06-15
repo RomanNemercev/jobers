@@ -257,7 +257,7 @@
                         </div>
                     </div>
 
-                    <div class="button__c default__button">Сохранить</div>
+                    <div class="button__c default__button nots__set-save">Сохранить</div>
                 </div>
             </div>
 
@@ -294,7 +294,7 @@
                         </div>
                     </div>
 
-                    <div class="button__c default__button">Сохранить</div>
+                    <div class="button__c default__button cabinet__container-save">Сохранить</div>
                 </div>
             </div>
         </div>
@@ -343,7 +343,7 @@
                     <div class="manager">
                         <div class="cabinet__box cabinet__box_image"><img src="../img/manager-nophoto.png" alt=""></div>
                         <div class="cabinet__box cabinet__box_info">
-                            <p class="cabinet__title cabinet__text_bold">Олег Тинькофф</p>
+                            <p class="cabinet__title cabinet__text_bold">Олег Тиньков</p>
                             <p class="cabinet__subtitle">Менеджер</p>
                             <p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span>
                             </p>
@@ -401,9 +401,8 @@
                 <div class="cabinet cabinet__name_top">Ваши менеджеры</div>
 
                 <!-- Добавить при отстутствии блоков менеджеров -->
-                <div class="cabinet cabinet__container">
-                    <div class="button__c fill__button show__popup add-new-man" data-popup="new__manager">Добавить
-                        менеджера
+                <div class="cabinet cabinet__container cabinet__container-null">
+                    <div class="button__c fill__button show__popup add-new-man add-new-man__null" data-popup="new__manager">Добавить менеджера
                     </div>
                 </div>
 
@@ -432,14 +431,14 @@
             <div class="cabinet__block cabinet__block_services">
                 <div class="cabinet cabinet__name_top">Дополнительные услуги</div>
                 <div class="cabinet cabinet__container">
-                    <div class="cabinet__box cabinet__box_info">
+                    <div class="cabinet__box cabinet__box_info container__non-btn">
                         <p class="cabinet__title">Рерайтинг вакансии</p>
                         <p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span>
                         </p>
-                        <p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">2 500 руб.</span>
+                        <p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">2500 руб.</span>
                         </p>
                     </div>
-                    <div class="cabinet__box cabinet__box_info">
+                    <div class="cabinet__box cabinet__box_info container__non-btn">
                         <p class="cabinet__title">Продвижение на сайте Avito (x5), 14 дней</p>
                         <p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span>
                         </p>
@@ -513,7 +512,7 @@
                     <div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование (без
                         отклика)</p> <span class="cabinet__link edit__email_template show__popup edit-think"
                                            data-popup="edittemplate_email">Редактировать</span></div>
-                    <div class="email__templates_box"><p class="cabinet__text_bold">Отказ</p> <span
+                    <div class="email__templates_box"><p class="cabinet__text_bold cabinet__container-man__denied">Отказ</p> <span
                             class="cabinet__link edit__email_template show__popup edit-think"
                             data-popup="edittemplate_email">Редактировать</span>
                     </div>
@@ -631,10 +630,10 @@
                     <input id="manager-add-add" class="check" type="checkbox">
                     <label for="manager-add-add">Добавление и смена ответственного по вакансии</label>
                 </div>
-                <div class="field__box field__box_check">
-                    <input id="manager-view-add" class="check" type="checkbox">
-                    <label for="manager-view-add">Просмотр только тех вакансий, в которых назначен ответственным</label>
-                </div>
+<!--                <div class="field__box field__box_check">-->
+<!--                    <input id="manager-view-add" class="check" type="checkbox">-->
+<!--                    <label for="manager-view-add">Просмотр только тех вакансий, в которых назначен ответственным</label>-->
+<!--                </div>-->
             </div>
 
 
@@ -689,11 +688,11 @@
                     <input id="manager-add-edit" class="check" type="checkbox">
                     <label for="manager-add-edit">Добавление и смена ответственного по вакансии</label>
                 </div>
-                <div class="field__box field__box_check">
-                    <input id="manager-view-edit" class="check" type="checkbox">
-                    <label for="manager-view-edit">Просмотр только тех вакансий, в которых назначен
-                        ответственным</label>
-                </div>
+<!--                <div class="field__box field__box_check">-->
+<!--                    <input id="manager-view-edit" class="check" type="checkbox">-->
+<!--                    <label for="manager-view-edit">Просмотр только тех вакансий, в которых назначен-->
+<!--                        ответственным</label>-->
+<!--                </div>-->
             </div>
 
 
@@ -767,7 +766,7 @@
                     <input type="text" class="field" placeholder="">
                 </div>
                 <div class="field__box">
-                    <p class="field__name_popup">Вакансии Jobers</p>
+                    <p class="field__name_popup field__box_mb">Вакансии Jobers</p>
                     <div class="droplist droplist__select">
                         <div class="form__list" action="">
                             <div class="droplist__selected item droplist__result item"><span
@@ -787,7 +786,7 @@
                     </div>
                 </div>
                 <div class="field__box">
-                    <p class="field__name_popup">Воронка/Статус</p>
+                    <p class="field__name_popup field__box_mb">Воронка/Статус</p>
                     <div class="droplist droplist__select">
                         <div class="form__list" action="">
                             <div class="droplist__selected item droplist__result item"><span
@@ -940,7 +939,7 @@
                     </label>
                 </div>
                 <div class="field__box">
-                    <p class="field__name_popup">Вакансии Jobers</p>
+                    <p class="field__name_popup field__box_mb">Вакансии Jobers</p>
                     <div class="droplist droplist__select">
                         <div class="form__list" action="">
                             <div class="droplist__selected item droplist__result item droplist__result_active"><span
@@ -961,7 +960,7 @@
                     </div>
                 </div>
                 <div class="field__box">
-                    <p class="field__name_popup">Воронка/Статус</p>
+                    <p class="field__name_popup field__box_mb">Воронка/Статус</p>
                     <div class="droplist droplist__select">
                         <div class="form__list" action="">
                             <div class="droplist__selected item droplist__result item droplist__result_active"><span

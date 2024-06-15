@@ -196,7 +196,7 @@ document.getElementById('delete-man-popup-cancel').addEventListener('click', fun
 
 let vacancyBox =
     `<div class="field__box">
-    <p class="field__name_popup">Вакансии Jobers</p>
+    <p class="field__name_popup field__box_mb">Вакансии Jobers</p>
     <div class="droplist droplist__select">
         <div class="form__list" action="">
             <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
@@ -212,7 +212,7 @@ let vacancyBox =
     </div>
 </div>
 <div class="field__box">
-    <p class="field__name_popup">Воронка/Статус</p>
+    <p class="field__name_popup field__box_mb">Воронка/Статус</p>
     <div class="droplist droplist__select">
         <div class="form__list" action="">
             <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
