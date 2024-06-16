@@ -581,7 +581,7 @@
     top: -90px;
     height: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -1401,7 +1401,7 @@
     border-radius: 10px;
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 1310px) {
     .cabinet__container {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -1410,7 +1410,9 @@
     .cabinet__inner_tab_button {
         position: static;
         display: inline-flex;
-        margin-bottom: 20px;
+        max-width: 50%;
+        width: 100%;
+        margin: 0 auto 20px;
     }
 
     .profile__tabs-wrapper {
@@ -1761,18 +1763,18 @@
     .change__number__input {
         margin-bottom: 7px;
     }
-}
 
-@media (max-width: 520px) {
-    .crm__box {
+    .overlay {
+        position: fixed;
         width: 100%;
-        margin-right: 0;
-        margin-bottom: 13px;
-        height: 200px;
+        height: 100%;
+        z-index: 50;
+        background-color: rgba(42, 49, 55, 0.75);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .3s ease-out, opacity .3s ease-out;
     }
-}
 
-@media (max-width: 480px) {
     .manager__nav {
         right: 0;
         bottom: -1000px;
@@ -1787,6 +1789,128 @@
         opacity: 1;
         z-index: 50;
         position: fixed;
+        transition: bottom .3s ease-out;
+    }
+
+    .edit-man .field__name_popup {
+        margin-bottom: 7px;
+    }
+
+    .edit-man .cabinet__popup_fields {
+        margin-bottom: 23px;
+    }
+
+    .edit-man .check + label::before {
+        margin-right: 13px;
+    }
+
+    .edit-man .field__box .check + label {
+        height: 20px;
+    }
+
+    .edit-man .field__box .check + label {
+        align-items: flex-start;
+    }
+
+    .cabinet__popup_buttons .fill__button {
+        margin-right: 10px;
+    }
+
+    .new-man .field__box {
+        margin-bottom: 20px;
+    }
+
+    .new-man .cabinet__popup_fields {
+        margin-bottom: 23px;
+    }
+
+    .new-man .field__box .check + label {
+        height: 20px;
+    }
+
+    .new-man .field__box_check {
+        margin-bottom: 13px;
+    }
+
+    .new-man .field__box .check + label {
+        align-items: flex-start;
+    }
+
+    .new-man .check + label::before {
+        margin-right: 13px;
+    }
+
+    .delete-man .cabinet__popup_buttons.buttons__fullspace {
+        margin-top: 25px;
+    }
+
+    .bitrix .cabinet__popup_fields {
+        margin-top: 25px;
+        margin-bottom: 13px;
+    }
+
+    .bitrix .field__name_popup {
+        margin-bottom: 7px;
+    }
+
+    .bitrix .field__box {
+        margin-bottom: 11px;
+    }
+
+    .cabinet__popup_checks {
+        margin-bottom: 25px;
+    }
+
+    .amo-connect .field__name_popup {
+        margin-bottom: 7px;
+    }
+
+    .amo-connect .field__box {
+        margin-bottom: 11px;
+    }
+
+    .amo-connect .cabinet__popup_form .new__add-name {
+        margin-bottom: 0;
+    }
+
+    .amo-connect .field__box_mb {
+        margin-bottom: 9px;
+    }
+
+    .cabinet__popup_fields {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .potok .cabinet__popup_fields {
+        margin-top: 24px;
+    }
+
+    .potok .field__box_mb {
+        margin-bottom: 5px;
+    }
+
+    .potok .cabinet__popup_buttons.buttons__fullspace {
+        margin-top: 25px;
+    }
+
+    .temps-wrapper .cabinet__popup_buttons.buttons__fullspace {
+        margin-top: 25px;
+    }
+
+    .temps-wrapper .button__c {
+        flex-basis: 0;
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    .delete-temp {
+        max-width: 349px;
+        padding: 13px;
+    }
+
+    .delete-temp .cabinet__popup_buttons.buttons__fullspace {
+        margin-top: 25px;
     }
 
     .manager__nav li {
@@ -1839,11 +1963,6 @@
 
     .cabinet__popup_buttons .button__c {
         width: auto;
-    }
-
-    .cabinet__popup_fields {
-        margin-top: 25px;
-        margin-bottom: 15px;
     }
 
     .cabinet__popup .cabinet__popup_checks {
@@ -2184,7 +2303,16 @@
     .fill__button_gradient {
         width: 100%;
     }
+    .crm__box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 13px;
+        height: 200px;
+    }
 }
 
-/*temp set*/
-
+@media (max-width: 375px) {
+    .cabinet__inner_tab_button {
+        max-width: 100%;
+    }
+}

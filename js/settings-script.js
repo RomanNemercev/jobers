@@ -94,9 +94,9 @@ const applyPhoneNumberFormatting = (className) => {
 // Функция для проверки валидации инпутов
 function handleInputValidation() {
     var inputs = document.querySelectorAll('.new__add-name__input[required]');
-    inputs.forEach(function(input) {
+    inputs.forEach(function (input) {
         var parent = input.closest('.new__add-name');
-        input.addEventListener('blur', function() {
+        input.addEventListener('blur', function () {
             if (!this.value.trim()) {
                 parent.classList.add('error--visible');
             } else {
@@ -314,4 +314,42 @@ function togglePassword(fieldId, button) {
         field.type = "password";
         button.style.backgroundImage = "url('../img/passEyeHide.svg')";
     }
+}
+
+// show nav list on mobile version
+
+var mediaQuery = window.matchMedia('(max-width: 768px)');
+
+if (mediaQuery.matches) {
+    document.addEventListener('DOMContentLoaded', function () {
+        const burgers = document.querySelectorAll('.manager__nav_three_dots');
+        const overlay = document.querySelector('.overlay');
+
+        burgers.forEach(burger => {
+            burger.addEventListener('click', function () {
+                const burgerList = this.closest('.manager__nav_button').querySelector('.manager__nav');
+                burgerList.style.bottom = '0';
+                overlay.style.cssText = "visibility: visible; opacity: 1;";
+            });
+        });
+
+        overlay.addEventListener('click', function () {
+            closeAllNavs();
+        });
+
+        document.querySelectorAll('.mob__close_nav, .edit-mans, .delete-mans').forEach(closeButton => {
+            closeButton.addEventListener('click', function () {
+                closeAllNavs();
+            });
+        });
+
+        function closeAllNavs() {
+            const activeNavs = document.querySelectorAll('.manager__nav');
+            activeNavs.forEach(nav => {
+                nav.style.cssText = "bottom: -1000px; transition: bottom 0.3s ease;";
+            });
+            overlay.style.cssText = "visibility: hidden; opacity: 0; transition: opacity 0.3s ease;";
+        }
+    });
+    console.log('Экран до 768px');
 }
