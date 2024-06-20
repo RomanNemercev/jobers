@@ -6,16 +6,26 @@ function toggleScrollButtons() {
     const btnRight = document.getElementById('btn-right');
     const btnSet = document.querySelector('.btn-settings');
 
-    if (container.scrollWidth > container.clientWidth) {
+    if (window.innerWidth <= 768) {
+        btnLeft.style.visibility = 'hidden';
+        btnRight.style.visibility = 'hidden';
+        console.log('123');
+    } else if (container.scrollWidth > container.clientWidth) {
         btnLeft.style.visibility = 'visible';
         btnRight.style.visibility = 'visible';
-        btnSet.style.cssText = 'right: 100px; border-radius: 0;'
+        btnSet.style.cssText = 'right: 100px; border-radius: 0;';
     } else {
         btnLeft.style.visibility = 'hidden';
         btnRight.style.visibility = 'hidden';
-        btnSet.style.cssText = 'right: 0; border-radius: 0 10px 10px 0;'
+        btnSet.style.cssText = 'right: 0; border-radius: 0 10px 10px 0;';
     }
 }
+
+// Initial check on page load
+toggleScrollButtons();
+
+// Check on window resize
+window.addEventListener('resize', toggleScrollButtons);
 
 // Event listeners for scroll buttons
 document.getElementById('btn-left').onclick = function () {
@@ -44,11 +54,6 @@ function sideScroll(element, direction, speed, distance, step) {
     }, speed);
 }
 
-// Initial check on page load
-toggleScrollButtons();
-
-// Check on window resize
-window.addEventListener('resize', toggleScrollButtons);
 
 
 //всплывающее окно фильтров выбранных кандидатов

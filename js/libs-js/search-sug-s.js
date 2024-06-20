@@ -6,12 +6,11 @@ function createAutocomplete(inputSearchId, suggestionsPaneId, suggestions) {
     inputSearch.addEventListener("keyup", function (event) {
         let value = event.target.value;
         suggestionsPane.innerHTML = '';
-        if (value) {
+        let filteredSuggestions = suggestions.filter(function (suggestion) {
+            return suggestion.toLowerCase().includes(value.toLowerCase());
+        });
+        if (value && filteredSuggestions.length > 0) {
             suggestionsPane.style.display = 'block';
-            let filteredSuggestions = suggestions.filter(function (suggestion) {
-                // проверка на строки, содержащие введенные данные
-                return suggestion.toLowerCase().includes(value.toLowerCase());
-            });
             filteredSuggestions.forEach(function (filteredSuggestion) {
                 let div = document.createElement("div");
                 div.textContent = filteredSuggestion;
@@ -26,7 +25,15 @@ function createAutocomplete(inputSearchId, suggestionsPaneId, suggestions) {
             suggestionsPane.style.display = 'none';
         }
     });
+
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('#' + suggestionsPaneId)) {
+            suggestionsPane.innerHTML = '';
+            suggestionsPane.style.display = 'none';
+        }
+    });
 }
+
 
 //example:
 // let cities = [

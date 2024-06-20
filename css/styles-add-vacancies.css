@@ -1,3 +1,12 @@
+/*icon svg*/
+.dropdown-list:hover .icon {
+    stroke: var(--color_dodger);
+}
+
+.suggestion:hover {
+    color: var(--color_dodger);
+}
+
 /*choices*/
 .choices__inner {
     background-color: var(--color_athens-gray);
@@ -45,70 +54,61 @@
     color: var(--color_space);
 }
 
-/*custom btn*/
-.preview {
-    width: 90vw;
-    height: 400px;
-    max-width: 700px;
-    position: relative;
-
-    /* as default it'll not be displayed */
-    display: none;
-}
-
-.preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* we don't want to see this file input type since we want to create a custom one */
-.add__input[type="file"] {
-    display: none;
-}
-
 .add__logo-content {
     display: flex;
     min-height: 140px;
     position: relative;
 }
 
-.add__custom-btn__label {
-    width: 140px;
-    height: 140px;
-    top: 0;
-    left: 0;
-    background-image: url("../img/add__logo-upload.png");
-    color: transparent;
-    cursor: pointer;
-    position: absolute;
-}
-
-/*.add__custom-btn__label:hover {*/
-/*    background-color: #FF2d2d;*/
-/*}*/
-
-/*.add__custom-btn__label:active {*/
-/*    transform: translateX(-50%) scale(.95);*/
-/*}*/
-
 .add__upload-descr {
     width: calc(100% - 165px);
     margin-left: auto;
-    padding-top: 46px;
     font-size: 14px;
     color: var(--color_bali);
 }
 
-.add__background {
+/*custom image load*/
+.change__input-wrapper {
+    position: relative;
+    height: 165px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.change__background {
     position: absolute;
     max-width: 140px;
     max-height: 140px;
     z-index: 3;
+    border-radius: 5px;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.change__input[type="file"] {
+    display: none;
+}
+
+.change__custom-btn__label {
+    width: 140px;
+    height: 140px;
+    top: 0;
+    background-image: url('../img/add__logo-upload.png');
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.change__input-btn {
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_dodger);
 }
 
 /*checks rates*/
@@ -455,13 +455,16 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
     transition: visibility 0s, opacity 0.5s linear; /* Transition for smooth appearance */
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.ai-loader {
+    top: 50vh;
+    min-height: auto;
 }
 
 .dot {
@@ -521,3 +524,7 @@
 /*.item__popup-auto.vacancies__item-popup--open .ai {*/
 /*    opacity: 1;*/
 /*}*/
+
+.hidden {
+    display: none;
+}

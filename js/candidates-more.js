@@ -1,30 +1,61 @@
 // script for scroll-x
-let btnLeft = document.getElementById('btn-left');
-btnLeft.onclick = function () {
-    let container = document.getElementById('scroll-wrapper');
+// Function to check and toggle visibility of scroll buttons
+function toggleScrollButtons() {
+    const container = document.getElementById('scroll-wrapper');
+    const btnLeft = document.getElementById('btn-left');
+    const btnRight = document.getElementById('btn-right');
+    const btnSet = document.querySelector('.btn-settings');
+
+    if (container.scrollWidth > container.clientWidth) {
+        btnLeft.style.visibility = 'visible';
+        btnRight.style.visibility = 'visible';
+        btnSet.style.cssText = 'right: 100px; border-radius: 0;'
+    } else {
+        btnLeft.style.visibility = 'hidden';
+        btnRight.style.visibility = 'hidden';
+        btnSet.style.cssText = 'right: 0; border-radius: 0 10px 10px 0;'
+    }
+}
+
+// var mediaQuery = window.matchMedia('(max-width: 768px)');
+
+// if (mediaQuery.matches) {
+//     btnLeft.style.visibility = 'hidden';
+//     btnRight.style.visibility = 'hidden';
+// }
+
+// Event listeners for scroll buttons
+document.getElementById('btn-left').onclick = function () {
+    const container = document.getElementById('scroll-wrapper');
     sideScroll(container, 'left', 25, 100, 10);
 };
 
-let btnRight = document.getElementById('btn-right');
-btnRight.onclick = function () {
-    let container = document.getElementById('scroll-wrapper');
+document.getElementById('btn-right').onclick = function () {
+    const container = document.getElementById('scroll-wrapper');
     sideScroll(container, 'right', 25, 100, 10);
 };
 
+// Scroll function
 function sideScroll(element, direction, speed, distance, step) {
-    scrollAmount = 0;
-    let slideTimer = setInterval(function () {
-        if (direction == 'left') {
+    let scrollAmount = 0;
+    const slideTimer = setInterval(function () {
+        if (direction === 'left') {
             element.scrollLeft -= step;
         } else {
             element.scrollLeft += step;
         }
         scrollAmount += step;
         if (scrollAmount >= distance) {
-            window.clearInterval(slideTimer);
+            clearInterval(slideTimer);
         }
     }, speed);
 }
+
+// Initial check on page load
+toggleScrollButtons();
+
+// Check on window resize
+window.addEventListener('resize', toggleScrollButtons);
 
 //auto scroll on history page
 new SimpleBar(document.getElementById('messageContainer'));

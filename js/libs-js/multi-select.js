@@ -237,3 +237,116 @@ $(document).ready(function () {
     removeRequest();
 
 });
+
+// //тест по отправке данных на сервер
+// function applyFilters() {
+//     let filters = {};
+//
+//     // Собираем данные всех активных фильтров
+//     $('.droplist__inner').each(function () {
+//         let filterType = $(this).data('filter-type');
+//         let filterValue = $(this).find('.droplist__result_text').text();
+//
+//         if (filterValue && filterValue !== $(this).find('.droplist__result_text').data('start')) {
+//             filters[filterType] = filterValue;
+//         }
+//     });
+//
+//     console.log("Filters to be applied:", filters);
+//
+//     // Здесь можно добавить отправку данных формы на сервер или обновление интерфейса
+//     // Например:
+//     // $.ajax({
+//     //     type: 'POST',
+//     //     url: '/apply-filters',
+//     //     data: filters,
+//     //     success: function(response) {
+//     //         // Обновить интерфейс на основе ответа сервера
+//     //     }
+//     // });
+// }
+//
+// // Вызываем функцию applyFilters при изменении состояния фильтров
+// $('.droplist__inner').change(function (e) {
+//     activeDroplistCountReturn();
+//     applyFilters();
+// });
+//
+// $('.droplist__inner .droplist__item').not('.droplist__item_nohover').click(function () {
+//     applyFilters();
+// });
+//
+// $('.droplist__inner .droplist__icon_cross').click(function () {
+//     applyFilters();
+// });
+//
+// $('.droplist__dropindrop .droplist__icon_cross').click(function () {
+//     applyFilters();
+// });
+//
+// $('.droplist__field_from, .droplist__field_to').keyup(function () {
+//     applyFilters();
+// });
+//
+// $('.droplist__field_search').keypress(function (e) {
+//     var key = e.which;
+//     if(key == 13) {
+//         e.preventDefault();
+//         applyFilters();
+//     }
+// });
+document.addEventListener('DOMContentLoaded', function() {
+    const dropInDrop = document.querySelector('.drop__in__drop');
+    const droplists = dropInDrop.querySelectorAll('.droplist__selected_drop');
+    const dropContainer = dropInDrop.querySelector('.drop__container');
+    const droplistsInner = dropInDrop.querySelectorAll('.droplist__inner');
+    const dropInDropTrue = document.querySelector('.droplist__dropindrop');
+
+    // Функция для открытия/закрытия dropContainer
+    // function toggleDropContainer() {
+    //     if (dropContainer.style.display === 'none') {
+    //         dropContainer.style.display = 'block';
+    //     } else {
+    //         dropContainer.style.display = 'none';
+    //     }
+    // }
+    //
+    // // Обработчик для открытия/закрытия droplists и dropContainer
+    // droplists.forEach(droplist => {
+    //     droplist.addEventListener('click', function(event) {
+    //         event.stopPropagation(); // Остановить всплытие события
+    //         toggleDropContainer();
+    //     });
+    // });
+
+    // Обработчик для закрытия dropContainer при клике вне его области
+    document.addEventListener('click', function(event) {
+        if (!dropInDrop.contains(event.target)) {
+            dropContainer.style.display = 'none';
+            dropInDropTrue.classList.remove('droplist_active_outer');
+        }
+    });
+
+    // Обработчик для вложенных droplists
+    // droplistsInner.forEach(droplistInner => {
+    //     droplistInner.querySelector('.droplist__selected').addEventListener('click', function(event) {
+    //         event.stopPropagation(); // Остановить всплытие события
+    //         const droplistItems = droplistInner.querySelector('.droplist__items');
+    //         if (droplistItems.style.display === 'none') {
+    //             droplistItems.style.display = 'block';
+    //         } else {
+    //             droplistItems.style.display = 'none';
+    //         }
+    //     });
+    // });
+
+    // Закрытие всех вложенных droplists при клике вне их области
+    // document.addEventListener('click', function(event) {
+    //     droplistsInner.forEach(droplistInner => {
+    //         const droplistItems = droplistInner.querySelector('.droplist__items');
+    //         if (droplistItems && !droplistInner.contains(event.target)) {
+    //             droplistItems.style.display = 'none';
+    //         }
+    //     });
+    // });
+});

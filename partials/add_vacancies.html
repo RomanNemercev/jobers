@@ -36,14 +36,16 @@
             <li class="nav__links-caption">Организация</li>
             <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
-            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a></li>
+            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a>
+            </li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
             <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
             </li>
         </ul>
         <ul class="nav__links">
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
-            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a></li>
+            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a>
+            </li>
         </ul>
     </div>
 </section>
@@ -582,13 +584,14 @@
                 <div class="add__logo-container">
                     <div class="add__logo-title">Логотип</div>
                     <div class="add__logo-content">
-                        <div class="add__custom-btn">
-                            <div class="add__preview">
+                        <div class="change__input-wrapper">
+                            <div class="change__preview">
                                 <!-- as default the img won't have a src here. But I added it because we can see what we're styling -->
-                                <img src="" alt="" class="add__background">
+                                <img src="" alt="" class="change__background">
                             </div>
-                            <input type="file" id="uploadBtn" class="add__input">
-                            <label for="uploadBtn" class="add__custom-btn__label">Upload File</label>
+                            <input type="file" id="file-upload" class="change__input">
+                            <label for="file-upload" class="change__custom-btn__label">Upload File</label>
+                            <button id="upload-btn" class="change__input-btn btn-reset">Загрузить</button>
                         </div>
                         <div class="add__upload-descr">Загрузите логотип вашей компании или переместите его в&nbsp;данную
                             область, он&nbsp;будет отображен вместе с&nbsp;вакансией на&nbsp;некоторых сайтах
@@ -2513,15 +2516,20 @@
             </div>
         </div>
     </div>
-    <!--    screen loader-->
-    <div class="dots-wrapper">
-        <div class="dots-top">
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        <div class="dots-bottom">
-            <div class="dot"></div>
-            <div class="dot"></div>
+</div>
+<div id="popup-ai-loader" class="item__popup-new">
+    <button class="btn-reset auto__close" id="ai-loader-popup-close"></button>
+    <div class="item__popup-wrapper ai-loader">
+        <!--    screen loader-->
+        <div class="dots-wrapper">
+            <div class="dots-top">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dots-bottom">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </div>
 </div>

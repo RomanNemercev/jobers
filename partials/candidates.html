@@ -17,10 +17,11 @@
     <link rel="stylesheet" href="../css/libs-css/select.css">
     <link rel="stylesheet" href="../css/libs-css/multi-select.css">
     <link rel="stylesheet" href="../css/candidates.css">
+    <link rel="stylesheet" href="../css/libs-css/move-filter.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/media-queries/media-candidates.css">
 </head>
-<body class="body-page">
+<body class="body-page wrapper">
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container">
@@ -39,14 +40,16 @@
             <li class="nav__links-caption">Организация</li>
             <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
-            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a></li>
+            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a>
+            </li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
             <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
             </li>
         </ul>
         <ul class="nav__links">
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
-            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a></li>
+            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a>
+            </li>
         </ul>
     </div>
 </section>
@@ -115,7 +118,7 @@
                 <button class="btn-reset btn-scroll scroll-x__btn">Интересно&nbsp;<span class="btn-data">(2)</span>
                 </button>
             </div>
-            <button class="btn-reset btn-settings"></button>
+            <a href="#popup" class="btn-reset btn-settings popup-link"></a>
             <button class="btn-reset btn-left" id="btn-left"></button>
             <button class="btn-reset btn-right" id="btn-right"></button>
         </div>
@@ -204,14 +207,17 @@
                                         <li class="droplist__item droplist__item_nohover"><input id="from001"
                                                                                                  class="droplist__field droplist__field_from"
                                                                                                  type="text"
-                                                                                                 placeholder="от" value="">
+                                                                                                 placeholder="от"
+                                                                                                 value="">
                                         </li>
                                         <li class="droplist__item droplist__item_nohover"><input id="to001"
                                                                                                  class="droplist__field droplist__field_to"
                                                                                                  type="text"
-                                                                                                 placeholder="до" value="">
+                                                                                                 placeholder="до"
+                                                                                                 value="">
                                         </li>
-                                        <li class="droplist__item droplist__item_hide"><input id="hide-001" class="check"
+                                        <li class="droplist__item droplist__item_hide"><input id="hide-001"
+                                                                                              class="check"
                                                                                               type="checkbox"
                                                                                               value="Скрыть без зарплаты"><label
                                                 for="hide-001">Скрыть без зарплаты</label></li>
@@ -222,7 +228,8 @@
                             <div class="droplist droplist__check droplist__inner">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
-                                            class="droplist__result_text" data-start="Тип занятости">Тип занятости</span>
+                                            class="droplist__result_text"
+                                            data-start="Тип занятости">Тип занятости</span>
                                         <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
                                              viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
@@ -232,13 +239,16 @@
 
                                     <ul class="droplist__items">
                                         <li class="droplist__item"><input id="variant-001" class="check" type="checkbox"
-                                                                          value="Вахтовый метод"><label for="variant-001">Вахтовый
+                                                                          value="Вахтовый метод"><label
+                                                for="variant-001">Вахтовый
                                             метод</label></li>
                                         <li class="droplist__item"><input id="variant-002" class="check" type="checkbox"
-                                                                          value="Удаленная работа"><label for="variant-002">Удаленная
+                                                                          value="Удаленная работа"><label
+                                                for="variant-002">Удаленная
                                             работа</label></li>
                                         <li class="droplist__item"><input id="variant-003" class="check" type="checkbox"
-                                                                          value="5/2"><label for="variant-003">5/2</label>
+                                                                          value="5/2"><label
+                                                for="variant-003">5/2</label>
                                         </li>
                                     </ul>
                                 </form>
@@ -255,16 +265,21 @@
                                     </div>
                                     <div class="droplist__items">
                                         <ul>
-                                            <li class="droplist__item"><input id="variant-4" class="check" type="checkbox"
-                                                                              value="Прямой отклик"><label for="variant-4">Прямой
+                                            <li class="droplist__item"><input id="variant-4" class="check"
+                                                                              type="checkbox"
+                                                                              value="Прямой отклик"><label
+                                                    for="variant-4">Прямой
                                                 отклик</label></li>
-                                            <li class="droplist__item"><input id="variant-5" class="check" type="checkbox"
+                                            <li class="droplist__item"><input id="variant-5" class="check"
+                                                                              type="checkbox"
                                                                               value="Автоподбор сайта"><label
                                                     for="variant-5">Автоподбор сайта</label></li>
-                                            <li class="droplist__item"><input id="variant-6" class="check" type="checkbox"
+                                            <li class="droplist__item"><input id="variant-6" class="check"
+                                                                              type="checkbox"
                                                                               value="Подборка Jobers"><label
                                                     for="variant-6">Подборка Jobers</label></li>
-                                            <li class="droplist__item"><input id="variant-7" class="check" type="checkbox"
+                                            <li class="droplist__item"><input id="variant-7" class="check"
+                                                                              type="checkbox"
                                                                               value="Загружен вручную"><label
                                                     for="variant-7">Загружен вручную</label></li>
                                         </ul>
@@ -304,13 +319,15 @@
 
                                     <ul class="droplist__items">
                                         <li class="droplist__item"><input id="variant-8" class="check" type="checkbox"
-                                                                          value="Везде"><label for="variant-8">Везде</label>
+                                                                          value="Везде"><label
+                                                for="variant-8">Везде</label>
                                         </li>
                                         <li class="droplist__item"><input id="variant-9" class="check" type="checkbox"
                                                                           value="В резюме"><label for="variant-9">В
                                             резюме</label></li>
                                         <li class="droplist__item"><input id="variant-10" class="check" type="checkbox"
-                                                                          value="В комментариях"><label for="variant-10">В
+                                                                          value="В комментариях"><label
+                                                for="variant-10">В
                                             комментариях</label></li>
                                         <li class="droplist__item"><input id="variant-11" class="check" type="checkbox"
                                                                           value="В тегах"><label for="variant-11">В
@@ -338,7 +355,8 @@
                                                                           value="Волгоградская область"><label
                                                 for="variant-13">Волгоградская область</label></li>
                                         <li class="droplist__item"><input id="variant-14" class="check" type="checkbox"
-                                                                          value="Санкт-Петербург"><label for="variant-14">Санкт-Петербург</label>
+                                                                          value="Санкт-Петербург"><label
+                                                for="variant-14">Санкт-Петербург</label>
                                         </li>
                                     </ul>
                                 </form>
@@ -367,7 +385,8 @@
                             <div class="droplist droplist__check droplist__inner">
                                 <form class="form__list" action="">
                                     <div class="droplist__selected item droplist__result item"><span
-                                            class="droplist__result_text" data-start="График работы">График работы</span>
+                                            class="droplist__result_text"
+                                            data-start="График работы">График работы</span>
                                         <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
                                              viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
@@ -380,10 +399,12 @@
                                                                           value="Гибкий график"><label for="variant-17">Гибкий
                                             график</label></li>
                                         <li class="droplist__item"><input id="variant-18" class="check" type="checkbox"
-                                                                          value="Удаленная работа"><label for="variant-18">Удаленная
+                                                                          value="Удаленная работа"><label
+                                                for="variant-18">Удаленная
                                             работа</label></li>
                                         <li class="droplist__item"><input id="variant-19" class="check" type="checkbox"
-                                                                          value="Вахтовый метод"><label for="variant-19">Вахтовый
+                                                                          value="Вахтовый метод"><label
+                                                for="variant-19">Вахтовый
                                             метод</label></li>
                                         <li class="droplist__item"><input id="variant-20" class="check" type="checkbox"
                                                                           value="Полный день"><label for="variant-20">Полный
@@ -422,7 +443,8 @@
                                                         <path d="M7 12C9.76142 12 12 9.76142 12 7C12 4.23858 9.76142 2 7 2C4.23858 2 2 4.23858 2 7C2 9.76142 4.23858 12 7 12Z"
                                                               stroke="#9098B4" stroke-width="2" stroke-linecap="round"
                                                               stroke-linejoin="round"></path>
-                                                        <path d="M10.5356 10.5356L14 14" stroke="#9098B4" stroke-width="2"
+                                                        <path d="M10.5356 10.5356L14 14" stroke="#9098B4"
+                                                              stroke-width="2"
                                                               stroke-linecap="round" stroke-linejoin="round"></path>
                                                     </g>
                                                     <defs>
@@ -453,13 +475,17 @@
                                     <ul class="droplist__items">
                                         <li class="droplist__item droplist__item_nohover"><input id="from02"
                                                                                                  class="droplist__field droplist__field_from"
-                                                                                                 maxlength="2" type="text"
-                                                                                                 placeholder="от" value="">
+                                                                                                 maxlength="2"
+                                                                                                 type="text"
+                                                                                                 placeholder="от"
+                                                                                                 value="">
                                         </li>
                                         <li class="droplist__item droplist__item_nohover"><input id="to02"
                                                                                                  class="droplist__field droplist__field_to"
-                                                                                                 maxlength="2" type="text"
-                                                                                                 placeholder="до" value="">
+                                                                                                 maxlength="2"
+                                                                                                 type="text"
+                                                                                                 placeholder="до"
+                                                                                                 value="">
                                         </li>
                                         <li class="droplist__item droplist__item_hide"><input id="hide-02" class="check"
                                                                                               type="checkbox"
@@ -508,7 +534,8 @@
                                                                           value="От 1 года"><label for="variant-24">От 1
                                             года</label></li>
                                         <li class="droplist__item"><input id="variant-25" class="check" type="checkbox"
-                                                                          value="От 3х лет"><label for="variant-25">От 3х
+                                                                          value="От 3х лет"><label for="variant-25">От
+                                            3х
                                             лет</label></li>
                                         <li class="droplist__item"><input id="variant-26" class="check" type="checkbox"
                                                                           value="От 5 лет"><label for="variant-26">От 5
@@ -517,7 +544,8 @@
                                 </form>
                             </div>
                             <div class="buttons__filter_block">
-                                <div class="button__c default__button default__button_active show__popup">Применить</div>
+                                <div class="button__c default__button default__button_active show__popup">Применить
+                                </div>
                             </div>
 
 
@@ -2823,6 +2851,103 @@
             </div>
         </div>
     </div>
+    <div class="popup" id="popup">
+        <a class="popup__close close-popup"></a>
+        <div class="popup__body">
+        <div class="new-can__close-back768"></div>
+            <div class="popup__content">
+                <div class="popup__header">
+                    <div class="popup__title">Настройка формы отклика</div>
+                    <div class="popup__descr">Настройте критерии которые необходимо указать соискателю при отклике с
+                        сайта Jobers
+                    </div>
+                </div>
+                <div class="popup__form">
+                    <div class="form">
+                        <div class="form__block form__block--disabled">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Фамилия" value="Фамилия">
+                            </div>
+                        </div>
+                        <div class="form__block form__block--disabled">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Имя" value="Имя">
+                            </div>
+                        </div>
+                        <div class="form__block form__block--disabled">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Телефон" value="Телефон">
+                            </div>
+                        </div>
+                        <div class="form__sortable">
+                            <div class="form__block" draggable="true">
+                                <div class="form__toggle">
+                                    <svg class="form__toggle-icon">
+                                        <use xlink:href="../img/icons.svg#arrowsOut"></use>
+                                    </svg>
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="text" placeholder="Гражданство"
+                                           value="Гражданство">
+                                    <div class="form__btn form__btn--delete">
+                                        <svg class="form__btn-icon">
+                                            <use xlink:href="../img/icons.svg#trash"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__block" draggable="true">
+                                <div class="form__toggle">
+                                    <svg class="form__toggle-icon">
+                                        <use xlink:href="../img/icons.svg#arrowsOut"></use>
+                                    </svg>
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="text" placeholder="Дата рождения"
+                                           value="Дата рождения">
+                                    <div class="form__btn form__btn--delete">
+                                        <svg class="form__btn-icon">
+                                            <use xlink:href="../img/icons.svg#trash"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__block" draggable="true">
+                                <div class="form__toggle">
+                                    <svg class="form__toggle-icon">
+                                        <use xlink:href="../img/icons.svg#arrowsOut"></use>
+                                    </svg>
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="text" placeholder="Сопроводительное письмо"
+                                           value="Сопроводительное письмо">
+                                    <div class="form__btn form__btn--delete">
+                                        <svg class="form__btn-icon">
+                                            <use xlink:href="../img/icons.svg#trash"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__block form__block--add">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Добавить поле">
+                                <div class="form__btn form__btn--push">
+                                    <svg class="form__btn-icon">
+                                        <use xlink:href="../img/icons.svg#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button class="btn-popup btn--blue">Сохранить</button>
+                    <button class="btn-popup btn--grey close-popup">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!--optimized-->
 <!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>-->
@@ -2838,6 +2963,7 @@
 <script src="../js/libs-js/select.js"></script>
 <script src="../js/libs-js/multi-select.js"></script>
 <script src="../js/libs-js/add-tag.js"></script>
+<script src="../js/libs-js/app.min.js"></script>
 <script src="../js/candidates.js"></script>
 </body>
 </html>
