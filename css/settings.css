@@ -138,6 +138,12 @@
     background-color: var(--color_zircon);
 }
 
+.main__current-input::placeholder,
+.main__new-input::placeholder,
+.main__current-label::placeholder {
+    color: var(--color_bali);
+}
+
 .main__pass-wrapper {
     display: flex;
     gap: 15px;
@@ -1317,7 +1323,7 @@
     top: 0;
     cursor: pointer;
     border: none;
-    opacity: 0.5;
+    opacity: 0.4;
     /*transition: opacity .3s ease-out, background-image .3s ease-out;*/
 }
 

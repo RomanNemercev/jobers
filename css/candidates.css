@@ -41,6 +41,7 @@
 .can__section-param {
     /*width: 69.197%;*/
     display: flex;
+    margin-right: 16px;
 }
 
 .can__users {
@@ -51,7 +52,7 @@
     height: 100%;
     border-radius: 5px;
     max-height: 40px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .can__list .droplist__selected {

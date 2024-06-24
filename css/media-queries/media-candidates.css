@@ -1,3 +1,46 @@
+@media  (max-width: 1135px) {
+    .can__section-param {
+        margin-right: 16px;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .user__metadata {
+        flex-wrap: wrap;
+    }
+
+    .can__add-values {
+        white-space: nowrap;
+    }
+
+    .can__section-bar {
+        flex-wrap: wrap;
+    }
+
+    .user__top {
+        flex-wrap: wrap;
+    }
+
+    .user__vacancy-wrapper {
+        margin-bottom: 25px;
+    }
+
+    .user__status-bar {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .user__check-icon::before {
+        top: -25px;
+    }
+
+    .user__check-icon::after {
+        top: -25px;
+    }
+}
+
 @media (max-width: 768px) {
     .search-bar {
         z-index: 3;
@@ -435,10 +478,12 @@
 
     .drop__in__drop .drop__container {
         z-index: 3;
+        max-width: none;
     }
 
     .droplist_active .droplist__items {
         width: 100%;
+        min-width: fit-content;
     }
 
     /*popup cans*/
@@ -1105,6 +1150,7 @@
 
     .drop__in__drop .droplist__selected_drop {
         padding: 13px 26px 11px 13px;
+        width: 100%;
     }
 
     .scroll-x__btn {
@@ -1120,5 +1166,14 @@
         padding-left: 70px;
         padding-bottom: 33px;
         background-position: 15px center;
+    }
+
+    .mr0.droplist {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .mr0 .form__list_outer {
+        width: 100%;
     }
 }

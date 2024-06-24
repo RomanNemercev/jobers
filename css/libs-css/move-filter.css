@@ -69,6 +69,7 @@
 .popup__descr {
     font-size: 15px;
     max-width: 300px;
+    display: none;
 }
 
 .form {
@@ -212,6 +213,8 @@
         position: relative;
         height: 100vh;
         padding: 55px 14px 14px 14px;
+        max-width: none;
+        row-gap: 17px;
     }
 
     .form__item {
@@ -234,5 +237,9 @@
     .btn-popup {
         flex-grow: 1;
         flex-shrink: 0;
+    }
+
+    .form__block.form__block--disabled .form__input {
+        height: 37px;
     }
 }
