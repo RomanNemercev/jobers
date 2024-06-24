@@ -429,8 +429,16 @@
 
     /*    search-bar modified*/
     .search-bar__dropdown {
-        z-index: 1;
+        z-index: 3;
         padding: 0;
+    }
+
+    .drop__in__drop .drop__container {
+        z-index: 3;
+    }
+
+    .droplist_active .droplist__items {
+        width: 100%;
     }
 
     /*popup cans*/
@@ -1105,5 +1113,12 @@
 
     .user__level-mobile .item {
         padding-left: 15px;
+    }
+
+    .search-bar__dropdown ul li {
+        padding-top: 26px;
+        padding-left: 70px;
+        padding-bottom: 33px;
+        background-position: 15px center;
     }
 }
