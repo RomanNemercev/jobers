@@ -101,6 +101,9 @@
     cursor: pointer;
     position: absolute;
     border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f9fafc;
 }
 
 .change__input-btn {

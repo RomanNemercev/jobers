@@ -226,7 +226,20 @@
     line-height: normal;
 }
 
-.search-bar__form-space::placeholder {
+.search-bar__form-space::placeholder,
+.add__wage-min::placeholder,
+.add__wage-max::placeholder,
+.input-space::placeholder,
+.add__contacts-district__data::placeholder,
+.add__contacts-city__data::placeholder,
+.add__extra-street__data::placeholder,
+.add__extra-house__data::placeholder,
+.search-reused__input::placeholder,
+.add-contact-number::placeholder,
+.add__name-company__data::placeholder,
+.add__extra-name__data::placeholder,
+.add__extra-email__data::placeholder,
+.add__id-code__data::placeholder {
     color: var(--color_bali);
 }
 

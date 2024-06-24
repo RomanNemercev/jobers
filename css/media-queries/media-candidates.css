@@ -7,12 +7,16 @@
         padding-bottom: 50px;
     }
 
+    .drop__in__drop .droplist__selected_drop {
+        background-color: var(--color_athens-gray);
+    }
+
     /*    head filters*/
     .search-bar__mobile {
         display: inline-block;
         position: relative;
         width: 100%;
-        margin-bottom: 7px;
+        margin-bottom: 6px;
     }
 
     .search-bar__mobile::before {
@@ -38,7 +42,6 @@
         padding: 13px;
         background-color: var(--color_white);
         border-radius: 5px;
-        min-height: 254px; /*temp*/
     }
 
     .can__span {
@@ -514,6 +517,10 @@
         opacity: 1;
     }
 
+    .button-icon:last-child {
+        margin-left: -5%;
+    }
+
     .vacancies__popup-768--active {
         bottom: 0;
     }
@@ -659,7 +666,7 @@
     }
 
     .button-icon:first-child {
-        margin-left: -1px;
+        margin-left: 3%;
     }
 
     .new-can__container {
@@ -1012,9 +1019,91 @@
     /*    end sets*/
     .can__list .droplist__selected {
         background-color: var(--color_athens-gray);
+        padding-left: 13px;
     }
 
     .can__btn-auto {
         background-color: var(--color_athens-gray);
+        padding: 11px 14px;
+    }
+
+    .can__list:first-of-type {
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin-right: 0;
+        margin-bottom: 7px;
+        width: 100%;
+    }
+
+    .can__list:first-of-type .droplist {
+        width: 100%;
+    }
+
+    .can__section-param {
+        position: relative;
+    }
+
+    .can__list:nth-child(3) {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .can__list:last-of-type {
+        position: absolute;
+        top: 47px;
+        right: -1px;
+    }
+
+    .can__list:not(:last-of-type) {
+        margin-right: 0;
+    }
+
+    .can__list {
+        z-index: auto;
+    }
+
+    .drop__container {
+        z-index: 1;
+    }
+
+    .search-bar__form-space {
+        font-size: 14px;
+        padding: 12px 0;
+        padding-left: 38px;
+    }
+
+    .search-bar__form-space::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .can__list:nth-child(2) {
+        width: calc(100% - 112px);
+        margin-bottom: 7px;
+    }
+
+    .can__list:nth-child(2) .droplist {
+        width: 100%;
+    }
+
+    .droplist__icon {
+        right: 15px;
+    }
+
+    .can__list .item::placeholder {
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .drop__in__drop .droplist__selected_drop {
+        padding: 13px 26px 11px 13px;
+    }
+
+    .scroll-x__btn {
+        margin-left: 5px;
+    }
+
+    .user__level-mobile .item {
+        padding-left: 15px;
     }
 }
