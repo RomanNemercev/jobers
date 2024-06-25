@@ -1,9 +1,9 @@
-@media  (max-width: 1135px) {
+@media (max-width: 1135px) {
     .can__section-param {
-        margin-right: 16px;
         width: 100%;
         justify-content: space-between;
         margin-bottom: 15px;
+        margin-right: 0;
     }
 
     .user__metadata {
@@ -16,6 +16,7 @@
 
     .can__section-bar {
         flex-wrap: wrap;
+        justify-content: flex-end;
     }
 
     .user__top {
@@ -38,6 +39,47 @@
 
     .user__check-icon::after {
         top: -25px;
+    }
+}
+
+@media (max-width: 912px) {
+    .can__section-param {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .user__status-bar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: right;
+    }
+
+    .user__status {
+        margin-right: 0;
+    }
+
+    .user__invite {
+        margin-right: 0;
+    }
+
+    .user__btn-mind {
+        margin-right: 0;
+    }
+
+    .user__level {
+        margin-right: 0;
+    }
+
+    .dropdown-menu ul::before {
+        left: 0;
+    }
+
+    .can__list:not(:last-of-type) {
+        margin-right: 0;
     }
 }
 
@@ -186,13 +228,17 @@
     }
 
     .user__check-icon::before {
-        top: -22px;
+        top: 6px;
         left: -1px;
     }
 
     .user__check-icon::after {
-        top: -22px;
+        top: 6px;
         left: -1px;
+    }
+
+    .user__vacancy-wrapper {
+        margin-bottom: 0;
     }
 
     .user__status-bar {
@@ -1094,6 +1140,10 @@
 
     .can__section-param {
         position: relative;
+        display: flex;
+        justify-content: normal;
+        gap: 0;
+        text-align: initial;
     }
 
     .can__list:nth-child(3) {
