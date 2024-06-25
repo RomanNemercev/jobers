@@ -355,4 +355,9 @@
     .profile {
         padding: 77px 13px 50px 13px;
     }
+
+    #note-btn::before {
+        top: 15px;
+        left: -12px;
+    }
 }

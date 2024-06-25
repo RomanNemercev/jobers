@@ -165,7 +165,8 @@
 
 .nav__logo {
     display: inline-block;
-    margin-bottom: 70px;
+    margin-bottom: 39px;
+    height: 70px;
 }
 
 .nav__logo-icon {
@@ -284,13 +285,17 @@
     height: 22px;
 }
 
-.search-bar__btn-wrap:nth-child(2)::before {
+#note-btn {
+    position: relative;
+}
+
+#note-btn::before {
     content: '32';
     position: absolute;
     width: 28px;
     height: 25px;
-    top: 36px;
-    left: 8px;
+    top: 20px;
+    left: -17px;
     font-size: 14px;
     font-weight: 600;
     background-color: #F50A0A;
@@ -302,6 +307,7 @@
 }
 
 .search-bar__note {
+    position: relative;
     transform: translate(0px, 2px);
 }
 
@@ -2538,6 +2544,7 @@
     position: absolute;
     content: url("../img/add__option-upload.svg");
     left: 0;
+    top: -2px;
 }
 
 .add__option-ai {
@@ -2549,7 +2556,8 @@
 .add__option-ai::before {
     content: url("../img/add__option-ai.svg");
     position: absolute;
-    left: 0;
+    left: -3px;
+    top: -1px;
 }
 
 .add__option-ai:focus-visible {
