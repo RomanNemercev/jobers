@@ -342,28 +342,42 @@
 }
 
 .import {
-    max-width: 435px;
-    min-height: 236px;
+    width: calc(100% - 418.13px);
+    margin-bottom: 25px;
+    position: relative;
 }
 
-.add__import-close {
+.import__close {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/delete-x.svg");
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/cross_35x35.svg");
     background-repeat: no-repeat;
-    top: 25px;
-    right: 25px;
+    top: 18px;
+    right: 18px;
     cursor: pointer;
+    z-index: 1;
 }
+
+/*.add__import-close {*/
+/*    position: absolute;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background-image: url("../img/delete-x.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    top: 25px;*/
+/*    right: 25px;*/
+/*    cursor: pointer;*/
+/*}*/
 
 .import__title {
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
 }
 
 .import__title-item {
     margin-right: 10px;
+    font-weight: 500;
 }
 
 .import__link:not(:last-of-type) {
@@ -371,7 +385,8 @@
 }
 
 .import__descr {
-    margin-bottom: 37px;
+    margin-bottom: 24px;
+    width: 95%;
 }
 
 .import__label {
@@ -396,11 +411,11 @@
     visibility: hidden;
 }
 
-.close__import {
-    transform-origin: top;
-    transform: scaleY(0);
-    transition: transform .5s ease-in-out;
-}
+/*.close__import {*/
+/*    transform-origin: top;*/
+/*    transform: scaleY(0);*/
+/*    transition: transform .5s ease-in-out;*/
+/*}*/
 
 .ai__btn-get {
     color: var(--color_white);

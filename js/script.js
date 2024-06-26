@@ -1170,3 +1170,6 @@ try {
     console.log("Ошибка запроса элементов окна множественной архивации.")
 }
 
+document.getElementById('note-btn').addEventListener('click', function () {
+    document.querySelector('.nots__container').classList.toggle('nots__container--active');
+})

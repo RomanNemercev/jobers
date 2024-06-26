@@ -360,4 +360,59 @@
         top: 15px;
         left: -12px;
     }
+
+/*    nots drop-bar*/
+    .nots__container {
+        max-width: 100%;
+        width: 100%;
+        transform: translateY(62.22px);
+        background-color: var(--color_white);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s ease, visibility .3s ease;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        padding: 0 13.3px;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .nots__container--active {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .3s ease, visibility .3s ease;
+    }
+
+    .nots__cans-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .not__user-info {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .nots__user-desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .nots__user-info {
+        max-width: calc(100% - 80px);
+    }
+
+    .nots__check {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--color_white);
+        background-color: var(--color_dodger);
+        padding: 11px;
+        width: 100%;
+    }
+
+    .nots__title {
+        display: none;
+    }
 }

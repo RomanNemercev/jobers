@@ -103,32 +103,6 @@
             <button class="add__option-ai btn-reset" id="ai-gen-get">Генерация описания ИИ</button>
         </div>
     </div>
-    <div id="popup-import" class="item__popup-auto">
-        <button class="btn-reset auto__close" id="import-popup-close"></button>
-        <div class="item__popup-wrapper import">
-            <div class="import__container">
-                <div class="import__title">
-                    <p class="import__title-item f20w700">Быстрое заполнение&nbsp;c:</p>
-                    <img src="../img/hh-rect-20x20.svg" alt="Компания ХедХантер" class="import__link hh">
-                    <img src="../img/З-20х20.svg" alt="Компания Зарплата.ру" class="import__link z">
-                    <img src="../img/s-20x20.svg" alt="Компания СуперДжоб" class="import__link s">
-                    <img src="../img/r-20x20.svg" alt="Компания Работа.ру" class="import__link r">
-                </div>
-                <p class="import__descr f15w400">
-                    Если у&nbsp;вас есть вакансия на&nbsp;одном из&nbsp;этих сайтов, вы&nbsp;можете легко импортировать
-                    текст, добавив ссылку в&nbsp;поле ниже и&nbsp;нажав кнопку &laquo;Импортировать&raquo;.
-                </p>
-                <div class="import__form">
-                    <label class="import__label new__add-name">
-                        <input type="text" class="import__input new__add-name__input"
-                               placeholder="Cсылка на вашу вакансию" required>
-                        <span class="error">Это поле обязательно для заполнения</span>
-                    </label>
-                    <button class="import__btn btn btn-reset">Импортировать</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="add__container">
         <div class="add__content-progress">
             <div class="add__right-container complete" id="progressBar">
@@ -146,6 +120,31 @@
             </div>
         </div>
         <div class="add__form" id="form">
+            <div class="import">
+                <div class="import__close"></div>
+                <div class="import__container">
+                    <div class="import__title">
+                        <p class="import__title-item">Быстрое заполнение&nbsp;c:</p>
+                        <img src="../img/hh-rect-20x20.svg" alt="Компания ХедХантер" class="import__link hh">
+                        <img src="../img/З-20х20.svg" alt="Компания Зарплата.ру" class="import__link z">
+                        <img src="../img/s-20x20.svg" alt="Компания СуперДжоб" class="import__link s">
+                        <img src="../img/r-20x20.svg" alt="Компания Работа.ру" class="import__link r">
+                    </div>
+                    <p class="import__descr f15w400">
+                        Если у&nbsp;вас есть вакансия на&nbsp;одном из&nbsp;этих сайтов, вы&nbsp;можете легко
+                        импортировать
+                        текст, добавив ссылку в&nbsp;поле ниже и&nbsp;нажав кнопку &laquo;Импортировать&raquo;.
+                    </p>
+                    <div class="import__form">
+                        <label class="import__label new__add-name">
+                            <input type="text" class="import__input new__add-name__input"
+                                   placeholder="Cсылка на вашу вакансию" required>
+                            <span class="error">Это поле обязательно для заполнения</span>
+                        </label>
+                        <button class="import__btn btn btn-reset">Импортировать</button>
+                    </div>
+                </div>
+            </div>
             <div class="add__content">
                 <div class="add__content-container main block" id="block-1">
                     <p class="main__title">Основная информация</p>

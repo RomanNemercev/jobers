@@ -389,10 +389,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //script for popup
-addPopupOpenHandler('#import-btn', 'popup-import');
-addPopupCloseHandler('import-popup-close', 'popup-import');
-addPopupCloseOnBackgroundClickHandler('popup-import');
-addPopupCloseOnEscKeyHandler('popup-import');
+// addPopupOpenHandler('#import-btn', 'popup-import');
+// addPopupCloseHandler('import-popup-close', 'popup-import');
+// addPopupCloseOnBackgroundClickHandler('popup-import');
+// addPopupCloseOnEscKeyHandler('popup-import');
 
 // script for popup ai
 addPopupOpenHandler('#ai-gen-get', 'popup-ai');
@@ -487,5 +487,13 @@ fileInput.addEventListener('change', function () {
     }
 });
 
-//тест с закрытием списка при нажатии на фон
+//закрытие открытие окна
+document.getElementById('import-btn').addEventListener('click', function () {
+    document.querySelector('.import').style.display = 'block';
+    document.getElementById('import-btn').style.display = 'none';
+})
 
+document.querySelector('.import__close').addEventListener('click', function () {
+    document.getElementById('import-btn').style.display = 'inline-block';
+    document.querySelector('.import').style.display = 'none';
+})

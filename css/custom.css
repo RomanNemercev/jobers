@@ -5,6 +5,113 @@
     display: none;
 }
 
+/*nots for mobile*/
+.nots {
+    position: relative;
+    z-index: 7;
+}
+
+.nots__container {
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    max-width: 726px;
+    width: 100%;
+    border-radius: 5px;
+    height: 59.083vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-out, visibility .3s ease-out;
+}
+
+.nots__title {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05);
+    background: #f9fafc;
+    padding: 17.5px;
+    padding-left: 26px;
+    margin-bottom: 1px;
+    font-size: 16px;
+}
+
+.nots__check {
+    position: absolute;
+    top: 17px;
+    right: 24px;
+    width: auto;
+    background-color: transparent;
+    color: var(--color_dodger);
+}
+
+.nots__cans-list {
+    background-color: var(--color_white);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05);
+    padding: 26px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 100%;
+}
+
+.nots__cans-item:last-of-type {
+    border-bottom: none;
+}
+
+.nots__user-info > li:first-of-type {
+    margin-bottom: 4px;
+}
+
+.nots__user-info > li:nth-child(2) {
+    margin-bottom: 6px;
+}
+
+.nots__cans-img {
+    margin-right: 15px;
+}
+
+.nots__cans-item {
+    position: relative;
+    display: flex;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--color_background);
+}
+
+.nots__time-now {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nots__time-recent {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nots__time-hours {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nots__time-days {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nots__user-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 80px);
+}
+
+.nots__user-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*nav*/
 .nav {
     z-index: 7;
@@ -2536,6 +2643,10 @@
     color: var(--color_dodger);
 }
 
+.add__option-upload {
+    display: none;
+}
+
 .add__option-upload:focus-visible {
     outline: none;
 }
@@ -3824,4 +3935,14 @@
 
 .multiarchive__yes {
     margin-right: 16px;
+}
+
+.nots__container--active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s ease, visibility .3s ease;
+}
+
+.search-bar__btn:focus-visible {
+    outline: none;
 }
