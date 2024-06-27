@@ -385,13 +385,29 @@
 }
 
 .import__descr {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     width: 95%;
 }
 
 .import__label {
-    margin-bottom: 0;
+    display: block;
+    position: relative;
     width: calc(100% - 173px);
+}
+
+.import__input {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    background-color: var(--color_athens-gray);
+}
+
+.import__input::placeholder {
+    color: var(--color_bali);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .import__label.error--visible {

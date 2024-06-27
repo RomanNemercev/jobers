@@ -705,9 +705,9 @@ try {
 // ещё один способ
 function handleInputValidation() {
     var inputs = document.querySelectorAll('.new__add-name__input[required]');
-    inputs.forEach(function(input) {
+    inputs.forEach(function (input) {
         var parent = input.closest('.new__add-name');
-        input.addEventListener('blur', function() {
+        input.addEventListener('blur', function () {
             if (!this.value.trim()) {
                 parent.classList.add('error--visible');
             } else {
@@ -1170,6 +1170,14 @@ try {
     console.log("Ошибка запроса элементов окна множественной архивации.")
 }
 
+// отктрытие-закрытие окна уведомлений
 document.getElementById('note-btn').addEventListener('click', function () {
     document.querySelector('.nots__container').classList.toggle('nots__container--active');
+    document.querySelector('.search-bar__note').classList.toggle('semi-color');
+})
+
+// открытие-закрытие окна поддержки
+document.getElementById('supp-btn').addEventListener('click', function () {
+    document.querySelector('.supp__container').classList.toggle('supp__container--active');
+    document.getElementById('supp-btn').classList.toggle('semi-color');
 })

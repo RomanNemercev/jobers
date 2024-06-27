@@ -365,7 +365,8 @@
     .nots__container {
         max-width: 100%;
         width: 100%;
-        transform: translateY(62.22px);
+        right: 0;
+        transform: translateY(-20px);
         background-color: var(--color_white);
         visibility: hidden;
         opacity: 0;
@@ -373,9 +374,18 @@
         position: fixed;
         display: flex;
         flex-direction: column;
-        padding: 0 13.3px;
+        padding: 0 13px;
         height: 100%;
         overflow: auto;
+    }
+
+    .nots__cans-list {
+        padding: 25px 0;
+        gap: 12px;
+    }
+
+    .nots__cans-item {
+        padding-bottom: 10px;
     }
 
     .nots__container--active {
@@ -410,9 +420,68 @@
         background-color: var(--color_dodger);
         padding: 11px;
         width: 100%;
+        top: 85%;
+        right: 0;
     }
 
     .nots__title {
         display: none;
+    }
+
+/*    man*/
+    .supp__container {
+        top: 60px;
+        max-width: 100%;
+        right: 0;
+        height: 100vh;
+    }
+
+    .supp__title {
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .supp__man-status::before {
+        width: 313px;
+        left: calc((100% - 313px) / 2);
+    }
+
+    .supp__main-time {
+        width: fit-content;
+        margin: 0 auto;
+        padding-right: 65px;
+        margin-bottom: 16px;
+    }
+
+    .supp__man-status {
+        margin-bottom: 35px;
+    }
+
+    .supp__main-mail {
+        width: fit-content;
+        margin: 0 auto;
+        padding-right: 83px;
+        margin-bottom: 15px;
+    }
+
+    .supp__main-phone {
+        width: fit-content;
+        margin: 0 auto;
+        padding-right: 35px;
+    }
+
+    .supp__main-info {
+        padding-bottom: 24px;
+    }
+
+    .supp__user-num {
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .supp__num-text {
+        display: inline-block;
+        width: 80%;
+        line-height: 18px;
     }
 }

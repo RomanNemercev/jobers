@@ -5,6 +5,11 @@
     display: none;
 }
 
+/*default sets*/
+.semi-color {
+    opacity: 0.5;
+}
+
 /*nots for mobile*/
 .nots {
     position: relative;
@@ -14,7 +19,7 @@
 .nots__container {
     position: fixed;
     top: 80px;
-    right: 30px;
+    right: 206px;
     max-width: 726px;
     width: 100%;
     border-radius: 5px;
@@ -110,6 +115,112 @@
 .nots__user-desc {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/*support*/
+.supp {
+    position: relative;
+    z-index: 7;
+}
+
+.supp__container {
+    position: fixed;
+    top: 80px;
+    right: 116px;
+    max-width: 296px;
+    width: 100%;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-out, visibility .3s ease-out;
+    background-color: var(--color_white);
+    padding: 25px;
+}
+
+.supp__title {
+    margin-bottom: 32px;
+}
+
+.supp__man-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.supp__man-status {
+    position: relative;
+    color: var(--color_btn-succes);
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 12px;
+    margin-bottom: 45px;
+}
+
+.supp__man-status::before {
+    content: '';
+    position: absolute;
+    width: 296px;
+    height: 40px;
+    background-color: var(--color_succes);
+    left: -25px;
+    z-index: -1;
+    top: 0;
+}
+
+.supp__man-name {
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--color_space);
+}
+
+.supp__container--active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s ease-out, visibility .3s ease-out;
+}
+
+.supp__main-time {
+    background-image: url("../img/man-clock.svg");
+    background-repeat: no-repeat;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.supp__main-item {
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 35px;
+}
+
+.supp__main-mail {
+    height: 20px;
+    margin-bottom: 15px;
+    background-image: url("../img/man-mail.svg");
+}
+
+.supp__main-phone {
+    height: 20px;
+    margin-bottom: 15px;
+    background-image: url("../img/man-call.svg");
+}
+
+.supp__main-info {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color_background);
+}
+
+.supp__user-num {
+    padding-top: 25px;
+}
+
+.supp__num-text {
+    line-height: 16px;
+}
+
+.sup__user-item {
+    margin-bottom: 15px;
 }
 
 /*nav*/
@@ -416,6 +527,7 @@
 .search-bar__note {
     position: relative;
     transform: translate(0px, 2px);
+    transition: opacity .3s ease-out;
 }
 
 .search-bar__support {
@@ -462,6 +574,7 @@
 /*header*/
 .vacancies {
     margin-bottom: 20px;
+    /*padding: 90px 25px 23px 295px;*/
 }
 
 .vacancies__header {
