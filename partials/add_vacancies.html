@@ -27,10 +27,10 @@
             <li class="nav__links-caption">Рекрутинг</li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
             <li class="nav__link list-reset"><a href="../partials/vacancies.html"
-                                                class="nav__link-item link-vacancies">Вакансии</a>
+                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
             </li>
             <li class="nav__link list-reset"><a href="candidates-null.html"
-                                                class="nav__link-item link-candidates active-page">Кандидаты</a></li>
+                                                class="nav__link-item link-candidates">Кандидаты</a></li>
         </ul>
         <ul class="nav__links">
             <li class="nav__links-caption">Организация</li>
@@ -53,7 +53,7 @@
 <section class="search-bar">
     <div class="search-bar__container">
         <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
-                                                              class="nav__logo-icon"></a>
+                                                           class="nav__logo-icon"></a>
         <form action="#" class="search-bar__form">
             <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
             <div class="search-bar__dropdown"></div>
@@ -68,7 +68,7 @@
             </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset">
+            <button class="search-bar__btn btn-reset" id="supp-btn">
                 <picture>
                     <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
                     <img src="../img/support.svg" alt="Поддержка"
@@ -77,7 +77,7 @@
             </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset">
+            <button class="search-bar__btn btn-reset" id="acc-btn">
                 <picture>
                     <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
                     <img src="../img/profile.svg" alt="Личный кабинет"
@@ -92,6 +92,212 @@
                 <div class="toogle__line"></div>
             </div>
         </div>
+    </div>
+</section>
+<section class="nots">
+    <div class="nots__container">
+        <h3 class="nots__title f16w600">Уведомления</h3>
+        <ul class="nots__cans-list">
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-now f14w400 c-bali">сейчас</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Бухгалтерия</p></li>
+                    <li><p class="nots__user-name f15w500">Александра степанова</p></li>
+                    <li><p class="nots__user-desc f14w400">Здравствуйте, вы запрашивали закрывающие документы, вчера мы
+                        их отправили</p></li>
+                </ul>
+                <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Личный менеджер</p></li>
+                    <li><p class="nots__user-name f15w500">Яна Олейникова</p></li>
+                    <li><p class="nots__user-desc f14w400">Действительно, сейчас очень большая конкуренция на уборщиков,
+                        я бы не рекомендовало использовать тариф без автоподнятия</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Евгения Онегина</p></li>
+                    <li><p class="nots__user-desc f14w400">Продуктовый менеджер</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+        </ul>
+        <button class="btn-reset nots__check f15w500">Отметить как прочитанное</button>
+    </div>
+</section>
+<section class="supp">
+    <div class="supp__container">
+        <!--        default variation 1 on work without icon-->
+        <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+        <div class="supp__man-img">
+            <img src="../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon">
+        </div>
+        <p class="supp__man-name">Купатова Елизавета</p>
+        <div class="supp__man-status"><span class="supp__man-item">Сейчас работает</span></div>
+        <ul class="supp__main-info">
+            <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>
+            <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>
+            </li>
+            <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб
+                103)</a></li>
+        </ul>
+        <div class="supp__user-num">
+            <div class="sup__user-item"><span class="f20w600">32948714</span></div>
+            <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>
+            </div>
+        </div>
+        <!--        default variation 2 not work without icon-->
+<!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+<!--                <div class="supp__man-img">-->
+<!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+<!--                </div>-->
+<!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+<!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+<!--                <ul class="supp__main-info">-->
+<!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+<!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+<!--                    </li>-->
+<!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+<!--                        103)</a></li>-->
+<!--                </ul>-->
+<!--                <div class="supp__user-num">-->
+<!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+<!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+        <!--        default variation 3 notwork with icon-->
+<!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+<!--                <div class="supp__man-img">-->
+<!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+<!--                </div>-->
+<!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+<!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+<!--                <ul class="supp__main-info">-->
+<!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+<!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+<!--                    </li>-->
+<!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+<!--                        103)</a></li>-->
+<!--                </ul>-->
+<!--                <div class="supp__user-num">-->
+<!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+<!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+        <!--        default variation 4 without icon on work-->
+<!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+<!--                <div class="supp__man-img">-->
+<!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+<!--                </div>-->
+<!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+<!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+<!--                <ul class="supp__main-info">-->
+<!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+<!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+<!--                    </li>-->
+<!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+<!--                        103)</a></li>-->
+<!--                </ul>-->
+<!--                <div class="supp__user-num">-->
+<!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+<!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+        <!--        default variation 5 with icon on work-->
+<!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+<!--                <div class="supp__man-img">-->
+<!--                    <img src="../img/man-onwork-with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+<!--                </div>-->
+<!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+<!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+<!--                <ul class="supp__main-info">-->
+<!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+<!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+<!--                    </li>-->
+<!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+<!--                        103)</a></li>-->
+<!--                </ul>-->
+<!--                <div class="supp__user-num">-->
+<!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+<!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+    </div>
+</section>
+<section class="acc">
+    <div class="acc__container">
+        <div class="acc__header">
+            <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+            <p class="acc__user-level f14w400 c-bali">Администратор</p>
+        </div>
+        <ul class="acc__active">
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Мой профиль</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Лицевой счет</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Личный менеджер</a></li>
+        </ul>
+        <div class="acc__user-exit bg-fix"><a href="#" class="acc__exit-btn f15w400">Выйти из системы</a></div>
     </div>
 </section>
 <!--основной контент страницы-->

@@ -441,9 +441,16 @@
         margin-bottom: 22px;
     }
 
-    .supp__man-status::before {
+    .supp__man-status::before,
+    .supp__man-status__notwork::before,
+    .supp__man-status__onwork::before {
         width: 313px;
         left: calc((100% - 313px) / 2);
+    }
+
+    .supp__man-status__notwork::after,
+    .supp__man-status__onwork::after {
+        left: calc((100% / 2) - 100px);
     }
 
     .supp__main-time {
@@ -483,5 +490,33 @@
         display: inline-block;
         width: 80%;
         line-height: 18px;
+    }
+
+    .acc__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 60px;
+        max-width: 100%;
+        right: 0;
+        height: 100vh;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .acc__header {
+        text-align: center;
+        padding-bottom: 11px;
+        width: 100%;
+    }
+
+    .acc__active {
+        text-align: center;
+        padding-top: 11px;
+        border-bottom: none;
+    }
+
+    .acc__active {
+        margin-bottom: 85%;
     }
 }

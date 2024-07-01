@@ -698,3 +698,66 @@ initializeTagInput('tag-input-5-mobile');
 initializeTagInput('tag-input-6-mobile');
 initializeTagInput('tag-input-7-mobile');
 initializeTagInput('tag-input-8-mobile');
+
+
+// программа по закрытию и открытию окон верхнерго бара справа
+document.addEventListener('click', function(event) {
+    // Проверка на клик по окнам уведомлений, поддержки и аккаунта, а также их кнопкам
+    const clickedElement = event.target;
+
+    // Списки элементов, которые не должны закрывать окна при клике
+    const noCloseElements = [
+        document.querySelector('.nots__container'),
+        document.querySelector('.supp__container'),
+        document.querySelector('.acc__container'),
+        document.getElementById('note-btn'),
+        document.getElementById('supp-btn'),
+        document.getElementById('acc-btn'),
+        document.querySelector('.search-bar__note')
+    ];
+
+    // Если клик не по одному из этих элементов, закрываем окна
+    if (!noCloseElements.some(el => el && el.contains(clickedElement))) {
+        // Закрытие окна уведомлений
+        const notsContainer = document.querySelector('.nots__container');
+        if (notsContainer.classList.contains('nots__container--active')) {
+            notsContainer.classList.remove('nots__container--active');
+            document.querySelector('.search-bar__note').classList.remove('semi-color');
+        }
+
+        // Закрытие окна поддержки
+        const suppContainer = document.querySelector('.supp__container');
+        if (suppContainer.classList.contains('supp__container--active')) {
+            suppContainer.classList.remove('supp__container--active');
+            document.getElementById('supp-btn').classList.remove('semi-color');
+        }
+
+        // Закрытие окна аккаунта
+        const accContainer = document.querySelector('.acc__container');
+        if (accContainer.classList.contains('acc__container--active')) {
+            accContainer.classList.remove('acc__container--active');
+            document.getElementById('acc-btn').classList.remove('semi-color');
+        }
+    }
+});
+
+// Открытие-закрытие окна уведомлений
+document.getElementById('note-btn').addEventListener('click', function (event) {
+    event.stopPropagation(); // Предотвращение всплытия события
+    document.querySelector('.nots__container').classList.toggle('nots__container--active');
+    document.querySelector('.search-bar__note').classList.toggle('semi-color');
+});
+
+// Открытие-закрытие окна поддержки
+document.getElementById('supp-btn').addEventListener('click', function (event) {
+    event.stopPropagation(); // Предотвращение всплытия события
+    document.querySelector('.supp__container').classList.toggle('supp__container--active');
+    document.getElementById('supp-btn').classList.toggle('semi-color');
+});
+
+// Открытие-закрытие окна аккаунта
+document.getElementById('acc-btn').addEventListener('click', function (event) {
+    event.stopPropagation(); // Предотвращение всплытия события
+    document.querySelector('.acc__container').classList.toggle('acc__container--active');
+    document.getElementById('acc-btn').classList.toggle('semi-color');
+});
