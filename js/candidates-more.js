@@ -143,9 +143,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // pl for textarea in chat crm
 // Функция для обновления отступа в textarea
 function updateTextareaIndent() {
+    var mediaQuery = window.matchMedia('(max-width: 768px)');
     var overlayWidth = document.getElementById("chat-select").offsetWidth;
     var totalIndent = overlayWidth + 100; // Добавляем 37px к ширине overlay
     document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
+
+    if (mediaQuery.matches) {
+        totalIndent = overlayWidth + 150; // Добавляем 37px к ширине overlay
+        document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
+    }
 }
 
 // Функция для обновления отступа и текста placeholder
