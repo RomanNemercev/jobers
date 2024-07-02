@@ -36,6 +36,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .can__section-param {
@@ -379,6 +381,7 @@
 }
 
 .can__user-item {
+    position: relative;
     list-style: none;
     width: 100%;
     background-color: var(--color_white);
@@ -688,6 +691,7 @@
     position: relative;
     padding: 10px 15px 11px 45px;
     color: var(--color_white);
+    height: fit-content;
 }
 
 .can__add-values::before {
@@ -1198,5 +1202,13 @@
 /*end tags styles*/
 
 .can__list-768 {
+    display: flex;
+}
+
+.user__status-bar__1149px {
+    display: flex;
+}
+
+.user__status-bar__reverse-1149px {
     display: flex;
 }

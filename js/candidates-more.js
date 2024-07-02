@@ -141,37 +141,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // pl for textarea in chat crm
+// Функция для обновления отступа в textarea
 function updateTextareaIndent() {
     var overlayWidth = document.getElementById("chat-select").offsetWidth;
-    var totalIndent = overlayWidth + 37; // Добавляем 30px к ширине overlay
+    var totalIndent = overlayWidth + 100; // Добавляем 37px к ширине overlay
     document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
 }
 
-function updatePlaceholderIndent() {
-    var overlayWidth = document.getElementById("chat-select").offsetWidth;
-    var totalIndent = overlayWidth + 30; // Добавляем 30px к ширине overlay
-    var placeholderSpaces = Math.ceil(overlayWidth / 8); // Округляем до ближайшего целого числа символов
-    var placeholderText = "Введите ваше сообщение";
-    document.getElementById("chat-textarea").setAttribute("placeholder", placeholderText);
-}
+// Функция для обновления отступа и текста placeholder
+// function updatePlaceholderIndent() {
+//     var overlayWidth = document.getElementById("chat-select").offsetWidth;
+//     var placeholderText = "Введите ваше сообщение";
+//     document.getElementById("chat-textarea").setAttribute("placeholder", placeholderText);
+// }
 
-document.getElementById("chat-select").addEventListener("change", function () {
-    updateTextareaIndent();
-    updatePlaceholderIndent();
+// Событие для изменения значения в chat-select
+document.querySelectorAll("#chat-select li").forEach(function (item) {
+    item.addEventListener("click", function () {
+        document.querySelector("#chat-select .selected-option").textContent = this.getAttribute("data-value");
+        // updateTextareaIndent();
+        // updatePlaceholderIndent();
+        var overlayWidth = document.getElementById("chat-select").offsetWidth;
+        var placeholderText = "Введите ваше сообщение";
+        document.getElementById("chat-textarea").setAttribute("placeholder", placeholderText);
+        // var overlayWidth = document.getElementById("chat-select").offsetWidth;
+        var totalIndent = overlayWidth + 37; // Добавляем 37px к ширине overlay
+        document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
+    });
 });
 
-document.getElementById("chat-select").addEventListener("input", function () {
+// Инициализация при загрузке страницы
+window.addEventListener("load", function () {
     updateTextareaIndent();
-    updatePlaceholderIndent();
+    // updatePlaceholderIndent();
 });
 
-document.getElementById("chat-textarea").addEventListener("input", function () {
+// Также обновляем отступ при изменении размера окна
+window.addEventListener("resize", function () {
     updateTextareaIndent();
+    // updatePlaceholderIndent();
 });
 
-// Инициализация
-updateTextareaIndent();
-updatePlaceholderIndent();
 
 // add script for dropdown in chat crm
 // Добавляем обработчик события для кнопки выбора действия

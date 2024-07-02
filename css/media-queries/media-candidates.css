@@ -1,44 +1,37 @@
-@media (max-width: 1135px) {
-    .can__section-param {
-        width: 100%;
-        justify-content: space-between;
-        margin-bottom: 15px;
+@media (max-width: 1100px) {
+    .user__content-wrapper {
+        padding-bottom: 70px;
+    }
+
+    .user__status-bar__1149px {
+        position: absolute;
+        bottom: 15px;
+        left: 24px;
+        flex-direction: row-reverse;
+        z-index: 1;
+    }
+
+    .user__btn-mind {
         margin-right: 0;
     }
 
-    .user__metadata {
-        flex-wrap: wrap;
+    .user__bottom {
+        position: relative;
     }
 
-    .can__add-values {
-        white-space: nowrap;
-    }
-
-    .can__section-bar {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
-
-    .user__top {
-        flex-wrap: wrap;
-    }
-
-    .user__vacancy-wrapper {
-        margin-bottom: 25px;
-    }
-
-    .user__status-bar {
-        margin-left: 0;
+    .user__bottom::after {
+        content: '';
+        position: absolute;
         width: 100%;
-        justify-content: space-between;
+        height: 1px;
+        background-color: var(--color_gray);
+        left: 0;
+        bottom: 70px;
     }
 
-    .user__check-icon::before {
-        top: -25px;
-    }
-
-    .user__check-icon::after {
-        top: -25px;
+    .user__level .droplist__items {
+        bottom: 50px;
+        right: auto;
     }
 }
 
@@ -51,27 +44,9 @@
         justify-content: flex-end;
     }
 
-    .user__status-bar {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        text-align: right;
-    }
-
-    .user__status {
-        margin-right: 0;
-    }
-
-    .user__invite {
-        margin-right: 0;
-    }
-
-    .user__btn-mind {
-        margin-right: 0;
-    }
-
-    .user__level {
-        margin-right: 0;
+    .user__metadata {
+        flex-wrap: wrap;
+        gap: 10px 0px;
     }
 
     .dropdown-menu ul::before {
@@ -228,12 +203,12 @@
     }
 
     .user__check-icon::before {
-        top: 6px;
+        top: -20px;
         left: -1px;
     }
 
     .user__check-icon::after {
-        top: 6px;
+        top: -20px;
         left: -1px;
     }
 
@@ -617,7 +592,7 @@
     }
 
     .button-icon:last-child {
-        margin-left: -5%;
+        margin-left: -3%;
     }
 
     .vacancies__popup-768--active {
