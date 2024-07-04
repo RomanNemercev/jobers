@@ -279,7 +279,7 @@
     .nav__container {
         max-width: 100%;
         width: 100%;
-        transform: translateY(62.22px);
+        transform: translateY(60.22px);
         background-color: var(--color_white);
         visibility: hidden;
         opacity: 0;
@@ -382,6 +382,8 @@
     .nots__cans-list {
         padding: 25px 0;
         gap: 12px;
+        padding-bottom: 100px;
+        flex-grow: 1; /* Сделать список гибким, чтобы он занимал оставшееся пространство */
     }
 
     .nots__cans-item {
@@ -419,9 +421,13 @@
         color: var(--color_white);
         background-color: var(--color_dodger);
         padding: 11px;
-        width: 100%;
-        top: 85%;
-        right: 0;
+        position: sticky; /* Использование sticky позиционирования */
+        bottom: env(safe-area-inset-bottom, 20px);
+        height: 40px;
+        z-index: 100; /* Убедиться, что кнопка выше остальных элементов */
+        transform: translate(0px, -60px);
+        margin-left: -13px;
+        width: 100vw;
     }
 
     .nots__title {

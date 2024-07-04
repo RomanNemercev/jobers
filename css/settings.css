@@ -1112,9 +1112,12 @@
 
 .amo-connect {
     padding: 25px;
-    max-height: 100%;
     overflow: auto;
     min-width: 458px;
+}
+
+.auto__close {
+    position: fixed;
 }
 
 .amo-connect .field__name_popup {
@@ -1352,6 +1355,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#amo-connect-popup {
+    align-items: flex-start;
 }
 
 .bank-empty .cabinet__image {
