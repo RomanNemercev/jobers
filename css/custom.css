@@ -2086,6 +2086,7 @@
 }
 
 .item__burger-btn {
+    display: inline-block;
     width: 100%;
     text-align: left;
     padding: 11px 0 12px 15px;
@@ -2865,6 +2866,65 @@
     position: fixed;
 }
 
+.autocomplete-list {
+    position: absolute;
+    background-color: #fff;
+    max-height: 150px;
+    overflow-y: auto;
+    max-width: 470px;
+    width: 100%;
+    z-index: 99;
+    top: 47px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.autocomplete-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.autocomplete-item {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+}
+
+.new__city-input.selected {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+}
+
+.clear-input {
+    position: absolute;
+    right: 12px;
+    top: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.clear-input {
+    background-image: url("../img/cross.svg");
+    width: 16px;
+    height: 16px;
+    right: 15px;
+    top: 18px;
+}
+
+.new__city-input::placeholder {
+    color: var(--color_bali);
+    font-size: 14px;
+}
+
+.new__city-label {
+    position: relative;
+}
+
 /*new page*/
 /*add*/
 .add__container {
@@ -3634,7 +3694,8 @@
 .add__station__data,
 .add__call__data,
 .add__name-company__data,
-.add__id-code__data {
+.add__id-code__data,
+.new__city-input {
     display: block;
     font-size: 14px;
     width: 100%;

@@ -813,6 +813,8 @@
         background-color: #fff;
         padding-bottom: 0;
         display: flex;
+        justify-content: center;
+        margin-top: auto;
     }
 
     .new-can__main-content__768 .droplist {
@@ -931,6 +933,7 @@
         padding: 54px 13px 13px 13px;
         overflow-y: scroll;
         overflow-x: hidden;
+        height: 100vh;
     }
 
     .new__title {

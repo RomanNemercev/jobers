@@ -1231,3 +1231,89 @@ document.getElementById('acc-btn').addEventListener('click', function (event) {
     document.querySelector('.acc__container').classList.toggle('acc__container--active');
     document.getElementById('acc-btn').classList.toggle('semi-color');
 });
+
+
+//city autocomplete
+document.addEventListener("DOMContentLoaded", function () {
+    const cityInput = document.getElementById("city-input");
+    const autocompleteList = document.getElementById("autocomplete-list");
+    const clearInput = document.getElementById("clear-input");
+
+    const cities = ["Москва", "Санкт-Петербург", "Новосибирск", "Екатеринбург", "Казань", "Нижний Новгород", "Челябинск", "Самара", "Омск", "Ростов-на-Дону", "Уфа", "Красноярск", "Воронеж", "Пермь", "Волгоград"];
+
+    cityInput.addEventListener("input", function () {
+        const query = cityInput.value.toLowerCase();
+        autocompleteList.innerHTML = "";
+
+        if (query === "") {
+            showDefaultOptions();
+            return;
+        }
+
+        const filteredCities = cities.filter(city => city.toLowerCase().includes(query));
+
+        if (filteredCities.length === 0) {
+            autocompleteList.style.display = "none";
+        } else {
+            autocompleteList.style.display = "block";
+        }
+
+        filteredCities.forEach(city => {
+            const item = document.createElement("div");
+            item.classList.add("autocomplete-item");
+            item.innerText = city;
+            item.addEventListener("click", function () {
+                cityInput.value = city;
+                autocompleteList.innerHTML = "";
+                autocompleteList.style.display = "none";
+                cityInput.classList.add("selected");
+                clearInput.style.display = "inline";
+            });
+            autocompleteList.appendChild(item);
+        });
+    });
+
+    cityInput.addEventListener("focus", function() {
+        if (cityInput.value === "") {
+            showDefaultOptions();
+        }
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!autocompleteList.contains(e.target) && e.target !== cityInput && e.target !== clearInput) {
+            autocompleteList.innerHTML = "";
+            autocompleteList.style.display = "none";
+        }
+    });
+
+    clearInput.addEventListener("click", function () {
+        cityInput.value = "";
+        cityInput.classList.remove("selected");
+        clearInput.style.display = "none";
+        autocompleteList.innerHTML = "";
+        autocompleteList.style.display = "none";
+    });
+
+    function showDefaultOptions() {
+        autocompleteList.innerHTML = "";
+        const defaultCities = ["Москва", "Санкт-Петербург"];
+        defaultCities.forEach(city => {
+            const item = document.createElement("div");
+            item.classList.add("autocomplete-item");
+            item.innerText = city;
+            item.addEventListener("click", function () {
+                cityInput.value = city;
+                autocompleteList.innerHTML = "";
+                autocompleteList.style.display = "none";
+                cityInput.classList.add("selected");
+                clearInput.style.display = "inline";
+            });
+            autocompleteList.appendChild(item);
+        });
+        if (defaultCities.length > 0) {
+            autocompleteList.style.display = "block";
+        } else {
+            autocompleteList.style.display = "none";
+        }
+    }
+});
