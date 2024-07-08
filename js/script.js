@@ -1171,7 +1171,7 @@ try {
 }
 
 // программа по закрытию и открытию окон верхнерго бара справа
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     // Проверка на клик по окнам уведомлений, поддержки и аккаунта, а также их кнопкам
     const clickedElement = event.target;
 
@@ -1193,6 +1193,7 @@ document.addEventListener('click', function(event) {
         if (notsContainer.classList.contains('nots__container--active')) {
             notsContainer.classList.remove('nots__container--active');
             document.querySelector('.search-bar__note').classList.remove('semi-color');
+            document.querySelector('.body-page').classList.remove('scroll-stop');
         }
 
         // Закрытие окна поддержки
@@ -1200,6 +1201,7 @@ document.addEventListener('click', function(event) {
         if (suppContainer.classList.contains('supp__container--active')) {
             suppContainer.classList.remove('supp__container--active');
             document.getElementById('supp-btn').classList.remove('semi-color');
+            document.querySelector('.body-page').classList.remove('scroll-stop');
         }
 
         // Закрытие окна аккаунта
@@ -1207,6 +1209,7 @@ document.addEventListener('click', function(event) {
         if (accContainer.classList.contains('acc__container--active')) {
             accContainer.classList.remove('acc__container--active');
             document.getElementById('acc-btn').classList.remove('semi-color');
+            document.querySelector('.body-page').classList.remove('scroll-stop');
         }
     }
 });
@@ -1216,6 +1219,11 @@ document.getElementById('note-btn').addEventListener('click', function (event) {
     event.stopPropagation(); // Предотвращение всплытия события
     document.querySelector('.nots__container').classList.toggle('nots__container--active');
     document.querySelector('.search-bar__note').classList.toggle('semi-color');
+    document.querySelector('.supp__container').classList.remove('supp__container--active');
+    document.getElementById('supp-btn').classList.remove('semi-color');
+    document.querySelector('.acc__container').classList.remove('acc__container--active');
+    document.getElementById('acc-btn').classList.remove('semi-color');
+    // document.querySelector('.body-page').classList.toggle('scroll-stop');
 });
 
 // Открытие-закрытие окна поддержки
@@ -1223,6 +1231,11 @@ document.getElementById('supp-btn').addEventListener('click', function (event) {
     event.stopPropagation(); // Предотвращение всплытия события
     document.querySelector('.supp__container').classList.toggle('supp__container--active');
     document.getElementById('supp-btn').classList.toggle('semi-color');
+    document.querySelector('.nots__container').classList.remove('nots__container--active');
+    document.querySelector('.search-bar__note').classList.remove('semi-color');
+    document.querySelector('.acc__container').classList.remove('acc__container--active');
+    document.getElementById('acc-btn').classList.remove('semi-color');
+    // document.querySelector('.body-page').classList.toggle('scroll-stop');
 });
 
 // Открытие-закрытие окна аккаунта
@@ -1230,8 +1243,40 @@ document.getElementById('acc-btn').addEventListener('click', function (event) {
     event.stopPropagation(); // Предотвращение всплытия события
     document.querySelector('.acc__container').classList.toggle('acc__container--active');
     document.getElementById('acc-btn').classList.toggle('semi-color');
+    document.querySelector('.nots__container').classList.remove('nots__container--active');
+    document.querySelector('.search-bar__note').classList.remove('semi-color');
+    document.querySelector('.supp__container').classList.remove('supp__container--active');
+    document.getElementById('supp-btn').classList.remove('semi-color');
+    document.querySelector('.body-page').classList.toggle('scroll-stop');
 });
 
+// удаление стоп-скролл класса, если окно содержит класс отображения
+// уведомления
+document.getElementById('note-btn').addEventListener('click', function () {
+    if (document.querySelector('.nots__container').classList.contains('nots__container--active')) {
+        document.querySelector('.body-page').classList.add('scroll-stop');
+    } else {
+        document.querySelector('.body-page').classList.remove('scroll-stop');
+    }
+})
+
+// поддержка
+document.getElementById('supp-btn').addEventListener('click', function () {
+    if (document.querySelector('.supp__container').classList.contains('supp__container--active')) {
+        document.querySelector('.body-page').classList.add('scroll-stop');
+    } else {
+        document.querySelector('.body-page').classList.remove('scroll-stop');
+    }
+})
+
+// acc
+document.getElementById('acc-btn').addEventListener('click', function () {
+    if (document.querySelector('.acc__container').classList.contains('acc__container--active')) {
+        document.querySelector('.body-page').classList.add('scroll-stop');
+    } else {
+        document.querySelector('.body-page').classList.remove('scroll-stop');
+    }
+})
 
 //city autocomplete
 document.addEventListener("DOMContentLoaded", function () {
@@ -1273,7 +1318,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    cityInput.addEventListener("focus", function() {
+    cityInput.addEventListener("focus", function () {
         if (cityInput.value === "") {
             showDefaultOptions();
         }
