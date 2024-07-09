@@ -1560,6 +1560,23 @@
     margin-bottom: 20px;
 }
 
+.new__clones-label {
+    position: relative;
+}
+
+.new__clones-label .error {
+    margin-top: 0;
+}
+
+.new__clones-label.error--visible > .new__clone-answ {
+    margin-bottom: 30px;
+    outline: 1px solid var(--color_red);
+}
+
+.new__current-label:nth-child(2) {
+    position: relative;
+}
+
 .new__clone-answ:focus {
     outline: 1px solid var(--color_dodger);
     background-color: var(--color_zircon);

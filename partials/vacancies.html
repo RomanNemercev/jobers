@@ -758,6 +758,7 @@
                             <div class="item__right-data">Минимальный с автообновлением</div>
                         </div>
                     </div>
+                    <button class="btn-reset btn-two item__btn-768">Продлить срок вакансии</button>
                 </li>
             </ul>
             <div class="vacancies__filter" id="popupFilterActive">
@@ -1064,23 +1065,23 @@
                     <p class="new__desc">Автоотбор автоматически перемещает кандидатов, которые
                         удовлетворяют правилу, на&nbsp;этап Приглашенные по&nbsp;умолчанию</p>
                     <p class="new__location-title">Локация</p>
-<!--                    <div class="droplist droplist__select droplist__select_citys">-->
-<!--                        <form class="form__list" action="">-->
-<!--                            <div class="droplist__selected item droplist__result item"><span-->
-<!--                                    class="droplist__result_text" data-start="Город">Город</span> <span-->
-<!--                                    class="droplist__icon droplist__icon_cross"></span>-->
-<!--                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"-->
-<!--                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"-->
-<!--                                          fill="#9098B4"></path>-->
-<!--                                </svg>-->
-<!--                            </div>-->
-<!--                            <ul class="droplist__items" style="width: 100%;">-->
-<!--                                <li class="droplist__item">Петербург</li>-->
-<!--                                <li class="droplist__item">Москва</li>-->
-<!--                            </ul>-->
-<!--                        </form>-->
-<!--                    </div>-->
+                    <!--                    <div class="droplist droplist__select droplist__select_citys">-->
+                    <!--                        <form class="form__list" action="">-->
+                    <!--                            <div class="droplist__selected item droplist__result item"><span-->
+                    <!--                                    class="droplist__result_text" data-start="Город">Город</span> <span-->
+                    <!--                                    class="droplist__icon droplist__icon_cross"></span>-->
+                    <!--                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"-->
+                    <!--                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"-->
+                    <!--                                          fill="#9098B4"></path>-->
+                    <!--                                </svg>-->
+                    <!--                            </div>-->
+                    <!--                            <ul class="droplist__items" style="width: 100%;">-->
+                    <!--                                <li class="droplist__item">Петербург</li>-->
+                    <!--                                <li class="droplist__item">Москва</li>-->
+                    <!--                            </ul>-->
+                    <!--                        </form>-->
+                    <!--                    </div>-->
                     <label class="new__city-label">
                         <input type="text" class="new__city-input" id="city-input" placeholder="Город">
                         <div class="autocomplete-list" id="autocomplete-list" style="display: none;"></div>
@@ -1108,7 +1109,10 @@
                                     </button>
                                 </div>
                             </label>
-                            <input type="number" class="new__clone-answ" placeholder="-" id="day-amount">
+                            <label class="new__clones-label" id="clones-label">
+                                <input type="number" class="new__clone-answ" placeholder="-" id="day-amount">
+                                <span class="error">Это поле обязательно для заполнения</span>
+                            </label>
                         </div>
                     </div>
                     <div class="new__options">
@@ -1305,12 +1309,13 @@
                                     <span class="new__option-dot">К&nbsp;текущей
                                                         вакансии</span>
                                 </label>
-                                <label for="specific-vacancy" class="new__current-label">
+                                <label for="specific-vacancy" class="new__current-label" id="specific-vacancy-label">
                                     <input type="radio"
                                            class="new__option-item new__option-item__hidden specific-vacancy"
                                            id="specific-vacancy" name="global">
                                     <span class="new__option-dot">К&nbsp;определенной
                                                         вакансии</span>
+                                    <span class="error" id="specific-vacancy-error">Это поле обязательно для заполнения</span>
                                 </label>
                                 <label for="all-vacancies" class="new__current-label">
                                     <input type="radio" class="new__option-item new__option-item__hidden"
@@ -1405,7 +1410,8 @@
             <div class="popup__content">
                 <div class="popup__header">
                     <div class="popup__title">Настройка формы отклика</div>
-                    <div class="popup__descr" style="display: inline-block">Настройте критерии которые необходимо указать соискателю при отклике с
+                    <div class="popup__descr" style="display: inline-block">Настройте критерии которые необходимо
+                        указать соискателю при отклике с
                         сайта Jobers
                     </div>
                 </div>
