@@ -1635,6 +1635,10 @@
     margin-bottom: 7px;
 }
 
+.new__options-group .item {
+    padding: 11.5px 15px 11.5px 15px;
+}
+
 .new__options-group > .droplist:first-of-type {
     margin-right: 10px;
     min-width: 92px;

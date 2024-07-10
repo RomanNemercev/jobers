@@ -1402,6 +1402,7 @@ document.getElementById('specific-vacancy').addEventListener('change', function 
         if (selectedItems.length === 0) {
             errorSpan.style.display = 'inline-block';
             errorSpan.style.cssText = 'display: inline-block; top: 70px; width: auto;';
+            specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
             vacancyLabel.style.marginBottom = '85px';
         }
     } else {
@@ -1421,10 +1422,12 @@ document.querySelectorAll('#specific-vacancy-wrapper .droplist__items .check').f
         if (selectedItems.length > 0) {
             errorSpan.style.display = 'none';
             vacancyLabel.style.marginBottom = '65px';
+            specificWrapper.style.cssText = 'outline: none; border-radius: 5px;';
             specificWrapper.querySelector('.droplist__selected').classList.add('droplist__result_active');
         } else {
             errorSpan.style.display = 'inline-block';
             vacancyLabel.style.marginBottom = '85px';
+            specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
             specificWrapper.querySelector('.droplist__selected').classList.remove('droplist__result_active');
         }
     });
