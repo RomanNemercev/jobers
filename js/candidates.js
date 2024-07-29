@@ -55,7 +55,6 @@ function sideScroll(element, direction, speed, distance, step) {
 }
 
 
-
 //всплывающее окно фильтров выбранных кандидатов
 try {
     const multiSelect = () => {
@@ -891,7 +890,7 @@ document.getElementById('all-vacancies').addEventListener('change', function () 
 })
 
 //droplist in new can create
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const dropdownContainer = document.querySelector('.dropdown-container');
     const selectedValue = dropdownContainer.querySelector('.selected-value');
     const inputPlaceholder = selectedValue.querySelector('.input-placeholder');
@@ -906,6 +905,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownList.style.display = isExpanded ? 'none' : 'block';
         dropdownIconDown.style.display = isExpanded ? 'block' : 'none';
         dropdownIconUp.style.display = isExpanded ? 'none' : 'block';
+        inputPlaceholder.style.color = isExpanded ? '#9098b4' : '#2f353d';
     });
 
     dropdownList.addEventListener('click', (event) => {
@@ -929,7 +929,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const tag = document.createElement('div');
             tag.className = 'tag';
             tag.dataset.value = value;
-            tag.innerHTML = `${value} <span class="remove-tag">x</span>`;
+            tag.innerHTML = `${value} <span class="remove-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_5360_6349)">
+    <path d="M12.5 3.5L3.5 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M12.5 12.5L3.5 3.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="clip0_5360_6349">
+      <rect width="16" height="16" fill="white" />
+    </clipPath>
+  </defs>
+</svg></span>`;
             tag.querySelector('.remove-tag').addEventListener('click', (event) => {
                 event.stopPropagation(); // Остановить всплытие события
                 removeTag(value);
@@ -964,6 +974,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownList.style.display = 'none';
         dropdownIconDown.style.display = 'block';
         dropdownIconUp.style.display = 'none';
+        inputPlaceholder.style.color = '#9098b4';
     });
 });
 

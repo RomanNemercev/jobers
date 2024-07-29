@@ -57,6 +57,40 @@
     }
 }
 
+/*следущие медиа запросы для кандидатов*/
+@media (max-width: 917px) {
+    .user__contacts__data {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .user__main-img {
+        margin-bottom: 94.61px;
+    }
+
+    .user__metadata {
+        flex-wrap: wrap;
+    }
+
+    .user__add-tags__wrapper {
+        width: 100%;
+        flex-basis: 100%;
+        padding-left: 5px;
+    }
+
+    .user__in,
+    .user__web {
+        margin-bottom: 10px;
+    }
+
+    .user__name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 772px) {
     .search-bar {
         z-index: 3;

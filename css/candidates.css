@@ -1220,11 +1220,12 @@
 .selected-value {
     display: flex;
     align-items: center;
-    padding: 7.82px 15px;
+    min-height: 40px;
+    padding: 0 15px;
     border-radius: 5px;
-    background-color: #fff;
     cursor: pointer;
     position: relative;
+    background-color: var(--color_athens-gray);
 }
 
 .selected-value .input-placeholder {
@@ -1262,7 +1263,6 @@
 
 .dropdown-item {
     position: relative;
-    padding-left: 43px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1306,7 +1306,7 @@
     transition: opacity .3s ease-out;
 }
 
-.dropdown-item input:checked + span::after {
+.dropdown-item input + span::after {
     content: '';
     position: absolute;
     width: 16px;
@@ -1316,8 +1316,12 @@
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 1;
+    opacity: 0;
     transition: opacity .3s ease-out;
+}
+
+.dropdown-item input:checked + span::after {
+    opacity: 1;
 }
 
 .dropdown-item input + span::after {
@@ -1325,17 +1329,21 @@
 }
 
 .tag {
-    background-color: #5898FF;
-    color: white;
-    padding: 5px 10px;
+    background-color: var(--color_dodger);
+    color: var(--color_white);
+    font-family: 'Inter', sans-serif;
+    padding: 3.96px 10px;
     border-radius: 3px;
     display: flex;
     align-items: center;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .tag .remove-tag {
-    margin-left: 5px;
+    margin-left: 9px;
     cursor: pointer;
+    transform: translateY(2px);
 }
 
 .tag .remove-tag:hover {
