@@ -71,7 +71,7 @@ body {
     min-width:0;
     max-width: 100%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 .drop__in__drop .droplist__fields .droplist__selected_drop {
     display: inline-flex;
@@ -220,6 +220,7 @@ body {
     background-color: #F4F6F8;
     display: inline-flex;
     align-items: center;
+    min-width: calc(100% + 20px);
 }
 .drop__in__drop .droplist__inner .droplist__result_active {
     background-color: #EFF5FF;
@@ -268,7 +269,6 @@ body {
     width: auto;
     display: inline-flex;
     max-width: 100%;
-    min-width: 0;
 }
 .drop__in__drop .droplist_active_outer .droplist__result {
     display: inline-flex;
@@ -427,6 +427,7 @@ body {
     width: 100%;
     max-width: 479px;
 }
+
 .drop__in__drop .droplists__block > .droplist {
     padding: 0;
     border: none;
@@ -435,6 +436,7 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    column-gap: 20px;
 }
 .drop__in__drop .take__values_block {
     margin-bottom: 15px;

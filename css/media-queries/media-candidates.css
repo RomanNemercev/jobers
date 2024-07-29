@@ -37,16 +37,15 @@
 
 @media (max-width: 912px) {
     .can__section-param {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        text-align: left;
         gap: 15px;
-        text-align: right;
-        justify-content: flex-end;
     }
 
     .user__metadata {
         flex-wrap: wrap;
-        gap: 10px 0px;
+        gap: 10px 0;
     }
 
     .dropdown-menu ul::before {
@@ -58,7 +57,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 772px) {
     .search-bar {
         z-index: 3;
     }
@@ -102,6 +101,7 @@
         padding: 13px;
         background-color: var(--color_white);
         border-radius: 5px;
+        gap: 0;
     }
 
     .can__span {

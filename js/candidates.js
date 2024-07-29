@@ -6,7 +6,7 @@ function toggleScrollButtons() {
     const btnRight = document.getElementById('btn-right');
     const btnSet = document.querySelector('.btn-settings');
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 772) {
         btnLeft.style.visibility = 'hidden';
         btnRight.style.visibility = 'hidden';
         console.log('123');
@@ -331,96 +331,6 @@ let monthName = months[monthIndex];
 let formattedDate = day + " " + monthName + " " + year + " " + "года";
 var ura = 'Автоотбор от ';
 document.getElementById('main-name').value = ura + formattedDate;
-
-//вызов выпадающего списка в окне добавления нового кандидата
-let vacancyChoose = new Choices(
-    document.getElementById('choose-vacancy'),
-    {
-        searchEnabled: false,
-        itemSelectText: '',
-        shouldSort: false,
-        removeItemButton: true,
-        noChoicesText: '',
-    }
-);
-
-//script for dropdown
-// document.addEventListener("DOMContentLoaded", function () {
-//     const dropdowns = document.querySelectorAll('.dropdown');
-//
-//     dropdowns.forEach(function (dropdown) {
-//         const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-//         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-//         const dropdownClose = dropdown.querySelector('.item__btn-close');
-//         const dropdownBack = dropdown.querySelector('.candidates__droplist-back');
-//         const dropdownDot = dropdown.querySelectorAll('.button-icon');
-//
-//         dropdown.addEventListener('mouseleave', function (e) {
-//             if (!dropdown.contains(e.relatedTarget)) {
-//                 closeDropdown();
-//             }
-//         });
-//
-//         dropdown.addEventListener('mouseenter', function () {
-//             openDropdown();
-//         });
-//
-//         dropdownMenu.addEventListener('mouseenter', function () {
-//             clearTimeout(dropdownMenu.timer);
-//         });
-//
-//         dropdownMenu.addEventListener('mouseleave', function () {
-//             dropdownMenu.timer = setTimeout(function () {
-//                 closeDropdown();
-//             }, 200);
-//         });
-//
-//         dropdownClose.addEventListener('click', function () {
-//             closeDropdown();
-//
-//             // Удаляем обработчики событий
-//             dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
-//             dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
-//         });
-//
-//         dropdownBack.addEventListener('click', function () {
-//             closeDropdown();
-//             dropdownToggle.removeEventListener('mouseenter', handleMouseEnter);
-//             dropdownToggle.removeEventListener('mouseleave', handleMouseLeave);
-//         });
-//
-// // Объявляем функции-обработчики событий
-//         function handleMouseEnter() {
-//             openDropdown();
-//             clearTimeout(dropdownMenu.timer);
-//         }
-//
-//         function handleMouseLeave(e) {
-//             if (!dropdown.contains(e.relatedTarget)) {
-//                 closeDropdown();
-//             }
-//
-//             dropdownMenu.timer = setTimeout(function () {
-//                 closeDropdown();
-//             }, 200);
-//         }
-//
-//
-//         function openDropdown() {
-//             dropdownMenu.style.display = 'block';
-//             dropdownMenu.classList.add('dropdown--active');
-//             dropdownBack.classList.add('candidates__droplist-back--active');
-//             dropdown.setAttribute('data-state', 'open');
-//         }
-//
-//         function closeDropdown() {
-//             dropdownMenu.classList.remove('dropdown--active');
-//             dropdownBack.classList.remove('candidates__droplist-back--active');
-//             dropdownMenu.style.display = 'none';
-//             dropdown.setAttribute('data-state', 'closed');
-//         }
-//     });
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
     const dropdowns = document.querySelectorAll('.dropdown');
@@ -979,3 +889,81 @@ document.getElementById('all-vacancies').addEventListener('change', function () 
         document.getElementById('specific-vacancy-error').style.display = 'none';
     }
 })
+
+//droplist in new can create
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownContainer = document.querySelector('.dropdown-container');
+    const selectedValue = dropdownContainer.querySelector('.selected-value');
+    const inputPlaceholder = selectedValue.querySelector('.input-placeholder');
+    const dropdownIconDown = selectedValue.querySelector('.icon-down');
+    const dropdownIconUp = selectedValue.querySelector('.icon-up');
+    const dropdownList = dropdownContainer.querySelector('.dropdown-list');
+    const tagsContainer = selectedValue.querySelector('.tags');
+
+    selectedValue.addEventListener('click', (event) => {
+        event.stopPropagation(); // Остановить всплытие события
+        const isExpanded = dropdownList.style.display === 'block';
+        dropdownList.style.display = isExpanded ? 'none' : 'block';
+        dropdownIconDown.style.display = isExpanded ? 'block' : 'none';
+        dropdownIconUp.style.display = isExpanded ? 'none' : 'block';
+    });
+
+    dropdownList.addEventListener('click', (event) => {
+        event.stopPropagation(); // Остановить всплытие события
+        const item = event.target.closest('.dropdown-item');
+        if (item) {
+            const checkbox = item.querySelector('input');
+            checkbox.checked = !checkbox.checked;
+
+            if (checkbox.checked) {
+                addTag(item.dataset.value);
+            } else {
+                removeTag(item.dataset.value);
+            }
+        }
+    });
+
+    function addTag(value) {
+        // Проверяем, существует ли уже тег с таким значением
+        if (!tagsContainer.querySelector(`.tag[data-value="${value}"]`)) {
+            const tag = document.createElement('div');
+            tag.className = 'tag';
+            tag.dataset.value = value;
+            tag.innerHTML = `${value} <span class="remove-tag">x</span>`;
+            tag.querySelector('.remove-tag').addEventListener('click', (event) => {
+                event.stopPropagation(); // Остановить всплытие события
+                removeTag(value);
+                const item = dropdownList.querySelector(`.dropdown-item[data-value="${value}"]`);
+                if (item) {
+                    item.querySelector('input').checked = false;
+                }
+            });
+            tagsContainer.appendChild(tag);
+            updateInputPlaceholder();
+        }
+    }
+
+    function removeTag(value) {
+        const tag = tagsContainer.querySelector(`.tag[data-value="${value}"]`);
+        if (tag) {
+            tagsContainer.removeChild(tag);
+            updateInputPlaceholder();
+        }
+    }
+
+    function updateInputPlaceholder() {
+        if (tagsContainer.children.length === 0) {
+            inputPlaceholder.textContent = 'Выберите вакансию';
+        } else {
+            inputPlaceholder.textContent = '';
+        }
+    }
+
+    // Закрытие выпадающего списка при клике вне его
+    document.addEventListener('click', () => {
+        dropdownList.style.display = 'none';
+        dropdownIconDown.style.display = 'block';
+        dropdownIconUp.style.display = 'none';
+    });
+});
+
