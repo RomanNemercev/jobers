@@ -978,3 +978,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//open preview can
+addPopupOpenHandler('.open-preview', 'popup2');
+addPopupCloseHandler('popup2-close', 'popup2');
+addPopupCloseOnBackgroundClickHandler('popup2');
+addPopupCloseOnEscKeyHandler('popup2');
