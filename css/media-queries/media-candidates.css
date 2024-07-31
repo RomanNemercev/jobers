@@ -27,6 +27,17 @@
         bottom: 50px;
         right: auto;
     }
+
+    .new__can-personal {
+        align-items: end;
+    }
+}
+
+/*for multiselect*/
+@media (max-width: 928px) {
+    .drop__container {
+        right: 3vw;
+    }
 }
 
 /*следущие медиа запросы для кандидатов*/
@@ -539,6 +550,8 @@
     .drop__in__drop .drop__container {
         z-index: 3;
         max-width: none;
+        width: 100%;
+        right: 0;
     }
 
     .droplist_active .droplist__items {
@@ -786,7 +799,6 @@
 
     .new-can__container {
         width: 100vw;
-        height: 100vh;
         max-height: none;
         padding: 54px 13px 13px 13px;
     }
@@ -841,6 +853,11 @@
         display: block;
     }
 
+    .add__post-form::placeholder,
+    .new-can__resume-content::placeholder{
+        color: var(--color_bali);
+    }
+
     .add__img {
         margin-bottom: 9px;
     }
@@ -850,12 +867,16 @@
     }
 
     .new__btns {
-        width: 100%;
         background-color: #fff;
-        padding-bottom: 0;
         display: flex;
         justify-content: center;
         margin-top: auto;
+        position: sticky;
+        bottom: env(safe-area-inset-bottom, 20px);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        width: initial;
+        padding: 13px;
+        padding-left: 13px;
     }
 
     .new-can__main-content__768 .droplist {
@@ -1033,6 +1054,10 @@
 
     .new__add-name {
         margin-bottom: 0;
+    }
+
+    .new__add-name.error--visible {
+        margin-bottom: 35px;
     }
 
     .preview {

@@ -824,7 +824,9 @@
                             <button class="btn-reset item__btn-close" id="btn-dropdown-close768"></button>
                             <ul>
                                 <li>
-                                    <button class="btn-reset dropdown-item open-preview" id="open-preview">Открыть файл резюме</button>
+                                    <button class="btn-reset dropdown-item open-preview" id="open-preview">Открыть файл
+                                        резюме
+                                    </button>
                                 </li>
                                 <li>
                                     <button class="btn-reset dropdown-item">Экспорт в&nbsp;Excel</button>
@@ -2717,10 +2719,10 @@
                         <span class="error" id="error">Это поле обязательно для заполнения</span>
                     </label>
                 </div>
-                <div class="new__btns">
-                    <button class="btn-reset btn new__btn-save">Сохранить</button>
-                    <button class="btn-reset new__btn-cancel">Отмена</button>
-                </div>
+            </div>
+            <div class="new__btns">
+                <button class="btn-reset btn new__btn-save">Сохранить</button>
+                <button class="btn-reset new__btn-cancel">Отмена</button>
             </div>
         </div>
     </div>
@@ -2762,10 +2764,10 @@
         </div>
     </div>
     <div class="can__item-popup new-can" id="add-can-field">
+        <div class="new-can__close-back768"></div>
         <button class="btn-reset new-can__btn-close" id="add-can-close"></button>
         <div class="new-can__popup-wrapper item__popup-wrapper">
             <div class="new-can__container">
-                <div class="new-can__close-back768"></div>
                 <h4 class="new-can__add-title f20w600">Добавление кандидата</h4>
                 <button class="btn-reset btn-two new-can__btn-import f14w400">Загрузить из&nbsp;файла</button>
                 <div class="new-can__main-content">
@@ -2796,65 +2798,34 @@
                         <div class="new-can__vacancy">
                             <p class="new-can__vacancy-title f15w500">Вакансия</p>
                             <div class="new-can__dropdown">
-                                <div class="dropdown-container">
-                                    <div class="selected-value">
-                                        <div class="tags"></div>
-                                        <div class="input-placeholder">Выберите вакансию</div>
-                                        <div class="icon-down">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_5342_9127)">
-                                                    <path d="M16.8269 7.26094C16.7796 7.14673 16.6995 7.0491 16.5967 6.9804C16.494 6.91171 16.3731 6.87503 16.2495 6.875H3.74952C3.62583 6.8749 3.5049 6.91151 3.40203 6.98017C3.29916 7.04884 3.21897 7.14649 3.17163 7.26076C3.12428 7.37502 3.1119 7.50076 3.13606 7.62207C3.16022 7.74337 3.21982 7.85478 3.30733 7.94219L9.55733 14.1922C9.61537 14.2503 9.6843 14.2964 9.76018 14.3279C9.83605 14.3593 9.91738 14.3755 9.99952 14.3755C10.0817 14.3755 10.163 14.3593 10.2389 14.3279C10.3147 14.2964 10.3837 14.2503 10.4417 14.1922L16.6917 7.94219C16.7791 7.85473 16.8386 7.74333 16.8626 7.62206C16.8867 7.5008 16.8742 7.37513 16.8269 7.26094Z"
-                                                          fill="#9098B4"/>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5342_9127">
-                                                        <rect width="20" height="20" fill="white"/>
-                                                    </clipPath>
-                                                </defs>
+                                <div class="droplist droplist__check">
+                                    <form class="form__list" action="">
+                                        <div class="droplist__selected item droplist__result item"><span
+                                                class="droplist__result_text" data-start="Выберите вакансию">Выберите вакансию</span>
+                                            <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                                 viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                                      fill="#9098B4"></path>
                                             </svg>
                                         </div>
-                                        <div class="icon-up" style="display: none;">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_5342_9132)">
-                                                    <path d="M16.6917 12.0578L10.4417 5.80782C10.3837 5.74971 10.3147 5.70361 10.2389 5.67215C10.163 5.6407 10.0817 5.62451 9.99952 5.62451C9.91738 5.62451 9.83605 5.6407 9.76018 5.67215C9.6843 5.70361 9.61537 5.74971 9.55733 5.80782L3.30733 12.0578C3.21982 12.1452 3.16022 12.2566 3.13606 12.3779C3.1119 12.4992 3.12428 12.625 3.17163 12.7392C3.21897 12.8535 3.29916 12.9512 3.40203 13.0198C3.5049 13.0885 3.62583 13.1251 3.74952 13.125H16.2495C16.3732 13.1251 16.4941 13.0885 16.597 13.0198C16.6999 12.9512 16.7801 12.8535 16.8274 12.7392C16.8747 12.625 16.8871 12.4992 16.863 12.3779C16.8388 12.2566 16.7792 12.1452 16.6917 12.0578Z"
-                                                          fill="#5898FF"/>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5342_9132">
-                                                        <rect width="20" height="20" fill="white"/>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown-list" style="display: none;">
-                                        <div class="dropdown-item" data-value="Менеджер по продажам ID 2134">
-                                            <label>
-                                                <input type="checkbox">
-                                                <span>Менеджер по продажам ID 2134</span>
-                                            </label>
-                                        </div>
-                                        <div class="dropdown-item" data-value="Проектный менеджер ID 2384">
-                                            <label>
-                                                <input type="checkbox">
-                                                <span>Проектный менеджер ID 2384</span>
-                                            </label>
-                                        </div>
-                                        <div class="dropdown-item" data-value="Бизнес ассистен ID 2135">
-                                            <label>
-                                                <input type="checkbox">
-                                                <span>Бизнес ассистен ID 2135</span>
-                                            </label>
-                                        </div>
-                                        <div class="dropdown-item" data-value="Стоматолог ID 3490">
-                                            <label>
-                                                <input type="checkbox">
-                                                <span>Стоматолог ID 3490</span>
-                                            </label>
-                                        </div>
-                                    </div>
+
+                                        <ul class="droplist__items">
+                                            <li class="droplist__item"><input id="value-1" class="check" type="checkbox"
+                                                                              value="Менеджер по продажам ID 2134"><label
+                                                    for="value-1">Менеджер по продажам ID 2134</label></li>
+                                            <li class="droplist__item"><input id="value-2" class="check" type="checkbox"
+                                                                              value="Проектный менеджер ID 2384"><label
+                                                    for="value-2">Проектный менеджер ID 2384</label></li>
+                                            <li class="droplist__item"><input id="value-3" class="check" type="checkbox"
+                                                                              value="Проектный менеджер ID 2384"><label
+                                                    for="value-3">Проектный менеджер ID 2384</label></li>
+                                            <li class="droplist__item droplist__item_active"><input id="value-4"
+                                                                                                    class="check"
+                                                                                                    type="checkbox"
+                                                                                                    value="Стоматолог ID 3490"><label
+                                                    for="value-4">Стоматолог ID 3490</label></li>
+                                        </ul>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -2862,7 +2833,12 @@
                             <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Фамилия</p>
                                 <input type="text" class="new-can__data-input" placeholder="Иванов"></div>
                             <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Имя</p>
-                                <input type="text" class="new-can__data-input" placeholder="Иван"></div>
+                                <label for="add-name" class="new__add-name">
+                                    <input type="text" class="new-can__data-input new__add-name__input"
+                                           placeholder="Иван" id="add-name" required>
+                                    <span class="error">Это поле обязательно для заполнения</span>
+                                </label>
+                            </div>
                             <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Отчество</p>
                                 <input type="text" class="new-can__data-input" placeholder="Иванович"></div>
                             <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Дата рождения</p>
@@ -2870,7 +2846,12 @@
                             <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Телефон</p>
                                 <input type="number" class="new-can__data-input" placeholder="+7"></div>
                             <div class="new-can__data"><p class="new-can__data-title mb15 f15w500">Электронная почта</p>
-                                <input type="email" class="new-can__data-input" placeholder="ivan@mail.ru"></div>
+                                <label for="add-email" class="new__add-name">
+                                    <input type="email" class="new-can__data-input new__add-name__input"
+                                           placeholder="ivan@mail.ru" id="add-email" required>
+                                    <span class="error">Это поле обязательно для заполнения</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="new-can__source mb15">
                             <p class="new-can__source-title f15w500 mb15">Источник</p>
@@ -2927,8 +2908,11 @@
                     </div>
                     <div class="add__first-name__wrapper">
                         <label for="add-first-name" class="add__first-name__label f15w500">Имя</label>
-                        <input type="text" name="add-first-name" id="add-first-name"
-                               placeholder="Иван" class="add__post-form">
+                        <label for="add-first-name" class="new__add-name">
+                            <input type="text" name="add-first-name" id="add-first-name"
+                                   placeholder="Иван" class="add__post-form new__add-name__input" required>
+                            <span class="error">Это поле обязательно для заполнения</span>
+                        </label>
                     </div>
                     <div class="add__third-name__wrapper">
                         <label for="add-third-name" class="add__third-name__label f15w500">Отчество</label>
@@ -2937,8 +2921,11 @@
                     </div>
                     <div class="add__mail__wrapper">
                         <label for="add-mail" class="add__mail__label f15w500">Электронная почта</label>
-                        <input type="email" name="add-mail" id="add-mail"
-                               placeholder="ivan@mail.ru" class="add__post-form">
+                        <label for="add-mail" class="new__add-name">
+                            <input type="email" name="add-mail" id="add-mail"
+                                   placeholder="ivan@mail.ru" class="add__post-form new__add-name__input" required>
+                            <span class="error">Это поле обязательно для заполнения</span>
+                        </label>
                     </div>
                     <div class="add__phone__wrapper">
                         <label for="add-phone" class="add__phone__label f15w500">Телефон</label>
@@ -3014,10 +3001,10 @@
                                   class="new-can__resume-content" placeholder="-"></textarea>
                     </div>
                 </div>
-                <div class="new__btns">
-                    <button class="btn-reset btn new__btn-save" id="add-btn-save">Сохранить</button>
-                    <button class="btn-reset new__btn-cancel" id="add-btn-cancel">Отмена</button>
-                </div>
+            </div>
+            <div class="new__btns">
+                <button class="btn-reset btn new__btn-save" id="add-btn-save">Сохранить</button>
+                <button class="btn-reset new__btn-cancel" id="add-btn-cancel">Отмена</button>
             </div>
         </div>
     </div>

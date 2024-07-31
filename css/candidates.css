@@ -220,6 +220,7 @@
 
 .new__btns {
     padding-bottom: 25px;
+    padding-left: 25px;
 }
 
 .new-can__form-first input {
@@ -242,6 +243,27 @@
 
 .new-can__vacancy-title {
     margin-bottom: 15px;
+}
+
+.new-can__vacancy {
+    margin-bottom: 16px;
+}
+
+.new-can__dropdown .droplist_active .droplist__items {
+    width: 100%;
+}
+
+.error {
+    width: auto;
+}
+
+#add-email + .error {
+    left: -25px;
+}
+
+.new-can__dropdown .droplist.droplist__check {
+    max-width: 100%;
+    width: 100%;
 }
 
 .new-can__content-left {
@@ -284,6 +306,7 @@
 .new-can__form-mg:first-of-type > .new-can__form-input {
     margin-bottom: 14px;
 }
+
 
 .new-can__form-mg:nth-child(2) > .new-can__form-input {
     margin-bottom: 14px;

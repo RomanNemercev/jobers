@@ -424,8 +424,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     margin-top: 10px;
     border-radius: 10px;
-    width: 100%;
+    width: calc(100% - 650px);
     max-width: 479px;
+    min-width: 278px;
 }
 
 .drop__in__drop .droplists__block > .droplist {
@@ -533,6 +534,9 @@ body {
         width: 100%;
         display: flex;
         max-width: 100%;
+    }
+    .drop__in__drop .droplist__inner .droplist__selected {
+        min-width: 0;
     }
     .drop__in__drop .form__list {
         width: 100%;
