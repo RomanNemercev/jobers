@@ -377,6 +377,7 @@
         padding: 0 13px;
         height: 100%;
         overflow: auto;
+        padding: 0;
     }
 
     .nots__cans-list {
@@ -396,9 +397,21 @@
         transition: opacity .3s ease, visibility .3s ease;
     }
 
+    .nots__container::before {
+        display: none;
+    }
+
     .nots__cans-item {
         display: flex;
         justify-content: space-between;
+        padding-left: 13px;
+    }
+
+    .nots__time-now,
+    .nots__time-recent,
+    .nots__time-hours,
+    .nots__time-days {
+        right: 14px;
     }
 
     .not__user-info {
@@ -427,7 +440,7 @@
         z-index: 100; /* Убедиться, что кнопка выше остальных элементов */
         transform: translate(0px, -60px);
         margin-left: -13px;
-        width: 100vw;
+        width: initial;
     }
 
     .nots__title {

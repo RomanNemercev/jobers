@@ -26,11 +26,24 @@
     right: 206px;
     max-width: 726px;
     width: 100%;
-    border-radius: 5px;
     height: 59.083vh;
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s ease-out, visibility .3s ease-out;
+    background-color: var(--color_gray);
+    border-radius: 5px;
+}
+
+.nots__container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 55px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 .nots__title {
@@ -40,6 +53,7 @@
     padding-left: 26px;
     margin-bottom: 1px;
     font-size: 16px;
+    border-radius: 5px 5px 0 0;
 }
 
 .nots__check {
@@ -60,6 +74,7 @@
     flex-direction: column;
     gap: 18px;
     height: 100%;
+    border-radius: 0 0 5px 5px;
 }
 
 .nots__cans-item:last-of-type {
@@ -139,6 +154,7 @@
     transition: opacity .3s ease-out, visibility .3s ease-out;
     background-color: var(--color_white);
     padding: 25px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 .supp__title {
@@ -323,6 +339,7 @@
     transition: opacity .3s ease-out, visibility .3s ease-out;
     background-color: var(--color_white);
     padding: 25px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
 }
 
 .acc__container--active {
