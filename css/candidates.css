@@ -258,7 +258,7 @@
 }
 
 #add-email + .error {
-    left: -25px;
+    left: calc(100% - 264px);
 }
 
 .new-can__dropdown .droplist.droplist__check {

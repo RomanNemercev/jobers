@@ -1,3 +1,15 @@
+@media (max-width: 1150px) {
+    .can__section-param {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+    }
+
+    #add-name + .error {
+        left: calc(100% - 180px);
+    }
+}
+
 @media (max-width: 1100px) {
     .user__content-wrapper {
         padding-bottom: 70px;
@@ -30,13 +42,6 @@
 
     .new__can-personal {
         align-items: end;
-    }
-}
-
-/*for multiselect*/
-@media (max-width: 928px) {
-    .drop__container {
-        right: 3vw;
     }
 }
 
@@ -589,7 +594,7 @@
     .vacancies__popup-768 {
         display: block;
         position: fixed;
-        bottom: -200px;
+        bottom: -310px;
         width: 100%;
         z-index: 4;
         padding: 25px 13px;

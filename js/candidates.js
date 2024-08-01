@@ -438,9 +438,9 @@ addPopupCloseOnBackgroundClickHandler('add-can-field');
 addPopupCloseOnEscKeyHandler('add-can-field');
 
 //close pop up after click on add-no \ yes button
-document.getElementById('add-btn-save').addEventListener('click', function () {
-    document.getElementById('add-can-field').classList.remove('vacancies__item-popup--open');
-})
+// document.getElementById('add-btn-save').addEventListener('click', function () {
+//     document.getElementById('add-can-field').classList.remove('vacancies__item-popup--open');
+// })
 
 document.getElementById('add-btn-cancel').addEventListener('click', function () {
     document.getElementById('add-can-field').classList.remove('vacancies__item-popup--open');
@@ -1001,3 +1001,38 @@ function handleInputValidation() {
 }
 
 handleInputValidation();
+
+//check droplist
+function validateSelection() {
+    var specificWrapper = document.querySelector('.new-can__dropdown');
+    var errorSpan = specificWrapper.querySelector('.error');
+    var selectedItems = specificWrapper.querySelectorAll('.droplist__items .check:checked');
+    var vacancyLabel = specificWrapper.querySelector('.droplist__result_text');
+
+    // Проверяем, выбран ли хотя бы один чекбокс
+    if (selectedItems.length > 0) {
+        // Если выбран хотя бы один чекбокс, скрываем сообщение об ошибке
+        errorSpan.style.display = 'none';
+        vacancyLabel.style.marginBottom = '16px';
+        specificWrapper.style.cssText = 'outline: none; border-radius: 5px;';
+        specificWrapper.querySelector('.droplist__selected').classList.add('droplist__result_active');
+    } else {
+        // Если ни один чекбокс не выбран, показываем сообщение об ошибке
+        errorSpan.style.display = 'inline-block';
+        vacancyLabel.style.marginBottom = '35px';
+        specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px; margin-bottom: 40px; height: 40px;';
+        specificWrapper.querySelector('.droplist__selected').classList.remove('droplist__result_active');
+    }
+}
+
+document.getElementById('add-btn-save').addEventListener('click', function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы, если это необходимо
+    validateSelection();
+});
+
+var checkboxes = document.querySelectorAll('.droplist__items .check');
+checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        validateSelection();
+    });
+});
