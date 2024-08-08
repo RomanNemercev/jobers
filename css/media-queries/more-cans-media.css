@@ -108,7 +108,7 @@
     }
 
     .search-bar__form::before {
-        background-image: url("../img/media/search-icon-1024.svg");
+        background-image: url("../../img/media/search-icon-1024.svg");
         left: 35px;
     }
 
@@ -140,7 +140,7 @@
     }
 
     .begin__container::before {
-        content: url("../img/media/add-vacancies-1024.svg");
+        content: url("../../img/media/add-vacancies-1024.svg");
     }
 
     .begin__title {
@@ -161,7 +161,7 @@
     }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1170px) {
     /*import media*/
     /*    searchbar*/
     .search-bar__container {
@@ -290,39 +290,39 @@
     }
 
     .link-desktop::before {
-        content: url("../img/media/icon-desktop-768.svg");
+        content: url("../../img/media/icon-desktop-768.svg");
     }
 
     .link-vacancies::before {
-        content: url("../img/media/icon-vacancies-768.svg");
+        content: url("../../img/media/icon-vacancies-768.svg");
     }
 
     .link-candidates::before {
-        content: url("../img/media/icon-candidates-768.svg");
+        content: url("../../img/media/icon-candidates-768.svg");
     }
 
     .link-messages::before {
-        content: url("../img/media/icon-messages-768.svg");
+        content: url("../../img/media/icon-messages-768.svg");
     }
 
     .link-companies::before {
-        content: url("../img/media/icon-companies-768.svg");
+        content: url("../../img/media/icon-companies-768.svg");
     }
 
     .link-documents::before {
-        content: url("../img/media/icon-documents-768.svg");
+        content: url("../../img/media/icon-documents-768.svg");
     }
 
     .link-rates::before {
-        content: url("../img/media/icon-rates-768.svg");
+        content: url("../../img/media/icon-rates-768.svg");
     }
 
     .link-support::before {
-        content: url("../img/media/icon-support-768.svg");
+        content: url("../../img/media/icon-support-768.svg");
     }
 
     .link-settings::before {
-        content: url("../img/media/icon-settings-768.svg");
+        content: url("../../img/media/icon-settings-768.svg");
     }
 
     /*    main content*/

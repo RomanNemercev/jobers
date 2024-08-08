@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // pl for textarea in chat crm
 // Функция для обновления отступа в textarea
 function updateTextareaIndent() {
-    var mediaQuery = window.matchMedia('(max-width: 768px)');
+    var mediaQuery = window.matchMedia('(max-width: 1170px)');
     var overlayWidth = document.getElementById("chat-select").offsetWidth;
     var totalIndent = overlayWidth + 100; // Добавляем 37px к ширине overlay
     document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
@@ -371,7 +371,7 @@ initializeTagInput('tag-input-0');
 initializeTagInput('tag-input-1');
 
 //styles for tabs click on 768
-var mediaQuery = window.matchMedia('(max-width: 768px)');
+var mediaQuery = window.matchMedia('(max-width: 1170px)');
 
 if (mediaQuery.matches) {
 
@@ -394,7 +394,7 @@ if (mediaQuery.matches) {
         document.querySelector('.more__content').style.height = 'calc(100vh - 120px)';
         document.querySelector('.more__enter').style.display = 'none';
     })
-    console.log('Экран до 768px');
+    console.log('Экран до 1170px');
 }
 
 //create tabs for cans list
