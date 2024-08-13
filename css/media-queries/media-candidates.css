@@ -650,10 +650,6 @@
         opacity: 1;
     }
 
-    .button-icon:last-child {
-        margin-left: -3%;
-    }
-
     .vacancies__popup-768--active {
         bottom: 0;
     }
@@ -796,10 +792,6 @@
         background-color: var(--color_zircon);
         top: 0;
         left: 0;
-    }
-
-    .button-icon:first-child {
-        margin-left: 3%;
     }
 
     .new-can__container {

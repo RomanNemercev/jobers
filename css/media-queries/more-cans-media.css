@@ -868,11 +868,6 @@
         padding: 9.82px 10px;
     }
 
-    .button-icon:first-child,
-    .button-icon:last-child {
-        margin-left: 0;
-    }
-
     /*    history block*/
     .more__messages {
         height: calc(100vh - 224px);
@@ -888,6 +883,7 @@
         bottom: 0;
         display: none;
         background-color: var(--color_white);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
     }
 
     .more__data-container {
