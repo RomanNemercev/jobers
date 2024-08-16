@@ -161,6 +161,27 @@
     }
 }
 
+@media (max-width: 1323px) {
+    .more__cans-header {
+        position: relative;
+        padding-bottom: 70px;
+    }
+
+    .more__droplist {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+    }
+
+    .vacancies__content--active {
+        height: calc(100% - 126px);
+    }
+
+    .more__enter-textarea {
+        min-height: 50px;
+    }
+}
+
 @media (max-width: 1170px) {
     /*import media*/
     /*    searchbar*/
