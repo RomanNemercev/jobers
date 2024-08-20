@@ -178,7 +178,7 @@
     }
 
     .more__enter-textarea {
-        min-height: 50px;
+        min-height: 94.62px;
     }
 }
 
@@ -905,6 +905,10 @@
         display: none;
         background-color: var(--color_white);
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .more__enter::before {
+        display: none;
     }
 
     .more__data-container {
