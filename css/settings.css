@@ -1326,7 +1326,7 @@
     top: 0;
     cursor: pointer;
     border: none;
-    opacity: 0.4;
+    /*opacity: 0.4;*/
     /*transition: opacity .3s ease-out, background-image .3s ease-out;*/
 }
 
