@@ -229,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formatPhoneNumber = (input) => {
         input.addEventListener('focus', () => {
-            e
             if (!input.value) {
                 input.value = '+7 (';
             }
