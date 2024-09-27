@@ -582,8 +582,11 @@
     }
 
     .ai {
-        height: 100vh;
         max-width: 100%;
+    }
+
+    #popup-ai {
+        padding: 13px;
     }
 
     .ai__container {
