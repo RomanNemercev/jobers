@@ -391,14 +391,13 @@ if (mediaQuery.matches) {
         document.querySelector('.more__cans-header').style.padding = '15px 12px';
         document.querySelector('.more__cans-header').classList.remove('hide-after');
         document.querySelector('.more__header-right').style.display = 'flex';
-        document.querySelector('.more__content').style.height = 'calc(100vh - 120px)';
+        document.querySelector('.more__content').style.height = 'calc(100vh - 65px)';
         document.querySelector('.more__enter').style.display = 'none';
     })
     console.log('Экран до 1170px');
 }
 
 //create tabs for cans list
-
 let listCansBtn = document.querySelector('.search-bar__cans');
 let mainContentUser = document.querySelector('.more__cans-info');
 let moreCansScroll = document.querySelector('.more__cans-scroll');

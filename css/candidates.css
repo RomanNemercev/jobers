@@ -1392,3 +1392,70 @@
     justify-content: center;
 }
 /*droplist in new can create sets end*/
+
+
+/*pagination sets*/
+.can__pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.can__pagination-wrapper {
+    display: flex;
+    gap: 7px;
+    background-color: var(--color_white);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.can__pagination-btn svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.can__pagination-btn {
+    padding: 10.96px 14.5px;
+    border-radius: 5px;
+    border: 1px solid var(--color_gray);
+    background-color: #fff;
+    color: var(--color_space);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-btn:hover {
+    background-color: var(--color_dodger);
+    border: 1px solid var(--color_gray);
+}
+
+.arrow-btn:hover svg path {
+    fill: var(--color_white);
+}
+
+.number-btn:hover {
+    background-color: var(--color_athens-gray);
+}
+
+/*.last-number-btn {*/
+/*    margin-right: 20px;*/
+/*}*/
+
+.can__pagination-btn.active {
+    background-color: var(--color_space);
+    color: white;
+    border-color: #007bff;
+    cursor: default;
+}
+
+.can__pagination-btn.disabled {
+    visibility: hidden;
+}
+
+.can__pagination-wrapper span {
+    padding-top: 10px;
+}

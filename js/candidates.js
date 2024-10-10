@@ -1025,14 +1025,123 @@ function validateSelection() {
     }
 }
 
-document.getElementById('add-btn-save').addEventListener('click', function(event) {
+document.getElementById('add-btn-save').addEventListener('click', function (event) {
     event.preventDefault(); // Предотвращаем отправку формы, если это необходимо
     validateSelection();
 });
 
 var checkboxes = document.querySelectorAll('.droplist__items .check');
-checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
+checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
         validateSelection();
     });
 });
+
+
+// Функция для генерации пагинации
+function generatePagination(currentPage, totalPages) {
+    const paginationWrapper = document.getElementById('pagination');
+    paginationWrapper.innerHTML = ''; // Очищаем старую пагинацию
+
+    // Стрелка "Назад"
+    if (currentPage > 1) {
+        const prevButton = createPaginationButton('prev', currentPage - 1, false, true);
+        paginationWrapper.appendChild(prevButton);
+    }
+
+    // Первая страница всегда отображается
+    paginationWrapper.appendChild(createPaginationButton(1, 1, currentPage === 1));
+
+    if (currentPage > 4) {
+        // Три точки перед серединой, если текущая страница дальше четвертой
+        const dots = document.createElement('span');
+        dots.classList.add('pagination-break');
+        dots.textContent = '...';
+        paginationWrapper.appendChild(dots);
+    }
+
+    // Средние страницы
+    const startPage = Math.max(2, currentPage - 2);
+    const endPage = Math.min(totalPages - 1, currentPage + 2);
+
+    for (let i = startPage; i <= endPage; i++) {
+        paginationWrapper.appendChild(createPaginationButton(i, i, currentPage === i));
+    }
+
+    if (currentPage < totalPages - 3) {
+        // Три точки перед последними страницами
+        const dots = document.createElement('span');
+        dots.textContent = '...';
+        paginationWrapper.appendChild(dots);
+    }
+
+    // Последняя страница всегда отображается
+    if (totalPages > 1) {
+        paginationWrapper.appendChild(createPaginationButton(totalPages, totalPages, currentPage === totalPages));
+    }
+
+    // Стрелка "Вперед"
+    if (currentPage < totalPages) {
+        const nextButton = createPaginationButton('next', currentPage + 1, false, true);
+        paginationWrapper.appendChild(nextButton);
+    }
+}
+
+// Вспомогательная функция для создания кнопки пагинации
+// Функция для создания кнопки пагинации
+function createPaginationButton(text, page, isActive = false, isArrow = false) {
+    const button = document.createElement('button');
+    button.classList.add('can__pagination-btn');
+
+    if (isArrow) {
+        button.classList.add('arrow-btn'); // Добавляем класс для стрелок
+    } else {
+        button.classList.add('number-btn'); // Добавляем класс для цифр
+    }
+
+    if (isActive) {
+        button.classList.add('active');
+        button.disabled = true;
+    }
+
+    // Проверка: если это стрелка назад или вперед, добавляем SVG
+    if (isArrow && text === 'prev') {
+        button.innerHTML = `
+           <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M7.94219 12.8078C8.00026 12.8659 8.04632 12.9348 8.07775 13.0107C8.10918 13.0866 8.12535 13.1679 8.12535 13.25C8.12535 13.3321 8.10918 13.4134 8.07775 13.4893C8.04632 13.5652 8.00026 13.6341 7.94219 13.6922C7.88412 13.7503 7.81518 13.7963 7.73931 13.8277C7.66344 13.8592 7.58213 13.8753 7.5 13.8753C7.41788 13.8753 7.33656 13.8592 7.26069 13.8277C7.18482 13.7963 7.11588 13.7503 7.05782 13.6922L0.807816 7.44218C0.749705 7.38414 0.703606 7.31521 0.672154 7.23933C0.640701 7.16346 0.624512 7.08213 0.624512 7C0.624512 6.91786 0.640701 6.83653 0.672154 6.76066C0.703606 6.68478 0.749705 6.61585 0.807816 6.55781L7.05782 0.307809C7.17509 0.190534 7.33415 0.124649 7.5 0.124649C7.66586 0.124649 7.82492 0.190534 7.94219 0.307809C8.05947 0.425084 8.12535 0.584144 8.12535 0.749997C8.12535 0.915849 8.05947 1.07491 7.94219 1.19218L2.1336 7L7.94219 12.8078Z" fill="#2F353D" />
+           </svg>
+        `;
+        button.style.marginRight = '14px';
+    } else if (isArrow && text === 'next') {
+        // Добавим стрелку вперед
+        button.innerHTML = `
+           <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M8.19205 7.44218L1.94205 13.6922C1.88398 13.7503 1.81504 13.7963 1.73917 13.8277C1.6633 13.8592 1.58198 13.8753 1.49986 13.8753C1.41774 13.8753 1.33642 13.8592 1.26055 13.8277C1.18468 13.7963 1.11574 13.7503 1.05767 13.6922C0.999603 13.6341 0.95354 13.5652 0.922113 13.4893C0.890687 13.4134 0.874512 13.3321 0.874512 13.25C0.874512 13.1679 0.890687 13.0866 0.922113 13.0107C0.95354 12.9348 0.999603 12.8659 1.05767 12.8078L6.86627 7L1.05767 1.19218C0.940396 1.07491 0.874512 0.915849 0.874512 0.749997C0.874512 0.584144 0.940396 0.425084 1.05767 0.307809C1.17495 0.190534 1.33401 0.124649 1.49986 0.124649C1.66571 0.124649 1.82477 0.190534 1.94205 0.307809L8.19205 6.55781C8.25016 6.61585 8.29626 6.68478 8.32771 6.76066C8.35916 6.83653 8.37535 6.91786 8.37535 7C8.37535 7.08213 8.35916 7.16346 8.32771 7.23933C8.29626 7.31521 8.25016 7.38414 8.19205 7.44218Z" fill="#2F353D" />
+           </svg>
+        `;
+        button.style.marginLeft = '14px';
+    } else {
+        button.textContent = text;  // Обычные кнопки с номерами страниц
+    }
+
+    button.addEventListener('click', () => {
+        generatePagination(page, 24);  // Обновляем пагинацию
+    });
+
+    return button;
+}
+
+// Генерируем пагинацию для первой страницы
+generatePagination(1, 24);
+
+// // добавляем последней кнопке класс для отступа
+// function highlightLastNumberButton() {
+//     const numberButtons = document.querySelectorAll('.number-btn');
+//
+//     if (numberButtons.length > 0) {
+//         numberButtons[numberButtons.length - 1].classList.add('last-number-btn');
+//     }
+// }
+//
+// // Вызываем после генерации пагинации
+// highlightLastNumberButton();
