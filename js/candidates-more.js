@@ -418,3 +418,33 @@ listCansBtn.addEventListener('click', function () {
     document.querySelector('.vacancies__content--active').classList.toggle('vacancies__content--active__correct-height');
     document.querySelector('.more__items-list').classList.toggle('more__items-list__correct-height');
 })
+
+//doubles expand sets
+document.addEventListener("DOMContentLoaded", function () {
+    const content = document.querySelector(".more__doubles-content");
+    const toggleButton = document.querySelector(".more__doubles-toggle");
+
+    // Проверяем высоту контента и скрываем/показываем кнопку "Раскрыть полностью"
+    if (content.scrollHeight > 60) {
+        toggleButton.classList.add("more__doubles-toggle_active");
+        document.querySelector('.more__doubles').classList.add('more__doubles--overlay');
+    }
+
+    toggleButton.addEventListener("click", function () {
+        const parent = toggleButton.closest(".more__doubles");
+
+        if (parent.classList.contains("more__doubles-open")) {
+            parent.classList.remove("more__doubles-open");
+            toggleButton.textContent = "Раскрыть полностью";
+        } else {
+            parent.classList.add("more__doubles-open");
+            toggleButton.textContent = "Скрыть";
+        }
+    });
+    document.querySelector('.more__doubles-denied').addEventListener('click', () => {
+        document.querySelector('.more__doubles').classList.add('more__doubles--hide');
+    })
+});
+
+
+//doubles expand sets end

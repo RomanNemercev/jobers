@@ -1281,172 +1281,184 @@ document.getElementById('acc-btn').addEventListener('click', function () {
 
 //city autocomplete
 document.addEventListener("DOMContentLoaded", function () {
-    const cityInput = document.getElementById("city-input");
-    const autocompleteList = document.getElementById("autocomplete-list");
-    const clearInput = document.getElementById("clear-input");
+    try {
+        const cityInput = document.getElementById("city-input");
+        const autocompleteList = document.getElementById("autocomplete-list");
+        const clearInput = document.getElementById("clear-input");
 
-    const cities = ["Москва", "Санкт-Петербург", "Новосибирск", "Екатеринбург", "Казань", "Нижний Новгород", "Челябинск", "Самара", "Омск", "Ростов-на-Дону", "Уфа", "Красноярск", "Воронеж", "Пермь", "Волгоград"];
+        const cities = ["Москва", "Санкт-Петербург", "Новосибирск", "Екатеринбург", "Казань", "Нижний Новгород", "Челябинск", "Самара", "Омск", "Ростов-на-Дону", "Уфа", "Красноярск", "Воронеж", "Пермь", "Волгоград"];
 
-    cityInput.addEventListener("input", function () {
-        const query = cityInput.value.toLowerCase();
-        autocompleteList.innerHTML = "";
+        cityInput.addEventListener("input", function () {
+            const query = cityInput.value.toLowerCase();
+            autocompleteList.innerHTML = "";
 
-        if (query === "") {
-            showDefaultOptions();
-            return;
-        }
+            if (query === "") {
+                showDefaultOptions();
+                return;
+            }
 
-        const filteredCities = cities.filter(city => city.toLowerCase().includes(query));
+            const filteredCities = cities.filter(city => city.toLowerCase().includes(query));
 
-        if (filteredCities.length === 0) {
-            autocompleteList.style.display = "none";
-        } else {
-            autocompleteList.style.display = "block";
-        }
+            if (filteredCities.length === 0) {
+                autocompleteList.style.display = "none";
+            } else {
+                autocompleteList.style.display = "block";
+            }
 
-        filteredCities.forEach(city => {
-            const item = document.createElement("div");
-            item.classList.add("autocomplete-item");
-            item.innerText = city;
-            item.addEventListener("click", function () {
-                cityInput.value = city;
+            filteredCities.forEach(city => {
+                const item = document.createElement("div");
+                item.classList.add("autocomplete-item");
+                item.innerText = city;
+                item.addEventListener("click", function () {
+                    cityInput.value = city;
+                    autocompleteList.innerHTML = "";
+                    autocompleteList.style.display = "none";
+                    cityInput.classList.add("selected");
+                    clearInput.style.display = "inline";
+                });
+                autocompleteList.appendChild(item);
+            });
+        });
+
+        cityInput.addEventListener("focus", function () {
+            if (cityInput.value === "") {
+                showDefaultOptions();
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!autocompleteList.contains(e.target) && e.target !== cityInput && e.target !== clearInput) {
                 autocompleteList.innerHTML = "";
                 autocompleteList.style.display = "none";
-                cityInput.classList.add("selected");
-                clearInput.style.display = "inline";
-            });
-            autocompleteList.appendChild(item);
+            }
         });
-    });
 
-    cityInput.addEventListener("focus", function () {
-        if (cityInput.value === "") {
-            showDefaultOptions();
-        }
-    });
-
-    document.addEventListener("click", function (e) {
-        if (!autocompleteList.contains(e.target) && e.target !== cityInput && e.target !== clearInput) {
+        clearInput.addEventListener("click", function () {
+            cityInput.value = "";
+            cityInput.classList.remove("selected");
+            clearInput.style.display = "none";
             autocompleteList.innerHTML = "";
             autocompleteList.style.display = "none";
-        }
-    });
-
-    clearInput.addEventListener("click", function () {
-        cityInput.value = "";
-        cityInput.classList.remove("selected");
-        clearInput.style.display = "none";
-        autocompleteList.innerHTML = "";
-        autocompleteList.style.display = "none";
-    });
-
-    function showDefaultOptions() {
-        autocompleteList.innerHTML = "";
-        const defaultCities = ["Москва", "Санкт-Петербург"];
-        defaultCities.forEach(city => {
-            const item = document.createElement("div");
-            item.classList.add("autocomplete-item");
-            item.innerText = city;
-            item.addEventListener("click", function () {
-                cityInput.value = city;
-                autocompleteList.innerHTML = "";
-                autocompleteList.style.display = "none";
-                cityInput.classList.add("selected");
-                clearInput.style.display = "inline";
-            });
-            autocompleteList.appendChild(item);
         });
-        if (defaultCities.length > 0) {
-            autocompleteList.style.display = "block";
-        } else {
-            autocompleteList.style.display = "none";
+
+        function showDefaultOptions() {
+            autocompleteList.innerHTML = "";
+            const defaultCities = ["Москва", "Санкт-Петербург"];
+            defaultCities.forEach(city => {
+                const item = document.createElement("div");
+                item.classList.add("autocomplete-item");
+                item.innerText = city;
+                item.addEventListener("click", function () {
+                    cityInput.value = city;
+                    autocompleteList.innerHTML = "";
+                    autocompleteList.style.display = "none";
+                    cityInput.classList.add("selected");
+                    clearInput.style.display = "inline";
+                });
+                autocompleteList.appendChild(item);
+            });
+            if (defaultCities.length > 0) {
+                autocompleteList.style.display = "block";
+            } else {
+                autocompleteList.style.display = "none";
+            }
         }
+    } catch (err) {
+        console.log('cant find city autocomplete app script')
     }
 });
 
 //программа для контроля чекбокса и введенных данных
-document.getElementById('search-duplicates').addEventListener('change', function () {
-    var clonesLabel = document.getElementById('clones-label');
-    var dayAmount = document.getElementById('day-amount');
-    var errorSpan = clonesLabel.querySelector('.error');
+try {
+    document.getElementById('search-duplicates').addEventListener('change', function () {
+        var clonesLabel = document.getElementById('clones-label');
+        var dayAmount = document.getElementById('day-amount');
+        var errorSpan = clonesLabel.querySelector('.error');
 
-    if (this.checked) {
-        // clonesLabel.classList.add('visible');
-        if (!dayAmount.value) {
-            clonesLabel.classList.add('error--visible');
-        }
-    } else {
-        clonesLabel.classList.remove('visible', 'error--visible');
-    }
-});
-
-document.getElementById('day-amount').addEventListener('input', function () {
-    var clonesLabel = document.getElementById('clones-label');
-
-    if (this.value) {
-        clonesLabel.classList.remove('error--visible');
-    } else {
-        clonesLabel.classList.add('error--visible');
-    }
-});
-
-//проверка на выбор списка
-document.getElementById('specific-vacancy').addEventListener('change', function () {
-    var specificWrapper = document.getElementById('specific-vacancy-wrapper');
-    var errorSpan = document.querySelector('.new__current-label .error');
-    var vacancyLabel = document.getElementById('specific-vacancy-label');
-
-    if (this.checked) {
-        specificWrapper.classList.add('specific--visible');
-        var selectedItems = specificWrapper.querySelectorAll('.droplist__items .check:checked');
-        if (selectedItems.length === 0) {
-            errorSpan.style.display = 'inline-block';
-            errorSpan.style.cssText = 'display: inline-block; top: 70px; width: auto;';
-            specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
-            vacancyLabel.style.marginBottom = '85px';
-        }
-    } else {
-        specificWrapper.classList.remove('specific--visible');
-        errorSpan.style.display = 'none';
-        vacancyLabel.style.marginBottom = '11px';
-    }
-});
-
-document.querySelectorAll('#specific-vacancy-wrapper .droplist__items .check').forEach(function (checkbox) {
-    checkbox.addEventListener('change', function () {
-        var specificWrapper = document.getElementById('specific-vacancy-wrapper');
-        var errorSpan = document.querySelector('.new__current-label .error');
-        var selectedItems = specificWrapper.querySelectorAll('.droplist__items .check:checked');
-        var vacancyLabel = document.getElementById('specific-vacancy-label');
-
-        if (selectedItems.length > 0) {
-            errorSpan.style.display = 'none';
-            vacancyLabel.style.marginBottom = '65px';
-            specificWrapper.style.cssText = 'outline: none; border-radius: 5px;';
-            specificWrapper.querySelector('.droplist__selected').classList.add('droplist__result_active');
+        if (this.checked) {
+            // clonesLabel.classList.add('visible');
+            if (!dayAmount.value) {
+                clonesLabel.classList.add('error--visible');
+            }
         } else {
-            errorSpan.style.display = 'inline-block';
-            vacancyLabel.style.marginBottom = '85px';
-            specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
-            specificWrapper.querySelector('.droplist__selected').classList.remove('droplist__result_active');
+            clonesLabel.classList.remove('visible', 'error--visible');
         }
     });
-});
 
-document.getElementById('current-vacancy').addEventListener('change', function () {
-    if (document.getElementById('current-vacancy').checked) {
-        document.getElementById('specific-vacancy-label').style.marginBottom = '11px';
-        document.getElementById('specific-vacancy-error').style.display = 'none';
-    } else {
-        document.getElementById('specific-vacancy-label').style.backgroundColor = 'green';
-    }
-})
+    document.getElementById('day-amount').addEventListener('input', function () {
+        var clonesLabel = document.getElementById('clones-label');
 
-document.getElementById('all-vacancies').addEventListener('change', function () {
-    if (document.getElementById('current-vacancy').checked) {
-        document.getElementById('specific-vacancy-label').style.backgroundColor = 'green';
-    } else {
-        document.getElementById('specific-vacancy-label').style.marginBottom = '11px';
-        document.getElementById('specific-vacancy-error').style.display = 'none';
-    }
-})
+        if (this.value) {
+            clonesLabel.classList.remove('error--visible');
+        } else {
+            clonesLabel.classList.add('error--visible');
+        }
+    });
+} catch (err) {
+    console.log('cannot find control checkbox and add data')
+}
+
+//проверка на выбор списка
+try {
+    document.getElementById('specific-vacancy').addEventListener('change', function () {
+        var specificWrapper = document.getElementById('specific-vacancy-wrapper');
+        var errorSpan = document.querySelector('.new__current-label .error');
+        var vacancyLabel = document.getElementById('specific-vacancy-label');
+
+        if (this.checked) {
+            specificWrapper.classList.add('specific--visible');
+            var selectedItems = specificWrapper.querySelectorAll('.droplist__items .check:checked');
+            if (selectedItems.length === 0) {
+                errorSpan.style.display = 'inline-block';
+                errorSpan.style.cssText = 'display: inline-block; top: 70px; width: auto;';
+                specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
+                vacancyLabel.style.marginBottom = '85px';
+            }
+        } else {
+            specificWrapper.classList.remove('specific--visible');
+            errorSpan.style.display = 'none';
+            vacancyLabel.style.marginBottom = '11px';
+        }
+    });
+
+    document.querySelectorAll('#specific-vacancy-wrapper .droplist__items .check').forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            var specificWrapper = document.getElementById('specific-vacancy-wrapper');
+            var errorSpan = document.querySelector('.new__current-label .error');
+            var selectedItems = specificWrapper.querySelectorAll('.droplist__items .check:checked');
+            var vacancyLabel = document.getElementById('specific-vacancy-label');
+
+            if (selectedItems.length > 0) {
+                errorSpan.style.display = 'none';
+                vacancyLabel.style.marginBottom = '65px';
+                specificWrapper.style.cssText = 'outline: none; border-radius: 5px;';
+                specificWrapper.querySelector('.droplist__selected').classList.add('droplist__result_active');
+            } else {
+                errorSpan.style.display = 'inline-block';
+                vacancyLabel.style.marginBottom = '85px';
+                specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
+                specificWrapper.querySelector('.droplist__selected').classList.remove('droplist__result_active');
+            }
+        });
+    });
+
+    document.getElementById('current-vacancy').addEventListener('change', function () {
+        if (document.getElementById('current-vacancy').checked) {
+            document.getElementById('specific-vacancy-label').style.marginBottom = '11px';
+            document.getElementById('specific-vacancy-error').style.display = 'none';
+        } else {
+            document.getElementById('specific-vacancy-label').style.backgroundColor = 'green';
+        }
+    })
+
+    document.getElementById('all-vacancies').addEventListener('change', function () {
+        if (document.getElementById('current-vacancy').checked) {
+            document.getElementById('specific-vacancy-label').style.backgroundColor = 'green';
+        } else {
+            document.getElementById('specific-vacancy-label').style.marginBottom = '11px';
+            document.getElementById('specific-vacancy-error').style.display = 'none';
+        }
+    })
+} catch (err) {
+    console.log('cannot find check choose item on list app')
+}

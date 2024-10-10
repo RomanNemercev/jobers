@@ -190,6 +190,11 @@ img {
     color: var(--color_space);
 }
 
+.f18w600 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .f20w500 {
     font-size: 20px;
     font-weight: 500;
