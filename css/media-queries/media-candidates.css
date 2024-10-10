@@ -1267,4 +1267,46 @@
     .mr0 .form__list_outer {
         width: 100%;
     }
+
+/*    pagination sets*/
+    .can__pagination-wrapper {
+        gap: 5px;
+        padding: 10px 15px;
+        flex-wrap: wrap; /* Чтобы кнопки переносились на следующую строку, если не помещаются */
+    }
+
+    .can__pagination-btn {
+        padding: 8px 10px;
+        font-size: 12px; /* Уменьшаем размер шрифта */
+    }
+
+    .arrow-btn {
+        padding: 8px 8px; /* Для стрелок делаем кнопки немного меньше */
+    }
+
+    /* Дополнительно можно скрыть некоторые кнопки на маленьких экранах для упрощения интерфейса */
+    .number-btn {
+        display: none; /* Скрываем кнопки с номерами */
+    }
+
+    /* Показываем только первую, текущую и последнюю страницы */
+    .number-btn:first-child,
+    .number-btn.active,
+    .number-btn:last-child {
+        display: flex; /* Показываем первые, последние и активные кнопки */
+    }
+
+    .can__pagination-btn svg {
+        width: 7px;
+        height: 12px;
+    }
+
+    .can__pagination-wrapper span {
+        display: none;
+    }
+
+    .can__pagination-btn.active {
+        background-color: var(--color_white);
+        color: var(--color_space);
+    }
 }
