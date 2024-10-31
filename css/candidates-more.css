@@ -19,7 +19,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 95px 25px 15px 295px;
+    padding: 95px 25px 13px 295px;
 }
 
 .nav__logo-icon {
@@ -121,26 +121,26 @@ p {
     width: 337px; /* 30.09% */
     background-color: var(--color_white);
     border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.more__content-wrapper {
+    max-width: calc(100% - 352px);
+    width: 100%;
 }
 
 .more__content {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-.more__doubles + .more__content {
-    height: calc(100vh - 440px);
-}
-
-.more__doubles.more__doubles--hide + .more__content {
-    height: calc(100vh - 185px);
+    max-height: calc(100vh - 183px);
+    gap: 15px;
 }
 
 .more__cans-info {
-    width: calc(100% - 352px);
     background-color: var(--color_white);
     border-radius: 10px;
+    height: calc(100vh - 448px);
 }
 
 .more-search__form {
@@ -333,10 +333,6 @@ p {
     margin-right: 15px;
 }
 
-.more__main-content {
-    height: calc(100% - 71px);
-}
-
 .vacancies__content {
     display: flex;
     width: 0;
@@ -346,7 +342,7 @@ p {
 
 .vacancies__content--active {
     width: auto;
-    height: calc(100% - 71px);
+    height: calc(100% - 85px);
     overflow: visible;
 }
 
@@ -584,9 +580,13 @@ p {
 }
 
 .more__messages {
-    height: calc(100vh - 457px);
+    height: calc(100vh - 680px);
     background-color: var(--color_athens-gray);
     width: 100%;
+}
+
+.more__messages--active-full {
+    height: calc(-415px + 100vh);
 }
 
 .more__data-message:not(:last-of-type) {
@@ -893,7 +893,7 @@ p {
 
 .more__enter-textarea {
     width: 100%;
-    min-height: 96px;
+    min-height: 65px;
     border: none;
     resize: none;
     margin-bottom: 10px;

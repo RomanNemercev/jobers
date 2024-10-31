@@ -423,6 +423,7 @@ listCansBtn.addEventListener('click', function () {
 document.addEventListener("DOMContentLoaded", function () {
     const content = document.querySelector(".more__doubles-content");
     const toggleButton = document.querySelector(".more__doubles-toggle");
+    let moreDoublesHeight = document.querySelector(".more__doubles").offsetHeight + 60;
 
     // Проверяем высоту контента и скрываем/показываем кнопку "Раскрыть полностью"
     if (content.scrollHeight > 60) {
@@ -441,10 +442,33 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleButton.textContent = "Скрыть";
         }
     });
+
+    const moreCansInfo = document.querySelector('.more__cans-info');
+    let isOpen = false;
+    // Проверка ширины окна
+    if (window.innerWidth < 1323) {
+        moreDoublesHeight = (moreDoublesHeight.offsetHeight + 100) + 'px';
+    }
+
+    toggleButton.addEventListener('click', () => {
+
+        if (isOpen) {
+            // Если уже открыто, то закрываем и сбрасываем высоту
+            moreCansInfo.style.cssText = ''; // или можно указать конкретную высоту, если нужно
+        } else {
+            // Если закрыто, то устанавливаем нужную высоту
+            moreCansInfo.style.height = `calc(100% - ${moreDoublesHeight}px)`;
+        }
+        isOpen = !isOpen; // переключаем состояние
+    });
+
     document.querySelector('.more__doubles-denied').addEventListener('click', () => {
-        document.querySelector('.more__doubles').classList.add('more__doubles--hide');
+        document.querySelector('.more__doubles').style.cssText = 'display: none;';
+        document.querySelector('.more__cans-info').style.cssText = 'height: 100%;';
+        document.querySelector('.more__main-content').classList.add('vacancies__content-one--undoubles');
+        document.querySelector('.more__messages').classList.add('more__messages--active-full');
     })
 });
 
 
-//doubles expand sets end
+//doubles expand sets end      height: calc(-440px + 100vh);
