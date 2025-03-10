@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobers - Дополнительный сервис</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/add-service.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body class="body-page">
+<!--стандартная обертка - начало -->
+<!--блок бокового меню-->
+<section class="nav">
+    <div class="nav__container">
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Рекрутинг</li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
+            </li>
+            <li class="nav__link list-reset"><a href="candidates-null.html"
+                                                class="nav__link-item link-candidates">Кандидаты</a></li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Организация</li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
+            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a>
+            </li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
+            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+            </li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--блок поискового меню-->
+<section class="search-bar">
+    <div class="search-bar__container">
+        <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
+                                                              class="nav__logo-icon"></a>
+        <form action="#" class="search-bar__form">
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
+            <div class="search-bar__dropdown"></div>
+        </form>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="note-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
+                    <img src="../img/notification.svg" alt="Уведомления"
+                         class="search-bar__note">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="supp-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
+                    <img src="../img/support.svg" alt="Поддержка"
+                         class="search-bar__support">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="acc-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
+                    <img src="../img/profile.svg" alt="Личный кабинет"
+                         class="search-bar__acc">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__burger toogle">
+            <div class="toogle_bar">
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service container">
+    <button class="btn-reset btn-black f15w600 service__btn-back">Назад</button>
+    <h2 class="f35w700">Дополнительные услуги</h2>
+    <div class="service__main-container">
+        <div class="service__supplies-wrapper">
+            <div class="service__rewrite">
+                <div class="service__rewrite-header">Работа с текстом</div>
+                <div class="service__rewrite-content">
+                    <div class="service__rewrite-descr">
+                        <p class="service__rewrite-descr__title f20w500">Рерайтинг вакансии</p>
+                        <p class="c-bali f14w400">Напишем текст вакансии, который будет привлекать качественных кандидатов и&nbsp;отсеивать
+                            неподходящих</p>
+                    </div>
+                    <div class="service__rewrite-bar">
+                        <div class="service__rewrite-discount">-50%</div>
+                        <div class="service__rewrite-sum">+ 7 000 руб.</div>
+                        <div class="service__rewrite-add"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
