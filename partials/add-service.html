@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/libs-css/custom-multi-select.css">
+    <link rel="stylesheet" href="../css/libs-css/price-range.css">
     <link rel="stylesheet" href="../css/add-service.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media-queries/service-media.css">
 </head>
 <body class="body-page">
 <!--стандартная обертка - начало -->
@@ -97,7 +99,7 @@
         <div class="service__supplies-wrapper">
             <div class="service__rewrite mb15">
                 <div class="service__rewrite-header c-bali f15w400">Работа с текстом</div>
-                <div class="service__rewrite-content">
+                <div class="service__rewrite-content flex-between">
                     <div class="service__rewrite-descr">
                         <p class="service__rewrite-descr__title f20w500">Рерайтинг вакансии</p>
                         <p class="c-bali f14w400">Напишем текст вакансии, который будет привлекать качественных
@@ -114,40 +116,40 @@
             <div class="service__more">
                 <div class="service__more-header c-bali f15w400">Дополнительные сайты для публикации</div>
                 <div class="service__offers-container">
-                    <div class="service__avito flex-between">
-                        <div class="service__avito-logo bg-fix"></div>
+                    <div class="service__avito gap-x-10 align-center flex-between">
+                        <div class="service__avito-logo bg-fix shrink-false"></div>
                         <div class="service__avito-bar flex-between">
                             <div class="service__avito-boost f15w400 c-bali">x5</div>
                             <div class="service__avito-sum">+ 2 990 руб.</div>
                             <button class="service__avito-add bg-fix btn-reset"></button>
                         </div>
                     </div>
-                    <div class="service__vc flex-between">
-                        <div class="service__vc-logo bg-fix"></div>
+                    <div class="service__vc gap-x-10 align-center flex-between">
+                        <div class="service__vc-logo bg-fix shrink-false"></div>
                         <div class="service__vc-bar flex-between">
                             <div class="service__vc-boost f15w400 c-bali">Стандартная публикация</div>
                             <div class="service__vc-sum">+ 990 руб.</div>
                             <button class="service__vc-add bg-fix btn-reset"></button>
                         </div>
                     </div>
-                    <div class="service__habr flex-between">
-                        <div class="service__habr-logo bg-fix"></div>
+                    <div class="service__habr gap-x-10 align-center flex-between">
+                        <div class="service__habr-logo bg-fix shrink-false"></div>
                         <div class="service__habr-bar flex-between">
                             <div class="service__habr-boost f15w400 c-bali">Бизнес +</div>
                             <div class="service__habr-sum">+ 1 990 руб.</div>
                             <button class="service__habr-add bg-fix btn-reset"></button>
                         </div>
                     </div>
-                    <div class="service__helper flex-between">
-                        <div class="service__helper-logo bg-fix"></div>
+                    <div class="service__helper gap-x-10 align-center flex-between">
+                        <div class="service__helper-logo bg-fix shrink-false"></div>
                         <div class="service__helper-bar flex-between">
                             <div class="service__helper-boost f15w400 c-bali">Стандартная публикация</div>
                             <div class="service__helper-sum">+ 990 руб.</div>
                             <button class="service__helper-add bg-fix btn-reset"></button>
                         </div>
                     </div>
-                    <div class="service__resto flex-between">
-                        <div class="service__resto-logo bg-fix"></div>
+                    <div class="service__resto gap-x-10 align-center flex-between">
+                        <div class="service__resto-logo bg-fix shrink-false"></div>
                         <div class="service__resto-bar flex-between">
                             <div class="service__resto-boost f15w400 c-bali">Стандартная публикация</div>
                             <div class="service__resto-sum">+ 990 руб.</div>
@@ -160,8 +162,8 @@
             <div class="service__promo mb15">
                 <div class="service__promo-header c-bali f15w400">Услуги продвижения на сайтах</div>
                 <div class="service__promo-container">
-                    <div class="service__superjob flex-between">
-                        <div class="service__superjob-logo bg-fix"></div>
+                    <div class="service__superjob gap-x-10 align-center flex-between">
+                        <div class="service__superjob-logo bg-fix shrink-false"></div>
                         <div class="service__superjob-bar flex-between">
                             <div class="service__superjob-sort f15w400 c-bali">Турбо-вакансия на Superjob.ru</div>
                             <div class="service__superjob-spell">30 дней</div>
@@ -169,8 +171,8 @@
                             <button class="service__superjob-add btn-reset bg-fix"></button>
                         </div>
                     </div>
-                    <div class="service__hh flex-between">
-                        <div class="service__hh-logo bg-fix"></div>
+                    <div class="service__hh gap-x-10 align-center flex-between">
+                        <div class="service__hh-logo bg-fix shrink-false"></div>
                         <div class="service__hh-bar flex-between">
                             <div class="service__hh-sort f15w400 c-bali">Вакансия Стандарт+ на HH.ru </div>
                             <div class="service__hh-spell">14 дней</div>
@@ -178,8 +180,8 @@
                             <button class="service__hh-add btn-reset bg-fix"></button>
                         </div>
                     </div>
-                    <div class="service__youla flex-between">
-                        <div class="service__youla-logo bg-fix"></div>
+                    <div class="service__youla gap-x-10 align-center flex-between">
+                        <div class="service__youla-logo bg-fix shrink-false"></div>
                         <div class="service__youla-bar flex-between">
                             <div class="service__youla-sort f15w400 c-bali">Турбо вакансия на Юле</div>
                             <div class="service__youla-spell">30 дней</div>
@@ -187,8 +189,8 @@
                             <button class="service__youla-add btn-reset bg-fix"></button>
                         </div>
                     </div>
-                    <div class="service__youla flex-between">
-                        <div class="service__youla-logo bg-fix"></div>
+                    <div class="service__youla gap-x-10 align-center flex-between">
+                        <div class="service__youla-logo bg-fix shrink-false"></div>
                         <div class="service__youla-bar flex-between">
                             <div class="service__youla-sort f15w400 c-bali">Премиум вакансия на Юле</div>
                             <div class="service__youla-spell">14 дней</div>
@@ -204,20 +206,112 @@
                 <div class="service__public-container">
                     <div class="service__search-public">
                         <p class="service__search-title f15w400 mb15">Поиск по группам и сообществам</p>
-                        <input type="text" class="service__search-input e-input bg-fix" placeholder="Введите название сообщества">
+                        <input type="text" class="service__search-input e-input bg-fix"
+                               placeholder="Введите название сообщества">
                     </div>
                     <div class="service__settings-bar">
                         <div class="service__social-select">
-                            <div class="service__select-title f15w400">Социальная сеть</div>
+                            <div class="service__select-title f15w400 mb15">Социальная сеть</div>
                             <div class="custom-select">
                                 <div class="select-header">
                                     <span class="select-placeholder">Выберите площадку</span>
                                     <span class="select-arrow"></span>
                                 </div>
                                 <div class="select-options">
-                                    <div class="option" data-value="Telegram"><span class="checkbox bg-fix"></span>Telegram</div>
+                                    <div class="option" data-value="Telegram"><span class="checkbox bg-fix"></span>Telegram
+                                    </div>
                                     <div class="option" data-value="VK"><span class="checkbox bg-fix"></span>VK</div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="service__city-select">
+                            <p class="service__city-title f15w400 mb15">Город</p>
+                            <div class="search-box">
+                                <input type="text" id="search" placeholder="Например, Санкт-Петербург, Заречная 3"
+                                       class="search-box__input"/>
+                                <div id="suggestions-pane"></div>
+                            </div>
+                        </div>
+                        <div class="service__price-choose">
+                            <div class="price-range">
+                                <label class="price-range__label">
+                                    <span class="price-range__label-text mb15">Стоимость публикации</span>
+                                    <div class="price-range__inputs">
+                                        <input type="text" placeholder="от"
+                                               class="price-range__input price-range__input--from">
+                                        <input type="text" placeholder="до"
+                                               class="price-range__input price-range__input--to">
+                                    </div>
+                                    <p class="price-range__error">Это поле обязательно для заполнения</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service__public-items">
+                        <div class="service__public-item align-center flex-between">
+                            <div class="service__public-info flex">
+                                <div class="service__public-logo bg-fix shrink-false"></div>
+                                <div class="service__public-descr">
+                                    <p class="service__public-descr__title f15w400">Удаленная работа - Фриланс
+                                        Телеграм</p>
+                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 1 089 023</p>
+                                </div>
+                            </div>
+                            <div class="service__public-value flex align-center">
+                                <span class="service__public-sum">+ 5 800 руб.</span>
+                                <button class="service__public-add btn-reset bg-fix"></button>
+                            </div>
+                        </div>
+                        <div class="service__public-item align-center flex-between">
+                            <div class="service__public-info flex">
+                                <div class="service__public-logo bg-fix shrink-false"></div>
+                                <div class="service__public-descr">
+                                    <p class="service__public-descr__title f15w400">РазРаботка</p>
+                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 1 089 023</p>
+                                </div>
+                            </div>
+                            <div class="service__public-value flex align-center">
+                                <span class="service__public-sum">+ 840 руб.</span>
+                                <button class="service__public-add btn-reset bg-fix"></button>
+                            </div>
+                        </div>
+                        <div class="service__public-item align-center flex-between">
+                            <div class="service__public-info flex">
+                                <div class="service__public-logo bg-fix shrink-false"></div>
+                                <div class="service__public-descr">
+                                    <p class="service__public-descr__title f15w400">Работа МОСКВА</p>
+                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 100 520</p>
+                                </div>
+                            </div>
+                            <div class="service__public-value flex align-center">
+                                <span class="service__public-sum">+ 2 990 руб.</span>
+                                <button class="service__public-add btn-reset bg-fix"></button>
+                            </div>
+                        </div>
+                        <div class="service__public-item align-center flex-between">
+                            <div class="service__public-info flex">
+                                <div class="service__public-logo bg-fix shrink-false"></div>
+                                <div class="service__public-descr">
+                                    <p class="service__public-descr__title f15w400">Удаленка из Питера</p>
+                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 489 002</p>
+                                </div>
+                            </div>
+                            <div class="service__public-value flex align-center">
+                                <span class="service__public-sum">+ 4 200 руб.</span>
+                                <button class="service__public-add btn-reset bg-fix"></button>
+                            </div>
+                        </div>
+                        <div class="service__public-item align-center flex-between">
+                            <div class="service__public-info flex">
+                                <div class="service__public-logo bg-fix shrink-false"></div>
+                                <div class="service__public-descr">
+                                    <p class="service__public-descr__title f15w400">Свежие вакансии</p>
+                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 980 299</p>
+                                </div>
+                            </div>
+                            <div class="service__public-value flex align-center">
+                                <span class="service__public-sum">+ 1 000 руб.</span>
+                                <button class="service__public-add btn-reset bg-fix"></button>
                             </div>
                         </div>
                     </div>
@@ -263,5 +357,7 @@
 </section>
 <script src="../js/jquery_3.3.1.min.js"></script>
 <script src="../js/libs-js/custom-multi-select.js"></script>
+<script src="../js/libs-js/price-range.js"></script>
+<script src="../js/script-service.js"></script>
 </body>
 </html>
