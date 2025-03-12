@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/libs-css/custom-multi-select.css">
     <link rel="stylesheet" href="../css/add-service.css">
     <link rel="stylesheet" href="../css/media.css">
 </head>
@@ -94,7 +95,7 @@
     <h2 class="f35w700 service__title">Дополнительные услуги</h2>
     <div class="service__main-container">
         <div class="service__supplies-wrapper">
-            <div class="service__rewrite">
+            <div class="service__rewrite mb15">
                 <div class="service__rewrite-header c-bali f15w400">Работа с текстом</div>
                 <div class="service__rewrite-content">
                     <div class="service__rewrite-descr">
@@ -156,7 +157,7 @@
                     <button class="btn-reset btn-cancel service__btn-more">Показать еще</button>
                 </div>
             </div>
-            <div class="service__promo">
+            <div class="service__promo mb15">
                 <div class="service__promo-header c-bali f15w400">Услуги продвижения на сайтах</div>
                 <div class="service__promo-container">
                     <div class="service__superjob flex-between">
@@ -198,7 +199,30 @@
                     <button class="btn-reset btn-cancel service__promo-more">Показать еще</button>
                 </div>
             </div>
-            <div class="service__public"></div>
+            <div class="service__public">
+                <div class="service__public-header c-bali f15w400">Публикации в социальных сетях и мессенджерах</div>
+                <div class="service__public-container">
+                    <div class="service__search-public">
+                        <p class="service__search-title f15w400 mb15">Поиск по группам и сообществам</p>
+                        <input type="text" class="service__search-input e-input bg-fix" placeholder="Введите название сообщества">
+                    </div>
+                    <div class="service__settings-bar">
+                        <div class="service__social-select">
+                            <div class="service__select-title f15w400">Социальная сеть</div>
+                            <div class="custom-select">
+                                <div class="select-header">
+                                    <span class="select-placeholder">Выберите площадку</span>
+                                    <span class="select-arrow"></span>
+                                </div>
+                                <div class="select-options">
+                                    <div class="option" data-value="Telegram"><span class="checkbox bg-fix"></span>Telegram</div>
+                                    <div class="option" data-value="VK"><span class="checkbox bg-fix"></span>VK</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="service__basket-wrapper">
             <div class="service__basket-position">
@@ -237,5 +261,7 @@
         </div>
     </div>
 </section>
+<script src="../js/jquery_3.3.1.min.js"></script>
+<script src="../js/libs-js/custom-multi-select.js"></script>
 </body>
 </html>

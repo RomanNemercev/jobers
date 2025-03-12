@@ -54,11 +54,13 @@
     display: grid;
     grid-template-columns: 1fr 303px;
     grid-column-gap: 25px;
+    padding-bottom: 400px;
 }
 
 .service__rewrite-header,
 .service__more-header,
-.service__promo-header {
+.service__promo-header,
+.service__public-header {
     background-color: var(--color_white);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -197,16 +199,13 @@
     margin-bottom: 25px;
 }
 
-.service__rewrite {
-    margin-bottom: 15px;
-}
-
 .service__more {
     margin-bottom: 14px;
 }
 
 .service__offers-container,
-.service__promo-container {
+.service__promo-container,
+.service__public-container {
     background-color: var(--color_white);
     padding: 25px;
     border-radius: 0 0 10px 10px;
@@ -336,4 +335,18 @@
     background-image: url("../img/service-youla.png");
     width: 59.67px;
     height: 20px;
+}
+
+.service__search-input {
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+    background-image: url("../img/search-icon-for-tags.svg");
+    line-height: normal;
+    padding: 9px 15px 9px 39px;
+    background-position: 14px center;
+}
+
+.service__search-input:focus,
+.service__promo-space:focus {
+    background-color: var(--color_zircon);
 }
