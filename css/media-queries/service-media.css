@@ -1,0 +1,110 @@
+@media (max-width: 1200px) {
+    .service__avito,
+    .service__vc,
+    .service__habr,
+    .service__helper,
+    .service__resto,
+    .service__superjob,
+    .service__hh,
+    .service__youla,
+    .service__public-info {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .service__settings-bar {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+
+    .service__avito-bar,
+    .service__vc-bar,
+    .service__habr-bar,
+    .service__helper-bar,
+    .service__resto-bar,
+    .service__superjob-bar,
+    .service__hh-bar,
+    .service__youla-bar,
+    .service__youla-bar {
+        justify-content: flex-start;
+    }
+
+    .service__avito-add,
+    .service__vc-add,
+    .service__habr-add,
+    .service__helper-add,
+    .service__resto-add,
+    .service__superjob-add,
+    .service__hh-add,
+    .service__youla-add,
+    .service__youla-add {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    .service__rewrite-content {
+        flex-direction: column;
+    }
+
+    .service__rewrite-bar {
+        justify-content: flex-start;
+    }
+
+    .service__rewrite-add {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .service__avito-bar,
+    .service__vc-bar,
+    .service__habr-bar,
+    .service__helper-bar,
+    .service__resto-bar,
+    .service__superjob-bar,
+    .service__hh-bar,
+    .service__youla-bar,
+    .service__youla-bar {
+        flex-wrap: wrap;
+        row-gap: 5px;
+    }
+
+    .service__superjob-spell,
+    .service__hh-spell,
+    .service__youla-spell,
+    .service__youla-spell {
+        margin-left: auto;
+    }
+
+    .service__superjob-sum,
+    .service__hh-sum,
+    .service__youla-sum {
+        margin-left: auto;
+    }
+
+    .service__superjob-add,
+    .service__hh-add,
+    .service__youla-add {
+        margin-left: inherit;
+    }
+}
+
+@media (max-width: 940px) {
+    .service__public-item {
+        flex-direction: column;
+    }
+
+    .service__public-info {
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .service__public-descr {
+        text-align: center;
+    }
+
+    .service__main-container {
+        grid-template-columns: 1fr 40%;
+    }
+}
