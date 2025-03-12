@@ -1,10 +1,37 @@
 /* new global */
+:root {
+    --color_border: #EDEFF5;
+}
+
 .btn-black {
     background-color: var(--color_space);
     color: var(--color_white);
     border-radius: 5px;
     padding: 10.5px 20px;
     line-height: normal;
+}
+
+.e-input {
+    border: 1px solid var(--color_border);
+    border-radius: 10px;
+    padding: 11.5px 15px 11.5px 45px;
+    background-color: var(--color_background);
+    width: 100%;
+}
+
+.e-input::placeholder {
+    color: var(--color_bali);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.e-input:focus {
+    outline: 1px solid var(--color_dodger);
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
 }
 
 .f15w600 {
@@ -21,4 +48,292 @@
 /*custom styles*/
 .service__btn-back {
     margin-bottom: 51px;
+}
+
+.service__main-container {
+    display: grid;
+    grid-template-columns: 1fr 303px;
+    grid-column-gap: 25px;
+}
+
+.service__rewrite-header,
+.service__more-header,
+.service__promo-header {
+    background-color: var(--color_white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 21px 25px;
+    margin-bottom: 1px;
+}
+
+.service__rewrite-content {
+    background-color: var(--color_white);
+    border-radius: 0 0 10px 10px;
+    padding: 25px;
+    display: flex;
+    column-gap: 50px;
+}
+
+.service__basket-title {
+    padding: 21px 25px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--color_white);
+    margin-bottom: 1px;
+}
+
+.service__title {
+    margin-bottom: 52px;
+}
+
+.service__rewrite-descr {
+    max-width: 63%;
+}
+
+.service__rewrite-descr__title {
+    margin-bottom: 8px;
+}
+
+.service__rewrite-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    align-items: center;
+}
+
+.service__rewrite-add,
+.service__avito-add,
+.service__vc-add,
+.service__habr-add,
+.service__helper-add,
+.service__resto-add,
+.service__superjob-add,
+.service__hh-add,
+.service__youla-add {
+    color: var(--color_dodger);
+    background-image: url("../img/plus-service.svg");
+    border-radius: 100%;
+    background-color: var(--color_zircon);
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background-position: center;
+}
+
+.service__rewrite-discount {
+    background-color: var(--color_pink);
+    color: var(--color_red);
+    height: fit-content;
+    padding: 6.5px 15px;
+    border-radius: 5px;
+}
+
+.service__items-wrapper {
+    padding: 25px;
+    background-color: var(--color_white);
+    margin-bottom: 1px;
+}
+
+.service__item-delete {
+    background-image: url("../img/x-service.svg");
+    background-position: center;
+    width: 20px;
+    height: 17px;
+}
+
+.service__item-delete:hover {
+    background-image: url("../img/x-service-hover.svg");
+}
+
+.service__name-wrapper {
+    justify-content: space-between;
+}
+
+.service__item-name {
+    margin-bottom: 11px;
+}
+
+.service__item-cost p {
+    margin-right: 5px;
+}
+
+.service__item-cost {
+    margin-bottom: 5px;
+}
+
+.service__item-count p {
+    margin-right: 5px;
+}
+
+.service__basket-item:not(:last-of-type) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color_background);
+}
+
+.service__sum-box {
+    background-color: var(--color_white);
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+}
+
+.service__basket-item:not(:first-of-type) {
+    padding-top: 15px;
+}
+
+.service__promo-space {
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+    padding: 9px 15px 9px 15px;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.service__accept-btn {
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.service__sum-title {
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.service__rewrite {
+    margin-bottom: 15px;
+}
+
+.service__more {
+    margin-bottom: 14px;
+}
+
+.service__offers-container,
+.service__promo-container {
+    background-color: var(--color_white);
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+}
+
+.service__avito-logo {
+    background-image: url("../img/service-avito.png");
+    width: 70.97px;
+    height: 20px;
+}
+
+.service__offers-container > div:not(:last-of-type) {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color_background);
+}
+
+.service__offers-container > div:not(:first-of-type) {
+    padding-top: 15px;
+}
+
+.service__offers-container > div:last-of-type {
+    margin-bottom: 25px;
+}
+
+.service__promo-container > div:not(:last-of-type) {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color_background);
+}
+
+.service__promo-container > div:not(:first-of-type) {
+    padding-top: 15px;
+}
+
+.service__promo-container > div:last-of-type {
+    margin-bottom: 39px;
+}
+
+.service__avito,
+.service__vc,
+.service__habr,
+.service__helper,
+.service__resto,
+.service__superjob,
+.service__hh,
+.service__youla {
+    align-items: center;
+}
+
+.service__offers-bar,
+.service__avito-bar,
+.service__vc-bar,
+.service__habr-bar,
+.service__helper-bar,
+.service__resto-bar,
+.service__superjob-bar,
+.service__hh-bar,
+.service__youla-bar {
+    column-gap: 15px;
+    align-items: center;
+}
+
+.service__avito-boost {
+    text-transform: uppercase;
+}
+
+.service__vc-logo {
+    background-image: url("../img/service-vc.png");
+    width: 21.29px;
+    height: 20px;
+}
+
+.service__avito-sum,
+.service__vc-sum,
+.service__habr-sum,
+.service__helper-sum,
+.service__resto-sum,
+.service__superjob-sum,
+.service__hh-sum,
+.service__youla-sum {
+    min-width: 120px;
+    text-align: center;
+}
+
+.service__habr-logo {
+    background-image: url("../img/service-habr.png");
+    width: 144.44px;
+    height: 20px;
+}
+
+.service__helper-logo {
+    background-image: url("../img/service-helper.png");
+    width: 129.17px;
+    height: 20px;
+}
+
+.service__resto-logo {
+    background-image: url("../img/service-resto.png");
+    width: 177.22px;
+    height: 20px;
+}
+
+.service__superjob-logo {
+    background-image: url("../img/service-superjob.png");
+    width: 89.66px;
+    height: 20px;
+}
+
+.service__superjob-spell,
+.service__hh-spell,
+.service__youla-spell {
+    color: var(--color_btn-succes);
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--color_succes);
+    border-radius: 5px;
+    padding: 6.5px 15px;
+    line-height: normal;
+}
+
+.service__hh-logo {
+    background-image: url("../img/service-hh.png");
+    width: 20px;
+    height: 20px;
+}
+
+.service__youla-logo {
+    background-image: url("../img/service-youla.png");
+    width: 59.67px;
+    height: 20px;
 }
