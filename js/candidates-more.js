@@ -1,30 +1,61 @@
 // script for scroll-x
-let btnLeft = document.getElementById('btn-left');
-btnLeft.onclick = function () {
-    let container = document.getElementById('scroll-wrapper');
+// Function to check and toggle visibility of scroll buttons
+function toggleScrollButtons() {
+    const container = document.getElementById('scroll-wrapper');
+    const btnLeft = document.getElementById('btn-left');
+    const btnRight = document.getElementById('btn-right');
+    const btnSet = document.querySelector('.btn-settings');
+
+    if (container.scrollWidth > container.clientWidth) {
+        btnLeft.style.visibility = 'visible';
+        btnRight.style.visibility = 'visible';
+        btnSet.style.cssText = 'right: 100px; border-radius: 0;'
+    } else {
+        btnLeft.style.visibility = 'hidden';
+        btnRight.style.visibility = 'hidden';
+        btnSet.style.cssText = 'right: 0; border-radius: 0 10px 10px 0;'
+    }
+}
+
+// var mediaQuery = window.matchMedia('(max-width: 768px)');
+
+// if (mediaQuery.matches) {
+//     btnLeft.style.visibility = 'hidden';
+//     btnRight.style.visibility = 'hidden';
+// }
+
+// Event listeners for scroll buttons
+document.getElementById('btn-left').onclick = function () {
+    const container = document.getElementById('scroll-wrapper');
     sideScroll(container, 'left', 25, 100, 10);
 };
 
-let btnRight = document.getElementById('btn-right');
-btnRight.onclick = function () {
-    let container = document.getElementById('scroll-wrapper');
+document.getElementById('btn-right').onclick = function () {
+    const container = document.getElementById('scroll-wrapper');
     sideScroll(container, 'right', 25, 100, 10);
 };
 
+// Scroll function
 function sideScroll(element, direction, speed, distance, step) {
-    scrollAmount = 0;
-    let slideTimer = setInterval(function () {
-        if (direction == 'left') {
+    let scrollAmount = 0;
+    const slideTimer = setInterval(function () {
+        if (direction === 'left') {
             element.scrollLeft -= step;
         } else {
             element.scrollLeft += step;
         }
         scrollAmount += step;
         if (scrollAmount >= distance) {
-            window.clearInterval(slideTimer);
+            clearInterval(slideTimer);
         }
     }, speed);
 }
+
+// Initial check on page load
+toggleScrollButtons();
+
+// Check on window resize
+window.addEventListener('resize', toggleScrollButtons);
 
 //auto scroll on history page
 new SimpleBar(document.getElementById('messageContainer'));
@@ -110,37 +141,53 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // pl for textarea in chat crm
+// Функция для обновления отступа в textarea
 function updateTextareaIndent() {
+    var mediaQuery = window.matchMedia('(max-width: 1170px)');
     var overlayWidth = document.getElementById("chat-select").offsetWidth;
-    var totalIndent = overlayWidth + 37; // Добавляем 30px к ширине overlay
+    var totalIndent = overlayWidth + 100; // Добавляем 37px к ширине overlay
     document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
+
+    if (mediaQuery.matches) {
+        totalIndent = overlayWidth + 150; // Добавляем 37px к ширине overlay
+        document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
+    }
 }
 
-function updatePlaceholderIndent() {
-    var overlayWidth = document.getElementById("chat-select").offsetWidth;
-    var totalIndent = overlayWidth + 30; // Добавляем 30px к ширине overlay
-    var placeholderSpaces = Math.ceil(overlayWidth / 8); // Округляем до ближайшего целого числа символов
-    var placeholderText = "Введите ваше сообщение";
-    document.getElementById("chat-textarea").setAttribute("placeholder", placeholderText);
-}
+// Функция для обновления отступа и текста placeholder
+// function updatePlaceholderIndent() {
+//     var overlayWidth = document.getElementById("chat-select").offsetWidth;
+//     var placeholderText = "Введите ваше сообщение";
+//     document.getElementById("chat-textarea").setAttribute("placeholder", placeholderText);
+// }
 
-document.getElementById("chat-select").addEventListener("change", function () {
-    updateTextareaIndent();
-    updatePlaceholderIndent();
+// Событие для изменения значения в chat-select
+document.querySelectorAll("#chat-select li").forEach(function (item) {
+    item.addEventListener("click", function () {
+        document.querySelector("#chat-select .selected-option").textContent = this.getAttribute("data-value");
+        // updateTextareaIndent();
+        // updatePlaceholderIndent();
+        var overlayWidth = document.getElementById("chat-select").offsetWidth;
+        var placeholderText = "Введите ваше сообщение";
+        document.getElementById("chat-textarea").setAttribute("placeholder", placeholderText);
+        // var overlayWidth = document.getElementById("chat-select").offsetWidth;
+        var totalIndent = overlayWidth + 37; // Добавляем 37px к ширине overlay
+        document.getElementById("chat-textarea").style.textIndent = totalIndent + "px";
+    });
 });
 
-document.getElementById("chat-select").addEventListener("input", function () {
+// Инициализация при загрузке страницы
+window.addEventListener("load", function () {
     updateTextareaIndent();
-    updatePlaceholderIndent();
+    // updatePlaceholderIndent();
 });
 
-document.getElementById("chat-textarea").addEventListener("input", function () {
+// Также обновляем отступ при изменении размера окна
+window.addEventListener("resize", function () {
     updateTextareaIndent();
+    // updatePlaceholderIndent();
 });
 
-// Инициализация
-updateTextareaIndent();
-updatePlaceholderIndent();
 
 // add script for dropdown in chat crm
 // Добавляем обработчик события для кнопки выбора действия
@@ -324,7 +371,7 @@ initializeTagInput('tag-input-0');
 initializeTagInput('tag-input-1');
 
 //styles for tabs click on 768
-var mediaQuery = window.matchMedia('(max-width: 768px)');
+var mediaQuery = window.matchMedia('(max-width: 1170px)');
 
 if (mediaQuery.matches) {
 
@@ -344,14 +391,13 @@ if (mediaQuery.matches) {
         document.querySelector('.more__cans-header').style.padding = '15px 12px';
         document.querySelector('.more__cans-header').classList.remove('hide-after');
         document.querySelector('.more__header-right').style.display = 'flex';
-        document.querySelector('.more__content').style.height = 'calc(100vh - 120px)';
+        document.querySelector('.more__content').style.height = 'calc(100vh - 65px)';
         document.querySelector('.more__enter').style.display = 'none';
     })
-    console.log('Экран до 768px');
+    console.log('Экран до 1170px');
 }
 
 //create tabs for cans list
-
 let listCansBtn = document.querySelector('.search-bar__cans');
 let mainContentUser = document.querySelector('.more__cans-info');
 let moreCansScroll = document.querySelector('.more__cans-scroll');
@@ -372,3 +418,57 @@ listCansBtn.addEventListener('click', function () {
     document.querySelector('.vacancies__content--active').classList.toggle('vacancies__content--active__correct-height');
     document.querySelector('.more__items-list').classList.toggle('more__items-list__correct-height');
 })
+
+//doubles expand sets
+document.addEventListener("DOMContentLoaded", function () {
+    const content = document.querySelector(".more__doubles-content");
+    const toggleButton = document.querySelector(".more__doubles-toggle");
+    let moreDoublesHeight = document.querySelector(".more__doubles").offsetHeight + 60;
+
+    // Проверяем высоту контента и скрываем/показываем кнопку "Раскрыть полностью"
+    if (content.scrollHeight > 60) {
+        toggleButton.classList.add("more__doubles-toggle_active");
+        document.querySelector('.more__doubles').classList.add('more__doubles--overlay');
+    }
+
+    toggleButton.addEventListener("click", function () {
+        const parent = toggleButton.closest(".more__doubles");
+
+        if (parent.classList.contains("more__doubles-open")) {
+            parent.classList.remove("more__doubles-open");
+            toggleButton.textContent = "Раскрыть полностью";
+        } else {
+            parent.classList.add("more__doubles-open");
+            toggleButton.textContent = "Скрыть";
+        }
+    });
+
+    const moreCansInfo = document.querySelector('.more__cans-info');
+    let isOpen = false;
+    // Проверка ширины окна
+    if (window.innerWidth < 1323) {
+        moreDoublesHeight = (moreDoublesHeight.offsetHeight + 100) + 'px';
+    }
+
+    toggleButton.addEventListener('click', () => {
+
+        if (isOpen) {
+            // Если уже открыто, то закрываем и сбрасываем высоту
+            moreCansInfo.style.cssText = ''; // или можно указать конкретную высоту, если нужно
+        } else {
+            // Если закрыто, то устанавливаем нужную высоту
+            moreCansInfo.style.height = `calc(100% - ${moreDoublesHeight}px)`;
+        }
+        isOpen = !isOpen; // переключаем состояние
+    });
+
+    document.querySelector('.more__doubles-denied').addEventListener('click', () => {
+        document.querySelector('.more__doubles').style.cssText = 'display: none;';
+        document.querySelector('.more__cans-info').style.cssText = 'height: 100%;';
+        document.querySelector('.more__main-content').classList.add('vacancies__content-one--undoubles');
+        document.querySelector('.more__messages').classList.add('more__messages--active-full');
+    })
+});
+
+
+//doubles expand sets end      height: calc(-440px + 100vh);

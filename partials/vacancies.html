@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="../css/libs-css/simplebar.css">
     <link rel="stylesheet" href="../css/libs-css/choices.min.css">
     <link rel="stylesheet" href="../css/libs-css/select.css">
+    <link rel="stylesheet" href="../css/libs-css/move-filter.css">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/media-queries/vacancies-media.css">
 </head>
-<body class="body-page">
+<body class="body-page wrapper  ">
 <!--блок бокового меню-->
 <section class="nav">
     <div class="nav__container">
@@ -37,18 +38,19 @@
             <li class="nav__links-caption">Организация</li>
             <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-companies">Компании</a></li>
+            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a>
+            </li>
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
             <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
             </li>
         </ul>
         <ul class="nav__links">
             <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings">Настройки</a></li>
+            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a>
+            </li>
         </ul>
     </div>
 </section>
-<!--блок поискового меню-->
 <section class="search-bar">
     <div class="search-bar__container">
         <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
@@ -58,7 +60,7 @@
             <div class="search-bar__dropdown"></div>
         </form>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset">
+            <button class="search-bar__btn btn-reset" id="note-btn">
                 <picture>
                     <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
                     <img src="../img/notification.svg" alt="Уведомления"
@@ -67,7 +69,7 @@
             </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset">
+            <button class="search-bar__btn btn-reset" id="supp-btn">
                 <picture>
                     <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
                     <img src="../img/support.svg" alt="Поддержка"
@@ -76,7 +78,7 @@
             </button>
         </div>
         <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset">
+            <button class="search-bar__btn btn-reset" id="acc-btn">
                 <picture>
                     <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
                     <img src="../img/profile.svg" alt="Личный кабинет"
@@ -93,6 +95,212 @@
         </div>
     </div>
 </section>
+<section class="nots">
+    <div class="nots__container">
+        <h3 class="nots__title f16w600">Уведомления</h3>
+        <ul class="nots__cans-list">
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-now f14w400 c-bali">сейчас</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Бухгалтерия</p></li>
+                    <li><p class="nots__user-name f15w500">Александра степанова</p></li>
+                    <li><p class="nots__user-desc f14w400">Здравствуйте, вы запрашивали закрывающие документы, вчера мы
+                        их отправили</p></li>
+                </ul>
+                <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Личный менеджер</p></li>
+                    <li><p class="nots__user-name f15w500">Яна Олейникова</p></li>
+                    <li><p class="nots__user-desc f14w400">Действительно, сейчас очень большая конкуренция на уборщиков,
+                        я бы не рекомендовало использовать тариф без автоподнятия</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Евгения Онегина</p></li>
+                    <li><p class="nots__user-desc f14w400">Продуктовый менеджер</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+        </ul>
+        <button class="btn-reset nots__check f15w500">Отметить как прочитанное</button>
+    </div>
+</section>
+<section class="supp">
+    <div class="supp__container">
+        <!--        default variation 1 on work without icon-->
+        <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+        <div class="supp__man-img onwork-styles">
+            <img src="../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon">
+        </div>
+        <p class="supp__man-name">Купатова Елизавета</p>
+        <div class="supp__man-status"><span class="supp__man-item">Сейчас работает</span></div>
+        <ul class="supp__main-info">
+            <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>
+            <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>
+            </li>
+            <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб
+                103)</a></li>
+        </ul>
+        <div class="supp__user-num">
+            <div class="sup__user-item"><span class="f20w600">32948714</span></div>
+            <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>
+            </div>
+        </div>
+        <!--        default variation 2 not work without icon-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img twix-styles">-->
+        <!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 3 notwork with icon-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img twix-styles">-->
+        <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 4 without icon on work-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img onwork-styles__second">-->
+        <!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 5 with icon on work-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img onwork-styles__second">-->
+        <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+    </div>
+</section>
+<section class="acc">
+    <div class="acc__container">
+        <div class="acc__header">
+            <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+            <p class="acc__user-level f14w400 c-bali">Администратор</p>
+        </div>
+        <ul class="acc__active">
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Мой профиль</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Лицевой счет</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Личный менеджер</a></li>
+        </ul>
+        <div class="acc__user-exit bg-fix"><a href="#" class="acc__exit-btn f15w400">Выйти из системы</a></div>
+    </div>
+</section>
 <!--основной контент страницы-->
 <section class="vacancies container">
     <div class="vacancies__container">
@@ -103,7 +311,7 @@
                 </button>
                 <button class="btn-reset vacancies__value" data-path="two" aria-label="Вакансии в архиве">Архив</button>
             </div>
-            <a href="../partials/add_vacancies.html" class="btn-reset btn add-values">Добавить вакансию</a>
+            <a href="add-vacancies.html" class="btn-reset btn add-values">Добавить вакансию</a>
         </div>
         <div class="vacancies__content vacancies__content--active" data-target="one">
             <div class="vacancies__filter-list">
@@ -146,7 +354,8 @@
                                             <button class="item__burger-btn btn-reset">Дублировать</button>
                                         </li>
                                         <li class="item__burger-item">
-                                            <button class="item__burger-btn btn-reset">Настройка формы</button>
+                                            <a href="#popup" class="popup-link item__burger-btn btn-reset">Настройка
+                                                формы</a>
                                         </li>
                                         <li class="item__burger-item">
                                             <button class="item__burger-btn btn-reset">Страница вакансии</button>
@@ -231,8 +440,9 @@
                                         <button class="item__burger-btn item__btn-two btn-reset">Дублировать</button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__btn-two btn-reset">Настройка формы
-                                        </button>
+                                        <a href="#popup" class="item__burger-btn item__btn-two btn-reset popup-link">Настройка
+                                            формы
+                                        </a>
                                     </li>
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-two btn-reset">Страница вакансии
@@ -305,8 +515,9 @@
                                         <button class="item__burger-btn item__btn-third btn-reset">Дублировать</button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__btn-third btn-reset">Настройка формы
-                                        </button>
+                                        <a href="#popup" class="item__burger-btn item__btn-third btn-reset popup-link">Настройка
+                                            формы
+                                        </a>
                                     </li>
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__btn-third btn-reset">Страница вакансии
@@ -393,8 +604,10 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-one btn-reset">Настройка формы
-                                        </button>
+                                        <a href="#popup"
+                                           class="item__burger-btn item__active__btn-one btn-reset popup-link">Настройка
+                                            формы
+                                        </a>
                                     </li>
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__active__btn-one btn-reset">Страница
@@ -490,8 +703,10 @@
                                         </button>
                                     </li>
                                     <li class="item__burger-item">
-                                        <button class="item__burger-btn item__active__btn-two btn-reset">Настройка формы
-                                        </button>
+                                        <a href="#popup"
+                                           class="item__burger-btn item__active__btn-two btn-reset popup-link">Настройка
+                                            формы
+                                        </a>
                                     </li>
                                     <li class="item__burger-item">
                                         <button class="item__burger-btn item__active__btn-two btn-reset">Страница
@@ -543,24 +758,9 @@
                             <div class="item__right-data">Минимальный с автообновлением</div>
                         </div>
                     </div>
+                    <button class="btn-reset btn-two item__btn-768">Продлить срок вакансии</button>
                 </li>
             </ul>
-            <div class="vacancies__filter" id="popupFilterActive">
-                <div class="vacancies__filter-wrapper">
-                    <span class="vacancies__filter-check" id="hide-elements"></span>
-                    <p class="vacancies__filter-sum"><span class="vacancies__filter-span">10</span> вакансий
-                    </p>
-                    <button class="btn-reset vacancies__btn-768 f14w400" id="vacancies-popup-more">Выбрать действие
-                    </button>
-                    <div class="vacancies__select-box">
-                        <select name="select" id="some" class="vacancies__select-wrapper">
-                            <option value="">Выберите действие</option>
-                            <option value="Удалить">Удалить</option>
-                            <option value="Переместить в архив">Переместить в архив</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
             <div class="vacancies__popup-768" id="vacancies-popup-options">
                 <div class="vacancies__popup-768__wrapper">
                     <p class="vacancies__popup-title f20w500">Выбрано вакансий: <span
@@ -849,23 +1049,11 @@
                     <p class="new__desc">Автоотбор автоматически перемещает кандидатов, которые
                         удовлетворяют правилу, на&nbsp;этап Приглашенные по&nbsp;умолчанию</p>
                     <p class="new__location-title">Локация</p>
-                    <div class="droplist droplist__select droplist__select_citys">
-                        <form class="form__list" action="">
-                            <div class="droplist__selected item droplist__result item"><span
-                                    class="droplist__result_text" data-start="Город">Город</span> <span
-                                    class="droplist__icon droplist__icon_cross"></span>
-                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
-                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
-                                          fill="#9098B4"></path>
-                                </svg>
-                            </div>
-                            <ul class="droplist__items" style="width: 100%;">
-                                <li class="droplist__item">Петербург</li>
-                                <li class="droplist__item">Москва</li>
-                            </ul>
-                        </form>
-                    </div>
+                    <label class="new__city-label">
+                        <input type="text" class="new__city-input" id="city-input" placeholder="Город">
+                        <div class="autocomplete-list" id="autocomplete-list" style="display: none;"></div>
+                        <span class="clear-input" id="clear-input" style="display: none;"></span>
+                    </label>
                     <div class="new__clones">
                         <p class="new__search-clone">Поиск дублей</p>
                         <label for="search-duplicates" class="new__search-label">
@@ -888,7 +1076,10 @@
                                     </button>
                                 </div>
                             </label>
-                            <input type="number" class="new__clone-answ" placeholder="-" id="day-amount">
+                            <label class="new__clones-label" id="clones-label">
+                                <input type="number" class="new__clone-answ" placeholder="-" id="day-amount">
+                                <span class="error">Это поле обязательно для заполнения</span>
+                            </label>
                         </div>
                     </div>
                     <div class="new__options">
@@ -1085,12 +1276,13 @@
                                     <span class="new__option-dot">К&nbsp;текущей
                                                         вакансии</span>
                                 </label>
-                                <label for="specific-vacancy" class="new__current-label">
+                                <label for="specific-vacancy" class="new__current-label" id="specific-vacancy-label">
                                     <input type="radio"
                                            class="new__option-item new__option-item__hidden specific-vacancy"
                                            id="specific-vacancy" name="global">
                                     <span class="new__option-dot">К&nbsp;определенной
                                                         вакансии</span>
+                                    <span class="error" id="specific-vacancy-error">Это поле обязательно для заполнения</span>
                                 </label>
                                 <label for="all-vacancies" class="new__current-label">
                                     <input type="radio" class="new__option-item new__option-item__hidden"
@@ -1178,6 +1370,126 @@
             </div>
         </div>
     </div>
+    <div class="vacancies__filter" id="popupFilterActive">
+        <div class="vacancies__filter-wrapper">
+            <span class="vacancies__filter-check" id="hide-elements"></span>
+            <p class="vacancies__filter-sum"><span class="vacancies__filter-span">10</span> вакансий
+            </p>
+            <button class="btn-reset vacancies__btn-768 f14w400" id="vacancies-popup-more">Выбрать действие
+            </button>
+            <div class="vacancies__select-box">
+                <select name="select" id="some" class="vacancies__select-wrapper">
+                    <option value="">Выберите действие</option>
+                    <option value="Удалить">Удалить</option>
+                    <option value="Переместить в архив">Переместить в архив</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <a class="popup__close close-popup"></a>
+        <div class="popup__body">
+            <div class="new-can__close-back768"></div>
+            <div class="popup__content">
+                <div class="popup__header">
+                    <div class="popup__title">Настройка формы отклика</div>
+                    <div class="popup__descr" style="display: inline-block">Настройте критерии которые необходимо
+                        указать соискателю при отклике с
+                        сайта Jobers
+                    </div>
+                </div>
+                <div class="popup__form">
+                    <div class="form">
+                        <div class="form__block form__block--disabled">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Фамилия" value="Фамилия">
+                            </div>
+                        </div>
+                        <div class="form__block form__block--disabled">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Имя"
+                                       value="Имя">
+                            </div>
+                        </div>
+                        <div class="form__block form__block--disabled">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Телефон" value="Телефон">
+                            </div>
+                        </div>
+                        <!--                        <div class="form__block form__block&#45;&#45;disabled">-->
+                        <!--                            <div class="form__item">-->
+                        <!--                                <input class="form__input" type="text" placeholder="Удаленные" value="Удаленные">-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <div class="form__sortable">
+                            <div class="form__block" draggable="true">
+                                <div class="form__toggle">
+                                    <svg class="form__toggle-icon">
+                                        <use xlink:href="../img/icons.svg#arrowsOut"></use>
+                                    </svg>
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="text" placeholder="Гражданство"
+                                           value="Гражданство">
+                                    <div class="form__btn form__btn--delete">
+                                        <svg class="form__btn-icon">
+                                            <use xlink:href="../img/icons.svg#trash"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__block" draggable="true">
+                                <div class="form__toggle">
+                                    <svg class="form__toggle-icon">
+                                        <use xlink:href="../img/icons.svg#arrowsOut"></use>
+                                    </svg>
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="text" placeholder="Дата рождения"
+                                           value="Дата рождения">
+                                    <div class="form__btn form__btn--delete">
+                                        <svg class="form__btn-icon">
+                                            <use xlink:href="../img/icons.svg#trash"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__block" draggable="true">
+                                <div class="form__toggle">
+                                    <svg class="form__toggle-icon">
+                                        <use xlink:href="../img/icons.svg#arrowsOut"></use>
+                                    </svg>
+                                </div>
+                                <div class="form__item">
+                                    <input class="form__input" type="text" placeholder="Сопроводительное письмо"
+                                           value="Сопроводительное письмо">
+                                    <div class="form__btn form__btn--delete">
+                                        <svg class="form__btn-icon">
+                                            <use xlink:href="../img/icons.svg#trash"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__block form__block--add">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Новое поле">
+                                <div class="form__btn form__btn--push">
+                                    <svg class="form__btn-icon">
+                                        <use xlink:href="../img/icons.svg#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <button class="btn-popup btn--blue">Сохранить</button>
+                    <button class="btn-popup btn--grey close-popup">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!--optimized-->
 <!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>-->
@@ -1190,6 +1502,7 @@
 <script src="../js/libs-js/simplebar.min.js"></script>
 <script src="../js/libs-js/choices.min.js"></script>
 <script src="../js/jquery_3.3.1.min.js"></script>
+<script src="../js/libs-js/app.min.js"></script>
 <script src="../js/libs-js/select.js"></script>
 <script src="../js/script.js"></script>
 </body>

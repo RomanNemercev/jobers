@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobers - Дополнительный сервис</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/add-service.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body class="body-page">
+<!--стандартная обертка - начало -->
+<!--блок бокового меню-->
+<section class="nav">
+    <div class="nav__container">
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Рекрутинг</li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
+            </li>
+            <li class="nav__link list-reset"><a href="candidates-null.html"
+                                                class="nav__link-item link-candidates">Кандидаты</a></li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Организация</li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
+            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a>
+            </li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
+            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+            </li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--блок поискового меню-->
+<section class="search-bar">
+    <div class="search-bar__container">
+        <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
+                                                              class="nav__logo-icon"></a>
+        <form action="#" class="search-bar__form">
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
+            <div class="search-bar__dropdown"></div>
+        </form>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="note-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
+                    <img src="../img/notification.svg" alt="Уведомления"
+                         class="search-bar__note">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="supp-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
+                    <img src="../img/support.svg" alt="Поддержка"
+                         class="search-bar__support">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="acc-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
+                    <img src="../img/profile.svg" alt="Личный кабинет"
+                         class="search-bar__acc">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__burger toogle">
+            <div class="toogle_bar">
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service container">
+    <button class="btn-reset btn-black f15w600 service__btn-back">Назад</button>
+    <h2 class="f35w700 service__title">Дополнительные услуги</h2>
+    <div class="service__main-container">
+        <div class="service__supplies-wrapper">
+            <div class="service__rewrite">
+                <div class="service__rewrite-header c-bali f15w400">Работа с текстом</div>
+                <div class="service__rewrite-content">
+                    <div class="service__rewrite-descr">
+                        <p class="service__rewrite-descr__title f20w500">Рерайтинг вакансии</p>
+                        <p class="c-bali f14w400">Напишем текст вакансии, который будет привлекать качественных
+                            кандидатов и&nbsp;отсеивать
+                            неподходящих</p>
+                    </div>
+                    <div class="service__rewrite-bar">
+                        <div class="service__rewrite-discount f14w400">-50%</div>
+                        <div class="service__rewrite-sum f16w500">+ 7 000 руб.</div>
+                        <button class="service__rewrite-add bg-fix btn-reset"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="service__more">
+                <div class="service__more-header c-bali f15w400">Дополнительные сайты для публикации</div>
+                <div class="service__offers-container">
+                    <div class="service__avito flex-between">
+                        <div class="service__avito-logo bg-fix"></div>
+                        <div class="service__avito-bar flex-between">
+                            <div class="service__avito-boost f15w400 c-bali">x5</div>
+                            <div class="service__avito-sum">+ 2 990 руб.</div>
+                            <button class="service__avito-add bg-fix btn-reset"></button>
+                        </div>
+                    </div>
+                    <div class="service__vc flex-between">
+                        <div class="service__vc-logo bg-fix"></div>
+                        <div class="service__vc-bar flex-between">
+                            <div class="service__vc-boost f15w400 c-bali">Стандартная публикация</div>
+                            <div class="service__vc-sum">+ 990 руб.</div>
+                            <button class="service__vc-add bg-fix btn-reset"></button>
+                        </div>
+                    </div>
+                    <div class="service__habr flex-between">
+                        <div class="service__habr-logo bg-fix"></div>
+                        <div class="service__habr-bar flex-between">
+                            <div class="service__habr-boost f15w400 c-bali">Бизнес +</div>
+                            <div class="service__habr-sum">+ 1 990 руб.</div>
+                            <button class="service__habr-add bg-fix btn-reset"></button>
+                        </div>
+                    </div>
+                    <div class="service__helper flex-between">
+                        <div class="service__helper-logo bg-fix"></div>
+                        <div class="service__helper-bar flex-between">
+                            <div class="service__helper-boost f15w400 c-bali">Стандартная публикация</div>
+                            <div class="service__helper-sum">+ 990 руб.</div>
+                            <button class="service__helper-add bg-fix btn-reset"></button>
+                        </div>
+                    </div>
+                    <div class="service__resto flex-between">
+                        <div class="service__resto-logo bg-fix"></div>
+                        <div class="service__resto-bar flex-between">
+                            <div class="service__resto-boost f15w400 c-bali">Стандартная публикация</div>
+                            <div class="service__resto-sum">+ 990 руб.</div>
+                            <button class="service__resto-add bg-fix btn-reset"></button>
+                        </div>
+                    </div>
+                    <button class="btn-reset btn-cancel service__btn-more">Показать еще</button>
+                </div>
+            </div>
+            <div class="service__promo">
+                <div class="service__promo-header c-bali f15w400">Услуги продвижения на сайтах</div>
+                <div class="service__promo-container">
+                    <div class="service__superjob flex-between">
+                        <div class="service__superjob-logo bg-fix"></div>
+                        <div class="service__superjob-bar flex-between">
+                            <div class="service__superjob-sort f15w400 c-bali">Турбо-вакансия на Superjob.ru</div>
+                            <div class="service__superjob-spell">30 дней</div>
+                            <div class="service__superjob-sum">+ 7 000 руб.</div>
+                            <button class="service__superjob-add btn-reset bg-fix"></button>
+                        </div>
+                    </div>
+                    <div class="service__hh flex-between">
+                        <div class="service__hh-logo bg-fix"></div>
+                        <div class="service__hh-bar flex-between">
+                            <div class="service__hh-sort f15w400 c-bali">Вакансия Стандарт+ на HH.ru </div>
+                            <div class="service__hh-spell">14 дней</div>
+                            <div class="service__hh-sum">+ 4 449 руб.</div>
+                            <button class="service__hh-add btn-reset bg-fix"></button>
+                        </div>
+                    </div>
+                    <div class="service__youla flex-between">
+                        <div class="service__youla-logo bg-fix"></div>
+                        <div class="service__youla-bar flex-between">
+                            <div class="service__youla-sort f15w400 c-bali">Турбо вакансия на Юле</div>
+                            <div class="service__youla-spell">30 дней</div>
+                            <div class="service__youla-sum">+ 788 руб.</div>
+                            <button class="service__youla-add btn-reset bg-fix"></button>
+                        </div>
+                    </div>
+                    <div class="service__youla flex-between">
+                        <div class="service__youla-logo bg-fix"></div>
+                        <div class="service__youla-bar flex-between">
+                            <div class="service__youla-sort f15w400 c-bali">Премиум вакансия на Юле</div>
+                            <div class="service__youla-spell">14 дней</div>
+                            <div class="service__youla-sum">+ 1 432 руб.</div>
+                            <button class="service__youla-add btn-reset bg-fix"></button>
+                        </div>
+                    </div>
+                    <button class="btn-reset btn-cancel service__promo-more">Показать еще</button>
+                </div>
+            </div>
+            <div class="service__public"></div>
+        </div>
+        <div class="service__basket-wrapper">
+            <div class="service__basket-position">
+                <div class="service__basket-title">Корзина</div>
+                <div class="service__items-wrapper">
+                    <div class="service__basket-item">
+                        <div class="service__name-wrapper flex">
+                            <p class="service__item-name f14w400">Тарифный план “Минимальный”</p>
+                            <button class="service__item-delete btn-reset bg-fix"></button>
+                        </div>
+                        <div class="service__item-cost flex"><p class="c-bali f14w400">Цена:</p><span
+                                class="service__cost-value f14w400">3973 руб.</span></div>
+                        <div class="service__item-count flex"><p class="c-bali f14w400">Количество:</p><span
+                                class="service__count-value f14w400">1</span></div>
+                    </div>
+                    <div class="service__basket-item">
+                        <div class="service__name-wrapper flex">
+                            <p class="service__item-name f14w400">Рерайтинг вакансии</p>
+                            <button class="service__item-delete btn-reset bg-fix"></button>
+                        </div>
+                        <div class="service__item-cost flex"><p class="c-bali f14w400">Цена:</p><span
+                                class="service__cost-value f14w400">2 990 руб.</span></div>
+                        <div class="service__item-count flex"><p class="c-bali f14w400">Количество:</p><span
+                                class="service__count-value f14w400">1</span></div>
+                    </div>
+                </div>
+                <div class="service__sum-box">
+                    <div class="service__sum-title flex">
+                        <p class="service__sum-label f16w500">Итого к оплате:</p>
+                        <p class="service__sum-value f16w500">3973 руб.</p>
+                    </div>
+                    <input type="text" class="e-input service__promo-space" placeholder="Промокод">
+                    <button class="btn-reset btn service__accept-btn">Купить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

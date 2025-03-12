@@ -21,9 +21,11 @@ function addPopupOpenHandler(buttonSelector, popupId) {
 }
 
 // Функция для добавления обработчика события закрытия всплывающего окна
-function addPopupCloseHandler(closeButtonId, popupId) {
-    document.getElementById(closeButtonId).addEventListener('click', function () {
-        closePopup(popupId);
+function addPopupCloseHandler(closeButtonSelector, popupId) {
+    document.querySelectorAll(closeButtonSelector).forEach(function (button) {
+        button.addEventListener('click', function () {
+            closePopup(popupId);
+        });
     });
 }
 
@@ -45,8 +47,13 @@ function addPopupCloseOnEscKeyHandler(popupId) {
     });
 }
 
-// Открытие первого всплывающего окна
-// addPopupOpenHandler('#open-popup1', 'popup1');
-// addPopupCloseHandler('popup1-close', 'popup1');
+// Пример использования для нескольких всплывающих окон
+// addPopupOpenHandler('.open-popup1', 'popup1');
+// addPopupCloseHandler('.popup1-close', 'popup1');
 // addPopupCloseOnBackgroundClickHandler('popup1');
 // addPopupCloseOnEscKeyHandler('popup1');
+//
+// addPopupOpenHandler('.open-popup2', 'popup2');
+// addPopupCloseHandler('.popup2-close', 'popup2');
+// addPopupCloseOnBackgroundClickHandler('popup2');
+// addPopupCloseOnEscKeyHandler('popup2');

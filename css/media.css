@@ -131,7 +131,7 @@
 
     /*    main-content*/
     .container {
-        padding: 85px 23px 50px 262px;
+        padding: 85px 23px 23px 262px;
     }
 
     .begin__container {
@@ -279,7 +279,7 @@
     .nav__container {
         max-width: 100%;
         width: 100%;
-        transform: translateY(62.22px);
+        transform: translateY(60.22px);
         background-color: var(--color_white);
         visibility: hidden;
         opacity: 0;
@@ -350,5 +350,192 @@
 /*    main content*/
     .container {
         padding: 77px 13px 0 13px;
+    }
+
+    .profile {
+        padding: 77px 13px 50px 13px;
+    }
+
+    #note-btn::before {
+        top: 15px;
+        left: -12px;
+    }
+
+/*    nots drop-bar*/
+    .nots__container {
+        max-width: 100%;
+        width: 100%;
+        right: 0;
+        transform: translateY(-20px);
+        background-color: var(--color_white);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s ease, visibility .3s ease;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        padding: 0 13px;
+        height: 100%;
+        overflow: auto;
+        padding: 0;
+    }
+
+    .nots__cans-list {
+        padding: 25px 0;
+        gap: 12px;
+        padding-bottom: 100px;
+        flex-grow: 1; /* Сделать список гибким, чтобы он занимал оставшееся пространство */
+    }
+
+    .nots__cans-item {
+        padding-bottom: 10px;
+    }
+
+    .nots__container--active {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .3s ease, visibility .3s ease;
+    }
+
+    .nots__container::before {
+        display: none;
+    }
+
+    .nots__cans-item {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 13px;
+    }
+
+    .nots__time-now,
+    .nots__time-recent,
+    .nots__time-hours,
+    .nots__time-days {
+        right: 14px;
+    }
+
+    .not__user-info {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .nots__user-desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .nots__user-info {
+        max-width: calc(100% - 80px);
+    }
+
+    .nots__check {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--color_white);
+        background-color: var(--color_dodger);
+        padding: 11px;
+        position: sticky; /* Использование sticky позиционирования */
+        bottom: env(safe-area-inset-bottom, 20px);
+        height: 40px;
+        z-index: 100; /* Убедиться, что кнопка выше остальных элементов */
+        transform: translate(0px, -60px);
+        margin-left: -13px;
+        width: initial;
+    }
+
+    .nots__title {
+        display: none;
+    }
+
+/*    man*/
+    .supp__container {
+        top: 60px;
+        max-width: 100%;
+        right: 0;
+        height: 100vh;
+    }
+
+    .supp__title {
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .supp__man-status::before,
+    .supp__man-status__notwork::before,
+    .supp__man-status__onwork::before {
+        width: 313px;
+        left: calc((100% - 313px) / 2);
+    }
+
+    .supp__man-status__notwork::after,
+    .supp__man-status__onwork::after {
+        left: calc((100% / 2) - 100px);
+    }
+
+    .supp__main-time {
+        width: fit-content;
+        margin: 0 auto;
+        padding-right: 65px;
+        margin-bottom: 16px;
+    }
+
+    .supp__man-status {
+        margin-bottom: 35px;
+    }
+
+    .supp__main-mail {
+        width: fit-content;
+        margin: 0 auto;
+        padding-right: 83px;
+        margin-bottom: 15px;
+    }
+
+    .supp__main-phone {
+        width: fit-content;
+        margin: 0 auto;
+        padding-right: 35px;
+    }
+
+    .supp__main-info {
+        padding-bottom: 24px;
+    }
+
+    .supp__user-num {
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .supp__num-text {
+        display: inline-block;
+        width: 80%;
+        line-height: 18px;
+    }
+
+    .acc__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 60px;
+        max-width: 100%;
+        right: 0;
+        height: 100vh;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .acc__header {
+        text-align: center;
+        padding-bottom: 11px;
+        width: 100%;
+    }
+
+    .acc__active {
+        text-align: center;
+        padding-top: 11px;
+        border-bottom: none;
+    }
+
+    .acc__active {
+        margin-bottom: 85%;
     }
 }

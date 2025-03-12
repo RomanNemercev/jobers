@@ -18,31 +18,48 @@ let selectedTagsArray = [];
 // Флаг для контроля обновления списка тегов при удалении
 let shouldUpdateTagOptions = true;
 
+tagInput.addEventListener('keyup', (event) => {
+    shouldUpdateTagOptions = true;
+    const inputValue = tagInput.value.toLowerCase();
+    const filteredTags = tagsExample
+        .filter(tag => tag.toLowerCase().includes(inputValue))
+        .sort();
+
+    if (event.key === 'Enter' && inputValue.trim() !== '') {
+        selectTag(inputValue.trim());
+        selectedTags.style.marginBottom = '10px';
+    } else {
+        showTagOptions(filteredTags);
+    }
+});
+
 // Функция для отображения вариантов тегов
 function showTagOptions(tags) {
     tagOptions.innerHTML = '';
-    if (tags.length > 0) {
+    if (tags.length === 0 && tagInput.value.trim() !== '') {
+        tagOptions.style.cssText = 'padding: 0; margin-top: 0; display: none;';
+    }
+    else if (tags.length > 0) {
         const header = document.createElement('p');
         header.classList.add('tag-options-header');
-        // Изменяем текст заголовка в зависимости от наличия введенных данных
         header.textContent = tagInput.value.trim() ? 'Найдено:' : 'Предложенные навыки по вашей специализации';
         tagOptions.appendChild(header);
         tagOptions.style.cssText = 'padding: 15px; margin-top: 10px;';
+
+        tags.forEach(tag => {
+            if (!selectedTagsArray.includes(tag)) {
+                const tagElement = document.createElement('div');
+                tagElement.classList.add('tag-option');
+                tagElement.textContent = tag;
+                tagElement.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    selectTag(tag);
+                    selectedTags.style.marginBottom = '10px';
+                });
+                tagOptions.appendChild(tagElement);
+            }
+        });
     }
-    tags.forEach(tag => {
-        // Проверяем, что тег не выбран
-        if (!selectedTagsArray.includes(tag)) {
-            const tagElement = document.createElement('div');
-            tagElement.classList.add('tag-option');
-            tagElement.textContent = tag;
-            tagElement.addEventListener('click', (event) => {
-                event.stopPropagation(); // Остановить всплытие события
-                selectTag(tag);
-                selectedTags.style.marginBottom = '10px';
-            });
-            tagOptions.appendChild(tagElement);
-        }
-    });
 }
 
 // Функция для выбора тега

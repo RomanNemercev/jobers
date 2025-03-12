@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobers - Кандидаты</title>
+    <!--    <link rel="stylesheet" href="../css/libs-css/choices.min.css">-->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <!--    not load simplebar-->
+    <!--    <link-->
+    <!--            rel="stylesheet"-->
+    <!--            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">-->
+    <!--    <link rel="stylesheet" href="../css/libs-css/simplebar.css">-->
+    <link rel="stylesheet" href="../css/custom.css">
+    <!--    <link rel="stylesheet" href="../css/libs-css/select.css">-->
+    <!--    <link rel="stylesheet" href="../css/libs-css/multi-select.css">-->
+    <link rel="stylesheet" href="../css/media.css">
+    <style>
+        .cabinet {
+            font-family: 'Inter', sans-serif;
+            color: #2F353D;
+            background-color: #fff;
+            border-radius: 0 0 10px 10px;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .cabinet__container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cabinet__block_company_empty .cabinet__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cabinet__block_company_empty .cabinet {
+            border-radius: 10px;
+            padding-bottom: 50px;
+        }
+
+        .cabinet__block_company_empty .cabinet__image {
+            width: 80px;
+            height: 80px;
+            background: url('../img/companys-empty.png') 0 0 no-repeat;
+            margin: 25px 0;
+        }
+
+        .title__big_center {
+            font-size: 25px;
+            font-weight: 600;
+            color: #2F353D;
+            line-height: 30.26px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .cabinet__subtitle {
+            font-size: 15px;
+            line-height: 18.15px;
+            color: #9098B4;
+            white-space: nowrap;
+            margin-bottom: 15px;
+        }
+
+        .cabinet__block_company_empty .cabinet__subtitle {
+            max-width: 100%;
+            width: 363px;
+            white-space: normal;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 25px;
+        }
+
+        .button__c {
+            padding: 11px 20px;
+            box-sizing: border-box;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18.15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .fill__button {
+            background-color: #5898FF;
+            color: #fff;
+        }
+
+        .body-page * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .new-company {
+            max-width: 532px;
+        }
+
+        .cabinet__popup {
+            max-width: 451px;
+            padding: 25px;
+            box-sizing: border-box;
+            background-color: #fff;
+            top: 50%;
+            left: 50%;
+            overflow: auto;
+            max-height: 90%;
+            border-radius: 5px;
+        }
+
+        .cabinet__popup_company {
+            max-width: 532px;
+        }
+
+        .close__popup_inner {
+            display: none !important;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .cabinet__popup .cabinet__popup__title {
+            color: #2F353D;
+        }
+
+        .cabinet__popup__title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24.2px;
+            margin-bottom: 10px;
+        }
+
+        .cabinet__popup_fields {
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        .field__box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .body-page .field__name_popup {
+            font-size: 15px;
+            line-height: 18.15px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #2F353D;
+        }
+
+        .field__name_popup_flex {
+            display: flex;
+        }
+
+        .field__name_popup_flex .star {
+            margin-left: 5px;
+        }
+
+        .star {
+            color: #5898FF;
+        }
+
+        .cabinet__link {
+            font-size: 15px;
+            line-height: 18.15px;
+            color: #5898FF;
+            font-weight: 400;
+        }
+
+        .cabinet__link_right {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .field {
+            display: block;
+            padding: 11.5px 15px 11.5px 15px;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            border: none;
+            background-color: #F4F6F8;
+            height: 40px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 16.94px;
+            font-weight: 400;
+        }
+
+        .cabinet__popup_company .field {
+            width: 482px;
+            max-width: 100%;
+        }
+
+        .field:last-child {
+            margin-bottom: 0;
+        }
+
+        .field:focus {
+            background-color: #EFF5FF;
+            outline: 1px solid #5898FF;
+        }
+
+        .cabinet__popup_buttons .button__c {
+            margin: 0;
+        }
+
+        .cabinet__popup_buttons .fill__button {
+            margin-right: 10px;
+        }
+
+        .default__button_active {
+            background-color: #EFF5FF;
+            color: #5898FF;
+        }
+
+        .field::placeholder {
+            color: #9098B4;
+        }
+
+        .field:focus::placeholder {
+            color: transparent;
+        }
+
+        @media screen and (max-width: 480px) {
+            .fill__button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .cabinet__block_company_empty .cabinet {
+                padding-bottom: 17px;
+            }
+
+            .cabinet__block_company .cabinet__image {
+                margin-top: 0;
+            }
+
+            .cabinet__block_company_empty .cabinet__subtitle {
+                width: 280px;
+            }
+
+            .cabinet__container {
+                padding: 13px 13px 17px 13px;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body class="body-page">
+<!--блок бокового меню-->
+<section class="nav">
+    <div class="nav__container">
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Рекрутинг</li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies">Вакансии</a>
+            </li>
+            <li class="nav__link list-reset"><a href="candidates-null.html"
+                                                class="nav__link-item link-candidates">Кандидаты</a></li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Организация</li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
+            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies active-page">Компании</a>
+            </li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
+            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+            </li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="search-bar">
+    <div class="search-bar__container">
+        <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
+                                                              class="nav__logo-icon"></a>
+        <form action="#" class="search-bar__form">
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
+            <div class="search-bar__dropdown"></div>
+        </form>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="note-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
+                    <img src="../img/notification.svg" alt="Уведомления"
+                         class="search-bar__note">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="supp-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
+                    <img src="../img/support.svg" alt="Поддержка"
+                         class="search-bar__support">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="acc-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
+                    <img src="../img/profile.svg" alt="Личный кабинет"
+                         class="search-bar__acc">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__burger toogle">
+            <div class="toogle_bar">
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="nots">
+    <div class="nots__container">
+        <h3 class="nots__title f16w600">Уведомления</h3>
+        <ul class="nots__cans-list">
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-now f14w400 c-bali">сейчас</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Бухгалтерия</p></li>
+                    <li><p class="nots__user-name f15w500">Александра степанова</p></li>
+                    <li><p class="nots__user-desc f14w400">Здравствуйте, вы запрашивали закрывающие документы, вчера мы
+                        их отправили</p></li>
+                </ul>
+                <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Личный менеджер</p></li>
+                    <li><p class="nots__user-name f15w500">Яна Олейникова</p></li>
+                    <li><p class="nots__user-desc f14w400">Действительно, сейчас очень большая конкуренция на уборщиков,
+                        я бы не рекомендовало использовать тариф без автоподнятия</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Евгения Онегина</p></li>
+                    <li><p class="nots__user-desc f14w400">Продуктовый менеджер</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+        </ul>
+        <button class="btn-reset nots__check f15w500">Отметить как прочитанное</button>
+    </div>
+</section>
+<section class="supp">
+    <div class="supp__container">
+        <!--        default variation 1 on work without icon-->
+        <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+        <div class="supp__man-img onwork-styles">
+            <img src="../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon">
+        </div>
+        <p class="supp__man-name">Купатова Елизавета</p>
+        <div class="supp__man-status"><span class="supp__man-item">Сейчас работает</span></div>
+        <ul class="supp__main-info">
+            <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>
+            <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>
+            </li>
+            <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб
+                103)</a></li>
+        </ul>
+        <div class="supp__user-num">
+            <div class="sup__user-item"><span class="f20w600">32948714</span></div>
+            <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>
+            </div>
+        </div>
+        <!--        default variation 2 not work without icon-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img twix-styles">-->
+        <!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 3 notwork with icon-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img twix-styles">-->
+        <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 4 without icon on work-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img onwork-styles__second">-->
+        <!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 5 with icon on work-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img onwork-styles__second">-->
+        <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+    </div>
+</section>
+<section class="acc">
+    <div class="acc__container">
+        <div class="acc__header">
+            <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+            <p class="acc__user-level f14w400 c-bali">Администратор</p>
+        </div>
+        <ul class="acc__active">
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Мой профиль</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Лицевой счет</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Личный менеджер</a></li>
+        </ul>
+        <div class="acc__user-exit bg-fix"><a href="#" class="acc__exit-btn f15w400">Выйти из системы</a></div>
+    </div>
+</section>
+<!--main page content-->
+<div class="container">
+
+    <div class="cabinet__tab cabinet__tab_personal_account cabinet__tab_company_empty">
+
+        <div class="cabinet__block cabinet__block_company cabinet__block_company_empty">
+
+            <div class="cabinet cabinet__container">
+                <div class="cabinet__image"></div>
+                <p class="title__big_center">Компании не добавлены</p>
+                <p class="cabinet__subtitle">Что бы оплачивать услуги сервиса, необходимо привязать реквизиты юр. лица</p>
+                <div class="button__c fill__button add-company">Добавить компанию</div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="item__popup-auto" id="create-new-company">
+    <button class="btn-reset delete__btn" id="create-close-new-company"></button>
+    <div class="item__popup-wrapper new-company">
+        <div class="cabinet__popup cabinet__popup_company cabinet__popup_company_add">
+            <div class="close__popup_inner">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3_1716)">
+                        <path d="M15.625 4.375L4.375 15.625" stroke="#5898FF" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M15.625 15.625L4.375 4.375" stroke="#5898FF" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3_1716">
+                            <rect width="20" height="20" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <p class="cabinet__popup__title">Новая компания</p>
+
+            <form class="cabinet__popup_form" action="">
+                <div class="cabinet__popup_fields">
+                    <div class="field__box">
+                        <p class="field__name_popup field__name_popup_flex">ИНН <span class="star"> *</span> <a href=""
+                                                                                                                class="cabinet__link cabinet__link_right">Загрузить
+                            данные по ИНН</a></p>
+                        <input type="text" class="field" placeholder="Введите ИНН">
+                    </div>
+                    <div class="field__box">
+                        <p class="field__name_popup">Юридическое название компании или ИП <span class="star">*</span>
+                        </p>
+                        <input type="text" class="field" placeholder="АО ЗАКРЫТЫЕ ДВЕРИ">
+                    </div>
+                    <div class="field__box">
+                        <p class="field__name_popup">Название компании для публикации на сайтах <span
+                                class="star">*</span></p>
+                        <input type="text" class="field" placeholder="ЗАКРЫТЫЕ ДВЕРИ">
+                    </div>
+                    <div class="field__box">
+                        <p class="field__name_popup">Юридический адрес</p>
+                        <input type="text" class="field"
+                               placeholder="1982828, Санкт-Петербург, Масляный переулок, д7, оф. 35">
+                    </div>
+                    <div class="field__box">
+                        <p class="field__name_popup">ОГРН</p>
+                        <input type="text" class="field" placeholder="128371294857">
+                    </div>
+                </div>
+
+
+                <div class="cabinet__popup_buttons">
+                    <div class="button__c fill__button">Сохранить</div>
+                    <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                         id="create-new-company-cancel">Отмена
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--optimized-->
+<!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>-->
+<!--<script src="../js/libs-js/popper.min.js"></script>-->
+<!--optimized-->
+<!--<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>-->
+<!--<script src="../js/libs-js/tippy-bundle.umd.js"></script>-->
+<!--not load simplebar-->
+<!--<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>-->
+<!--<script src="../js/libs-js/simplebar.min.js"></script>-->
+<!--<script src="../js/libs-js/choices.min.js"></script>-->
+<!--<script src="../js/jquery_3.3.1.min.js"></script>-->
+<!--<script src="../js/libs-js/select.js"></script>-->
+<!--<script src="../js/libs-js/multi-select.js"></script>-->
+<!--<script src="../js/libs-js/add-tag.js"></script>-->
+<script src="../js/libs-js/custom-popup.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/company.js"></script>
+</body>
+</html>

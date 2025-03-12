@@ -1,4 +1,102 @@
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
+    .can__section-param {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+    }
+
+    #add-name + .error {
+        left: calc(100% - 180px);
+    }
+}
+
+@media (max-width: 1100px) {
+    .user__content-wrapper {
+        padding-bottom: 70px;
+    }
+
+    .user__status-bar__1149px {
+        position: absolute;
+        bottom: 15px;
+        left: 24px;
+        flex-direction: row-reverse;
+        z-index: 1;
+    }
+
+    .user__btn-mind {
+        margin-right: 0;
+    }
+
+    .user__bottom {
+        position: relative;
+    }
+
+    .user__bottom::after {
+        display: none;
+    }
+
+    .user__level .droplist__items {
+        bottom: 50px;
+        right: auto;
+    }
+
+    .new__can-personal {
+        align-items: end;
+    }
+}
+
+/*следущие медиа запросы для кандидатов*/
+@media (max-width: 917px) {
+    .user__contacts__data {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .user__main-img {
+        margin-bottom: 94.61px;
+    }
+
+    .user__metadata {
+        flex-wrap: wrap;
+    }
+
+    .user__add-tags__wrapper {
+        width: 100%;
+        flex-basis: 100%;
+        padding-left: 5px;
+    }
+
+    .user__quick-content > .user__name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 912px) {
+    .can__section-param {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 15px;
+    }
+
+    .user__metadata {
+        flex-wrap: wrap;
+        gap: 10px 0;
+    }
+
+    .dropdown-menu ul::before {
+        left: 0;
+    }
+
+    .can__list:not(:last-of-type) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 772px) {
     .search-bar {
         z-index: 3;
     }
@@ -7,12 +105,16 @@
         padding-bottom: 50px;
     }
 
+    .drop__in__drop .droplist__selected_drop {
+        background-color: var(--color_athens-gray);
+    }
+
     /*    head filters*/
     .search-bar__mobile {
         display: inline-block;
         position: relative;
         width: 100%;
-        margin-bottom: 7px;
+        margin-bottom: 6px;
     }
 
     .search-bar__mobile::before {
@@ -38,7 +140,7 @@
         padding: 13px;
         background-color: var(--color_white);
         border-radius: 5px;
-        min-height: 254px; /*temp*/
+        gap: 0;
     }
 
     .can__span {
@@ -95,6 +197,15 @@
         background-color: transparent;
         width: 40px;
         padding: 9px 5px;
+        background-image: url("../../img/dropdown-dots-noneactive-mobile.svg");
+    }
+
+    .dropdown-toggle:hover {
+        background-image: url("../../img/dropdown-dots-noneactive-mobile.svg");
+    }
+
+    .dropdown[data-state*=open] .dropdown-toggle {
+        background-image: url("../../img/dropdown-dots-noneactive-mobile.svg");
     }
 
     .user__metadata {
@@ -140,13 +251,17 @@
     }
 
     .user__check-icon::before {
-        top: -22px;
+        top: -20px;
         left: -1px;
     }
 
     .user__check-icon::after {
-        top: -22px;
+        top: -20px;
         left: -1px;
+    }
+
+    .user__vacancy-wrapper {
+        margin-bottom: 0;
     }
 
     .user__status-bar {
@@ -305,24 +420,26 @@
         top: 25px;
         width: 25px;
         height: 25px;
-        background-image: url(../../img/x-25.svg);
+        background-image: url('../../img/x-25.svg');
         background-repeat: no-repeat;
     }
 
     .dropdown-menu {
         display: block !important;
         position: fixed;
-        z-index: 2;
-        bottom: -211px;
+        z-index: 3;
+        bottom: -214px;
         width: 100%;
         background-color: var(--color_space);
         border-radius: 25px 25px 0 0;
-        padding-top: 25px;
         transition: bottom .3s ease, opacity .3s ease;
+        padding: 25px 13px 13px 13px;
     }
 
     .dropdown-menu ul {
-        padding: 26px 13px 13px 13px;
+        width: 100%;
+        transform: translate(0);
+        background-color: var(--color_space);
     }
 
     .dropdown-menu li {
@@ -345,12 +462,17 @@
         padding: 10.89px 14.5px;
     }
 
-    .dropdown-menu ul li:not(:last-of-type) button {
+    .dropdown-menu ul li:not(:last-of-type) {
         border-bottom: 1px solid var(--color_space);
     }
 
+    .dropdown-menu ul li:not(:last-of-type) button {
+        border-bottom: none;
+    }
+
     .dropdown-menu ul li:first-of-type button {
-        padding: 12.5px 14.5px;
+        padding: 11px 0 11px 15px;
+        line-height: 18px;
     }
 
     #dropdown-greencard.dropdown--active {
@@ -408,7 +530,7 @@
         position: fixed;
         width: 100%;
         height: 100vh;
-        z-index: 2;
+        z-index: 3;
         display: grid;
         align-items: center;
         justify-content: center;
@@ -426,8 +548,20 @@
 
     /*    search-bar modified*/
     .search-bar__dropdown {
-        z-index: 1;
+        z-index: 3;
         padding: 0;
+    }
+
+    .drop__in__drop .drop__container {
+        z-index: 3;
+        max-width: none;
+        width: 100%;
+        right: 0;
+    }
+
+    .droplist_active .droplist__items {
+        width: 100%;
+        min-width: fit-content;
     }
 
     /*popup cans*/
@@ -449,18 +583,20 @@
 
     .cans__filter--active {
         bottom: 0;
+        width: 100%;
     }
 
     .cans__filter-check {
         margin-right: 2px;
+        flex-shrink: 0;
     }
 
     .vacancies__popup-768 {
         display: block;
         position: fixed;
-        bottom: -200px;
+        bottom: -310px;
         width: 100%;
-        z-index: 3;
+        z-index: 4;
         padding: 25px 13px;
         padding-bottom: 13px;
         border-radius: 25px 25px 0 0;
@@ -658,13 +794,8 @@
         left: 0;
     }
 
-    .button-icon:first-child {
-        margin-left: -1px;
-    }
-
     .new-can__container {
         width: 100vw;
-        height: 100vh;
         max-height: none;
         padding: 54px 13px 13px 13px;
     }
@@ -719,6 +850,11 @@
         display: block;
     }
 
+    .add__post-form::placeholder,
+    .new-can__resume-content::placeholder{
+        color: var(--color_bali);
+    }
+
     .add__img {
         margin-bottom: 9px;
     }
@@ -728,10 +864,16 @@
     }
 
     .new__btns {
-        width: 100%;
         background-color: #fff;
-        padding-bottom: 0;
         display: flex;
+        justify-content: center;
+        margin-top: auto;
+        position: sticky;
+        bottom: env(safe-area-inset-bottom, 20px);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        width: initial;
+        padding: 13px;
+        padding-left: 13px;
     }
 
     .new-can__main-content__768 .droplist {
@@ -850,6 +992,7 @@
         padding: 54px 13px 13px 13px;
         overflow-y: scroll;
         overflow-x: hidden;
+        height: 100vh;
     }
 
     .new__title {
@@ -908,6 +1051,10 @@
 
     .new__add-name {
         margin-bottom: 0;
+    }
+
+    .new__add-name.error--visible {
+        margin-bottom: 35px;
     }
 
     .preview {
@@ -1012,9 +1159,154 @@
     /*    end sets*/
     .can__list .droplist__selected {
         background-color: var(--color_athens-gray);
+        padding-left: 13px;
     }
 
     .can__btn-auto {
         background-color: var(--color_athens-gray);
+        padding: 11px 14px;
+    }
+
+    .can__list:first-of-type {
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin-right: 0;
+        margin-bottom: 7px;
+        width: 100%;
+    }
+
+    .can__list:first-of-type .droplist {
+        width: 100%;
+    }
+
+    .can__section-param {
+        position: relative;
+        display: flex;
+        justify-content: normal;
+        gap: 0;
+        text-align: initial;
+    }
+
+    .can__list:nth-child(3) {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .can__list:last-of-type {
+        position: absolute;
+        top: 47px;
+        right: -1px;
+    }
+
+    .can__list:not(:last-of-type) {
+        margin-right: 0;
+    }
+
+    .can__list {
+        z-index: auto;
+    }
+
+    .drop__container {
+        z-index: 1;
+    }
+
+    .search-bar__form-space {
+        font-size: 14px;
+        padding: 12px 0;
+        padding-left: 38px;
+    }
+
+    .search-bar__form-space::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .can__list:nth-child(2) {
+        width: calc(100% - 112px);
+        margin-bottom: 7px;
+    }
+
+    .can__list:nth-child(2) .droplist {
+        width: 100%;
+    }
+
+    .droplist__icon {
+        right: 15px;
+    }
+
+    .can__list .item::placeholder {
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .drop__in__drop .droplist__selected_drop {
+        padding: 13px 26px 11px 13px;
+        width: 100%;
+    }
+
+    .scroll-x__btn {
+        margin-left: 5px;
+    }
+
+    .user__level-mobile .item {
+        padding-left: 15px;
+    }
+
+    .search-bar__dropdown ul li {
+        padding-top: 26px;
+        padding-left: 70px;
+        padding-bottom: 33px;
+        background-position: 15px center;
+    }
+
+    .mr0.droplist {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .mr0 .form__list_outer {
+        width: 100%;
+    }
+
+/*    pagination sets*/
+    .can__pagination-wrapper {
+        gap: 5px;
+        padding: 10px 15px;
+        flex-wrap: wrap; /* Чтобы кнопки переносились на следующую строку, если не помещаются */
+    }
+
+    .can__pagination-btn {
+        padding: 8px 10px;
+        font-size: 12px; /* Уменьшаем размер шрифта */
+    }
+
+    .arrow-btn {
+        padding: 8px 8px; /* Для стрелок делаем кнопки немного меньше */
+    }
+
+    /* Дополнительно можно скрыть некоторые кнопки на маленьких экранах для упрощения интерфейса */
+    .number-btn {
+        display: none; /* Скрываем кнопки с номерами */
+    }
+
+    /* Показываем только первую, текущую и последнюю страницы */
+    .number-btn:first-child,
+    .number-btn.active,
+    .number-btn:last-child {
+        display: flex; /* Показываем первые, последние и активные кнопки */
+    }
+
+    .can__pagination-btn svg {
+        width: 7px;
+        height: 12px;
+    }
+
+    .can__pagination-wrapper span {
+        display: none;
+    }
+
+    .can__pagination-btn.active {
+        background-color: var(--color_white);
+        color: var(--color_space);
     }
 }

@@ -1,3 +1,12 @@
+/*icon svg*/
+.dropdown-list:hover .icon {
+    stroke: var(--color_dodger);
+}
+
+.suggestion:hover {
+    color: var(--color_dodger);
+}
+
 /*choices*/
 .choices__inner {
     background-color: var(--color_athens-gray);
@@ -45,70 +54,64 @@
     color: var(--color_space);
 }
 
-/*custom btn*/
-.preview {
-    width: 90vw;
-    height: 400px;
-    max-width: 700px;
-    position: relative;
-
-    /* as default it'll not be displayed */
-    display: none;
-}
-
-.preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* we don't want to see this file input type since we want to create a custom one */
-.add__input[type="file"] {
-    display: none;
-}
-
 .add__logo-content {
     display: flex;
     min-height: 140px;
     position: relative;
 }
 
-.add__custom-btn__label {
-    width: 140px;
-    height: 140px;
-    top: 0;
-    left: 0;
-    background-image: url("../img/add__logo-upload.png");
-    color: transparent;
-    cursor: pointer;
-    position: absolute;
-}
-
-/*.add__custom-btn__label:hover {*/
-/*    background-color: #FF2d2d;*/
-/*}*/
-
-/*.add__custom-btn__label:active {*/
-/*    transform: translateX(-50%) scale(.95);*/
-/*}*/
-
 .add__upload-descr {
     width: calc(100% - 165px);
     margin-left: auto;
-    padding-top: 46px;
     font-size: 14px;
     color: var(--color_bali);
 }
 
-.add__background {
+/*custom image load*/
+.change__input-wrapper {
+    position: relative;
+    height: 165px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.change__background {
     position: absolute;
     max-width: 140px;
     max-height: 140px;
     z-index: 3;
+    border-radius: 5px;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.change__input[type="file"] {
+    display: none;
+}
+
+.change__custom-btn__label {
+    width: 140px;
+    height: 140px;
+    top: 0;
+    background-image: url('../img/add__logo-upload.png');
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f9fafc;
+}
+
+.change__input-btn {
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_dodger);
 }
 
 /*checks rates*/
@@ -339,28 +342,42 @@
 }
 
 .import {
-    max-width: 435px;
-    min-height: 236px;
+    width: calc(100% - 418.13px);
+    margin-bottom: 25px;
+    position: relative;
 }
 
-.add__import-close {
+.import__close {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/delete-x.svg");
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/cross_35x35.svg");
     background-repeat: no-repeat;
-    top: 25px;
-    right: 25px;
+    top: 18px;
+    right: 18px;
     cursor: pointer;
+    z-index: 1;
 }
+
+/*.add__import-close {*/
+/*    position: absolute;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background-image: url("../img/delete-x.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    top: 25px;*/
+/*    right: 25px;*/
+/*    cursor: pointer;*/
+/*}*/
 
 .import__title {
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
 }
 
 .import__title-item {
     margin-right: 10px;
+    font-weight: 500;
 }
 
 .import__link:not(:last-of-type) {
@@ -368,12 +385,29 @@
 }
 
 .import__descr {
-    margin-bottom: 37px;
+    margin-bottom: 22px;
+    width: 95%;
 }
 
 .import__label {
-    margin-bottom: 0;
+    display: block;
+    position: relative;
     width: calc(100% - 173px);
+}
+
+.import__input {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    background-color: var(--color_athens-gray);
+}
+
+.import__input::placeholder {
+    color: var(--color_bali);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .import__label.error--visible {
@@ -393,8 +427,137 @@
     visibility: hidden;
 }
 
-.close__import {
-    transform-origin: top;
-    transform: scaleY(0);
-    transition: transform .5s ease-in-out;
+/*.close__import {*/
+/*    transform-origin: top;*/
+/*    transform: scaleY(0);*/
+/*    transition: transform .5s ease-in-out;*/
+/*}*/
+
+.ai__btn-get {
+    color: var(--color_white);
+    margin-right: 15px;
+}
+
+.ai__amount {
+    color: var(--color_bali);
+}
+
+.ai__btns-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.ai__btn-no {
+    margin-left: auto;
+    min-width: 98px;
+}
+
+.ai {
+    max-width: 652px;
+}
+
+.ai__container {
+    padding: 25px;
+}
+
+.ai__title {
+    margin-bottom: 9px;
+}
+
+.ai__descr {
+    margin-bottom: 37px;
+}
+
+.ai__container .main__span-custom {
+    margin-bottom: 11px;
+}
+
+.ai__container .main__post-form {
+    margin-bottom: 19px;
+}
+
+.ai__container .add__contacts-city__data {
+    margin-bottom: 40px;
+}
+
+/*screen loader css*/
+.dots-wrapper {
+    height: 39px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    transition: visibility 0s, opacity 0.5s linear; /* Transition for smooth appearance */
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.ai-loader {
+    top: 50vh;
+    min-height: auto;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color_white);
+}
+
+.dots-top, .dots-bottom {
+    display: flex;
+}
+
+.dots-top {
+    width: 65px;
+    justify-content: space-between;
+    margin-right: 25px;
+    animation: dot-top .5s alternate ease-out infinite;
+}
+
+.dots-bottom {
+    width: 65px;
+    margin-left: 29px;
+    justify-content: space-between;
+    animation: dot-bottom .5s alternate ease-out infinite;
+}
+
+@keyframes dot-top {
+    from {
+        transform: translateY(29px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes dot-bottom  {
+    from {
+        transform: translateY(-29px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.dots-wrapper--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*.ai {*/
+/*    transform: scale(1);*/
+/*    opacity: 0;*/
+/*    transition: opacity .3s ease-out;*/
+/*}*/
+
+/*.item__popup-auto.vacancies__item-popup--open .ai {*/
+/*    opacity: 1;*/
+/*}*/
+
+.hidden {
+    display: none;
 }

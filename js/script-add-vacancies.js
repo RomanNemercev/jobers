@@ -50,27 +50,27 @@ function init() {
 //custom btn
 // I already selected these elements and signed them as variables so we can save up some time.
 // You can pause and do the same...
-const img_container = document.querySelector('.add__preview');
-const img = document.querySelector('.add__background');
-const input = document.querySelector('.add__input');
-// const file_name = document.querySelector('.file_name');
-
-input.addEventListener('change', function () {
-    const file = this.files[0];
-
-    if (file) {
-        img_container.style.display = 'block';
-
-        const reader = new FileReader()
-        reader.onload = function () {
-            const result = reader.result;
-            img.src = result;
-
-            file_name.innerText = file.name;
-        }
-        reader.readAsDataURL(file);
-    }
-})
+// const img_container = document.querySelector('.add__preview');
+// const img = document.querySelector('.add__background');
+// const input = document.querySelector('.add__input');
+// // const file_name = document.querySelector('.file_name');
+//
+// input.addEventListener('change', function () {
+//     const file = this.files[0];
+//
+//     if (file) {
+//         img_container.style.display = 'block';
+//
+//         const reader = new FileReader()
+//         reader.onload = function () {
+//             const result = reader.result;
+//             img.src = result;
+//
+//             file_name.innerText = file.name;
+//         }
+//         reader.readAsDataURL(file);
+//     }
+// })
 
 // обновленный блок тарифов
 // Общая функция для обработки кликов
@@ -171,7 +171,7 @@ let suggestions = [
     "Невский проспект, Санкт-Петербург",
     "Дворцовая площадь, Санкт-Петербург",
     "Колпинский район, Санкт-Петербург",
-    // тут может быть любой список городов
+    // любой список городов
 ];
 
 let inputSearch = document.getElementById("search");
@@ -180,12 +180,12 @@ let suggestionsPane = document.getElementById("suggestions-pane");
 inputSearch.addEventListener("keyup", function (event) {
     let value = event.target.value;
     suggestionsPane.innerHTML = '';
-    if (value) {
+    let filteredSuggestions = suggestions.filter(function (suggestion) {
+        // проверка на строки, содержащие введенные данные
+        return suggestion.toLowerCase().includes(value.toLowerCase());
+    });
+    if (value && filteredSuggestions.length > 0) {
         suggestionsPane.style.display = 'block';
-        let filteredSuggestions = suggestions.filter(function (suggestion) {
-            // проверка на строки, содержащие введенные данные
-            return suggestion.toLowerCase().includes(value.toLowerCase());
-        });
         filteredSuggestions.forEach(function (filteredSuggestion) {
             let div = document.createElement("div");
             div.textContent = filteredSuggestion;
@@ -200,6 +200,14 @@ inputSearch.addEventListener("keyup", function (event) {
         suggestionsPane.style.display = 'none';
     }
 });
+
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.search-box')) {
+        suggestionsPane.innerHTML = '';
+        suggestionsPane.style.display = 'none';
+    }
+});
+
 
 //reused search script launch
 let metroStations = [
@@ -380,7 +388,111 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //script for popup
-addPopupOpenHandler('#import-btn', 'popup-import');
-addPopupCloseHandler('import-popup-close', 'popup-import');
-addPopupCloseOnBackgroundClickHandler('popup-import');
-addPopupCloseOnEscKeyHandler('popup-import');
+// addPopupOpenHandler('#import-btn', 'popup-import');
+// addPopupCloseHandler('import-popup-close', 'popup-import');
+// addPopupCloseOnBackgroundClickHandler('popup-import');
+// addPopupCloseOnEscKeyHandler('popup-import');
+
+// script for popup ai
+addPopupOpenHandler('#ai-gen-get', 'popup-ai');
+addPopupCloseHandler('ai-popup-close', 'popup-ai');
+addPopupCloseOnBackgroundClickHandler('popup-ai');
+addPopupCloseOnEscKeyHandler('popup-ai');
+document.querySelector('.ai__btn-no').addEventListener('click', function () {
+    document.getElementById('popup-ai').classList.remove('vacancies__item-popup--open');
+    document.body.classList.remove('stop-scroll');
+})
+
+// script for ai
+document.querySelector('.ai__btn-get').addEventListener('click', function () {
+    let counter = document.querySelector('.ai__amount-item');
+    if (counter.innerText > 0) {
+        counter.innerText = counter.innerText - 1;
+    }
+});
+
+document.querySelector('.ai__btn-get').addEventListener('click', function () {
+    closePopup('popup-ai');
+    openPopup('popup-ai-loader');
+})
+
+addPopupCloseHandler('#ai-loader-popup-close', 'popup-ai-loader');
+addPopupCloseOnBackgroundClickHandler('popup-ai-loader');
+addPopupCloseOnEscKeyHandler('popup-ai-loader');
+
+document.getElementById('popup-ai').addEventListener('click', function (event) {
+    if (!event.target.closest('.ai')) {
+        document.querySelector('.ai').style.transform = 'inherit';
+        document.querySelector('.dots-wrapper').classList.remove('dots-wrapper--active');
+    }
+})
+
+// add hide and show some numbers
+document.getElementById('hide-number').addEventListener('change', function () {
+    const isChecked = this.checked;
+    const addLabel = document.querySelectorAll('.add__label.new__add-name');
+    const addMoreNumberBtn = document.getElementById('add-more-number-btn');
+
+    if (isChecked) {
+        addLabel.forEach(function (el) {
+            el.classList.add('hidden');
+        })
+        addMoreNumberBtn.classList.add('hidden');
+    } else {
+        addLabel.forEach(function (el) {
+            el.classList.remove('hidden');
+        })
+        addMoreNumberBtn.classList.remove('hidden');
+    }
+});
+
+// custom btn and check on upload file
+let button = document.getElementById('upload-btn');
+let fileInput = document.getElementById('file-upload');
+
+const img_container = document.querySelector('.change__preview');
+const img = document.querySelector('.change__background');
+
+// При нажатии на кнопку
+button.addEventListener('click', function () {
+    if (button.innerText === 'Загрузить') {
+        // В этом случае открываем диалоговое окно для выбора файла
+        fileInput.click();
+    } else {
+        // Если файл уже загружен, удаляем его
+        fileInput.value = "";
+        button.innerText = 'Загрузить';
+        button.style.color = '#5898ff';
+        img_container.style.display = 'none'; // Скрываем блок после удаления файла
+    }
+});
+
+// При выборе файла
+fileInput.addEventListener('change', function () {
+    // Если файл выбран, меняем текст кнопки
+    if (fileInput.files.length > 0) {
+        button.innerText = 'Удалить';
+        button.style.color = '#f50a0a';
+
+        const file = this.files[0];
+        const reader = new FileReader();
+        reader.onload = function () {
+            const result = reader.result;
+            img.src = result;
+            img_container.style.display = 'block';
+            // file_name.innerText = file.name;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+//закрытие открытие окна
+document.getElementById('import-btn').addEventListener('click', function () {
+    document.querySelector('.import').style.display = 'block';
+    document.getElementById('import-btn').style.display = 'none';
+})
+
+document.querySelector('.import__close').addEventListener('click', function () {
+    document.getElementById('import-btn').style.display = 'inline-block';
+    document.querySelector('.import').style.display = 'none';
+})

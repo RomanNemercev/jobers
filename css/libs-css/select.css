@@ -1,3 +1,21 @@
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    outline: 1px solid #5898FF;
+    background-color: #EFF5FF;
+}
+input[type="number"]:focus::placeholder,
+input[type="text"]:focus::placeholder,
+input[type="tel"]:focus::placeholder,
+input[type="email"]:focus::placeholder {
+    color: transparent;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .droplist {
     display: inline-block;
     height: auto;

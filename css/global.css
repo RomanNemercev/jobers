@@ -176,11 +176,23 @@ img {
     color: var(--color_space);
 }
 
+.f16w600 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--color_space);
+}
+
 .f18w500 {
     font-size: 18px;
     font-weight: 500;
     line-height: normal;
     color: var(--color_space);
+}
+
+.f18w600 {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .f20w500 {
@@ -274,6 +286,16 @@ img {
     user-select: none;
 }
 
+.btn-disable {
+    background-color: var(--color_athens-gray);
+    color: var(--color_bali);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 11.38px 20px;
+    border-radius: 5px;
+    user-select: none;
+}
+
 .btn-succes {
     min-width: 116px;
     background-color: var(--color_succes);
@@ -284,7 +306,7 @@ img {
 }
 
 .container {
-    padding: 95px 25px 50px 295px;
+    padding: 95px 25px 23px 295px;
     width: 100%;
 }
 

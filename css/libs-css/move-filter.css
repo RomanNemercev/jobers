@@ -1,0 +1,245 @@
+.popup {
+    z-index: 7;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+.popup.open .popup__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.popup__footer {
+    display: flex;
+    column-gap: 15px;
+}
+.popup__header {
+    position: relative;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.popup__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.popup__close-icon {
+    width: 20px;
+    height: 20px;
+}
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup__content {
+    width: 100%;
+    border-radius: 5px;
+    max-width: 520px;
+    background-color: white;
+    color: #2F353D;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+}
+.popup__title {
+    font-size: 20px;
+    font-weight: 600;
+}
+.popup__descr {
+    font-size: 15px;
+    max-width: 300px;
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.form__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    display: flex;
+    cursor: pointer;
+    z-index: 3;
+}
+.form__btn-icon {
+    width: 20px;
+    height: 20px;
+}
+.form__sortable {
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    cursor: move;
+}
+.form__block {
+    display: flex;
+    column-gap: 5px;
+    cursor: move;
+}
+.form__block--disabled .form__input {
+    background: #F4F6F8;
+}
+.form__block--add .form__input {
+    background: transparent;
+    border: 1px solid #5898FF;
+    color: #5898FF;
+    pointer-events: initial;
+}
+.form__block--add .form__input::placeholder {
+    color: #5898FF;
+}
+.form__item {
+    width: calc(100% - 45px);
+    position: relative;
+    margin-left: auto;
+}
+.form__input {
+    background-color: #EFF5FF;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #2F353D;
+    font-size: 14px;
+    padding-right: 40px;
+    text-overflow: ellipsis;
+    pointer-events: none;
+}
+.form__input::placeholder {
+    color: #2F353D;
+    font-size: 14px;
+}
+.form__toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: #F4F6F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form__toggle-icon {
+    width: 25px;
+    height: 25px;
+    fill: #9098B4;
+}
+
+.btn-popup {
+    font-size: 14px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn--blue {
+    background: #5898FF;
+    color: white;
+}
+.btn--grey {
+    background: #F4F6F8;
+    color: #2F353D;
+    cursor: pointer;
+}
+
+.sortable-chosen .form__toggle {
+    background: #EFF5FF;
+}
+.sortable-chosen .form__toggle-icon {
+    fill: #5898FF;
+}
+
+.sortable-drag {
+    opacity: 0 !important;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.popup__close {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    right: 30px;
+    background-image: url('../../img/close-modal-x.svg');
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .popup__close {
+        z-index: 3;
+        background-image: url('../../img/cross_35x35.svg');
+        width: 35px;
+        height: 35px;
+        top: 2px;
+        right: 13px;
+    }
+
+    .popup__content {
+        position: relative;
+        height: 100vh;
+        padding: 55px 14px 14px 14px;
+        max-width: none;
+        row-gap: 17px;
+    }
+
+    .form__item {
+        width: 100%;
+    }
+
+    .form__block {
+        flex-direction: row-reverse;
+    }
+
+    .popup__footer {
+        position: absolute;
+        bottom: 0;
+        padding: 13px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        width: 100vw;
+        left: 0;
+    }
+
+    .btn-popup {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+    .form__block.form__block--disabled .form__input {
+        height: 37px;
+    }
+}

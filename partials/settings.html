@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobers - Профиль</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <!--    not load simplebar-->
+    <!--    <link-->
+    <!--            rel="stylesheet"-->
+    <!--            href="https://unpkg.com/simplebar@latest/dist/simplebar.css">-->
+    <!--    <link rel="stylesheet" href="../css/libs-css/simplebar.css">-->
+    <!--    <link rel="stylesheet" href="../css/libs-css/choices.min.css">-->
+    <link rel="stylesheet" href="../css/libs-css/select.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body class="body-page">
+<div class="overlay"></div>
+<!--блок бокового меню-->
+<section class="nav">
+    <div class="nav__container">
+        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                                                       class="nav__logo-icon"></a>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Рекрутинг</li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
+            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                                                class="nav__link-item link-vacancies">Вакансии</a>
+            </li>
+            <li class="nav__link list-reset"><a href="../partials/candidates.html"
+                                                class="nav__link-item link-candidates">Кандидаты</a></li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__links-caption">Организация</li>
+            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
+            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
+            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+            </li>
+        </ul>
+        <ul class="nav__links">
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-settings active-page">Настройки</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--блок поискового меню-->
+<section class="search-bar">
+    <div class="search-bar__container">
+        <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
+                                                              class="nav__logo-icon"></a>
+        <form action="#" class="search-bar__form">
+            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
+            <div class="search-bar__dropdown"></div>
+        </form>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="note-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
+                    <img src="../img/notification.svg" alt="Уведомления"
+                         class="search-bar__note">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="supp-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
+                    <img src="../img/support.svg" alt="Поддержка"
+                         class="search-bar__support">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__btn-wrap">
+            <button class="search-bar__btn btn-reset" id="acc-btn">
+                <picture>
+                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
+                    <img src="../img/profile.svg" alt="Личный кабинет"
+                         class="search-bar__acc">
+                </picture>
+            </button>
+        </div>
+        <div class="search-bar__burger toogle">
+            <div class="toogle_bar">
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+                <div class="toogle__line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="nots">
+    <div class="nots__container">
+        <h3 class="nots__title f16w600">Уведомления</h3>
+        <ul class="nots__cans-list">
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-now f14w400 c-bali">сейчас</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Бухгалтерия</p></li>
+                    <li><p class="nots__user-name f15w500">Александра степанова</p></li>
+                    <li><p class="nots__user-desc f14w400">Здравствуйте, вы запрашивали закрывающие документы, вчера мы
+                        их отправили</p></li>
+                </ul>
+                <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Личный менеджер</p></li>
+                    <li><p class="nots__user-name f15w500">Яна Олейникова</p></li>
+                    <li><p class="nots__user-desc f14w400">Действительно, сейчас очень большая конкуренция на уборщиков,
+                        я бы не рекомендовало использовать тариф без автоподнятия</p></li>
+                </ul>
+                <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Евгения Онегина</p></li>
+                    <li><p class="nots__user-desc f14w400">Продуктовый менеджер</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+            <li class="nots__cans-item">
+                <div class="nots__cans-img">
+                    <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                </div>
+                <ul class="nots__user-info">
+                    <li><p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p></li>
+                    <li><p class="nots__user-name f15w500">Валерьев Михаил Александрович</p></li>
+                    <li><p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p></li>
+                </ul>
+                <p class="nots__time-days f14w400 c-bali">
+                    <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                </p>
+            </li>
+        </ul>
+        <button class="btn-reset nots__check f15w500">Отметить как прочитанное</button>
+    </div>
+</section>
+<section class="supp">
+    <div class="supp__container">
+        <!--        default variation 1 on work without icon-->
+        <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+        <div class="supp__man-img onwork-styles">
+            <img src="../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon">
+        </div>
+        <p class="supp__man-name">Купатова Елизавета</p>
+        <div class="supp__man-status"><span class="supp__man-item">Сейчас работает</span></div>
+        <ul class="supp__main-info">
+            <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>
+            <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>
+            </li>
+            <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб
+                103)</a></li>
+        </ul>
+        <div class="supp__user-num">
+            <div class="sup__user-item"><span class="f20w600">32948714</span></div>
+            <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>
+            </div>
+        </div>
+        <!--        default variation 2 not work without icon-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img twix-styles">-->
+        <!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 3 notwork with icon-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img twix-styles">-->
+        <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 4 without icon on work-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img onwork-styles__second">-->
+        <!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--        default variation 5 with icon on work-->
+        <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+        <!--                <div class="supp__man-img onwork-styles__second">-->
+        <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+        <!--                </div>-->
+        <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+        <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+        <!--                <ul class="supp__main-info">-->
+        <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+        <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+        <!--                    </li>-->
+        <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+        <!--                        103)</a></li>-->
+        <!--                </ul>-->
+        <!--                <div class="supp__user-num">-->
+        <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+        <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+    </div>
+</section>
+<section class="acc">
+    <div class="acc__container">
+        <div class="acc__header">
+            <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+            <p class="acc__user-level f14w400 c-bali">Администратор</p>
+        </div>
+        <ul class="acc__active">
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Мой профиль</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Лицевой счет</a></li>
+            <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Личный менеджер</a></li>
+        </ul>
+        <div class="acc__user-exit bg-fix"><a href="#" class="acc__exit-btn f15w400">Выйти из системы</a></div>
+    </div>
+</section>
+<!--main page content-->
+<div class="profile container">
+    <div class="profile__tabs-wrapper">
+        <button class="btn-reset profile__tab vacancies__value vacancies__value--active" data-path="main">Профиль
+        </button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="nots">Уведомления</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="mans">Менеджеры</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="bank">Лицевой счет</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="colab">Интеграции</button>
+        <button class="btn-reset profile__tab vacancies__value" data-path="temps">Шаблоны писем</button>
+    </div>
+    <div class="profile__main">
+        <div class="profile__main-main main vacancies__content vacancies__content--active" data-target="main">
+            <div class="main__info">
+                <p class="main__info-title">Ваш профиль</p>
+                <div class="main__info-content">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 480px)"
+                                srcset="../img/no-photo170.png">
+                        <img src="../img/profile-img.png" alt="Фотография кандидата" class="main__info-img">
+                    </picture>
+                    <div class="main__info-descr">
+                        <p class="main__info-name f20w600">Иванов Андрей Иванович</p>
+                        <p class="main__info-position f15w400 c-bali">Администратор</p>
+                        <div class="main__info-contacts">
+                            <div class="main__user-phone">
+                                <span class="main__phone-title f15w400">Телефон:</span>
+                                <a href="tel:+79509990222" class="main__phone-value c-bali">8-950-999-02-22</a>
+                            </div>
+                            <div class="main__user-mail">
+                                <span class="main__mail-title f15w400">Email:</span>
+                                <a href="mailto:pochta@mail.ru" class="main__mail-value c-bali">pochta@mail.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-reset btn-cancel main__btn-change" id="change-open">Изменить</button>
+            </div>
+            <div class="main__pass">
+                <p class="main__pass-title">Изменение пароля</p>
+                <div class="main__pass-content">
+                    <p class="main__current-title f15w400">Текущий пароль <span class="add__span-custom">*</span></p>
+                    <label for="current-pass" class="main__current-label">
+                        <input type="password" class="main__current-input" id="current-pass"
+                               placeholder="************" required>
+                        <button type="button" class="pass-eye" onclick="togglePassword('current-pass', this)"></button>
+                    </label>
+                    <div class="main__pass-wrapper">
+                        <div class="main__pass-new">
+                            <p class="main__new-title f15w400">Новый пароль <span class="add__span-custom">*</span></p>
+                            <label for="new-pass" class="main__current-label">
+                                <input type="password" class="main__new-input" id="new-pass"
+                                       placeholder="************" required>
+                                <button type="button" class="pass-eye"
+                                        onclick="togglePassword('new-pass', this)"></button>
+                            </label>
+                        </div>
+                        <div class="main__pass-repeat">
+                            <p class="main__repeat-title f15w400">Повторите пароль <span
+                                    class="add__span-custom">*</span>
+                            </p>
+                            <label for="repeat-pass" class="main__current-label">
+                                <input type="password" class="main__current-input" id="repeat-pass"
+                                       placeholder="************" required>
+                                <button type="button" class="pass-eye"
+                                        onclick="togglePassword('repeat-pass', this)"></button>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <p class="main__pass-descr f15w400 c-bali">Пароль должен состоять минимум из&nbsp;8&nbsp;символов,
+                    содержать
+                    минимум одну строчную, одну прописную букву и&nbsp;одну цифру</p>
+                <button class="btn-reset btn-disable main__btn-save" id="final-save" disabled>Сохранить</button>
+            </div>
+        </div>
+        <div class="profile__main-nots nots vacancies__content" data-target="nots">
+            <div class="cabinet__block cabinet__block_notifications">
+                <div class="cabinet cabinet__name_top">Управление уведомлениями</div>
+                <div class="cabinet cabinet__container">
+                    <div class="switch__box">
+                        <div class="switch__button active"><span class="circle"></span></div>
+                        <span class="cabinet__text cabinet__text_switch">Всплывающие уведомления</span>
+                    </div>
+                    <div class="switch__box">
+                        <div class="switch__button active"><span class="circle"></span></div>
+                        <span class="cabinet__text cabinet__text_switch">Email уведомления </span>
+                    </div>
+                    <div class="switch__box">
+                        <div class="switch__button active"><span class="circle"></span></div>
+                        <span class="cabinet__text cabinet__text_switch">Уведомления браузера</span>
+                    </div>
+                    <div class="switch__box">
+                        <div class="switch__button active"><span class="circle"></span></div>
+                        <span class="cabinet__text cabinet__text_switch">Смс</span>
+                    </div>
+                    <div class="switch__box">
+                        <div class="switch__button active"><span class="circle"></span></div>
+                        <span class="cabinet__text cabinet__text_switch">Telegram</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cabinet__block cabinet__block_notifications_email">
+                <div class="cabinet cabinet__name_top">Email уведомления</div>
+                <div class="cabinet cabinet__container">
+                    <div class="fields">
+                        <div class="field__box field__box_check">
+                            <input id="notifications_email_01" class="check_main" type="checkbox">
+                            <label for="notifications_email_01">Резюме каждого кандидата</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_email_02" class="check_main" type="checkbox">
+                            <label for="notifications_email_02">Напоминание о неоплаченном объявлении</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_email_03" class="check_main" type="checkbox">
+                            <label for="notifications_email_03">Оповещения о новых откликах на вакансии</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_email_04" class="check_main" type="checkbox">
+                            <label for="notifications_email_04">Оповещение о новой подборке резюме на вакансию</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_email_05" class="check_main" type="checkbox">
+                            <label for="notifications_email_05">Окончание срока публикации объявлений</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_email_06" class="check_main" type="checkbox">
+                            <label for="notifications_email_06">Отчет по размещению вакансии</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_email_07" class="check_main" type="checkbox">
+                            <label for="notifications_email_07">Акт выполненных работ</label>
+                        </div>
+                    </div>
+
+                    <div class="button__c default__button">Сохранить</div>
+                </div>
+            </div>
+
+            <div class="cabinet__block cabinet__block_notifications_sms">
+                <div class="cabinet cabinet__name_top">Смс уведомления</div>
+                <div class="cabinet cabinet__container">
+                    <div class="fields">
+                        <div class="field__box field__box_check">
+                            <input id="notifications_sms_01" class="check_main" type="checkbox">
+                            <label for="notifications_sms_01">Оповещения о новых откликах на вакансии</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_sms_02" class="check_main" type="checkbox">
+                            <label for="notifications_sms_02">Оповещение о новой подборке резюме на вакансию</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_sms_03" class="check_main" type="checkbox">
+                            <label for="notifications_sms_03">Отчет по размещению вакансии</label>
+                        </div>
+                        <div class="field__box field__box_check">
+                            <input id="notifications_sms_04" class="check_main" type="checkbox">
+                            <label for="notifications_sms_04">Перенос в архив объявлений</label>
+                        </div>
+                    </div>
+
+                    <div class="button__c default__button nots__set-save">Сохранить</div>
+                </div>
+            </div>
+
+            <div class="cabinet__block cabinet__block_notifications_telegram">
+                <div class="cabinet cabinet__name_top">Telegram уведомления</div>
+                <div class="cabinet cabinet__container">
+                    <div class="fields">
+                        <div class="field__box field__box_check">
+                            <input id="notifications_telegram_01" class="check_main" type="checkbox">
+                            <label for="notifications_telegram_01">Резюме каждого кандидата</label>
+                        </div>
+                        <p class="cabinet__title cabinet__title_small">Подключенные чаты</p>
+
+                        <p class="cabinet__text cabinet__text_disabled cabinet__text_telegram">Если @Jobers_employes_bot
+                            уже был подключен ранее к чату, попробуйте удалить его, и подключиться заново, используя
+                            опции ниже.</p>
+
+
+                        <div class="container__flex">
+                            <div class="field__box field__box_check field__box_radio fbr_01">
+                                <input id="notifications_telegram_r01" name="telegram-radio" class="radio_main"
+                                       type="radio" checked>
+                                <label for="notifications_telegram_r01">Telegram desktop</label>
+                                <a href="" class="cabinet__text cabinet__text_disabled fbr__link_hover">Уведомления в
+                                    чат</a>
+                            </div>
+                            <div class="field__box field__box_check field__box_radio fbr_02">
+                                <input id="notifications_telegram_r02" name="telegram-radio" class="radio_main"
+                                       type="radio">
+                                <label for="notifications_telegram_r02">Telegram web</label>
+                                <a href="" class="cabinet__text cabinet__text_disabled fbr__link_hover">Уведомления в в
+                                    группу</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button__c default__button cabinet__container-save">Сохранить</div>
+                </div>
+            </div>
+        </div>
+        <div class="profile__main-mans mans vacancies__content" data-target="mans">
+            <div class="cabinet__inner_tab_button show__popup add-new-man" data-popup="new__manager" id="add-new-man">
+                Новый
+                менеджер
+            </div>
+            <div class="cabinet__block cabinet__block_managers">
+                <div class="cabinet cabinet__name_top">Ваши менеджеры</div>
+
+                <!-- Добавить при отстутствии блоков менеджеров -->
+                <!-- <div class="cabinet cabinet__container">
+                    <div class="button__c fill__button show__popup" data-popup="new__manager">Добавить менеджера</div>
+                </div> -->
+
+                <div class="cabinet cabinet__container">
+                    <div class="manager">
+                        <div class="cabinet__box cabinet__box_image"><img src="../img/manager-nophoto.png" alt=""></div>
+                        <div class="cabinet__box cabinet__box_info">
+                            <p class="cabinet__title cabinet__text_bold">Алексеев Антон Борисович</p>
+                            <p class="cabinet__subtitle">Менеджер</p>
+                            <p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span>
+                            </p>
+                            <p class="cabinet__text">Email: <span class="cabinet__text cabinet__text_disabled">pochta@mail.ru</span>
+                            </p>
+                        </div>
+                        <div class="manager__nav_button">
+                            <svg class="manager__nav_three_dots" width="27" height="7" viewBox="0 0 27 7" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect width="7" height="7" rx="3.5" fill="#9098B4"/>
+                                <rect x="10" width="7" height="7" rx="3.5" fill="#9098B4"/>
+                                <rect x="20" width="7" height="7" rx="3.5" fill="#9098B4"/>
+                            </svg>
+                            <nav class="manager__nav_container">
+                                <ul class="manager__nav">
+                                    <li class="mob__only">Алексеев Антон Борисович <span class="mob__close_nav"></span>
+                                    </li>
+                                    <li class="show__popup edit-mans" data-popup="edit__manager">Редактировать
+                                    </li>
+                                    <li class="show__popup delete-mans" data-popup="delete__manager">Удалить</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="manager">
+                        <div class="cabinet__box cabinet__box_image"><img src="../img/manager-nophoto.png" alt=""></div>
+                        <div class="cabinet__box cabinet__box_info">
+                            <p class="cabinet__title cabinet__text_bold">Олег Тиньков</p>
+                            <p class="cabinet__subtitle">Менеджер</p>
+                            <p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span>
+                            </p>
+                            <p class="cabinet__text">Email: <span class="cabinet__text cabinet__text_disabled">pochta@mail.ru</span>
+                            </p>
+                        </div>
+                        <div class="manager__nav_button">
+                            <svg class="manager__nav_three_dots" width="27" height="7" viewBox="0 0 27 7" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect width="7" height="7" rx="3.5" fill="#9098B4"/>
+                                <rect x="10" width="7" height="7" rx="3.5" fill="#9098B4"/>
+                                <rect x="20" width="7" height="7" rx="3.5" fill="#9098B4"/>
+                            </svg>
+                            <nav class="manager__nav_container">
+                                <ul class="manager__nav">
+                                    <li class="mob__only">Олег Тиньков <span class="mob__close_nav"></span></li>
+                                    <li class="show__popup edit-mans" data-popup="edit__manager">Редактировать</li>
+                                    <li class="show__popup delete-mans" data-popup="delete__manager">Удалить</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="manager">
+                        <div class="cabinet__box cabinet__box_image"><img src="../img/manager-nophoto.png" alt=""></div>
+                        <div class="cabinet__box cabinet__box_info">
+                            <p class="cabinet__title cabinet__text_bold">Владимир Владивостоков</p>
+                            <p class="cabinet__subtitle">Менеджер</p>
+                            <p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span>
+                            </p>
+                            <p class="cabinet__text">Email: <span class="cabinet__text cabinet__text_disabled">pochta@mail.ru</span>
+                            </p>
+                        </div>
+                        <div class="manager__nav_button">
+                            <svg class="manager__nav_three_dots" width="27" height="7" viewBox="0 0 27 7" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect width="7" height="7" rx="3.5" fill="#9098B4"/>
+                                <rect x="10" width="7" height="7" rx="3.5" fill="#9098B4"/>
+                                <rect x="20" width="7" height="7" rx="3.5" fill="#9098B4"/>
+                            </svg>
+                            <nav class="manager__nav_container">
+                                <ul class="manager__nav">
+                                    <li class="mob__only">Владимир Владивостоков<span class="mob__close_nav"></span></li>
+                                    <li class="show__popup edit-mans" data-popup="edit__manager">Редактировать</li>
+                                    <li class="show__popup delete-mans" data-popup="delete__manager">Удалить</li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile__main-mans mans-empty vacancies__content">
+            <div class="cabinet__block cabinet__block_managers">
+                <div class="cabinet cabinet__name_top">Ваши менеджеры</div>
+
+                <!-- Добавить при отстутствии блоков менеджеров -->
+                <div class="cabinet cabinet__container cabinet__container-null">
+                    <div class="button__c fill__button show__popup add-new-man add-new-man__null" data-popup="new__manager">Добавить менеджера
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="profile__main-bank bank vacancies__content" data-target="bank">
+            <div class="cabinet__inner_tab_button">Выставить счет</div>
+            <div class="cabinet__block cabinet__block_package">
+                <div class="cabinet cabinet__name_top">Пакет размещения</div>
+                <div class="cabinet cabinet__container">
+                    <div class="cabinet__box cabinet__box_info">
+                        <p class="cabinet__title">Минимальный с автообновлением</p>
+                        <p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span>
+                        </p>
+                        <p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">9 300 руб.</span>
+                        </p>
+                    </div>
+                    <div class="cabinet__box cabinet__box_info">
+
+                        <div class="button__c border__button"><a href="add-vacancies.html">Опубликовать вакансию</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabinet__block cabinet__block_services">
+                <div class="cabinet cabinet__name_top">Дополнительные услуги</div>
+                <div class="cabinet cabinet__container">
+                    <div class="cabinet__box cabinet__box_info container__non-btn">
+                        <p class="cabinet__title">Рерайтинг вакансии</p>
+                        <p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span>
+                        </p>
+                        <p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">2500 руб.</span>
+                        </p>
+                    </div>
+                    <div class="cabinet__box cabinet__box_info container__non-btn">
+                        <p class="cabinet__title">Продвижение на сайте Avito (x5), 14 дней</p>
+                        <p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span>
+                        </p>
+                        <p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">3 400 руб.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile__main-bank bank-empty vacancies__content">
+            <div class="cabinet cabinet__container">
+                <div class="cabinet__image"></div>
+                <p class="title__big_center">На лицевом счете пусто</p>
+                <p class="cabinet__subtitle">Перейдите в раздел Тарифы что бы выбрать подходящую услугу</p>
+                <div class="button__c fill__button fill__button_gradient">Тарифные планы</div>
+            </div>
+        </div>
+        <div class="profile__main-colab colab vacancies__content" data-target="colab">
+
+            <div class="cabinet__block cabinet__block_integration">
+                <div class="container__integration">
+                    <div class="crm__box">
+                        <img src="../img/amo.png" alt="">
+                        <div class="button__c default__button default__button_active show__popup crm__get-sets"
+                             data-popup="crm__amo">
+                            Подключить
+                        </div>
+                    </div>
+                    <div class="crm__box">
+                        <img src="../img/bitrix.png" alt="">
+                        <div class="button__c default__button default__button_active show__popup crm__bitrix-get"
+                             data-popup="crm__bitrix">Подключить
+                        </div>
+                    </div>
+                    <div class="crm__box">
+                        <img src="../img/potoc.png" alt="">
+                        <div class="buttons">
+                            <div class="button__c default__button default__button_enabled">Работает</div>
+                            <div class="button__c settings__button show__popup crm__potok-sets" data-popup="crm__potok"><span
+                                    class="gear"></span></div>
+                        </div>
+
+                    </div>
+                    <div class="crm__box">
+                        <img src="../img/no-name.png" alt="">
+                        <div class="buttons">
+                            <div class="button__c default__button default__button_error">Ошибка</div>
+                            <div class="button__c settings__button"><span class="gear"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="profile__main-temps temps vacancies__content" data-target="temps">
+            <div class="cabinet__inner_tab_button show__popup temps__add-new" data-popup="newtemplate_email"><span
+                    class="plus">+</span> Добавить новый
+            </div>
+            <div class="cabinet__block cabinet__block_email_templates">
+                <div class="cabinet cabinet__name_top">Шаблоны писем</div>
+                <div class="cabinet cabinet__container">
+                    <div class="email__templates_box"><p class="cabinet__text_bold">Подумать</p> <span
+                            class="cabinet__link edit__email_template show__popup edit-think"
+                            data-popup="edittemplate_email">Редактировать</span>
+                    </div>
+                    <div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование</p>
+                        <span class="cabinet__link edit__email_template show__popup edit-think"
+                              data-popup="edittemplate_email">Редактировать</span>
+                    </div>
+                    <div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование (без
+                        отклика)</p> <span class="cabinet__link edit__email_template show__popup edit-think"
+                                           data-popup="edittemplate_email">Редактировать</span></div>
+                    <div class="email__templates_box"><p class="cabinet__text_bold cabinet__container-man__denied">Отказ</p> <span
+                            class="cabinet__link edit__email_template show__popup edit-think"
+                            data-popup="edittemplate_email">Редактировать</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="item__popup-auto" id="edit-popup">
+    <button class="btn-reset auto__close" id="popup-edit-close"></button>
+    <div class="item__popup-wrapper change">
+        <div class="change__container">
+            <p class="change__title f20w700">Редактирование профиля</p>
+            <p class="change__descr f15w400">Это ваш профиль</p>
+            <div class="change__input-wrapper">
+                <div class="change__preview">
+                    <!-- as default the img won't have a src here. But I added it because we can see what we're styling -->
+                    <img src="" alt="" class="change__background">
+                </div>
+                <input type="file" id="file-upload" class="change__input">
+                <label for="file-upload" class="change__custom-btn__label">Upload File</label>
+                <button id="upload-btn" class="change__input-btn btn-reset">Загрузить</button>
+            </div>
+            <p class="change__last-name f14w400">Фамилия</p>
+            <label for="last-name" class="change__last-label">
+                <input type="text" class="change__last-name__input" id="last-name"
+                       placeholder="Иванов">
+            </label>
+            <p class="change__first-name f14w400">Имя</p>
+            <label for="first-name" class="change__first-label">
+                <input type="text" class="change__first-name__input" id="first-name"
+                       placeholder="Иван">
+            </label>
+            <p class="change__third-name f14w400">Отчество</p>
+            <label for="third-name">
+                <input type="text" class="change__third-name__input" id="third-name" placeholder="Иванович">
+            </label>
+            <p class="change__number-title f14w400">Телефон</p>
+            <label for="change-number">
+                <input type="tel" class="change__number__input phone-input" id="change-number" placeholder="+7">
+            </label>
+            <p class="change__mail-title f14w400">Электронная почта</p>
+            <label for="change-mail">
+                <input type="email" class="change__mail__input" id="change-mail" placeholder="ivan@mail.ru">
+            </label>
+            <div class="change__btns-wrapper">
+                <button class="btn-reset btn change__btn-save" id="save-changes">Сохранить</button>
+                <button class="btn-reset btn-cancel change__btn-cancel">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="item__popup-auto" id="save-popup">
+    <button class="btn-reset auto__close" id="popup-save-close"></button>
+    <div class="item__popup-wrapper save">
+        <div class="save__container">
+            <p class="save__title f20w700">Изменение пароля</p>
+            <p class="save__descr f15w400">Ваш пароль успешно изменен!</p>
+        </div>
+    </div>
+</div>
+<div class="item__popup-auto" id="popup-add-new-man">
+    <button class="btn-reset auto__close" id="close-new-man"></button>
+    <div class="item__popup-wrapper new-man">
+        <p class="cabinet__popup__title">Добавление менеджера</p>
+        <p class="cabinet__popup__subtitle">Заполните данные нового менеджера, ему придет приглашение на электронную
+            почту</p>
+        <form class="cabinet__popup_form" action="">
+            <div class="cabinet__popup_fields">
+                <div class="field__box">
+                    <p class="field__name_popup">Фамилия</p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder="Иванов" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Имя</p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder="Иван" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Отчество</p>
+                    <input type="text" class="field" placeholder="Иванович">
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Электронная почта</p>
+                    <label class="new__add-name">
+                        <input type="email" class="field new__add-name__input" placeholder="ivan@mail.ru" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Телефон</p>
+                    <label class="new__add-name">
+                        <input type="tel" class="field phone-input new__add-name__input" placeholder="+7" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cabinet__popup_checks">
+                <div class="field__box field__box_check">
+                    <input id="manager-access-add" class="check" type="checkbox">
+                    <label for="manager-access-add">Доступ к бухгалтерским документам</label>
+                </div>
+                <div class="field__box field__box_check">
+                    <input id="manager-creation-add" class="check" type="checkbox">
+                    <label for="manager-creation-add">Создание и редактирование объявлений</label>
+                </div>
+                <div class="field__box field__box_check">
+                    <input id="manager-add-add" class="check" type="checkbox">
+                    <label for="manager-add-add">Добавление и смена ответственного по вакансии</label>
+                </div>
+<!--                <div class="field__box field__box_check">-->
+<!--                    <input id="manager-view-add" class="check" type="checkbox">-->
+<!--                    <label for="manager-view-add">Просмотр только тех вакансий, в которых назначен ответственным</label>-->
+<!--                </div>-->
+            </div>
+
+
+            <div class="cabinet__popup_buttons">
+                <div class="button__c fill__button">Сохранить</div>
+                <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                     id="add-new-man-cancel">Отмена
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="item__popup-auto" id="edit-man-popup">
+    <button class="btn-reset auto__close edit-man-close"></button>
+    <div class="item__popup-wrapper edit-man">
+        <p class="cabinet__popup__title">Редактирование менеджера</p>
+        <p class="cabinet__popup__subtitle">Это профиль вашего менеджера</p>
+        <form class="cabinet__popup_form" action="">
+            <div class="cabinet__popup_fields">
+                <div class="field__box">
+                    <p class="field__name_popup">Фамилия</p>
+                    <input type="text" class="field" placeholder="Иванов">
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Имя</p>
+                    <input type="text" class="field" placeholder="Иван">
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Отчество</p>
+                    <input type="text" class="field" placeholder="Иванович">
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Электронная почта</p>
+                    <input type="email" class="field" placeholder="ivan@mail.ru">
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Телефон</p>
+                    <input type="tel" class="field phone-input" placeholder="+7">
+                </div>
+            </div>
+
+            <div class="cabinet__popup_checks">
+                <div class="field__box field__box_check">
+                    <input id="manager-access-edit" class="check" type="checkbox">
+                    <label for="manager-access-edit">Доступ к бухгалтерским документам</label>
+                </div>
+                <div class="field__box field__box_check">
+                    <input id="manager-create-edit" class="check" type="checkbox">
+                    <label for="manager-create-edit">Создание и редактирование объявлений</label>
+                </div>
+                <div class="field__box field__box_check">
+                    <input id="manager-add-edit" class="check" type="checkbox">
+                    <label for="manager-add-edit">Добавление и смена ответственного по вакансии</label>
+                </div>
+<!--                <div class="field__box field__box_check">-->
+<!--                    <input id="manager-view-edit" class="check" type="checkbox">-->
+<!--                    <label for="manager-view-edit">Просмотр только тех вакансий, в которых назначен-->
+<!--                        ответственным</label>-->
+<!--                </div>-->
+            </div>
+
+
+            <div class="cabinet__popup_buttons">
+                <div class="button__c fill__button">Сохранить</div>
+                <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                     id="edit-man-popup-cancel">Отмена
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="item__popup-auto" id="delete-man-popup">
+    <button class="btn-reset auto__close" id="popup-delete-close"></button>
+    <div class="item__popup-wrapper delete-man">
+        <p class="cabinet__popup__title">Удаление менеджера</p>
+        <p class="cabinet__popup__subtitle">Вы действительно хотите удалить этого менеджера?</p>
+        <div class="cabinet__popup_buttons buttons__fullspace">
+            <div class="button__c default__button default__button_error">Удалить</div>
+            <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                 id="delete-man-popup-cancel">Отмена
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="item__popup-auto" id="amo-connect-popup">
+    <button class="btn-reset auto__close" id="popup-amo-close"></button>
+    <div class="item__popup-wrapper amo-connect">
+        <p class="cabinet__popup__title">Интеграция Amocrm</p>
+        <p class="cabinet__popup__subtitle"><a class="cabinet__link" target="_blank"
+                                               href="https://help.jobers.ru/settings/integraczii/integracziya-s-amocrm/">Описание
+            и инструкция по интеграции</a></p>
+        <form class="cabinet__popup_form" action="">
+            <div class="cabinet__popup_fields">
+                <div class="field__box">
+                    <p class="field__name_popup">Поддомен</p>
+                    <input type="text" class="field" placeholder="">
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Секретный ключ <span class="star">*</span></p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder="" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">ID интеграции <span class="star">*</span></p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder="" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Идентификатор воронки <span class="star">*</span></p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder="" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Идентификатор статуса <span class="star">*</span></p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder="" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Код авторизации</p>
+                    <input type="text" class="field" placeholder="">
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup field__box_mb">Вакансии Jobers</p>
+                    <div class="droplist droplist__select">
+                        <div class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Выберите вариант">Выберите вариант</span>
+                                <span class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"></path>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Менеджер по продажам (ID 424)</li>
+                                <li class="droplist__item">Повар в цех (ID 4232)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup field__box_mb">Воронка/Статус</p>
+                    <div class="droplist droplist__select">
+                        <div class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Выберите вариант">Выберите вариант</span>
+                                <span class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"></path>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Воронка</li>
+                                <li class="droplist__item">ВПО: ВЗЯТО В РАБОТУ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fileld__box fileld__box_addvacancy">
+                    <span class="cabinet__link add__vacancy">Добавить вакансию</span>
+                </div>
+            </div>
+
+
+            <div class="cabinet__popup_buttons">
+                <div class="button__c fill__button">Сохранить</div>
+                <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                     id="amo-connect-cancel">Отмена
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="item__popup-auto" id="bitrix-popup">
+    <button class="btn-reset auto__close" id="popup-bitrix-close"></button>
+    <div class="item__popup-wrapper bitrix">
+        <p class="cabinet__popup__title">Интеграция сrm Bitrix24</p>
+        <p class="cabinet__popup__subtitle"><a class="cabinet__link" target="_blank"
+                                               href="https://help.jobers.ru/settings/integraczii/integracziya-s-bitrix24/">Описание
+            и инструкция по интеграции</a></p>
+        <form class="cabinet__popup_form" action="">
+            <div class="cabinet__popup_fields">
+                <div class="field__box">
+                    <p class="field__name_popup">Webhook URL *</p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder="https://" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Категория</p>
+                    <div class="droplist droplist__select">
+                        <div class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Выберите вариант">Выберите вариант</span>
+                                <span class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"></path>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Категория 1</li>
+                                <li class="droplist__item">Категория 2</li>
+                                <li class="droplist__item">Категория 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Ответственный</p>
+                    <div class="droplist droplist__select">
+                        <div class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Выберите вариант">Выберите вариант</span>
+                                <span class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"></path>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Николай Дроздов</li>
+                                <li class="droplist__item">Мария Огонек</li>
+                                <li class="droplist__item">Александр Чиж</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup">Тип экспорта <span class="star">*</span></p>
+                    <div class="droplist droplist__select">
+                        <div class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item"><span
+                                    class="droplist__result_text" data-start="Выберите вариант">Выберите вариант</span>
+                                <span class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"></path>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Лид</li>
+                                <li class="droplist__item">Сделка</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabinet__popup_checks">
+                <div class="field__box field__box_check">
+                    <input id="crm-bitrix-1" class="check" type="checkbox">
+                    <label for="crm-bitrix-1">Создавать повторный лид</label>
+                </div>
+            </div>
+
+
+            <div class="cabinet__popup_buttons">
+                <div class="button__c fill__button">Сохранить</div>
+                <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                     id="bitrix-connect-cancel">Отмена
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="item__popup-auto" id="potok-popup">
+    <button class="btn-reset auto__close" id="popup-potok-close"></button>
+    <div class="item__popup-wrapper potok">
+        <p class="cabinet__popup__title">Интеграция сrm Potok</p>
+        <p class="cabinet__popup__subtitle"><a class="cabinet__link" target="_blank"
+                                               href="https://help.jobers.ru/settings/integraczii/integracziya-s-potok/">Описание
+            и инструкция по интеграции</a></p>
+        <form class="cabinet__popup_form" action="">
+            <div class="cabinet__popup_fields">
+                <div class="field__box">
+                    <p class="field__name_popup">Токен доступа <span class="star">*</span></p>
+                    <label class="new__add-name">
+                        <input type="text" class="field new__add-name__input" placeholder=""
+                               value="kh249f0zjvmpw1-23i-2oks22-2233-0" required>
+                        <span class="error">Это поле обязательно для заполнения</span>
+                    </label>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup field__box_mb">Вакансии Jobers</p>
+                    <div class="droplist droplist__select">
+                        <div class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item droplist__result_active"><span
+                                    class="droplist__result_text" data-start="Выберите вариант">Менеджер по продажам (ID 424)</span>
+                                <span
+                                        class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"></path>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item droplist__item_active">Менеджер по продажам (ID 424)</li>
+                                <li class="droplist__item">Повар в цех (ID 4232)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="field__box">
+                    <p class="field__name_popup field__box_mb">Воронка/Статус</p>
+                    <div class="droplist droplist__select">
+                        <div class="form__list" action="">
+                            <div class="droplist__selected item droplist__result item droplist__result_active"><span
+                                    class="droplist__result_text"
+                                    data-start="Выберите вариант">ВПО: ВЗЯТО В РАБОТУ</span> <span
+                                    class="droplist__icon droplist__icon_cross"></span>
+                                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                     viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z"
+                                          fill="#9098B4"></path>
+                                </svg>
+                            </div>
+                            <ul class="droplist__items">
+                                <li class="droplist__item">Воронка</li>
+                                <li class="droplist__item droplist__item_active">ВПО: ВЗЯТО В РАБОТУ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fileld__box fileld__box_addvacancy">
+                    <span class="cabinet__link add__vacancy">Добавить вакансию</span>
+                </div>
+            </div>
+
+
+            <div class="cabinet__popup_buttons buttons__fullspace">
+                <div class="button__c default__button default__button_error">Отключить</div>
+                <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                     id="potok-sets-cancel">Отмена
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="item__popup-auto" id="temps-popup">
+    <button class="btn-reset auto__close" id="popup-temps-close"></button>
+    <div class="item__popup-wrapper temps-wrapper">
+        <p class="cabinet__popup__title">Новый шаблон</p>
+        <div class="flex__box_email_templates">
+            <div class="cabinet__column cabinet__column_left">
+                <div class="field__box">
+                    <input type="text" class="field" placeholder="Назовите ваш шаблон" value="">
+                    <textarea class="cabinet__popup_textarea" placeholder="Структура письма" name=""></textarea>
+                </div>
+            </div>
+            <div class="cabinet__column cabinet__column_right">
+                <p class="cabinet__popup__title">Вставить переменную</p>
+                <div class="variables__email">
+                    <span class="variable var__name cabinet__link">Имя соискателя</span>
+                    <span class="variable var__name cabinet__link">Название вакансии</span>
+                    <span class="variable var__name cabinet__link">Телефон вакансии</span>
+                    <span class="variable var__name cabinet__link">Почта вакансии</span>
+                    <span class="variable var__name cabinet__link">Мое имя</span>
+                    <span class="variable var__name cabinet__link">Компания</span>
+                </div>
+            </div>
+        </div>
+        <div class="cabinet__popup_buttons buttons__fullspace">
+            <div class="button__c fill__button">Сохранить</div>
+            <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                 id="temps-add-new-cancel">Отмена
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--start temps collection-->
+<div class="item__popup-auto" id="temps-popup-think">
+    <button class="btn-reset auto__close" id="popup-temps-think-close"></button>
+    <div class="item__popup-wrapper temps-wrapper edit__temps-popup">
+        <p class="cabinet__popup__title">Редактирование шаблона</p>
+        <div class="flex__box_email_templates">
+            <div class="cabinet__column cabinet__column_left">
+                <div class="field__box">
+                    <input type="text" class="field" value="Приглашение" placeholder="Назовите ваш шаблон">
+                    <textarea class="cabinet__popup_textarea" name="" id="">Здравствуйте, {Имя соискателя}! Благодарим Вас за отклик на вакансию "{Название вакансии}". Ваше резюме показалось нам очень интересным. Мы хотели бы пригласить Вас на интервью. Перезвоните, пожалуйста, в рабочее время по телефону {Телефон вакансии} ({Мое Имя})</textarea>
+                </div>
+            </div>
+            <div class="cabinet__column cabinet__column_right">
+                <p class="cabinet__popup__title">Вставить переменную</p>
+                <div class="variables__email">
+                    <span class="variable var__name cabinet__link">Имя соискателя</span>
+                    <span class="variable var__name cabinet__link">Название вакансии</span>
+                    <span class="variable var__name cabinet__link">Телефон вакансии</span>
+                    <span class="variable var__name cabinet__link">Почта вакансии</span>
+                    <span class="variable var__name cabinet__link">Мое имя</span>
+                    <span class="variable var__name cabinet__link">Компания</span>
+                </div>
+            </div>
+        </div>
+        <div class="cabinet__popup_buttons buttons__fullspace">
+            <div class="button__c fill__button">Сохранить</div>
+            <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                 id="temps-think-cancel">Отмена
+            </div>
+            <div class="button__c default__button default__button_error show__popup delete__temp"
+                 data-popup="delete__template">
+                Удалить шаблон
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--end temps collection-->
+
+<div class="item__popup-auto" id="delete-popup">
+    <button class="btn-reset auto__close" id="popup-delete-temp-close"></button>
+    <div class="item__popup-wrapper delete-temp">
+        <p class="cabinet__popup__title">Удаление шаблона</p>
+        <p class="cabinet__popup__subtitle">Вы действительно хотите удалить шаблон “Приглашение” ?</p>
+        <div class="cabinet__popup_buttons buttons__fullspace">
+            <div class="button__c default__button default__button_error">Удалить</div>
+            <div class="button__c default__button default__button_active cabinet__popup__cancel"
+                 id="delete-temp-cancel">Отмена
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--optimized-->
+<!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>-->
+<!--<script src="../js/libs-js/popper.min.js"></script>-->
+<!--optimized-->
+<!--<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>-->
+<!--<script src="../js/libs-js/tippy-bundle.umd.js"></script>-->
+<!--not load simplebar-->
+<!--<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>-->
+<!--<script src="../js/libs-js/simplebar.min.js"></script>-->
+<!--<script src="../js/libs-js/choices.min.js"></script>-->
+<script src="../js/jquery_3.3.1.min.js"></script>
+<script src="../js/libs-js/select.js"></script>
+<script src="../js/libs-js/custom-popup.js"></script>
+<script src="../js/settings-script.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

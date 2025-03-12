@@ -668,7 +668,8 @@ try {
     arrGlobal.forEach(function (el) {
         el.addEventListener('click', function () {
             specificList.classList.remove('specific--visible');
-            document.getElementById('specific-vacancy').parentNode.classList.remove('specific--style');
+            document.getElementById('specific-vacancy').parentNode.style.marginBottom = '11px';
+            radioSpecific.style.marginBottom = '11px';
         })
     })
 } catch {
@@ -678,7 +679,7 @@ try {
 
 try {
     radioSpecific.addEventListener('click', function () {
-        document.getElementById('specific-vacancy').parentNode.classList.add('specific--style');
+        document.getElementById('specific-vacancy').parentNode.style.marginBottom = '65px';
     })
 } catch {
     console.log("Не найден элемент стиля определенных вакансий. Страница Вакансии.")
@@ -705,9 +706,9 @@ try {
 // ещё один способ
 function handleInputValidation() {
     var inputs = document.querySelectorAll('.new__add-name__input[required]');
-    inputs.forEach(function(input) {
+    inputs.forEach(function (input) {
         var parent = input.closest('.new__add-name');
-        input.addEventListener('blur', function() {
+        input.addEventListener('blur', function () {
             if (!this.value.trim()) {
                 parent.classList.add('error--visible');
             } else {
@@ -1170,3 +1171,294 @@ try {
     console.log("Ошибка запроса элементов окна множественной архивации.")
 }
 
+// программа по закрытию и открытию окон верхнерго бара справа
+document.addEventListener('click', function (event) {
+    // Проверка на клик по окнам уведомлений, поддержки и аккаунта, а также их кнопкам
+    const clickedElement = event.target;
+
+    // Списки элементов, которые не должны закрывать окна при клике
+    const noCloseElements = [
+        document.querySelector('.nots__container'),
+        document.querySelector('.supp__container'),
+        document.querySelector('.acc__container'),
+        document.getElementById('note-btn'),
+        document.getElementById('supp-btn'),
+        document.getElementById('acc-btn'),
+        document.querySelector('.search-bar__note')
+    ];
+
+    // Если клик не по одному из этих элементов, закрываем окна
+    if (!noCloseElements.some(el => el && el.contains(clickedElement))) {
+        // Закрытие окна уведомлений
+        const notsContainer = document.querySelector('.nots__container');
+        if (notsContainer.classList.contains('nots__container--active')) {
+            notsContainer.classList.remove('nots__container--active');
+            document.querySelector('.search-bar__note').classList.remove('semi-color');
+            document.querySelector('.body-page').classList.remove('scroll-stop');
+        }
+
+        // Закрытие окна поддержки
+        const suppContainer = document.querySelector('.supp__container');
+        if (suppContainer.classList.contains('supp__container--active')) {
+            suppContainer.classList.remove('supp__container--active');
+            document.getElementById('supp-btn').classList.remove('semi-color');
+            document.querySelector('.body-page').classList.remove('scroll-stop');
+        }
+
+        // Закрытие окна аккаунта
+        const accContainer = document.querySelector('.acc__container');
+        if (accContainer.classList.contains('acc__container--active')) {
+            accContainer.classList.remove('acc__container--active');
+            document.getElementById('acc-btn').classList.remove('semi-color');
+            document.querySelector('.body-page').classList.remove('scroll-stop');
+        }
+    }
+});
+
+// Открытие-закрытие окна уведомлений
+document.getElementById('note-btn').addEventListener('click', function (event) {
+    event.stopPropagation(); // Предотвращение всплытия события
+    document.querySelector('.nots__container').classList.toggle('nots__container--active');
+    document.querySelector('.search-bar__note').classList.toggle('semi-color');
+    document.querySelector('.supp__container').classList.remove('supp__container--active');
+    document.getElementById('supp-btn').classList.remove('semi-color');
+    document.querySelector('.acc__container').classList.remove('acc__container--active');
+    document.getElementById('acc-btn').classList.remove('semi-color');
+    // document.querySelector('.body-page').classList.toggle('scroll-stop');
+});
+
+// Открытие-закрытие окна поддержки
+document.getElementById('supp-btn').addEventListener('click', function (event) {
+    event.stopPropagation(); // Предотвращение всплытия события
+    document.querySelector('.supp__container').classList.toggle('supp__container--active');
+    document.getElementById('supp-btn').classList.toggle('semi-color');
+    document.querySelector('.nots__container').classList.remove('nots__container--active');
+    document.querySelector('.search-bar__note').classList.remove('semi-color');
+    document.querySelector('.acc__container').classList.remove('acc__container--active');
+    document.getElementById('acc-btn').classList.remove('semi-color');
+    // document.querySelector('.body-page').classList.toggle('scroll-stop');
+});
+
+// Открытие-закрытие окна аккаунта
+document.getElementById('acc-btn').addEventListener('click', function (event) {
+    event.stopPropagation(); // Предотвращение всплытия события
+    document.querySelector('.acc__container').classList.toggle('acc__container--active');
+    document.getElementById('acc-btn').classList.toggle('semi-color');
+    document.querySelector('.nots__container').classList.remove('nots__container--active');
+    document.querySelector('.search-bar__note').classList.remove('semi-color');
+    document.querySelector('.supp__container').classList.remove('supp__container--active');
+    document.getElementById('supp-btn').classList.remove('semi-color');
+    document.querySelector('.body-page').classList.toggle('scroll-stop');
+});
+
+// удаление стоп-скролл класса, если окно содержит класс отображения
+// уведомления
+document.getElementById('note-btn').addEventListener('click', function () {
+    if (document.querySelector('.nots__container').classList.contains('nots__container--active')) {
+        document.querySelector('.body-page').classList.add('scroll-stop');
+    } else {
+        document.querySelector('.body-page').classList.remove('scroll-stop');
+    }
+})
+
+// поддержка
+document.getElementById('supp-btn').addEventListener('click', function () {
+    if (document.querySelector('.supp__container').classList.contains('supp__container--active')) {
+        document.querySelector('.body-page').classList.add('scroll-stop');
+    } else {
+        document.querySelector('.body-page').classList.remove('scroll-stop');
+    }
+})
+
+// acc
+document.getElementById('acc-btn').addEventListener('click', function () {
+    if (document.querySelector('.acc__container').classList.contains('acc__container--active')) {
+        document.querySelector('.body-page').classList.add('scroll-stop');
+    } else {
+        document.querySelector('.body-page').classList.remove('scroll-stop');
+    }
+})
+
+//city autocomplete
+document.addEventListener("DOMContentLoaded", function () {
+    try {
+        const cityInput = document.getElementById("city-input");
+        const autocompleteList = document.getElementById("autocomplete-list");
+        const clearInput = document.getElementById("clear-input");
+
+        const cities = ["Москва", "Санкт-Петербург", "Новосибирск", "Екатеринбург", "Казань", "Нижний Новгород", "Челябинск", "Самара", "Омск", "Ростов-на-Дону", "Уфа", "Красноярск", "Воронеж", "Пермь", "Волгоград"];
+
+        cityInput.addEventListener("input", function () {
+            const query = cityInput.value.toLowerCase();
+            autocompleteList.innerHTML = "";
+
+            if (query === "") {
+                showDefaultOptions();
+                return;
+            }
+
+            const filteredCities = cities.filter(city => city.toLowerCase().includes(query));
+
+            if (filteredCities.length === 0) {
+                autocompleteList.style.display = "none";
+            } else {
+                autocompleteList.style.display = "block";
+            }
+
+            filteredCities.forEach(city => {
+                const item = document.createElement("div");
+                item.classList.add("autocomplete-item");
+                item.innerText = city;
+                item.addEventListener("click", function () {
+                    cityInput.value = city;
+                    autocompleteList.innerHTML = "";
+                    autocompleteList.style.display = "none";
+                    cityInput.classList.add("selected");
+                    clearInput.style.display = "inline";
+                });
+                autocompleteList.appendChild(item);
+            });
+        });
+
+        cityInput.addEventListener("focus", function () {
+            if (cityInput.value === "") {
+                showDefaultOptions();
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!autocompleteList.contains(e.target) && e.target !== cityInput && e.target !== clearInput) {
+                autocompleteList.innerHTML = "";
+                autocompleteList.style.display = "none";
+            }
+        });
+
+        clearInput.addEventListener("click", function () {
+            cityInput.value = "";
+            cityInput.classList.remove("selected");
+            clearInput.style.display = "none";
+            autocompleteList.innerHTML = "";
+            autocompleteList.style.display = "none";
+        });
+
+        function showDefaultOptions() {
+            autocompleteList.innerHTML = "";
+            const defaultCities = ["Москва", "Санкт-Петербург"];
+            defaultCities.forEach(city => {
+                const item = document.createElement("div");
+                item.classList.add("autocomplete-item");
+                item.innerText = city;
+                item.addEventListener("click", function () {
+                    cityInput.value = city;
+                    autocompleteList.innerHTML = "";
+                    autocompleteList.style.display = "none";
+                    cityInput.classList.add("selected");
+                    clearInput.style.display = "inline";
+                });
+                autocompleteList.appendChild(item);
+            });
+            if (defaultCities.length > 0) {
+                autocompleteList.style.display = "block";
+            } else {
+                autocompleteList.style.display = "none";
+            }
+        }
+    } catch (err) {
+        console.log('cant find city autocomplete app script')
+    }
+});
+
+//программа для контроля чекбокса и введенных данных
+try {
+    document.getElementById('search-duplicates').addEventListener('change', function () {
+        var clonesLabel = document.getElementById('clones-label');
+        var dayAmount = document.getElementById('day-amount');
+        var errorSpan = clonesLabel.querySelector('.error');
+
+        if (this.checked) {
+            // clonesLabel.classList.add('visible');
+            if (!dayAmount.value) {
+                clonesLabel.classList.add('error--visible');
+            }
+        } else {
+            clonesLabel.classList.remove('visible', 'error--visible');
+        }
+    });
+
+    document.getElementById('day-amount').addEventListener('input', function () {
+        var clonesLabel = document.getElementById('clones-label');
+
+        if (this.value) {
+            clonesLabel.classList.remove('error--visible');
+        } else {
+            clonesLabel.classList.add('error--visible');
+        }
+    });
+} catch (err) {
+    console.log('cannot find control checkbox and add data')
+}
+
+//проверка на выбор списка
+try {
+    document.getElementById('specific-vacancy').addEventListener('change', function () {
+        var specificWrapper = document.getElementById('specific-vacancy-wrapper');
+        var errorSpan = document.querySelector('.new__current-label .error');
+        var vacancyLabel = document.getElementById('specific-vacancy-label');
+
+        if (this.checked) {
+            specificWrapper.classList.add('specific--visible');
+            var selectedItems = specificWrapper.querySelectorAll('.droplist__items .check:checked');
+            if (selectedItems.length === 0) {
+                errorSpan.style.display = 'inline-block';
+                errorSpan.style.cssText = 'display: inline-block; top: 70px; width: auto;';
+                specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
+                vacancyLabel.style.marginBottom = '85px';
+            }
+        } else {
+            specificWrapper.classList.remove('specific--visible');
+            errorSpan.style.display = 'none';
+            vacancyLabel.style.marginBottom = '11px';
+        }
+    });
+
+    document.querySelectorAll('#specific-vacancy-wrapper .droplist__items .check').forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            var specificWrapper = document.getElementById('specific-vacancy-wrapper');
+            var errorSpan = document.querySelector('.new__current-label .error');
+            var selectedItems = specificWrapper.querySelectorAll('.droplist__items .check:checked');
+            var vacancyLabel = document.getElementById('specific-vacancy-label');
+
+            if (selectedItems.length > 0) {
+                errorSpan.style.display = 'none';
+                vacancyLabel.style.marginBottom = '65px';
+                specificWrapper.style.cssText = 'outline: none; border-radius: 5px;';
+                specificWrapper.querySelector('.droplist__selected').classList.add('droplist__result_active');
+            } else {
+                errorSpan.style.display = 'inline-block';
+                vacancyLabel.style.marginBottom = '85px';
+                specificWrapper.style.cssText = 'outline: 1px solid red; border-radius: 5px;';
+                specificWrapper.querySelector('.droplist__selected').classList.remove('droplist__result_active');
+            }
+        });
+    });
+
+    document.getElementById('current-vacancy').addEventListener('change', function () {
+        if (document.getElementById('current-vacancy').checked) {
+            document.getElementById('specific-vacancy-label').style.marginBottom = '11px';
+            document.getElementById('specific-vacancy-error').style.display = 'none';
+        } else {
+            document.getElementById('specific-vacancy-label').style.backgroundColor = 'green';
+        }
+    })
+
+    document.getElementById('all-vacancies').addEventListener('change', function () {
+        if (document.getElementById('current-vacancy').checked) {
+            document.getElementById('specific-vacancy-label').style.backgroundColor = 'green';
+        } else {
+            document.getElementById('specific-vacancy-label').style.marginBottom = '11px';
+            document.getElementById('specific-vacancy-error').style.display = 'none';
+        }
+    })
+} catch (err) {
+    console.log('cannot find check choose item on list app')
+}
