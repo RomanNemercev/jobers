@@ -62,6 +62,12 @@
 }
 
 /*custom styles*/
+.service__rewrite-add__mobile,
+.service__public-more,
+.service__mobile-header {
+    display: none;
+}
+
 .service__btn-back {
     margin-bottom: 51px;
 }
@@ -457,4 +463,48 @@
 
 .service__public-descr__title {
     margin-bottom: 6px;
+}
+
+/*basket sets*/
+.service__basket-wrapper {
+    position: relative;
+}
+
+.service__basket-wrapper--sticky {
+    position: fixed;
+    top: 90px; /* Отступ от верха */
+    width: 303px; /* Фиксируем ширину, чтобы не "прыгала" */
+    right: 25px;
+}
+
+.service__basket-toggle {
+    display: none; /* Скрыта по умолчанию */
+    background: var(--color_white);
+    border: none;
+    border-radius: 50px;
+    background-image: url("../img/media/basket-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.service__basket-wrapper--popup {
+    display: none; /* Скрыт по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color_white); /* Полупрозрачный фон */
+    z-index: 6;
+}
+
+.service__basket-wrapper--popup .service__basket-position {
+    position: absolute;
+    top: 44px;
+    width: 100%;
+    max-width: 100%;
 }
