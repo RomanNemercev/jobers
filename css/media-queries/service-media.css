@@ -136,6 +136,18 @@
 }
 
 @media (max-width: 768px) {
+    .service__avito,
+    .service__vc,
+    .service__habr,
+    .service__helper,
+    .service__resto,
+    .service__superjob,
+    .service__hh,
+    .service__youla,
+    .service__public-info {
+        row-gap: 0;
+    }
+
     .service__btn-back {
         margin-bottom: 18px;
     }
