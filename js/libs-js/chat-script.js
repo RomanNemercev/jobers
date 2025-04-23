@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const replyText = document.querySelector('.chat__reply-text');
   const replyClose = document.querySelector('.chat__reply-close');
   const scrollDownBtn = document.querySelector('.chat__scroll-down-btn');
+  const inputSpaceWrapper = document.querySelector('.chat__input-space__wrapper');
   let hideTimeout;
   let quotedMessage = null;
 
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     timelineWrapper.style.height = `calc(100vh - ${totalHeight}px)`;
     updatePadding();
     updateScrollButtonVisibility();
+    updateScrollButtonPosition();
   }
 
   // Функция для проверки наличия скроллбара и обновления padding-right
@@ -57,6 +59,15 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       scrollDownBtn.classList.remove('visible');
     }
+  }
+
+  // Функция для обновления позиции кнопки прокрутки вниз
+  function updateScrollButtonPosition() {
+    const inputWrapperHeight = inputSpaceWrapper.offsetHeight; // Высота .chat__input-space__wrapper
+    const replyContainerHeight = replyContainer.style.display === 'flex' ? replyContainer.offsetHeight : 0; // Высота .chat__reply-container
+    const gap = 15; // Отступ 15px
+    const bottomPosition = inputWrapperHeight + replyContainerHeight + gap;
+    scrollDownBtn.style.bottom = `${bottomPosition}px`;
   }
 
   // Функция для прокрутки вниз
@@ -94,16 +105,16 @@ document.addEventListener('DOMContentLoaded', function () {
   scrollDownBtn.addEventListener('click', scrollToBottom);
 
   // Функция для подстройки высоты textarea
-  const minHeight = 55;
-  const maxHeight = 81;
+  const minHeight = 35;
+  // Вычисляем maxHeight: 50vh - 72.69px
+  const headerHeight = 72.69; // Фиксированная высота заголовка
+  let maxHeight = (window.innerHeight * 0.5) - headerHeight; // 50vh - 72.69px
   textarea.style.height = `${minHeight}px`;
 
   function adjustTextareaHeight() {
-    textarea.style.height = 'auto';
+    textarea.style.height = '35px';
     const newHeight = Math.min(Math.max(textarea.scrollHeight, minHeight), maxHeight);
     textarea.style.height = `${newHeight}px`;
-    textarea.style.bottom = '0';
-    textarea.style.top = `auto`;
     updateTimelineHeight(); // Обновляем высоту timelineWrapper
   }
 
@@ -205,9 +216,12 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollToBottom(); // Прокручиваем вниз при загрузке, если есть скроллбар
   }
 
-  // Обновляем высоту при изменении размера окна
+  // Обновляем при изменении размера окна
   window.addEventListener('resize', () => {
     updateTimelineHeight();
     updatePadding();
+    // Пересчитываем maxHeight при изменении размера окна
+    maxHeight = (window.innerHeight * 0.5) - headerHeight;
+    adjustTextareaHeight();
   });
 });
