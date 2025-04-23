@@ -58,7 +58,7 @@
 /* Стили для кнопки прокрутки вниз */
 .chat__scroll-down-btn {
     position: fixed;
-    bottom: 20vh;
+    bottom: 80px;
     right: 25px;
     background-color: var(--color_white); /* Цвет кнопки */
     background-image: url("../../img/chat-arrow-down.svg");
@@ -129,8 +129,8 @@
     border: none;
     resize: none;
     line-height: normal;
-    min-height: 55px; /* Минимальная высота */
-    max-height: 81px; /* Максимальная высота */
+    min-height: 35px; /* Минимальная высота */
+    max-height: calc(50vh - 72.69px); /* Максимальная высота */
     overflow-y: auto; /* Скролл появляется, если контент превышает max-height */
     box-sizing: border-box; /* Учитываем padding в высоте */
 }
@@ -139,19 +139,6 @@
     font-size: 14px;
     font-weight: 500;
     color: var(--color_bali);
-    line-height: 40px;
-}
-
-.chat__input-space::-webkit-input-placeholder {
-    line-height: 40px;
-}
-
-.chat__input-space::-moz-placeholder {
-    line-height: 40px;
-}
-
-.chat__input-space:-ms-input-placeholder {
-    line-height: 40px;
 }
 
 .chat__input-space:focus {
@@ -162,15 +149,15 @@
 
 .chat__input-btn {
     position: absolute;
-    top: 30%;
+    bottom: 22.5px;
     right: 35px;
     cursor: pointer;
-    background-image: url("../../img/chat-btn-send.svg");
+    background-image: url('../../img/chat-btn-send.svg');
     background-repeat: no-repeat;
     background-position: center;
-    width: 35px;
-    height: 35px;
-    padding: 5px;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
 }
 
 .chat__input-space:focus + .chat__input-btn {
@@ -178,26 +165,26 @@
 }
 
 .chat__input-space::-webkit-scrollbar {
-    width: 10px;
+    width: 0;
+    visibility: hidden;
 }
 
-.chat__input-space::-webkit-scrollbar-track {
-    background-color: transparent;
-    border-radius: 10px;
-}
+/*.chat__input-space::-webkit-scrollbar-track {*/
+/*    background-color: transparent;*/
+/*    border-radius: 10px;*/
+/*}*/
 
-.chat__input-space::-webkit-scrollbar-thumb {
-    background-color: rgba(107, 114, 128, 0.5);
-    border-radius: 5px;
-}
+/*.chat__input-space::-webkit-scrollbar-thumb {*/
+/*    background-color: rgba(107, 114, 128, 0.5);*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*}*/
 
-.chat__input-space::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(75, 85, 99, 0.5);
-}
+/*.chat__input-space::-webkit-scrollbar-thumb:hover {*/
+/*    background-color: rgba(75, 85, 99, 0.5);*/
+/*}*/
 
 .chat__input-space {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
     border-radius: 5px;
 }
 
@@ -212,6 +199,7 @@
 .chat__input-space__wrapper {
     position: relative;
     padding: 15px 25px;
+    display: flex;
 }
 
 /* Стили для процитированного сообщения */
@@ -384,6 +372,10 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.event__log-item {
+    font-size: 14px;
 }
 
 .event__log-date {
