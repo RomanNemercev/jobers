@@ -133,6 +133,8 @@
     max-height: calc(50vh - 72.69px); /* Максимальная высота */
     overflow-y: auto; /* Скролл появляется, если контент превышает max-height */
     box-sizing: border-box; /* Учитываем padding в высоте */
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .chat__input-space::placeholder {
@@ -150,7 +152,7 @@
 .chat__input-btn {
     position: absolute;
     bottom: 22.5px;
-    right: 35px;
+    right: 40px;
     cursor: pointer;
     background-image: url('../../img/chat-btn-send.svg');
     background-repeat: no-repeat;

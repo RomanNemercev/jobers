@@ -1,0 +1,473 @@
+.search {
+    padding-left: 50px;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    min-height: 70px;
+}
+
+.search__wrapper {
+    border-left: 1px solid var(--color_gray);
+    transition: background-color .3s ease;
+    width: 100%;
+    display: flex;
+}
+
+.search__wrapper:hover {
+    background-color: var(--color_athens-gray);
+}
+
+.has-selected:hover {
+    background-color: var(--color_white);
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    max-width: 100%;
+    width: 100%;
+    min-height: 70px;
+}
+
+.has-selected .search-input-wrapper {
+    min-height: 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px 0;
+    padding-left: 31px;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_space);
+    background-image: url("../../img/search-icon.svg");
+    background-position: center left;
+    transition: background-color .3s ease;
+    margin: 20px 0;
+}
+
+.search__wrapper:hover .search-input {
+    background-color: var(--color_athens-gray);
+}
+
+.search__wrapper.has-selected:hover .search-input {
+    background-color: var(--color_white);
+}
+
+.search__wrapper.focus {
+    background-color: var(--color_white);
+}
+
+.search__wrapper.focus .search-input {
+    background-color: var(--color_white);
+}
+
+.search-input::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color_bali);
+    transition: color .3s ease;
+}
+
+.search-input:focus::placeholder {
+    color: rgba(144, 152, 180, .5);
+}
+
+.search-input:focus-visible {
+    outline: none;
+}
+
+.search-counter {
+    position: absolute;
+    right: 29px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color_bali);
+    font-size: 13px;
+    font-weight: 400;
+    padding: 7px 15px 7px 40px;
+    background-image: url("../../img/people-count.svg");
+    background-position: 15px center;
+    background-color: var(--color_athens-gray);
+    border-radius: 30px;
+}
+
+.search-filters {
+    position: absolute;
+    top: calc(100% + 1px);
+    padding: 15px 25px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+.filter-title {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.filter-title__value {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color_space);
+}
+
+.search-filters__wrapper {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    position: relative;
+    /*background-color: var(--color_athens-gray);*/
+    /*padding: 11px 15px;*/
+    border-radius: 5px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap; /* Запрещаем перенос текста */
+    overflow: hidden; /* Скрываем лишнее */
+    text-overflow: ellipsis; /* Добавляем троеточие */
+    cursor: pointer;
+    padding: 11px 15px;
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+    transition: background-color .3s ease;
+}
+
+.filter-group.open > .filter-header {
+    background-color: var(--color_athens-gray);
+}
+
+.filter-header span:first-child {
+    font-size: 14px;
+    font-weight: 400;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color .3s ease;
+}
+
+.filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.filter-group.selected .filter-toggle {
+    transition: none;
+}
+
+.toggle-arrow,
+.toggle-cross {
+    vertical-align: middle;
+}
+
+.filter-group.open:not(.selected) .filter-toggle {
+    transform: rotate(180deg); /* Переворачиваем стрелку при открытии */
+}
+
+.filter-options {
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility .3s ease;
+}
+
+.filter-group .filter-options {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: max-content;
+    /*min-width: -webkit-fill-available;*/
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Поверх других элементов */
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+
+.filter-group.open .filter-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Возвращаем в нормальное положение */
+}
+
+
+.filter-options li:not(:last-of-type) {
+    border-bottom: 1px solid var(--color_gray);
+}
+
+.filter-checkbox__label,
+.range-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 11.5px 15px;
+    padding-left: 45px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.range-checkbox {
+    padding-left: 30px;
+}
+
+.filter-options input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.filter-options__types {
+    padding: 20px 15px;
+    max-width: 268px;
+}
+
+.filter-types__title {
+    margin-bottom: 5px;
+}
+
+.filter-types__wrapper:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.filter-checkbox__hidden,
+.range-checkbox__hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.filter-checkbox__icon::before,
+.range-checkbox__icon::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color_athens-gray);
+    border-radius: 5px;
+}
+
+.filter-checkbox__icon::after,
+.range-checkbox__icon::after {
+    content: url("../../img/check_w20-checked.svg");
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.range-checkbox__icon::before,
+.range-checkbox__icon::after {
+    left: 0;
+}
+
+.filter-checkbox__value:checked + .filter-checkbox__icon::after,
+.range-checkbox__value:checked + .range-checkbox__icon::after {
+    opacity: 1;
+}
+
+/*.filter-checkbox__label:hover .filter-checkbox__icon::after {*/
+/*    opacity: 1;*/
+/*}*/
+
+.filter-buttons {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 25px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.filter-apply-btn,
+.filter-cancel-btn {
+    padding: 10px 20.3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: normal;
+}
+
+.filter-apply-btn {
+    background: var(--color_dodger);
+    color: var(--color_white);
+    font-size: 15px;
+    font-weight: 400;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.filter-apply-btn.disabled {
+    font-size: 15px;
+    font-weight: 600;
+    background: var(--color_athens-gray);
+    color: var(--color_bali);
+    cursor: not-allowed;
+}
+
+.filter-cancel-btn {
+    background-color: var(--color_zircon);
+    color: var(--color_dodger);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.search-tags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    gap: 5px;
+    padding: 0 25px;
+    padding-right: 39px;
+    min-height: 20px;
+    max-width: 87.62%;
+    width: 100%;
+    margin: 15px 0;
+    overflow-x: auto; /* Горизонтальная прокрутка при переполнении */
+    white-space: nowrap; /* Запрет переноса */
+}
+
+.search-tag {
+    display: flex;
+    align-items: center;
+    background: var(--color_zircon);
+    padding: 11px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_dodger);
+}
+
+.search-tag-text {
+    background-image: url("../../img/search-icon--active.svg");
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding-left: 45px;
+}
+
+.filter-checkbox__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-tag .tag-remove {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+}
+
+.range-options {
+    padding: 15px;
+    /*max-width: 261px;*/
+}
+
+.range-inputs {
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.range-min {
+    margin-bottom: 15px;
+}
+
+.range-inputs input[type="number"] {
+    display: block;
+    width: max-content;
+    min-width: 231px;
+    padding: 11.5px 15px;
+    line-height: normal;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color_athens-gray);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_space);
+}
+
+.range-inputs input[type="number"]::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_bali);
+}
+
+.range-inputs input[type="number"]:focus {
+    outline: 1px solid var(--color_dodger);
+    background-color: var(--color_zircon);
+}
+
+.range-inputs input[type=number]::-webkit-inner-spin-button, .range-inputs input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.range-checkbox {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.range-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.filter-group.default .filter-header span:first-child {
+    color: var(--color_bali); /* По умолчанию */
+}
+
+.filter-group.open .filter-header span:first-child {
+    color: var(--color_space); /* Список открыт */
+}
+
+.filter-group.selected .filter-header span:first-child {
+    color: var(--color_dodger); /* Значение выбрано */
+}
+
+/* Стили для SVG (по аналогии с цветами текста) */
+.filter-group.default .filter-toggle .toggle-arrow path {
+    fill: var(--color_bali); /* По умолчанию */
+}
+
+.toggle-arrow path {
+    transition: fill .3s ease;
+}
+
+.filter-group.open .filter-toggle .toggle-arrow path {
+    fill: var(--color_space); /* Список открыт */
+}
+
+.filter-group.selected .filter-toggle .toggle-cross path {
+    fill: var(--color_dodger); /* Значение выбрано */
+}
