@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     messageContent.innerHTML += `
-            <p class="chat__content-author">Роман</p>
+            <p class="chat__content-author">Евгений Дмитриевич</p>
             <p class="chat__content-item">${messageText}</p>
             <span class="chat__content-date">${new Date().toLocaleString('ru', {
       day: 'numeric', month: 'long', hour: 'numeric', minute: 'numeric'
