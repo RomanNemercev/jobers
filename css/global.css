@@ -1,333 +1,349 @@
 @font-face {
-    font-family: 'Inter';
-    src: local('Inter Regular'), local('Inter-Regular'),
-    url('../fonts/Inter-Regular.woff2') format('woff2'),
-    url('../fonts/Inter-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Inter";
+  src: local("Inter Regular"), local("Inter-Regular"),
+    url("../fonts/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: local('Inter Medium'), local('Inter-Medium'),
-    url('../fonts/Inter-Medium.woff2') format('woff2'),
-    url('../fonts/Inter-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Inter";
+  src: local("Inter Medium"), local("Inter-Medium"),
+    url("../fonts/Inter-Medium.woff2") format("woff2"),
+    url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: local('Inter Semi Bold'), local('Inter-Semibold'),
-    url('../fonts/Inter-SemiBold.woff2') format('woff2'),
-    url('../fonts/Inter-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Inter";
+  src: local("Inter Semi Bold"), local("Inter-Semibold"),
+    url("../fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: local('Inter Bold'), local('Inter-Bold'),
-    url('../fonts/Inter-Bold.woff2') format('woff2'),
-    url('../fonts/Inter-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Inter";
+  src: local("Inter Bold"), local("Inter-Bold"),
+    url("../fonts/Inter-Bold.woff2") format("woff2"),
+    url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 :root {
-    --color_space: #2F353D;
-    --color_background: #EDEFF5;
-    --color_bali: #9098B4;
-    --color_gray: #EDEFF5;
-    --color_athens-gray: #F4F6F8;
-    --color_white: #ffffff;
-    --color_semi-white: rgba(255, 255, 255, 0.5);
-    --color_dodger: #5898FF; /*btns*/
-    --color_zircon: #EFF5FF;
-    --color_pink: #FFEAEA;
-    --color_red: #F50A0A;
-    --color_bright: #393F47;
-    --color_succes: #E4FDE4;
-    --color_btn-succes: #04B600;
-    --color_wh: #28d146;
-    --color_tg: #229ed9;
-    --color_semi-space: rgba(47, 53, 61, 0.5);
-    --color_semi-black: rgba(255, 255, 255, 0.25);
-    --color_blaze-orange: #ff6b00;
-    --color_seranade: #fff0e5
+  --color_space: #2f353d;
+  --color_background: #edeff5;
+  --color_bali: #9098b4;
+  --color_gray: #edeff5;
+  --color_athens-gray: #f4f6f8;
+  --color_white: #ffffff;
+  --color_semi-white: rgba(255, 255, 255, 0.5);
+  --color_dodger: #5898ff; /*btns*/
+  --color_zircon: #eff5ff;
+  --color_pink: #ffeaea;
+  --color_red: #f50a0a;
+  --color_bright: #393f47;
+  --color_succes: #e4fde4;
+  --color_btn-succes: #04b600;
+  --color_wh: #28d146;
+  --color_tg: #229ed9;
+  --color_semi-space: rgba(47, 53, 61, 0.5);
+  --color_semi-black: rgba(255, 255, 255, 0.25);
+  --color_blaze-orange: #ff6b00;
+  --color_seranade: #fff0e5;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .body-page {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--color_gray);
+  font-family: "Inter", sans-serif;
+  background-color: var(--color_gray);
 }
 
 a {
-    outline: none;
-    text-decoration: none;
-    color: inherit;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .list-reset {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .btn-reset {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    user-select: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
 }
 
 .btn {
-    min-width: 146px;
-    min-height: 40px;
-    outline: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--color_white);
-    background: var(--color_dodger);
-    user-select: none;
+  min-width: 146px;
+  min-height: 40px;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color_white);
+  background: var(--color_dodger);
+  user-select: none;
 }
 
 .btn-two {
-    outline: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--color_dodger);
-    background: transparent;
-    border: 1px solid var(--color_dodger);
-    user-select: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color_dodger);
+  background: transparent;
+  border: 1px solid var(--color_dodger);
+  user-select: none;
 }
 
 .btn-delete {
-    font-size: 15px;
-    font-weight: 400;
-    background-color: var(--color_pink);
-    color: var(--color_red);
-    padding: 11px 20px;
-    border-radius: 5px;
-    user-select: none;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: var(--color_pink);
+  color: var(--color_red);
+  padding: 11px 20px;
+  border-radius: 5px;
+  user-select: none;
 }
 
 .f14w400 {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f14w500 {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f15w400 {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f15w500 {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f16w500 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f16w600 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f18w500 {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f18w600 {
-    font-size: 18px;
-    font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .f20w500 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f20w600 {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f20w700 {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .f25w600 {
-    font-size: 25px;
-    font-weight: 600;
-    line-height: normal;
-    color: var(--color_space);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--color_space);
 }
 
 .c-bali {
-    color: var(--color_bali);
+  color: var(--color_bali);
+}
+
+.c-space {
+  color: var(--color_space);
 }
 
 .bg-fix {
-    background-repeat: no-repeat;
-    background-size: auto;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .mb5 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .mb10 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .mb15 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .mb20 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .mb25 {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .mb35 {
-    margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 .mb40 {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .mr15 {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .mr25 {
-    margin-right: 25px;
+  margin-right: 25px;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .block {
-    display: block;
+  display: block;
 }
 
 .btn-cancel {
-    font-size: 15px;
-    font-weight: 400;
-    background-color: var(--color_zircon);
-    padding: 11px 20px;
-    color: var(--color_dodger);
-    border-radius: 5px;
-    user-select: none;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: var(--color_zircon);
+  padding: 11px 20px;
+  color: var(--color_dodger);
+  border-radius: 5px;
+  user-select: none;
 }
 
 .btn-disable {
-    background-color: var(--color_athens-gray);
-    color: var(--color_bali);
-    font-size: 15px;
-    font-weight: 400;
-    padding: 11.38px 20px;
-    border-radius: 5px;
-    user-select: none;
+  background-color: var(--color_athens-gray);
+  color: var(--color_bali);
+  font-size: 15px;
+  font-weight: 400;
+  padding: 11.38px 20px;
+  border-radius: 5px;
+  user-select: none;
 }
 
 .btn-succes {
-    min-width: 116px;
-    background-color: var(--color_succes);
-    min-height: 40px;
-    border-radius: 5px;
-    color: var(--color_btn-succes);
-    user-select: none;
+  min-width: 116px;
+  background-color: var(--color_succes);
+  min-height: 40px;
+  border-radius: 5px;
+  color: var(--color_btn-succes);
+  user-select: none;
 }
 
 .container {
-    padding: 95px 25px 23px 295px;
-    width: 100%;
+  padding: 95px 25px 23px 295px;
+  width: 100%;
 }
 
 .title {
-    color: var(--color_space);
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
+  color: var(--color_space);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
 }
 
 .descr {
-    margin: 0;
-    color: var(--color_bali);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
+  margin: 0;
+  color: var(--color_bali);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .stop-scroll {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
 }
