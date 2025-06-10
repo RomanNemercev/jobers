@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jobers - Поиск кандидатов</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/search-base.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+</head>
+
+<body class="body-page">
+    <!--блок бокового меню-->
+    <section class="nav">
+        <div class="nav__container">
+            <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                  class="nav__logo-icon" /></a>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Рекрутинг</li>
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-desktop">Рабочий стол</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../partials/vacancies.html" class="nav__link-item link-vacancies active-page">Вакансии</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="candidates-null.html" class="nav__link-item link-candidates">Кандидаты</a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Организация</li>
+                <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-messages">Сообщения</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="company.html" class="nav__link-item link-companies">Компании</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-documents">Документы</a>
+                </li>
+                <li class="nav__link list-reset none-stick">
+                    <a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-support">Поддержка</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="settings.html" class="nav__link-item link-settings">Настройки</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--блок поискового меню-->
+    <section class="search-bar">
+        <div class="search-bar__container">
+            <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
+                  class="nav__logo-icon" /></a>
+            <form action="#" class="search-bar__form">
+                <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box" />
+                <div class="search-bar__dropdown"></div>
+            </form>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="note-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)"
+                          srcset="../img/media/notification-768.svg" />
+                        <img src="../img/notification.svg" alt="Уведомления" class="search-bar__note" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="supp-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg" />
+                        <img src="../img/support.svg" alt="Поддержка" class="search-bar__support" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="acc-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg" />
+                        <img src="../img/profile.svg" alt="Личный кабинет" class="search-bar__acc" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__burger toogle">
+                <div class="toogle_bar">
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nots">
+        <div class="nots__container">
+            <h3 class="nots__title f16w600">Уведомления</h3>
+            <ul class="nots__cans-list">
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-now f14w400 c-bali">сейчас</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Бухгалтерия</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Александра степанова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Здравствуйте, вы запрашивали закрывающие документы, вчера мы
+                                их отправили
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Личный менеджер</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Яна Олейникова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Действительно, сейчас очень большая конкуренция на уборщиков,
+                                я бы не рекомендовало использовать тариф без автоподнятия
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Евгения Онегина</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Продуктовый менеджер</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+            </ul>
+            <button class="btn-reset nots__check f15w500">
+                Отметить как прочитанное
+            </button>
+        </div>
+    </section>
+    <section class="supp">
+        <div class="supp__container">
+            <!--        default variation 1 on work without icon-->
+            <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+            <div class="supp__man-img onwork-styles">
+                <img src="../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon" />
+            </div>
+            <p class="supp__man-name">Купатова Елизавета</p>
+            <div class="supp__man-status">
+                <span class="supp__man-item">Сейчас работает</span>
+            </div>
+            <ul class="supp__main-info">
+                <li class="supp__main-time">
+                    <span class="supp__main-item">с 10:00 до 20:00 (MSK)</span>
+                </li>
+                <li class="supp__main-mail bg-fix">
+                    <a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>
+                </li>
+                <li class="supp__main-phone bg-fix">
+                    <a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб 103)</a>
+                </li>
+            </ul>
+            <div class="supp__user-num">
+                <div class="sup__user-item">
+                    <span class="f20w600">32948714</span>
+                </div>
+                <div class="supp__num-desc">
+                    <span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при
+                        обращении, для того что&nbsp;бы сотрудник мог быстрее вам
+                        помочь</span>
+                </div>
+            </div>
+            <!--        default variation 2 not work without icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 3 notwork with icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 4 without icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 5 with icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+        </div>
+    </section>
+    <section class="acc">
+        <div class="acc__container">
+            <div class="acc__header">
+                <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+                <p class="acc__user-level f14w400 c-bali">Администратор</p>
+            </div>
+            <ul class="acc__active">
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Мой профиль</a>
+                </li>
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Лицевой счет</a>
+                </li>
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Личный менеджер</a>
+                </li>
+            </ul>
+            <div class="acc__user-exit bg-fix">
+                <a href="#" class="acc__exit-btn f15w400">Выйти из системы</a>
+            </div>
+        </div>
+    </section>
+    <div class="search-page container">
+        <div class="search-page__title-wrapper">
+            <h1 class="search-page__title c-space">Поиск кандидатов в&nbsp;единой базе резюме</h1>
+            <p class="search-page__description c-bali">Не&nbsp;ждите откликов&nbsp;&mdash; найдите сотрудника сами</p>
+        </div>
+        <div class="search-page__filter">
+            <div class="search-page__filter-input">
+                <input type="text" class="search-page__input bg-fix" placeholder="Поиск по резюме">
+                <button class="btn-reset btn search-page__apply-btn">Найти</button>
+            </div>
+            <div class="search-page__filters" style="display: none;">
+                <!-- Фильтры -->
+                <div class="search-page__filters-wrapper">
+                    <!-- Базы резюме -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>Базы резюме</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options search-page__include-icon">
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Superjob.ru"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Superjob.ru
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                    <span class="search-page__icon-company"><svg width="20" height="20"
+                                          viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="20" height="20" rx="5" fill="#00AF8F" />
+                                            <path
+                                              d="M8.64355 7.61475C7.47671 7.61475 6.87681 8.25757 6.87681 8.97769C6.87681 9.70422 7.31855 10.058 8.13613 10.2636L8.72939 10.4115C9.31626 10.5593 9.58632 10.6944 9.58632 11.0029C9.58632 11.4338 9.11161 11.5881 8.70947 11.5881C8.04365 11.5881 7.65454 11.305 7.41079 10.9194L6.63281 11.3372C7.048 12.083 7.81294 12.3853 8.59091 12.3853C9.42177 12.3853 10.5028 12.0446 10.5028 10.9194C10.5028 10.0452 9.79071 9.76231 9.05898 9.58874L8.57124 9.47303C8.07685 9.35732 7.78662 9.21576 7.78662 8.92648C7.78662 8.44418 8.39316 8.37992 8.59091 8.37992C9.32265 8.37992 9.56664 8.82357 9.69184 9.03579L10.4568 8.59214C9.90263 7.7307 9.05898 7.61475 8.64355 7.61475Z"
+                                              fill="white" />
+                                            <path
+                                              d="M13.3674 7.61475H12.5127V10.5901C12.5127 11.0582 12.4864 11.4302 11.8159 11.4302C11.6843 11.4302 11.5923 11.4174 11.3557 11.3662V12.1804C11.612 12.2383 11.7829 12.2383 11.8948 12.2383C13.2294 12.2383 13.3677 11.456 13.3677 10.7954L13.3674 7.61475Z"
+                                              fill="white" />
+                                        </svg></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Avito.ru"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Avito.ru
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                    <span class="search-page__icon-company">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.14031" y="0.14031" width="19.7194" height="19.7194" rx="4.85969"
+                                              fill="#F9FAFC" />
+                                            <rect x="0.14031" y="0.14031" width="19.7194" height="19.7194" rx="4.85969"
+                                              stroke="#EDEFF5" stroke-width="0.28062" />
+                                            <path
+                                              d="M9.46873 7.3484C9.46873 8.51882 8.52029 9.46798 7.34994 9.46798C6.17959 9.46798 5.23047 8.51882 5.23047 7.3484C5.23047 6.17821 6.17959 5.22949 7.34994 5.22949C8.52029 5.22949 9.46873 6.17821 9.46873 7.3484Z"
+                                              fill="#00AAFF" />
+                                            <path
+                                              d="M14.7715 12.1926C14.7715 13.6166 13.6169 14.7706 12.193 14.7706C10.7697 14.7706 9.61621 13.6166 9.61621 12.1926C9.61621 10.7686 10.7697 9.61436 12.193 9.61436C13.6169 9.61436 14.7715 10.7686 14.7715 12.1926Z"
+                                              fill="#97CF26" />
+                                            <path
+                                              d="M13.8528 7.34845C13.8528 8.26508 13.1097 9.00848 12.1929 9.00848C11.2772 9.00848 10.5343 8.26508 10.5343 7.34845C10.5343 6.43227 11.2774 5.68932 12.1929 5.68932C13.1097 5.68932 13.8528 6.43227 13.8528 7.34845Z"
+                                              fill="#FF6163" />
+                                            <path
+                                              d="M8.55054 12.1925C8.55054 12.8556 8.01271 13.3921 7.3499 13.3921C6.68709 13.3921 6.14925 12.8556 6.14925 12.1925C6.14925 11.5294 6.68709 10.9929 7.3499 10.9929C8.01271 10.9929 8.55054 11.5294 8.55054 12.1925Z"
+                                              fill="#A169F7" />
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Регион -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>Регион</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Вся Россия" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Вся Россия
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Амурская область" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Амурская область
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Белгородская область" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Белгородская область
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Волгоградская область" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Волгоградская область
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Ярославская область" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Ярославская область
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-page__filter-city">
+                        <div class="search-page__filter-header" style="display: flex;">
+                            <span class="search-page__filter-header-text">Город</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <div class="search-page__filter-input-wrapper" style="display: none;">
+                            <input type="text" class="search-page__filter-city-input" placeholder="">
+                            <span class="search-page__filter-reset" style="display: none;"><svg class="toggle-cross"
+                                  width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.1577 13.4655C15.3162 13.624 15.4053 13.839 15.4053 14.0631C15.4053 14.2873 15.3162 14.5023 15.1577 14.6608C14.9992 14.8193 14.7842 14.9084 14.5601 14.9084C14.3359 14.9084 14.1209 14.8193 13.9624 14.6608L9.49826 10.1953L5.03271 14.6594C4.8742 14.8179 4.65922 14.9069 4.43506 14.9069C4.21089 14.9069 3.99591 14.8179 3.8374 14.6594C3.67889 14.5009 3.58984 14.2859 3.58984 14.0617C3.58984 13.8376 3.67889 13.6226 3.8374 13.4641L8.30295 8.99994L3.83881 4.53439C3.6803 4.37588 3.59125 4.1609 3.59125 3.93674C3.59125 3.71257 3.6803 3.49759 3.83881 3.33908C3.99732 3.18057 4.2123 3.09152 4.43646 3.09152C4.66063 3.09152 4.87561 3.18057 5.03412 3.33908L9.49826 7.80463L13.9638 3.33838C14.1223 3.17987 14.3373 3.09082 14.5615 3.09082C14.7856 3.09082 15.0006 3.17987 15.1591 3.33838C15.3176 3.49689 15.4067 3.71187 15.4067 3.93603C15.4067 4.1602 15.3176 4.37518 15.1591 4.53369L10.6936 8.99994L15.1577 13.4655Z"
+                                      fill="#5898FF" />\n' +
+                                    "
+                                </svg></span>
+                        </div>
+                        <div class="search-page__city-hint" style="display: none;">Введите хотя бы 3 символа</div>
+                        <ul class="search-page__city-options" style="display: none;">
+                            <!-- Список предложений будет заполняться динамически -->
+                        </ul>
+                    </div>
+                    <!-- Метро   -->
+                    <div class="search-page__filter-metro">
+                        <div class="search-page__filter-header" style="display: flex;">
+                            <span class="search-page__filter-header-text">Метро</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <div class="search-page__filter-input-wrapper" style="display: none;">
+                            <input type="text" class="search-page__filter-metro-input" placeholder="">
+                            <span class="search-page__filter-reset" style="display: none;"><svg class="toggle-cross"
+                                  width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.1577 13.4655C15.3162 13.624 15.4053 13.839 15.4053 14.0631C15.4053 14.2873 15.3162 14.5023 15.1577 14.6608C14.9992 14.8193 14.7842 14.9084 14.5601 14.9084C14.3359 14.9084 14.1209 14.8193 13.9624 14.6608L9.49826 10.1953L5.03271 14.6594C4.8742 14.8179 4.65922 14.9069 4.43506 14.9069C4.21089 14.9069 3.99591 14.8179 3.8374 14.6594C3.67889 14.5009 3.58984 14.2859 3.58984 14.0617C3.58984 13.8376 3.67889 13.6226 3.8374 13.4641L8.30295 8.99994L3.83881 4.53439C3.6803 4.37588 3.59125 4.1609 3.59125 3.93674C3.59125 3.71257 3.6803 3.49759 3.83881 3.33908C3.99732 3.18057 4.2123 3.09152 4.43646 3.09152C4.66063 3.09152 4.87561 3.18057 5.03412 3.33908L9.49826 7.80463L13.9638 3.33838C14.1223 3.17987 14.3373 3.09082 14.5615 3.09082C14.7856 3.09082 15.0006 3.17987 15.1591 3.33838C15.3176 3.49689 15.4067 3.71187 15.4067 3.93603C15.4067 4.1602 15.3176 4.37518 15.1591 4.53369L10.6936 8.99994L15.1577 13.4655Z"
+                                      fill="#5898FF" />\n' +
+                                    "
+                                </svg></span>
+                        </div>
+                        <div class="search-page__metro-hint" style="display: none;">Введите хотя бы 3 символа</div>
+                        <ul class="search-page__metro-options" style="display: none;">
+                            <!-- Список предложений будет заполняться динамически -->
+                        </ul>
+                    </div>
+                    <!-- Возраст -->
+                    <div class="search-page__filter-group" data-type="range">
+                        <div class="search-page__filter-header">
+                            <span>Возраст</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <div class="search-page__filter-options search-page__range-options">
+                            <div class="search-page__range-inputs">
+                                <input type="number" class="search-page__range-min" placeholder="от">
+                                <input type="number" class="search-page__range-max" placeholder="до">
+                            </div>
+                            <label class="search-page__range-checkbox">
+                                <input type="checkbox"
+                                  class="search-page__range-hide search-page__range-checkbox-value search-page__range-checkbox-hidden">
+                                Скрыть без возраста
+                                <span class="search-page__range-checkbox-icon"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Пол -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>Пол</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Мужской"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Мужской
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Женский"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Женский
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Опыт -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>Опыт</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Без опыта"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Без опыта
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="От 1 года"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    От 1 года
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="От 3х лет"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    От 3х лет
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="От 5 лет"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    От 5 лет
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Гражданство -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>Гражданство</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Не имеет значения"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Не имеет значения
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Россия"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Россия
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Страны СНГ"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Страны СНГ
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Остальные страны"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Остальные страны
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Заработная плата -->
+                    <div class="search-page__filter-group" data-type="range">
+                        <div class="search-page__filter-header">
+                            <span>Заработная плата</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <div class="search-page__filter-options search-page__range-options">
+                            <div class="search-page__range-inputs">
+                                <div class="search-page__input-wrapper">
+                                    <input type="number" class="search-page__range-min" placeholder="от">
+                                    <span class="search-page__input-currency">тыс. руб</span>
+                                </div>
+                                <div class="search-page__input-wrapper">
+                                    <input type="number" class="search-page__range-max" placeholder="до">
+                                    <span class="search-page__input-currency">тыс. руб</span>
+                                </div>
+                            </div>
+                            <!-- <label class="search-page__range-checkbox">
+                                <input type="checkbox"
+                                  class="search-page__range-hide search-page__range-checkbox-value search-page__range-checkbox-hidden">
+                                Скрыть без зарплаты
+                                <span class="search-page__range-checkbox-icon"></span>
+                            </label> -->
+                        </div>
+                    </div>
+                    <!-- График работы -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>График работы</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Гибкий график"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Гибкий график
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Удаленная работа"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Удаленная работа
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Вахтовый метод"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Вахтовый метод
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Полный день"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Полный день
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Дата обновления -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>Дата обновления резюме</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Последний день" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Последний день
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Последние 3 дня" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Последние 3 дня
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Последняя неделя" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Последняя неделя
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Последний месяц" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Последний месяц
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Последний год" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Последний год
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Специализация -->
+                    <div class="search-page__filter-group">
+                        <div class="search-page__filter-header">
+                            <span>Специализация</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Автомобильный бизнес"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Автомобильный бизнес
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Административный персонал"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Административный персонал
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Безопасность"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Безопасность
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Высший и средний менеджмент"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Высший и средний менеджмент
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Добыча сырья"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Добыча сырья
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Домашний, обслуживающий персонал"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Домашний, обслуживающий персонал
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Закупки"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Закупки
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Информационные технологии"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Информационные технологии
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Искусство, развлечения, массмедиа"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Искусство, развлечения, массмедиа
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Маркетинг, реклама, PR"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Маркетинг, реклама, PR
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Медицина, фармацевтика"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Медицина, фармацевтика
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Медицина, фармацевтика"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Медицина, фармацевтика
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Наука, образование"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Наука, образование
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Продажи, обслуживание клиентов"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Продажи, обслуживание клиентов
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Производство, сервисное обслуживание"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Производство, сервисное обслуживание
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Рабочий персонал"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Рабочий персонал
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Розничная торговля"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Розничная торговля
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Сельское хозяйство"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Сельское хозяйство
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Спортивные клубы, фитнес, салоны красоты"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Спортивные клубы, фитнес, салоны красоты
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Стратегия, инвестиции, консалтинг"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Стратегия, инвестиции, консалтинг
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Страхование"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Страхование
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Строительство, недвижимость"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Строительство, недвижимость
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Транспорт, логистика, перевозки"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Транспорт, логистика, перевозки
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Туризм, гостиницы, рестораны"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Туризм, гостиницы, рестораны
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Управление персоналом, тренинги"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Управление персоналом, тренинги
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Финансы, бухгалтерия"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Финансы, бухгалтерия
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Юристы"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Юристы
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label">
+                                    <input type="checkbox" value="Другое"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Другое
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="search-page__options flex">
+                <button class="btn-reset filter-trigger closed">Фильтры</button>
+                <div class="search-page__btn-right">
+                    <div class="search-page__filter-other">
+                        <div class="search-page__other-header">
+                            <span>Сохраненные фильтры (0)</span>
+                            <span class="search-page__filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                  viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                    '
+                                    <path
+                                      d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                      fill="#9098B4" />\n' +
+                                    '
+                                </svg></span>
+                        </div>
+                        <ul class="search-page__filter-options">
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Сохраненный фильтр 1" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Сохраненный фильтр 1
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Сохраненный фильтр 2" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Сохраненный фильтр 2
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Сохраненный фильтр 3" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Сохраненный фильтр 3
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Сохраненный фильтр 4" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Сохраненный фильтр 4
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="search-page__filter-checkbox-label search-page__radio-type">
+                                    <input type="radio" value="Сохраненный фильтр 5" name="search-region"
+                                      class="search-page__filter-checkbox-value search-page__filter-checkbox-hidden">
+                                    Сохраненный фильтр 5
+                                    <span class="search-page__filter-checkbox-icon"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn-reset">Сохраненные фильтры</button>
+                    <button class="btn-reset">Избранные резюме</button>
+                </div>
+            </div>
+        </div>
+        <div class="search-page__cards-description">
+            <div class="search-page__card bg-fix">
+                <div class="search-page__card-content">
+                    <p class="search-page__card-title f18w500 mb15">30+ млн резюме из Superjob и Avito</p>
+                    <p class="search-page__card-description c-bali f14w400">Кандидаты уже разместили резюме на
+                        площадках, а мы следим за
+                        актуальностью анкет</p>
+                </div>
+            </div>
+            <div class="search-page__card bg-fix">
+                <div class="search-page__card-content">
+                    <p class="search-page__card-title f18w500 mb15">Бесплатный просмотр резюме
+                    </p>
+                    <p class="search-page__card-description c-bali f14w400">Смотрите любые резюме и платите только за
+                        контакты тех, кто вам понравится
+                    </p>
+                </div>
+            </div>
+            <div class="search-page__card bg-fix">
+                <div class="search-page__card-content">
+                    <p class="search-page__card-title f18w500 mb15">Открытие одного контакта от 75₽
+                    </p>
+                    <p class="search-page__card-description c-bali f14w400">Откройте контакты нескольких кандидатов,
+                        пополнив счет любым удобным способом
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery_3.3.1.min.js"></script>
+    <script src="../js/search-base.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
