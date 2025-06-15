@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jobers - Добавить вакансию</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/custom.css" />
+    <link rel="stylesheet" href="../../css/libs-css/resume-more.css">
+    <link rel="stylesheet" href="../../css/media.css" />
+</head>
+
+<body class="body-page">
+    <!--блок бокового меню-->
+    <section class="nav">
+        <div class="nav__container">
+            <a href="../../index.html" class="nav__logo"><img src="../../img/logo.svg" alt="Логотип компании"
+                  class="nav__logo-icon" /></a>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Рекрутинг</li>
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-desktop">Рабочий стол</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../vacancies.html" class="nav__link-item link-vacancies active-page">Вакансии</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../candidates-null.html" class="nav__link-item link-candidates">Кандидаты</a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Организация</li>
+                <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-messages">Сообщения</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../company.html" class="nav__link-item link-companies">Компании</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-documents">Документы</a>
+                </li>
+                <li class="nav__link list-reset none-stick">
+                    <a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-support">Поддержка</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../settings.html" class="nav__link-item link-settings">Настройки</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--блок поискового меню-->
+    <section class="search-bar">
+        <div class="search-bar__container">
+            <a href="../../index.html" class="search-bar__logo"><img src="../../img/media/logo-768.svg"
+                  alt="Логотип компании" class="nav__logo-icon" /></a>
+            <form action="#" class="search-bar__form">
+                <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box" />
+                <div class="search-bar__dropdown"></div>
+            </form>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="note-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)"
+                          srcset="../../img/media/notification-768.svg" />
+                        <img src="../../img/notification.svg" alt="Уведомления" class="search-bar__note" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="supp-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../../img/media/support-768.svg" />
+                        <img src="../../img/support.svg" alt="Поддержка" class="search-bar__support" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="acc-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../../img/media/profile-768.svg" />
+                        <img src="../../img/profile.svg" alt="Личный кабинет" class="search-bar__acc" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__burger toogle">
+                <div class="toogle_bar">
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nots">
+        <div class="nots__container">
+            <h3 class="nots__title f16w600">Уведомления</h3>
+            <ul class="nots__cans-list">
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-now f14w400 c-bali">сейчас</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Бухгалтерия</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Александра степанова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Здравствуйте, вы запрашивали закрывающие документы, вчера мы
+                                их отправили
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Личный менеджер</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Яна Олейникова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Действительно, сейчас очень большая конкуренция на уборщиков,
+                                я бы не рекомендовало использовать тариф без автоподнятия
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Евгения Онегина</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Продуктовый менеджер</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+            </ul>
+            <button class="btn-reset nots__check f15w500">
+                Отметить как прочитанное
+            </button>
+        </div>
+    </section>
+    <section class="supp">
+        <div class="supp__container">
+            <!--        default variation 1 on work without icon-->
+            <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+            <div class="supp__man-img onwork-styles">
+                <img src="../../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon" />
+            </div>
+            <p class="supp__man-name">Купатова Елизавета</p>
+            <div class="supp__man-status">
+                <span class="supp__man-item">Сейчас работает</span>
+            </div>
+            <ul class="supp__main-info">
+                <li class="supp__main-time">
+                    <span class="supp__main-item">с 10:00 до 20:00 (MSK)</span>
+                </li>
+                <li class="supp__main-mail bg-fix">
+                    <a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>
+                </li>
+                <li class="supp__main-phone bg-fix">
+                    <a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб 103)</a>
+                </li>
+            </ul>
+            <div class="supp__user-num">
+                <div class="sup__user-item">
+                    <span class="f20w600">32948714</span>
+                </div>
+                <div class="supp__num-desc">
+                    <span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при
+                        обращении, для того что&nbsp;бы сотрудник мог быстрее вам
+                        помочь</span>
+                </div>
+            </div>
+            <!--        default variation 2 not work without icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 3 notwork with icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 4 without icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 5 with icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+        </div>
+    </section>
+    <section class="acc">
+        <div class="acc__container">
+            <div class="acc__header">
+                <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+                <p class="acc__user-level f14w400 c-bali">Администратор</p>
+            </div>
+            <ul class="acc__active">
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Мой профиль</a>
+                </li>
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Лицевой счет</a>
+                </li>
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Личный менеджер</a>
+                </li>
+            </ul>
+            <div class="acc__user-exit bg-fix">
+                <a href="#" class="acc__exit-btn f15w400">Выйти из системы</a>
+            </div>
+        </div>
+    </section>
+    <div class="card-more container">
+        <div class="card__more-wrapper">
+            <a href="../../partials/search-base.html" class="card-more__return">Назад к списку резюме</a>
+            <div class="card-more__content">
+                <div class="card__content-main">
+                    <div class="card">
+                        <div class="card__main">
+                            <div class="card__main-info">
+                                <a href="#" target="_blank" class="card__main-title c-dodger">Помощник маркетолога</a>
+                                <div class="card__main-quick p-flex">
+                                    <p class="card__main-name f14w300 c-space">Иван Иванович</p>
+                                    <span class="f14w300 c-space">,&nbsp;</span>
+                                    <p class="card__main-age f14w400 c-space">26 лет</p>
+                                    <div class="card__main-divider c-bali">&nbsp;•&nbsp;</div>
+                                    <div class="card__response-info">
+                                        <p class="card__response-text c-bali f14w300">
+                                            Резюме найдено на сайте hh.ru
+                                        </p>
+                                    </div>
+                                    <p class="card__main-salary f14w700">
+                                        70 000<span>&nbsp;руб&nbsp;</span>
+                                    </p>
+                                </div>
+                                <ul class="card__main-attr p-flex">
+                                    <li class="card__main-item">мужчина</li>
+                                    <li class="card__main-item">Санкт-Петербург
+                                    </li>
+                                    <li class="card__main-item">Гражданство: Россия
+                                    </li>
+                                    <li class="card__main-view bg-fix"><span
+                                          class="card__view-item f14w300 c-bali"><time
+                                              datetime="2024-02-20T17:30">20.02.2024&nbsp;в 17:30</time></span></li>
+                                </ul>
+                            </div>
+                            <picture class="card__main-avatar"><img src="../../img/user-image.png" alt="avatar"
+                                  class="card__avatar-img">
+                            </picture>
+                        </div>
+                        <div class="card__description">
+                            <ul class="card__description-list">
+                                <li class="card__description-item p-flex">
+                                    <p class="card__description-skill c-bali f14w300">Опыт работы</p>
+                                    <p class="card__skill-item f14w300">
+                                        <span class="card__skill-years">30</span>&nbsp;лет&nbsp;<span
+                                          class="card__skill-month">8</span>&nbsp;месяцев
+                                    </p>
+                                </li>
+                                <li class="card__description-item p-flex">
+                                    <p class="card__description-location c-bali f14w300">Регион</p>
+                                    <p class="card__location-item f14w400">
+                                        <span class="card__location-city">Санкт-Петербург</span>,
+                                        м.&nbsp;<span class="card__location-subway">Академическая</span>
+                                    </p>
+                                </li>
+                                <li class="card__description-item p-flex">
+                                    <p class="card__description-contacts c-bali f14w300">Образование</p>
+                                    <p class="card__education-item f14w400">СВВКИУ РВ, Инженер</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__footer-left">
+                                <button class="btn-reset card__footer-fav bg-fix"></button>
+                                <button class="btn-reset btn card__footer-open">Открыть за 180₽</button>
+                                <button class="btn-reset card__footer-comment">Комментировать</button>
+                            </div>
+                            <div class="card__footer-update">
+                                <p class="card__update-title f14w400 c-space">Обновлено</p>
+                                <span class="card__update-date f14w300 c-bali"><time
+                                      datetime="2025-04-12T11:36">12.04.2025
+                                        11:36</time></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__resume-experience">
+                        <p class="card__experience-quant f25w600">Опыт работы: 18 лет 10 месяцев</p>
+                        <div class="card__resume-experience__item">
+                            <p class="card__experience-company f16w500">ООО Вега</p>
+                            <p class="card__experience-sphere f14w400">Строительство, недвижимость, эксплуатация,
+                                проектирование
+                            </p>
+                            <p class="card__experience-time c-bali f14w400">январь 2016 — настоящее время (9 лет 3
+                                месяца)
+                            </p>
+                            <p class="card__experience-position f14w500 c-space">Старший электромонтер</p>
+                            <p class="card__experience-description f14w400 c-bali">Сборка, разборка щитового
+                                оборудования,
+                                замена
+                                светильников, монтаж новых линий освещения. Монтаж розеток, кабелей, новых линий для
+                                подключения вновь вводимого в эксплуатацию оборудования. Установка светодиодной
+                                интерьерной
+                                подсветки, подключение ее к источникам питания, подключение освещения и интерьерной
+                                подсветки через систему датчиков и реле (Zigbee), система умный дом. Помощь
+                                технику-универсалу в сборке подвесного потолка, в сборке коробок из ГКЛ. Помощь технику
+                                по
+                                вентиляции в монтаже вент. коробов и канальных двигателей приточной и вытяжной
+                                вентиляции.Сборка, разборка щитового оборудования, замена светильников, монтаж новых
+                                линий
+                                освещения. Монтаж розеток, кабелей, новых линий для подключения вновь вводимого в
+                                эксплуатацию оборудования. Установка светодиодной интерьерной подсветки, подключение ее
+                                к
+                                источникам питания, подключение освещения и интерьерной подсветки через систему датчиков
+                                и
+                                реле (Zigbee), система умный дом. Помощь технику-универсалу в сборке подвесного потолка,
+                                в
+                                сборке коробок из ГКЛ. Помощь технику по вентиляции в монтаже вент. коробов и канальных
+                                двигателей приточной и вытяжной вентиляции.</p>
+                        </div>
+                        <div class="card__resume-experience__item">
+                            <p class="card__experience-company f16w500">ООО Вега</p>
+                            <p class="card__experience-sphere f14w400">Строительство, недвижимость, эксплуатация,
+                                проектирование
+                            </p>
+                            <p class="card__experience-time c-bali f14w400">январь 2016 — настоящее время (9 лет 3
+                                месяца)
+                            </p>
+                            <p class="card__experience-position f14w500 c-space">Старший электромонтер</p>
+                            <p class="card__experience-description f14w400 c-bali">Сборка, разборка щитового
+                                оборудования,
+                                замена
+                                светильников, монтаж новых линий освещения. Монтаж розеток, кабелей, новых линий для
+                                подключения вновь вводимого в эксплуатацию оборудования. Установка светодиодной
+                                интерьерной
+                                подсветки, подключение ее к источникам питания, подключение освещения и интерьерной
+                                подсветки через систему датчиков и реле (Zigbee), система умный дом. Помощь
+                                технику-универсалу в сборке подвесного потолка, в сборке коробок из ГКЛ. Помощь технику
+                                по
+                                вентиляции в монтаже вент. коробов и канальных двигателей приточной и вытяжной
+                                вентиляции.Сборка, разборка щитового оборудования, замена светильников, монтаж новых
+                                линий
+                                освещения. Монтаж розеток, кабелей, новых линий для подключения вновь вводимого в
+                                эксплуатацию оборудования. Установка светодиодной интерьерной подсветки, подключение ее
+                                к
+                                источникам питания, подключение освещения и интерьерной подсветки через систему датчиков
+                                и
+                                реле (Zigbee), система умный дом. Помощь технику-универсалу в сборке подвесного потолка,
+                                в
+                                сборке коробок из ГКЛ. Помощь технику по вентиляции в монтаже вент. коробов и канальных
+                                двигателей приточной и вытяжной вентиляции.</p>
+                        </div>
+                        <div class="card__resume-experience__item">
+                            <p class="card__experience-company f16w500">ООО Вега</p>
+                            <p class="card__experience-sphere f14w400">Строительство, недвижимость, эксплуатация,
+                                проектирование
+                            </p>
+                            <p class="card__experience-time c-bali f14w400">январь 2016 — настоящее время (9 лет 3
+                                месяца)
+                            </p>
+                            <p class="card__experience-position f14w500 c-space">Старший электромонтер</p>
+                            <p class="card__experience-description f14w400 c-bali">Сборка, разборка щитового
+                                оборудования,
+                                замена
+                                светильников, монтаж новых линий освещения. Монтаж розеток, кабелей, новых линий для
+                                подключения вновь вводимого в эксплуатацию оборудования. Установка светодиодной
+                                интерьерной
+                                подсветки, подключение ее к источникам питания, подключение освещения и интерьерной
+                                подсветки через систему датчиков и реле (Zigbee), система умный дом. Помощь
+                                технику-универсалу в сборке подвесного потолка, в сборке коробок из ГКЛ. Помощь технику
+                                по
+                                вентиляции в монтаже вент. коробов и канальных двигателей приточной и вытяжной
+                                вентиляции.Сборка, разборка щитового оборудования, замена светильников, монтаж новых
+                                линий
+                                освещения. Монтаж розеток, кабелей, новых линий для подключения вновь вводимого в
+                                эксплуатацию оборудования. Установка светодиодной интерьерной подсветки, подключение ее
+                                к
+                                источникам питания, подключение освещения и интерьерной подсветки через систему датчиков
+                                и
+                                реле (Zigbee), система умный дом. Помощь технику-универсалу в сборке подвесного потолка,
+                                в
+                                сборке коробок из ГКЛ. Помощь технику по вентиляции в монтаже вент. коробов и канальных
+                                двигателей приточной и вытяжной вентиляции.</p>
+                        </div>
+                    </div>
+                    <div class="card__resume-education">
+                        <p class="card__education-title f25w600">Высшее образование
+                        </p>
+                        <div class="card__education-item">
+                            <p class="card__education-university f16w500">Санкт-Петербургский государственный
+                                университет
+                                аэрокосмического приборостроения</p>
+                            <p class="card__education-faculty f14w400">Факультет: Юридический</p>
+                            <p class="card__education-speciality f14w400">Специальность: Юрист
+                            </p>
+                            <p class="card__education-edition f14w400 c-bali">2019</p>
+                        </div>
+                        <div class="card__education-item">
+                            <p class="card__education-university f16w500">Санкт-Петербургский государственный
+                                университет
+                                аэрокосмического приборостроения</p>
+                            <p class="card__education-faculty f14w400">Факультет: Юридический</p>
+                            <p class="card__education-speciality f14w400">Специальность: Юрист
+                            </p>
+                            <p class="card__education-edition f14w400 c-bali">2019</p>
+                        </div>
+                    </div>
+                    <div class="card__resume-additional">
+                        <p class="card__additional-title f25w600">Дополнительно</p>
+                        <div class="card__additional-item">
+                            <p class="card__additional-text f14w400 c-space">Ответственный, хорошо развиты
+                                коммуникативные
+                                навыки, пунктуальный, готов заниматься интересным для меня делом (работать руками и
+                                головой).
+                            </p>
+                        </div>
+                        <div class="card__additional-item">
+                            <p class="card_additional-text f14w400 c-space">Женат</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__content-action">
+                    <p class="card__action-title f20w500 c-space">Контакты:</p>
+                    <p class="card__action-phone f14w400 c-bali">скрыты</p>
+                    <button class="btn-reset card__action-buy">Открыть за <span
+                          class="card__action-currency">180₽</span></button>
+                    <p class="card__action-description f10w400 c-bali">деньги спишутся с баланса личного кабинета</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

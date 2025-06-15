@@ -1,0 +1,483 @@
+.card-more__return {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color_white);
+  background-color: var(--color_space);
+  padding: 10px 20px;
+  border-radius: 5px;
+  min-height: 40px;
+  display: inline-block;
+  margin-bottom: 26px;
+}
+
+/* cards settings */
+.card {
+  width: 100%;
+  background-color: var(--color_white);
+  border-radius: 10px;
+  padding: 23px;
+  padding-left: 25px;
+  transition: height 0.3s ease;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.p-flex {
+  display: flex;
+}
+
+.f14w300 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card__main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__main-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.card__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__main-title {
+  color: var(--color_dodger);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.card__main-quick {
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 9px;
+  margin-bottom: 16px;
+}
+
+.card__main-salary {
+  width: 100%;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.card__description-skill,
+.card__description-location,
+.card__description-contacts {
+  min-width: 140px;
+}
+
+.card__contacts-phone {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.card__contacts-wh {
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.card__contacts-tg {
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.card__contacts-wrapper {
+  display: flex;
+}
+
+.card__description-item:not(:last-of-type) {
+  border-bottom: 2px solid var(--color_border);
+  padding-bottom: 8px;
+  margin-bottom: 11px;
+}
+
+.card__checkbox-item:checked + .card__checkbox-icon::after {
+  opacity: 1;
+}
+
+.card__main-attr {
+  margin-bottom: 34px;
+}
+
+.card__description {
+  margin-bottom: 33px;
+}
+
+.card__footer-open {
+  padding: 10px 18px;
+}
+
+.border--dodger {
+  border: 2px solid var(--color_dodger);
+}
+
+.card__main-divider {
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 6.5px;
+  padding-right: 6.5px;
+}
+
+.card__contacts-wh {
+  margin-right: 2px;
+}
+
+.card__contacts-wh,
+.card__contacts-tg {
+  color: var(--color_dodger);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card__contacts-divider {
+  color: var(--color_bali);
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 1px;
+}
+
+.card__main-view {
+  background-color: var(--color_background);
+  border-radius: 5px;
+  background-image: url("../../img/new-card-eye.svg");
+  padding: 5px 0;
+  line-height: normal;
+  padding-left: 34px;
+  padding-right: 12px;
+  background-position: 9px center;
+}
+
+.border--blaze {
+  border: 2px solid var(--color_blaze-orange);
+}
+
+.card__main-offer {
+  background-color: var(--color_seranade);
+  color: var(--color_blaze-orange);
+  border-radius: 5px;
+  background-image: url("../../img/orange-gift.svg");
+  padding: 6.5px 0;
+  line-height: normal;
+  padding-left: 34px;
+  padding-right: 12px;
+  background-position: 9px center;
+}
+
+.card__main-custom {
+  background-color: var(--color_selago);
+  color: var(--color_violet);
+  border-radius: 5px;
+  background-image: url("../../img/new-card-custom.svg");
+  padding: 6.5px 0;
+  line-height: normal;
+  padding-left: 34px;
+  padding-right: 12px;
+  background-position: 9px center;
+}
+
+.border--violet {
+  border: 2px solid var(--color_violet);
+}
+
+.card__main-manually {
+  padding: 6.5px 10.21px;
+  border-radius: 5px;
+  background-color: var(--color_background);
+  line-height: normal;
+}
+
+.card__chat-count {
+  background-color: var(--color_red);
+  color: var(--color_white);
+  border-radius: 30px;
+  padding: 2.5px 5.15px;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: -7px;
+  right: -2px;
+}
+
+.card__btn-comments--active {
+  background-color: var(--color_space);
+  color: var(--color_white);
+}
+
+.card__comment {
+  position: relative;
+  margin-top: 15px;
+}
+
+.card__input-wrapper {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--color_background);
+  width: 100%;
+  min-height: 130px;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color_space);
+}
+
+.card__input-wrapper:focus {
+  outline: 1px solid var(--color_dodger);
+}
+
+.card__comment-btns {
+  position: absolute;
+  bottom: 19px;
+  left: 17px;
+}
+
+.card__input-wrapper::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color_bali);
+}
+
+.card__comment-accept {
+  background-color: var(--color_dodger);
+  color: var(--color_white);
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7px 15.07px;
+  margin-right: 5px;
+}
+
+.card__comment-cancel {
+  background-color: var(--color_bali);
+  color: var(--color_white);
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7px 15.07px;
+}
+
+.comments__btn-edit {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../img/comments-edit.svg");
+}
+
+.comments__message-btns {
+  height: fit-content;
+}
+
+.comments__btn-delete {
+  background-image: url("../../img/comments-bucket.svg");
+  width: 20px;
+  height: 20px;
+}
+
+.comments__message-item {
+  background-color: var(--color_catskill);
+  border-radius: 10px;
+  padding: 15px;
+  justify-content: space-between;
+  padding-right: 17px;
+}
+
+.comments__message {
+  margin-top: 14px;
+}
+
+.comments__message-author {
+  margin-bottom: 7px;
+}
+
+.card__main-item {
+  background-color: var(--color_background);
+  border-radius: 5px;
+  padding: 5px 10px;
+  line-height: normal;
+  padding-right: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color_bali);
+}
+
+.card__main-item:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+.card__view-item {
+  font-weight: 500;
+}
+
+.card__footer-fav {
+  background-image: url("../../img/heart.svg");
+  background-position: center;
+  border-radius: 5px;
+  background-color: var(--color_athens-gray);
+  width: 40px;
+  height: 40px;
+}
+
+.card__footer-left {
+  display: flex;
+  column-gap: 10px;
+}
+
+.card__footer-comment {
+  background-color: var(--color_athens-gray);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__resume-experience {
+  background-color: var(--color_white);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 15px;
+}
+
+.card__experience-quant {
+  margin-bottom: 30px;
+}
+
+.card__experience-company {
+  margin-bottom: 5px;
+}
+
+.card__experience-sphere {
+  margin-bottom: 10px;
+}
+
+.card__experience-time {
+  margin-bottom: 15px;
+}
+
+.card__experience-position {
+  margin-bottom: 5px;
+}
+
+.card__resume-experience__item:not(:last-of-type) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color_background);
+  margin-bottom: 18px;
+}
+
+.card__resume-education {
+  background-color: var(--color_white);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 15px;
+}
+
+.card__education-title {
+  margin-bottom: 30px;
+}
+
+.card__education-university {
+  margin-bottom: 5px;
+}
+
+.card__education-faculty {
+  margin-bottom: 5px;
+}
+
+.card__education-speciality {
+  margin-bottom: 10px;
+}
+
+.card__education-item:not(:last-of-type) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color_background);
+  margin-bottom: 17px;
+}
+
+.card__resume-additional {
+  background-color: var(--color_white);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.card__additional-title {
+  margin-bottom: 30px;
+}
+
+.card__additional-item:not(:last-of-type) {
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--color_background);
+  margin-bottom: 15px;
+}
+
+.card-more__content {
+  display: grid;
+  grid-template-columns: 0.78794fr 0.212fr;
+  gap: 20px;
+}
+
+.card__content-action {
+  background-color: var(--color_white);
+  border-radius: 10px;
+  padding: 25px;
+  height: fit-content;
+  max-width: 246px;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.card__action-buy {
+  background-color: var(--color_blaze-orange);
+  color: var(--color_white);
+  border-radius: 5px;
+  padding: 10.5px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100%;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.card__action-currency {
+  opacity: 0.7;
+}
+
+.card__action-title {
+  margin-bottom: 5px;
+}
+
+.card__action-phone {
+  margin-bottom: 25px;
+}
+
+.card__action-description {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.card__more-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 25px;
+}

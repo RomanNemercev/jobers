@@ -422,6 +422,9 @@ $(document).ready(function () {
   $(document).on("click", function (e) {
     if (!$(e.target).closest(".search-page__filter").length) {
       $searchFilters.hide();
+      $filterTrigger.removeClass("opened");
+      $filterTrigger.addClass("closed");
+      $filterTrigger.text("Фильтры");
     }
     if (
       !$(e.target).closest(".search-page__filter-header").length &&
@@ -659,7 +662,7 @@ $(document).ready(function () {
         selectedFilters[filterName] &&
         (isRangeFilter
           ? selectedFilters[filterName].min && selectedFilters[filterName].max
-          : selectedFilters[filterName].value !== undefined || // Для радио-кнопок
+          : selectedFilters[filterName].value !== undefined || // Для радио-кнопов
             (selectedFilters[filterName].values &&
               selectedFilters[filterName].values.length > 0)) // Для чекбоксов
       ) {
@@ -842,6 +845,132 @@ $(document).ready(function () {
     }
   });
 
+  // --- Синхронизация фильтров и поиска с тегами в .search-bar__search.search ---
+  function renderSearchTags() {
+    var $searchBar = $(".search-bar__search.search");
+    var $container = $searchBar.find(".search-container");
+    var $inputWrapper = $container.find(".search-input-wrapper");
+    var $tagsContainer = $container.find(".search-tags");
+    if ($tagsContainer.length) $tagsContainer.remove();
+    $tagsContainer = $('<div class="search-tags"></div>').insertAfter(
+      $inputWrapper
+    );
+    $inputWrapper.hide();
+
+    // Собираем значения
+    var tags = [];
+    var textValue = $(".search-page__input").val().trim();
+    if (textValue) {
+      tags.push({ type: "text", value: textValue });
+    }
+    // Собираем фильтры
+    $filterGroups.each(function () {
+      var $group = $(this);
+      var header = $group
+        .find(".search-page__filter-header span")
+        .first()
+        .text()
+        .trim();
+      // Чекбоксы
+      $group.find('input[type="checkbox"]:checked').each(function () {
+        var val = $(this).val();
+        if (val) tags.push({ type: "filter", value: val });
+      });
+      // Радио
+      $group.find('input[type="radio"]:checked').each(function () {
+        var val = $(this).val();
+        if (val) tags.push({ type: "filter", value: val });
+      });
+      // Диапазоны
+      if ($group.data("type") === "range") {
+        var min = $group.find(".search-page__range-min").val();
+        var max = $group.find(".search-page__range-max").val();
+        if (min && max) {
+          tags.push({ type: "filter", value: `от ${min} до ${max}` });
+        }
+      }
+    });
+
+    // Добавляем теги
+    tags.forEach(function (tag) {
+      var $tag = $('<span class="search-tag"></span>')
+        .attr("data-type", tag.type)
+        .attr("data-value", tag.value)
+        .append(`<span class="filter-checkbox__text">${tag.value}</span>`)
+        .append(
+          `<span class="tag-remove"><svg width=\"19\" height=\"18\" viewBox=\"0 0 19 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15.1577 13.4655C15.3162 13.624 15.4053 13.839 15.4053 14.0631C15.4053 14.2873 15.3162 14.5023 15.1577 14.6608C14.9992 14.8193 14.7842 14.9084 14.5601 14.9084C14.3359 14.9084 14.1209 14.8193 13.9624 14.6608L9.49826 10.1953L5.03271 14.6594C4.8742 14.8179 4.65922 14.9069 4.43506 14.9069C4.21089 14.9069 3.99591 14.8179 3.8374 14.6594C3.67889 14.5009 3.58984 14.2859 3.58984 14.0617C3.58984 13.8376 3.67889 13.6226 3.8374 13.4641L8.30295 8.99994L3.83881 4.53439C3.6803 4.37588 3.59125 4.1609 3.59125 3.93674C3.59125 3.71257 3.6803 3.49759 3.83881 3.33908C3.99732 3.18057 4.2123 3.09152 4.43646 3.09152C4.66063 3.09152 4.87561 3.18057 5.03412 3.33908L9.49826 7.80463L13.9638 3.33838C14.1223 3.17987 14.3373 3.09082 14.5615 3.09082C14.7856 3.09082 15.0006 3.17987 15.1591 3.33838C15.3176 3.49689 15.4067 3.71187 15.4067 3.93603C15.4067 4.1602 15.3176 4.37518 15.1591 4.53369L10.6936 8.99994L15.1577 13.4655Z" fill="#5898FF" /></svg></span>`
+        );
+      if (tag.type === "text") $tag.addClass("search-tag-text");
+      $tagsContainer.append($tag);
+    });
+  }
+
+  function resetSearchTags() {
+    var $searchBar = $(".search-bar__search.search");
+    var $container = $searchBar.find(".search-container");
+    $container.find(".search-tags").remove();
+    $container.find(".search-input-wrapper").show();
+  }
+
+  // --- Управление состояниями страницы поиска ---
+  const $defaultState = $(".search-page__default-state");
+  const $resultsState = $(".search-page__results-state");
+  const $favoritesState = $(".search-page__favorites");
+  const $findBtn = $(".search-page__apply-btn");
+  const $favResumesBtn = $(".search-page__fav-resumes");
+  const $resultsReturn = $(".results__return");
+  const $favReturn = $(".fav__return");
+
+  // Показать только стартовое состояние при загрузке
+  function showDefaultState() {
+    $defaultState.removeClass("hide");
+    $resultsState.addClass("hide");
+    $favoritesState.addClass("hide");
+  }
+
+  // Показать только результаты поиска
+  function showResultsState() {
+    $defaultState.addClass("hide");
+    $resultsState.removeClass("hide");
+    $favoritesState.addClass("hide");
+    renderSearchTags(); // Синхронизируем теги поиска
+  }
+
+  // Показать только избранное
+  function showFavoritesState() {
+    $defaultState.addClass("hide");
+    $resultsState.addClass("hide");
+    $favoritesState.removeClass("hide");
+  }
+
+  // Клик по "Найти" — показать результаты
+  $findBtn.on("click", function (e) {
+    e.preventDefault();
+    showResultsState();
+  });
+
+  // Клик по "Избранные резюме" — показать избранное
+  $favResumesBtn.on("click", function (e) {
+    e.preventDefault();
+    showFavoritesState();
+  });
+
+  // Клик по возврату из результатов — показать стартовое
+  $resultsReturn.on("click", function (e) {
+    e.preventDefault();
+    showDefaultState();
+    resetSearchTags();
+  });
+
+  // Клик по возврату из избранного — показать стартовое
+  $favReturn.on("click", function (e) {
+    e.preventDefault();
+    showDefaultState();
+  });
+
+  // При загрузке страницы — стартовое состояние
+  showDefaultState();
+
   // Применение фильтров через "Найти"
   $applyBtn.on("click", function () {
     const appliedFilters = [];
@@ -878,9 +1007,12 @@ $(document).ready(function () {
     }
 
     // Скрываем элементы
-    $(".search-page__filter-input").addClass("hidden");
-    $(".search-page__cards-description").addClass("hidden");
-    $searchFilters.hide();
+    // $(".search-page__filter-input").addClass("hidden");
+    // $(".search-page__cards-description").addClass("hidden");
+    // $searchFilters.hide();
+    $filterTrigger.removeClass("opened");
+    $filterTrigger.addClass("closed");
+    $filterTrigger.text("Фильтры");
   });
 
   // Отслеживание ввода текста
@@ -888,3 +1020,134 @@ $(document).ready(function () {
     searchText = $(this).val().trim();
   });
 });
+
+$(document).ready(function () {
+  const $otherFilter = $(".search-page__filter-other");
+  const $otherOptions = $otherFilter.find(".search-page__filter-options");
+  const $otherToggle = $otherFilter.find(".search-page__filter-toggle");
+  const $otherHeader = $otherFilter.find(".search-page__other-header");
+  const $otherText = $otherHeader.find("span").eq(1);
+
+  $otherFilter.addClass("default");
+
+  $otherHeader.on("click", function () {
+    const isOpen = $otherFilter.hasClass("open");
+    $otherFilter.toggleClass("open default");
+  });
+
+  $otherOptions.find("input[type='radio']").on("change", function () {
+    const $selectedRadio = $(this);
+    const selectedValue = $selectedRadio.val();
+
+    if (selectedValue) {
+      $otherText.text(selectedValue);
+      $otherFilter.removeClass("open").addClass("selected");
+
+      $otherToggle
+        .addClass("reset")
+        .html(
+          '<svg class="toggle-cross" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+            '  <path d="M15.1577 13.4655C15.3162 13.624 15.4053 13.839 15.4053 14.0631C15.4053 14.2873 15.3162 14.5023 15.1577 14.6608C14.9992 14.8193 14.7842 14.9084 14.5601 14.9084C14.3359 14.9084 14.1209 14.8193 13.9624 14.6608L9.49826 10.1953L5.03271 14.6594C4.8742 14.8179 4.65922 14.9069 4.43506 14.9069C4.21089 14.9069 3.99591 14.8179 3.8374 14.6594C3.67889 14.5009 3.58984 14.2859 3.58984 14.0617C3.58984 13.8376 3.67889 13.6226 3.8374 13.4641L8.30295 8.99994L3.83881 4.53439C3.6803 4.37588 3.59125 4.1609 3.59125 3.93674C3.59125 3.71257 3.6803 3.49759 3.83881 3.33908C3.99732 3.18057 4.2123 3.09152 4.43646 3.09152C4.66063 3.09152 4.87561 3.18057 5.03412 3.33908L9.49826 7.80463L13.9638 3.33838C14.1223 3.17987 14.3373 3.09082 14.5615 3.09082C14.7856 3.09082 15.0006 3.17987 15.1591 3.33838C15.3176 3.49689 15.4067 3.71187 15.4067 3.93603C15.4067 4.1602 15.3176 4.37518 15.1591 4.53369L10.6936 8.99994L15.1577 13.4655Z" fill="#5898FF" />\n' +
+            "</svg>"
+        );
+    }
+  });
+
+  $(document).on("click", function (event) {
+    if (
+      !$otherFilter.is(event.target) &&
+      $otherFilter.has(event.target).length === 0 &&
+      $otherFilter.hasClass("open")
+    ) {
+      $otherFilter.removeClass("open").addClass("default");
+    }
+  });
+
+  $otherToggle.on("click", function () {
+    if ($otherFilter.hasClass("selected")) {
+      event.stopPropagation();
+      $otherText.text("Сохраненные фильтры (0)");
+      $otherFilter.removeClass("selected").addClass("default");
+      $otherOptions.find("input[type='radio']").prop("checked", false);
+
+      $otherToggle
+        .removeClass("reset")
+        .html(
+          '<svg class="toggle-arrow" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+            '  <path d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z" fill="#9098B4" />\n' +
+            "</svg>"
+        );
+    }
+  });
+});
+
+// sets for navbar
+function toggleScrollButtons() {
+  const container = document.getElementById("scroll-wrapper");
+  const btnLeft = document.getElementById("btn-left");
+  const btnRight = document.getElementById("btn-right");
+  const btnSet = document.querySelector(".btn-settings");
+
+  // Показываем/скрываем кнопки в зависимости от положения скролла
+  const scrollLeft = container.scrollLeft;
+  const scrollWidth = container.scrollWidth;
+  const clientWidth = container.clientWidth;
+  const maxScroll = scrollWidth - clientWidth;
+
+  // Кнопка влево
+  btnLeft.style.visibility = scrollLeft > 0 ? "visible" : "hidden";
+
+  // Кнопка вправо
+
+  btnRight.style.visibility = scrollLeft < maxScroll ? "visible" : "hidden";
+
+  // Позиция кнопки настроек (условие от ширины окна оставляем для адаптивности)
+  if (window.innerWidth <= 772) {
+    btnLeft.style.visibility = "hidden";
+    btnRight.style.visibility = "hidden";
+    // btnSet.style.cssText = 'right: 0; border-radius: 0 10px 10px 0;';
+  }
+  // else if (container.scrollWidth > container.clientWidth) {
+  //   btnSet.style.cssText = 'right: 100px; border-radius: 0;';
+  // } else {
+  //   btnSet.style.cssText = 'right: 0; border-radius: 0 10px 10px 0;';
+  // }
+}
+
+// Инициализация при загрузке
+toggleScrollButtons();
+
+// Обновление при изменении размера окна
+window.addEventListener("resize", toggleScrollButtons);
+
+// Обновление при прокрутке (добавляем слушатель)
+document
+  .getElementById("scroll-wrapper")
+  .addEventListener("scroll", toggleScrollButtons);
+
+// Сохранение существующих обработчиков
+document.getElementById("btn-left").onclick = function () {
+  const container = document.getElementById("scroll-wrapper");
+  sideScroll(container, "left", 25, 100, 10);
+};
+
+document.getElementById("btn-right").onclick = function () {
+  const container = document.getElementById("scroll-wrapper");
+  sideScroll(container, "right", 25, 100, 10);
+};
+
+// Существующая функция прокрутки
+function sideScroll(element, direction, speed, distance, step) {
+  let scrollAmount = 0;
+  const slideTimer = setInterval(function () {
+    if (direction === "left") {
+      element.scrollLeft -= step;
+    } else {
+      element.scrollLeft += step;
+    }
+    scrollAmount += step;
+    if (scrollAmount >= distance) {
+      clearInterval(slideTimer);
+    }
+  }, speed);
+}
