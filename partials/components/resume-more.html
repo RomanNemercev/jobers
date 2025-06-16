@@ -62,7 +62,7 @@
         <div class="search-bar__container">
             <a href="../../index.html" class="search-bar__logo"><img src="../../img/media/logo-768.svg"
                   alt="Логотип компании" class="nav__logo-icon" /></a>
-            <form action="#" class="search-bar__form">
+            <form action="#" class="search-bar__form" style="display: none;">
                 <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box" />
                 <div class="search-bar__dropdown"></div>
             </form>
@@ -609,11 +609,16 @@
                     </div>
                 </div>
                 <div class="card__content-action">
-                    <p class="card__action-title f20w500 c-space">Контакты:</p>
-                    <p class="card__action-phone f14w400 c-bali">скрыты</p>
-                    <button class="btn-reset card__action-buy">Открыть за <span
-                          class="card__action-currency">180₽</span></button>
-                    <p class="card__action-description f10w400 c-bali">деньги спишутся с баланса личного кабинета</p>
+                    <div class="card__content-info">
+                        <p class="card__action-title f20w500 c-space">Контакты:</p>
+                        <p class="card__action-phone f14w400 c-bali">скрыты</p>
+                    </div>
+                    <div class="card__pay-wrapper">
+                        <button class="btn-reset card__action-buy">Открыть за <span
+                              class="card__action-currency">180₽</span></button>
+                        <p class="card__action-description f10w400 c-bali">деньги спишутся с баланса личного кабинета
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
