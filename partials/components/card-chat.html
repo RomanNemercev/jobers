@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jobers - Добавить вакансию</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/custom.css" />
+    <link rel="stylesheet" href="../../css/libs-css/chat-concept.css" class="css" />
+    <link rel="stylesheet" href="../../css/libs-css/select.css">
+    <link rel="stylesheet" href="../../css/libs-css/card-chat.css">
+    <link rel="stylesheet" href="../../css/media.css" />
+</head>
+
+<body class="body-page">
+    <!--блок бокового меню-->
+    <section class="nav">
+        <div class="nav__container">
+            <a href="../../index.html" class="nav__logo"><img src="../../img/logo.svg" alt="Логотип компании"
+                  class="nav__logo-icon" /></a>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Рекрутинг</li>
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-desktop">Рабочий стол</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../vacancies.html" class="nav__link-item link-vacancies active-page">Вакансии</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../candidates-null.html" class="nav__link-item link-candidates">Кандидаты</a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Организация</li>
+                <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-messages">Сообщения</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../company.html" class="nav__link-item link-companies">Компании</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-documents">Документы</a>
+                </li>
+                <li class="nav__link list-reset none-stick">
+                    <a href="#" class="nav__link-item link-rates">Тарифные планы</a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__link list-reset">
+                    <a href="#" class="nav__link-item link-support">Поддержка</a>
+                </li>
+                <li class="nav__link list-reset">
+                    <a href="../settings.html" class="nav__link-item link-settings">Настройки</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--блок поискового меню-->
+    <section class="search-bar">
+        <div class="search-bar__container">
+            <a href="../../index.html" class="search-bar__logo"><img src="../../img/media/logo-768.svg"
+                  alt="Логотип компании" class="nav__logo-icon" /></a>
+            <form action="#" class="search-bar__form">
+                <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box" />
+                <div class="search-bar__dropdown"></div>
+            </form>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="note-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)"
+                          srcset="../../img/media/notification-768.svg" />
+                        <img src="../../img/notification.svg" alt="Уведомления" class="search-bar__note" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="supp-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../../img/media/support-768.svg" />
+                        <img src="../../img/support.svg" alt="Поддержка" class="search-bar__support" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="acc-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../../img/media/profile-768.svg" />
+                        <img src="../../img/profile.svg" alt="Личный кабинет" class="search-bar__acc" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__burger toogle">
+                <div class="toogle_bar">
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nots">
+        <div class="nots__container">
+            <h3 class="nots__title f16w600">Уведомления</h3>
+            <ul class="nots__cans-list">
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-now f14w400 c-bali">сейчас</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Бухгалтерия</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Александра степанова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Здравствуйте, вы запрашивали закрывающие документы, вчера мы
+                                их отправили
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Личный менеджер</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Яна Олейникова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Действительно, сейчас очень большая конкуренция на уборщиков,
+                                я бы не рекомендовало использовать тариф без автоподнятия
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Евгения Онегина</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Продуктовый менеджер</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../../img/user-invite-not.png" alt="Фотография кандидата" />
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">
+                                Отклик на вакансию
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">
+                                Валерьев Михаил Александрович
+                            </p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">
+                                Менеджер по продажам акссесуаров для спорта
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+            </ul>
+            <button class="btn-reset nots__check f15w500">
+                Отметить как прочитанное
+            </button>
+        </div>
+    </section>
+    <section class="supp">
+        <div class="supp__container">
+            <!--        default variation 1 on work without icon-->
+            <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+            <div class="supp__man-img onwork-styles">
+                <img src="../../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon" />
+            </div>
+            <p class="supp__man-name">Купатова Елизавета</p>
+            <div class="supp__man-status">
+                <span class="supp__man-item">Сейчас работает</span>
+            </div>
+            <ul class="supp__main-info">
+                <li class="supp__main-time">
+                    <span class="supp__main-item">с 10:00 до 20:00 (MSK)</span>
+                </li>
+                <li class="supp__main-mail bg-fix">
+                    <a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>
+                </li>
+                <li class="supp__main-phone bg-fix">
+                    <a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб 103)</a>
+                </li>
+            </ul>
+            <div class="supp__user-num">
+                <div class="sup__user-item">
+                    <span class="f20w600">32948714</span>
+                </div>
+                <div class="supp__num-desc">
+                    <span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при
+                        обращении, для того что&nbsp;бы сотрудник мог быстрее вам
+                        помочь</span>
+                </div>
+            </div>
+            <!--        default variation 2 not work without icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 3 notwork with icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 4 without icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 5 with icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+        </div>
+    </section>
+    <section class="acc">
+        <div class="acc__container">
+            <div class="acc__header">
+                <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+                <p class="acc__user-level f14w400 c-bali">Администратор</p>
+            </div>
+            <ul class="acc__active">
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Мой профиль</a>
+                </li>
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Лицевой счет</a>
+                </li>
+                <li class="acc__active-items">
+                    <a href="#" class="acc__active-item f15w400">Личный менеджер</a>
+                </li>
+            </ul>
+            <div class="acc__user-exit bg-fix">
+                <a href="#" class="acc__exit-btn f15w400">Выйти из системы</a>
+            </div>
+        </div>
+    </section>
+    <section class="chat container">
+        <div>
+            <button class="btn-reset btn chat__event">chat event</button>
+        </div>
+        <div class="chat__container card visible">
+            <div class="card__wrapper">
+                <div class="card__header">
+                    <div class="card__header-wrapper">
+                        <div class="card__header-left">
+                            <div class="card__dropdown">
+                                <div class="droplist droplist__select">
+                                    <form class="form__list" action="">
+                                        <div class="droplist__selected item droplist__result item">
+                                            <span class="droplist__result_text"
+                                              data-start="Пригласить">Пригласить</span>
+                                            <span class="droplist__icon droplist__icon_cross"></span>
+                                            <svg class="droplist__icon droplist__icon_arrow" width="14" height="9"
+                                              viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                  d="M13.2241 2.34689L7.59912 7.97189C7.52073 8.05055 7.42759 8.11297 7.32503 8.15555C7.22247 8.19814 7.11251 8.22006 7.00146 8.22006C6.89041 8.22006 6.78046 8.19814 6.6779 8.15555C6.57534 8.11297 6.48219 8.05055 6.40381 7.97189L0.778807 2.34689C0.620299 2.18838 0.53125 1.9734 0.53125 1.74924C0.53125 1.52507 0.620299 1.31009 0.778807 1.15158C0.937316 0.993072 1.1523 0.904024 1.37646 0.904024C1.60063 0.904024 1.81561 0.993072 1.97412 1.15158L7.00217 6.17963L12.0302 1.15088C12.1887 0.99237 12.4037 0.90332 12.6279 0.90332C12.852 0.90332 13.067 0.99237 13.2255 1.15088C13.384 1.30939 13.4731 1.52437 13.4731 1.74853C13.4731 1.9727 13.384 2.18768 13.2255 2.34619L13.2241 2.34689Z"
+                                                  fill="#2F353D" />
+                                            </svg>
+                                        </div>
+                                        <ul class="droplist__items">
+                                            <li class="droplist__item">Подумать</li>
+                                            <li class="droplist__item">Телефонное интервью</li>
+                                            <li class="droplist__item">Подходящие</li>
+                                            <li class="droplist__item">Отклоненные</li>
+                                            <li class="droplist__item">Удаленные</li>
+                                            <li class="droplist__item btn-delete">Отклонить</li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                            <button class="btn-reset card__btn-mind">Отказать</button>
+                            <button class="btn-reset btn-default card__btn-comments f14w500 c-space">
+                                Комментировать
+                            </button>
+                        </div>
+                        <div class="card__header-right">
+                            <button class="btn-reset card__header-download"></button>
+                            <button class="btn-reset card__header-print"></button>
+                            <button class="btn-reset card__header-remove"></button>
+                        </div>
+                    </div>
+                    <div class="card__comment" style="display: none">
+                        <div class="card__comment-textarea">
+                            <textarea rows="2" cols="30" id="comments-card" class="card__textarea-space"></textarea>
+                        </div>
+                        <div class="card__comment-btn">
+                            <button class="btn-reset btn card__comment-approve">Добавить</button>
+                            <button class="btn-reset btn-disable card__comment-cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="card__complete" style="display: none">
+                        <div class="card__complete-left">
+                            <p class="card__complete-title f15w500 c-space mb5">Геннадий Максимов</p>
+                            <p class="card__complete-value f14w400 c-bali">Интересный вариант</p>
+                        </div>
+                        <button class="btn-reset card__complete-remove"></button>
+                    </div>
+                </div>
+                <div class="card__main">
+                    <div class="card__main-header">
+                        <div class="card__picture-wrapper">
+                            <picture class="card__main-picture">
+                                <img src="../../img/card-default-picture.png" alt="user picture"
+                                  class="card__main-photo">
+                            </picture>
+                        </div>
+                        <div class="card__main-info">
+                            <h1 class="card__main-title f20w700">Помощник маркетолога</h1>
+                            <div class="card__quick-info">
+                                <p class="card__quick-name">Иван Иванович</p><span
+                                  class="card__quick-comma">,&nbsp;</span>
+                                <p class="card__quick-age">26 лет</p><span class="card__quick-divider"><svg width="15"
+                                      height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M8.97656 7.5C8.97656 7.82448 8.88034 8.14168 8.70007 8.41148C8.51979 8.68128 8.26356 8.89156 7.96378 9.01574C7.66399 9.13991 7.33412 9.1724 7.01587 9.1091C6.69762 9.0458 6.40529 8.88954 6.17584 8.6601C5.9464 8.43065 5.79014 8.13832 5.72684 7.82007C5.66353 7.50182 5.69602 7.17195 5.8202 6.87216C5.94437 6.57238 6.15466 6.31614 6.42446 6.13587C6.69426 5.9556 7.01145 5.85938 7.33594 5.85938C7.77106 5.85938 8.18836 6.03223 8.49604 6.3399C8.80371 6.64758 8.97656 7.06488 8.97656 7.5Z"
+                                          fill="#9098B4" />
+                                    </svg></span><span class="card__quick-meta">Откликнулся 16 марта на сайте
+                                    zarplata.ru</span>
+                            </div>
+                            <div class="card__main-tags">
+                                <div class="card__main-into">
+                                    <p>Входящий отклик </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__contacts">
+                        <div class="card__contacts-left">
+                            <div>
+                                <p class="card__contacts-salary f14w400 c-bali">Зарплата</p>
+                                <p class="card__salary-value f15w500">150 000 руб</p>
+                            </div>
+                            <div>
+                                <p class="card__contacts-city f14w400 c-bali">Город</p>
+                                <p class="card__city-value f15w500">Нижний Новгород</p>
+                            </div>
+                        </div>
+                        <div class="card__contacts-right">
+                            <div>
+                                <p class="card__contacts-mail f14w400 c-bali">Почта</p>
+                                <p class="card__mail-value f15w500">pochta@mail.ru</p>
+                            </div>
+                            <div>
+                                <p class="card__contacts-phone f14w400 c-bali">Телефон</p>
+                                <div class="card__phone-value">
+                                    <a href="tel:79116920843" class="card__phone-link f15w400">+7 (911)
+                                        692-08-43</a>
+                                    <a href="#" class="card__wh-link">WhatsApp</a>
+                                    <span class="card__phone-divider">/</span>
+                                    <a href="#" class="card__tg-link">Telegram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__contacts-more">
+                        <div class="card__more-work mb25">
+                            <p class="card__work-last f18w500">Последнее место работы</p>
+                            <h2 class="card__last-name f14w400 c-bali">Муниципальное учреждение "Комитет имущественных
+                                отношений
+                                муниципального образования "Город Ленск" (МУ КИО МО «Город Ленск»)</h2>
+                            <p class="card__last-time f14w400 c-bali">
+                                <span class="card__time-from">01 апреля 2020</span> — <span class="card__time-to">01
+                                    июля 2020</span>
+                            </p>
+                        </div>
+                        <div class="card__employment mb25">
+                            <p class="card__employment-title f18w500">Тип занятости</p>
+                            <p class="card__employment-value f14w400 c-bali">Полная</p>
+                        </div>
+                    </div>
+                    <div class="card__education mb25">
+                        <p class="card__education-title f18w500">Образование</p>
+                        <div class="card__education-wrapper">
+                            <div class="card__education-item">
+                                <span class="card__education-year f14w400 c-bali mb15 block">2002</span>
+                                <p class="card__education-est f14w400">Московский автомобильно-дорожный государственный
+                                    технический университет, Москва</p>
+                                <p class="card__education-fac f14w400 c-bali">Инженер по специализации(электроэнергетика
+                                    и
+                                    электротехника)</p>
+                            </div>
+                            <div class="card__education-item">
+                                <span class="card__education-year f14w400 c-bali mb15 block">1996</span>
+                                <p class="card__education-est f14w400">Иаановское Пожарно-техническое училище</p>
+                                <p class="card__education-fac f14w400 c-bali">Техник противопожарной защиты</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__languages mb25">
+                        <p class="card__languages-title f18w500">Знание языков</p>
+                        <p class="card__languages-wrapper f14w400 c-bali"><span
+                              class="card__lang-value">Русский</span>&nbsp;—&nbsp;<span
+                              class="card__lang-stage">Родной</span></p>
+                    </div>
+                    <div class="card__skills">
+                        <p class="card__skills-title f18w500 mb10">Навыки</p>
+                        <div class="card__skills-wrapper">
+                            <div class="card__skill-item">
+                                <p class="f14w400 c-bali card__skill-value">Инженерные системы</p>
+                            </div>
+                            <div class="card__skill-item">
+                                <p class="f14w400 c-bali card__skill-value">Производство строительно-монтажных работ</p>
+                            </div>
+                            <div class="card__skill-item">
+                                <p class="f14w400 c-bali card__skill-value">Охрана труда и техника безопасности</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__wrapper">
+                <div class="chat__header">
+                    <p class="chat__recipient">Валентина Старкова</p>
+                    <p class="chat__source">Чат на hh.ru</p>
+                </div>
+                <div class="chat__timeline-wrapper">
+                    <div class="chat__timeline">
+                        <div class="chat__message outgoing">
+                            <div class="chat__message-content">
+                                <p class="chat__content-author">Евгений Дмитриевич</p>
+                                <p class="chat__content-item">
+                                    Привет!<br> ✋ Валентина, мы посмотрели ваше резюме — очень
+                                    заинтересовал ваш опыт. Хотим пригласить вас на собеседование,
+                                    чтобы подробнее обсудить возможное сотрудничество. Удобно ли вам
+                                    пообщаться в ближайшие дни?<br /><br />
+                                    Если нужно, могу адаптировать под более формальный/неформальный
+                                    стиль.
+                                </p>
+                                <span class="chat__content-date">31 марта в 18:30</span>
+                            </div>
+                        </div>
+                        <div class="chat__message incoming">
+                            <div class="chat__message-content">
+                                <div class="chat__content-header">
+                                    <p class="chat__content-author">Валентина Старкова</p>
+                                    <span class="chat__content-source">hh.ru</span>
+                                </div>
+                                <p class="chat__content-item">
+                                    Привет! Спасибо за приглашение 😊<br /> С радостью пообщаюсь!
+                                    Подскажите, пожалуйста, когда именно планируется собеседование и
+                                    в каком формате?
+                                </p>
+                                <div class="chat__content-more">
+                                    <span class="chat__content-date">31 марта в 18:30</span>
+                                    <button class="btn-reset chat__answer"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat__message outgoing">
+                            <div class="chat__message-content">
+                                <p class="chat__content-author">Евгений Дмитриевич</p>
+                                <p class="chat__content-item">
+                                    Отлично! Спасибо за быстрый ответ 😊 Предлагаем созвониться в
+                                    Zoom завтра в первой половине дня, например в 11:00 (по вашему
+                                    времени). Подойдёт? Если нет — можем подобрать другое время, как
+                                    вам удобно.
+                                </p>
+                                <span class="chat__content-date">31 марта в 18:30</span>
+                            </div>
+                        </div>
+                        <div class="chat__message event meet">
+                            <div class="event__log">
+                                <span class="event__log-date">31 марта в 18:30</span>
+                                <p class="event__log-item">
+                                    Пользователь
+                                    <span class="event__author">Евгений Дмитриевич</span>
+                                    запланировал встречу
+                                </p>
+                            </div>
+                        </div>
+                        <div class="chat__message incoming">
+                            <div class="chat__message-content">
+                                <div class="chat__content-header">
+                                    <p class="chat__content-author">Валентина Старкова</p>
+                                    <span class="chat__content-source">hh.ru</span>
+                                </div>
+                                <p class="chat__content-item">
+                                    Да, завтра в 11:00 мне подходит. Жду ссылку на Zoom 🙂
+                                </p>
+                                <div class="chat__content-more">
+                                    <span class="chat__content-date">31 марта в 18:30</span>
+                                    <button class="btn-reset chat__answer"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat__message outgoing">
+                            <div class="chat__message-content">
+                                <p class="chat__content-author">Евгений Дмитриевич</p>
+                                <p class="chat__content-item">
+                                    Супер! Вот ссылка на встречу: [ссылка] Если что-то поменяется —
+                                    дайте знать. До завтра! 👋
+                                </p>
+                                <span class="chat__content-date">31 марта в 18:30</span>
+                            </div>
+                        </div>
+                        <div class="chat__message incoming">
+                            <div class="chat__message-content">
+                                <div class="chat__content-header">
+                                    <p class="chat__content-author">Валентина Старкова</p>
+                                    <span class="chat__content-source">hh.ru</span>
+                                </div>
+                                <p class="chat__content-item">
+                                    Отлично, спасибо! Тогда до завтра, хорошего дня 😊
+                                </p>
+                                <div class="chat__content-more">
+                                    <span class="chat__content-date">31 марта в 18:30</span>
+                                    <button class="btn-reset chat__answer"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat__message outgoing">
+                            <div class="chat__message-content">
+                                <p class="chat__content-author">Евгений Дмитриевич</p>
+                                <p class="chat__content-item">
+                                    Привет, Валентина! Пишем, чтобы уточнить — всё ли в силе на
+                                    созвон сегодня в 11:00? Мы на месте и вас ждём 🙂 Если что-то
+                                    поменялось — дайте знать, можем перенести.
+                                </p>
+                                <span class="chat__content-date">31 марта в 18:30</span>
+                            </div>
+                        </div>
+                        <button class="btn-reset chat__scroll-down-btn"></button>
+                    </div>
+                    <!--            отступ справа -->
+                    <!--            <div class="chat__timeline-plug"></div>-->
+                </div>
+                <div class="chat__input">
+                    <div class="chat__input-wrapper">
+                        <!-- Новый контейнер для процитированного сообщения -->
+                        <div class="chat__reply-container" style="display: none;">
+                            <div class="chat__reply-border"></div>
+                            <div class="chat__reply-content">
+                                <div class="chat__reply-title">
+                                    <p class="chat__reply-author"></p>
+                                    <p class="chat__reply-source"></p>
+                                </div>
+                                <p class="chat__reply-text"></p>
+                            </div>
+                            <div class="chat__reply-close__wrapper">
+                                <button class="btn-reset chat__reply-close"></button>
+                            </div>
+                        </div>
+                        <div class="chat__input-space__wrapper">
+                            <textarea class="chat__input-space" placeholder="Сообщение..."></textarea>
+                            <button class="btn-reset chat__input-btn"></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-reset chat__hide"></button>
+            </div>
+        </div>
+    </section>
+    <script src="../../js/jquery_3.3.1.min.js"></script>
+    <script src="../../js/libs-js/select.js"></script>
+    <script src="../../js/libs-js/chat-script.js"></script>
+    <script src="../../js/libs-js/card-chat.js"></script>
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

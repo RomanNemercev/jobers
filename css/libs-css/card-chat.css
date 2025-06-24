@@ -1,0 +1,342 @@
+.chat__container.card.visible {
+  display: flex;
+  max-width: 77.438vw;
+}
+
+/* droplist settings start */
+.card__navigation {
+  display: flex;
+  align-items: center;
+  line-height: 13px;
+}
+
+.card__navigation .item {
+  padding: 13px 18px 0 15px;
+  color: var(--color_space);
+  font-weight: 500;
+}
+
+.card__navigation .droplist__result_active {
+  background-color: #eff5ff;
+  color: #5898ff;
+}
+
+.card__dropdown .droplist__icon_cross {
+  top: 14px;
+}
+
+.card__dropdown .droplist__icon_arrow {
+  right: 18px;
+}
+
+.chat__container.card .droplist__result_text {
+  font-weight: 600;
+  color: var(--color_space);
+  margin-right: 29px;
+}
+
+.chat__container.card
+  .droplist__selected.droplist__result_active
+  .droplist__result_text {
+  color: var(--color_btn-succes);
+}
+
+.chat__container.card .droplist__selected .droplist__icon_cross {
+  background: url("../../img/icon-cross-green.svg");
+}
+
+.card__btn-mind,
+.card__btn-comments {
+  background-color: var(--color_athens-gray);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11.5px 15.43px;
+  line-height: normal;
+  height: fit-content;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.chat__container.card .droplist__icon_arrow path {
+  fill: var(--color_space);
+}
+
+.chat__container.card .droplist .droplist__selected.droplist__result_active {
+  background-color: var(--color_succes);
+}
+
+/* end droplist sets */
+
+.card__wrapper {
+  width: 100%;
+  background-color: var(--color_white);
+}
+
+.chat__wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+
+.chat__header {
+  box-shadow: none;
+}
+
+.card__header {
+  padding: 17px 25px;
+  border-bottom: 1px solid var(--color_gray);
+}
+
+.card__header-left {
+  display: flex;
+  column-gap: 9px;
+}
+
+.card__header-right button {
+  background-color: var(--color_athens-gray);
+  border-radius: 5px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__header-download {
+  background-image: url("../../img/card-download.svg");
+}
+
+.card__header-print {
+  background-image: url("../../img/card-print.svg");
+}
+
+.card__header-remove {
+  background-image: url("../../img/card-remove.svg");
+}
+
+.card__header-right {
+  margin-left: auto;
+}
+
+.card__main {
+  padding: 25px;
+}
+
+.card__main-photo {
+  border-radius: 10px;
+}
+
+.card__picture-wrapper {
+  margin-bottom: 12px;
+}
+
+.card__main-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.card__quick-info {
+  display: flex;
+  margin-bottom: 13px;
+}
+
+.card__quick-name,
+.card__quick-age {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color_space);
+}
+
+.card__quick-divider {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.card__quick-meta {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color_bali);
+}
+
+.card__main-into {
+  background-color: var(--color_zircon);
+  border-radius: 5px;
+  color: var(--color_dodger);
+  font-size: 14px;
+  font-weight: 500;
+  width: fit-content;
+  height: fit-content;
+  padding: 6.5px 10.15px;
+  line-height: normal;
+}
+
+.card__main-tags {
+  display: flex;
+  gap: 5px;
+}
+
+.card__main-header {
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color_gray);
+}
+
+.card__contacts {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color_gray);
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.card__contacts-left {
+  margin-right: 37px;
+}
+
+.card__contacts-left > div:not(:last-child),
+.card__contacts-right > div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.card__skill-item {
+  background-color: var(--color_athens-gray);
+  padding: 6.5px 15px;
+  border-radius: 5px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.card__skills-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.card__wh-link,
+.card__tg-link {
+  color: var(--color_dodger);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card__phone-divider {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color_bali);
+  margin-left: 2px;
+  margin-right: 1px;
+}
+
+.card__contacts-salary,
+.card__contacts-city,
+.card__contacts-mail,
+.card__contacts-phone {
+  margin-bottom: 3px;
+}
+
+.card__phone-link {
+  margin-right: 11px;
+}
+
+.card__work-last {
+  margin-bottom: 5px;
+}
+
+.card__employment-title {
+  margin-bottom: 6px;
+}
+
+.card__employment {
+  margin-bottom: 26px;
+}
+
+.card__education-title {
+  margin-bottom: 5px;
+}
+
+.card__education-est {
+  margin-bottom: 6px;
+}
+
+.card__education-fac {
+  margin-bottom: 4px;
+}
+
+.card__languages-title {
+  margin-bottom: 5px;
+}
+
+.card__skills-title {
+  margin-bottom: 11px;
+}
+
+.card__header-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.card__textarea-space {
+  width: 100%;
+  min-height: 64px;
+  border-radius: 5px;
+  resize: none;
+  background-color: var(--color_athens-gray);
+  padding: 15px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card__textarea-space:focus {
+  outline: 1px solid var(--color_dodger);
+  background-color: var(--color_zircon);
+}
+
+.card__comment-textarea {
+  margin-bottom: 11px;
+  padding-top: 25px;
+}
+
+.card__comment-approve {
+  min-width: auto;
+  margin-right: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 15.06px;
+}
+
+.card__comment-cancel {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 15.02px;
+  line-height: normal;
+}
+
+.card__complete-remove {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../img/card-complete.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__complete {
+  background-color: var(--color_athens-gray);
+  margin-top: 25px;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat__container.card.visible .card__dropdown .droplist__icon_cross {
+  top: 13px;
+}
+
+.card__btn-mind:hover {
+  background-color: var(--color_pink);
+  color: var(--color_red);
+}
+
+.card__btn-comments:hover {
+  background-color: var(--color_space);
+  color: var(--color_white);
+}
