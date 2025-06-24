@@ -70,6 +70,9 @@
 .card__wrapper {
   width: 100%;
   background-color: var(--color_white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .chat__wrapper {
@@ -117,6 +120,15 @@
 
 .card__main {
   padding: 25px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.card__main::-webkit-scrollbar {
+  display: none;
 }
 
 .card__main-photo {

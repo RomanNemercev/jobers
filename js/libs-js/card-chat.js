@@ -48,3 +48,26 @@ $(function () {
   $completeBlock.hide();
   $btnComment.prop("disabled", false).removeClass("disabled");
 });
+
+// расчет высоты для card__main
+function setCardMainHeight() {
+  var cardHeader = document.querySelector(".card__header");
+  var cardMain = document.querySelector(".card__main");
+  var cardWrapper = document.querySelector(".card__wrapper");
+  if (!cardHeader || !cardMain || !cardWrapper) return;
+  var wrapperHeight = cardWrapper.clientHeight;
+  var headerHeight = cardHeader.offsetHeight;
+  var mainHeight = wrapperHeight - headerHeight;
+  cardMain.style.height = mainHeight + "px";
+}
+
+window.addEventListener("resize", setCardMainHeight);
+
+var observer = new MutationObserver(setCardMainHeight);
+observer.observe(document.querySelector(".card__wrapper"), {
+  childList: true,
+  subtree: true,
+  attributes: true,
+});
+
+document.addEventListener("DOMContentLoaded", setCardMainHeight);
