@@ -141,6 +141,13 @@ img {
   user-select: none;
 }
 
+.f12w400 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color_space);
+}
+
 .f13w400 {
   font-size: 13px;
   font-weight: 400;
