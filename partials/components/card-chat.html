@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../css/libs-css/select.css">
     <link rel="stylesheet" href="../../css/libs-css/card-chat.css">
     <link rel="stylesheet" href="../../css/media.css" />
+    <link rel="stylesheet" href="../../css/media-queries/card-chat-media.css">
 </head>
 
 <body class="body-page">
@@ -64,10 +65,10 @@
         <div class="search-bar__container">
             <a href="../../index.html" class="search-bar__logo"><img src="../../img/media/logo-768.svg"
                   alt="Логотип компании" class="nav__logo-icon" /></a>
-            <form action="#" class="search-bar__form">
+            <!-- <form action="#" class="search-bar__form">
                 <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box" />
                 <div class="search-bar__dropdown"></div>
-            </form>
+            </form> -->
             <div class="search-bar__btn-wrap">
                 <button class="search-bar__btn btn-reset" id="note-btn">
                     <picture>
@@ -405,8 +406,17 @@
         <div>
             <button class="btn-reset btn chat__event">chat event</button>
         </div>
-        <div class="chat__container card">
-            <div class="card__wrapper">
+        <div class="chat__container card visible">
+            <div class="card__navigation-768">
+                <div class="card__navigation-wrapper">
+                    <button class="btn-reset card__navigation-resume f14w600 active">Резюме</button>
+                    <button class="btn-reset card__navigation-chat f14w600">Чат</button>
+                </div>
+                <div class="card__close-wrapper">
+                    <button class="btn-reset card__navigation-close"></button>
+                </div>
+            </div>
+            <div class="card__wrapper active">
                 <div class="card__header">
                     <div class="card__header-wrapper">
                         <div class="card__header-left">
@@ -439,6 +449,19 @@
                             <button class="btn-reset btn-default card__btn-comments f14w500 c-space">
                                 Комментировать
                             </button>
+                            <div class="card__dropdown-768">
+                                <div class="card__dropdown-header">
+                                </div>
+                                <div class="card__dropdown-items">
+                                    <ul class="card__dropdown-list">
+                                        <li class="card__dropdown-item">Отказать</li>
+                                        <li class="card__dropdown-item btn__comments-768">Комментировать</li>
+                                        <li class="card__dropdown-item">Загрузить резюме</li>
+                                        <li class="card__dropdown-item">Печать резюме</li>
+                                        <li class="card__dropdown-item">Удалить резюме</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="card__header-right">
                             <button class="btn-reset card__header-download"></button>
@@ -499,7 +522,7 @@
                             </div>
                             <div>
                                 <p class="card__contacts-city f14w400 c-bali">Город</p>
-                                <p class="card__city-value f15w500">Нижний Новгород</p>
+                                <p class="card__city-value f15w500">Нижний-Новгород</p>
                             </div>
                         </div>
                         <div class="card__contacts-right">
@@ -573,6 +596,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="card__counter">
+                    <button class="btn-reset card__counter-prev"></button>
+                    <div class="card__counter-wrapper">
+                        <span class="card__counter-from">1</span> / <span class="card__counter-to">203</span>
+                    </div>
+                    <button class="btn-reset card__counter-next"></button>
                 </div>
             </div>
             <div class="chat__wrapper">
@@ -717,6 +747,7 @@
             </div>
         </div>
     </section>
+    <div class="chat__overlay"></div>
     <script src="../../js/jquery_3.3.1.min.js"></script>
     <script src="../../js/libs-js/select.js"></script>
     <script src="../../js/libs-js/chat-script.js"></script>
