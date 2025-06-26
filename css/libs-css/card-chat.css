@@ -371,7 +371,7 @@
 
 .card__counter {
   background-color: var(--color_space);
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
   color: var(--color_white);
   position: absolute;
@@ -426,13 +426,13 @@
 .card__counter-from {
   font-size: 13px;
   font-weight: 400;
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
 .card__counter-to {
   font-size: 13px;
   font-weight: 400;
-  margin-left: 5px;
+  margin-left: 3px;
 }
 
 .chat__overlay {
