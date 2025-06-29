@@ -404,14 +404,16 @@
     <section class="chat container">
         <div>
             <button class="btn-reset btn chat__event">chat event</button>
+            <button class="btn-reset btn chat__event chats--trigger">chat chats</button>
+            <button class="btn-reset btn chat__event support--trigger">chat support</button>
         </div>
-        <div class="chat__container visible">
+        <div class="chat__container">
             <div class="chat__header">
                 <p class="chat__recipient">Чат</p>
                 <p class="chat__source">Поддержка</p>
             </div>
             <!-- paste below "loading" with "chats" or "staff", "begin" and "selected", "active", "end", "new" -->
-            <div class="chat__timeline-wrapper new">
+            <div class="chat__timeline-wrapper new" data-first-message-sent="false">
                 <div class="chat__timeline">
                     <div class="chat__old-content">
                         <div class="chat__message outgoing">
@@ -518,9 +520,10 @@
                                 <span class="chat__content-date">31 марта в 18:30</span>
                             </div>
                         </div>
-                        <button class="btn-reset chat__scroll-down-btn"></button>
                     </div>
+                    <button class="btn-reset chat__scroll-down-btn"></button>
                     <div class="chat__load">
+                        <p class="chat__load-title">Загрузка...</p>
                         <p class="chat__load-chats">Загружаем чаты...</p>
                         <p class="chat__load-staff">Подключаем сотрудников...</p>
                         <div class="chat__loader-svg"></div>

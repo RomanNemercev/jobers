@@ -316,6 +316,7 @@
 .chat__message.outgoing {
   border-radius: 15px 15px 0 15px;
   padding: 15px 70px 15px 15px;
+  padding-bottom: 5px;
   background-color: var(--color_succes);
 }
 

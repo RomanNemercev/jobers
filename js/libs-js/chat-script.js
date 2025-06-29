@@ -1,79 +1,97 @@
+const timelineWrapper = document.querySelector(".chat__timeline-wrapper");
+const chatHeader = document.querySelector(".chat__header");
+const chatInput = document.querySelector(".chat__input");
+const inputSpaceWrapper = document.querySelector(".chat__input-space__wrapper");
+const timeline = document.querySelector(".chat__timeline");
+const scrollDownBtn = document.querySelector(".chat__scroll-down-btn");
+const replyContainer = document.querySelector(".chat__reply-container");
+const textarea = document.querySelector(".chat__input-space");
+// Функция для подстройки высоты textarea
+// Вычисляем maxHeight: 50vh - 72.69px
+const minHeight = 35;
+const headerHeight = 72.69; // Фиксированная высота заголовка
+let maxHeight = window.innerHeight * 0.5 - headerHeight; // 50vh - 72.69px
+textarea.style.height = `${minHeight}px`;
+
+textarea.addEventListener("input", adjustTextareaHeight);
+
+// Функция для обновления позиции кнопки прокрутки вниз
+function updateScrollButtonPosition() {
+  const inputWrapperHeight = inputSpaceWrapper.offsetHeight; // Высота .chat__input-space__wrapper
+  const replyContainerHeight =
+    replyContainer.style.display === "flex" ? replyContainer.offsetHeight : 0; // Высота .chat__reply-container
+  const gap = 15; // Отступ 15px
+  const bottomPosition = inputWrapperHeight + replyContainerHeight + gap;
+  scrollDownBtn.style.bottom = `${bottomPosition}px`;
+}
+
+// Функция для проверки видимости кнопки прокрутки вниз
+function updateScrollButtonVisibility() {
+  const hasScrollbar = timeline.scrollHeight > timeline.clientHeight;
+  if (!hasScrollbar) {
+    scrollDownBtn.classList.remove("visible");
+    return;
+  }
+
+  // Вычисляем, насколько пользователь прокрутил вверх
+  const scrollTop = timeline.scrollTop; // Текущая позиция скролла
+  const scrollHeight = timeline.scrollHeight; // Полная высота контента
+  const clientHeight = timeline.clientHeight; // Видимая высота
+  const scrollableDistance = scrollHeight - clientHeight; // Скроллируемая высота
+  const scrollPercentage = (scrollTop / scrollableDistance) * 100; // Процент прокрутки
+
+  // Показываем кнопку, если пользователь прокрутил вверх более чем на 20%
+  if (scrollPercentage < 80) {
+    // 100% - 20% = 80%
+    scrollDownBtn.classList.add("visible");
+  } else {
+    scrollDownBtn.classList.remove("visible");
+  }
+}
+
+// Функция для проверки наличия скроллбара и обновления padding-right
+function updatePadding() {
+  const hasScrollbar = timeline.scrollHeight > timeline.clientHeight;
+  if (hasScrollbar) {
+    timeline.style.paddingRight = "5px"; // Уменьшаем padding-right, если есть скроллбар
+  } else {
+    timeline.style.paddingRight = "15px"; // Возвращаем стандартный padding-right
+  }
+}
+
+// Функция для вычисления высоты timelineWrapper
+function updateTimelineHeight() {
+  const headerHeight = chatHeader ? chatHeader.offsetHeight : 0;
+  const inputHeight = chatInput ? chatInput.offsetHeight : 0;
+  const totalHeight = headerHeight + inputHeight;
+  timelineWrapper.style.height = `calc(100vh - ${totalHeight}px)`;
+  updatePadding();
+  updateScrollButtonVisibility();
+  updateScrollButtonPosition();
+}
+
+function adjustTextareaHeight() {
+  textarea.style.height = "35px";
+  const newHeight = Math.min(
+    Math.max(textarea.scrollHeight, minHeight),
+    maxHeight
+  );
+  textarea.style.height = `${newHeight}px`;
+  updateTimelineHeight(); // Обновляем высоту timelineWrapper
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  const timeline = document.querySelector(".chat__timeline");
-  const timelineWrapper = document.querySelector(".chat__timeline-wrapper");
-  const chatHeader = document.querySelector(".chat__header");
-  const chatInput = document.querySelector(".chat__input");
   const chatContainer = document.querySelector(".chat__container");
   const chatEventBtn = document.querySelector(".chat__event");
   const chatHideBtn = document.querySelector(".chat__hide");
-  const textarea = document.querySelector(".chat__input-space");
   const sendButton = document.querySelector(".chat__input-btn");
-  const replyContainer = document.querySelector(".chat__reply-container");
   const replyAuthor = document.querySelector(".chat__reply-author");
   const replyText = document.querySelector(".chat__reply-text");
   const replyClose = document.querySelector(".chat__reply-close");
-  const scrollDownBtn = document.querySelector(".chat__scroll-down-btn");
-  const inputSpaceWrapper = document.querySelector(
-    ".chat__input-space__wrapper"
-  );
+
   let hideTimeout;
   let quotedMessage = null;
   const overlayPage = document.querySelector(".chat__overlay");
-
-  // Функция для вычисления высоты timelineWrapper
-  function updateTimelineHeight() {
-    const headerHeight = chatHeader ? chatHeader.offsetHeight : 0;
-    const inputHeight = chatInput ? chatInput.offsetHeight : 0;
-    const totalHeight = headerHeight + inputHeight;
-    timelineWrapper.style.height = `calc(100vh - ${totalHeight}px)`;
-    updatePadding();
-    updateScrollButtonVisibility();
-    updateScrollButtonPosition();
-  }
-
-  // Функция для проверки наличия скроллбара и обновления padding-right
-  function updatePadding() {
-    const hasScrollbar = timeline.scrollHeight > timeline.clientHeight;
-    if (hasScrollbar) {
-      timeline.style.paddingRight = "5px"; // Уменьшаем padding-right, если есть скроллбар
-    } else {
-      timeline.style.paddingRight = "15px"; // Возвращаем стандартный padding-right
-    }
-  }
-
-  // Функция для проверки видимости кнопки прокрутки вниз
-  function updateScrollButtonVisibility() {
-    const hasScrollbar = timeline.scrollHeight > timeline.clientHeight;
-    if (!hasScrollbar) {
-      scrollDownBtn.classList.remove("visible");
-      return;
-    }
-
-    // Вычисляем, насколько пользователь прокрутил вверх
-    const scrollTop = timeline.scrollTop; // Текущая позиция скролла
-    const scrollHeight = timeline.scrollHeight; // Полная высота контента
-    const clientHeight = timeline.clientHeight; // Видимая высота
-    const scrollableDistance = scrollHeight - clientHeight; // Скроллируемая высота
-    const scrollPercentage = (scrollTop / scrollableDistance) * 100; // Процент прокрутки
-
-    // Показываем кнопку, если пользователь прокрутил вверх более чем на 20%
-    if (scrollPercentage < 80) {
-      // 100% - 20% = 80%
-      scrollDownBtn.classList.add("visible");
-    } else {
-      scrollDownBtn.classList.remove("visible");
-    }
-  }
-
-  // Функция для обновления позиции кнопки прокрутки вниз
-  function updateScrollButtonPosition() {
-    const inputWrapperHeight = inputSpaceWrapper.offsetHeight; // Высота .chat__input-space__wrapper
-    const replyContainerHeight =
-      replyContainer.style.display === "flex" ? replyContainer.offsetHeight : 0; // Высота .chat__reply-container
-    const gap = 15; // Отступ 15px
-    const bottomPosition = inputWrapperHeight + replyContainerHeight + gap;
-    scrollDownBtn.style.bottom = `${bottomPosition}px`;
-  }
 
   // Функция для прокрутки вниз
   function scrollToBottom() {
@@ -108,25 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Прокрутка вниз при нажатии на кнопку
   scrollDownBtn.addEventListener("click", scrollToBottom);
-
-  // Функция для подстройки высоты textarea
-  const minHeight = 35;
-  // Вычисляем maxHeight: 50vh - 72.69px
-  const headerHeight = 72.69; // Фиксированная высота заголовка
-  let maxHeight = window.innerHeight * 0.5 - headerHeight; // 50vh - 72.69px
-  textarea.style.height = `${minHeight}px`;
-
-  function adjustTextareaHeight() {
-    textarea.style.height = "35px";
-    const newHeight = Math.min(
-      Math.max(textarea.scrollHeight, minHeight),
-      maxHeight
-    );
-    textarea.style.height = `${newHeight}px`;
-    updateTimelineHeight(); // Обновляем высоту timelineWrapper
-  }
-
-  textarea.addEventListener("input", adjustTextareaHeight);
 
   // Обработка нажатия на кнопку ответа
   document.querySelectorAll(".chat__answer").forEach((button) => {
@@ -167,6 +166,12 @@ document.addEventListener("DOMContentLoaded", function () {
   sendButton.addEventListener("click", function () {
     const messageText = textarea.value.trim();
     if (!messageText) return;
+    if (
+      timelineWrapper.dataset.firstMessageSent === "false" ||
+      !timelineWrapper.dataset.firstMessageSent
+    ) {
+      return;
+    }
 
     const messageDiv = document.createElement("div");
     messageDiv.className = "chat__message outgoing";
@@ -251,4 +256,10 @@ document.addEventListener("DOMContentLoaded", function () {
     maxHeight = window.innerHeight * 0.5 - headerHeight;
     adjustTextareaHeight();
   });
+
+  document
+    .querySelector(".chat__overlay")
+    ?.addEventListener("click", function () {
+      chatHideBtn.click();
+    });
 });
