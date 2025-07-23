@@ -1,0 +1,168 @@
+.call-popup {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.new-update,
+.response-tg,
+.moderation {
+  width: 100%;
+  max-width: 470px;
+  padding: 25px;
+}
+
+.new-update__img {
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+.new-update__title {
+  margin-bottom: 35px;
+  font-size: 1.26rem;
+  font-weight: 700;
+}
+
+.new-update__content-title {
+  margin-bottom: 7px;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.new-update__descr-quick {
+  margin-bottom: 25px;
+  font-size: 0.956rem;
+}
+
+/* .new-update__descr:first-of-type {
+  margin-bottom: 10px;
+} */
+
+.new-update__descr {
+  font-size: 0.956rem;
+  line-height: 18px;
+}
+
+.new-update__descr:not(:last-of-type) {
+  margin-bottom: 17px;
+}
+
+.new-update__descr:last-of-type {
+  margin-bottom: 37px;
+}
+
+.new-update__video-title {
+  margin-bottom: 25px;
+  font-size: 1.13rem;
+}
+
+.video-placeholder {
+  height: 251px;
+  width: 100%;
+  background-color: var(--color_gray); /* Цвет заглушки */
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.play-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.video-space {
+  width: 100%;
+  height: inherit;
+  background: #000;
+  /* padding: 7.375px 0; */
+  border-radius: 25px;
+}
+
+.new-update__btn-cancel {
+  min-height: 40px;
+}
+
+.new-update__btn-wrapper {
+  margin-top: 38px;
+}
+
+.new-update__more {
+  font-size: 0.95rem;
+}
+
+.new-update__btn {
+  margin-right: 13px;
+}
+
+.response-tg__title {
+  padding-top: 285px;
+  margin-bottom: 10px;
+  font-size: 1.26rem;
+}
+
+.response-tg__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.response-tg__img img {
+  border-radius: 5px 5px 0 0;
+  min-height: 286px;
+  object-fit: cover;
+}
+
+.response-tg__quick-descr {
+  margin-bottom: 22px;
+  font-size: 0.956rem;
+  line-height: 18px;
+}
+
+.response-tg__list-wrapper {
+  margin-bottom: 14px;
+}
+
+.response-tg__btn-wrapper {
+  margin-top: 40px;
+  display: flex;
+  column-gap: 15px;
+}
+
+.response-tg__btn-connect,
+.response-tg__btn-cancel {
+  font-size: 0.96rem;
+  white-space: nowrap;
+}
+
+.response-tg__list-title {
+  font-size: 1.03rem;
+  margin-bottom: 10px;
+}
+
+.response-tg__list-item {
+  line-height: 18px;
+  font-size: 0.955rem;
+}
+
+.response-tg__final {
+  font-size: 0.96rem;
+}
+
+.moderation__title {
+  margin-bottom: 10px;
+}
+
+.moderation__descr {
+  margin-bottom: 40px;
+  line-height: 18px;
+  font-size: 0.96rem;
+}
+
+.moderation__btn-accept {
+  margin-right: 12px;
+  min-width: auto;
+}

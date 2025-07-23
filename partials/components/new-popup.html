@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobers - Добавить вакансию</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/custom.css" />
+    <link rel="stylesheet" href="../../css/libs-css/new-popup.css" />
+</head>
+
+<body class="body-page">
+    <div style="display: grid; gap: 10px; padding: 100px; justify-content: center;">
+        <button class="call-popup new-update__btn">new update</button>
+        <button class="call-popup tg-response">tg-respone</button>
+        <button class="call-popup moderation-call">moderation</button>
+    </div>
+    <div class="item__popup-auto" id="create-new-update">
+        <button class="btn-reset delete__btn" id="create-close-new-update"></button>
+        <!-- bottom and top create div for spacing on overflow area -->
+        <div style="
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    bottom: 100vh;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    "></div>
+        <div class="item__popup-wrapper new-update">
+            <p class="f20w700 new-update__title">Новое обновление уже доступно!</p>
+            <picture>
+                <img class="new-update__img" src="../../img/decoration-megafon.png" alt="megafon">
+            </picture>
+            <div class="new-update__content">
+                <p class="new-update__content-title f16w600">Мы прокачали ваш опыт</p>
+                <p class="new-update__descr-quick f15w400">Улучшения, о&nbsp;которых вы&nbsp;просили&nbsp;&mdash; теперь
+                    в&nbsp;системе</p>
+                <p class="f15w400 new-update__descr">Мы&nbsp;провели большую работу над улучшением интерфейса
+                    и&nbsp;скорости работы системы. Теперь ключевые функции доступны быстрее, страницы загружаются почти
+                    мгновенно, а&nbsp;навигация стала интуитивно понятнее. Всё это&nbsp;&mdash; чтобы вы&nbsp;могли
+                    сосредоточиться на&nbsp;работе, не&nbsp;отвлекаясь на&nbsp;лишнее.</p>
+                <p class="f15w400 new-update__descr">Также мы&nbsp;улучшили стабильность и&nbsp;безопасность платформы,
+                    устранили редкие ошибки и&nbsp;добавили несколько полезных фишек, о&nbsp;которых вы&nbsp;просили.
+                    Оцените обновление уже сейчас и&nbsp;дайте нам знать, как вам новый опыт!</p>
+            </div>
+            <div class="new-update__video">
+                <p class="new-update__video-title f18w500">В&nbsp;этом мы&nbsp;видео мы&nbsp;подробнее рассказали обо
+                    всех изменениях:</p>
+                <div class="video-placeholder">
+                    <span class="play-icon"><svg width="50" height="51" viewBox="0 0 50 51" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.875 25.5C46.8763 26.0305 46.7403 26.5523 46.4802 27.0147C46.22 27.4771 45.8447 27.8643 45.3906 28.1387L17.25 45.3535C16.7756 45.644 16.2322 45.8026 15.6759 45.8129C15.1197 45.8232 14.5708 45.6849 14.0859 45.4121C13.6057 45.1436 13.2056 44.752 12.9269 44.2776C12.6481 43.8032 12.5008 43.2631 12.5 42.7129V8.28711C12.5008 7.73688 12.6481 7.1968 12.9269 6.7224C13.2056 6.248 13.6057 5.85641 14.0859 5.58789C14.5708 5.31513 15.1197 5.17676 15.6759 5.18706C16.2322 5.19736 16.7756 5.35596 17.25 5.64648L45.3906 22.8613C45.8447 23.1357 46.22 23.5229 46.4802 23.9853C46.7403 24.4476 46.8763 24.9695 46.875 25.5Z"
+                              fill="#F50A0A" />
+                        </svg></span>
+                </div>
+            </div>
+            <p class="f15w400 c-space new-update__more">Рассказали обо всем подробнее <a href="#" class="c-dodger"
+                  style="border-bottom: 1px solid #5898ff">здесь</a></p>
+            <div class="new-update__btn-wrapper">
+                <button class="btn-reset new-update__btn btn">Комментарии <span class="new-update__btn-count">(0)</span>
+                </button>
+                <button class="btn-reset new-update__btn-cancel btn-cancel">Закрыть</button>
+            </div>
+        </div>
+        <div style="width: 100%;
+    height: 400px;
+    background-color: transparent;
+    top: 100vh;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;"></div>
+    </div>
+    <div class="item__popup-auto" id="response-tg">
+        <button class="btn-reset delete__btn" id="close-response-tg"></button>
+        <div class="item__popup-wrapper response-tg">
+            <div class="response-tg__img">
+                <picture>
+                    <img src="../../img/response-tg.png" alt="response">
+                </picture>
+            </div>
+            <p class="f20w700 response-tg__title">Получайте отклики прямо в Telegram</p>
+            <p class="f15w400 response-tg__quick-descr">Уведомления о&nbsp;новых кандидатах&nbsp;&mdash; без
+                входа&nbsp;в систему.</p>
+            <div class="response-tg__list">
+                <p class="response-tg__list-title f16w600">Что даёт интеграция:</p>
+                <ul class="response-tg__list-wrapper">
+                    <li class="response-tg__list-item f15w400">— Мгновенные уведомления о новых откликах</li>
+                    <li class="response-tg__list-item f15w400">— Все данные кандидата сразу в чате</li>
+                    <li class="response-tg__list-item f15w400">— Можно отвечать прямо из Telegram</li>
+                </ul>
+            </div>
+            <p class="response-tg__final f15w400 c-bali">Работайте быстрее. Отвечайте первыми.</p>
+            <div class="response-tg__btn-wrapper">
+                <button class="btn-reset btn response-tg__btn-connect">Подключить телеграм</button>
+                <button class="btn-reset btn-cancel response-tg__btn-cancel">Напомнить позже</button>
+            </div>
+        </div>
+    </div>
+    <div class="item__popup-auto" id="nots-moderations">
+        <button class="btn-reset delete__btn" id="close-nots-moderation"></button>
+        <div class="item__popup-wrapper moderation">
+            <p class="f20w700 moderation__title">Вакансия отправлена на модерацию</p>
+            <p class="moderation__descr">Вакансия будет размещена на&nbsp;основных работных сайтах в&nbsp;ближайшее
+                время, а&nbsp;в&nbsp;течение 24&nbsp;часов появится на&nbsp;всех остальных. Как только размещение
+                завершится, вы&nbsp;получите уведомление на&nbsp;почту. Все отклики будут автоматически собираться
+                в&nbsp;личном кабинете, а&nbsp;ссылки на&nbsp;размещённые объявления отобразятся в&nbsp;отчёте.</p>
+            <div class="moderation__btn-wrapper">
+                <button class="btn-reset btn moderation__btn-accept">Хорошо</button>
+                <button class="btn-reset btn-cancel moderation__btn-reports">Перейти в отчеты</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/libs-js/custom-popup.js"></script>
+<script src="../../js/libs-js/new-popup.js" defer></script>
+
+</html>

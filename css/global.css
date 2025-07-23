@@ -432,6 +432,10 @@ img {
   color: var(--color_space);
 }
 
+.c-dodger {
+  color: var(--color_dodger);
+}
+
 .bg-fix {
   background-repeat: no-repeat;
   background-size: auto;
