@@ -18,19 +18,19 @@
 
 .new-update__title {
   margin-bottom: 35px;
-  font-size: 1.26rem;
+  /* font-size: 1.26rem; */
   font-weight: 700;
 }
 
 .new-update__content-title {
   margin-bottom: 7px;
-  font-size: 1.02rem;
+  /* font-size: 1.02rem; */
   font-weight: 600;
 }
 
 .new-update__descr-quick {
   margin-bottom: 25px;
-  font-size: 0.956rem;
+  /* font-size: 0.956rem; */
 }
 
 /* .new-update__descr:first-of-type {
@@ -38,7 +38,7 @@
 } */
 
 .new-update__descr {
-  font-size: 0.956rem;
+  /* font-size: 0.956rem; */
   line-height: 18px;
 }
 
@@ -52,7 +52,7 @@
 
 .new-update__video-title {
   margin-bottom: 25px;
-  font-size: 1.13rem;
+  /* font-size: 1.13rem; */
 }
 
 .video-placeholder {
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .play-icon {
@@ -86,11 +86,11 @@
 }
 
 .new-update__btn-wrapper {
-  margin-top: 38px;
+  margin-top: 40px;
 }
 
 .new-update__more {
-  font-size: 0.95rem;
+  /* font-size: 0.95rem; */
 }
 
 .new-update__btn {
@@ -98,9 +98,9 @@
 }
 
 .response-tg__title {
-  padding-top: 285px;
+  padding-top: 286px;
   margin-bottom: 10px;
-  font-size: 1.26rem;
+  /* font-size: 1.26rem; */
 }
 
 .response-tg__img {
@@ -117,8 +117,8 @@
 }
 
 .response-tg__quick-descr {
-  margin-bottom: 22px;
-  font-size: 0.956rem;
+  margin-bottom: 24px;
+  /* font-size: 0.956rem; */
   line-height: 18px;
 }
 
@@ -134,22 +134,22 @@
 
 .response-tg__btn-connect,
 .response-tg__btn-cancel {
-  font-size: 0.96rem;
+  /* font-size: 0.96rem; */
   white-space: nowrap;
 }
 
 .response-tg__list-title {
-  font-size: 1.03rem;
+  /* font-size: 1.03rem; */
   margin-bottom: 10px;
 }
 
 .response-tg__list-item {
   line-height: 18px;
-  font-size: 0.955rem;
+  /* font-size: 0.955rem; */
 }
 
 .response-tg__final {
-  font-size: 0.96rem;
+  /* font-size: 0.96rem; */
 }
 
 .moderation__title {
@@ -159,7 +159,9 @@
 .moderation__descr {
   margin-bottom: 40px;
   line-height: 18px;
-  font-size: 0.96rem;
+  font-size: 15px;
+  font-weight: 400;
+  /* font-size: 0.96rem; */
 }
 
 .moderation__btn-accept {
