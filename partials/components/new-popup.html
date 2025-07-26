@@ -18,20 +18,13 @@
         <button class="call-popup moderation-call">moderation</button>
     </div>
     <div class="item__popup-auto" id="create-new-update">
+        <div class="item__popup-mobile"></div>
         <button class="btn-reset delete__btn" id="create-close-new-update"></button>
         <!-- bottom and top create div for spacing on overflow area -->
-        <div style="
-    width: 100%;
-    height: 400px;
-    background-color: transparent;
-    bottom: 100vh;
-    position: relative;
-    visibility: hidden;
-    opacity: 0;
-    "></div>
+        <div class="item__popup-frame frame-top"></div>
         <div class="item__popup-wrapper new-update">
             <p class="f20w700 new-update__title">Новое обновление уже доступно!</p>
-            <picture>
+            <picture class="new-update__img-wrapper">
                 <img class="new-update__img" src="../../img/decoration-megafon.png" alt="megafon">
             </picture>
             <div class="new-update__content">
@@ -66,15 +59,10 @@
                 <button class="btn-reset new-update__btn-cancel btn-cancel">Закрыть</button>
             </div>
         </div>
-        <div style="width: 100%;
-    height: 400px;
-    background-color: transparent;
-    top: 100vh;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;"></div>
+        <div class="item__popup-frame frame-bottom"></div>
     </div>
     <div class="item__popup-auto" id="response-tg">
+        <div class="item__popup-mobile"></div>
         <button class="btn-reset delete__btn" id="close-response-tg"></button>
         <div class="item__popup-wrapper response-tg">
             <div class="response-tg__img">
@@ -101,6 +89,7 @@
         </div>
     </div>
     <div class="item__popup-auto" id="nots-moderations">
+        <div class="item__popup-mobile"></div>
         <button class="btn-reset delete__btn" id="close-nots-moderation"></button>
         <div class="item__popup-wrapper moderation">
             <p class="f20w700 moderation__title">Вакансия отправлена на модерацию</p>
