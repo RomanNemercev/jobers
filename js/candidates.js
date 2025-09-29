@@ -634,13 +634,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 
   // Обработчик события клика на документе
-  document.addEventListener("click", function (event) {
-    // Проверяем, был ли клик выполнен вне поля ввода поиска
-    if (!inputBox.contains(event.target)) {
-      // Сбрасываем результаты поиска
-      resultsBox.innerHTML = "";
-    }
-  });
+  // document.addEventListener("click", function (event) {
+  //   // Проверяем, был ли клик выполнен вне поля ввода поиска
+  //   if (!inputBox.contains(event.target)) {
+  //     // Сбрасываем результаты поиска
+  //     resultsBox.innerHTML = "";
+  //   }
+  // });
 
   try {
     inputBox.addEventListener(

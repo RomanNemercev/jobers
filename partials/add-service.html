@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,377 +11,1120 @@
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/libs-css/custom-multi-select.css">
     <link rel="stylesheet" href="../css/libs-css/price-range.css">
+    <link rel="stylesheet" href="../css/libs-css/search-bar-concept.css">
     <link rel="stylesheet" href="../css/add-service.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/media-queries/service-media.css">
 </head>
+
 <body class="body-page">
-<!--стандартная обертка - начало -->
-<!--блок бокового меню-->
-<section class="nav">
-    <div class="nav__container">
-        <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
-                                                       class="nav__logo-icon"></a>
-        <ul class="nav__links">
-            <li class="nav__links-caption">Рекрутинг</li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
-            <li class="nav__link list-reset"><a href="../partials/vacancies.html"
-                                                class="nav__link-item link-vacancies active-page">Вакансии</a>
-            </li>
-            <li class="nav__link list-reset"><a href="candidates-null.html"
-                                                class="nav__link-item link-candidates">Кандидаты</a></li>
-        </ul>
-        <ul class="nav__links">
-            <li class="nav__links-caption">Организация</li>
-            <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
-            <li class="nav__link list-reset"><a href="company.html" class="nav__link-item link-companies">Компании</a>
-            </li>
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
-            <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные планы</a>
-            </li>
-        </ul>
-        <ul class="nav__links">
-            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
-            <li class="nav__link list-reset"><a href="settings.html" class="nav__link-item link-settings">Настройки</a>
-            </li>
-        </ul>
-    </div>
-</section>
-<!--блок поискового меню-->
-<section class="search-bar">
-    <div class="search-bar__container">
-        <a href="../index.html" class="search-bar__logo"><img src="../img/media/logo-768.svg" alt="Логотип компании"
-                                                              class="nav__logo-icon"></a>
-        <form action="#" class="search-bar__form">
-            <input type="text" class="search-bar__form-space" placeholder="Поиск" id="input-box">
-            <div class="search-bar__dropdown"></div>
-        </form>
-        <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset" id="note-btn">
-                <picture>
-                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/notification-768.svg">
-                    <img src="../img/notification.svg" alt="Уведомления"
-                         class="search-bar__note">
-                </picture>
-            </button>
+    <!--стандартная обертка - начало -->
+    <!--блок бокового меню-->
+    <section class="nav">
+        <div class="nav__container">
+            <a href="../index.html" class="nav__logo"><img src="../img/logo.svg" alt="Логотип компании"
+                  class="nav__logo-icon"></a>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Рекрутинг</li>
+                <li class="nav__link list-reset"><a href="#" class="nav__link-item link-desktop">Рабочий стол</a></li>
+                <li class="nav__link list-reset"><a href="../partials/vacancies.html"
+                      class="nav__link-item link-vacancies active-page">Вакансии</a>
+                </li>
+                <li class="nav__link list-reset"><a href="candidates-null.html"
+                      class="nav__link-item link-candidates">Кандидаты</a></li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__links-caption">Организация</li>
+                <!--            <li class="nav__link list-reset"><a href="#" class="nav__link-item link-calendar">Календарь</a></li>-->
+                <li class="nav__link list-reset"><a href="#" class="nav__link-item link-messages">Сообщения</a></li>
+                <li class="nav__link list-reset"><a href="company.html"
+                      class="nav__link-item link-companies">Компании</a>
+                </li>
+                <li class="nav__link list-reset"><a href="#" class="nav__link-item link-documents">Документы</a></li>
+                <li class="nav__link list-reset none-stick"><a href="#" class="nav__link-item link-rates">Тарифные
+                        планы</a>
+                </li>
+            </ul>
+            <ul class="nav__links">
+                <li class="nav__link list-reset"><a href="#" class="nav__link-item link-support">Поддержка</a></li>
+                <li class="nav__link list-reset"><a href="settings.html"
+                      class="nav__link-item link-settings">Настройки</a>
+                </li>
+            </ul>
         </div>
-        <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset" id="supp-btn">
-                <picture>
-                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/support-768.svg">
-                    <img src="../img/support.svg" alt="Поддержка"
-                         class="search-bar__support">
-                </picture>
-            </button>
-        </div>
-        <div class="search-bar__btn-wrap">
-            <button class="search-bar__btn btn-reset" id="acc-btn">
-                <picture>
-                    <source type="image/jpeg" media="(max-width: 768px)" srcset="../img/media/profile-768.svg">
-                    <img src="../img/profile.svg" alt="Личный кабинет"
-                         class="search-bar__acc">
-                </picture>
-            </button>
-        </div>
-        <div class="search-bar__burger toogle">
-            <div class="toogle_bar">
-                <div class="toogle__line"></div>
-                <div class="toogle__line"></div>
-                <div class="toogle__line"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="service container">
-    <button class="btn-reset btn-black f15w600 service__btn-back">Назад</button>
-    <h2 class="f35w700 service__title">Дополнительные услуги</h2>
-    <div class="service__main-container">
-        <div class="service__supplies-wrapper">
-            <div class="service__rewrite mb15">
-                <div class="service__rewrite-header c-bali f15w400">Работа с текстом</div>
-                <div class="service__rewrite-content flex-between">
-                    <div class="service__rewrite-descr">
-                        <p class="service__rewrite-descr__title f20w500">Рерайтинг вакансии</p>
-                        <p class="c-bali f14w400 service__rewrite-descr__descr">Напишем текст вакансии, который будет
-                            привлекать качественных
-                            кандидатов и&nbsp;отсеивать
-                            неподходящих</p>
-                    </div>
-                    <div class="service__rewrite-bar">
-                        <div class="service__rewrite-discount f14w400">-50%</div>
-                        <div class="service__rewrite-sum f16w500">+ 7 000 руб.</div>
-                        <button class="service__rewrite-add bg-fix btn-reset"><span
-                                class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="service__more">
-                <div class="service__more-header c-bali f15w400">Дополнительные сайты для публикации</div>
-                <div class="service__offers-container">
-                    <div class="service__avito gap-x-10 align-center flex-between">
-                        <div class="service__avito-logo bg-fix shrink-false"></div>
-                        <div class="service__avito-bar flex-between">
-                            <div class="service__avito-boost f15w400 c-bali">x5</div>
-                            <div class="service__avito-sum">+ 2 990 руб.</div>
-                            <button class="service__avito-add bg-fix btn-reset"><span
-                                    class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+    </section>
+    <!--блок поискового меню-->
+    <section class="search-bar">
+        <div class="search-bar__container">
+            <a href="../../index.html" class="search-bar__logo"><img src="../../img/media/logo-768.svg"
+                  alt="Логотип компании" class="nav__logo-icon" /></a>
+            <!--        <form action="#" class="search-bar__form">-->
+            <!--            <input-->
+            <!--                    type="text"-->
+            <!--                    class="search-bar__form-space"-->
+            <!--                    placeholder="Поиск"-->
+            <!--                    id="input-box"-->
+            <!--            />-->
+            <!--            <div class="search-bar__dropdown"></div>-->
+            <!--        </form>-->
+            <div class="search-bar__search search">
+                <div class="search__wrapper">
+                    <div class="search-container">
+                        <div class="search-input-wrapper">
+                            <input type="text" class="search-input bg-fix" placeholder="Поиск и фильтры">
                         </div>
-                    </div>
-                    <div class="service__vc gap-x-10 align-center flex-between">
-                        <div class="service__vc-logo bg-fix shrink-false"></div>
-                        <div class="service__vc-bar flex-between">
-                            <div class="service__vc-boost f15w400 c-bali">Стандартная публикация</div>
-                            <div class="service__vc-sum">+ 990 руб.</div>
-                            <button class="service__vc-add bg-fix btn-reset"><span class="service__rewrite-add__mobile">Добавить в корзину</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="service__habr gap-x-10 align-center flex-between">
-                        <div class="service__habr-logo bg-fix shrink-false"></div>
-                        <div class="service__habr-bar flex-between">
-                            <div class="service__habr-boost f15w400 c-bali">Бизнес +</div>
-                            <div class="service__habr-sum">+ 1 990 руб.</div>
-                            <button class="service__habr-add bg-fix btn-reset"><span
-                                    class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                        </div>
-                    </div>
-                    <div class="service__helper gap-x-10 align-center flex-between">
-                        <div class="service__helper-logo bg-fix shrink-false"></div>
-                        <div class="service__helper-bar flex-between">
-                            <div class="service__helper-boost f15w400 c-bali">Стандартная публикация</div>
-                            <div class="service__helper-sum">+ 990 руб.</div>
-                            <button class="service__helper-add bg-fix btn-reset"><span
-                                    class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                        </div>
-                    </div>
-                    <div class="service__resto gap-x-10 align-center flex-between">
-                        <div class="service__resto-logo bg-fix shrink-false"></div>
-                        <div class="service__resto-bar flex-between">
-                            <div class="service__resto-boost f15w400 c-bali">Стандартная публикация</div>
-                            <div class="service__resto-sum">+ 990 руб.</div>
-                            <button class="service__resto-add bg-fix btn-reset"><span
-                                    class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                        </div>
-                    </div>
-                    <button class="btn-reset btn-cancel service__btn-more">Показать еще</button>
-                </div>
-            </div>
-            <div class="service__promo mb15">
-                <div class="service__promo-header c-bali f15w400">Услуги продвижения на сайтах</div>
-                <div class="service__promo-container">
-                    <div class="service__superjob gap-x-10 align-center flex-between">
-                        <div class="service__superjob-logo bg-fix shrink-false"></div>
-                        <div class="service__superjob-bar flex-between">
-                            <div class="service__superjob-sort f15w400 c-bali">Турбо-вакансия на Superjob.ru</div>
-                            <div class="service__superjob-spell">30 дней</div>
-                            <div class="service__superjob-sum">+ 7 000 руб.</div>
-                            <button class="service__superjob-add btn-reset bg-fix"><span
-                                    class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                        </div>
-                    </div>
-                    <div class="service__hh gap-x-10 align-center flex-between">
-                        <div class="service__hh-logo bg-fix shrink-false"></div>
-                        <div class="service__hh-bar flex-between">
-                            <div class="service__hh-sort f15w400 c-bali">Вакансия Стандарт+ на HH.ru </div>
-                            <div class="service__hh-spell">14 дней</div>
-                            <div class="service__hh-sum">+ 4 449 руб.</div>
-                            <button class="service__hh-add btn-reset bg-fix"><span class="service__rewrite-add__mobile">Добавить в корзину</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="service__youla gap-x-10 align-center flex-between">
-                        <div class="service__youla-logo bg-fix shrink-false"></div>
-                        <div class="service__youla-bar flex-between">
-                            <div class="service__youla-sort f15w400 c-bali">Турбо вакансия на Юле</div>
-                            <div class="service__youla-spell">30 дней</div>
-                            <div class="service__youla-sum">+ 788 руб.</div>
-                            <button class="service__youla-add btn-reset bg-fix"><span
-                                    class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                        </div>
-                    </div>
-                    <div class="service__youla gap-x-10 align-center flex-between">
-                        <div class="service__youla-logo bg-fix shrink-false"></div>
-                        <div class="service__youla-bar flex-between">
-                            <div class="service__youla-sort f15w400 c-bali">Премиум вакансия на Юле</div>
-                            <div class="service__youla-spell">14 дней</div>
-                            <div class="service__youla-sum">+ 1 432 руб.</div>
-                            <button class="service__youla-add btn-reset bg-fix"><span
-                                    class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                        </div>
-                    </div>
-                    <button class="btn-reset btn-cancel service__promo-more">Показать еще</button>
-                </div>
-            </div>
-            <div class="service__public">
-                <div class="service__public-header c-bali f15w400">Публикации в социальных сетях и мессенджерах</div>
-                <div class="service__public-container">
-                    <div class="service__search-public">
-                        <p class="service__search-title f15w400 mb15">Поиск по группам и сообществам</p>
-                        <input type="text" class="service__search-input e-input bg-fix"
-                               placeholder="Введите название сообщества">
-                    </div>
-                    <div class="service__settings-bar">
-                        <div class="service__social-select">
-                            <div class="service__select-title f15w400 mb15">Социальная сеть</div>
-                            <div class="custom-select">
-                                <div class="select-header">
-                                    <span class="select-placeholder">Выберите площадку</span>
-                                    <span class="select-arrow"></span>
-                                </div>
-                                <div class="select-options">
-                                    <div class="option" data-value="Telegram"><span class="checkbox bg-fix"></span>Telegram
+                        <span class="search-counter bg-fix">232</span>
+                        <div class="search-filters" style="display: none;">
+                            <div class="filter-title"><span class="filter-title__value">Фильтры</span></div>
+                            <!-- Фильтры -->
+                            <div class="search-filters__wrapper">
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Выберите вакансию</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
                                     </div>
-                                    <div class="option" data-value="VK"><span class="checkbox bg-fix"></span>VK</div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Менеджер по продажам (ID 424)"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Менеджер по продажам (ID 424)
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Повар в цех (ID 4232)"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Повар в цех (ID 4232)
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="service__city-select">
-                            <p class="service__city-title f15w400 mb15">Город</p>
-                            <div class="search-box">
-                                <input type="text" id="search" placeholder="Например, Санкт-Петербург, Заречная 3"
-                                       class="search-box__input"/>
-                                <div id="suggestions-pane"></div>
-                            </div>
-                        </div>
-                        <div class="service__price-choose">
-                            <div class="price-range">
-                                <label class="price-range__label">
-                                    <span class="price-range__label-text mb15">Стоимость публикации</span>
-                                    <div class="price-range__inputs">
-                                        <input type="text" placeholder="от"
-                                               class="price-range__input price-range__input--from">
-                                        <input type="text" placeholder="до"
-                                               class="price-range__input price-range__input--to">
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Тип занятости</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
                                     </div>
-                                    <p class="price-range__error">Это поле обязательно для заполнения</p>
-                                </label>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Вахтовый метод"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Вахтовый метод
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Удаленная работа"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Удаленная работа
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="5/2"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                5/2
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Места поиска</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Везде"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Везде
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="В резюме"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                В резюме
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="В комментариях"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                В комментариях
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="В тегах"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                В тегах
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Добавим остальные фильтры -->
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Регион</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Московская область"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Московская область
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Волгоградская область"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Волгоградская область
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Санкт-Петербург"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Санкт-Петербург
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>График работы</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Гибкий график"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Гибкий график
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Удаленная работа"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Удаленная работа
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Вахтовый метод"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Вахтовый метод
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Полный день"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Полный день
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Опыт работы</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Без опыта"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Без опыта
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="От 1 года"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                От 1 года
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="От 3х лет"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                От 3х лет
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="От 5 лет"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                От 5 лет
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Пол</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Мужской"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Мужской
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Женский"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Женский
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Источник</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="hh.ru"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                hh.ru
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="rabota.ru"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                rabota.ru
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-group">
+                                    <div class="filter-header">
+                                        <span>Тип отклика</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <ul class="filter-options">
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Прямой отклик"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Прямой отклик
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Автоподбор сайта"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Автоподбор сайта
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Подборка Jobers"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Подборка Jobers
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="filter-checkbox__label">
+                                                <input type="checkbox" value="Загружен вручную"
+                                                  class="filter-checkbox__value filter-checkbox__hidden">
+                                                Загружен вручную
+                                                <span class="filter-checkbox__icon"></span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-options__types">
+                                            <div class="filter-types__wrapper">
+                                                <p class="f14w500 filter-types__title">Прямой отклик</p>
+                                                <p class="f14w400 c-bali">резюме присланное соискателем</p>
+                                            </div>
+                                            <div class="filter-types__wrapper">
+                                                <p class="f14w500 filter-types__title">Автоподбор сайта</p>
+                                                <p class="f14w400 c-bali">подобранные работным сайтом подходящие резюме
+                                                </p>
+                                            </div>
+                                            <div class="filter-types__wrapper">
+                                                <p class="f14w500 filter-types__title">Подборка Jobers</p>
+                                                <p class="f14w400 c-bali">подобранные сервисом Jobers подходящие резюме
+                                                </p>
+                                            </div>
+                                            <div class="filter-types__wrapper">
+                                                <p class="f14w500 filter-types__title">Загружен вручную</p>
+                                                <p class="f14w400 c-bali">загруженное через форму "Добавить кандидата"
+                                                    резюме</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Заработная плата -->
+                                <div class="filter-group" data-type="range">
+                                    <div class="filter-header">
+                                        <span>Заработная плата</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <div class="filter-options range-options">
+                                        <div class="range-inputs">
+                                            <input type="number" class="range-min" placeholder="от">
+                                            <input type="number" class="range-max" placeholder="до">
+                                        </div>
+                                        <label class="range-checkbox">
+                                            <input type="checkbox"
+                                              class="range-hide range-checkbox__value range-checkbox__hidden">
+                                            Скрыть без зарплаты
+                                            <span class="range-checkbox__icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Возраст -->
+                                <div class="filter-group" data-type="range">
+                                    <div class="filter-header">
+                                        <span>Возраст</span>
+                                        <span class="filter-toggle"><svg class="toggle-arrow" width="19" height="18"
+                                              viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                                '
+                                                <path
+                                                  d="M15.7202 7.34689L10.0952 12.9719C10.0168 13.0506 9.92368 13.113 9.82112 13.1556C9.71856 13.1981 9.60861 13.2201 9.49756 13.2201C9.38651 13.2201 9.27655 13.1981 9.17399 13.1556C9.07143 13.113 8.97829 13.0506 8.8999 12.9719L3.2749 7.34689C3.11639 7.18838 3.02734 6.9734 3.02734 6.74924C3.02734 6.52507 3.11639 6.31009 3.2749 6.15158C3.43341 5.99307 3.64839 5.90402 3.87256 5.90402C4.09672 5.90402 4.31171 5.99307 4.47021 6.15158L9.49826 11.1796L14.5263 6.15088C14.6848 5.99237 14.8998 5.90332 15.124 5.90332C15.3481 5.90332 15.5631 5.99237 15.7216 6.15088C15.8801 6.30939 15.9692 6.52437 15.9692 6.74853C15.9692 6.9727 15.8801 7.18768 15.7216 7.34619L15.7202 7.34689Z"
+                                                  fill="#9098B4" />\n' +
+                                                '
+                                            </svg></span>
+                                    </div>
+                                    <div class="filter-options range-options">
+                                        <div class="range-inputs">
+                                            <input type="number" class="range-min" placeholder="от">
+                                            <input type="number" class="range-max" placeholder="до">
+                                        </div>
+                                        <label class="range-checkbox">
+                                            <input type="checkbox"
+                                              class="range-hide range-checkbox__value range-checkbox__hidden">
+                                            Скрыть без возраста
+                                            <span class="range-checkbox__icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Кнопки -->
+                            <div class="filter-buttons">
+                                <button class="filter-apply-btn disabled">Применить</button>
+                                <button class="filter-cancel-btn">Отмена</button>
                             </div>
                         </div>
                     </div>
-                    <div class="service__public-items">
-                        <div class="service__public-item align-center flex-between">
-                            <div class="service__public-info flex">
-                                <div class="service__public-logo bg-fix shrink-false"></div>
-                                <div class="service__public-descr">
-                                    <p class="service__public-descr__title f15w400">Удаленная работа - Фриланс
-                                        Телеграм</p>
-                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 1 089 023</p>
-                                </div>
-                            </div>
-                            <div class="service__public-value flex align-center">
-                                <span class="service__public-sum">+ 5 800 руб.</span>
-                                <button class="service__public-add btn-reset bg-fix"><span
-                                        class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="service__public-item align-center flex-between">
-                            <div class="service__public-info flex">
-                                <div class="service__public-logo bg-fix shrink-false"></div>
-                                <div class="service__public-descr">
-                                    <p class="service__public-descr__title f15w400">РазРаботка</p>
-                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 1 089 023</p>
-                                </div>
-                            </div>
-                            <div class="service__public-value flex align-center">
-                                <span class="service__public-sum">+ 840 руб.</span>
-                                <button class="service__public-add btn-reset bg-fix"><span
-                                        class="service__rewrite-add__mobile">Добавить в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="service__public-item align-center flex-between">
-                            <div class="service__public-info flex">
-                                <div class="service__public-logo bg-fix shrink-false"></div>
-                                <div class="service__public-descr">
-                                    <p class="service__public-descr__title f15w400">Работа МОСКВА</p>
-                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 100 520</p>
-                                </div>
-                            </div>
-                            <div class="service__public-value flex align-center">
-                                <span class="service__public-sum">+ 2 990 руб.</span>
-                                <button class="service__public-add btn-reset bg-fix"></button>
-                            </div>
-                        </div>
-                        <div class="service__public-item align-center flex-between">
-                            <div class="service__public-info flex">
-                                <div class="service__public-logo bg-fix shrink-false"></div>
-                                <div class="service__public-descr">
-                                    <p class="service__public-descr__title f15w400">Удаленка из Питера</p>
-                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 489 002</p>
-                                </div>
-                            </div>
-                            <div class="service__public-value flex align-center">
-                                <span class="service__public-sum">+ 4 200 руб.</span>
-                                <button class="service__public-add btn-reset bg-fix"></button>
-                            </div>
-                        </div>
-                        <div class="service__public-item align-center flex-between">
-                            <div class="service__public-info flex">
-                                <div class="service__public-logo bg-fix shrink-false"></div>
-                                <div class="service__public-descr">
-                                    <p class="service__public-descr__title f15w400">Свежие вакансии</p>
-                                    <p class="service__public-subs f14w400 c-bali">Подписчиков: 980 299</p>
-                                </div>
-                            </div>
-                            <div class="service__public-value flex align-center">
-                                <span class="service__public-sum">+ 1 000 руб.</span>
-                                <button class="service__public-add btn-reset bg-fix"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-reset service__public-more f15w400">Показать ещё</button>
                 </div>
-                <button class="service__basket-toggle btn-reset">
-                    <span class="service__basket-contain"></span>
+            </div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="note-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)"
+                          srcset="../../img/media/notification-768.svg" />
+                        <img src="../../img/notification.svg" alt="Уведомления" class="search-bar__note" />
+                    </picture>
                 </button>
             </div>
-        </div>
-        <div class="service__basket-wrapper">
-            <div class="service__mobile-header">
-                <div class="service__mobile-header__container flex">
-                    <button class="service__mobile-back btn-reset flex"><span class="bg-fix service__mobile-arrow"></span>Назад</button>
-                    <p class="service__mobile-header__title">Корзина</p></div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="supp-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../../img/media/support-768.svg" />
+                        <img src="../../img/support.svg" alt="Поддержка" class="search-bar__support" />
+                    </picture>
+                </button>
             </div>
-            <div class="service__basket-position">
-                <div class="service__basket-title">Корзина</div>
-                <div class="service__items-wrapper">
-                    <div class="service__basket-item">
-                        <div class="service__name-wrapper flex">
-                            <p class="service__item-name f14w400">Тарифный план “Минимальный”</p>
-                            <button class="service__item-delete btn-reset bg-fix"></button>
-                        </div>
-                        <div class="service__item-cost flex"><p class="c-bali f14w400">Цена:</p><span
-                                class="service__cost-value f14w400">3973 руб.</span></div>
-                        <div class="service__item-count flex"><p class="c-bali f14w400">Количество:</p><span
-                                class="service__count-value f14w400">1</span></div>
+            <div class="search-bar__btn-wrap">
+                <button class="search-bar__btn btn-reset" id="acc-btn">
+                    <picture>
+                        <source type="image/jpeg" media="(max-width: 768px)" srcset="../../img/media/profile-768.svg" />
+                        <img src="../../img/profile.svg" alt="Личный кабинет" class="search-bar__acc" />
+                    </picture>
+                </button>
+            </div>
+            <div class="search-bar__burger toogle">
+                <div class="toogle_bar">
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                    <div class="toogle__line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nots">
+        <div class="nots__container">
+            <h3 class="nots__title f16w600">Уведомления</h3>
+            <ul class="nots__cans-list">
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата">
                     </div>
-                    <div class="service__basket-item">
-                        <div class="service__name-wrapper flex">
-                            <p class="service__item-name f14w400">Рерайтинг вакансии</p>
-                            <button class="service__item-delete btn-reset bg-fix"></button>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Валерьев Михаил Александрович</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-now f14w400 c-bali">сейчас</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Бухгалтерия</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Александра степанова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Здравствуйте, вы запрашивали закрывающие документы, вчера
+                                мы
+                                их отправили</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-recent f14w400 c-bali">5 минут назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Валерьев Михаил Александрович</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Личный менеджер</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Яна Олейникова</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Действительно, сейчас очень большая конкуренция на
+                                уборщиков,
+                                я бы не рекомендовало использовать тариф без автоподнятия</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-hours f14w400 c-bali">1 час назад</p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Евгения Онегина</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Продуктовый менеджер</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Валерьев Михаил Александрович</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+                <li class="nots__cans-item">
+                    <div class="nots__cans-img">
+                        <img src="../img/user-invite-not.png" alt="Фотография кандидата">
+                    </div>
+                    <ul class="nots__user-info">
+                        <li>
+                            <p class="nots__user-title f14w400 c-bali">Отклик на вакансию</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-name f15w500">Валерьев Михаил Александрович</p>
+                        </li>
+                        <li>
+                            <p class="nots__user-desc f14w400">Менеджер по продажам акссесуаров для спорта</p>
+                        </li>
+                    </ul>
+                    <p class="nots__time-days f14w400 c-bali">
+                        <time datetime="2023-12-10T13:45">10.12.2023 в 13:45</time>
+                    </p>
+                </li>
+            </ul>
+            <button class="btn-reset nots__check f15w500">Отметить как прочитанное</button>
+        </div>
+    </section>
+    <section class="supp">
+        <div class="supp__container">
+            <!--        default variation 1 on work without icon-->
+            <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>
+            <div class="supp__man-img onwork-styles">
+                <img src="../img/support-1440.png" alt="Фотография менеджера поддержки" class="supp__man-icon">
+            </div>
+            <p class="supp__man-name">Купатова Елизавета</p>
+            <div class="supp__man-status"><span class="supp__man-item">Сейчас работает</span></div>
+            <ul class="supp__main-info">
+                <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>
+                <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru"
+                      class="supp__main-item">kupatova.l@jobers.ru</a>
+                </li>
+                <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11
+                        (доб
+                        103)</a></li>
+            </ul>
+            <div class="supp__user-num">
+                <div class="sup__user-item"><span class="f20w600">32948714</span></div>
+                <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего
+                        кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам
+                        помочь</span>
+                </div>
+            </div>
+            <!--        default variation 2 not work without icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/non-work-icon-man.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 3 notwork with icon-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img twix-styles">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__notwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 4 without icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/man-work-without-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--        default variation 5 with icon on work-->
+            <!--                <h2 class="supp__title f14w400 c-bali">Ваш личный менеджер</h2>-->
+            <!--                <div class="supp__man-img onwork-styles__second">-->
+            <!--                    <img src="../img/notwork_with-icon.png" alt="Фотография менеджера поддержки" class="supp__man-icon">-->
+            <!--                </div>-->
+            <!--                <p class="supp__man-name">Купатова Елизавета</p>-->
+            <!--                <div class="supp__man-status__onwork"><span class="supp__man-item">Сейчас не работает</span></div>-->
+            <!--                <ul class="supp__main-info">-->
+            <!--                    <li class="supp__main-time"><span class="supp__main-item">с 10:00 до 20:00 (MSK)</span></li>-->
+            <!--                    <li class="supp__main-mail bg-fix"><a href="mailto:kupatova.l@jobers.ru" class="supp__main-item">kupatova.l@jobers.ru</a>-->
+            <!--                    </li>-->
+            <!--                    <li class="supp__main-phone bg-fix"><a href="tel:+78003332211" class="supp__main-item">8-800-333-22-11 (доб-->
+            <!--                        103)</a></li>-->
+            <!--                </ul>-->
+            <!--                <div class="supp__user-num">-->
+            <!--                    <div class="sup__user-item"><span class="f20w600">32948714</span></div>-->
+            <!--                    <div class="supp__num-desc"><span class="f15w400 c-bali supp__num-text">Это персональный номер вашего кабинета. Укажите его при обращении, для того что&nbsp;бы сотрудник мог быстрее вам помочь</span>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+        </div>
+    </section>
+    <section class="acc">
+        <div class="acc__container">
+            <div class="acc__header">
+                <p class="acc__user-name f16w600">Александра Лазарчукова</p>
+                <p class="acc__user-level f14w400 c-bali">Администратор</p>
+            </div>
+            <ul class="acc__active">
+                <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Мой профиль</a></li>
+                <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Лицевой счет</a></li>
+                <li class="acc__active-items"><a href="#" class="acc__active-item f15w400">Личный менеджер</a></li>
+            </ul>
+            <div class="acc__user-exit bg-fix"><a href="#" class="acc__exit-btn f15w400">Выйти из системы</a></div>
+        </div>
+    </section>
+    <section class="service container">
+        <button class="btn-reset btn-black f15w600 service__btn-back">Назад</button>
+        <h2 class="f35w700 service__title">Дополнительные услуги</h2>
+        <div class="service__main-container">
+            <div class="service__supplies-wrapper">
+                <div class="service__rewrite mb15">
+                    <div class="service__rewrite-header c-bali f15w400">Работа с текстом</div>
+                    <div class="service__rewrite-content flex-between">
+                        <div class="service__rewrite-descr">
+                            <p class="service__rewrite-descr__title f20w500">Рерайтинг вакансии</p>
+                            <p class="c-bali f14w400 service__rewrite-descr__descr">Напишем текст вакансии, который
+                                будет
+                                привлекать качественных
+                                кандидатов и&nbsp;отсеивать
+                                неподходящих</p>
                         </div>
-                        <div class="service__item-cost flex"><p class="c-bali f14w400">Цена:</p><span
-                                class="service__cost-value f14w400">2 990 руб.</span></div>
-                        <div class="service__item-count flex"><p class="c-bali f14w400">Количество:</p><span
-                                class="service__count-value f14w400">1</span></div>
+                        <div class="service__rewrite-bar">
+                            <div class="service__rewrite-discount f14w400">-50%</div>
+                            <div class="service__rewrite-sum f16w500">+ 7 000 руб.</div>
+                            <button class="service__rewrite-add bg-fix btn-reset"><span
+                                  class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                        </div>
                     </div>
                 </div>
-                <div class="service__sum-box">
-                    <div class="service__sum-title flex">
-                        <p class="service__sum-label f16w500">Итого к оплате:</p>
-                        <p class="service__sum-value f16w500">3973 руб.</p>
+                <div class="service__more">
+                    <div class="service__more-header c-bali f15w400">Дополнительные сайты для публикации</div>
+                    <div class="service__offers-container">
+                        <div class="service__avito gap-x-10 align-center flex-between">
+                            <div class="service__avito-logo bg-fix shrink-false"></div>
+                            <div class="service__avito-bar flex-between">
+                                <div class="service__avito-boost f15w400 c-bali">x5</div>
+                                <div class="service__avito-sum">+ 2 990 руб.</div>
+                                <button class="service__avito-add bg-fix btn-reset"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                            </div>
+                        </div>
+                        <div class="service__vc gap-x-10 align-center flex-between">
+                            <div class="service__vc-logo bg-fix shrink-false"></div>
+                            <div class="service__vc-bar flex-between">
+                                <div class="service__vc-boost f15w400 c-bali">Стандартная публикация</div>
+                                <div class="service__vc-sum">+ 990 руб.</div>
+                                <button class="service__vc-add bg-fix btn-reset"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="service__habr gap-x-10 align-center flex-between">
+                            <div class="service__habr-logo bg-fix shrink-false"></div>
+                            <div class="service__habr-bar flex-between">
+                                <div class="service__habr-boost f15w400 c-bali">Бизнес +</div>
+                                <div class="service__habr-sum">+ 1 990 руб.</div>
+                                <button class="service__habr-add bg-fix btn-reset"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                            </div>
+                        </div>
+                        <div class="service__helper gap-x-10 align-center flex-between">
+                            <div class="service__helper-logo bg-fix shrink-false"></div>
+                            <div class="service__helper-bar flex-between">
+                                <div class="service__helper-boost f15w400 c-bali">Стандартная публикация</div>
+                                <div class="service__helper-sum">+ 990 руб.</div>
+                                <button class="service__helper-add bg-fix btn-reset"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                            </div>
+                        </div>
+                        <div class="service__resto gap-x-10 align-center flex-between">
+                            <div class="service__resto-logo bg-fix shrink-false"></div>
+                            <div class="service__resto-bar flex-between">
+                                <div class="service__resto-boost f15w400 c-bali">Стандартная публикация</div>
+                                <div class="service__resto-sum">+ 990 руб.</div>
+                                <button class="service__resto-add bg-fix btn-reset"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                            </div>
+                        </div>
+                        <button class="btn-reset btn-cancel service__btn-more">Показать еще</button>
                     </div>
+                </div>
+                <div class="service__promo mb15">
+                    <div class="service__promo-header c-bali f15w400">Услуги продвижения на сайтах</div>
+                    <div class="service__promo-container">
+                        <div class="service__superjob gap-x-10 align-center flex-between">
+                            <div class="service__superjob-logo bg-fix shrink-false"></div>
+                            <div class="service__superjob-bar flex-between">
+                                <div class="service__superjob-sort f15w400 c-bali">Турбо-вакансия на Superjob.ru</div>
+                                <div class="service__superjob-spell">30 дней</div>
+                                <div class="service__superjob-sum">+ 7 000 руб.</div>
+                                <button class="service__superjob-add btn-reset bg-fix"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                            </div>
+                        </div>
+                        <div class="service__hh gap-x-10 align-center flex-between">
+                            <div class="service__hh-logo bg-fix shrink-false"></div>
+                            <div class="service__hh-bar flex-between">
+                                <div class="service__hh-sort f15w400 c-bali">Вакансия Стандарт+ на HH.ru </div>
+                                <div class="service__hh-spell">14 дней</div>
+                                <div class="service__hh-sum">+ 4 449 руб.</div>
+                                <button class="service__hh-add btn-reset bg-fix"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="service__youla gap-x-10 align-center flex-between">
+                            <div class="service__youla-logo bg-fix shrink-false"></div>
+                            <div class="service__youla-bar flex-between">
+                                <div class="service__youla-sort f15w400 c-bali">Турбо вакансия на Юле</div>
+                                <div class="service__youla-spell">30 дней</div>
+                                <div class="service__youla-sum">+ 788 руб.</div>
+                                <button class="service__youla-add btn-reset bg-fix"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                            </div>
+                        </div>
+                        <div class="service__youla gap-x-10 align-center flex-between">
+                            <div class="service__youla-logo bg-fix shrink-false"></div>
+                            <div class="service__youla-bar flex-between">
+                                <div class="service__youla-sort f15w400 c-bali">Премиум вакансия на Юле</div>
+                                <div class="service__youla-spell">14 дней</div>
+                                <div class="service__youla-sum">+ 1 432 руб.</div>
+                                <button class="service__youla-add btn-reset bg-fix"><span
+                                      class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                            </div>
+                        </div>
+                        <button class="btn-reset btn-cancel service__promo-more">Показать еще</button>
+                    </div>
+                </div>
+                <div class="service__public">
+                    <div class="service__public-header c-bali f15w400">Публикации в социальных сетях и мессенджерах
+                    </div>
+                    <div class="service__public-container">
+                        <div class="service__search-public">
+                            <p class="service__search-title f15w400 mb15">Поиск по группам и сообществам</p>
+                            <input type="text" class="service__search-input e-input bg-fix"
+                              placeholder="Введите название сообщества">
+                        </div>
+                        <div class="service__settings-bar">
+                            <div class="service__social-select">
+                                <div class="service__select-title f15w400 mb15">Социальная сеть</div>
+                                <div class="custom-select">
+                                    <div class="select-header">
+                                        <span class="select-placeholder">Выберите площадку</span>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                    <div class="select-options">
+                                        <div class="option" data-value="Telegram"><span
+                                              class="checkbox bg-fix"></span>Telegram
+                                        </div>
+                                        <div class="option" data-value="VK"><span class="checkbox bg-fix"></span>VK
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service__city-select">
+                                <p class="service__city-title f15w400 mb15">Город</p>
+                                <div class="search-box">
+                                    <input type="text" id="search" placeholder="Например, Санкт-Петербург, Заречная 3"
+                                      class="search-box__input" />
+                                    <div id="suggestions-pane"></div>
+                                </div>
+                            </div>
+                            <div class="service__price-choose">
+                                <div class="price-range">
+                                    <label class="price-range__label">
+                                        <span class="price-range__label-text mb15">Стоимость публикации</span>
+                                        <div class="price-range__inputs">
+                                            <input type="text" placeholder="от"
+                                              class="price-range__input price-range__input--from">
+                                            <input type="text" placeholder="до"
+                                              class="price-range__input price-range__input--to">
+                                        </div>
+                                        <p class="price-range__error">Это поле обязательно для заполнения</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service__public-items">
+                            <div class="service__public-item align-center flex-between">
+                                <div class="service__public-info flex">
+                                    <div class="service__public-logo bg-fix shrink-false"></div>
+                                    <div class="service__public-descr">
+                                        <p class="service__public-descr__title f15w400">Удаленная работа - Фриланс
+                                            Телеграм</p>
+                                        <p class="service__public-subs f14w400 c-bali">Подписчиков: 1 089 023</p>
+                                    </div>
+                                </div>
+                                <div class="service__public-value flex align-center">
+                                    <span class="service__public-sum">+ 5 800 руб.</span>
+                                    <button class="service__public-add btn-reset bg-fix"><span
+                                          class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                                </div>
+                            </div>
+                            <div class="service__public-item align-center flex-between">
+                                <div class="service__public-info flex">
+                                    <div class="service__public-logo bg-fix shrink-false"></div>
+                                    <div class="service__public-descr">
+                                        <p class="service__public-descr__title f15w400">РазРаботка</p>
+                                        <p class="service__public-subs f14w400 c-bali">Подписчиков: 1 089 023</p>
+                                    </div>
+                                </div>
+                                <div class="service__public-value flex align-center">
+                                    <span class="service__public-sum">+ 840 руб.</span>
+                                    <button class="service__public-add btn-reset bg-fix"><span
+                                          class="service__rewrite-add__mobile">Добавить в корзину</span></button>
+                                </div>
+                            </div>
+                            <div class="service__public-item align-center flex-between">
+                                <div class="service__public-info flex">
+                                    <div class="service__public-logo bg-fix shrink-false"></div>
+                                    <div class="service__public-descr">
+                                        <p class="service__public-descr__title f15w400">Работа МОСКВА</p>
+                                        <p class="service__public-subs f14w400 c-bali">Подписчиков: 100 520</p>
+                                    </div>
+                                </div>
+                                <div class="service__public-value flex align-center">
+                                    <span class="service__public-sum">+ 2 990 руб.</span>
+                                    <button class="service__public-add btn-reset bg-fix"></button>
+                                </div>
+                            </div>
+                            <div class="service__public-item align-center flex-between">
+                                <div class="service__public-info flex">
+                                    <div class="service__public-logo bg-fix shrink-false"></div>
+                                    <div class="service__public-descr">
+                                        <p class="service__public-descr__title f15w400">Удаленка из Питера</p>
+                                        <p class="service__public-subs f14w400 c-bali">Подписчиков: 489 002</p>
+                                    </div>
+                                </div>
+                                <div class="service__public-value flex align-center">
+                                    <span class="service__public-sum">+ 4 200 руб.</span>
+                                    <button class="service__public-add btn-reset bg-fix"></button>
+                                </div>
+                            </div>
+                            <div class="service__public-item align-center flex-between">
+                                <div class="service__public-info flex">
+                                    <div class="service__public-logo bg-fix shrink-false"></div>
+                                    <div class="service__public-descr">
+                                        <p class="service__public-descr__title f15w400">Свежие вакансии</p>
+                                        <p class="service__public-subs f14w400 c-bali">Подписчиков: 980 299</p>
+                                    </div>
+                                </div>
+                                <div class="service__public-value flex align-center">
+                                    <span class="service__public-sum">+ 1 000 руб.</span>
+                                    <button class="service__public-add btn-reset bg-fix"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-reset service__public-more f15w400">Показать ещё</button>
+                    </div>
+                    <button class="service__basket-toggle btn-reset">
+                        <span class="service__basket-contain"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="service__basket-wrapper">
+                <div class="service__mobile-header">
+                    <div class="service__mobile-header__container flex">
+                        <button class="service__mobile-back btn-reset flex"><span
+                              class="bg-fix service__mobile-arrow"></span>Назад</button>
+                        <p class="service__mobile-header__title">Корзина</p>
+                    </div>
+                </div>
+                <div class="service__basket-position">
+                    <div class="service__basket-title">Корзина</div>
+                    <div class="service__items-wrapper">
+                        <div class="service__basket-item">
+                            <div class="service__name-wrapper flex">
+                                <p class="service__item-name f14w400">Тарифный план “Минимальный”</p>
+                                <button class="service__item-delete btn-reset bg-fix"></button>
+                            </div>
+                            <div class="service__item-cost flex">
+                                <p class="c-bali f14w400">Цена:</p><span
+                                  class="service__cost-value f14w400">3973 руб.</span>
+                            </div>
+                            <div class="service__item-count flex">
+                                <p class="c-bali f14w400">Количество:</p><span
+                                  class="service__count-value f14w400">1</span>
+                            </div>
+                        </div>
+                        <div class="service__basket-item">
+                            <div class="service__name-wrapper flex">
+                                <p class="service__item-name f14w400">Рерайтинг вакансии</p>
+                                <button class="service__item-delete btn-reset bg-fix"></button>
+                            </div>
+                            <div class="service__item-cost flex">
+                                <p class="c-bali f14w400">Цена:</p><span class="service__cost-value f14w400">2
+                                    990 руб.</span>
+                            </div>
+                            <div class="service__item-count flex">
+                                <p class="c-bali f14w400">Количество:</p><span
+                                  class="service__count-value f14w400">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service__sum-box">
+                        <div class="service__sum-title flex">
+                            <p class="service__sum-label f16w500">Итого к оплате:</p>
+                            <p class="service__sum-value f16w500">3973 руб.</p>
+                        </div>
+                        <button class="btn-reset btn service__accept-btn">Купить</button>
+                    </div>
+                </div>
+                <div class="service__basket-promo">
+                    <p class="service__promo-title f16w500">
+                        Есть бонусный промокод?
+                    </p>
+                    <p class="service__promo-descr f14w400 c-bali">
+                        Активируйте его и получите бонус на счет
+                    </p>
                     <input type="text" class="e-input service__promo-space" placeholder="Промокод">
-                    <button class="btn-reset btn service__accept-btn">Купить</button>
+                    <button class="btn-reset btn service__promo-btn w-full">Активировать</button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<script src="../js/jquery_3.3.1.min.js"></script>
-<script src="../js/libs-js/custom-multi-select.js"></script>
-<script src="../js/libs-js/price-range.js"></script>
-<script src="../js/script-service.js"></script>
-<script src="../js/script.js"></script>
+    </section>
+    <script src="../js/jquery_3.3.1.min.js"></script>
+    <script src="../js/libs-js/custom-multi-select.js"></script>
+    <script src="../js/libs-js/price-range.js"></script>
+    <script src="../js/libs-js/search-bar-concept.js"></script>
+    <script src="../js/script-service.js"></script>
+    <script src="../js/script.js"></script>
 </body>
+
 </html>

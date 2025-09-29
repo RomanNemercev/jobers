@@ -305,6 +305,10 @@ img {
   display: block;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .btn-cancel {
   font-size: 15px;
   font-weight: 400;
